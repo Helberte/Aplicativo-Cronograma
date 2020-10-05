@@ -1,2 +1,2 @@
 # Aplicativo-Cronograma
-Aplicativo feito na linguagem B4A - Cronograma
+Aplicativo de cronograma de leituras - Desenvolvido no Basic4Android

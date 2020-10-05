@@ -1,0 +1,72 @@
+﻿Build1=Default,b4a.example
+File1=LayCadastroLivro.bal
+File2=LayLeitura_menu1.bal
+File3=LayLeitura_menu2.bal
+File4=LayLeiturasTabStrip.bal
+File5=LayLogin.bal
+File6=LayoutCadastro.bal
+File7=livro.jpg
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+Group=Default Group
+Library1=core
+Library2=jdbcsql
+Library3=tabstripviewpager
+Library4=phone
+Library5=xui views
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="29"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~SetApplicationAttribute(android:theme, "@style/LightTheme")~\n~CreateResource(values-v20, theme.xml,~\n~<resources>~\n~    <style~\n~        name="LightTheme" parent="@android:style/Theme.Material.Light">~\n~    </style>~\n~</resources>~\n~)~\n~CreateResource(values-v14, theme.xml,~\n~<resources>~\n~    <style~\n~        name="LightTheme" parent="@android:style/Theme.Holo.Light">~\n~    </style>~\n~</resources>~\n~)~\n~~\n~'********* TabStrip ***********************~\n~CreateResource(drawable, background_tab.xml, ~\n~<selector xmlns:android="http://schemas.android.com/apk/res/android" ~\n~	android:exitFadeDuration="@android:integer/config_shortAnimTime">~\n~    <item android:state_pressed="true" android:drawable="@color/background_tab_pressed" />~\n~    <item android:state_focused="true" android:drawable="@color/background_tab_pressed"/>~\n~    <item android:drawable="@android:color/transparent"/>~\n~</selector>)~\n~CreateResource(values, colors.xml,~\n~<resources>~\n~    <color name="background_tab_pressed">#6633B5E5</color>~\n~</resources>)~\n~'******************************************~\n~~\n~
+Module1=ClassBancoDados
+Module2=CodigoCadastro
+Module3=CodigoCadastroLivro
+Module4=CodigoLayLeituras
+Module5=CodigoLayLogin
+Module6=Starter
+NumberOfFiles=7
+NumberOfLibraries=5
+NumberOfModules=6
+Version=10.2
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Cronograma
+	#VersionCode: 1
+	#VersionName: Cronograma 1.0
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#AdditionalJar: com.android.support:support-v4
+#AdditionalJar: jtds-1.3.1.jar
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: false
+#End Region
+
+Sub Process_Globals
+	Public fotos As ContentChooser
+	Public Id_do_Usuario As Int
+End Sub
+
+Sub Globals
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	
+End Sub
+
+Sub Activity_Resume
+	StartActivity(CodigoLayLogin)
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
