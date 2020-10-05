@@ -42,7 +42,7 @@ public String  _class_globals() throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private driver As String = \"net.sourceforge.jtds.";
 _driver = "net.sourceforge.jtds.jdbc.Driver";
  //BA.debugLineNum = 3;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
-_jdbcurl = "jdbc:jtds:sqlserver://192.168.1.106:1433;databaseName=cronograma;logintimeout=10";
+_jdbcurl = "jdbc:jtds:sqlserver://192.168.1.105:1433;databaseName=cronograma;logintimeout=10";
  //BA.debugLineNum = 4;BA.debugLine="Private usuario As String = \"sa\"";
 _usuario = "sa";
  //BA.debugLineNum = 5;BA.debugLine="Private senha As String = \"254685ro\"";

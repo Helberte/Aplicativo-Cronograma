@@ -9,13 +9,13 @@ public class LS_layleitura_menu1{
 public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAndAnchor> views, int width, int height, float scale) {
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
 anywheresoftware.b4a.keywords.LayoutBuilder.scaleAll(views);
-views.get("panel").vw.setTop((int)((0d / 100 * height)));
-views.get("panel").vw.setHeight((int)((100d / 100 * height)));
-views.get("panel").vw.setWidth((int)((100d / 100 * width)));
-views.get("panel").vw.setLeft((int)((0d / 100 * width)));
-views.get("panelleituras").vw.setWidth((int)((views.get("panel").vw.getWidth())-(((views.get("panel").vw.getWidth())*3d)/100d)));
+views.get("scrollview1").vw.setTop((int)((0d / 100 * height)));
+views.get("scrollview1").vw.setHeight((int)((100d / 100 * height)));
+views.get("scrollview1").vw.setWidth((int)((100d / 100 * width)));
+views.get("scrollview1").vw.setLeft((int)((0d / 100 * width)));
+views.get("panelleituras").vw.setWidth((int)((views.get("scrollview1").vw.getWidth())-(((views.get("scrollview1").vw.getWidth())*3d)/100d)));
 views.get("panelleituras").vw.setHeight((int)((25d / 100 * height)));
-views.get("panelleituras").vw.setLeft((int)(((views.get("panel").vw.getWidth())-(views.get("panelleituras").vw.getWidth()))/2d));
+views.get("panelleituras").vw.setLeft((int)(((views.get("scrollview1").vw.getWidth())-(views.get("panelleituras").vw.getWidth()))/2d));
 views.get("panelleituras").vw.setTop((int)((1d / 100 * height)));
 views.get("lbltitulolivro").vw.setLeft((int)((2d / 100 * width)));
 views.get("lbltitulolivro").vw.setWidth((int)((views.get("panelleituras").vw.getWidth())-(5d / 100 * width)));

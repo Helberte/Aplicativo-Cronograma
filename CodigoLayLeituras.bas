@@ -17,6 +17,7 @@ Sub Globals
 	
 	Private banco As ClassBancoDados
 	Private TabStrip As TabStrip
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -24,25 +25,25 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	TabStrip.LoadLayout("LayLeitura_menu1","Lendo")
 	TabStrip.LoadLayout("LayLeitura_menu2","Lidos")
-	
-	banco.Initialize
-	
+		
+	banco.Initialize	
 End Sub
 
 Sub Activity_Resume
-
 	Try
-'		
+		
 '		Dim cmd As String
 '		
 '		cmd = "exec sp_atualiza_leituras " & Main.Id_do_Usuario
 '		
-'		
 '		Wait For (banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
 '		
+'		Result.NextRow
 '		
-		
-		
+'		If Result.GetInt("RESULTADO") = 2 Then
+'						
+'		End If	
+	
 	Catch
 		ToastMessageShow("Impossível carregar leituras",True)
 	End Try
@@ -52,8 +53,10 @@ Sub Activity_Pause (UserClosed As Boolean)
 	
 End Sub
 
-
-Sub btAdicionarLeitura_Click
-	
+Sub btAdicionarLeitura_Click	
 	StartActivity(CodigoCadastroLivro)	
+End Sub
+
+Sub TabStrip_PageSelected (Position As Int)
+	MsgboxAsync(Position,"")
 End Sub

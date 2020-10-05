@@ -354,39 +354,39 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 16;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 17;BA.debugLine="Activity.LoadLayout(\"LayLeiturasTabStrip\")";
+ //BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 18;BA.debugLine="Activity.LoadLayout(\"LayLeiturasTabStrip\")";
 mostCurrent._activity.LoadLayout("LayLeiturasTabStrip",mostCurrent.activityBA);
- //BA.debugLineNum = 19;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu1\",\"Lendo\")";
+ //BA.debugLineNum = 20;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu1\",\"Lendo\")";
 mostCurrent._tabstrip.LoadLayout("LayLeitura_menu1",BA.ObjectToCharSequence("Lendo"));
- //BA.debugLineNum = 20;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu2\",\"Lidos\")";
+ //BA.debugLineNum = 21;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu2\",\"Lidos\")";
 mostCurrent._tabstrip.LoadLayout("LayLeitura_menu2",BA.ObjectToCharSequence("Lidos"));
- //BA.debugLineNum = 22;BA.debugLine="banco.Initialize";
+ //BA.debugLineNum = 23;BA.debugLine="banco.Initialize";
 mostCurrent._banco._initialize /*String*/ (processBA);
  //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 45;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 47;BA.debugLine="End Sub";
+ //BA.debugLineNum = 46;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 48;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
  //BA.debugLineNum = 26;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 28;BA.debugLine="Try";
+ //BA.debugLineNum = 27;BA.debugLine="Try";
 try { } 
        catch (Exception e3) {
-			processBA.setLastException(e3); //BA.debugLineNum = 41;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
+			processBA.setLastException(e3); //BA.debugLineNum = 42;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Impossível carregar leituras"),anywheresoftware.b4a.keywords.Common.True);
  };
- //BA.debugLineNum = 43;BA.debugLine="End Sub";
+ //BA.debugLineNum = 44;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btadicionarleitura_click() throws Exception{
  //BA.debugLineNum = 50;BA.debugLine="Sub btAdicionarLeitura_Click";
- //BA.debugLineNum = 52;BA.debugLine="StartActivity(CodigoCadastroLivro)";
+ //BA.debugLineNum = 51;BA.debugLine="StartActivity(CodigoCadastroLivro)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._codigocadastrolivro.getObject()));
- //BA.debugLineNum = 53;BA.debugLine="End Sub";
+ //BA.debugLineNum = 52;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -395,12 +395,19 @@ public static String  _globals() throws Exception{
 mostCurrent._banco = new b4a.example.classbancodados();
  //BA.debugLineNum = 13;BA.debugLine="Private TabStrip As TabStrip";
 mostCurrent._tabstrip = new anywheresoftware.b4a.objects.TabStripViewPager();
- //BA.debugLineNum = 14;BA.debugLine="End Sub";
+ //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 8;BA.debugLine="End Sub";
+return "";
+}
+public static String  _tabstrip_pageselected(int _position) throws Exception{
+ //BA.debugLineNum = 54;BA.debugLine="Sub TabStrip_PageSelected (Position As Int)";
+ //BA.debugLineNum = 55;BA.debugLine="MsgboxAsync(Position,\"\")";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_position),BA.ObjectToCharSequence(""),processBA);
+ //BA.debugLineNum = 56;BA.debugLine="End Sub";
 return "";
 }
 }
