@@ -10,7 +10,7 @@ Version=9.801
 #End Region
 
 Sub Process_Globals
-
+	Dim temPanel As Boolean = False
 End Sub
 
 Sub Globals	
@@ -19,8 +19,7 @@ Sub Globals
 	
 	Dim lbl_Inicial_Leitura As Label
 	
-	Private ScrollView1 As ScrollView
-
+	Dim scrollView1 As ScrollView
 
 	Private panelLeituras As Panel
 		
@@ -28,9 +27,13 @@ Sub Globals
 	Dim panelNenhumaLeitura As Panel
 	Dim cores(2) As Int
 	Private btAdicionarLeitura As Button
+		
+	Private Panel_lendo As Panel
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
+	
 	Activity.LoadLayout("LayLeiturasTabStrip")	
 	TabStrip.LoadLayout("LayLeitura_menu1","Lendo")
 	TabStrip.LoadLayout("LayLeitura_menu2","Lidos")
@@ -43,7 +46,6 @@ Sub Activity_Create(FirstTime As Boolean)
 	cores(1) = Colors.RGB(255,255,255)
 	
 	panelNenhumaLeitura.Initialize( "" )
-	ScrollView1.Panel.Height = 100%y
 	
 	panelLeituras.Visible = False
 	btAdicionarLeitura.Visible = False
@@ -64,9 +66,10 @@ End Sub
 
 Sub Activity_Resume
 	
-	If CodigoCadastroLivro.cadastrou Then
+	If CodigoCadastroLivro.cadastrou Or CodigoCadastro.cadastrouUsuario Then
 		Wait For (Atualiza_leituras) Complete (Success As Boolean)
 		
+		CodigoCadastro.cadastrouUsuario = False
 		CodigoCadastroLivro.cadastrou = False
 		If Success = False Then
 			
@@ -95,26 +98,145 @@ Sub Atualiza_leituras As ResumableSub
 			
 			lbl_Inicial_Leitura.Text = Result.GetString("MENSAGEM")
 			lbl_Inicial_Leitura.TextColor = Colors.Black
-			lbl_Inicial_Leitura.TextSize = 20
+			lbl_Inicial_Leitura.TextSize = 20			
 			
+			scrollView1.Initialize (500)
+			Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, 100%y)
 			
-'			gradient.Initialize("TOP_BOTTOM", cores)
-'			
-'			gradient.CornerRadius = 12
-'			panelNenhumaLeitura.Background = gradient
-			
-			ScrollView1.Panel.AddView(lbl_Inicial_Leitura, 1%x, 3%y, 98%x, 10%y)
+			scrollView1.Panel.AddView(lbl_Inicial_Leitura, 1%x, 3%y, 98%x, 10%y)
 						
-			Return True		
-		Else
-			panelLeituras.Visible = True
+			Return True	
+		else if Result.GetInt("RESULTADO") = 0 Then
+			
+			ToastMessageShow(Result.GetString("MENSAGEM"),True)
 			Return True
-		End If
+		else if Result.GetInt("RESULTADO") = 1 Then
+						
+			gradient.Initialize("TOP_BOTTOM", cores)
+			
+			gradient.CornerRadius = 12
+			
+			Dim quantidade As Int = Result.GetInt("QUANTIDADE")
+			
+			Dim panels(quantidade) As Panel
+			
+			Dim lblTituloLivro(quantidade) As Label
+			Dim lblDataComecoLeitura(quantidade) As Label
+			Dim lblPrevisaoTermino(quantidade) As Label
+			Dim lblQuantidadePaginas(quantidade) As Label
+	
+			Dim btAnotar(quantidade) As Button
+			Dim btLancar(quantidade) As Button
+			
+			Dim data_inicial As String
+			Dim data_final As String
+			
+			Dim dia, mes, ano As String
+			
+			Dim topo As Int = 1%y
+			Dim topoLabel As Int = 1%y
+			
+			If temPanel Then
+				scrollView1.Panel.RemoveView
+				temPanel = False
+			End If
+			
+			If temPanel = False Then
+				
+				scrollView1.Initialize( 500 )
+				Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
+							
+							
+				For i = 0 To panels.Length - 1
+							
+					dia = Result.GetString("data_inicial").SubString2(8, 10)
+					mes = Result.GetString("data_inicial").SubString2(5, 7)
+					ano = Result.GetString("data_inicial").SubString2(0, 4)
+					
+					data_inicial = dia & " / " & mes & " / " & ano
+					
+					dia = Result.GetString("data_prevista_final").SubString2(8, 10)
+					mes = Result.GetString("data_prevista_final").SubString2(5, 7)
+					ano = Result.GetString("data_prevista_final").SubString2(0, 4)
+					
+					data_final = dia & " / " & mes & " / " & ano
+							
+					topoLabel = 1%y
+					panels(i).Initialize( "Event_panels" )
+					
+					lblTituloLivro(i).Initialize("")
+					lblDataComecoLeitura(i).Initialize("")
+					lblPrevisaoTermino(i).Initialize("")
+					lblQuantidadePaginas(i).Initialize("")
+	
+					btAnotar(i).Initialize("")
+					btLancar(i).Initialize("")									
+					
+					panels(i).Background = gradient
+					
+					scrollView1.Panel.AddView(panels(i), 1%x, topo, 98%x, 25%y)
+			
+				
+					lblTituloLivro(i).Text = Result.GetString("nome")
+					lblTituloLivro(i).TextColor = Colors.RGB(72,72,72)
+					lblTituloLivro(i).TextSize = 19
+					'lblTituloLivro(i).Color = Colors.Cyan
+					
+					lblDataComecoLeitura(i).Text = "Começei ler dia " & data_inicial
+					lblDataComecoLeitura(i).TextColor = Colors.RGB(72,72,72)
+					lblDataComecoLeitura(i).TextSize = 19
+					'lblDataComecoLeitura(i).Color = Colors.Cyan
+					
+					lblPrevisaoTermino(i).Text = "Previsão de Término " & data_final
+					lblPrevisaoTermino(i).TextColor = Colors.RGB(72,72,72)
+					lblPrevisaoTermino(i).TextSize = 19
+					'lblPrevisaoTermino(i).Color = Colors.Cyan
+					
+					lblQuantidadePaginas(i).Text = Result.GetString("paginas_ou_cap_lidos") & " páginas de " & Result.GetString("quantidade_paginas")
+					lblQuantidadePaginas(i).TextColor = Colors.RGB(72,72,72)
+					lblQuantidadePaginas(i).TextSize = 19
+					'lblQuantidadePaginas(i).Color = Colors.Cyan
+										
+					panels(i).AddView(lblTituloLivro(i), 3%x, topoLabel, panels(i).Width - 5%x, 4%y)
+					topoLabel = topoLabel + 4%y + 1dip
+					panels(i).AddView(lblDataComecoLeitura(i), 3%x, topoLabel, panels(i).Width - 5%x, 4%y)
+					topoLabel = topoLabel + 4%y + 1dip
+					panels(i).AddView(lblPrevisaoTermino(i), 3%x, topoLabel, panels(i).Width - 5%x, 4%y)
+					topoLabel = topoLabel + 4%y + 1dip
+					panels(i).AddView(lblQuantidadePaginas(i), 3%x, topoLabel, panels(i).Width - 5%x, 4%y)
+					topoLabel = topoLabel + 4%y + 15dip
+					
+					btAnotar(i).Text = "Anotar"
+					btAnotar(i).TextSize = 16
+					btAnotar(i).TextColor = Colors.ARGB(244,0,0,0)
+					btAnotar(i).Color = Colors.Transparent
+					panels(i).AddView(btAnotar(i), 3%x, topoLabel, 20%x, 6%y)
+					
+					btLancar(i).Text = "Lançar"
+					btLancar(i).TextSize = 16
+					btLancar(i).TextColor = Colors.ARGB(244,0,0,0)
+					btLancar(i).Color = Colors.Transparent
+					panels(i).AddView(btLancar(i), 25%x, topoLabel, 20%x, 6%y)
+				
+					temPanel = True
+					
+					topo = topo + 25%y + 10dip
+					
+					Result.NextRow
+				Next		
+				scrollView1.Panel.Height = topo
+			End If	
+			
+			btAdicionarLeitura.Visible = True			
+			Return True
+		Else
+			ToastMessageShow("Impossível carregar leituras",True)
+			Return False
+		End If	
 	Catch
 		ToastMessageShow("Impossível carregar leituras",True)
 		Return False
-	End Try
-	
+	End Try	
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)

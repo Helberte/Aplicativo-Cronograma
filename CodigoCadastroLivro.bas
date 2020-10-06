@@ -10,7 +10,7 @@ Version=10.2
 #End Region
 
 Sub Process_Globals
-	Public cadastrou as Boolean = False
+	Public cadastrou As Boolean = False
 End Sub
 
 Sub Activity_Resume

@@ -10,7 +10,7 @@ Version=9.801
 #End Region
 
 Sub Process_Globals
-	
+	Public cadastrouUsuario as Boolean = False
 End Sub
 
 Sub Globals
@@ -22,6 +22,7 @@ Sub Globals
 	Private panelCadSalvo As Panel
 	Private lblCadSalvo As Label
 	Private funcoes As ClassBancoDados
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -80,9 +81,11 @@ Sub btSalvar_Click
 				
 				If Result = Null Then
 					
+					cadastrouUsuario = False
 					MsgboxAsync("Problemas na conexão com banco de dados. " & LastException, "Atenção!")					
 				else if Result.GetString("RESULTADO") = 0 Then						
 					
+					cadastrouUsuario = False
 					MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!")
 					edNome.RequestFocus
 				Else
@@ -102,7 +105,9 @@ Sub btSalvar_Click
 						
 					lblCadSalvo.Visible = True
 					panelCadSalvo.Visible = True
-					lblCadSalvo.Text = Result.GetString("MENSAGEM")					
+					lblCadSalvo.Text = Result.GetString("MENSAGEM")		
+					
+					cadastrouUsuario = True								
 					Sleep(1200)
 							
 					StartActivity(CodigoLayLeituras)

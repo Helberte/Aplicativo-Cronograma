@@ -26,7 +26,8 @@ begin
 				   t.data_prevista_final, 
 				   t.paginas_ou_cap_lidos, 
 				   t.quantidade_paginas,
-				   1 [RESULTADO]    from livro l, leitura t, usuario u
+				   1 [RESULTADO],
+				   @quantidade [QUANTIDADE]  from livro l, leitura t, usuario u
 									Where l.fk_id_usuario = u.id
 									and t.fk_id_Livro = l.id
 									and t.fk_id_usuario = u.id

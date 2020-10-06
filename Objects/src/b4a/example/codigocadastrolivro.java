@@ -34,7 +34,7 @@ public class codigocadastrolivro extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigocadastrolivro");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigocadastrolivro");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class codigocadastrolivro extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static boolean _cadastrou = false;
 public anywheresoftware.b4a.objects.EditTextWrapper _edtitulolivro = null;
@@ -368,131 +359,91 @@ public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.starter _starter = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 String _dia = "";
 String _mes = "";
 String _ano = "";
-RDebugUtils.currentLine=2424832;
- //BA.debugLineNum = 2424832;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=2424834;
- //BA.debugLineNum = 2424834;BA.debugLine="Activity.LoadLayout(\"LayCadastroLivro\")";
+ //BA.debugLineNum = 39;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 41;BA.debugLine="Activity.LoadLayout(\"LayCadastroLivro\")";
 mostCurrent._activity.LoadLayout("LayCadastroLivro",mostCurrent.activityBA);
-RDebugUtils.currentLine=2424836;
- //BA.debugLineNum = 2424836;BA.debugLine="Main.fotos.Initialize(\"ContentChooser\")";
+ //BA.debugLineNum = 43;BA.debugLine="Main.fotos.Initialize(\"ContentChooser\")";
 mostCurrent._main._fotos /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Initialize("ContentChooser");
-RDebugUtils.currentLine=2424838;
- //BA.debugLineNum = 2424838;BA.debugLine="edTituloLivro.RequestFocus";
+ //BA.debugLineNum = 45;BA.debugLine="edTituloLivro.RequestFocus";
 mostCurrent._edtitulolivro.RequestFocus();
-RDebugUtils.currentLine=2424839;
- //BA.debugLineNum = 2424839;BA.debugLine="radPagina.Checked = True";
+ //BA.debugLineNum = 46;BA.debugLine="radPagina.Checked = True";
 mostCurrent._radpagina.setChecked(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2424841;
- //BA.debugLineNum = 2424841;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade páginas\"";
+ //BA.debugLineNum = 48;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade páginas\"";
 mostCurrent._edquantpagoucap.setHint("Quantidade páginas");
-RDebugUtils.currentLine=2424842;
- //BA.debugLineNum = 2424842;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas ler por di";
+ //BA.debugLineNum = 49;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas ler por di";
 mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantas páginas ler por dia?"));
-RDebugUtils.currentLine=2424843;
- //BA.debugLineNum = 2424843;BA.debugLine="edMeta.Hint = \"Quantidade de páginas\"";
+ //BA.debugLineNum = 50;BA.debugLine="edMeta.Hint = \"Quantidade de páginas\"";
 mostCurrent._edmeta.setHint("Quantidade de páginas");
-RDebugUtils.currentLine=2424845;
- //BA.debugLineNum = 2424845;BA.debugLine="Dim dia, mes, ano As String";
+ //BA.debugLineNum = 52;BA.debugLine="Dim dia, mes, ano As String";
 _dia = "";
 _mes = "";
 _ano = "";
-RDebugUtils.currentLine=2424847;
- //BA.debugLineNum = 2424847;BA.debugLine="dia = DateTime.Date(DateTime.Now).SubString2(3, 5";
+ //BA.debugLineNum = 54;BA.debugLine="dia = DateTime.Date(DateTime.Now).SubString2(3, 5";
 _dia = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow()).substring((int) (3),(int) (5));
-RDebugUtils.currentLine=2424848;
- //BA.debugLineNum = 2424848;BA.debugLine="mes = DateTime.Date(DateTime.Now).SubString2(0, 2";
+ //BA.debugLineNum = 55;BA.debugLine="mes = DateTime.Date(DateTime.Now).SubString2(0, 2";
 _mes = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow()).substring((int) (0),(int) (2));
-RDebugUtils.currentLine=2424849;
- //BA.debugLineNum = 2424849;BA.debugLine="ano = DateTime.Date(DateTime.Now).SubString2(6, 1";
+ //BA.debugLineNum = 56;BA.debugLine="ano = DateTime.Date(DateTime.Now).SubString2(6, 1";
 _ano = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow()).substring((int) (6),(int) (10));
-RDebugUtils.currentLine=2424851;
- //BA.debugLineNum = 2424851;BA.debugLine="hoje = \"Dia: \" & dia & \" / \" & mes & \" / \" & ano";
+ //BA.debugLineNum = 58;BA.debugLine="hoje = \"Dia: \" & dia & \" / \" & mes & \" / \" & ano";
 mostCurrent._hoje = "Dia: "+_dia+" / "+_mes+" / "+_ano;
-RDebugUtils.currentLine=2424853;
- //BA.debugLineNum = 2424853;BA.debugLine="lblPrevisao.Text = hoje";
+ //BA.debugLineNum = 60;BA.debugLine="lblPrevisao.Text = hoje";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
-RDebugUtils.currentLine=2424855;
- //BA.debugLineNum = 2424855;BA.debugLine="lblQuantidadeDias.Visible = False";
+ //BA.debugLineNum = 62;BA.debugLine="lblQuantidadeDias.Visible = False";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2424857;
- //BA.debugLineNum = 2424857;BA.debugLine="B4XImageView1.ResizeMode = \"FILL\"";
-mostCurrent._b4ximageview1._setresizemode /*String*/ (null,"FILL");
-RDebugUtils.currentLine=2424858;
- //BA.debugLineNum = 2424858;BA.debugLine="B4XImageView1.Load(File.DirAssets, \"livro.jpg\")";
-mostCurrent._b4ximageview1._load /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"livro.jpg");
-RDebugUtils.currentLine=2424860;
- //BA.debugLineNum = 2424860;BA.debugLine="banco.Initialize";
-mostCurrent._banco._initialize /*String*/ (null,processBA);
-RDebugUtils.currentLine=2424861;
- //BA.debugLineNum = 2424861;BA.debugLine="End Sub";
+ //BA.debugLineNum = 64;BA.debugLine="B4XImageView1.ResizeMode = \"FILL\"";
+mostCurrent._b4ximageview1._setresizemode /*String*/ ("FILL");
+ //BA.debugLineNum = 65;BA.debugLine="B4XImageView1.Load(File.DirAssets, \"livro.jpg\")";
+mostCurrent._b4ximageview1._load /*String*/ (anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"livro.jpg");
+ //BA.debugLineNum = 67;BA.debugLine="banco.Initialize";
+mostCurrent._banco._initialize /*String*/ (processBA);
+ //BA.debugLineNum = 68;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-RDebugUtils.currentLine=2293760;
- //BA.debugLineNum = 2293760;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=2293762;
- //BA.debugLineNum = 2293762;BA.debugLine="End Sub";
+ //BA.debugLineNum = 14;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 16;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=2228224;
- //BA.debugLineNum = 2228224;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=2228226;
- //BA.debugLineNum = 2228226;BA.debugLine="End Sub";
+ //BA.debugLineNum = 10;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btaddfoto_click() throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btaddfoto_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btaddfoto_click", null));}
-RDebugUtils.currentLine=2752512;
- //BA.debugLineNum = 2752512;BA.debugLine="Sub btAddFoto_Click";
-RDebugUtils.currentLine=2752513;
- //BA.debugLineNum = 2752513;BA.debugLine="Try";
-try {RDebugUtils.currentLine=2752514;
- //BA.debugLineNum = 2752514;BA.debugLine="Main.fotos.Show(\"image/*\", \"Choose image\")";
+ //BA.debugLineNum = 175;BA.debugLine="Sub btAddFoto_Click";
+ //BA.debugLineNum = 176;BA.debugLine="Try";
+try { //BA.debugLineNum = 177;BA.debugLine="Main.fotos.Show(\"image/*\", \"Choose image\")";
 mostCurrent._main._fotos /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Show(processBA,"image/*","Choose image");
  } 
        catch (Exception e4) {
-			processBA.setLastException(e4);RDebugUtils.currentLine=2752516;
- //BA.debugLineNum = 2752516;BA.debugLine="ToastMessageShow(\"Falha!\",True)";
+			processBA.setLastException(e4); //BA.debugLineNum = 179;BA.debugLine="ToastMessageShow(\"Falha!\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Falha!"),anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=2752518;
- //BA.debugLineNum = 2752518;BA.debugLine="End Sub";
+ //BA.debugLineNum = 181;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btcancelar_click() throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btcancelar_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btcancelar_click", null));}
-RDebugUtils.currentLine=3014656;
- //BA.debugLineNum = 3014656;BA.debugLine="Sub btCancelar_Click";
-RDebugUtils.currentLine=3014657;
- //BA.debugLineNum = 3014657;BA.debugLine="StartActivity(CodigoLayLeituras)";
+ //BA.debugLineNum = 206;BA.debugLine="Sub btCancelar_Click";
+ //BA.debugLineNum = 207;BA.debugLine="StartActivity(CodigoLayLeituras)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=3014658;
- //BA.debugLineNum = 3014658;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 208;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=3014659;
- //BA.debugLineNum = 3014659;BA.debugLine="End Sub";
+ //BA.debugLineNum = 209;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btsalvar_click() throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btsalvar_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "btsalvar_click", null); return;}
 ResumableSub_btSalvar_Click rsub = new ResumableSub_btSalvar_Click(null);
 rsub.resume(processBA, null);
 }
@@ -511,7 +462,6 @@ anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result = null;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
 
     while (true) {
 try {
@@ -523,11 +473,9 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=3080193;
- //BA.debugLineNum = 3080193;BA.debugLine="Dim pag_ou_cap As String";
+ //BA.debugLineNum = 212;BA.debugLine="Dim pag_ou_cap As String";
 _pag_ou_cap = "";
-RDebugUtils.currentLine=3080195;
- //BA.debugLineNum = 3080195;BA.debugLine="If edTituloLivro.Text.Trim = \"\" Then";
+ //BA.debugLineNum = 214;BA.debugLine="If edTituloLivro.Text.Trim = \"\" Then";
 if (true) break;
 
 case 1:
@@ -535,46 +483,36 @@ case 1:
 this.state = 46;
 if ((parent.mostCurrent._edtitulolivro.getText().trim()).equals("")) { 
 this.state = 3;
-}else 
-{RDebugUtils.currentLine=3080198;
- //BA.debugLineNum = 3080198;BA.debugLine="Else If edAutorLivro.Text.Trim = \"\" Then";
-if ((parent.mostCurrent._edautorlivro.getText().trim()).equals("")) { 
+}else if((parent.mostCurrent._edautorlivro.getText().trim()).equals("")) { 
 this.state = 5;
 }else {
 this.state = 7;
-}}
-if (true) break;
+}if (true) break;
 
 case 3:
 //C
 this.state = 46;
-RDebugUtils.currentLine=3080196;
- //BA.debugLineNum = 3080196;BA.debugLine="MsgboxAsync(\"Opa! qual o título do livro?\",\"Calm";
+ //BA.debugLineNum = 215;BA.debugLine="MsgboxAsync(\"Opa! qual o título do livro?\",\"Calm";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual o título do livro?"),BA.ObjectToCharSequence("Calma..."),processBA);
-RDebugUtils.currentLine=3080197;
- //BA.debugLineNum = 3080197;BA.debugLine="edTituloLivro.RequestFocus";
+ //BA.debugLineNum = 216;BA.debugLine="edTituloLivro.RequestFocus";
 parent.mostCurrent._edtitulolivro.RequestFocus();
  if (true) break;
 
 case 5:
 //C
 this.state = 46;
-RDebugUtils.currentLine=3080199;
- //BA.debugLineNum = 3080199;BA.debugLine="MsgboxAsync(\"Opa! qual o nome do autor do livro?";
+ //BA.debugLineNum = 218;BA.debugLine="MsgboxAsync(\"Opa! qual o nome do autor do livro?";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual o nome do autor do livro?"),BA.ObjectToCharSequence("Calma..."),processBA);
-RDebugUtils.currentLine=3080200;
- //BA.debugLineNum = 3080200;BA.debugLine="edAutorLivro.RequestFocus";
+ //BA.debugLineNum = 219;BA.debugLine="edAutorLivro.RequestFocus";
 parent.mostCurrent._edautorlivro.RequestFocus();
  if (true) break;
 
 case 7:
 //C
 this.state = 8;
-RDebugUtils.currentLine=3080203;
- //BA.debugLineNum = 3080203;BA.debugLine="pag_ou_cap = \"Quantos capítulos\"";
+ //BA.debugLineNum = 222;BA.debugLine="pag_ou_cap = \"Quantos capítulos\"";
 _pag_ou_cap = "Quantos capítulos";
-RDebugUtils.currentLine=3080204;
- //BA.debugLineNum = 3080204;BA.debugLine="If radPagina.Checked Then pag_ou_cap = \"Quantas";
+ //BA.debugLineNum = 223;BA.debugLine="If radPagina.Checked Then pag_ou_cap = \"Quantas";
 if (true) break;
 
 case 8:
@@ -594,8 +532,7 @@ case 13:
 //C
 this.state = 14;
 ;
-RDebugUtils.currentLine=3080206;
- //BA.debugLineNum = 3080206;BA.debugLine="If edQuantPagOuCap.Text.Trim = \"\" Then";
+ //BA.debugLineNum = 225;BA.debugLine="If edQuantPagOuCap.Text.Trim = \"\" Then";
 if (true) break;
 
 case 14:
@@ -603,53 +540,41 @@ case 14:
 this.state = 45;
 if ((parent.mostCurrent._edquantpagoucap.getText().trim()).equals("")) { 
 this.state = 16;
-}else 
-{RDebugUtils.currentLine=3080210;
- //BA.debugLineNum = 3080210;BA.debugLine="else If edMeta.Text.Trim = \"\" Then";
-if ((parent.mostCurrent._edmeta.getText().trim()).equals("")) { 
+}else if((parent.mostCurrent._edmeta.getText().trim()).equals("")) { 
 this.state = 18;
 }else {
 this.state = 20;
-}}
-if (true) break;
+}if (true) break;
 
 case 16:
 //C
 this.state = 45;
-RDebugUtils.currentLine=3080207;
- //BA.debugLineNum = 3080207;BA.debugLine="MsgboxAsync(\"Opa! \" & pag_ou_cap & \" o livro te";
+ //BA.debugLineNum = 226;BA.debugLine="MsgboxAsync(\"Opa! \" & pag_ou_cap & \" o livro te";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! "+_pag_ou_cap+" o livro tem?"),BA.ObjectToCharSequence("Calma..."),processBA);
-RDebugUtils.currentLine=3080208;
- //BA.debugLineNum = 3080208;BA.debugLine="edQuantPagOuCap.RequestFocus";
+ //BA.debugLineNum = 227;BA.debugLine="edQuantPagOuCap.RequestFocus";
 parent.mostCurrent._edquantpagoucap.RequestFocus();
  if (true) break;
 
 case 18:
 //C
 this.state = 45;
-RDebugUtils.currentLine=3080212;
- //BA.debugLineNum = 3080212;BA.debugLine="MsgboxAsync(\"Opa! qual a sua meta diária?\",\"Cal";
+ //BA.debugLineNum = 231;BA.debugLine="MsgboxAsync(\"Opa! qual a sua meta diária?\",\"Cal";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual a sua meta diária?"),BA.ObjectToCharSequence("Calma..."),processBA);
-RDebugUtils.currentLine=3080213;
- //BA.debugLineNum = 3080213;BA.debugLine="edMeta.RequestFocus";
+ //BA.debugLineNum = 232;BA.debugLine="edMeta.RequestFocus";
 parent.mostCurrent._edmeta.RequestFocus();
  if (true) break;
 
 case 20:
 //C
 this.state = 21;
-RDebugUtils.currentLine=3080215;
- //BA.debugLineNum = 3080215;BA.debugLine="Dim meta, quantidade_pag_cap As Int";
+ //BA.debugLineNum = 234;BA.debugLine="Dim meta, quantidade_pag_cap As Int";
 _meta = 0;
 _quantidade_pag_cap = 0;
-RDebugUtils.currentLine=3080217;
- //BA.debugLineNum = 3080217;BA.debugLine="meta = edMeta.Text";
+ //BA.debugLineNum = 236;BA.debugLine="meta = edMeta.Text";
 _meta = (int)(Double.parseDouble(parent.mostCurrent._edmeta.getText()));
-RDebugUtils.currentLine=3080218;
- //BA.debugLineNum = 3080218;BA.debugLine="quantidade_pag_cap = edQuantPagOuCap.Text";
+ //BA.debugLineNum = 237;BA.debugLine="quantidade_pag_cap = edQuantPagOuCap.Text";
 _quantidade_pag_cap = (int)(Double.parseDouble(parent.mostCurrent._edquantpagoucap.getText()));
-RDebugUtils.currentLine=3080220;
- //BA.debugLineNum = 3080220;BA.debugLine="If meta > quantidade_pag_cap Then";
+ //BA.debugLineNum = 239;BA.debugLine="If meta > quantidade_pag_cap Then";
 if (true) break;
 
 case 21:
@@ -664,16 +589,14 @@ this.state = 25;
 case 23:
 //C
 this.state = 44;
-RDebugUtils.currentLine=3080221;
- //BA.debugLineNum = 3080221;BA.debugLine="ToastMessageShow(\"Informações incoerentes\",Tru";
+ //BA.debugLineNum = 240;BA.debugLine="ToastMessageShow(\"Informações incoerentes\",Tru";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Informações incoerentes"),anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
 case 25:
 //C
 this.state = 26;
-RDebugUtils.currentLine=3080224;
- //BA.debugLineNum = 3080224;BA.debugLine="Try";
+ //BA.debugLineNum = 243;BA.debugLine="Try";
 if (true) break;
 
 case 26:
@@ -687,16 +610,13 @@ case 28:
 //C
 this.state = 29;
 this.catchState = 42;
-RDebugUtils.currentLine=3080225;
- //BA.debugLineNum = 3080225;BA.debugLine="Dim cmd, dataInicial, tipoLeitura As String";
+ //BA.debugLineNum = 244;BA.debugLine="Dim cmd, dataInicial, tipoLeitura As String";
 _cmd = "";
 _datainicial = "";
 _tipoleitura = "";
-RDebugUtils.currentLine=3080227;
- //BA.debugLineNum = 3080227;BA.debugLine="tipoLeitura = \"PAGINA\"";
+ //BA.debugLineNum = 246;BA.debugLine="tipoLeitura = \"PAGINA\"";
 _tipoleitura = "PAGINA";
-RDebugUtils.currentLine=3080228;
- //BA.debugLineNum = 3080228;BA.debugLine="If radCapitulo.Checked Then tipoLeitura = \"CA";
+ //BA.debugLineNum = 247;BA.debugLine="If radCapitulo.Checked Then tipoLeitura = \"CA";
 if (true) break;
 
 case 29:
@@ -716,15 +636,12 @@ case 34:
 //C
 this.state = 35;
 ;
-RDebugUtils.currentLine=3080230;
- //BA.debugLineNum = 3080230;BA.debugLine="dataInicial = DateTime.Date(DateTime.Now)";
+ //BA.debugLineNum = 249;BA.debugLine="dataInicial = DateTime.Date(DateTime.Now)";
 _datainicial = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
-RDebugUtils.currentLine=3080232;
- //BA.debugLineNum = 3080232;BA.debugLine="cmd = \"exec sp_cad_livro_leitura '\" & edTitul";
+ //BA.debugLineNum = 251;BA.debugLine="cmd = \"exec sp_cad_livro_leitura '\" & edTitul";
 _cmd = "exec sp_cad_livro_leitura '"+parent.mostCurrent._edtitulolivro.getText()+"', '"+parent.mostCurrent._edautorlivro.getText()+"', '"+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+"', '"+_datainicial+"', '"+_tipoleitura+"', '"+parent.mostCurrent._edquantpagoucap.getText()+"', '"+parent.mostCurrent._dataprevistafinal+"', '"+parent.mostCurrent._edmeta.getText()+"'";
-RDebugUtils.currentLine=3080241;
- //BA.debugLineNum = 3080241;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complet";
-anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastrolivro", "btsalvar_click"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
+ //BA.debugLineNum = 260;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complet";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (_cmd));
 this.state = 47;
 return;
 case 47:
@@ -732,11 +649,9 @@ case 47:
 this.state = 35;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
-RDebugUtils.currentLine=3080243;
- //BA.debugLineNum = 3080243;BA.debugLine="Result.NextRow";
+ //BA.debugLineNum = 262;BA.debugLine="Result.NextRow";
 _result.NextRow();
-RDebugUtils.currentLine=3080245;
- //BA.debugLineNum = 3080245;BA.debugLine="If Result.GetString(\"RESULTADO\") = 1 Then";
+ //BA.debugLineNum = 264;BA.debugLine="If Result.GetString(\"RESULTADO\") = 1 Then";
 if (true) break;
 
 case 35:
@@ -744,63 +659,49 @@ case 35:
 this.state = 40;
 if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(1))) { 
 this.state = 37;
-}else 
-{RDebugUtils.currentLine=3080253;
- //BA.debugLineNum = 3080253;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 0 The";
-if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
+}else if((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
 this.state = 39;
-}}
-if (true) break;
+}if (true) break;
 
 case 37:
 //C
 this.state = 40;
-RDebugUtils.currentLine=3080247;
- //BA.debugLineNum = 3080247;BA.debugLine="cadastrou = True";
+ //BA.debugLineNum = 266;BA.debugLine="cadastrou = True";
 parent._cadastrou = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080248;
- //BA.debugLineNum = 3080248;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"";
+ //BA.debugLineNum = 267;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3080249;
- //BA.debugLineNum = 3080249;BA.debugLine="Sleep(100)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastrolivro", "btsalvar_click"),(int) (100));
+ //BA.debugLineNum = 268;BA.debugLine="Sleep(100)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (100));
 this.state = 48;
 return;
 case 48:
 //C
 this.state = 40;
 ;
-RDebugUtils.currentLine=3080250;
- //BA.debugLineNum = 3080250;BA.debugLine="StartActivity(CodigoLayLeituras)";
+ //BA.debugLineNum = 269;BA.debugLine="StartActivity(CodigoLayLeituras)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=3080251;
- //BA.debugLineNum = 3080251;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 270;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
 case 39:
 //C
 this.state = 40;
-RDebugUtils.currentLine=3080255;
- //BA.debugLineNum = 3080255;BA.debugLine="cadastrou = False";
+ //BA.debugLineNum = 274;BA.debugLine="cadastrou = False";
 parent._cadastrou = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=3080256;
- //BA.debugLineNum = 3080256;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"O";
+ //BA.debugLineNum = 275;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"O";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!!"),processBA);
-RDebugUtils.currentLine=3080257;
- //BA.debugLineNum = 3080257;BA.debugLine="Sleep(1000)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastrolivro", "btsalvar_click"),(int) (1000));
+ //BA.debugLineNum = 276;BA.debugLine="Sleep(1000)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (1000));
 this.state = 49;
 return;
 case 49:
 //C
 this.state = 40;
 ;
-RDebugUtils.currentLine=3080258;
- //BA.debugLineNum = 3080258;BA.debugLine="StartActivity(CodigoLayLeituras)";
+ //BA.debugLineNum = 277;BA.debugLine="StartActivity(CodigoLayLeituras)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=3080259;
- //BA.debugLineNum = 3080259;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 278;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
@@ -814,8 +715,7 @@ case 42:
 //C
 this.state = 43;
 this.catchState = 0;
-RDebugUtils.currentLine=3080263;
- //BA.debugLineNum = 3080263;BA.debugLine="MsgboxAsync(\"Problemas ao tentar estabelecer";
+ //BA.debugLineNum = 282;BA.debugLine="MsgboxAsync(\"Problemas ao tentar estabelecer";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas ao tentar estabelecer a conexão. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção"),processBA);
  if (true) break;
 if (true) break;
@@ -843,8 +743,7 @@ case 46:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=3080268;
- //BA.debugLineNum = 3080268;BA.debugLine="End Sub";
+ //BA.debugLineNum = 287;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -858,54 +757,36 @@ processBA.setLastException(e0);}
         }
     }
 }
+public static void  _complete(anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result) throws Exception{
+}
 public static String  _contentchooser_result(boolean _success,String _dir,String _filename) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "contentchooser_result", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "contentchooser_result", new Object[] {_success,_dir,_filename}));}
-RDebugUtils.currentLine=2818048;
- //BA.debugLineNum = 2818048;BA.debugLine="Sub ContentChooser_Result (Success As Boolean, Dir";
-RDebugUtils.currentLine=2818049;
- //BA.debugLineNum = 2818049;BA.debugLine="If Success Then";
+ //BA.debugLineNum = 183;BA.debugLine="Sub ContentChooser_Result (Success As Boolean, Dir";
+ //BA.debugLineNum = 184;BA.debugLine="If Success Then";
 if (_success) { 
-RDebugUtils.currentLine=2818050;
- //BA.debugLineNum = 2818050;BA.debugLine="B4XImageView1.ResizeMode = \"FIT\"";
-mostCurrent._b4ximageview1._setresizemode /*String*/ (null,"FIT");
-RDebugUtils.currentLine=2818052;
- //BA.debugLineNum = 2818052;BA.debugLine="B4XImageView1.Load(Dir, FileName)";
-mostCurrent._b4ximageview1._load /*String*/ (null,_dir,_filename);
-RDebugUtils.currentLine=2818053;
- //BA.debugLineNum = 2818053;BA.debugLine="lblFotoLivro.Visible = False";
+ //BA.debugLineNum = 185;BA.debugLine="B4XImageView1.ResizeMode = \"FIT\"";
+mostCurrent._b4ximageview1._setresizemode /*String*/ ("FIT");
+ //BA.debugLineNum = 187;BA.debugLine="B4XImageView1.Load(Dir, FileName)";
+mostCurrent._b4ximageview1._load /*String*/ (_dir,_filename);
+ //BA.debugLineNum = 188;BA.debugLine="lblFotoLivro.Visible = False";
 mostCurrent._lblfotolivro.setVisible(anywheresoftware.b4a.keywords.Common.False);
  }else {
-RDebugUtils.currentLine=2818055;
- //BA.debugLineNum = 2818055;BA.debugLine="ToastMessageShow(\"Nenhuma foto escolhida\",True)";
+ //BA.debugLineNum = 190;BA.debugLine="ToastMessageShow(\"Nenhuma foto escolhida\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Nenhuma foto escolhida"),anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=2818057;
- //BA.debugLineNum = 2818057;BA.debugLine="End Sub";
+ //BA.debugLineNum = 192;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edautorlivro_textchanged(String _old,String _new) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "edautorlivro_textchanged", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edautorlivro_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=2949120;
- //BA.debugLineNum = 2949120;BA.debugLine="Sub edAutorLivro_TextChanged (Old As String, New A";
-RDebugUtils.currentLine=2949121;
- //BA.debugLineNum = 2949121;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
+ //BA.debugLineNum = 200;BA.debugLine="Sub edAutorLivro_TextChanged (Old As String, New A";
+ //BA.debugLineNum = 201;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
 if (_new.indexOf("'")>=0) { 
-RDebugUtils.currentLine=2949122;
- //BA.debugLineNum = 2949122;BA.debugLine="edAutorLivro.Text = edAutorLivro.Text.Replace(\"'";
+ //BA.debugLineNum = 202;BA.debugLine="edAutorLivro.Text = edAutorLivro.Text.Replace(\"'";
 mostCurrent._edautorlivro.setText(BA.ObjectToCharSequence(mostCurrent._edautorlivro.getText().replace("'","")));
  };
-RDebugUtils.currentLine=2949124;
- //BA.debugLineNum = 2949124;BA.debugLine="End Sub";
+ //BA.debugLineNum = 204;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edmeta_textchanged(String _old,String _new) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "edmeta_textchanged", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edmeta_textchanged", new Object[] {_old,_new}));}
 int _meta = 0;
 int _total = 0;
 int _quantpag = 0;
@@ -913,82 +794,57 @@ String _data = "";
 String _dia = "";
 String _mes = "";
 String _ano = "";
-RDebugUtils.currentLine=2621440;
- //BA.debugLineNum = 2621440;BA.debugLine="Sub edMeta_TextChanged (Old As String, New As Stri";
-RDebugUtils.currentLine=2621442;
- //BA.debugLineNum = 2621442;BA.debugLine="If edMeta.Text.Trim <> \"\" Then";
+ //BA.debugLineNum = 95;BA.debugLine="Sub edMeta_TextChanged (Old As String, New As Stri";
+ //BA.debugLineNum = 97;BA.debugLine="If edMeta.Text.Trim <> \"\" Then";
 if ((mostCurrent._edmeta.getText().trim()).equals("") == false) { 
-RDebugUtils.currentLine=2621444;
- //BA.debugLineNum = 2621444;BA.debugLine="Dim meta As Int = New";
+ //BA.debugLineNum = 99;BA.debugLine="Dim meta As Int = New";
 _meta = (int)(Double.parseDouble(_new));
-RDebugUtils.currentLine=2621445;
- //BA.debugLineNum = 2621445;BA.debugLine="Dim total As Int";
+ //BA.debugLineNum = 100;BA.debugLine="Dim total As Int";
 _total = 0;
-RDebugUtils.currentLine=2621446;
- //BA.debugLineNum = 2621446;BA.debugLine="Dim quantPag As Int";
+ //BA.debugLineNum = 101;BA.debugLine="Dim quantPag As Int";
 _quantpag = 0;
-RDebugUtils.currentLine=2621448;
- //BA.debugLineNum = 2621448;BA.debugLine="If edQuantPagOuCap.Text.Trim <> \"\" Then";
+ //BA.debugLineNum = 103;BA.debugLine="If edQuantPagOuCap.Text.Trim <> \"\" Then";
 if ((mostCurrent._edquantpagoucap.getText().trim()).equals("") == false) { 
-RDebugUtils.currentLine=2621450;
- //BA.debugLineNum = 2621450;BA.debugLine="quantPag = edQuantPagOuCap.Text";
+ //BA.debugLineNum = 105;BA.debugLine="quantPag = edQuantPagOuCap.Text";
 _quantpag = (int)(Double.parseDouble(mostCurrent._edquantpagoucap.getText()));
-RDebugUtils.currentLine=2621452;
- //BA.debugLineNum = 2621452;BA.debugLine="total = quantPag  / meta";
+ //BA.debugLineNum = 107;BA.debugLine="total = quantPag  / meta";
 _total = (int) (_quantpag/(double)_meta);
-RDebugUtils.currentLine=2621454;
- //BA.debugLineNum = 2621454;BA.debugLine="lblQuantidadeDias.Visible = True";
+ //BA.debugLineNum = 109;BA.debugLine="lblQuantidadeDias.Visible = True";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2621455;
- //BA.debugLineNum = 2621455;BA.debugLine="lblQuantidadeDias.Text = \"Total de dias: \" & to";
+ //BA.debugLineNum = 110;BA.debugLine="lblQuantidadeDias.Text = \"Total de dias: \" & to";
 mostCurrent._lblquantidadedias.setText(BA.ObjectToCharSequence("Total de dias: "+BA.NumberToString(_total)));
-RDebugUtils.currentLine=2621457;
- //BA.debugLineNum = 2621457;BA.debugLine="Dim data As String = DateTime.Date( DateTime.Ad";
+ //BA.debugLineNum = 112;BA.debugLine="Dim data As String = DateTime.Date( DateTime.Ad";
 _data = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.Add(anywheresoftware.b4a.keywords.Common.DateTime.getNow(),(int) (0),(int) (0),_total));
-RDebugUtils.currentLine=2621459;
- //BA.debugLineNum = 2621459;BA.debugLine="Dim dia, mes, ano As String";
+ //BA.debugLineNum = 114;BA.debugLine="Dim dia, mes, ano As String";
 _dia = "";
 _mes = "";
 _ano = "";
-RDebugUtils.currentLine=2621461;
- //BA.debugLineNum = 2621461;BA.debugLine="dia = data.SubString2(3,5)";
+ //BA.debugLineNum = 116;BA.debugLine="dia = data.SubString2(3,5)";
 _dia = _data.substring((int) (3),(int) (5));
-RDebugUtils.currentLine=2621462;
- //BA.debugLineNum = 2621462;BA.debugLine="mes = data.SubString2(0,2)";
+ //BA.debugLineNum = 117;BA.debugLine="mes = data.SubString2(0,2)";
 _mes = _data.substring((int) (0),(int) (2));
-RDebugUtils.currentLine=2621463;
- //BA.debugLineNum = 2621463;BA.debugLine="ano = data.SubString2(6,10)";
+ //BA.debugLineNum = 118;BA.debugLine="ano = data.SubString2(6,10)";
 _ano = _data.substring((int) (6),(int) (10));
-RDebugUtils.currentLine=2621465;
- //BA.debugLineNum = 2621465;BA.debugLine="dataPrevistaFinal = dia & \"/\" & mes & \"/\" & ano";
+ //BA.debugLineNum = 120;BA.debugLine="dataPrevistaFinal = dia & \"/\" & mes & \"/\" & ano";
 mostCurrent._dataprevistafinal = _dia+"/"+_mes+"/"+_ano;
-RDebugUtils.currentLine=2621467;
- //BA.debugLineNum = 2621467;BA.debugLine="lblPrevisao.Text = \"Dia: \" & dia & \" / \" & mes";
+ //BA.debugLineNum = 122;BA.debugLine="lblPrevisao.Text = \"Dia: \" & dia & \" / \" & mes";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence("Dia: "+_dia+" / "+_mes+" / "+_ano));
  }else {
-RDebugUtils.currentLine=2621469;
- //BA.debugLineNum = 2621469;BA.debugLine="lblPrevisao.Text = hoje";
+ //BA.debugLineNum = 124;BA.debugLine="lblPrevisao.Text = hoje";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
-RDebugUtils.currentLine=2621470;
- //BA.debugLineNum = 2621470;BA.debugLine="lblQuantidadeDias.Visible = False";
+ //BA.debugLineNum = 125;BA.debugLine="lblQuantidadeDias.Visible = False";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
  }else {
-RDebugUtils.currentLine=2621474;
- //BA.debugLineNum = 2621474;BA.debugLine="lblPrevisao.Text = hoje";
+ //BA.debugLineNum = 129;BA.debugLine="lblPrevisao.Text = hoje";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
-RDebugUtils.currentLine=2621475;
- //BA.debugLineNum = 2621475;BA.debugLine="lblQuantidadeDias.Visible = False";
+ //BA.debugLineNum = 130;BA.debugLine="lblQuantidadeDias.Visible = False";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=2621477;
- //BA.debugLineNum = 2621477;BA.debugLine="End Sub";
+ //BA.debugLineNum = 132;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edquantpagoucap_textchanged(String _old,String _new) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "edquantpagoucap_textchanged", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edquantpagoucap_textchanged", new Object[] {_old,_new}));}
 int _meta = 0;
 int _total = 0;
 int _quantpag = 0;
@@ -996,162 +852,150 @@ String _data = "";
 String _dia = "";
 String _mes = "";
 String _ano = "";
-RDebugUtils.currentLine=2686976;
- //BA.debugLineNum = 2686976;BA.debugLine="Sub edQuantPagOuCap_TextChanged (Old As String, Ne";
-RDebugUtils.currentLine=2686978;
- //BA.debugLineNum = 2686978;BA.debugLine="If edMeta.Text.Trim <> \"\" Then";
+ //BA.debugLineNum = 134;BA.debugLine="Sub edQuantPagOuCap_TextChanged (Old As String, Ne";
+ //BA.debugLineNum = 136;BA.debugLine="If edMeta.Text.Trim <> \"\" Then";
 if ((mostCurrent._edmeta.getText().trim()).equals("") == false) { 
-RDebugUtils.currentLine=2686980;
- //BA.debugLineNum = 2686980;BA.debugLine="Dim meta As Int";
+ //BA.debugLineNum = 138;BA.debugLine="Dim meta As Int";
 _meta = 0;
-RDebugUtils.currentLine=2686981;
- //BA.debugLineNum = 2686981;BA.debugLine="meta = edMeta.Text";
+ //BA.debugLineNum = 139;BA.debugLine="meta = edMeta.Text";
 _meta = (int)(Double.parseDouble(mostCurrent._edmeta.getText()));
-RDebugUtils.currentLine=2686983;
- //BA.debugLineNum = 2686983;BA.debugLine="Dim total As Int";
+ //BA.debugLineNum = 141;BA.debugLine="Dim total As Int";
 _total = 0;
-RDebugUtils.currentLine=2686984;
- //BA.debugLineNum = 2686984;BA.debugLine="Dim quantPag As Int";
+ //BA.debugLineNum = 142;BA.debugLine="Dim quantPag As Int";
 _quantpag = 0;
-RDebugUtils.currentLine=2686986;
- //BA.debugLineNum = 2686986;BA.debugLine="If edQuantPagOuCap.Text.Trim <> \"\" Then";
+ //BA.debugLineNum = 144;BA.debugLine="If edQuantPagOuCap.Text.Trim <> \"\" Then";
 if ((mostCurrent._edquantpagoucap.getText().trim()).equals("") == false) { 
-RDebugUtils.currentLine=2686988;
- //BA.debugLineNum = 2686988;BA.debugLine="quantPag = New";
+ //BA.debugLineNum = 146;BA.debugLine="quantPag = New";
 _quantpag = (int)(Double.parseDouble(_new));
-RDebugUtils.currentLine=2686990;
- //BA.debugLineNum = 2686990;BA.debugLine="total = quantPag  / meta";
+ //BA.debugLineNum = 148;BA.debugLine="total = quantPag  / meta";
 _total = (int) (_quantpag/(double)_meta);
-RDebugUtils.currentLine=2686992;
- //BA.debugLineNum = 2686992;BA.debugLine="lblQuantidadeDias.Visible = True";
+ //BA.debugLineNum = 150;BA.debugLine="lblQuantidadeDias.Visible = True";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2686993;
- //BA.debugLineNum = 2686993;BA.debugLine="lblQuantidadeDias.Text = \"Total de dias: \" & to";
+ //BA.debugLineNum = 151;BA.debugLine="lblQuantidadeDias.Text = \"Total de dias: \" & to";
 mostCurrent._lblquantidadedias.setText(BA.ObjectToCharSequence("Total de dias: "+BA.NumberToString(_total)));
-RDebugUtils.currentLine=2686995;
- //BA.debugLineNum = 2686995;BA.debugLine="Dim data As String = DateTime.Date( DateTime.Ad";
+ //BA.debugLineNum = 153;BA.debugLine="Dim data As String = DateTime.Date( DateTime.Ad";
 _data = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.Add(anywheresoftware.b4a.keywords.Common.DateTime.getNow(),(int) (0),(int) (0),_total));
-RDebugUtils.currentLine=2686997;
- //BA.debugLineNum = 2686997;BA.debugLine="Dim dia, mes, ano As String";
+ //BA.debugLineNum = 155;BA.debugLine="Dim dia, mes, ano As String";
 _dia = "";
 _mes = "";
 _ano = "";
-RDebugUtils.currentLine=2686999;
- //BA.debugLineNum = 2686999;BA.debugLine="dia = data.SubString2(3,5)";
+ //BA.debugLineNum = 157;BA.debugLine="dia = data.SubString2(3,5)";
 _dia = _data.substring((int) (3),(int) (5));
-RDebugUtils.currentLine=2687000;
- //BA.debugLineNum = 2687000;BA.debugLine="mes = data.SubString2(0,2)";
+ //BA.debugLineNum = 158;BA.debugLine="mes = data.SubString2(0,2)";
 _mes = _data.substring((int) (0),(int) (2));
-RDebugUtils.currentLine=2687001;
- //BA.debugLineNum = 2687001;BA.debugLine="ano = data.SubString2(6,10)";
+ //BA.debugLineNum = 159;BA.debugLine="ano = data.SubString2(6,10)";
 _ano = _data.substring((int) (6),(int) (10));
-RDebugUtils.currentLine=2687003;
- //BA.debugLineNum = 2687003;BA.debugLine="dataPrevistaFinal = dia & \"/\" & mes & \"/\" & ano";
+ //BA.debugLineNum = 161;BA.debugLine="dataPrevistaFinal = dia & \"/\" & mes & \"/\" & ano";
 mostCurrent._dataprevistafinal = _dia+"/"+_mes+"/"+_ano;
-RDebugUtils.currentLine=2687005;
- //BA.debugLineNum = 2687005;BA.debugLine="lblPrevisao.Text = \"Dia: \" & dia & \" / \" & mes";
+ //BA.debugLineNum = 163;BA.debugLine="lblPrevisao.Text = \"Dia: \" & dia & \" / \" & mes";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence("Dia: "+_dia+" / "+_mes+" / "+_ano));
  }else {
-RDebugUtils.currentLine=2687007;
- //BA.debugLineNum = 2687007;BA.debugLine="lblPrevisao.Text = hoje";
+ //BA.debugLineNum = 165;BA.debugLine="lblPrevisao.Text = hoje";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
-RDebugUtils.currentLine=2687008;
- //BA.debugLineNum = 2687008;BA.debugLine="lblQuantidadeDias.Visible = False";
+ //BA.debugLineNum = 166;BA.debugLine="lblQuantidadeDias.Visible = False";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
  }else {
-RDebugUtils.currentLine=2687012;
- //BA.debugLineNum = 2687012;BA.debugLine="lblPrevisao.Text = hoje";
+ //BA.debugLineNum = 170;BA.debugLine="lblPrevisao.Text = hoje";
 mostCurrent._lblprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
-RDebugUtils.currentLine=2687013;
- //BA.debugLineNum = 2687013;BA.debugLine="lblQuantidadeDias.Visible = False";
+ //BA.debugLineNum = 171;BA.debugLine="lblQuantidadeDias.Visible = False";
 mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=2687015;
- //BA.debugLineNum = 2687015;BA.debugLine="End Sub";
+ //BA.debugLineNum = 173;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edtitulolivro_textchanged(String _old,String _new) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "edtitulolivro_textchanged", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edtitulolivro_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=2883584;
- //BA.debugLineNum = 2883584;BA.debugLine="Sub edTituloLivro_TextChanged (Old As String, New";
-RDebugUtils.currentLine=2883585;
- //BA.debugLineNum = 2883585;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
+ //BA.debugLineNum = 194;BA.debugLine="Sub edTituloLivro_TextChanged (Old As String, New";
+ //BA.debugLineNum = 195;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
 if (_new.indexOf("'")>=0) { 
-RDebugUtils.currentLine=2883586;
- //BA.debugLineNum = 2883586;BA.debugLine="edTituloLivro.Text = edTituloLivro.Text.Replace(";
+ //BA.debugLineNum = 196;BA.debugLine="edTituloLivro.Text = edTituloLivro.Text.Replace(";
 mostCurrent._edtitulolivro.setText(BA.ObjectToCharSequence(mostCurrent._edtitulolivro.getText().replace("'","")));
  };
-RDebugUtils.currentLine=2883588;
- //BA.debugLineNum = 2883588;BA.debugLine="End Sub";
+ //BA.debugLineNum = 198;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 18;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 20;BA.debugLine="Private edTituloLivro As EditText";
+mostCurrent._edtitulolivro = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 21;BA.debugLine="Private radPagina As RadioButton";
+mostCurrent._radpagina = new anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper();
+ //BA.debugLineNum = 22;BA.debugLine="Private radCapitulo As RadioButton";
+mostCurrent._radcapitulo = new anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper();
+ //BA.debugLineNum = 23;BA.debugLine="Private edQuantPagOuCap As EditText";
+mostCurrent._edquantpagoucap = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Private lblMeta As Label";
+mostCurrent._lblmeta = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="Private edMeta As EditText";
+mostCurrent._edmeta = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 26;BA.debugLine="Private hoje As String";
+mostCurrent._hoje = "";
+ //BA.debugLineNum = 28;BA.debugLine="Private lblPrevisao As Label";
+mostCurrent._lblprevisao = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 29;BA.debugLine="Private lblQuantidadeDias As Label";
+mostCurrent._lblquantidadedias = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 30;BA.debugLine="Private btAddFoto As Button";
+mostCurrent._btaddfoto = new anywheresoftware.b4a.objects.ButtonWrapper();
+ //BA.debugLineNum = 31;BA.debugLine="Private B4XImageView1 As B4XImageView";
+mostCurrent._b4ximageview1 = new b4a.example.b4ximageview();
+ //BA.debugLineNum = 32;BA.debugLine="Private lblFotoLivro As Label";
+mostCurrent._lblfotolivro = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 33;BA.debugLine="Private edAutorLivro As EditText";
+mostCurrent._edautorlivro = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 34;BA.debugLine="Private dataPrevistaFinal As String";
+mostCurrent._dataprevistafinal = "";
+ //BA.debugLineNum = 36;BA.debugLine="Private banco As ClassBancoDados";
+mostCurrent._banco = new b4a.example.classbancodados();
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 7;BA.debugLine="Public cadastrou As Boolean = False";
+_cadastrou = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 8;BA.debugLine="End Sub";
 return "";
 }
 public static String  _radcapitulo_checkedchange(boolean _checked) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "radcapitulo_checkedchange", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "radcapitulo_checkedchange", new Object[] {_checked}));}
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Sub radCapitulo_CheckedChange(Checked As Boolean)";
-RDebugUtils.currentLine=2555905;
- //BA.debugLineNum = 2555905;BA.debugLine="If Checked Then";
+ //BA.debugLineNum = 83;BA.debugLine="Sub radCapitulo_CheckedChange(Checked As Boolean)";
+ //BA.debugLineNum = 84;BA.debugLine="If Checked Then";
 if (_checked) { 
-RDebugUtils.currentLine=2555906;
- //BA.debugLineNum = 2555906;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade capítulos\"";
+ //BA.debugLineNum = 85;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade capítulos\"";
 mostCurrent._edquantpagoucap.setHint("Quantidade capítulos");
-RDebugUtils.currentLine=2555907;
- //BA.debugLineNum = 2555907;BA.debugLine="lblMeta.Text = \"Meta - Quantos capítulos ler por";
+ //BA.debugLineNum = 86;BA.debugLine="lblMeta.Text = \"Meta - Quantos capítulos ler por";
 mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantos capítulos ler por dia?"));
-RDebugUtils.currentLine=2555908;
- //BA.debugLineNum = 2555908;BA.debugLine="edMeta.Hint = \"Quantidade de capítulos\"";
+ //BA.debugLineNum = 87;BA.debugLine="edMeta.Hint = \"Quantidade de capítulos\"";
 mostCurrent._edmeta.setHint("Quantidade de capítulos");
  }else {
-RDebugUtils.currentLine=2555910;
- //BA.debugLineNum = 2555910;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade páginas\"";
+ //BA.debugLineNum = 89;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade páginas\"";
 mostCurrent._edquantpagoucap.setHint("Quantidade páginas");
-RDebugUtils.currentLine=2555911;
- //BA.debugLineNum = 2555911;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas ler por d";
+ //BA.debugLineNum = 90;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas ler por d";
 mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantas páginas ler por dia?"));
-RDebugUtils.currentLine=2555912;
- //BA.debugLineNum = 2555912;BA.debugLine="edMeta.Hint = \"Quantidade de páginas\"";
+ //BA.debugLineNum = 91;BA.debugLine="edMeta.Hint = \"Quantidade de páginas\"";
 mostCurrent._edmeta.setHint("Quantidade de páginas");
  };
-RDebugUtils.currentLine=2555914;
- //BA.debugLineNum = 2555914;BA.debugLine="End Sub";
+ //BA.debugLineNum = 93;BA.debugLine="End Sub";
 return "";
 }
 public static String  _radpagina_checkedchange(boolean _checked) throws Exception{
-RDebugUtils.currentModule="codigocadastrolivro";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "radpagina_checkedchange", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "radpagina_checkedchange", new Object[] {_checked}));}
-RDebugUtils.currentLine=2490368;
- //BA.debugLineNum = 2490368;BA.debugLine="Sub radPagina_CheckedChange(Checked As Boolean)";
-RDebugUtils.currentLine=2490369;
- //BA.debugLineNum = 2490369;BA.debugLine="If Checked Then";
+ //BA.debugLineNum = 71;BA.debugLine="Sub radPagina_CheckedChange(Checked As Boolean)";
+ //BA.debugLineNum = 72;BA.debugLine="If Checked Then";
 if (_checked) { 
-RDebugUtils.currentLine=2490370;
- //BA.debugLineNum = 2490370;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade páginas\"";
+ //BA.debugLineNum = 73;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade páginas\"";
 mostCurrent._edquantpagoucap.setHint("Quantidade páginas");
-RDebugUtils.currentLine=2490371;
- //BA.debugLineNum = 2490371;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas ler por d";
+ //BA.debugLineNum = 74;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas ler por d";
 mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantas páginas ler por dia?"));
-RDebugUtils.currentLine=2490372;
- //BA.debugLineNum = 2490372;BA.debugLine="edMeta.Hint = \"Quantidade de páginas\"";
+ //BA.debugLineNum = 75;BA.debugLine="edMeta.Hint = \"Quantidade de páginas\"";
 mostCurrent._edmeta.setHint("Quantidade de páginas");
  }else {
-RDebugUtils.currentLine=2490374;
- //BA.debugLineNum = 2490374;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade capítulos\"";
+ //BA.debugLineNum = 77;BA.debugLine="edQuantPagOuCap.Hint = \"Quantidade capítulos\"";
 mostCurrent._edquantpagoucap.setHint("Quantidade capítulos");
-RDebugUtils.currentLine=2490375;
- //BA.debugLineNum = 2490375;BA.debugLine="lblMeta.Text = \"Meta - Quantos capítulos ler por";
+ //BA.debugLineNum = 78;BA.debugLine="lblMeta.Text = \"Meta - Quantos capítulos ler por";
 mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantos capítulos ler por dia?"));
-RDebugUtils.currentLine=2490376;
- //BA.debugLineNum = 2490376;BA.debugLine="edMeta.Hint = \"Quantidade de capítulos\"";
+ //BA.debugLineNum = 79;BA.debugLine="edMeta.Hint = \"Quantidade de capítulos\"";
 mostCurrent._edmeta.setHint("Quantidade de capítulos");
  };
-RDebugUtils.currentLine=2490378;
- //BA.debugLineNum = 2490378;BA.debugLine="End Sub";
+ //BA.debugLineNum = 81;BA.debugLine="End Sub";
 return "";
 }
 }
