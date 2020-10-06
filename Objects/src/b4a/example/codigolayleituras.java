@@ -34,7 +34,7 @@ public class codigolayleituras extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigolayleituras");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigolayleituras");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,16 +335,7 @@ public class codigolayleituras extends Activity implements B4AActivity{
             
     }
 
-public anywheresoftware.b4a.keywords.Common __c = null;
-public b4a.example.classbancodados _banco = null;
-public anywheresoftware.b4a.objects.TabStripViewPager _tabstrip = null;
-public b4a.example.dateutils _dateutils = null;
-public b4a.example.main _main = null;
-public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigolaylogin _codigolaylogin = null;
-public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
-public b4a.example.starter _starter = null;
-public b4a.example.xuiviewsutils _xuiviewsutils = null;
+
 
 public static void initializeProcessGlobals() {
              try {
@@ -353,61 +344,436 @@ public static void initializeProcessGlobals() {
                 throw new RuntimeException(e);
             }
 }
-public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 18;BA.debugLine="Activity.LoadLayout(\"LayLeiturasTabStrip\")";
-mostCurrent._activity.LoadLayout("LayLeiturasTabStrip",mostCurrent.activityBA);
- //BA.debugLineNum = 20;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu1\",\"Lendo\")";
-mostCurrent._tabstrip.LoadLayout("LayLeitura_menu1",BA.ObjectToCharSequence("Lendo"));
- //BA.debugLineNum = 21;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu2\",\"Lidos\")";
-mostCurrent._tabstrip.LoadLayout("LayLeitura_menu2",BA.ObjectToCharSequence("Lidos"));
- //BA.debugLineNum = 23;BA.debugLine="banco.Initialize";
-mostCurrent._banco._initialize /*String*/ (processBA);
- //BA.debugLineNum = 24;BA.debugLine="End Sub";
-return "";
+public anywheresoftware.b4a.keywords.Common __c = null;
+public b4a.example.classbancodados _banco = null;
+public anywheresoftware.b4a.objects.TabStripViewPager _tabstrip = null;
+public anywheresoftware.b4a.objects.LabelWrapper _lbl_inicial_leitura = null;
+public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview1 = null;
+public anywheresoftware.b4a.objects.PanelWrapper _panelleituras = null;
+public anywheresoftware.b4a.objects.drawable.GradientDrawable _gradient = null;
+public anywheresoftware.b4a.objects.PanelWrapper _panelnenhumaleitura = null;
+public static int[] _cores = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _btadicionarleitura = null;
+public b4a.example.dateutils _dateutils = null;
+public b4a.example.main _main = null;
+public b4a.example.codigocadastro _codigocadastro = null;
+public b4a.example.codigolaylogin _codigolaylogin = null;
+public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public b4a.example.starter _starter = null;
+public b4a.example.xuiviewsutils _xuiviewsutils = null;
+public static void  _activity_create(boolean _firsttime) throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}); return;}
+ResumableSub_Activity_Create rsub = new ResumableSub_Activity_Create(null,_firsttime);
+rsub.resume(processBA, null);
+}
+public static class ResumableSub_Activity_Create extends BA.ResumableSub {
+public ResumableSub_Activity_Create(b4a.example.codigolayleituras parent,boolean _firsttime) {
+this.parent = parent;
+this._firsttime = _firsttime;
+}
+b4a.example.codigolayleituras parent;
+boolean _firsttime;
+boolean _success = false;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+
+    while (true) {
+        switch (state) {
+            case -1:
+return;
+
+case 0:
+//C
+this.state = 1;
+RDebugUtils.currentLine=1572865;
+ //BA.debugLineNum = 1572865;BA.debugLine="Activity.LoadLayout(\"LayLeiturasTabStrip\")";
+parent.mostCurrent._activity.LoadLayout("LayLeiturasTabStrip",mostCurrent.activityBA);
+RDebugUtils.currentLine=1572866;
+ //BA.debugLineNum = 1572866;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu1\",\"Lendo\")";
+parent.mostCurrent._tabstrip.LoadLayout("LayLeitura_menu1",BA.ObjectToCharSequence("Lendo"));
+RDebugUtils.currentLine=1572867;
+ //BA.debugLineNum = 1572867;BA.debugLine="TabStrip.LoadLayout(\"LayLeitura_menu2\",\"Lidos\")";
+parent.mostCurrent._tabstrip.LoadLayout("LayLeitura_menu2",BA.ObjectToCharSequence("Lidos"));
+RDebugUtils.currentLine=1572869;
+ //BA.debugLineNum = 1572869;BA.debugLine="lbl_Inicial_Leitura.Initialize( \"Event_lbl\" )";
+parent.mostCurrent._lbl_inicial_leitura.Initialize(mostCurrent.activityBA,"Event_lbl");
+RDebugUtils.currentLine=1572871;
+ //BA.debugLineNum = 1572871;BA.debugLine="banco.Initialize";
+parent.mostCurrent._banco._initialize /*String*/ (null,processBA);
+RDebugUtils.currentLine=1572873;
+ //BA.debugLineNum = 1572873;BA.debugLine="cores(0) = Colors.RGB(255,255,255)";
+parent._cores[(int) (0)] = anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (255),(int) (255),(int) (255));
+RDebugUtils.currentLine=1572874;
+ //BA.debugLineNum = 1572874;BA.debugLine="cores(1) = Colors.RGB(255,255,255)";
+parent._cores[(int) (1)] = anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (255),(int) (255),(int) (255));
+RDebugUtils.currentLine=1572876;
+ //BA.debugLineNum = 1572876;BA.debugLine="panelNenhumaLeitura.Initialize( \"\" )";
+parent.mostCurrent._panelnenhumaleitura.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=1572877;
+ //BA.debugLineNum = 1572877;BA.debugLine="ScrollView1.Panel.Height = 100%y";
+parent.mostCurrent._scrollview1.getPanel().setHeight(anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+RDebugUtils.currentLine=1572879;
+ //BA.debugLineNum = 1572879;BA.debugLine="panelLeituras.Visible = False";
+parent.mostCurrent._panelleituras.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1572880;
+ //BA.debugLineNum = 1572880;BA.debugLine="btAdicionarLeitura.Visible = False";
+parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=1572882;
+ //BA.debugLineNum = 1572882;BA.debugLine="If FirstTime Then";
+if (true) break;
+
+case 1:
+//if
+this.state = 8;
+if (_firsttime) { 
+this.state = 3;
+}if (true) break;
+
+case 3:
+//C
+this.state = 4;
+RDebugUtils.currentLine=1572883;
+ //BA.debugLineNum = 1572883;BA.debugLine="Wait For (Atualiza_leituras) Complete (Success A";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayleituras", "activity_create"), _atualiza_leituras());
+this.state = 9;
+return;
+case 9:
+//C
+this.state = 4;
+_success = (Boolean) result[0];
+;
+RDebugUtils.currentLine=1572885;
+ //BA.debugLineNum = 1572885;BA.debugLine="If Success = False Then";
+if (true) break;
+
+case 4:
+//if
+this.state = 7;
+if (_success==anywheresoftware.b4a.keywords.Common.False) { 
+this.state = 6;
+}if (true) break;
+
+case 6:
+//C
+this.state = 7;
+RDebugUtils.currentLine=1572886;
+ //BA.debugLineNum = 1572886;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\"";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Impossível carregar leituras"),anywheresoftware.b4a.keywords.Common.True);
+ if (true) break;
+
+case 7:
+//C
+this.state = 8;
+;
+ if (true) break;
+
+case 8:
+//C
+this.state = -1;
+;
+RDebugUtils.currentLine=1572890;
+ //BA.debugLineNum = 1572890;BA.debugLine="End Sub";
+if (true) break;
+
+            }
+        }
+    }
+}
+public static anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _atualiza_leituras() throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "atualiza_leituras", false))
+	 {return ((anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) Debug.delegate(mostCurrent.activityBA, "atualiza_leituras", null));}
+ResumableSub_Atualiza_leituras rsub = new ResumableSub_Atualiza_leituras(null);
+rsub.resume(processBA, null);
+return (anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper(), rsub);
+}
+public static class ResumableSub_Atualiza_leituras extends BA.ResumableSub {
+public ResumableSub_Atualiza_leituras(b4a.example.codigolayleituras parent) {
+this.parent = parent;
+}
+b4a.example.codigolayleituras parent;
+String _cmd = "";
+anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result = null;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+
+    while (true) {
+try {
+
+        switch (state) {
+            case -1:
+{
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,null);return;}
+case 0:
+//C
+this.state = 1;
+RDebugUtils.currentLine=24707074;
+ //BA.debugLineNum = 24707074;BA.debugLine="Try";
+if (true) break;
+
+case 1:
+//try
+this.state = 12;
+this.catchState = 11;
+this.state = 3;
+if (true) break;
+
+case 3:
+//C
+this.state = 4;
+this.catchState = 11;
+RDebugUtils.currentLine=24707076;
+ //BA.debugLineNum = 24707076;BA.debugLine="Dim cmd As String";
+_cmd = "";
+RDebugUtils.currentLine=24707078;
+ //BA.debugLineNum = 24707078;BA.debugLine="cmd = \"exec sp_atualiza_leituras \" & Main.Id_do_";
+_cmd = "exec sp_atualiza_leituras "+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ );
+RDebugUtils.currentLine=24707080;
+ //BA.debugLineNum = 24707080;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete (";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayleituras", "atualiza_leituras"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
+this.state = 13;
+return;
+case 13:
+//C
+this.state = 4;
+_result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
+;
+RDebugUtils.currentLine=24707082;
+ //BA.debugLineNum = 24707082;BA.debugLine="Result.NextRow";
+_result.NextRow();
+RDebugUtils.currentLine=24707084;
+ //BA.debugLineNum = 24707084;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 2 Then";
+if (true) break;
+
+case 4:
+//if
+this.state = 9;
+if (_result.GetInt("RESULTADO")==2) { 
+this.state = 6;
+}else {
+this.state = 8;
+}if (true) break;
+
+case 6:
+//C
+this.state = 9;
+RDebugUtils.currentLine=24707086;
+ //BA.debugLineNum = 24707086;BA.debugLine="panelLeituras.Visible = False";
+parent.mostCurrent._panelleituras.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24707087;
+ //BA.debugLineNum = 24707087;BA.debugLine="btAdicionarLeitura.Visible = False";
+parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=24707089;
+ //BA.debugLineNum = 24707089;BA.debugLine="lbl_Inicial_Leitura.Text = Result.GetString(\"ME";
+parent.mostCurrent._lbl_inicial_leitura.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
+RDebugUtils.currentLine=24707090;
+ //BA.debugLineNum = 24707090;BA.debugLine="lbl_Inicial_Leitura.TextColor = Colors.Black";
+parent.mostCurrent._lbl_inicial_leitura.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=24707091;
+ //BA.debugLineNum = 24707091;BA.debugLine="lbl_Inicial_Leitura.TextSize = 20";
+parent.mostCurrent._lbl_inicial_leitura.setTextSize((float) (20));
+RDebugUtils.currentLine=24707099;
+ //BA.debugLineNum = 24707099;BA.debugLine="ScrollView1.Panel.AddView(lbl_Inicial_Leitura,";
+parent.mostCurrent._scrollview1.getPanel().AddView((android.view.View)(parent.mostCurrent._lbl_inicial_leitura.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (10),mostCurrent.activityBA));
+RDebugUtils.currentLine=24707101;
+ //BA.debugLineNum = 24707101;BA.debugLine="Return True";
+if (true) {
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
+ if (true) break;
+
+case 8:
+//C
+this.state = 9;
+RDebugUtils.currentLine=24707103;
+ //BA.debugLineNum = 24707103;BA.debugLine="panelLeituras.Visible = True";
+parent.mostCurrent._panelleituras.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=24707104;
+ //BA.debugLineNum = 24707104;BA.debugLine="Return True";
+if (true) {
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
+ if (true) break;
+
+case 9:
+//C
+this.state = 12;
+;
+ if (true) break;
+
+case 11:
+//C
+this.state = 12;
+this.catchState = 0;
+RDebugUtils.currentLine=24707107;
+ //BA.debugLineNum = 24707107;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Impossível carregar leituras"),anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=24707108;
+ //BA.debugLineNum = 24707108;BA.debugLine="Return False";
+if (true) {
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.False));return;};
+ if (true) break;
+if (true) break;
+
+case 12:
+//C
+this.state = -1;
+this.catchState = 0;
+;
+RDebugUtils.currentLine=24707111;
+ //BA.debugLineNum = 24707111;BA.debugLine="End Sub";
+if (true) break;
+}} 
+       catch (Exception e0) {
+			
+if (catchState == 0)
+    throw e0;
+else {
+    state = catchState;
+processBA.setLastException(e0);}
+            }
+        }
+    }
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 46;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 48;BA.debugLine="End Sub";
+RDebugUtils.currentModule="codigolayleituras";
+RDebugUtils.currentLine=1703936;
+ //BA.debugLineNum = 1703936;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=1703938;
+ //BA.debugLineNum = 1703938;BA.debugLine="End Sub";
 return "";
 }
-public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 26;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 27;BA.debugLine="Try";
-try { } 
-       catch (Exception e3) {
-			processBA.setLastException(e3); //BA.debugLineNum = 42;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
+public static void  _activity_resume() throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {Debug.delegate(mostCurrent.activityBA, "activity_resume", null); return;}
+ResumableSub_Activity_Resume rsub = new ResumableSub_Activity_Resume(null);
+rsub.resume(processBA, null);
+}
+public static class ResumableSub_Activity_Resume extends BA.ResumableSub {
+public ResumableSub_Activity_Resume(b4a.example.codigolayleituras parent) {
+this.parent = parent;
+}
+b4a.example.codigolayleituras parent;
+boolean _success = false;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+
+    while (true) {
+        switch (state) {
+            case -1:
+return;
+
+case 0:
+//C
+this.state = 1;
+RDebugUtils.currentLine=1638402;
+ //BA.debugLineNum = 1638402;BA.debugLine="If CodigoCadastroLivro.cadastrou Then";
+if (true) break;
+
+case 1:
+//if
+this.state = 8;
+if (parent.mostCurrent._codigocadastrolivro._cadastrou /*boolean*/ ) { 
+this.state = 3;
+}if (true) break;
+
+case 3:
+//C
+this.state = 4;
+RDebugUtils.currentLine=1638403;
+ //BA.debugLineNum = 1638403;BA.debugLine="Wait For (Atualiza_leituras) Complete (Success A";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayleituras", "activity_resume"), _atualiza_leituras());
+this.state = 9;
+return;
+case 9:
+//C
+this.state = 4;
+_success = (Boolean) result[0];
+;
+RDebugUtils.currentLine=1638405;
+ //BA.debugLineNum = 1638405;BA.debugLine="CodigoCadastroLivro.cadastrou = False";
+parent.mostCurrent._codigocadastrolivro._cadastrou /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
+RDebugUtils.currentLine=1638406;
+ //BA.debugLineNum = 1638406;BA.debugLine="If Success = False Then";
+if (true) break;
+
+case 4:
+//if
+this.state = 7;
+if (_success==anywheresoftware.b4a.keywords.Common.False) { 
+this.state = 6;
+}if (true) break;
+
+case 6:
+//C
+this.state = 7;
+RDebugUtils.currentLine=1638408;
+ //BA.debugLineNum = 1638408;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\"";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Impossível carregar leituras"),anywheresoftware.b4a.keywords.Common.True);
- };
- //BA.debugLineNum = 44;BA.debugLine="End Sub";
-return "";
+RDebugUtils.currentLine=1638409;
+ //BA.debugLineNum = 1638409;BA.debugLine="CodigoCadastroLivro.cadastrou = True";
+parent.mostCurrent._codigocadastrolivro._cadastrou /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
+ if (true) break;
+
+case 7:
+//C
+this.state = 8;
+;
+ if (true) break;
+
+case 8:
+//C
+this.state = -1;
+;
+RDebugUtils.currentLine=1638412;
+ //BA.debugLineNum = 1638412;BA.debugLine="End Sub";
+if (true) break;
+
+            }
+        }
+    }
 }
 public static String  _btadicionarleitura_click() throws Exception{
- //BA.debugLineNum = 50;BA.debugLine="Sub btAdicionarLeitura_Click";
- //BA.debugLineNum = 51;BA.debugLine="StartActivity(CodigoCadastroLivro)";
+RDebugUtils.currentModule="codigolayleituras";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "btadicionarleitura_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btadicionarleitura_click", null));}
+RDebugUtils.currentLine=1769472;
+ //BA.debugLineNum = 1769472;BA.debugLine="Sub btAdicionarLeitura_Click";
+RDebugUtils.currentLine=1769473;
+ //BA.debugLineNum = 1769473;BA.debugLine="StartActivity(CodigoCadastroLivro)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._codigocadastrolivro.getObject()));
- //BA.debugLineNum = 52;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1769474;
+ //BA.debugLineNum = 1769474;BA.debugLine="End Sub";
 return "";
 }
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 10;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 12;BA.debugLine="Private banco As ClassBancoDados";
-mostCurrent._banco = new b4a.example.classbancodados();
- //BA.debugLineNum = 13;BA.debugLine="Private TabStrip As TabStrip";
-mostCurrent._tabstrip = new anywheresoftware.b4a.objects.TabStripViewPager();
- //BA.debugLineNum = 15;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 8;BA.debugLine="End Sub";
+public static String  _event_lbl_click() throws Exception{
+RDebugUtils.currentModule="codigolayleituras";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "event_lbl_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "event_lbl_click", null));}
+RDebugUtils.currentLine=23592960;
+ //BA.debugLineNum = 23592960;BA.debugLine="Sub Event_lbl_Click";
+RDebugUtils.currentLine=23592961;
+ //BA.debugLineNum = 23592961;BA.debugLine="StartActivity(CodigoCadastroLivro)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._codigocadastrolivro.getObject()));
+RDebugUtils.currentLine=23592962;
+ //BA.debugLineNum = 23592962;BA.debugLine="End Sub";
 return "";
 }
 public static String  _tabstrip_pageselected(int _position) throws Exception{
- //BA.debugLineNum = 54;BA.debugLine="Sub TabStrip_PageSelected (Position As Int)";
- //BA.debugLineNum = 55;BA.debugLine="MsgboxAsync(Position,\"\")";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_position),BA.ObjectToCharSequence(""),processBA);
- //BA.debugLineNum = 56;BA.debugLine="End Sub";
+RDebugUtils.currentModule="codigolayleituras";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "tabstrip_pageselected", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "tabstrip_pageselected", new Object[] {_position}));}
+RDebugUtils.currentLine=1835008;
+ //BA.debugLineNum = 1835008;BA.debugLine="Sub TabStrip_PageSelected (Position As Int)";
+RDebugUtils.currentLine=1835010;
+ //BA.debugLineNum = 1835010;BA.debugLine="End Sub";
 return "";
 }
 }

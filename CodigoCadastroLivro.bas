@@ -10,7 +10,7 @@ Version=10.2
 #End Region
 
 Sub Process_Globals
-	
+	Public cadastrou as Boolean = False
 End Sub
 
 Sub Activity_Resume
@@ -268,13 +268,16 @@ Sub btSalvar_Click
 					Result.NextRow
 			
 					If Result.GetString("RESULTADO") = 1 Then
+						
+						cadastrou = True
 						ToastMessageShow(Result.GetString("MENSAGEM"), True)
 						Sleep(100)
 						StartActivity(CodigoLayLeituras)
 						Activity.Finish
 				
 					else if Result.GetString("RESULTADO") = 0 Then
-				
+						
+						cadastrou = False
 						MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!!")
 						Sleep(1000)
 						StartActivity(CodigoLayLeituras)

@@ -35,14 +35,12 @@ begin
 		else 
 		begin
 			select 'Nenhuma leitura ainda, vamos começar?' [MENSAGEM], 2 [RESULTADO]
-		end
-		
+		end		
 		
 	end try
 	begin catch
 		
 		select 'Problemas ao atualizar leituras' [MENSAGEM], 0 [RESULTADO]
-	end catch
-		
+	end catch		
 end
 go
