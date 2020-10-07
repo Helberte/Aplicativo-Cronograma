@@ -24,6 +24,10 @@ views.get("paneledsenha").vw.setTop((int)((views.get("paneledlogin").vw.getTop()
 views.get("paneledrepitasenha").vw.setWidth((int)((views.get("paneledsenha").vw.getWidth())));
 views.get("paneledrepitasenha").vw.setLeft((int)((views.get("paneledsenha").vw.getLeft())));
 views.get("paneledrepitasenha").vw.setTop((int)((views.get("paneledsenha").vw.getTop())+(12d / 100 * height)));
+views.get("lblmostrarsenha").vw.setWidth((int)((views.get("paneledrepitasenha").vw.getWidth())/3d));
+views.get("lblmostrarsenha").vw.setTop((int)((views.get("paneledrepitasenha").vw.getTop())+(views.get("paneledrepitasenha").vw.getHeight())));
+views.get("lblmostrarsenha").vw.setLeft((int)(((views.get("paneledrepitasenha").vw.getLeft())+(views.get("paneledrepitasenha").vw.getWidth()))-(views.get("lblmostrarsenha").vw.getWidth())));
+views.get("lblmostrarsenha").vw.setHeight((int)((5d / 100 * height)));
 views.get("panelcadsalvo").vw.setWidth((int)((views.get("paneledrepitasenha").vw.getWidth())));
 views.get("panelcadsalvo").vw.setLeft((int)((views.get("paneledrepitasenha").vw.getLeft())));
 views.get("panelcadsalvo").vw.setTop((int)((views.get("paneledrepitasenha").vw.getTop())+(15.4d / 100 * height)));

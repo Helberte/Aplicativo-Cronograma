@@ -10,7 +10,8 @@ Version=9.801
 #End Region
 
 Sub Process_Globals
-	Public cadastrouUsuario as Boolean = False
+	Public cadastrouUsuario As Boolean = False
+	Private mostrarSenha As Boolean = True
 End Sub
 
 Sub Globals
@@ -23,6 +24,7 @@ Sub Globals
 	Private lblCadSalvo As Label
 	Private funcoes As ClassBancoDados
 	
+	Private lblMostrarSenha As Label
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -140,17 +142,26 @@ Sub edRepitaSenha_TextChanged (Old As String, New As String)
 	End If	
 End Sub
 
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		StartActivity(CodigoLayLogin)
+		Activity.Finish
+		Return False
+	Else
+		Return True
+	End If
+End Sub
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Sub lblMostrarSenha_Click
+	
+	If mostrarSenha Then
+		edSenha.PasswordMode = True
+		mostrarSenha = False
+		lblMostrarSenha.Text = "Mostrar senha"
+		
+	Else		
+		edSenha.PasswordMode = False
+		mostrarSenha = True
+		lblMostrarSenha.Text = "Esconder senha"		
+	End If
+End Sub

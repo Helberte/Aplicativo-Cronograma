@@ -249,8 +249,8 @@ Sub btSalvar_Click
 				Try
 					Dim cmd, dataInicial, tipoLeitura As String
 			
-					tipoLeitura = "PAGINA"
-					If radCapitulo.Checked Then tipoLeitura = "CAPITULO"
+					tipoLeitura = "páginas"
+					If radCapitulo.Checked Then tipoLeitura = "capítulos"
 			
 					dataInicial = DateTime.Date(DateTime.Now)
 			

@@ -19,6 +19,6 @@ ModuleClosedNodes3=
 ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
-NavigationStack=Main,Process_Globals,20,0,CodigoCadastro,Globals,18,1,CodigoCadastro,Process_Globals,6,4,CodigoCadastro,btSalvar_Click,103,3,CodigoLayLeituras,Event_lbl_Click,56,0,CodigoLayLeituras,Activity_Resume,73,6,Visual Designer,LayLeiturasTabStrip.bal,-100,2,CodigoLayLeituras,Globals,24,6,Visual Designer,LayLeitura_menu1.bal,-100,6,CodigoLayLeituras,Atualiza_leituras,134,6
+NavigationStack=CodigoCadastro,lblMostrarSenha_Click,151,6,Visual Designer,LayoutCadastro.bal,-100,6,CodigoLayLeituras,TabStrip_PageSelected,248,0,Visual Designer,LayCadastroLivro.bal,-100,1,Visual Designer,LayLeitura_menu1.bal,-100,1,CodigoLayLeituras,Activity_Resume,70,0,CodigoLayLeituras,Activity_Pause,74,0,CodigoLayLeituras,Event_btAnotar_Click,249,6,Visual Designer,Lay_Anotar.bal,-100,6,CodigoLayLeituras,Atualiza_leituras,144,6
 SelectedBuild=0
 VisibleModules=2,5,4,1,3

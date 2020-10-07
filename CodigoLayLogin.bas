@@ -115,6 +115,14 @@ Sub EdLogin_TextChanged (Old As String, New As String)
 End Sub
 
 
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	If KeyCode = KeyCodes.KEYCODE_BACK Then
+		Activity.Finish
+		Return False
+	Else
+		Return True
+	End If
+End Sub
 
 
 
