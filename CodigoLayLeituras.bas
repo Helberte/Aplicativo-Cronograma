@@ -11,6 +11,7 @@ Version=9.801
 
 Sub Process_Globals
 	Dim temPanel As Boolean = False
+	
 End Sub
 
 Sub Globals	
@@ -195,7 +196,7 @@ Sub Atualiza_leituras As ResumableSub
 					panels(i).AddView(lblQuantidadePaginas(i), 3%x, topoLabel, panels(i).Width - 5%x, altura)
 					topoLabel = topoLabel + altura + 2dip
 					
-					btAnotar(i).Tag = i
+					btAnotar(i).Tag = Result.GetString("nome") & "/" & Result.GetString("quantidade_paginas")
 					
 					btAnotar(i).Text = "Anotar"
 					btAnotar(i).TextSize = 16
@@ -234,8 +235,16 @@ End Sub
 Sub Event_btAnotar_Click
 	
 	Dim b As Button = Sender
+	Dim nomeLivro As String
+	Dim qtPag As Int
+		
+	nomeLivro = b.Tag
+	qtPag = nomeLivro.SubString2(nomeLivro.IndexOf("/") + 1, nomeLivro.Length)
 	
-	MsgboxAsync(b.Tag, "")
+	CodigoLayAnotacao.qtPaginas = qtPag	
+	CodigoLayAnotacao.nomeDoLivro = nomeLivro.SubString2(0, nomeLivro.IndexOf("/"))
+	
+	StartActivity(CodigoLayAnotacao)
 	
 End Sub
 
@@ -248,7 +257,7 @@ Sub TabStrip_PageSelected (Position As Int)
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
-		
+	
 	If KeyCode = KeyCodes.KEYCODE_BACK Then
 
 		Dim resp As Int = Msgbox2("Deseja realmente sair?","Já vai?","Sim", "", "Não",Null)
@@ -256,12 +265,34 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 		If resp = DialogResponse.POSITIVE Then
 					
 			ExitApplication
-			Return False			
+			Return False
 		Else
 			KeyCode = 0
 			Return True
 		End If
 	Else
 		Return True
-	End If	
+	End If
+	
+'	Dim x As XUI
+'		
+'	If KeyCode = KeyCodes.KEYCODE_BACK Then
+'	
+'		Dim resp As Int = x.Msgbox2Async("Deseja realmente sair?","Já vai?","Sim", "", "Não",Null)
+'		
+'		Wait For (resp) MsgBox_Result (Result As Int)
+'		
+'		If Result = DialogResponse.POSITIVE Then
+'					
+'			ExitApplication
+'			Return False
+'		Else if Result = DialogResponse.NEGATIVE Then
+'			KeyCode = 0
+'			Return True
+'		Else
+'			Return False
+'		End If
+'	Else
+'		Return True
+'	End If		
 End Sub

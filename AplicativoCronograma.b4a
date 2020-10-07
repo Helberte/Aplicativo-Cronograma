@@ -25,12 +25,13 @@ ManifestCode='This code will be applied to the manifest file during compilation.
 Module1=ClassBancoDados
 Module2=CodigoCadastro
 Module3=CodigoCadastroLivro
-Module4=CodigoLayLeituras
-Module5=CodigoLayLogin
-Module6=Starter
+Module4=CodigoLayAnotacao
+Module5=CodigoLayLeituras
+Module6=CodigoLayLogin
+Module7=Starter
 NumberOfFiles=8
 NumberOfLibraries=5
-NumberOfModules=6
+NumberOfModules=7
 Version=10.2
 @EndOfDesignText@
 #Region  Project Attributes 
