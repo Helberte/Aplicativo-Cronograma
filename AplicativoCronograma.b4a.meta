@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
-NavigationStack=CodigoLayAnotacao,Globals,18,4,CodigoLayAnotacao,Activity_Create,24,2,CodigoLayLeituras,Event_btAnotar_Click,244,6,CodigoCadastroLivro,btSalvar_Click,265,0,CodigoCadastroLivro,edTituloLivro_TextChanged,194,0,CodigoLayAnotacao,btOk_Click,72,6,Visual Designer,Lay_Anotar.bal,-100,1,CodigoLayAnotacao,edAnotacao_TextChanged,113,2,CodigoLayAnotacao,edTituloAnotacao_TextChanged,106,2,CodigoLayAnotacao,Activity_KeyPress,100,0
+NavigationStack=CodigoLayLeituras,Event_btAnotar_Click,244,6,CodigoCadastroLivro,btSalvar_Click,265,0,CodigoCadastroLivro,edTituloLivro_TextChanged,194,0,CodigoLayAnotacao,edAnotacao_TextChanged,113,2,CodigoLayAnotacao,edTituloAnotacao_TextChanged,106,2,Visual Designer,Lay_Anotar.bal,-100,5,Visual Designer,Lay_lancamento_leitura.bal,-100,6,CodigoLayAnotacao,btCancelar_Click,50,0,CodigoLayAnotacao,btOk_Click,68,6,CodigoLayAnotacao,Activity_KeyPress,102,0
 SelectedBuild=0
 VisibleModules=2,6,1,3,5,4
