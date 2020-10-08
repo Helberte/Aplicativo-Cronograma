@@ -10,8 +10,8 @@ public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
 //BA.debugLineNum = 2;BA.debugLine="AutoScaleAll"[Lay_Anotar/General script]
 anywheresoftware.b4a.keywords.LayoutBuilder.scaleAll(views);
-//BA.debugLineNum = 4;BA.debugLine="panel_cabecalho.Top = 1%y"[Lay_Anotar/General script]
-views.get("panel_cabecalho").vw.setTop((int)((1d / 100 * height)));
+//BA.debugLineNum = 4;BA.debugLine="panel_cabecalho.Top = 2%y"[Lay_Anotar/General script]
+views.get("panel_cabecalho").vw.setTop((int)((2d / 100 * height)));
 //BA.debugLineNum = 5;BA.debugLine="panel_cabecalho.Width = 95%x"[Lay_Anotar/General script]
 views.get("panel_cabecalho").vw.setWidth((int)((95d / 100 * width)));
 //BA.debugLineNum = 6;BA.debugLine="panel_cabecalho.Left = (100%x - panel_cabecalho.Width) / 2"[Lay_Anotar/General script]

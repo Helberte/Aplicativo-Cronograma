@@ -10,15 +10,11 @@ Version=10.2
 #End Region
 
 Sub Process_Globals
-	'These global variables will be declared once when the application starts.
-	'These variables can be accessed from all modules.
 	Public nomeDoLivro As String
-	Public qtPaginas As Int
+	Public qtPaginas, codigoLivro As Int
 End Sub
 
 Sub Globals
-	'These global variables will be redeclared each time the activity is created.
-	'These variables can only be accessed from this module.
 
 	Private lblTitulo As Label
 	Private B4XComboBox1 As B4XComboBox
@@ -26,11 +22,13 @@ Sub Globals
 	Private edAnotacao As EditText
 	Private btCancelar As Button
 	Private btOk As Button
+	Dim banco As ClassBancoDados
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	
 	Activity.LoadLayout("Lay_Anotar")
+	banco.Initialize
 	
 	edTituloAnotacao.RequestFocus
 End Sub
@@ -59,8 +57,43 @@ End Sub
 
 Sub btOk_Click
 	
-	
-	
+	If edTituloAnotacao.Text.Trim = "" Then
+		edTituloAnotacao.RequestFocus
+		ToastMessageShow("Insira um título para sua anotação",True)
+	Else if edAnotacao.Text.Trim = "" Then
+		edAnotacao.RequestFocus
+		ToastMessageShow("Cadê a anotação?",True)
+	Else
+		Try
+			
+			Dim cmd As String 
+			cmd = "exec sp_atualiza_anotacao " & Main.Id_do_Usuario & _
+												", " & codigoLivro & _
+												", " & B4XComboBox1.SelectedItem & _
+												", '" & edTituloAnotacao.Text & _
+												"','" & edAnotacao.Text & "'"
+			
+			Wait For( banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
+			
+			Result.NextRow
+			
+			If Result.GetString("RESULTADO") = 0 Then
+				ToastMessageShow("Algo deu errado!",True)
+				Sleep(400)
+				Activity.Finish
+				
+			else if Result.GetString("RESULTADO") = 1 Then
+				ToastMessageShow("Tudo certo",True)
+				Sleep(400)
+				Activity.Finish
+				
+			End If			
+		Catch
+			ToastMessageShow("Algo deu errado!",True)
+			Sleep(400)
+			Activity.Finish
+		End Try		
+	End If	
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
@@ -71,5 +104,17 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 		Return True
 	Else
 		Return False
+	End If
+End Sub
+
+Sub edTituloAnotacao_TextChanged (Old As String, New As String)
+	If New.IndexOf("'") >= 0 Then
+		edTituloAnotacao.Text = edTituloAnotacao.Text.Replace("'","")
+	End If
+End Sub
+
+Sub edAnotacao_TextChanged (Old As String, New As String)
+	If New.IndexOf("'") >= 0 Then
+		edAnotacao.Text = edAnotacao.Text.Replace("'","")
 	End If
 End Sub

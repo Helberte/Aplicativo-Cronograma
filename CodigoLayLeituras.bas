@@ -25,6 +25,7 @@ Sub Globals
 	Dim gradient As GradientDrawable
 	Dim panelNenhumaLeitura As Panel
 	Dim cores(2) As Int
+		
 	Private btAdicionarLeitura As Button
 		
 	Private Panel_lendo As Panel
@@ -124,6 +125,7 @@ Sub Atualiza_leituras As ResumableSub
 			
 			Dim panels(quantidade) As Panel
 			
+									
 			Dim lblTituloLivro(quantidade) As Label
 			Dim lblDataComecoLeitura(quantidade) As Label
 			Dim lblPrevisaoTermino(quantidade) As Label
@@ -146,8 +148,9 @@ Sub Atualiza_leituras As ResumableSub
 				
 				scrollView1.Initialize( 500 )
 				Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
-							
-							
+				
+						
+				Dim i As Int	
 				For i = 0 To panels.Length - 1
 																										
 					topoLabel = 1%y
@@ -170,7 +173,7 @@ Sub Atualiza_leituras As ResumableSub
 					lblTituloLivro(i).TextColor = Colors.RGB(189,151,1)
 					lblTituloLivro(i).TextSize = 23
 					'lblTituloLivro(i).Color = Colors.Cyan					
-					
+										
 					lblDataComecoLeitura(i).Text = "Começei ler dia " & Result.GetString("data_inicial")
 					lblDataComecoLeitura(i).TextColor = Colors.RGB(72,72,72)
 					lblDataComecoLeitura(i).TextSize = tamanho_fonte
@@ -185,7 +188,7 @@ Sub Atualiza_leituras As ResumableSub
 					lblQuantidadePaginas(i).TextColor = Colors.RGB(72,72,72)
 					lblQuantidadePaginas(i).TextSize = tamanho_fonte
 					'lblQuantidadePaginas(i).Color = Colors.Cyan
-										
+					
 					Dim altura As Int = 3.5%y
 					panels(i).AddView(lblTituloLivro(i), 3%x, topoLabel, panels(i).Width - 5%x, 5%y)
 					topoLabel = topoLabel + altura + 18dip
@@ -196,7 +199,7 @@ Sub Atualiza_leituras As ResumableSub
 					panels(i).AddView(lblQuantidadePaginas(i), 3%x, topoLabel, panels(i).Width - 5%x, altura)
 					topoLabel = topoLabel + altura + 2dip
 					
-					btAnotar(i).Tag = Result.GetString("nome") & "/" & Result.GetString("quantidade_paginas")
+					btAnotar(i).Tag = Result.GetString("nome") & "/" & Result.GetString("quantidade_paginas") & "|" & Result.GetInt("fk_id_Livro")
 					
 					btAnotar(i).Text = "Anotar"
 					btAnotar(i).TextSize = 16
@@ -211,8 +214,7 @@ Sub Atualiza_leituras As ResumableSub
 					btLancar(i).TextColor = Colors.RGB(244,0,0)
 					btLancar(i).Color = Colors.Transparent
 					panels(i).AddView(btLancar(i), 35%x, topoLabel, 30%x, 6.5%y)
-				
-					temPanel = True
+											
 					
 					topo = topo + 25%y + 10dip
 					
@@ -220,7 +222,6 @@ Sub Atualiza_leituras As ResumableSub
 				Next		
 				scrollView1.Panel.Height = topo
 			End If	
-				
 			Return True
 		Else
 			ToastMessageShow("Impossível carregar leituras",True)
@@ -233,16 +234,18 @@ Sub Atualiza_leituras As ResumableSub
 End Sub
 
 Sub Event_btAnotar_Click
-	
-	Dim b As Button = Sender
-	Dim nomeLivro As String
-	Dim qtPag As Int
 		
-	nomeLivro = b.Tag
-	qtPag = nomeLivro.SubString2(nomeLivro.IndexOf("/") + 1, nomeLivro.Length)
+	Dim b As Button = Sender
+	Dim informacoes As String
+	Dim qtPag, codigoLivro As Int
+		
+	informacoes = b.Tag
+	qtPag = informacoes.SubString2(informacoes.IndexOf("/") + 1, informacoes.IndexOf("|"))
+	codigoLivro = informacoes.SubString2(informacoes.IndexOf("|") + 1, informacoes.Length)
 	
+	CodigoLayAnotacao.codigoLivro = codigoLivro
 	CodigoLayAnotacao.qtPaginas = qtPag	
-	CodigoLayAnotacao.nomeDoLivro = nomeLivro.SubString2(0, nomeLivro.IndexOf("/"))
+	CodigoLayAnotacao.nomeDoLivro = informacoes.SubString2(0, informacoes.IndexOf("/"))
 	
 	StartActivity(CodigoLayAnotacao)
 	

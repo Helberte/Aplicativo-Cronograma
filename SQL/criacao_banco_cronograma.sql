@@ -72,3 +72,15 @@ begin
 	)
 end
 go
+
+create table anotacao(
+
+	id						int				identity(1,1)		primary key,
+	anotacao				varchar(max),
+	pagina					int,
+	tituloAnotacao			varchar			not null,
+	fk_anotacao_usuario		int				not null,
+	fk_anotacao_livro		int				not null,
+	constraint				fk_usuario_fk_anotacao_usuario foreign key (fk_anotacao_usuario) references usuario (id),
+	constraint				fk_usuario_fk_anotacao_livro   foreign key (fk_anotacao_livro) references livro (id)
+)

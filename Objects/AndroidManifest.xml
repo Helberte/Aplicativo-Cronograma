@@ -46,6 +46,13 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".codigocadastrolivro"
+			android:label="Cronograma"
+			android:screenOrientation="unspecified">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".codigolayleituras"
 			android:label="Cronograma"
 			android:screenOrientation="unspecified">
@@ -53,7 +60,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".codigocadastrolivro"
+			android:name=".codigolayanotacao"
 			android:label="Cronograma"
 			android:screenOrientation="unspecified">
 		</activity>
@@ -61,12 +68,5 @@
 		</service>
 		<receiver android:name=".starter$starter_BR">
 		</receiver>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".codigolayanotacao"
-			android:label="Cronograma"
-			android:screenOrientation="unspecified">
-		</activity>
 	</application>
 </manifest>
