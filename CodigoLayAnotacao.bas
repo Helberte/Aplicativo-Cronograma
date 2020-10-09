@@ -13,7 +13,6 @@ Sub Process_Globals
 	Public nomeDoLivro As String
 	Public qtPaginas, codigoLivro As Int
 	Public tipoLeitura As String
-	Public nomeUsuario as String
 End Sub
 
 Sub Globals
@@ -34,6 +33,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	banco.Initialize
 	
 	edTituloAnotacao.RequestFocus
+	
 End Sub
 
 Sub Activity_Resume
@@ -44,7 +44,13 @@ Sub Activity_Resume
 	Next
 	
 	lblTitulo.Text = nomeDoLivro
-	B4XComboBox1.SetItems(paginas)	
+	B4XComboBox1.SetItems(paginas)
+	
+	If lblAnotacaoRefPag.Text = "página" Then
+		lblAnotacaoRefPag.Text = "Anotação referente à página"
+	Else
+		lblAnotacaoRefPag.Text = "Anotação referente ao capítulo"
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)

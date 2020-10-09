@@ -31,7 +31,8 @@ begin
 				   t.tipo_de_leitura,
 				   1 [RESULTADO],
 				   @quantidade [QUANTIDADE],
-				   t.fk_id_Livro  from livro l, leitura t, usuario u
+				   t.fk_id_Livro,
+				   u.nome [usuarioNome]  from livro l, leitura t, usuario u
 									Where l.fk_id_usuario = u.id
 									and t.fk_id_Livro = l.id
 									and t.fk_id_usuario = u.id

@@ -357,6 +357,7 @@ vis = vis | (codigocadastrolivro.mostCurrent != null);
 vis = vis | (codigolayanotacao.mostCurrent != null);
 vis = vis | (codigolayleituras.mostCurrent != null);
 vis = vis | (codigolaylogin.mostCurrent != null);
+vis = vis | (codigolancamentoleitura.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -441,6 +442,18 @@ public static void killProgram() {
 				__a.finish();}
 
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
+ {
+            Activity __a = null;
+            if (codigolancamentoleitura.previousOne != null) {
+				__a = codigolancamentoleitura.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(codigolancamentoleitura.mostCurrent == null ? null : codigolancamentoleitura.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.phone.Phone.ContentChooser _fotos = null;
@@ -452,6 +465,7 @@ public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";

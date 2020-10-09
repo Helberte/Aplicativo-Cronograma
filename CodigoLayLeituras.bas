@@ -29,7 +29,7 @@ Sub Globals
 	Private btAdicionarLeitura As Button
 		
 	Private Panel_lendo As Panel
-	
+	Private nomeArquivo As String = "Informacoes.ini"
 		
 End Sub
 
@@ -126,8 +126,8 @@ Sub Atualiza_leituras As ResumableSub
 			Dim quantidade As Int = Result.GetInt("QUANTIDADE")
 			
 			Dim panels(quantidade) As Panel
-			Dim listaInformacoes As List			
-									
+			Dim listaInformacoes As List					
+			
 			Dim lblTituloLivro(quantidade) As Label
 			Dim lblDataComecoLeitura(quantidade) As Label
 			Dim lblPrevisaoTermino(quantidade) As Label
@@ -208,13 +208,17 @@ Sub Atualiza_leituras As ResumableSub
 					
 					'https://www.b4x.com/android/forum/threads/text-files.6690/
 					'https://www.b4x.com/android/help/files.html#file
-					listaInformacoes.Add(" '" & Result.GetString("nome") & _
+					
+					listaInformacoes.Add("'" & Result.GetString("nome") & _
 										 "|¨'" & Result.GetInt("quantidade_paginas") & _
 										 "|¨'" & Result.GetInt("fk_id_Livro") & _
 										 "|¨'" & Result.GetString("usuarioNome") & _
-										 "|¨'" & Result.GetString("tipo_de_leitura") & "|")
-									
-					File.WriteList(File.DirInternal, "Informacoes.txt", listaInformacoes) 
+										 "|¨'" & Result.GetString("tipo_de_leitura") & _
+										 "|¨~'" & Result.GetString("nome") & _
+										 "|¨'" & Result.GetString("usuarioNome") & _
+										 "|¨'" & Result.GetString("paginas_ou_cap_lidos") & _
+										 "|¨'" & Result.GetInt("quantidade_paginas") &"|")											
+										
 					
 					btAnotar(i).Text = "Anotar"
 					btAnotar(i).TextSize = 16
@@ -235,6 +239,8 @@ Sub Atualiza_leituras As ResumableSub
 					
 					Result.NextRow
 				Next		
+				File.WriteList(File.DirInternal, nomeArquivo, listaInformacoes)
+					
 				scrollView1.Panel.Height = topo
 			End If	
 			Return True
@@ -255,43 +261,83 @@ Sub Event_btAnotar_Click
 	
 	Dim informacoes 		As String
 	Dim qtPag, codigoLivro 	As Int
-	Dim nomeUsuario 		As String
 	Dim nomeLivro 			As String
 	Dim tipoLeitura			As String
 	
 	Dim lista As List
 	lista.Initialize
-	
-	If File.Exists(File.DirInternal, "Informacoes.txt") Then
+
+	If File.Exists(File.DirInternal, nomeArquivo) Then
 		
-		lista = File.ReadList(File.DirInternal, "Informacoes.txt")
+		lista = File.ReadList(File.DirInternal, nomeArquivo)
 		
 		informacoes = lista.Get(b.Tag)
 		
-		nomeLivro =   informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		nomeLivro 	= informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
 		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
 		
-		qtPag = 	  informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		qtPag 		= informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
 		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
 		
 		codigoLivro = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
-		
-		nomeUsuario = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)	
 		
 		tipoLeitura = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
 		
 		CodigoLayAnotacao.codigoLivro = codigoLivro
 		CodigoLayAnotacao.qtPaginas = qtPag
 		CodigoLayAnotacao.nomeDoLivro = nomeLivro
-		CodigoLayAnotacao.nomeUsuario = nomeUsuario
 		CodigoLayAnotacao.tipoLeitura = tipoLeitura
 		
 		StartActivity(CodigoLayAnotacao)
 	Else
 		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)
 	End If	
+End Sub
+
+Sub Event_btLancar_Click
+	
+	Dim tituloLivro As 		String
+	Dim nomeUsuario As 		String
+	Dim paginasAtuais As 	String
+	Dim totalPaginas As 	String
+	
+	Dim b As Button = Sender
+	Dim informacoes As String
+
+	Dim lista As List
+	lista.Initialize
+	
+	If File.Exists(File.DirInternal, nomeArquivo) Then
+		
+		lista = File.ReadList(File.DirInternal, nomeArquivo)		
+		
+		informacoes = lista.Get(b.Tag)
+		
+		informacoes = informacoes.SubString2(informacoes.IndexOf("~") +1, informacoes.Length)
+		
+		tituloLivro = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		nomeUsuario = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		paginasAtuais = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		totalPaginas = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		
+		CodigoLancamentoLeitura.nomeUsuario = nomeUsuario
+		CodigoLancamentoLeitura.paginaAtual = paginasAtuais
+		CodigoLancamentoLeitura.tituloLivro = tituloLivro
+		CodigoLancamentoLeitura.totalPaginas = totalPaginas
+		
+		StartActivity(CodigoLancamentoLeitura)
+		
+	Else
+		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)		
+	End If
+		
 End Sub
 
 Sub btAdicionarLeitura_Click	

@@ -68,5 +68,12 @@
 		</service>
 		<receiver android:name=".starter$starter_BR">
 		</receiver>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".codigolancamentoleitura"
+			android:label="Cronograma"
+			android:screenOrientation="unspecified">
+		</activity>
 	</application>
 </manifest>

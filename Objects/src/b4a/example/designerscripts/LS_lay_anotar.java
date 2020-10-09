@@ -26,8 +26,8 @@ views.get("lbltitulo").vw.setWidth((int)((views.get("panel_cabecalho").vw.getWid
 views.get("lbltitulo").vw.setLeft((int)((0d / 100 * width)));
 //BA.debugLineNum = 12;BA.debugLine="lblTitulo.Height = 6%y"[Lay_Anotar/General script]
 views.get("lbltitulo").vw.setHeight((int)((6d / 100 * height)));
-//BA.debugLineNum = 14;BA.debugLine="lblAnotacaoRefPag.Width = (lblTitulo.Width / 2) + 5%x"[Lay_Anotar/General script]
-views.get("lblanotacaorefpag").vw.setWidth((int)(((views.get("lbltitulo").vw.getWidth())/2d)+(5d / 100 * width)));
+//BA.debugLineNum = 14;BA.debugLine="lblAnotacaoRefPag.Width = (lblTitulo.Width / 2) + 11%x"[Lay_Anotar/General script]
+views.get("lblanotacaorefpag").vw.setWidth((int)(((views.get("lbltitulo").vw.getWidth())/2d)+(11d / 100 * width)));
 //BA.debugLineNum = 15;BA.debugLine="lblAnotacaoRefPag.Left = 2%x"[Lay_Anotar/General script]
 views.get("lblanotacaorefpag").vw.setLeft((int)((2d / 100 * width)));
 //BA.debugLineNum = 16;BA.debugLine="lblAnotacaoRefPag.Top = lblTitulo.Top + lblTitulo.Height"[Lay_Anotar/General script]

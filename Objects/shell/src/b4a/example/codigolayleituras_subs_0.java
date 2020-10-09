@@ -142,42 +142,42 @@ public static void  _complete(RemoteObject _success) throws Exception{
 }
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,299);
+		Debug.PushSubsStack("Activity_KeyPress (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,346);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","activity_keypress", _keycode);}
 RemoteObject _resp = RemoteObject.createImmutable(0);
 Debug.locals.put("KeyCode", _keycode);
- BA.debugLineNum = 299;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-Debug.ShouldStop(1024);
- BA.debugLineNum = 301;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 346;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 348;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+Debug.ShouldStop(134217728);
 if (RemoteObject.solveBoolean("=",_keycode,BA.numberCast(double.class, codigolayleituras.mostCurrent.__c.getField(false,"KeyCodes").getField(true,"KEYCODE_BACK")))) { 
- BA.debugLineNum = 303;BA.debugLine="Dim resp As Int = Msgbox2(\"Deseja realmente sair";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 350;BA.debugLine="Dim resp As Int = Msgbox2(\"Deseja realmente sair";
+Debug.ShouldStop(536870912);
 _resp = codigolayleituras.mostCurrent.__c.runMethodAndSync(true,"Msgbox2",(Object)(BA.ObjectToCharSequence("Deseja realmente sair?")),(Object)(BA.ObjectToCharSequence("Já vai?")),(Object)(BA.ObjectToString("Sim")),(Object)(BA.ObjectToString("")),(Object)(BA.ObjectToString("Não")),(Object)((codigolayleituras.mostCurrent.__c.getField(false,"Null"))),codigolayleituras.mostCurrent.activityBA);Debug.locals.put("resp", _resp);Debug.locals.put("resp", _resp);
- BA.debugLineNum = 305;BA.debugLine="If resp = DialogResponse.POSITIVE Then";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 352;BA.debugLine="If resp = DialogResponse.POSITIVE Then";
+Debug.ShouldStop(-2147483648);
 if (RemoteObject.solveBoolean("=",_resp,BA.numberCast(double.class, codigolayleituras.mostCurrent.__c.getField(false,"DialogResponse").getField(true,"POSITIVE")))) { 
- BA.debugLineNum = 307;BA.debugLine="ExitApplication";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 354;BA.debugLine="ExitApplication";
+Debug.ShouldStop(2);
 codigolayleituras.mostCurrent.__c.runVoidMethod ("ExitApplication");
- BA.debugLineNum = 308;BA.debugLine="Return False";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 355;BA.debugLine="Return False";
+Debug.ShouldStop(4);
 if (true) return codigolayleituras.mostCurrent.__c.getField(true,"False");
  }else {
- BA.debugLineNum = 310;BA.debugLine="KeyCode = 0";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 357;BA.debugLine="KeyCode = 0";
+Debug.ShouldStop(16);
 _keycode = BA.numberCast(int.class, 0);Debug.locals.put("KeyCode", _keycode);
- BA.debugLineNum = 311;BA.debugLine="Return True";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 358;BA.debugLine="Return True";
+Debug.ShouldStop(32);
 if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  }else {
- BA.debugLineNum = 314;BA.debugLine="Return True";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 361;BA.debugLine="Return True";
+Debug.ShouldStop(256);
 if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
- BA.debugLineNum = 338;BA.debugLine="End Sub";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 385;BA.debugLine="End Sub";
+Debug.ShouldStop(1);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -700,50 +700,47 @@ _topolabel = RemoteObject.solve(new RemoteObject[] {_topolabel,_altura,parent.mo
  BA.debugLineNum = 201;BA.debugLine="btAnotar(i).Tag = i";
 Debug.ShouldStop(256);
 _btanotar.getArrayElement(false,_i).runMethod(false,"setTag",(_i));
- BA.debugLineNum = 205;BA.debugLine="listaInformacoes.Add(\" '\" & Result.GetString(";
-Debug.ShouldStop(4096);
-_listainformacoes.runVoidMethod ("Add",(Object)((RemoteObject.concat(RemoteObject.createImmutable(" '"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("nome"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("quantidade_paginas"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("fk_id_Livro"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("usuarioNome"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("tipo_de_leitura"))),RemoteObject.createImmutable("|")))));
- BA.debugLineNum = 211;BA.debugLine="File.WriteList(File.DirInternal, \"Informacoes";
-Debug.ShouldStop(262144);
-parent.mostCurrent.__c.getField(false,"File").runVoidMethod ("WriteList",(Object)(parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(BA.ObjectToString("Informacoes.txt")),(Object)(_listainformacoes));
- BA.debugLineNum = 213;BA.debugLine="btAnotar(i).Text = \"Anotar\"";
-Debug.ShouldStop(1048576);
-_btanotar.getArrayElement(false,_i).runMethod(true,"setText",BA.ObjectToCharSequence("Anotar"));
- BA.debugLineNum = 214;BA.debugLine="btAnotar(i).TextSize = 16";
-Debug.ShouldStop(2097152);
-_btanotar.getArrayElement(false,_i).runMethod(true,"setTextSize",BA.numberCast(float.class, 16));
- BA.debugLineNum = 215;BA.debugLine="btAnotar(i).TextColor = Colors.RGB(244,0,0)";
-Debug.ShouldStop(4194304);
-_btanotar.getArrayElement(false,_i).runMethod(true,"setTextColor",parent.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 244)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0))));
- BA.debugLineNum = 216;BA.debugLine="btAnotar(i).Color = Colors.Transparent";
-Debug.ShouldStop(8388608);
-_btanotar.getArrayElement(false,_i).runVoidMethod ("setColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Transparent"));
- BA.debugLineNum = 217;BA.debugLine="panels(i).AddView(btAnotar(i), 3%x, topoLabel";
+ BA.debugLineNum = 206;BA.debugLine="listaInformacoes.Add(\"'\" & Result.GetString(\"";
+Debug.ShouldStop(8192);
+_listainformacoes.runVoidMethod ("Add",(Object)((RemoteObject.concat(RemoteObject.createImmutable("'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("nome"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("quantidade_paginas"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("fk_id_Livro"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("usuarioNome"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("tipo_de_leitura"))),RemoteObject.createImmutable("|¨~'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("nome"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("usuarioNome"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("paginas_ou_cap_lidos"))),RemoteObject.createImmutable("|¨'"),_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("quantidade_paginas"))),RemoteObject.createImmutable("|")))));
+ BA.debugLineNum = 217;BA.debugLine="btAnotar(i).Text = \"Anotar\"";
 Debug.ShouldStop(16777216);
-_panels.getArrayElement(false,_i).runVoidMethod ("AddView",(Object)((_btanotar.getArrayElement(false,_i).getObject())),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 3)),codigolayleituras.mostCurrent.activityBA)),(Object)(_topolabel),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 30)),codigolayleituras.mostCurrent.activityBA)),(Object)(parent.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 6.5)),codigolayleituras.mostCurrent.activityBA)));
- BA.debugLineNum = 219;BA.debugLine="btLancar(i).Tag = i";
+_btanotar.getArrayElement(false,_i).runMethod(true,"setText",BA.ObjectToCharSequence("Anotar"));
+ BA.debugLineNum = 218;BA.debugLine="btAnotar(i).TextSize = 16";
+Debug.ShouldStop(33554432);
+_btanotar.getArrayElement(false,_i).runMethod(true,"setTextSize",BA.numberCast(float.class, 16));
+ BA.debugLineNum = 219;BA.debugLine="btAnotar(i).TextColor = Colors.RGB(244,0,0)";
 Debug.ShouldStop(67108864);
-_btlancar.getArrayElement(false,_i).runMethod(false,"setTag",(_i));
- BA.debugLineNum = 221;BA.debugLine="btLancar(i).Text = \"Lançar\"";
+_btanotar.getArrayElement(false,_i).runMethod(true,"setTextColor",parent.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 244)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0))));
+ BA.debugLineNum = 220;BA.debugLine="btAnotar(i).Color = Colors.Transparent";
+Debug.ShouldStop(134217728);
+_btanotar.getArrayElement(false,_i).runVoidMethod ("setColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Transparent"));
+ BA.debugLineNum = 221;BA.debugLine="panels(i).AddView(btAnotar(i), 3%x, topoLabel";
 Debug.ShouldStop(268435456);
-_btlancar.getArrayElement(false,_i).runMethod(true,"setText",BA.ObjectToCharSequence("Lançar"));
- BA.debugLineNum = 222;BA.debugLine="btLancar(i).TextSize = 16";
-Debug.ShouldStop(536870912);
-_btlancar.getArrayElement(false,_i).runMethod(true,"setTextSize",BA.numberCast(float.class, 16));
- BA.debugLineNum = 223;BA.debugLine="btLancar(i).TextColor = Colors.RGB(244,0,0)";
+_panels.getArrayElement(false,_i).runVoidMethod ("AddView",(Object)((_btanotar.getArrayElement(false,_i).getObject())),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 3)),codigolayleituras.mostCurrent.activityBA)),(Object)(_topolabel),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 30)),codigolayleituras.mostCurrent.activityBA)),(Object)(parent.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 6.5)),codigolayleituras.mostCurrent.activityBA)));
+ BA.debugLineNum = 223;BA.debugLine="btLancar(i).Tag = i";
 Debug.ShouldStop(1073741824);
-_btlancar.getArrayElement(false,_i).runMethod(true,"setTextColor",parent.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 244)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0))));
- BA.debugLineNum = 224;BA.debugLine="btLancar(i).Color = Colors.Transparent";
-Debug.ShouldStop(-2147483648);
-_btlancar.getArrayElement(false,_i).runVoidMethod ("setColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Transparent"));
- BA.debugLineNum = 225;BA.debugLine="panels(i).AddView(btLancar(i), 35%x, topoLabe";
+_btlancar.getArrayElement(false,_i).runMethod(false,"setTag",(_i));
+ BA.debugLineNum = 225;BA.debugLine="btLancar(i).Text = \"Lançar\"";
 Debug.ShouldStop(1);
-_panels.getArrayElement(false,_i).runVoidMethod ("AddView",(Object)((_btlancar.getArrayElement(false,_i).getObject())),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 35)),codigolayleituras.mostCurrent.activityBA)),(Object)(_topolabel),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 30)),codigolayleituras.mostCurrent.activityBA)),(Object)(parent.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 6.5)),codigolayleituras.mostCurrent.activityBA)));
- BA.debugLineNum = 228;BA.debugLine="topo = topo + 25%y + 10dip";
+_btlancar.getArrayElement(false,_i).runMethod(true,"setText",BA.ObjectToCharSequence("Lançar"));
+ BA.debugLineNum = 226;BA.debugLine="btLancar(i).TextSize = 16";
+Debug.ShouldStop(2);
+_btlancar.getArrayElement(false,_i).runMethod(true,"setTextSize",BA.numberCast(float.class, 16));
+ BA.debugLineNum = 227;BA.debugLine="btLancar(i).TextColor = Colors.RGB(244,0,0)";
+Debug.ShouldStop(4);
+_btlancar.getArrayElement(false,_i).runMethod(true,"setTextColor",parent.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 244)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0))));
+ BA.debugLineNum = 228;BA.debugLine="btLancar(i).Color = Colors.Transparent";
 Debug.ShouldStop(8);
+_btlancar.getArrayElement(false,_i).runVoidMethod ("setColor",parent.mostCurrent.__c.getField(false,"Colors").getField(true,"Transparent"));
+ BA.debugLineNum = 229;BA.debugLine="panels(i).AddView(btLancar(i), 35%x, topoLabe";
+Debug.ShouldStop(16);
+_panels.getArrayElement(false,_i).runVoidMethod ("AddView",(Object)((_btlancar.getArrayElement(false,_i).getObject())),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 35)),codigolayleituras.mostCurrent.activityBA)),(Object)(_topolabel),(Object)(parent.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 30)),codigolayleituras.mostCurrent.activityBA)),(Object)(parent.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 6.5)),codigolayleituras.mostCurrent.activityBA)));
+ BA.debugLineNum = 232;BA.debugLine="topo = topo + 25%y + 10dip";
+Debug.ShouldStop(128);
 _topo = RemoteObject.solve(new RemoteObject[] {_topo,parent.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 25)),codigolayleituras.mostCurrent.activityBA),parent.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))}, "++",2, 1);Debug.locals.put("topo", _topo);
- BA.debugLineNum = 230;BA.debugLine="Result.NextRow";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 234;BA.debugLine="Result.NextRow";
+Debug.ShouldStop(512);
 _result.runVoidMethod ("NextRow");
  if (true) break;
 if (true) break;
@@ -753,8 +750,11 @@ case 20:
 this.state = 21;
 Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 232;BA.debugLine="scrollView1.Panel.Height = topo";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 236;BA.debugLine="File.WriteList(File.DirInternal, nomeArquivo,";
+Debug.ShouldStop(2048);
+parent.mostCurrent.__c.getField(false,"File").runVoidMethod ("WriteList",(Object)(parent.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(parent.mostCurrent._nomearquivo),(Object)(_listainformacoes));
+ BA.debugLineNum = 238;BA.debugLine="scrollView1.Panel.Height = topo";
+Debug.ShouldStop(8192);
 parent.mostCurrent._scrollview1.runMethod(false,"getPanel").runMethod(true,"setHeight",_topo);
  if (true) break;
 
@@ -762,8 +762,8 @@ case 21:
 //C
 this.state = 24;
 ;
- BA.debugLineNum = 234;BA.debugLine="Return True";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 240;BA.debugLine="Return True";
+Debug.ShouldStop(32768);
 Debug.CheckDeviceExceptions();if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"True")));return;};
  if (true) break;
@@ -771,11 +771,11 @@ parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResuma
 case 23:
 //C
 this.state = 24;
- BA.debugLineNum = 236;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\"";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 242;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\"";
+Debug.ShouldStop(131072);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Impossível carregar leituras")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
- BA.debugLineNum = 237;BA.debugLine="Return False";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 243;BA.debugLine="Return False";
+Debug.ShouldStop(262144);
 Debug.CheckDeviceExceptions();if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"False")));return;};
  if (true) break;
@@ -791,11 +791,11 @@ case 26:
 //C
 this.state = 27;
 this.catchState = 0;
- BA.debugLineNum = 240;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 246;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
+Debug.ShouldStop(2097152);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Impossível carregar leituras")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
- BA.debugLineNum = 241;BA.debugLine="Return False";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 247;BA.debugLine="Return False";
+Debug.ShouldStop(4194304);
 if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"False")));return;};
  if (true) break;
@@ -806,8 +806,8 @@ case 27:
 this.state = -1;
 this.catchState = 0;
 ;
- BA.debugLineNum = 243;BA.debugLine="End Sub";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 249;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -829,15 +829,15 @@ finally {
 }
 public static RemoteObject  _btadicionarleitura_click() throws Exception{
 try {
-		Debug.PushSubsStack("btAdicionarLeitura_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,291);
+		Debug.PushSubsStack("btAdicionarLeitura_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,338);
 if (RapidSub.canDelegate("btadicionarleitura_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","btadicionarleitura_click");}
- BA.debugLineNum = 291;BA.debugLine="Sub btAdicionarLeitura_Click";
-Debug.ShouldStop(4);
- BA.debugLineNum = 292;BA.debugLine="StartActivity(CodigoCadastroLivro)";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 338;BA.debugLine="Sub btAdicionarLeitura_Click";
+Debug.ShouldStop(131072);
+ BA.debugLineNum = 339;BA.debugLine="StartActivity(CodigoCadastroLivro)";
+Debug.ShouldStop(262144);
 codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._codigocadastrolivro.getObject())));
- BA.debugLineNum = 293;BA.debugLine="End Sub";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 340;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -848,105 +848,193 @@ finally {
 		}}
 public static RemoteObject  _event_btanotar_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_btAnotar_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,246);
+		Debug.PushSubsStack("Event_btAnotar_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,252);
 if (RapidSub.canDelegate("event_btanotar_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","event_btanotar_click");}
 RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _informacoes = RemoteObject.createImmutable("");
 RemoteObject _qtpag = RemoteObject.createImmutable(0);
 RemoteObject _codigolivro = RemoteObject.createImmutable(0);
-RemoteObject _nomeusuario = RemoteObject.createImmutable("");
 RemoteObject _nomelivro = RemoteObject.createImmutable("");
 RemoteObject _tipoleitura = RemoteObject.createImmutable("");
 RemoteObject _lista = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
- BA.debugLineNum = 246;BA.debugLine="Sub Event_btAnotar_Click";
-Debug.ShouldStop(2097152);
- BA.debugLineNum = 248;BA.debugLine="Dim b As Button = Sender";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 252;BA.debugLine="Sub Event_btAnotar_Click";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 254;BA.debugLine="Dim b As Button = Sender";
+Debug.ShouldStop(536870912);
 _b = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
 _b = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ButtonWrapper"), codigolayleituras.mostCurrent.__c.runMethod(false,"Sender",codigolayleituras.mostCurrent.activityBA));Debug.locals.put("b", _b);
- BA.debugLineNum = 250;BA.debugLine="Dim informacoes 		As String";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 256;BA.debugLine="Dim informacoes 		As String";
+Debug.ShouldStop(-2147483648);
 _informacoes = RemoteObject.createImmutable("");Debug.locals.put("informacoes", _informacoes);
- BA.debugLineNum = 251;BA.debugLine="Dim qtPag, codigoLivro 	As Int";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 257;BA.debugLine="Dim qtPag, codigoLivro 	As Int";
+Debug.ShouldStop(1);
 _qtpag = RemoteObject.createImmutable(0);Debug.locals.put("qtPag", _qtpag);
 _codigolivro = RemoteObject.createImmutable(0);Debug.locals.put("codigoLivro", _codigolivro);
- BA.debugLineNum = 252;BA.debugLine="Dim nomeUsuario 		As String";
-Debug.ShouldStop(134217728);
-_nomeusuario = RemoteObject.createImmutable("");Debug.locals.put("nomeUsuario", _nomeusuario);
- BA.debugLineNum = 253;BA.debugLine="Dim nomeLivro 			As String";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 258;BA.debugLine="Dim nomeLivro 			As String";
+Debug.ShouldStop(2);
 _nomelivro = RemoteObject.createImmutable("");Debug.locals.put("nomeLivro", _nomelivro);
- BA.debugLineNum = 254;BA.debugLine="Dim tipoLeitura			As String";
-Debug.ShouldStop(536870912);
-_tipoleitura = RemoteObject.createImmutable("");Debug.locals.put("tipoLeitura", _tipoleitura);
- BA.debugLineNum = 256;BA.debugLine="Dim lista As List";
-Debug.ShouldStop(-2147483648);
-_lista = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("lista", _lista);
- BA.debugLineNum = 257;BA.debugLine="lista.Initialize";
-Debug.ShouldStop(1);
-_lista.runVoidMethod ("Initialize");
- BA.debugLineNum = 259;BA.debugLine="If File.Exists(File.DirInternal, \"Informacoes.txt";
+ BA.debugLineNum = 259;BA.debugLine="Dim tipoLeitura			As String";
 Debug.ShouldStop(4);
-if (codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"Exists",(Object)(codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("Informacoes.txt"))).<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 261;BA.debugLine="lista = File.ReadList(File.DirInternal, \"Informa";
+_tipoleitura = RemoteObject.createImmutable("");Debug.locals.put("tipoLeitura", _tipoleitura);
+ BA.debugLineNum = 261;BA.debugLine="Dim lista As List";
 Debug.ShouldStop(16);
-_lista = codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(false,"ReadList",(Object)(codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(RemoteObject.createImmutable("Informacoes.txt")));Debug.locals.put("lista", _lista);
- BA.debugLineNum = 263;BA.debugLine="informacoes = lista.Get(b.Tag)";
-Debug.ShouldStop(64);
-_informacoes = BA.ObjectToString(_lista.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _b.runMethod(false,"getTag")))));Debug.locals.put("informacoes", _informacoes);
- BA.debugLineNum = 265;BA.debugLine="nomeLivro =   informacoes.SubString2(informacoes";
-Debug.ShouldStop(256);
-_nomelivro = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("nomeLivro", _nomelivro);
- BA.debugLineNum = 266;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
+_lista = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("lista", _lista);
+ BA.debugLineNum = 262;BA.debugLine="lista.Initialize";
+Debug.ShouldStop(32);
+_lista.runVoidMethod ("Initialize");
+ BA.debugLineNum = 264;BA.debugLine="If File.Exists(File.DirInternal, nomeArquivo) The";
+Debug.ShouldStop(128);
+if (codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"Exists",(Object)(codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(codigolayleituras.mostCurrent._nomearquivo)).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 266;BA.debugLine="lista = File.ReadList(File.DirInternal, nomeArqu";
 Debug.ShouldStop(512);
-_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
- BA.debugLineNum = 268;BA.debugLine="qtPag = 	  informacoes.SubString2(informacoes.In";
+_lista = codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(false,"ReadList",(Object)(codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(codigolayleituras.mostCurrent._nomearquivo));Debug.locals.put("lista", _lista);
+ BA.debugLineNum = 268;BA.debugLine="informacoes = lista.Get(b.Tag)";
 Debug.ShouldStop(2048);
-_qtpag = BA.numberCast(int.class, _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|"))))));Debug.locals.put("qtPag", _qtpag);
- BA.debugLineNum = 269;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
-Debug.ShouldStop(4096);
-_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
- BA.debugLineNum = 271;BA.debugLine="codigoLivro = informacoes.SubString2(informacoes";
+_informacoes = BA.ObjectToString(_lista.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _b.runMethod(false,"getTag")))));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 270;BA.debugLine="nomeLivro 	= informacoes.SubString2(informacoes.";
+Debug.ShouldStop(8192);
+_nomelivro = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("nomeLivro", _nomelivro);
+ BA.debugLineNum = 271;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
 Debug.ShouldStop(16384);
-_codigolivro = BA.numberCast(int.class, _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|"))))));Debug.locals.put("codigoLivro", _codigolivro);
- BA.debugLineNum = 272;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
-Debug.ShouldStop(32768);
 _informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
- BA.debugLineNum = 274;BA.debugLine="nomeUsuario = informacoes.SubString2(informacoes";
+ BA.debugLineNum = 273;BA.debugLine="qtPag 		= informacoes.SubString2(informacoes.Ind";
+Debug.ShouldStop(65536);
+_qtpag = BA.numberCast(int.class, _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|"))))));Debug.locals.put("qtPag", _qtpag);
+ BA.debugLineNum = 274;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
 Debug.ShouldStop(131072);
-_nomeusuario = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("nomeUsuario", _nomeusuario);
- BA.debugLineNum = 275;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
-Debug.ShouldStop(262144);
 _informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
- BA.debugLineNum = 277;BA.debugLine="tipoLeitura = informacoes.SubString2(informacoes";
+ BA.debugLineNum = 276;BA.debugLine="codigoLivro = informacoes.SubString2(informacoes";
+Debug.ShouldStop(524288);
+_codigolivro = BA.numberCast(int.class, _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|"))))));Debug.locals.put("codigoLivro", _codigolivro);
+ BA.debugLineNum = 277;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
 Debug.ShouldStop(1048576);
-_tipoleitura = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("tipoLeitura", _tipoleitura);
- BA.debugLineNum = 279;BA.debugLine="CodigoLayAnotacao.codigoLivro = codigoLivro";
+_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 279;BA.debugLine="tipoLeitura = informacoes.SubString2(informacoes";
 Debug.ShouldStop(4194304);
-codigolayleituras.mostCurrent._codigolayanotacao._codigolivro /*RemoteObject*/  = _codigolivro;
- BA.debugLineNum = 280;BA.debugLine="CodigoLayAnotacao.qtPaginas = qtPag";
-Debug.ShouldStop(8388608);
-codigolayleituras.mostCurrent._codigolayanotacao._qtpaginas /*RemoteObject*/  = _qtpag;
- BA.debugLineNum = 281;BA.debugLine="CodigoLayAnotacao.nomeDoLivro = nomeLivro";
+_tipoleitura = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("tipoLeitura", _tipoleitura);
+ BA.debugLineNum = 281;BA.debugLine="CodigoLayAnotacao.codigoLivro = codigoLivro";
 Debug.ShouldStop(16777216);
-codigolayleituras.mostCurrent._codigolayanotacao._nomedolivro /*RemoteObject*/  = _nomelivro;
- BA.debugLineNum = 282;BA.debugLine="CodigoLayAnotacao.nomeUsuario = nomeUsuario";
+codigolayleituras.mostCurrent._codigolayanotacao._codigolivro /*RemoteObject*/  = _codigolivro;
+ BA.debugLineNum = 282;BA.debugLine="CodigoLayAnotacao.qtPaginas = qtPag";
 Debug.ShouldStop(33554432);
-codigolayleituras.mostCurrent._codigolayanotacao._nomeusuario /*RemoteObject*/  = _nomeusuario;
- BA.debugLineNum = 283;BA.debugLine="CodigoLayAnotacao.tipoLeitura = tipoLeitura";
+codigolayleituras.mostCurrent._codigolayanotacao._qtpaginas /*RemoteObject*/  = _qtpag;
+ BA.debugLineNum = 283;BA.debugLine="CodigoLayAnotacao.nomeDoLivro = nomeLivro";
 Debug.ShouldStop(67108864);
+codigolayleituras.mostCurrent._codigolayanotacao._nomedolivro /*RemoteObject*/  = _nomelivro;
+ BA.debugLineNum = 284;BA.debugLine="CodigoLayAnotacao.tipoLeitura = tipoLeitura";
+Debug.ShouldStop(134217728);
 codigolayleituras.mostCurrent._codigolayanotacao._tipoleitura /*RemoteObject*/  = _tipoleitura;
- BA.debugLineNum = 285;BA.debugLine="StartActivity(CodigoLayAnotacao)";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 286;BA.debugLine="StartActivity(CodigoLayAnotacao)";
+Debug.ShouldStop(536870912);
 codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._codigolayanotacao.getObject())));
  }else {
- BA.debugLineNum = 287;BA.debugLine="ToastMessageShow(\"Arquivos inexistentes, reinici";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 288;BA.debugLine="ToastMessageShow(\"Arquivos inexistentes, reinici";
+Debug.ShouldStop(-2147483648);
 codigolayleituras.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Arquivos inexistentes, reinicie o app.")),(Object)(codigolayleituras.mostCurrent.__c.getField(true,"True")));
  };
- BA.debugLineNum = 289;BA.debugLine="End Sub";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 290;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _event_btlancar_click() throws Exception{
+try {
+		Debug.PushSubsStack("Event_btLancar_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,292);
+if (RapidSub.canDelegate("event_btlancar_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","event_btlancar_click");}
+RemoteObject _titulolivro = RemoteObject.createImmutable("");
+RemoteObject _nomeusuario = RemoteObject.createImmutable("");
+RemoteObject _paginasatuais = RemoteObject.createImmutable("");
+RemoteObject _totalpaginas = RemoteObject.createImmutable("");
+RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
+RemoteObject _informacoes = RemoteObject.createImmutable("");
+RemoteObject _lista = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
+ BA.debugLineNum = 292;BA.debugLine="Sub Event_btLancar_Click";
+Debug.ShouldStop(8);
+ BA.debugLineNum = 294;BA.debugLine="Dim tituloLivro As 		String";
+Debug.ShouldStop(32);
+_titulolivro = RemoteObject.createImmutable("");Debug.locals.put("tituloLivro", _titulolivro);
+ BA.debugLineNum = 295;BA.debugLine="Dim nomeUsuario As 		String";
+Debug.ShouldStop(64);
+_nomeusuario = RemoteObject.createImmutable("");Debug.locals.put("nomeUsuario", _nomeusuario);
+ BA.debugLineNum = 296;BA.debugLine="Dim paginasAtuais As 	String";
+Debug.ShouldStop(128);
+_paginasatuais = RemoteObject.createImmutable("");Debug.locals.put("paginasAtuais", _paginasatuais);
+ BA.debugLineNum = 297;BA.debugLine="Dim totalPaginas As 	String";
+Debug.ShouldStop(256);
+_totalpaginas = RemoteObject.createImmutable("");Debug.locals.put("totalPaginas", _totalpaginas);
+ BA.debugLineNum = 299;BA.debugLine="Dim b As Button = Sender";
+Debug.ShouldStop(1024);
+_b = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
+_b = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ButtonWrapper"), codigolayleituras.mostCurrent.__c.runMethod(false,"Sender",codigolayleituras.mostCurrent.activityBA));Debug.locals.put("b", _b);
+ BA.debugLineNum = 300;BA.debugLine="Dim informacoes As String";
+Debug.ShouldStop(2048);
+_informacoes = RemoteObject.createImmutable("");Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 302;BA.debugLine="Dim lista As List";
+Debug.ShouldStop(8192);
+_lista = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("lista", _lista);
+ BA.debugLineNum = 303;BA.debugLine="lista.Initialize";
+Debug.ShouldStop(16384);
+_lista.runVoidMethod ("Initialize");
+ BA.debugLineNum = 305;BA.debugLine="If File.Exists(File.DirInternal, nomeArquivo) The";
+Debug.ShouldStop(65536);
+if (codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"Exists",(Object)(codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(codigolayleituras.mostCurrent._nomearquivo)).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 307;BA.debugLine="lista = File.ReadList(File.DirInternal, nomeArqu";
+Debug.ShouldStop(262144);
+_lista = codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(false,"ReadList",(Object)(codigolayleituras.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirInternal")),(Object)(codigolayleituras.mostCurrent._nomearquivo));Debug.locals.put("lista", _lista);
+ BA.debugLineNum = 309;BA.debugLine="informacoes = lista.Get(b.Tag)";
+Debug.ShouldStop(1048576);
+_informacoes = BA.ObjectToString(_lista.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _b.runMethod(false,"getTag")))));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 311;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
+Debug.ShouldStop(4194304);
+_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("~"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 313;BA.debugLine="tituloLivro = informacoes.SubString2(informacoes";
+Debug.ShouldStop(16777216);
+_titulolivro = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("tituloLivro", _titulolivro);
+ BA.debugLineNum = 314;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
+Debug.ShouldStop(33554432);
+_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 316;BA.debugLine="nomeUsuario = informacoes.SubString2(informacoes";
+Debug.ShouldStop(134217728);
+_nomeusuario = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("nomeUsuario", _nomeusuario);
+ BA.debugLineNum = 317;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
+Debug.ShouldStop(268435456);
+_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 319;BA.debugLine="paginasAtuais = informacoes.SubString2(informaco";
+Debug.ShouldStop(1073741824);
+_paginasatuais = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("paginasAtuais", _paginasatuais);
+ BA.debugLineNum = 320;BA.debugLine="informacoes = informacoes.SubString2(informacoes";
+Debug.ShouldStop(-2147483648);
+_informacoes = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("¨"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"length")));Debug.locals.put("informacoes", _informacoes);
+ BA.debugLineNum = 322;BA.debugLine="totalPaginas = informacoes.SubString2(informacoe";
+Debug.ShouldStop(2);
+_totalpaginas = _informacoes.runMethod(true,"substring",(Object)(RemoteObject.solve(new RemoteObject[] {_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),RemoteObject.createImmutable(1)}, "+",1, 1)),(Object)(_informacoes.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("|")))));Debug.locals.put("totalPaginas", _totalpaginas);
+ BA.debugLineNum = 325;BA.debugLine="CodigoLancamentoLeitura.nomeUsuario = nomeUsuari";
+Debug.ShouldStop(16);
+codigolayleituras.mostCurrent._codigolancamentoleitura._nomeusuario /*RemoteObject*/  = _nomeusuario;
+ BA.debugLineNum = 326;BA.debugLine="CodigoLancamentoLeitura.paginaAtual = paginasAtu";
+Debug.ShouldStop(32);
+codigolayleituras.mostCurrent._codigolancamentoleitura._paginaatual /*RemoteObject*/  = BA.numberCast(int.class, _paginasatuais);
+ BA.debugLineNum = 327;BA.debugLine="CodigoLancamentoLeitura.tituloLivro = tituloLivr";
+Debug.ShouldStop(64);
+codigolayleituras.mostCurrent._codigolancamentoleitura._titulolivro /*RemoteObject*/  = _titulolivro;
+ BA.debugLineNum = 328;BA.debugLine="CodigoLancamentoLeitura.totalPaginas = totalPagi";
+Debug.ShouldStop(128);
+codigolayleituras.mostCurrent._codigolancamentoleitura._totalpaginas /*RemoteObject*/  = BA.numberCast(int.class, _totalpaginas);
+ BA.debugLineNum = 330;BA.debugLine="StartActivity(CodigoLancamentoLeitura)";
+Debug.ShouldStop(512);
+codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._codigolancamentoleitura.getObject())));
+ }else {
+ BA.debugLineNum = 333;BA.debugLine="ToastMessageShow(\"Arquivos inexistentes, reinici";
+Debug.ShouldStop(4096);
+codigolayleituras.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Arquivos inexistentes, reinicie o app.")),(Object)(codigolayleituras.mostCurrent.__c.getField(true,"True")));
+ };
+ BA.debugLineNum = 336;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -994,6 +1082,8 @@ codigolayleituras._cores = RemoteObject.createNewArray ("int", new int[] {2}, ne
 codigolayleituras.mostCurrent._btadicionarleitura = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");
  //BA.debugLineNum = 25;BA.debugLine="Private Panel_lendo As Panel";
 codigolayleituras.mostCurrent._panel_lendo = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");
+ //BA.debugLineNum = 26;BA.debugLine="Private nomeArquivo As String = \"Informacoes.ini\"";
+codigolayleituras.mostCurrent._nomearquivo = BA.ObjectToString("Informacoes.ini");
  //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
@@ -1006,13 +1096,13 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _tabstrip_pageselected(RemoteObject _position) throws Exception{
 try {
-		Debug.PushSubsStack("TabStrip_PageSelected (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,295);
+		Debug.PushSubsStack("TabStrip_PageSelected (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,342);
 if (RapidSub.canDelegate("tabstrip_pageselected")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","tabstrip_pageselected", _position);}
 Debug.locals.put("Position", _position);
- BA.debugLineNum = 295;BA.debugLine="Sub TabStrip_PageSelected (Position As Int)";
-Debug.ShouldStop(64);
- BA.debugLineNum = 297;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 342;BA.debugLine="Sub TabStrip_PageSelected (Position As Int)";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 344;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

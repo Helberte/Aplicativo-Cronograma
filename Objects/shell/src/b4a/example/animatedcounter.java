@@ -33,6 +33,7 @@ public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"DateUtils",_ref.getField(false, "_dateutils"),"DigitHeight",_ref.getField(false, "_digitheight"),"DigitWidth",_ref.getField(false, "_digitwidth"),"fade",_ref.getField(false, "_fade"),"ImageViews",_ref.getField(false, "_imageviews"),"lblTemplate",_ref.getField(false, "_lbltemplate"),"mBase",_ref.getField(false, "_mbase"),"mCallBack",_ref.getField(false, "_mcallback"),"mdigits",_ref.getField(false, "_mdigits"),"mDuration",_ref.getField(false, "_mduration"),"mEventName",_ref.getField(false, "_meventname"),"mValue",_ref.getField(false, "_mvalue"),"Tag",_ref.getField(false, "_tag"),"xfadeIv",_ref.getField(false, "_xfadeiv"),"xui",_ref.getField(false, "_xui")};

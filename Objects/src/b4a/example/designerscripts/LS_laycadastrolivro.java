@@ -56,13 +56,9 @@ views.get("lbltipoleitura").vw.setTop((int)((views.get("panelautorlivro").vw.get
 views.get("lbltipoleitura").vw.setWidth((int)((100d / 100 * width)));
 views.get("lbltipoleitura").vw.setLeft((int)((0d / 100 * width)));
 views.get("lbltipoleitura").vw.setHeight((int)((4d / 100 * height)));
-//BA.debugLineNum = 63;BA.debugLine="radPagina.Height = 5%y"[LayCadastroLivro/General script]
 views.get("radpagina").vw.setHeight((int)((5d / 100 * height)));
-//BA.debugLineNum = 64;BA.debugLine="radPagina.Top = lblTipoLeitura.Top + lblTipoLeitura.Height"[LayCadastroLivro/General script]
 views.get("radpagina").vw.setTop((int)((views.get("lbltipoleitura").vw.getTop())+(views.get("lbltipoleitura").vw.getHeight())));
-//BA.debugLineNum = 65;BA.debugLine="radPagina.Width = 50%x"[LayCadastroLivro/General script]
 views.get("radpagina").vw.setWidth((int)((50d / 100 * width)));
-//BA.debugLineNum = 66;BA.debugLine="radPagina.Left = 0%x"[LayCadastroLivro/General script]
 views.get("radpagina").vw.setLeft((int)((0d / 100 * width)));
 //BA.debugLineNum = 68;BA.debugLine="radCapitulo.Height = radPagina.Height"[LayCadastroLivro/General script]
 views.get("radcapitulo").vw.setHeight((int)((views.get("radpagina").vw.getHeight())));
