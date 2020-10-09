@@ -10,7 +10,7 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleBreakpoints2=
 ModuleBreakpoints3=
-ModuleBreakpoints4=
+ModuleBreakpoints4=248
 ModuleBreakpoints5=
 ModuleBreakpoints6=
 ModuleBreakpoints7=
@@ -21,7 +21,11 @@ ModuleClosedNodes3=
 ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
+<<<<<<< Updated upstream
 ModuleClosedNodes7=
 NavigationStack=CodigoLayLeituras,Event_btAnotar_Click,244,6,CodigoCadastroLivro,btSalvar_Click,265,0,CodigoCadastroLivro,edTituloLivro_TextChanged,194,0,CodigoLayAnotacao,edAnotacao_TextChanged,113,2,CodigoLayAnotacao,edTituloAnotacao_TextChanged,106,2,Visual Designer,Lay_Anotar.bal,-100,5,Visual Designer,Lay_lancamento_leitura.bal,-100,6,CodigoLayAnotacao,btCancelar_Click,50,0,CodigoLayAnotacao,btOk_Click,68,6,CodigoLayAnotacao,Activity_KeyPress,102,0
+=======
+NavigationStack=CodigoCadastro,btSalvar_Click,103,3,CodigoLayLeituras,Event_lbl_Click,56,0,CodigoLayLeituras,Activity_Resume,73,6,Visual Designer,LayLeiturasTabStrip.bal,-100,2,CodigoLayLeituras,Globals,24,6,Visual Designer,LayLeitura_menu1.bal,-100,6,Main,Globals,23,0,CodigoLayLeituras,Atualiza_leituras,209,6,CodigoLayLeituras,TabStrip_PageSelected,247,0,CodigoLayLeituras,Activity_KeyPress,254,6,ClassBancoDados,Class_Globals,2,0
+>>>>>>> Stashed changes
 SelectedBuild=0
 VisibleModules=2,6,1,3,5,4

@@ -43,6 +43,7 @@ begin
 		data_inicial		date		not null,
 		tipo_de_leitura		varchar(50) not null, -- por pagina ou por capitulo
 		quantidade_paginas	int			not null,
+		paginas_ou_cap_lidos int,
 		data_prevista_final	date		not null,
 		meta				varchar(50)	not null, -- meta de paginas diarias ou meta de data final
 	
