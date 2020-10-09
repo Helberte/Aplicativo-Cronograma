@@ -29,6 +29,8 @@ Sub Globals
 	Private btAdicionarLeitura As Button
 		
 	Private Panel_lendo As Panel
+	
+		
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -124,7 +126,7 @@ Sub Atualiza_leituras As ResumableSub
 			Dim quantidade As Int = Result.GetInt("QUANTIDADE")
 			
 			Dim panels(quantidade) As Panel
-			
+			Dim listaInformacoes As List			
 									
 			Dim lblTituloLivro(quantidade) As Label
 			Dim lblDataComecoLeitura(quantidade) As Label
@@ -146,10 +148,13 @@ Sub Atualiza_leituras As ResumableSub
 			
 			If temPanel = False Then
 				
+				temPanel = True
 				scrollView1.Initialize( 500 )
+				listaInformacoes.Initialize
+				
 				Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
 				
-						
+									
 				Dim i As Int	
 				For i = 0 To panels.Length - 1
 																										
@@ -199,7 +204,17 @@ Sub Atualiza_leituras As ResumableSub
 					panels(i).AddView(lblQuantidadePaginas(i), 3%x, topoLabel, panels(i).Width - 5%x, altura)
 					topoLabel = topoLabel + altura + 2dip
 					
-					btAnotar(i).Tag = Result.GetString("nome") & "/" & Result.GetString("quantidade_paginas") & "|" & Result.GetInt("fk_id_Livro")
+					btAnotar(i).Tag = i
+					
+					'https://www.b4x.com/android/forum/threads/text-files.6690/
+					'https://www.b4x.com/android/help/files.html#file
+					listaInformacoes.Add(" '" & Result.GetString("nome") & _
+										 "|¨'" & Result.GetInt("quantidade_paginas") & _
+										 "|¨'" & Result.GetInt("fk_id_Livro") & _
+										 "|¨'" & Result.GetString("usuarioNome") & _
+										 "|¨'" & Result.GetString("tipo_de_leitura") & "|")
+									
+					File.WriteList(File.DirInternal, "Informacoes.txt", listaInformacoes) 
 					
 					btAnotar(i).Text = "Anotar"
 					btAnotar(i).TextSize = 16
@@ -233,22 +248,50 @@ Sub Atualiza_leituras As ResumableSub
 	End Try	
 End Sub
 
+
 Sub Event_btAnotar_Click
 		
 	Dim b As Button = Sender
-	Dim informacoes As String
-	Dim qtPag, codigoLivro As Int
+	
+	Dim informacoes 		As String
+	Dim qtPag, codigoLivro 	As Int
+	Dim nomeUsuario 		As String
+	Dim nomeLivro 			As String
+	Dim tipoLeitura			As String
+	
+	Dim lista As List
+	lista.Initialize
+	
+	If File.Exists(File.DirInternal, "Informacoes.txt") Then
 		
-	informacoes = b.Tag
-	qtPag = informacoes.SubString2(informacoes.IndexOf("/") + 1, informacoes.IndexOf("|"))
-	codigoLivro = informacoes.SubString2(informacoes.IndexOf("|") + 1, informacoes.Length)
-	
-	CodigoLayAnotacao.codigoLivro = codigoLivro
-	CodigoLayAnotacao.qtPaginas = qtPag	
-	CodigoLayAnotacao.nomeDoLivro = informacoes.SubString2(0, informacoes.IndexOf("/"))
-	
-	StartActivity(CodigoLayAnotacao)
-	
+		lista = File.ReadList(File.DirInternal, "Informacoes.txt")
+		
+		informacoes = lista.Get(b.Tag)
+		
+		nomeLivro =   informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		qtPag = 	  informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		codigoLivro = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		nomeUsuario = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		
+		tipoLeitura = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		
+		CodigoLayAnotacao.codigoLivro = codigoLivro
+		CodigoLayAnotacao.qtPaginas = qtPag
+		CodigoLayAnotacao.nomeDoLivro = nomeLivro
+		CodigoLayAnotacao.nomeUsuario = nomeUsuario
+		CodigoLayAnotacao.tipoLeitura = tipoLeitura
+		
+		StartActivity(CodigoLayAnotacao)
+	Else
+		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)
+	End If	
 End Sub
 
 Sub btAdicionarLeitura_Click	

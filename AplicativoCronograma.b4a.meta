@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
-NavigationStack=CodigoLayLeituras,TabStrip_PageSelected,254,0,Main,Activity_Create,29,0,Main,Activity_Resume,33,0,ClassBancoDados,Class_Globals,1,0,CodigoLayLeituras,Activity_KeyPress,274,0,CodigoLayAnotacao,btOk_Click,76,0,CodigoLayLeituras,Atualiza_leituras,224,0
+NavigationStack=CodigoLayAnotacao,Activity_Create,21,0,CodigoLayAnotacao,Globals,20,0,Main,Process_Globals,21,0,Main,Globals,25,4,Main,Activity_Create,32,0,Visual Designer,Lay_Anotar.bal,-100,1,CodigoLayLeituras,Globals,26,6,CodigoLayAnotacao,Process_Globals,9,6,CodigoLayLeituras,Event_btAnotar_Click,295,6,CodigoLayLeituras,Atualiza_leituras,207,6
 SelectedBuild=0
 VisibleModules=1,2,3,4,5,6,7

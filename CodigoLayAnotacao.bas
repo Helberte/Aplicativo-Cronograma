@@ -12,6 +12,8 @@ Version=10.2
 Sub Process_Globals
 	Public nomeDoLivro As String
 	Public qtPaginas, codigoLivro As Int
+	Public tipoLeitura As String
+	Public nomeUsuario as String
 End Sub
 
 Sub Globals
@@ -23,6 +25,7 @@ Sub Globals
 	Private btCancelar As Button
 	Private btOk As Button
 	Dim banco As ClassBancoDados
+	Private lblAnotacaoRefPag As Label
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)

@@ -34,7 +34,7 @@ public class codigolayanotacao extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigolayanotacao");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigolayanotacao");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,25 +335,7 @@ public class codigolayanotacao extends Activity implements B4AActivity{
             
     }
 
-public anywheresoftware.b4a.keywords.Common __c = null;
-public static String _nomedolivro = "";
-public static int _qtpaginas = 0;
-public static int _codigolivro = 0;
-public anywheresoftware.b4a.objects.LabelWrapper _lbltitulo = null;
-public b4a.example.b4xcombobox _b4xcombobox1 = null;
-public anywheresoftware.b4a.objects.EditTextWrapper _edtituloanotacao = null;
-public anywheresoftware.b4a.objects.EditTextWrapper _edanotacao = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btcancelar = null;
-public anywheresoftware.b4a.objects.ButtonWrapper _btok = null;
-public b4a.example.classbancodados _banco = null;
-public b4a.example.dateutils _dateutils = null;
-public b4a.example.main _main = null;
-public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
-public b4a.example.codigolayleituras _codigolayleituras = null;
-public b4a.example.codigolaylogin _codigolaylogin = null;
-public b4a.example.starter _starter = null;
-public b4a.example.xuiviewsutils _xuiviewsutils = null;
+
 
 public static void initializeProcessGlobals() {
              try {
@@ -362,77 +344,142 @@ public static void initializeProcessGlobals() {
                 throw new RuntimeException(e);
             }
 }
+public anywheresoftware.b4a.keywords.Common __c = null;
+public static String _nomedolivro = "";
+public static int _qtpaginas = 0;
+public static int _codigolivro = 0;
+public static String _tipoleitura = "";
+public static String _nomeusuario = "";
+public anywheresoftware.b4a.objects.LabelWrapper _lbltitulo = null;
+public b4a.example.b4xcombobox _b4xcombobox1 = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _edtituloanotacao = null;
+public anywheresoftware.b4a.objects.EditTextWrapper _edanotacao = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _btcancelar = null;
+public anywheresoftware.b4a.objects.ButtonWrapper _btok = null;
+public b4a.example.classbancodados _banco = null;
+public anywheresoftware.b4a.objects.LabelWrapper _lblanotacaorefpag = null;
+public b4a.example.dateutils _dateutils = null;
+public b4a.example.main _main = null;
+public b4a.example.codigocadastro _codigocadastro = null;
+public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigolaylogin _codigolaylogin = null;
+public b4a.example.starter _starter = null;
+public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 24;BA.debugLine="Activity.LoadLayout(\"Lay_Anotar\")";
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
+RDebugUtils.currentLine=22216704;
+ //BA.debugLineNum = 22216704;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=22216706;
+ //BA.debugLineNum = 22216706;BA.debugLine="Activity.LoadLayout(\"Lay_Anotar\")";
 mostCurrent._activity.LoadLayout("Lay_Anotar",mostCurrent.activityBA);
- //BA.debugLineNum = 25;BA.debugLine="banco.Initialize";
-mostCurrent._banco._initialize /*String*/ (processBA);
- //BA.debugLineNum = 27;BA.debugLine="edTituloAnotacao.RequestFocus";
+RDebugUtils.currentLine=22216707;
+ //BA.debugLineNum = 22216707;BA.debugLine="banco.Initialize";
+mostCurrent._banco._initialize /*String*/ (null,processBA);
+RDebugUtils.currentLine=22216709;
+ //BA.debugLineNum = 22216709;BA.debugLine="edTituloAnotacao.RequestFocus";
 mostCurrent._edtituloanotacao.RequestFocus();
- //BA.debugLineNum = 28;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22216710;
+ //BA.debugLineNum = 22216710;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 93;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 94;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress", false))
+	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode}));}
+RDebugUtils.currentLine=22544384;
+ //BA.debugLineNum = 22544384;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+RDebugUtils.currentLine=22544385;
+ //BA.debugLineNum = 22544385;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 95;BA.debugLine="nomeDoLivro = \"\"";
+RDebugUtils.currentLine=22544386;
+ //BA.debugLineNum = 22544386;BA.debugLine="nomeDoLivro = \"\"";
 _nomedolivro = "";
- //BA.debugLineNum = 96;BA.debugLine="qtPaginas = 0";
+RDebugUtils.currentLine=22544387;
+ //BA.debugLineNum = 22544387;BA.debugLine="qtPaginas = 0";
 _qtpaginas = (int) (0);
- //BA.debugLineNum = 97;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=22544388;
+ //BA.debugLineNum = 22544388;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 98;BA.debugLine="Return True";
+RDebugUtils.currentLine=22544389;
+ //BA.debugLineNum = 22544389;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  }else {
- //BA.debugLineNum = 100;BA.debugLine="Return False";
+RDebugUtils.currentLine=22544391;
+ //BA.debugLineNum = 22544391;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  };
- //BA.debugLineNum = 102;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22544393;
+ //BA.debugLineNum = 22544393;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 41;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 43;BA.debugLine="End Sub";
+RDebugUtils.currentModule="codigolayanotacao";
+RDebugUtils.currentLine=22347776;
+ //BA.debugLineNum = 22347776;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=22347778;
+ //BA.debugLineNum = 22347778;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
 int[] _paginas = null;
 int _i = 0;
- //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 31;BA.debugLine="Dim paginas(qtPaginas) As Int";
+RDebugUtils.currentLine=22282240;
+ //BA.debugLineNum = 22282240;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=22282241;
+ //BA.debugLineNum = 22282241;BA.debugLine="Dim paginas(qtPaginas) As Int";
 _paginas = new int[_qtpaginas];
 ;
- //BA.debugLineNum = 33;BA.debugLine="For i = 0 To qtPaginas - 1";
+RDebugUtils.currentLine=22282243;
+ //BA.debugLineNum = 22282243;BA.debugLine="For i = 0 To qtPaginas - 1";
 {
 final int step2 = 1;
 final int limit2 = (int) (_qtpaginas-1);
 _i = (int) (0) ;
 for (;_i <= limit2 ;_i = _i + step2 ) {
- //BA.debugLineNum = 34;BA.debugLine="paginas(i) = i + 1";
+RDebugUtils.currentLine=22282244;
+ //BA.debugLineNum = 22282244;BA.debugLine="paginas(i) = i + 1";
 _paginas[_i] = (int) (_i+1);
  }
 };
- //BA.debugLineNum = 37;BA.debugLine="lblTitulo.Text = nomeDoLivro";
+RDebugUtils.currentLine=22282247;
+ //BA.debugLineNum = 22282247;BA.debugLine="lblTitulo.Text = nomeDoLivro";
 mostCurrent._lbltitulo.setText(BA.ObjectToCharSequence(_nomedolivro));
- //BA.debugLineNum = 38;BA.debugLine="B4XComboBox1.SetItems(paginas)";
-mostCurrent._b4xcombobox1._setitems /*String*/ (anywheresoftware.b4a.keywords.Common.ArrayToList(_paginas));
- //BA.debugLineNum = 39;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22282248;
+ //BA.debugLineNum = 22282248;BA.debugLine="B4XComboBox1.SetItems(paginas)";
+mostCurrent._b4xcombobox1._setitems /*String*/ (null,anywheresoftware.b4a.keywords.Common.ArrayToList(_paginas));
+RDebugUtils.currentLine=22282249;
+ //BA.debugLineNum = 22282249;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btcancelar_click() throws Exception{
- //BA.debugLineNum = 46;BA.debugLine="Sub btCancelar_Click";
- //BA.debugLineNum = 47;BA.debugLine="nomeDoLivro = \"\"";
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "btcancelar_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btcancelar_click", null));}
+RDebugUtils.currentLine=22413312;
+ //BA.debugLineNum = 22413312;BA.debugLine="Sub btCancelar_Click";
+RDebugUtils.currentLine=22413313;
+ //BA.debugLineNum = 22413313;BA.debugLine="nomeDoLivro = \"\"";
 _nomedolivro = "";
- //BA.debugLineNum = 48;BA.debugLine="qtPaginas = 0";
+RDebugUtils.currentLine=22413314;
+ //BA.debugLineNum = 22413314;BA.debugLine="qtPaginas = 0";
 _qtpaginas = (int) (0);
- //BA.debugLineNum = 49;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=22413315;
+ //BA.debugLineNum = 22413315;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 50;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22413316;
+ //BA.debugLineNum = 22413316;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btok_click() throws Exception{
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "btok_click", false))
+	 {Debug.delegate(mostCurrent.activityBA, "btok_click", null); return;}
 ResumableSub_btOk_Click rsub = new ResumableSub_btOk_Click(null);
 rsub.resume(processBA, null);
 }
@@ -446,6 +493,7 @@ anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result = null;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="codigolayanotacao";
 
     while (true) {
 try {
@@ -457,7 +505,8 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 54;BA.debugLine="If edTituloAnotacao.Text.Trim = \"\" Then";
+RDebugUtils.currentLine=22478850;
+ //BA.debugLineNum = 22478850;BA.debugLine="If edTituloAnotacao.Text.Trim = \"\" Then";
 if (true) break;
 
 case 1:
@@ -465,34 +514,43 @@ case 1:
 this.state = 20;
 if ((parent.mostCurrent._edtituloanotacao.getText().trim()).equals("")) { 
 this.state = 3;
-}else if((parent.mostCurrent._edanotacao.getText().trim()).equals("")) { 
+}else 
+{RDebugUtils.currentLine=22478853;
+ //BA.debugLineNum = 22478853;BA.debugLine="Else if edAnotacao.Text.Trim = \"\" Then";
+if ((parent.mostCurrent._edanotacao.getText().trim()).equals("")) { 
 this.state = 5;
 }else {
 this.state = 7;
-}if (true) break;
+}}
+if (true) break;
 
 case 3:
 //C
 this.state = 20;
- //BA.debugLineNum = 55;BA.debugLine="edTituloAnotacao.RequestFocus";
+RDebugUtils.currentLine=22478851;
+ //BA.debugLineNum = 22478851;BA.debugLine="edTituloAnotacao.RequestFocus";
 parent.mostCurrent._edtituloanotacao.RequestFocus();
- //BA.debugLineNum = 56;BA.debugLine="ToastMessageShow(\"Insira um título para sua anot";
+RDebugUtils.currentLine=22478852;
+ //BA.debugLineNum = 22478852;BA.debugLine="ToastMessageShow(\"Insira um título para sua anot";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Insira um título para sua anotação"),anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
 case 5:
 //C
 this.state = 20;
- //BA.debugLineNum = 58;BA.debugLine="edAnotacao.RequestFocus";
+RDebugUtils.currentLine=22478854;
+ //BA.debugLineNum = 22478854;BA.debugLine="edAnotacao.RequestFocus";
 parent.mostCurrent._edanotacao.RequestFocus();
- //BA.debugLineNum = 59;BA.debugLine="ToastMessageShow(\"Cadê a anotação?\",True)";
+RDebugUtils.currentLine=22478855;
+ //BA.debugLineNum = 22478855;BA.debugLine="ToastMessageShow(\"Cadê a anotação?\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Cadê a anotação?"),anywheresoftware.b4a.keywords.Common.True);
  if (true) break;
 
 case 7:
 //C
 this.state = 8;
- //BA.debugLineNum = 61;BA.debugLine="Try";
+RDebugUtils.currentLine=22478857;
+ //BA.debugLineNum = 22478857;BA.debugLine="Try";
 if (true) break;
 
 case 8:
@@ -506,12 +564,15 @@ case 10:
 //C
 this.state = 11;
 this.catchState = 18;
- //BA.debugLineNum = 63;BA.debugLine="Dim cmd As String";
+RDebugUtils.currentLine=22478859;
+ //BA.debugLineNum = 22478859;BA.debugLine="Dim cmd As String";
 _cmd = "";
- //BA.debugLineNum = 64;BA.debugLine="cmd = \"exec sp_atualiza_anotacao \" & Main.Id_do";
-_cmd = "exec sp_atualiza_anotacao "+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+", "+BA.NumberToString(parent._codigolivro)+", "+parent.mostCurrent._b4xcombobox1._getselecteditem /*String*/ ()+", '"+parent.mostCurrent._edtituloanotacao.getText()+"','"+parent.mostCurrent._edanotacao.getText()+"'";
- //BA.debugLineNum = 70;BA.debugLine="Wait For( banco.Insert_Consulta(cmd)) Complete";
-anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (_cmd));
+RDebugUtils.currentLine=22478860;
+ //BA.debugLineNum = 22478860;BA.debugLine="cmd = \"exec sp_atualiza_anotacao \" & Main.Id_do";
+_cmd = "exec sp_atualiza_anotacao "+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+", "+BA.NumberToString(parent._codigolivro)+", "+parent.mostCurrent._b4xcombobox1._getselecteditem /*String*/ (null)+", '"+parent.mostCurrent._edtituloanotacao.getText()+"','"+parent.mostCurrent._edanotacao.getText()+"'";
+RDebugUtils.currentLine=22478866;
+ //BA.debugLineNum = 22478866;BA.debugLine="Wait For( banco.Insert_Consulta(cmd)) Complete";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayanotacao", "btok_click"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
 this.state = 21;
 return;
 case 21:
@@ -519,9 +580,11 @@ case 21:
 this.state = 11;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
- //BA.debugLineNum = 72;BA.debugLine="Result.NextRow";
+RDebugUtils.currentLine=22478868;
+ //BA.debugLineNum = 22478868;BA.debugLine="Result.NextRow";
 _result.NextRow();
- //BA.debugLineNum = 74;BA.debugLine="If Result.GetString(\"RESULTADO\") = 0 Then";
+RDebugUtils.currentLine=22478870;
+ //BA.debugLineNum = 22478870;BA.debugLine="If Result.GetString(\"RESULTADO\") = 0 Then";
 if (true) break;
 
 case 11:
@@ -529,41 +592,51 @@ case 11:
 this.state = 16;
 if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
 this.state = 13;
-}else if((_result.GetString("RESULTADO")).equals(BA.NumberToString(1))) { 
+}else 
+{RDebugUtils.currentLine=22478875;
+ //BA.debugLineNum = 22478875;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 1 Then";
+if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(1))) { 
 this.state = 15;
-}if (true) break;
+}}
+if (true) break;
 
 case 13:
 //C
 this.state = 16;
- //BA.debugLineNum = 75;BA.debugLine="ToastMessageShow(\"Algo deu errado!\",True)";
+RDebugUtils.currentLine=22478871;
+ //BA.debugLineNum = 22478871;BA.debugLine="ToastMessageShow(\"Algo deu errado!\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Algo deu errado!"),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 76;BA.debugLine="Sleep(400)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (400));
+RDebugUtils.currentLine=22478872;
+ //BA.debugLineNum = 22478872;BA.debugLine="Sleep(400)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayanotacao", "btok_click"),(int) (400));
 this.state = 22;
 return;
 case 22:
 //C
 this.state = 16;
 ;
- //BA.debugLineNum = 77;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=22478873;
+ //BA.debugLineNum = 22478873;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
 case 15:
 //C
 this.state = 16;
- //BA.debugLineNum = 80;BA.debugLine="ToastMessageShow(\"Tudo certo\",True)";
+RDebugUtils.currentLine=22478876;
+ //BA.debugLineNum = 22478876;BA.debugLine="ToastMessageShow(\"Tudo certo\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Tudo certo"),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 81;BA.debugLine="Sleep(400)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (400));
+RDebugUtils.currentLine=22478877;
+ //BA.debugLineNum = 22478877;BA.debugLine="Sleep(400)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayanotacao", "btok_click"),(int) (400));
 this.state = 23;
 return;
 case 23:
 //C
 this.state = 16;
 ;
- //BA.debugLineNum = 82;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=22478878;
+ //BA.debugLineNum = 22478878;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
@@ -577,17 +650,20 @@ case 18:
 //C
 this.state = 19;
 this.catchState = 0;
- //BA.debugLineNum = 86;BA.debugLine="ToastMessageShow(\"Algo deu errado!\",True)";
+RDebugUtils.currentLine=22478882;
+ //BA.debugLineNum = 22478882;BA.debugLine="ToastMessageShow(\"Algo deu errado!\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Algo deu errado!"),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 87;BA.debugLine="Sleep(400)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (400));
+RDebugUtils.currentLine=22478883;
+ //BA.debugLineNum = 22478883;BA.debugLine="Sleep(400)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayanotacao", "btok_click"),(int) (400));
 this.state = 24;
 return;
 case 24:
 //C
 this.state = 19;
 ;
- //BA.debugLineNum = 88;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=22478884;
+ //BA.debugLineNum = 22478884;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 if (true) break;
@@ -603,7 +679,8 @@ case 20:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 91;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22478887;
+ //BA.debugLineNum = 22478887;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -617,55 +694,38 @@ processBA.setLastException(e0);}
         }
     }
 }
-public static void  _complete(anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result) throws Exception{
-}
 public static String  _edanotacao_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 110;BA.debugLine="Sub edAnotacao_TextChanged (Old As String, New As";
- //BA.debugLineNum = 111;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "edanotacao_textchanged", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edanotacao_textchanged", new Object[] {_old,_new}));}
+RDebugUtils.currentLine=22675456;
+ //BA.debugLineNum = 22675456;BA.debugLine="Sub edAnotacao_TextChanged (Old As String, New As";
+RDebugUtils.currentLine=22675457;
+ //BA.debugLineNum = 22675457;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
 if (_new.indexOf("'")>=0) { 
- //BA.debugLineNum = 112;BA.debugLine="edAnotacao.Text = edAnotacao.Text.Replace(\"'\",\"\"";
+RDebugUtils.currentLine=22675458;
+ //BA.debugLineNum = 22675458;BA.debugLine="edAnotacao.Text = edAnotacao.Text.Replace(\"'\",\"\"";
 mostCurrent._edanotacao.setText(BA.ObjectToCharSequence(mostCurrent._edanotacao.getText().replace("'","")));
  };
- //BA.debugLineNum = 114;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22675460;
+ //BA.debugLineNum = 22675460;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edtituloanotacao_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 104;BA.debugLine="Sub edTituloAnotacao_TextChanged (Old As String, N";
- //BA.debugLineNum = 105;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
+RDebugUtils.currentModule="codigolayanotacao";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "edtituloanotacao_textchanged", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edtituloanotacao_textchanged", new Object[] {_old,_new}));}
+RDebugUtils.currentLine=22609920;
+ //BA.debugLineNum = 22609920;BA.debugLine="Sub edTituloAnotacao_TextChanged (Old As String, N";
+RDebugUtils.currentLine=22609921;
+ //BA.debugLineNum = 22609921;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
 if (_new.indexOf("'")>=0) { 
- //BA.debugLineNum = 106;BA.debugLine="edTituloAnotacao.Text = edTituloAnotacao.Text.Re";
+RDebugUtils.currentLine=22609922;
+ //BA.debugLineNum = 22609922;BA.debugLine="edTituloAnotacao.Text = edTituloAnotacao.Text.Re";
 mostCurrent._edtituloanotacao.setText(BA.ObjectToCharSequence(mostCurrent._edtituloanotacao.getText().replace("'","")));
  };
- //BA.debugLineNum = 108;BA.debugLine="End Sub";
-return "";
-}
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 11;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 13;BA.debugLine="Private lblTitulo As Label";
-mostCurrent._lbltitulo = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 14;BA.debugLine="Private B4XComboBox1 As B4XComboBox";
-mostCurrent._b4xcombobox1 = new b4a.example.b4xcombobox();
- //BA.debugLineNum = 15;BA.debugLine="Private edTituloAnotacao As EditText";
-mostCurrent._edtituloanotacao = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 16;BA.debugLine="Private edAnotacao As EditText";
-mostCurrent._edanotacao = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 17;BA.debugLine="Private btCancelar As Button";
-mostCurrent._btcancelar = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 18;BA.debugLine="Private btOk As Button";
-mostCurrent._btok = new anywheresoftware.b4a.objects.ButtonWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Dim banco As ClassBancoDados";
-mostCurrent._banco = new b4a.example.classbancodados();
- //BA.debugLineNum = 20;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 7;BA.debugLine="Public nomeDoLivro As String";
-_nomedolivro = "";
- //BA.debugLineNum = 8;BA.debugLine="Public qtPaginas, codigoLivro As Int";
-_qtpaginas = 0;
-_codigolivro = 0;
- //BA.debugLineNum = 9;BA.debugLine="End Sub";
+RDebugUtils.currentLine=22609924;
+ //BA.debugLineNum = 22609924;BA.debugLine="End Sub";
 return "";
 }
 }

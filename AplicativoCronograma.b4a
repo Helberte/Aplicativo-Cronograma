@@ -57,10 +57,11 @@ Version=10.2
 Sub Process_Globals
 	Public fotos As ContentChooser
 	Public Id_do_Usuario As Int
+	
 End Sub
 
 Sub Globals
-
+	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)

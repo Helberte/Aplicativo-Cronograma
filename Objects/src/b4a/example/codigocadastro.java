@@ -34,7 +34,7 @@ public class codigocadastro extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigocadastro");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.codigocadastro");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,6 +335,15 @@ public class codigocadastro extends Activity implements B4AActivity{
             
     }
 
+
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static boolean _cadastrouusuario = false;
 public static boolean _mostrarsenha = false;
@@ -354,57 +363,80 @@ public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 24;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 25;BA.debugLine="Activity.LoadLayout(\"LayoutCadastro\")";
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
+RDebugUtils.currentLine=720896;
+ //BA.debugLineNum = 720896;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=720897;
+ //BA.debugLineNum = 720897;BA.debugLine="Activity.LoadLayout(\"LayoutCadastro\")";
 mostCurrent._activity.LoadLayout("LayoutCadastro",mostCurrent.activityBA);
- //BA.debugLineNum = 27;BA.debugLine="edNome.RequestFocus";
+RDebugUtils.currentLine=720899;
+ //BA.debugLineNum = 720899;BA.debugLine="edNome.RequestFocus";
 mostCurrent._ednome.RequestFocus();
- //BA.debugLineNum = 29;BA.debugLine="panelCadSalvo.Visible = False";
+RDebugUtils.currentLine=720901;
+ //BA.debugLineNum = 720901;BA.debugLine="panelCadSalvo.Visible = False";
 mostCurrent._panelcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 30;BA.debugLine="lblCadSalvo.Visible = False";
+RDebugUtils.currentLine=720902;
+ //BA.debugLineNum = 720902;BA.debugLine="lblCadSalvo.Visible = False";
 mostCurrent._lblcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 31;BA.debugLine="funcoes.Initialize";
-mostCurrent._funcoes._initialize /*String*/ (processBA);
- //BA.debugLineNum = 32;BA.debugLine="End Sub";
+RDebugUtils.currentLine=720903;
+ //BA.debugLineNum = 720903;BA.debugLine="funcoes.Initialize";
+mostCurrent._funcoes._initialize /*String*/ (null,processBA);
+RDebugUtils.currentLine=720904;
+ //BA.debugLineNum = 720904;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _activity_keypress(int _keycode) throws Exception{
- //BA.debugLineNum = 139;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
- //BA.debugLineNum = 140;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_keypress", false))
+	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "activity_keypress", new Object[] {_keycode}));}
+RDebugUtils.currentLine=1114112;
+ //BA.debugLineNum = 1114112;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
+RDebugUtils.currentLine=1114113;
+ //BA.debugLineNum = 1114113;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
 if (_keycode==anywheresoftware.b4a.keywords.Common.KeyCodes.KEYCODE_BACK) { 
- //BA.debugLineNum = 141;BA.debugLine="StartActivity(CodigoLayLogin)";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="StartActivity(CodigoLayLogin)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._codigolaylogin.getObject()));
- //BA.debugLineNum = 142;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=1114115;
+ //BA.debugLineNum = 1114115;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 143;BA.debugLine="Return False";
+RDebugUtils.currentLine=1114116;
+ //BA.debugLineNum = 1114116;BA.debugLine="Return False";
 if (true) return anywheresoftware.b4a.keywords.Common.False;
  }else {
- //BA.debugLineNum = 145;BA.debugLine="Return True";
+RDebugUtils.currentLine=1114118;
+ //BA.debugLineNum = 1114118;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
  };
- //BA.debugLineNum = 147;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114120;
+ //BA.debugLineNum = 1114120;BA.debugLine="End Sub";
 return false;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 38;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 40;BA.debugLine="End Sub";
+RDebugUtils.currentModule="codigocadastro";
+RDebugUtils.currentLine=851968;
+ //BA.debugLineNum = 851968;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=851970;
+ //BA.debugLineNum = 851970;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 34;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 36;BA.debugLine="End Sub";
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
+RDebugUtils.currentLine=786432;
+ //BA.debugLineNum = 786432;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=786434;
+ //BA.debugLineNum = 786434;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btsalvar_click() throws Exception{
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "btsalvar_click", false))
+	 {Debug.delegate(mostCurrent.activityBA, "btsalvar_click", null); return;}
 ResumableSub_btSalvar_Click rsub = new ResumableSub_btSalvar_Click(null);
 rsub.resume(processBA, null);
 }
@@ -418,6 +450,7 @@ anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result = null;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="codigocadastro";
 
     while (true) {
 try {
@@ -429,7 +462,8 @@ return;
 case 0:
 //C
 this.state = 1;
- //BA.debugLineNum = 44;BA.debugLine="If edNome.Text.Trim = \"\" Then";
+RDebugUtils.currentLine=917506;
+ //BA.debugLineNum = 917506;BA.debugLine="If edNome.Text.Trim = \"\" Then";
 if (true) break;
 
 case 1:
@@ -437,45 +471,59 @@ case 1:
 this.state = 32;
 if ((parent.mostCurrent._ednome.getText().trim()).equals("")) { 
 this.state = 3;
-}else if((parent.mostCurrent._edlogin.getText().trim()).equals("")) { 
+}else 
+{RDebugUtils.currentLine=917510;
+ //BA.debugLineNum = 917510;BA.debugLine="Else If edLogin.Text.Trim = \"\" Then";
+if ((parent.mostCurrent._edlogin.getText().trim()).equals("")) { 
 this.state = 5;
-}else if((parent.mostCurrent._edsenha.getText().trim()).equals("")) { 
+}else 
+{RDebugUtils.currentLine=917514;
+ //BA.debugLineNum = 917514;BA.debugLine="Else If edSenha.Text.Trim = \"\" Then";
+if ((parent.mostCurrent._edsenha.getText().trim()).equals("")) { 
 this.state = 7;
 }else {
 this.state = 9;
-}if (true) break;
+}}}
+if (true) break;
 
 case 3:
 //C
 this.state = 32;
- //BA.debugLineNum = 45;BA.debugLine="MsgboxAsync(\"Falta o nome\",\"Está apressado?\")";
+RDebugUtils.currentLine=917507;
+ //BA.debugLineNum = 917507;BA.debugLine="MsgboxAsync(\"Falta o nome\",\"Está apressado?\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Falta o nome"),BA.ObjectToCharSequence("Está apressado?"),processBA);
- //BA.debugLineNum = 46;BA.debugLine="edNome.RequestFocus";
+RDebugUtils.currentLine=917508;
+ //BA.debugLineNum = 917508;BA.debugLine="edNome.RequestFocus";
 parent.mostCurrent._ednome.RequestFocus();
  if (true) break;
 
 case 5:
 //C
 this.state = 32;
- //BA.debugLineNum = 49;BA.debugLine="MsgboxAsync(\"Falta o login\",\"Está apressado?\")";
+RDebugUtils.currentLine=917511;
+ //BA.debugLineNum = 917511;BA.debugLine="MsgboxAsync(\"Falta o login\",\"Está apressado?\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Falta o login"),BA.ObjectToCharSequence("Está apressado?"),processBA);
- //BA.debugLineNum = 50;BA.debugLine="edLogin.RequestFocus";
+RDebugUtils.currentLine=917512;
+ //BA.debugLineNum = 917512;BA.debugLine="edLogin.RequestFocus";
 parent.mostCurrent._edlogin.RequestFocus();
  if (true) break;
 
 case 7:
 //C
 this.state = 32;
- //BA.debugLineNum = 53;BA.debugLine="MsgboxAsync(\"Falta a senha\",\"Está apressado?\")";
+RDebugUtils.currentLine=917515;
+ //BA.debugLineNum = 917515;BA.debugLine="MsgboxAsync(\"Falta a senha\",\"Está apressado?\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Falta a senha"),BA.ObjectToCharSequence("Está apressado?"),processBA);
- //BA.debugLineNum = 54;BA.debugLine="edSenha.RequestFocus";
+RDebugUtils.currentLine=917516;
+ //BA.debugLineNum = 917516;BA.debugLine="edSenha.RequestFocus";
 parent.mostCurrent._edsenha.RequestFocus();
  if (true) break;
 
 case 9:
 //C
 this.state = 10;
- //BA.debugLineNum = 58;BA.debugLine="If edRepitaSenha.Text.Trim.Length < 8 Then";
+RDebugUtils.currentLine=917520;
+ //BA.debugLineNum = 917520;BA.debugLine="If edRepitaSenha.Text.Trim.Length < 8 Then";
 if (true) break;
 
 case 10:
@@ -483,36 +531,46 @@ case 10:
 this.state = 31;
 if (parent.mostCurrent._edrepitasenha.getText().trim().length()<8) { 
 this.state = 12;
-}else if((parent.mostCurrent._edsenha.getText().trim()).equals(parent.mostCurrent._edrepitasenha.getText().trim()) == false) { 
+}else 
+{RDebugUtils.currentLine=917524;
+ //BA.debugLineNum = 917524;BA.debugLine="Else If edSenha.Text.Trim <> edRepitaSenha.Text.";
+if ((parent.mostCurrent._edsenha.getText().trim()).equals(parent.mostCurrent._edrepitasenha.getText().trim()) == false) { 
 this.state = 14;
 }else {
 this.state = 16;
-}if (true) break;
+}}
+if (true) break;
 
 case 12:
 //C
 this.state = 31;
- //BA.debugLineNum = 59;BA.debugLine="MsgboxAsync(\"Sua senha precisa ter no mínimo 8";
+RDebugUtils.currentLine=917521;
+ //BA.debugLineNum = 917521;BA.debugLine="MsgboxAsync(\"Sua senha precisa ter no mínimo 8";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sua senha precisa ter no mínimo 8 dígitos."),BA.ObjectToCharSequence("Senha inválida!"),processBA);
- //BA.debugLineNum = 60;BA.debugLine="edRepitaSenha.RequestFocus";
+RDebugUtils.currentLine=917522;
+ //BA.debugLineNum = 917522;BA.debugLine="edRepitaSenha.RequestFocus";
 parent.mostCurrent._edrepitasenha.RequestFocus();
  if (true) break;
 
 case 14:
 //C
 this.state = 31;
- //BA.debugLineNum = 63;BA.debugLine="MsgboxAsync(\"As senhas não coinsidem.\",\"Atenção";
+RDebugUtils.currentLine=917525;
+ //BA.debugLineNum = 917525;BA.debugLine="MsgboxAsync(\"As senhas não coinsidem.\",\"Atenção";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("As senhas não coinsidem."),BA.ObjectToCharSequence("Atenção!"),processBA);
- //BA.debugLineNum = 64;BA.debugLine="edRepitaSenha.Text = \"\"";
+RDebugUtils.currentLine=917526;
+ //BA.debugLineNum = 917526;BA.debugLine="edRepitaSenha.Text = \"\"";
 parent.mostCurrent._edrepitasenha.setText(BA.ObjectToCharSequence(""));
- //BA.debugLineNum = 65;BA.debugLine="edSenha.RequestFocus";
+RDebugUtils.currentLine=917527;
+ //BA.debugLineNum = 917527;BA.debugLine="edSenha.RequestFocus";
 parent.mostCurrent._edsenha.RequestFocus();
  if (true) break;
 
 case 16:
 //C
 this.state = 17;
- //BA.debugLineNum = 68;BA.debugLine="Try";
+RDebugUtils.currentLine=917530;
+ //BA.debugLineNum = 917530;BA.debugLine="Try";
 if (true) break;
 
 case 17:
@@ -526,10 +584,12 @@ case 19:
 //C
 this.state = 20;
 this.catchState = 29;
- //BA.debugLineNum = 70;BA.debugLine="Dim cmd As String = \"exec sp_cad_usuario_crono";
+RDebugUtils.currentLine=917532;
+ //BA.debugLineNum = 917532;BA.debugLine="Dim cmd As String = \"exec sp_cad_usuario_crono";
 _cmd = "exec sp_cad_usuario_cronograma '"+parent.mostCurrent._ednome.getText()+"', '"+parent.mostCurrent._edlogin.getText()+"', '"+parent.mostCurrent._edsenha.getText()+"' ";
- //BA.debugLineNum = 74;BA.debugLine="Wait For (funcoes.Insert_Consulta(cmd)) Comple";
-anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, this, parent.mostCurrent._funcoes._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (_cmd));
+RDebugUtils.currentLine=917536;
+ //BA.debugLineNum = 917536;BA.debugLine="Wait For (funcoes.Insert_Consulta(cmd)) Comple";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastro", "btsalvar_click"), parent.mostCurrent._funcoes._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
 this.state = 33;
 return;
 case 33:
@@ -537,9 +597,11 @@ case 33:
 this.state = 20;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
- //BA.debugLineNum = 76;BA.debugLine="Result.NextRow";
+RDebugUtils.currentLine=917538;
+ //BA.debugLineNum = 917538;BA.debugLine="Result.NextRow";
 _result.NextRow();
- //BA.debugLineNum = 78;BA.debugLine="If Result = Null Then";
+RDebugUtils.currentLine=917540;
+ //BA.debugLineNum = 917540;BA.debugLine="If Result = Null Then";
 if (true) break;
 
 case 20:
@@ -547,74 +609,100 @@ case 20:
 this.state = 27;
 if (_result== null) { 
 this.state = 22;
-}else if((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
+}else 
+{RDebugUtils.currentLine=917544;
+ //BA.debugLineNum = 917544;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 0 Then";
+if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
 this.state = 24;
 }else {
 this.state = 26;
-}if (true) break;
+}}
+if (true) break;
 
 case 22:
 //C
 this.state = 27;
- //BA.debugLineNum = 80;BA.debugLine="cadastrouUsuario = False";
+RDebugUtils.currentLine=917542;
+ //BA.debugLineNum = 917542;BA.debugLine="cadastrouUsuario = False";
 parent._cadastrouusuario = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 81;BA.debugLine="MsgboxAsync(\"Problemas na conexão com banco d";
+RDebugUtils.currentLine=917543;
+ //BA.debugLineNum = 917543;BA.debugLine="MsgboxAsync(\"Problemas na conexão com banco d";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas na conexão com banco de dados. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
  if (true) break;
 
 case 24:
 //C
 this.state = 27;
- //BA.debugLineNum = 84;BA.debugLine="cadastrouUsuario = False";
+RDebugUtils.currentLine=917546;
+ //BA.debugLineNum = 917546;BA.debugLine="cadastrouUsuario = False";
 parent._cadastrouusuario = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 85;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"Op";
+RDebugUtils.currentLine=917547;
+ //BA.debugLineNum = 917547;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"Op";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!"),processBA);
- //BA.debugLineNum = 86;BA.debugLine="edNome.RequestFocus";
+RDebugUtils.currentLine=917548;
+ //BA.debugLineNum = 917548;BA.debugLine="edNome.RequestFocus";
 parent.mostCurrent._ednome.RequestFocus();
  if (true) break;
 
 case 26:
 //C
 this.state = 27;
- //BA.debugLineNum = 89;BA.debugLine="edLogin.Enabled = False";
+RDebugUtils.currentLine=917551;
+ //BA.debugLineNum = 917551;BA.debugLine="edLogin.Enabled = False";
 parent.mostCurrent._edlogin.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 90;BA.debugLine="edNome.Enabled = False";
+RDebugUtils.currentLine=917552;
+ //BA.debugLineNum = 917552;BA.debugLine="edNome.Enabled = False";
 parent.mostCurrent._ednome.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 91;BA.debugLine="edRepitaSenha.Enabled = False";
+RDebugUtils.currentLine=917553;
+ //BA.debugLineNum = 917553;BA.debugLine="edRepitaSenha.Enabled = False";
 parent.mostCurrent._edrepitasenha.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 92;BA.debugLine="edSenha.Enabled = False";
+RDebugUtils.currentLine=917554;
+ //BA.debugLineNum = 917554;BA.debugLine="edSenha.Enabled = False";
 parent.mostCurrent._edsenha.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 94;BA.debugLine="edSenha.TextColor = Colors.RGB(158, 130, 130)";
+RDebugUtils.currentLine=917556;
+ //BA.debugLineNum = 917556;BA.debugLine="edSenha.TextColor = Colors.RGB(158, 130, 130)";
 parent.mostCurrent._edsenha.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
- //BA.debugLineNum = 95;BA.debugLine="edLogin.TextColor = Colors.RGB(158, 130, 130)";
+RDebugUtils.currentLine=917557;
+ //BA.debugLineNum = 917557;BA.debugLine="edLogin.TextColor = Colors.RGB(158, 130, 130)";
 parent.mostCurrent._edlogin.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
- //BA.debugLineNum = 96;BA.debugLine="edNome.TextColor = Colors.RGB(158, 130, 130)";
+RDebugUtils.currentLine=917558;
+ //BA.debugLineNum = 917558;BA.debugLine="edNome.TextColor = Colors.RGB(158, 130, 130)";
 parent.mostCurrent._ednome.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
- //BA.debugLineNum = 97;BA.debugLine="edRepitaSenha.TextColor = Colors.RGB(158, 130";
+RDebugUtils.currentLine=917559;
+ //BA.debugLineNum = 917559;BA.debugLine="edRepitaSenha.TextColor = Colors.RGB(158, 130";
 parent.mostCurrent._edrepitasenha.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
- //BA.debugLineNum = 99;BA.debugLine="Main.Id_do_Usuario = Result.GetInt(\"ID\")";
+RDebugUtils.currentLine=917561;
+ //BA.debugLineNum = 917561;BA.debugLine="Main.Id_do_Usuario = Result.GetInt(\"ID\")";
 parent.mostCurrent._main._id_do_usuario /*int*/  = _result.GetInt("ID");
- //BA.debugLineNum = 100;BA.debugLine="ToastMessageShow(\"Sucesso!\",True)";
+RDebugUtils.currentLine=917562;
+ //BA.debugLineNum = 917562;BA.debugLine="ToastMessageShow(\"Sucesso!\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Sucesso!"),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 102;BA.debugLine="lblCadSalvo.Visible = True";
+RDebugUtils.currentLine=917564;
+ //BA.debugLineNum = 917564;BA.debugLine="lblCadSalvo.Visible = True";
 parent.mostCurrent._lblcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 103;BA.debugLine="panelCadSalvo.Visible = True";
+RDebugUtils.currentLine=917565;
+ //BA.debugLineNum = 917565;BA.debugLine="panelCadSalvo.Visible = True";
 parent.mostCurrent._panelcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 104;BA.debugLine="lblCadSalvo.Text = Result.GetString(\"MENSAGEM";
+RDebugUtils.currentLine=917566;
+ //BA.debugLineNum = 917566;BA.debugLine="lblCadSalvo.Text = Result.GetString(\"MENSAGEM";
 parent.mostCurrent._lblcadsalvo.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
- //BA.debugLineNum = 106;BA.debugLine="cadastrouUsuario = True";
+RDebugUtils.currentLine=917568;
+ //BA.debugLineNum = 917568;BA.debugLine="cadastrouUsuario = True";
 parent._cadastrouusuario = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 107;BA.debugLine="Sleep(1200)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,this,(int) (1200));
+RDebugUtils.currentLine=917569;
+ //BA.debugLineNum = 917569;BA.debugLine="Sleep(1200)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastro", "btsalvar_click"),(int) (1200));
 this.state = 34;
 return;
 case 34:
 //C
 this.state = 27;
 ;
- //BA.debugLineNum = 109;BA.debugLine="StartActivity(CodigoLayLeituras)";
+RDebugUtils.currentLine=917571;
+ //BA.debugLineNum = 917571;BA.debugLine="StartActivity(CodigoLayLeituras)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
- //BA.debugLineNum = 110;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=917572;
+ //BA.debugLineNum = 917572;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
@@ -622,7 +710,8 @@ case 27:
 //C
 this.state = 30;
 ;
- //BA.debugLineNum = 112;BA.debugLine="Result.Close";
+RDebugUtils.currentLine=917574;
+ //BA.debugLineNum = 917574;BA.debugLine="Result.Close";
 _result.Close();
  if (true) break;
 
@@ -630,9 +719,11 @@ case 29:
 //C
 this.state = 30;
 this.catchState = 0;
- //BA.debugLineNum = 114;BA.debugLine="Result.Close";
+RDebugUtils.currentLine=917576;
+ //BA.debugLineNum = 917576;BA.debugLine="Result.Close";
 _result.Close();
- //BA.debugLineNum = 115;BA.debugLine="MsgboxAsync(\"Problemas na inserção de dados. \"";
+RDebugUtils.currentLine=917577;
+ //BA.debugLineNum = 917577;BA.debugLine="MsgboxAsync(\"Problemas na inserção de dados. \"";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas na inserção de dados. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
  if (true) break;
 if (true) break;
@@ -654,7 +745,8 @@ case 32:
 //C
 this.state = -1;
 ;
- //BA.debugLineNum = 120;BA.debugLine="End Sub";
+RDebugUtils.currentLine=917582;
+ //BA.debugLineNum = 917582;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -668,81 +760,77 @@ processBA.setLastException(e0);}
         }
     }
 }
-public static void  _complete(anywheresoftware.b4j.objects.SQL.ResultSetWrapper _result) throws Exception{
-}
 public static String  _edrepitasenha_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 131;BA.debugLine="Sub edRepitaSenha_TextChanged (Old As String, New";
- //BA.debugLineNum = 133;BA.debugLine="If New.Length > 8 Then";
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "edrepitasenha_textchanged", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edrepitasenha_textchanged", new Object[] {_old,_new}));}
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Sub edRepitaSenha_TextChanged (Old As String, New";
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="If New.Length > 8 Then";
 if (_new.length()>8) { 
- //BA.debugLineNum = 134;BA.debugLine="edRepitaSenha.Text = New.SubString2(0, 8)";
+RDebugUtils.currentLine=1048579;
+ //BA.debugLineNum = 1048579;BA.debugLine="edRepitaSenha.Text = New.SubString2(0, 8)";
 mostCurrent._edrepitasenha.setText(BA.ObjectToCharSequence(_new.substring((int) (0),(int) (8))));
- //BA.debugLineNum = 135;BA.debugLine="edRepitaSenha.SelectionStart = 8";
+RDebugUtils.currentLine=1048580;
+ //BA.debugLineNum = 1048580;BA.debugLine="edRepitaSenha.SelectionStart = 8";
 mostCurrent._edrepitasenha.setSelectionStart((int) (8));
  };
- //BA.debugLineNum = 137;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048582;
+ //BA.debugLineNum = 1048582;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edsenha_textchanged(String _old,String _new) throws Exception{
- //BA.debugLineNum = 123;BA.debugLine="Sub edSenha_TextChanged (Old As String, New As Str";
- //BA.debugLineNum = 125;BA.debugLine="If New.Length > 8 Then";
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "edsenha_textchanged", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edsenha_textchanged", new Object[] {_old,_new}));}
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Sub edSenha_TextChanged (Old As String, New As Str";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="If New.Length > 8 Then";
 if (_new.length()>8) { 
- //BA.debugLineNum = 126;BA.debugLine="edSenha.Text = New.SubString2(0, 8)";
+RDebugUtils.currentLine=983043;
+ //BA.debugLineNum = 983043;BA.debugLine="edSenha.Text = New.SubString2(0, 8)";
 mostCurrent._edsenha.setText(BA.ObjectToCharSequence(_new.substring((int) (0),(int) (8))));
- //BA.debugLineNum = 127;BA.debugLine="edSenha.SelectionStart = 8";
+RDebugUtils.currentLine=983044;
+ //BA.debugLineNum = 983044;BA.debugLine="edSenha.SelectionStart = 8";
 mostCurrent._edsenha.setSelectionStart((int) (8));
  };
- //BA.debugLineNum = 129;BA.debugLine="End Sub";
-return "";
-}
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 11;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 13;BA.debugLine="Private edNome As EditText";
-mostCurrent._ednome = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 14;BA.debugLine="Private edLogin As EditText";
-mostCurrent._edlogin = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 15;BA.debugLine="Private edSenha As EditText";
-mostCurrent._edsenha = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 16;BA.debugLine="Private edRepitaSenha As EditText";
-mostCurrent._edrepitasenha = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 17;BA.debugLine="Private panelCadSalvo As Panel";
-mostCurrent._panelcadsalvo = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 18;BA.debugLine="Private lblCadSalvo As Label";
-mostCurrent._lblcadsalvo = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Private funcoes As ClassBancoDados";
-mostCurrent._funcoes = new b4a.example.classbancodados();
- //BA.debugLineNum = 21;BA.debugLine="Private lblMostrarSenha As Label";
-mostCurrent._lblmostrarsenha = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 22;BA.debugLine="End Sub";
+RDebugUtils.currentLine=983046;
+ //BA.debugLineNum = 983046;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lblmostrarsenha_click() throws Exception{
- //BA.debugLineNum = 149;BA.debugLine="Sub lblMostrarSenha_Click";
- //BA.debugLineNum = 151;BA.debugLine="If mostrarSenha Then";
+RDebugUtils.currentModule="codigocadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "lblmostrarsenha_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lblmostrarsenha_click", null));}
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Sub lblMostrarSenha_Click";
+RDebugUtils.currentLine=1179650;
+ //BA.debugLineNum = 1179650;BA.debugLine="If mostrarSenha Then";
 if (_mostrarsenha) { 
- //BA.debugLineNum = 152;BA.debugLine="edSenha.PasswordMode = True";
+RDebugUtils.currentLine=1179651;
+ //BA.debugLineNum = 1179651;BA.debugLine="edSenha.PasswordMode = True";
 mostCurrent._edsenha.setPasswordMode(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 153;BA.debugLine="mostrarSenha = False";
+RDebugUtils.currentLine=1179652;
+ //BA.debugLineNum = 1179652;BA.debugLine="mostrarSenha = False";
 _mostrarsenha = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 154;BA.debugLine="lblMostrarSenha.Text = \"Mostrar senha\"";
+RDebugUtils.currentLine=1179653;
+ //BA.debugLineNum = 1179653;BA.debugLine="lblMostrarSenha.Text = \"Mostrar senha\"";
 mostCurrent._lblmostrarsenha.setText(BA.ObjectToCharSequence("Mostrar senha"));
  }else {
- //BA.debugLineNum = 157;BA.debugLine="edSenha.PasswordMode = False";
+RDebugUtils.currentLine=1179656;
+ //BA.debugLineNum = 1179656;BA.debugLine="edSenha.PasswordMode = False";
 mostCurrent._edsenha.setPasswordMode(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 158;BA.debugLine="mostrarSenha = True";
+RDebugUtils.currentLine=1179657;
+ //BA.debugLineNum = 1179657;BA.debugLine="mostrarSenha = True";
 _mostrarsenha = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 159;BA.debugLine="lblMostrarSenha.Text = \"Esconder senha\"";
+RDebugUtils.currentLine=1179658;
+ //BA.debugLineNum = 1179658;BA.debugLine="lblMostrarSenha.Text = \"Esconder senha\"";
 mostCurrent._lblmostrarsenha.setText(BA.ObjectToCharSequence("Esconder senha"));
  };
- //BA.debugLineNum = 161;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 7;BA.debugLine="Public cadastrouUsuario As Boolean = False";
-_cadastrouusuario = anywheresoftware.b4a.keywords.Common.False;
- //BA.debugLineNum = 8;BA.debugLine="Private mostrarSenha As Boolean = True";
-_mostrarsenha = anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 9;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179660;
+ //BA.debugLineNum = 1179660;BA.debugLine="End Sub";
 return "";
 }
 }
