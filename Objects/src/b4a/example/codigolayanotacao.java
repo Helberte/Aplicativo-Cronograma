@@ -349,9 +349,9 @@ public b4a.example.classbancodados _banco = null;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 

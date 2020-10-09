@@ -2,7 +2,7 @@ use cronograma
 go
 
 
-exec sp_atualiza_anotacao codUsuario, fk_livro, pagina, 'titulo', 'anotacao'
+--exec sp_atualiza_anotacao codUsuario, fk_livro, pagina, 'titulo', 'anotacao'
 
 alter procedure sp_atualiza_anotacao
 

@@ -10,7 +10,7 @@ public class b4xdatetemplate extends B4AClass.ImplB4AClass implements BA.SubDele
     private static java.util.HashMap<String, java.lang.reflect.Method> htSubs;
     private void innerInitialize(BA _ba) throws Exception {
         if (ba == null) {
-            ba = new anywheresoftware.b4a.ShellBA(_ba, this, htSubs, "b4a.example.b4xdatetemplate");
+            ba = new BA(_ba, this, htSubs, "b4a.example.b4xdatetemplate");
             if (htSubs == null) {
                 ba.loadHtSubs(this.getClass());
                 htSubs = ba.htSubs;
@@ -23,14 +23,7 @@ public class b4xdatetemplate extends B4AClass.ImplB4AClass implements BA.SubDele
             ba.raiseEvent2(null, true, "class_globals", false);
     }
 
- 
-    public void  innerInitializeHelper(anywheresoftware.b4a.BA _ba) throws Exception{
-        innerInitialize(_ba);
-    }
-    public Object callSub(String sub, Object sender, Object[] args) throws Exception {
-        return BA.SubDelegator.SubNotFound;
-    }
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public int _month = 0;
 public int _year = 0;
@@ -69,556 +62,366 @@ public b4a.example.b4xdialog _mdialog = null;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
-public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
+public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
-public String  _btnmonth_click(b4a.example.b4xdatetemplate __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "btnmonth_click", true))
-	 {return ((String) Debug.delegate(ba, "btnmonth_click", null));}
+public String  _btnmonth_click() throws Exception{
 anywheresoftware.b4a.objects.B4XViewWrapper _btn = null;
 int _m = 0;
-RDebugUtils.currentLine=6815744;
- //BA.debugLineNum = 6815744;BA.debugLine="Private Sub btnMonth_Click";
-RDebugUtils.currentLine=6815745;
- //BA.debugLineNum = 6815745;BA.debugLine="Dim btn As B4XView = Sender";
+ //BA.debugLineNum = 147;BA.debugLine="Private Sub btnMonth_Click";
+ //BA.debugLineNum = 148;BA.debugLine="Dim btn As B4XView = Sender";
 _btn = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _btn = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.Sender(ba)));
-RDebugUtils.currentLine=6815746;
- //BA.debugLineNum = 6815746;BA.debugLine="Dim m As Int = 12 + month - 1 + btn.Tag";
-_m = (int) (12+__ref._month /*int*/ -1+(double)(BA.ObjectToNumber(_btn.getTag())));
-RDebugUtils.currentLine=6815747;
- //BA.debugLineNum = 6815747;BA.debugLine="month = (m Mod 12) + 1";
-__ref._month /*int*/  = (int) ((_m%12)+1);
-RDebugUtils.currentLine=6815748;
- //BA.debugLineNum = 6815748;BA.debugLine="DrawDays";
-__ref._drawdays /*String*/ (null);
-RDebugUtils.currentLine=6815749;
- //BA.debugLineNum = 6815749;BA.debugLine="End Sub";
+ //BA.debugLineNum = 149;BA.debugLine="Dim m As Int = 12 + month - 1 + btn.Tag";
+_m = (int) (12+_month-1+(double)(BA.ObjectToNumber(_btn.getTag())));
+ //BA.debugLineNum = 150;BA.debugLine="month = (m Mod 12) + 1";
+_month = (int) ((_m%12)+1);
+ //BA.debugLineNum = 151;BA.debugLine="DrawDays";
+_drawdays();
+ //BA.debugLineNum = 152;BA.debugLine="End Sub";
 return "";
 }
-public String  _drawdays(b4a.example.b4xdatetemplate __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "drawdays", true))
-	 {return ((String) Debug.delegate(ba, "drawdays", null));}
+public String  _btnyear_click() throws Exception{
+anywheresoftware.b4a.objects.B4XViewWrapper _btn = null;
+ //BA.debugLineNum = 141;BA.debugLine="Private Sub btnYear_Click";
+ //BA.debugLineNum = 142;BA.debugLine="Dim btn As B4XView = Sender";
+_btn = new anywheresoftware.b4a.objects.B4XViewWrapper();
+_btn = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.Sender(ba)));
+ //BA.debugLineNum = 143;BA.debugLine="year = year + btn.Tag";
+_year = (int) (_year+(double)(BA.ObjectToNumber(_btn.getTag())));
+ //BA.debugLineNum = 144;BA.debugLine="DrawDays";
+_drawdays();
+ //BA.debugLineNum = 145;BA.debugLine="End Sub";
+return "";
+}
+public String  _class_globals() throws Exception{
+ //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Private xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 3;BA.debugLine="Private month, year As Int";
+_month = 0;
+_year = 0;
+ //BA.debugLineNum = 4;BA.debugLine="Private boxW, boxH As Float";
+_boxw = 0f;
+_boxh = 0f;
+ //BA.debugLineNum = 5;BA.debugLine="Private vCorrection As Float";
+_vcorrection = 0f;
+ //BA.debugLineNum = 6;BA.debugLine="Private tempSelectedDay As Int";
+_tempselectedday = 0;
+ //BA.debugLineNum = 7;BA.debugLine="Private dayOfWeekOffset As Int";
+_dayofweekoffset = 0;
+ //BA.debugLineNum = 8;BA.debugLine="Private daysInMonth As Int";
+_daysinmonth = 0;
+ //BA.debugLineNum = 9;BA.debugLine="Private DaysPaneBg As B4XView";
+_dayspanebg = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 10;BA.debugLine="Private DaysPaneFg As B4XView";
+_dayspanefg = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 11;BA.debugLine="Private cvs As B4XCanvas";
+_cvs = new anywheresoftware.b4a.objects.B4XCanvas();
+ //BA.debugLineNum = 12;BA.debugLine="Private cvsBackground As B4XCanvas";
+_cvsbackground = new anywheresoftware.b4a.objects.B4XCanvas();
+ //BA.debugLineNum = 13;BA.debugLine="Private selectedDate As Long";
+_selecteddate = 0L;
+ //BA.debugLineNum = 14;BA.debugLine="Private selectedYear, selectedMonth, selectedDay";
+_selectedyear = 0;
+_selectedmonth = 0;
+_selectedday = 0;
+ //BA.debugLineNum = 15;BA.debugLine="Public HighlightedColor As Int = 0xFF001BBD";
+_highlightedcolor = (int) (0xff001bbd);
+ //BA.debugLineNum = 16;BA.debugLine="Public SelectedColor As Int = 0xFF0BA29B";
+_selectedcolor = (int) (0xff0ba29b);
+ //BA.debugLineNum = 17;BA.debugLine="Public DaysInMonthColor As Int = xui.Color_White";
+_daysinmonthcolor = _xui.Color_White;
+ //BA.debugLineNum = 18;BA.debugLine="Public DaysInWeekColor As Int = xui.Color_Gray";
+_daysinweekcolor = _xui.Color_Gray;
+ //BA.debugLineNum = 19;BA.debugLine="Private cvsDays As B4XCanvas";
+_cvsdays = new anywheresoftware.b4a.objects.B4XCanvas();
+ //BA.debugLineNum = 20;BA.debugLine="Private DaysTitlesPane As B4XView";
+_daystitlespane = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 21;BA.debugLine="Public FirstDay As Int = 0";
+_firstday = (int) (0);
+ //BA.debugLineNum = 22;BA.debugLine="Public MinYear = 1970, MaxYear = 2030 As Int";
+_minyear = (int) (1970);
+_maxyear = (int) (2030);
+ //BA.debugLineNum = 23;BA.debugLine="Public btnMonthLeft As B4XView";
+_btnmonthleft = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Public btnMonthRight As B4XView";
+_btnmonthright = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="Public btnYearLeft As B4XView";
+_btnyearleft = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 26;BA.debugLine="Public btnYearRight As B4XView";
+_btnyearright = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 27;BA.debugLine="Public lblMonth As B4XView";
+_lblmonth = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 28;BA.debugLine="Public lblYear As B4XView";
+_lblyear = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 29;BA.debugLine="Private pnlDialog As B4XView";
+_pnldialog = new anywheresoftware.b4a.objects.B4XViewWrapper();
+ //BA.debugLineNum = 30;BA.debugLine="Private months As List";
+_months = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 31;BA.debugLine="Private mDialog As B4XDialog";
+_mdialog = new b4a.example.b4xdialog();
+ //BA.debugLineNum = 32;BA.debugLine="End Sub";
+return "";
+}
+public String  _dayspanefg_touch(int _action,float _x,float _y) throws Exception{
+anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
+ //BA.debugLineNum = 154;BA.debugLine="Private Sub DaysPaneFg_Touch (Action As Int, X As";
+ //BA.debugLineNum = 155;BA.debugLine="Dim p As B4XView = DaysPaneFg";
+_p = new anywheresoftware.b4a.objects.B4XViewWrapper();
+_p = _dayspanefg;
+ //BA.debugLineNum = 156;BA.debugLine="HandleMouse(X, Y, Action <> p.TOUCH_ACTION_UP)";
+_handlemouse(_x,_y,_action!=_p.TOUCH_ACTION_UP);
+ //BA.debugLineNum = 157;BA.debugLine="End Sub";
+return "";
+}
+public String  _dialogclosed(int _result) throws Exception{
+ //BA.debugLineNum = 176;BA.debugLine="Private Sub DialogClosed(Result As Int) 'ignore";
+ //BA.debugLineNum = 178;BA.debugLine="End Sub";
+return "";
+}
+public String  _drawbox(anywheresoftware.b4a.objects.B4XCanvas _c,int _clr,int _x,int _y) throws Exception{
+anywheresoftware.b4a.objects.B4XCanvas.B4XRect _r = null;
+ //BA.debugLineNum = 82;BA.debugLine="Private Sub DrawBox(c As B4XCanvas, clr As Int, x";
+ //BA.debugLineNum = 83;BA.debugLine="Dim r As B4XRect";
+_r = new anywheresoftware.b4a.objects.B4XCanvas.B4XRect();
+ //BA.debugLineNum = 84;BA.debugLine="r.Initialize(x * boxW, y * boxH, x * boxW + boxW,";
+_r.Initialize((float) (_x*_boxw),(float) (_y*_boxh),(float) (_x*_boxw+_boxw),(float) (_y*_boxh+_boxh));
+ //BA.debugLineNum = 85;BA.debugLine="c.DrawRect(r, clr, True, 1dip)";
+_c.DrawRect(_r,_clr,__c.True,(float) (__c.DipToCurrent((int) (1))));
+ //BA.debugLineNum = 86;BA.debugLine="End Sub";
+return "";
+}
+public String  _drawdays() throws Exception{
 long _firstdayofmonth = 0L;
 anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont _daysfont = null;
 int _day = 0;
 int _row = 0;
-RDebugUtils.currentLine=6291456;
- //BA.debugLineNum = 6291456;BA.debugLine="Private Sub DrawDays";
-RDebugUtils.currentLine=6291457;
- //BA.debugLineNum = 6291457;BA.debugLine="lblMonth.Text = months.Get(month - 1)";
-__ref._lblmonth /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence(__ref._months /*anywheresoftware.b4a.objects.collections.List*/ .Get((int) (__ref._month /*int*/ -1))));
-RDebugUtils.currentLine=6291458;
- //BA.debugLineNum = 6291458;BA.debugLine="lblYear.Text = year";
-__ref._lblyear /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence(__ref._year /*int*/ ));
-RDebugUtils.currentLine=6291459;
- //BA.debugLineNum = 6291459;BA.debugLine="btnYearLeft.Enabled = year > MinYear";
-__ref._btnyearleft /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setEnabled(__ref._year /*int*/ >__ref._minyear /*int*/ );
-RDebugUtils.currentLine=6291460;
- //BA.debugLineNum = 6291460;BA.debugLine="btnYearRight.Enabled = year < MaxYear";
-__ref._btnyearright /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setEnabled(__ref._year /*int*/ <__ref._maxyear /*int*/ );
-RDebugUtils.currentLine=6291461;
- //BA.debugLineNum = 6291461;BA.debugLine="cvs.ClearRect(cvs.TargetRect)";
-__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .ClearRect(__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect());
-RDebugUtils.currentLine=6291462;
- //BA.debugLineNum = 6291462;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect)";
-__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .ClearRect(__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect());
-RDebugUtils.currentLine=6291463;
- //BA.debugLineNum = 6291463;BA.debugLine="Dim firstDayOfMonth As Long = DateUtils.setDate(y";
-_firstdayofmonth = (long) (_dateutils._setdate(ba,__ref._year /*int*/ ,__ref._month /*int*/ ,(int) (1))-1);
-RDebugUtils.currentLine=6291464;
- //BA.debugLineNum = 6291464;BA.debugLine="dayOfWeekOffset = (7 + DateTime.GetDayOfWeek(firs";
-__ref._dayofweekoffset /*int*/  = (int) ((7+__c.DateTime.GetDayOfWeek(_firstdayofmonth)-__ref._firstday /*int*/ )%7);
-RDebugUtils.currentLine=6291465;
- //BA.debugLineNum = 6291465;BA.debugLine="daysInMonth = DateUtils.NumberOfDaysInMonth(month";
-__ref._daysinmonth /*int*/  = _dateutils._numberofdaysinmonth(ba,__ref._month /*int*/ ,__ref._year /*int*/ );
-RDebugUtils.currentLine=6291466;
- //BA.debugLineNum = 6291466;BA.debugLine="If year = selectedYear And month = selectedMonth";
-if (__ref._year /*int*/ ==__ref._selectedyear /*int*/  && __ref._month /*int*/ ==__ref._selectedmonth /*int*/ ) { 
-RDebugUtils.currentLine=6291468;
- //BA.debugLineNum = 6291468;BA.debugLine="DrawBox(cvs, SelectedColor, (selectedDay - 1 + d";
-__ref._drawbox /*String*/ (null,__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ ,__ref._selectedcolor /*int*/ ,(int) ((__ref._selectedday /*int*/ -1+__ref._dayofweekoffset /*int*/ )%7),(int) ((__ref._selectedday /*int*/ -1+__ref._dayofweekoffset /*int*/ )/(double)7));
+ //BA.debugLineNum = 57;BA.debugLine="Private Sub DrawDays";
+ //BA.debugLineNum = 58;BA.debugLine="lblMonth.Text = months.Get(month - 1)";
+_lblmonth.setText(BA.ObjectToCharSequence(_months.Get((int) (_month-1))));
+ //BA.debugLineNum = 59;BA.debugLine="lblYear.Text = year";
+_lblyear.setText(BA.ObjectToCharSequence(_year));
+ //BA.debugLineNum = 60;BA.debugLine="btnYearLeft.Enabled = year > MinYear";
+_btnyearleft.setEnabled(_year>_minyear);
+ //BA.debugLineNum = 61;BA.debugLine="btnYearRight.Enabled = year < MaxYear";
+_btnyearright.setEnabled(_year<_maxyear);
+ //BA.debugLineNum = 62;BA.debugLine="cvs.ClearRect(cvs.TargetRect)";
+_cvs.ClearRect(_cvs.getTargetRect());
+ //BA.debugLineNum = 63;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect)";
+_cvsbackground.ClearRect(_cvsbackground.getTargetRect());
+ //BA.debugLineNum = 64;BA.debugLine="Dim firstDayOfMonth As Long = DateUtils.setDate(y";
+_firstdayofmonth = (long) (_dateutils._setdate(ba,_year,_month,(int) (1))-1);
+ //BA.debugLineNum = 65;BA.debugLine="dayOfWeekOffset = (7 + DateTime.GetDayOfWeek(firs";
+_dayofweekoffset = (int) ((7+__c.DateTime.GetDayOfWeek(_firstdayofmonth)-_firstday)%7);
+ //BA.debugLineNum = 66;BA.debugLine="daysInMonth = DateUtils.NumberOfDaysInMonth(month";
+_daysinmonth = _dateutils._numberofdaysinmonth(ba,_month,_year);
+ //BA.debugLineNum = 67;BA.debugLine="If year = selectedYear And month = selectedMonth";
+if (_year==_selectedyear && _month==_selectedmonth) { 
+ //BA.debugLineNum = 69;BA.debugLine="DrawBox(cvs, SelectedColor, (selectedDay - 1 + d";
+_drawbox(_cvs,_selectedcolor,(int) ((_selectedday-1+_dayofweekoffset)%7),(int) ((_selectedday-1+_dayofweekoffset)/(double)7));
  };
-RDebugUtils.currentLine=6291471;
- //BA.debugLineNum = 6291471;BA.debugLine="Dim daysFont As B4XFont = xui.CreateDefaultBoldFo";
-_daysfont = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreateDefaultBoldFont((float) (14));
-RDebugUtils.currentLine=6291472;
- //BA.debugLineNum = 6291472;BA.debugLine="For day = 1 To daysInMonth";
+ //BA.debugLineNum = 72;BA.debugLine="Dim daysFont As B4XFont = xui.CreateDefaultBoldFo";
+_daysfont = _xui.CreateDefaultBoldFont((float) (14));
+ //BA.debugLineNum = 73;BA.debugLine="For day = 1 To daysInMonth";
 {
 final int step14 = 1;
-final int limit14 = __ref._daysinmonth /*int*/ ;
+final int limit14 = _daysinmonth;
 _day = (int) (1) ;
 for (;_day <= limit14 ;_day = _day + step14 ) {
-RDebugUtils.currentLine=6291473;
- //BA.debugLineNum = 6291473;BA.debugLine="Dim row As Int = (day - 1 + dayOfWeekOffset) / 7";
-_row = (int) ((_day-1+__ref._dayofweekoffset /*int*/ )/(double)7);
-RDebugUtils.currentLine=6291474;
- //BA.debugLineNum = 6291474;BA.debugLine="cvs.DrawText(day, (((dayOfWeekOffset + day - 1)";
-__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .DrawText(ba,BA.NumberToString(_day),(float) ((((__ref._dayofweekoffset /*int*/ +_day-1)%7)+0.5)*__ref._boxw /*float*/ ),(float) ((_row+0.5)*__ref._boxh /*float*/ +__ref._vcorrection /*float*/ ),_daysfont,__ref._daysinmonthcolor /*int*/ ,BA.getEnumFromString(android.graphics.Paint.Align.class,"CENTER"));
+ //BA.debugLineNum = 74;BA.debugLine="Dim row As Int = (day - 1 + dayOfWeekOffset) / 7";
+_row = (int) ((_day-1+_dayofweekoffset)/(double)7);
+ //BA.debugLineNum = 75;BA.debugLine="cvs.DrawText(day, (((dayOfWeekOffset + day - 1)";
+_cvs.DrawText(ba,BA.NumberToString(_day),(float) ((((_dayofweekoffset+_day-1)%7)+0.5)*_boxw),(float) ((_row+0.5)*_boxh+_vcorrection),_daysfont,_daysinmonthcolor,BA.getEnumFromString(android.graphics.Paint.Align.class,"CENTER"));
  }
 };
-RDebugUtils.currentLine=6291477;
- //BA.debugLineNum = 6291477;BA.debugLine="cvsBackground.Invalidate";
-__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .Invalidate();
-RDebugUtils.currentLine=6291478;
- //BA.debugLineNum = 6291478;BA.debugLine="cvs.Invalidate";
-__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Invalidate();
-RDebugUtils.currentLine=6291479;
- //BA.debugLineNum = 6291479;BA.debugLine="End Sub";
+ //BA.debugLineNum = 78;BA.debugLine="cvsBackground.Invalidate";
+_cvsbackground.Invalidate();
+ //BA.debugLineNum = 79;BA.debugLine="cvs.Invalidate";
+_cvs.Invalidate();
+ //BA.debugLineNum = 80;BA.debugLine="End Sub";
 return "";
 }
-public String  _btnyear_click(b4a.example.b4xdatetemplate __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "btnyear_click", true))
-	 {return ((String) Debug.delegate(ba, "btnyear_click", null));}
-anywheresoftware.b4a.objects.B4XViewWrapper _btn = null;
-RDebugUtils.currentLine=6750208;
- //BA.debugLineNum = 6750208;BA.debugLine="Private Sub btnYear_Click";
-RDebugUtils.currentLine=6750209;
- //BA.debugLineNum = 6750209;BA.debugLine="Dim btn As B4XView = Sender";
-_btn = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_btn = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.Sender(ba)));
-RDebugUtils.currentLine=6750210;
- //BA.debugLineNum = 6750210;BA.debugLine="year = year + btn.Tag";
-__ref._year /*int*/  = (int) (__ref._year /*int*/ +(double)(BA.ObjectToNumber(_btn.getTag())));
-RDebugUtils.currentLine=6750211;
- //BA.debugLineNum = 6750211;BA.debugLine="DrawDays";
-__ref._drawdays /*String*/ (null);
-RDebugUtils.currentLine=6750212;
- //BA.debugLineNum = 6750212;BA.debugLine="End Sub";
-return "";
+public long  _getdate() throws Exception{
+ //BA.debugLineNum = 89;BA.debugLine="Public Sub getDate As Long";
+ //BA.debugLineNum = 90;BA.debugLine="Return selectedDate";
+if (true) return _selecteddate;
+ //BA.debugLineNum = 91;BA.debugLine="End Sub";
+return 0L;
 }
-public String  _class_globals(b4a.example.b4xdatetemplate __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-RDebugUtils.currentLine=6160384;
- //BA.debugLineNum = 6160384;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=6160385;
- //BA.debugLineNum = 6160385;BA.debugLine="Private xui As XUI";
-_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=6160386;
- //BA.debugLineNum = 6160386;BA.debugLine="Private month, year As Int";
-_month = 0;
-_year = 0;
-RDebugUtils.currentLine=6160387;
- //BA.debugLineNum = 6160387;BA.debugLine="Private boxW, boxH As Float";
-_boxw = 0f;
-_boxh = 0f;
-RDebugUtils.currentLine=6160388;
- //BA.debugLineNum = 6160388;BA.debugLine="Private vCorrection As Float";
-_vcorrection = 0f;
-RDebugUtils.currentLine=6160389;
- //BA.debugLineNum = 6160389;BA.debugLine="Private tempSelectedDay As Int";
-_tempselectedday = 0;
-RDebugUtils.currentLine=6160390;
- //BA.debugLineNum = 6160390;BA.debugLine="Private dayOfWeekOffset As Int";
-_dayofweekoffset = 0;
-RDebugUtils.currentLine=6160391;
- //BA.debugLineNum = 6160391;BA.debugLine="Private daysInMonth As Int";
-_daysinmonth = 0;
-RDebugUtils.currentLine=6160392;
- //BA.debugLineNum = 6160392;BA.debugLine="Private DaysPaneBg As B4XView";
-_dayspanebg = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160393;
- //BA.debugLineNum = 6160393;BA.debugLine="Private DaysPaneFg As B4XView";
-_dayspanefg = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160394;
- //BA.debugLineNum = 6160394;BA.debugLine="Private cvs As B4XCanvas";
-_cvs = new anywheresoftware.b4a.objects.B4XCanvas();
-RDebugUtils.currentLine=6160395;
- //BA.debugLineNum = 6160395;BA.debugLine="Private cvsBackground As B4XCanvas";
-_cvsbackground = new anywheresoftware.b4a.objects.B4XCanvas();
-RDebugUtils.currentLine=6160396;
- //BA.debugLineNum = 6160396;BA.debugLine="Private selectedDate As Long";
-_selecteddate = 0L;
-RDebugUtils.currentLine=6160397;
- //BA.debugLineNum = 6160397;BA.debugLine="Private selectedYear, selectedMonth, selectedDay";
-_selectedyear = 0;
-_selectedmonth = 0;
-_selectedday = 0;
-RDebugUtils.currentLine=6160398;
- //BA.debugLineNum = 6160398;BA.debugLine="Public HighlightedColor As Int = 0xFF001BBD";
-_highlightedcolor = (int) (0xff001bbd);
-RDebugUtils.currentLine=6160399;
- //BA.debugLineNum = 6160399;BA.debugLine="Public SelectedColor As Int = 0xFF0BA29B";
-_selectedcolor = (int) (0xff0ba29b);
-RDebugUtils.currentLine=6160400;
- //BA.debugLineNum = 6160400;BA.debugLine="Public DaysInMonthColor As Int = xui.Color_White";
-_daysinmonthcolor = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .Color_White;
-RDebugUtils.currentLine=6160401;
- //BA.debugLineNum = 6160401;BA.debugLine="Public DaysInWeekColor As Int = xui.Color_Gray";
-_daysinweekcolor = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .Color_Gray;
-RDebugUtils.currentLine=6160402;
- //BA.debugLineNum = 6160402;BA.debugLine="Private cvsDays As B4XCanvas";
-_cvsdays = new anywheresoftware.b4a.objects.B4XCanvas();
-RDebugUtils.currentLine=6160403;
- //BA.debugLineNum = 6160403;BA.debugLine="Private DaysTitlesPane As B4XView";
-_daystitlespane = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160404;
- //BA.debugLineNum = 6160404;BA.debugLine="Public FirstDay As Int = 0";
-_firstday = (int) (0);
-RDebugUtils.currentLine=6160405;
- //BA.debugLineNum = 6160405;BA.debugLine="Public MinYear = 1970, MaxYear = 2030 As Int";
-_minyear = (int) (1970);
-_maxyear = (int) (2030);
-RDebugUtils.currentLine=6160406;
- //BA.debugLineNum = 6160406;BA.debugLine="Public btnMonthLeft As B4XView";
-_btnmonthleft = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160407;
- //BA.debugLineNum = 6160407;BA.debugLine="Public btnMonthRight As B4XView";
-_btnmonthright = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160408;
- //BA.debugLineNum = 6160408;BA.debugLine="Public btnYearLeft As B4XView";
-_btnyearleft = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160409;
- //BA.debugLineNum = 6160409;BA.debugLine="Public btnYearRight As B4XView";
-_btnyearright = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160410;
- //BA.debugLineNum = 6160410;BA.debugLine="Public lblMonth As B4XView";
-_lblmonth = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160411;
- //BA.debugLineNum = 6160411;BA.debugLine="Public lblYear As B4XView";
-_lblyear = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160412;
- //BA.debugLineNum = 6160412;BA.debugLine="Private pnlDialog As B4XView";
-_pnldialog = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=6160413;
- //BA.debugLineNum = 6160413;BA.debugLine="Private months As List";
-_months = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=6160414;
- //BA.debugLineNum = 6160414;BA.debugLine="Private mDialog As B4XDialog";
-_mdialog = new b4a.example.b4xdialog();
-RDebugUtils.currentLine=6160415;
- //BA.debugLineNum = 6160415;BA.debugLine="End Sub";
-return "";
+public anywheresoftware.b4a.objects.B4XViewWrapper  _getpanel(b4a.example.b4xdialog _dialog) throws Exception{
+ //BA.debugLineNum = 159;BA.debugLine="Public Sub GetPanel (Dialog As B4XDialog) As B4XVi";
+ //BA.debugLineNum = 160;BA.debugLine="Return pnlDialog";
+if (true) return _pnldialog;
+ //BA.debugLineNum = 161;BA.debugLine="End Sub";
+return null;
 }
-public String  _dayspanefg_touch(b4a.example.b4xdatetemplate __ref,int _action,float _x,float _y) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "dayspanefg_touch", true))
-	 {return ((String) Debug.delegate(ba, "dayspanefg_touch", new Object[] {_action,_x,_y}));}
-anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
-RDebugUtils.currentLine=6881280;
- //BA.debugLineNum = 6881280;BA.debugLine="Private Sub DaysPaneFg_Touch (Action As Int, X As";
-RDebugUtils.currentLine=6881281;
- //BA.debugLineNum = 6881281;BA.debugLine="Dim p As B4XView = DaysPaneFg";
-_p = new anywheresoftware.b4a.objects.B4XViewWrapper();
-_p = __ref._dayspanefg /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ;
-RDebugUtils.currentLine=6881282;
- //BA.debugLineNum = 6881282;BA.debugLine="HandleMouse(X, Y, Action <> p.TOUCH_ACTION_UP)";
-__ref._handlemouse /*String*/ (null,_x,_y,_action!=_p.TOUCH_ACTION_UP);
-RDebugUtils.currentLine=6881283;
- //BA.debugLineNum = 6881283;BA.debugLine="End Sub";
-return "";
-}
-public String  _handlemouse(b4a.example.b4xdatetemplate __ref,double _x,double _y,boolean _move) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "handlemouse", true))
-	 {return ((String) Debug.delegate(ba, "handlemouse", new Object[] {_x,_y,_move}));}
+public String  _handlemouse(double _x,double _y,boolean _move) throws Exception{
 int _boxx = 0;
 int _boxy = 0;
 int _newselectedday = 0;
 boolean _validday = false;
-RDebugUtils.currentLine=6619136;
- //BA.debugLineNum = 6619136;BA.debugLine="Private Sub HandleMouse(x As Double, y As Double,";
-RDebugUtils.currentLine=6619137;
- //BA.debugLineNum = 6619137;BA.debugLine="Dim boxX = x / boxW, boxY =  y / boxH As Int";
-_boxx = (int) (_x/(double)__ref._boxw /*float*/ );
-_boxy = (int) (_y/(double)__ref._boxh /*float*/ );
-RDebugUtils.currentLine=6619138;
- //BA.debugLineNum = 6619138;BA.debugLine="Dim newSelectedDay As Int = boxY * 7 + boxX + 1 -";
-_newselectedday = (int) (_boxy*7+_boxx+1-__ref._dayofweekoffset /*int*/ );
-RDebugUtils.currentLine=6619139;
- //BA.debugLineNum = 6619139;BA.debugLine="Dim validDay As Boolean = newSelectedDay > 0 And";
-_validday = _newselectedday>0 && _newselectedday<=__ref._daysinmonth /*int*/ ;
-RDebugUtils.currentLine=6619140;
- //BA.debugLineNum = 6619140;BA.debugLine="If move Then";
+ //BA.debugLineNum = 114;BA.debugLine="Private Sub HandleMouse(x As Double, y As Double,";
+ //BA.debugLineNum = 115;BA.debugLine="Dim boxX = x / boxW, boxY =  y / boxH As Int";
+_boxx = (int) (_x/(double)_boxw);
+_boxy = (int) (_y/(double)_boxh);
+ //BA.debugLineNum = 116;BA.debugLine="Dim newSelectedDay As Int = boxY * 7 + boxX + 1 -";
+_newselectedday = (int) (_boxy*7+_boxx+1-_dayofweekoffset);
+ //BA.debugLineNum = 117;BA.debugLine="Dim validDay As Boolean = newSelectedDay > 0 And";
+_validday = _newselectedday>0 && _newselectedday<=_daysinmonth;
+ //BA.debugLineNum = 118;BA.debugLine="If move Then";
 if (_move) { 
-RDebugUtils.currentLine=6619141;
- //BA.debugLineNum = 6619141;BA.debugLine="If newSelectedDay = tempSelectedDay Then Return";
-if (_newselectedday==__ref._tempselectedday /*int*/ ) { 
+ //BA.debugLineNum = 119;BA.debugLine="If newSelectedDay = tempSelectedDay Then Return";
+if (_newselectedday==_tempselectedday) { 
 if (true) return "";};
-RDebugUtils.currentLine=6619142;
- //BA.debugLineNum = 6619142;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect";
-__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .ClearRect(__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect());
-RDebugUtils.currentLine=6619143;
- //BA.debugLineNum = 6619143;BA.debugLine="tempSelectedDay = newSelectedDay";
-__ref._tempselectedday /*int*/  = _newselectedday;
-RDebugUtils.currentLine=6619144;
- //BA.debugLineNum = 6619144;BA.debugLine="If validDay Then";
+ //BA.debugLineNum = 120;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect";
+_cvsbackground.ClearRect(_cvsbackground.getTargetRect());
+ //BA.debugLineNum = 121;BA.debugLine="tempSelectedDay = newSelectedDay";
+_tempselectedday = _newselectedday;
+ //BA.debugLineNum = 122;BA.debugLine="If validDay Then";
 if (_validday) { 
-RDebugUtils.currentLine=6619145;
- //BA.debugLineNum = 6619145;BA.debugLine="DrawBox(cvsBackground, HighlightedColor, boxX,";
-__ref._drawbox /*String*/ (null,__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ ,__ref._highlightedcolor /*int*/ ,_boxx,_boxy);
+ //BA.debugLineNum = 123;BA.debugLine="DrawBox(cvsBackground, HighlightedColor, boxX,";
+_drawbox(_cvsbackground,_highlightedcolor,_boxx,_boxy);
  };
  }else {
-RDebugUtils.currentLine=6619148;
- //BA.debugLineNum = 6619148;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect";
-__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .ClearRect(__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect());
-RDebugUtils.currentLine=6619149;
- //BA.debugLineNum = 6619149;BA.debugLine="If validDay Then";
+ //BA.debugLineNum = 126;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect";
+_cvsbackground.ClearRect(_cvsbackground.getTargetRect());
+ //BA.debugLineNum = 127;BA.debugLine="If validDay Then";
 if (_validday) { 
-RDebugUtils.currentLine=6619150;
- //BA.debugLineNum = 6619150;BA.debugLine="SelectDay(newSelectedDay)";
-__ref._selectday /*String*/ (null,_newselectedday);
-RDebugUtils.currentLine=6619151;
- //BA.debugLineNum = 6619151;BA.debugLine="Hide";
-__ref._hide /*String*/ (null);
+ //BA.debugLineNum = 128;BA.debugLine="SelectDay(newSelectedDay)";
+_selectday(_newselectedday);
+ //BA.debugLineNum = 129;BA.debugLine="Hide";
+_hide();
  };
  };
-RDebugUtils.currentLine=6619155;
- //BA.debugLineNum = 6619155;BA.debugLine="cvsBackground.Invalidate";
-__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .Invalidate();
-RDebugUtils.currentLine=6619156;
- //BA.debugLineNum = 6619156;BA.debugLine="End Sub";
+ //BA.debugLineNum = 133;BA.debugLine="cvsBackground.Invalidate";
+_cvsbackground.Invalidate();
+ //BA.debugLineNum = 134;BA.debugLine="End Sub";
 return "";
 }
-public String  _dialogclosed(b4a.example.b4xdatetemplate __ref,int _result) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "dialogclosed", true))
-	 {return ((String) Debug.delegate(ba, "dialogclosed", new Object[] {_result}));}
-RDebugUtils.currentLine=7077888;
- //BA.debugLineNum = 7077888;BA.debugLine="Private Sub DialogClosed(Result As Int) 'ignore";
-RDebugUtils.currentLine=7077890;
- //BA.debugLineNum = 7077890;BA.debugLine="End Sub";
+public String  _hide() throws Exception{
+ //BA.debugLineNum = 136;BA.debugLine="Private Sub Hide";
+ //BA.debugLineNum = 137;BA.debugLine="mDialog.Close(xui.DialogResponse_Positive)";
+_mdialog._close /*boolean*/ (_xui.DialogResponse_Positive);
+ //BA.debugLineNum = 138;BA.debugLine="End Sub";
 return "";
 }
-public String  _drawbox(b4a.example.b4xdatetemplate __ref,anywheresoftware.b4a.objects.B4XCanvas _c,int _clr,int _x,int _y) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "drawbox", true))
-	 {return ((String) Debug.delegate(ba, "drawbox", new Object[] {_c,_clr,_x,_y}));}
-anywheresoftware.b4a.objects.B4XCanvas.B4XRect _r = null;
-RDebugUtils.currentLine=6356992;
- //BA.debugLineNum = 6356992;BA.debugLine="Private Sub DrawBox(c As B4XCanvas, clr As Int, x";
-RDebugUtils.currentLine=6356993;
- //BA.debugLineNum = 6356993;BA.debugLine="Dim r As B4XRect";
-_r = new anywheresoftware.b4a.objects.B4XCanvas.B4XRect();
-RDebugUtils.currentLine=6356994;
- //BA.debugLineNum = 6356994;BA.debugLine="r.Initialize(x * boxW, y * boxH, x * boxW + boxW,";
-_r.Initialize((float) (_x*__ref._boxw /*float*/ ),(float) (_y*__ref._boxh /*float*/ ),(float) (_x*__ref._boxw /*float*/ +__ref._boxw /*float*/ ),(float) (_y*__ref._boxh /*float*/ +__ref._boxh /*float*/ ));
-RDebugUtils.currentLine=6356995;
- //BA.debugLineNum = 6356995;BA.debugLine="c.DrawRect(r, clr, True, 1dip)";
-_c.DrawRect(_r,_clr,__c.True,(float) (__c.DipToCurrent((int) (1))));
-RDebugUtils.currentLine=6356996;
- //BA.debugLineNum = 6356996;BA.debugLine="End Sub";
-return "";
-}
-public long  _getdate(b4a.example.b4xdatetemplate __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "getdate", true))
-	 {return ((Long) Debug.delegate(ba, "getdate", null));}
-RDebugUtils.currentLine=6422528;
- //BA.debugLineNum = 6422528;BA.debugLine="Public Sub getDate As Long";
-RDebugUtils.currentLine=6422529;
- //BA.debugLineNum = 6422529;BA.debugLine="Return selectedDate";
-if (true) return __ref._selecteddate /*long*/ ;
-RDebugUtils.currentLine=6422530;
- //BA.debugLineNum = 6422530;BA.debugLine="End Sub";
-return 0L;
-}
-public anywheresoftware.b4a.objects.B4XViewWrapper  _getpanel(b4a.example.b4xdatetemplate __ref,b4a.example.b4xdialog _dialog) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "getpanel", true))
-	 {return ((anywheresoftware.b4a.objects.B4XViewWrapper) Debug.delegate(ba, "getpanel", new Object[] {_dialog}));}
-RDebugUtils.currentLine=6946816;
- //BA.debugLineNum = 6946816;BA.debugLine="Public Sub GetPanel (Dialog As B4XDialog) As B4XVi";
-RDebugUtils.currentLine=6946817;
- //BA.debugLineNum = 6946817;BA.debugLine="Return pnlDialog";
-if (true) return __ref._pnldialog /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ;
-RDebugUtils.currentLine=6946818;
- //BA.debugLineNum = 6946818;BA.debugLine="End Sub";
-return null;
-}
-public String  _selectday(b4a.example.b4xdatetemplate __ref,int _day) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "selectday", true))
-	 {return ((String) Debug.delegate(ba, "selectday", new Object[] {_day}));}
-RDebugUtils.currentLine=6553600;
- //BA.debugLineNum = 6553600;BA.debugLine="Private Sub SelectDay(day As Int)";
-RDebugUtils.currentLine=6553601;
- //BA.debugLineNum = 6553601;BA.debugLine="selectedDate = DateUtils.setDate(year, month, day";
-__ref._selecteddate /*long*/  = _dateutils._setdate(ba,__ref._year /*int*/ ,__ref._month /*int*/ ,_day);
-RDebugUtils.currentLine=6553602;
- //BA.debugLineNum = 6553602;BA.debugLine="selectedDay = day";
-__ref._selectedday /*int*/  = _day;
-RDebugUtils.currentLine=6553603;
- //BA.debugLineNum = 6553603;BA.debugLine="selectedMonth = month";
-__ref._selectedmonth /*int*/  = __ref._month /*int*/ ;
-RDebugUtils.currentLine=6553604;
- //BA.debugLineNum = 6553604;BA.debugLine="selectedYear = year";
-__ref._selectedyear /*int*/  = __ref._year /*int*/ ;
-RDebugUtils.currentLine=6553605;
- //BA.debugLineNum = 6553605;BA.debugLine="End Sub";
-return "";
-}
-public String  _hide(b4a.example.b4xdatetemplate __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "hide", true))
-	 {return ((String) Debug.delegate(ba, "hide", null));}
-RDebugUtils.currentLine=6684672;
- //BA.debugLineNum = 6684672;BA.debugLine="Private Sub Hide";
-RDebugUtils.currentLine=6684673;
- //BA.debugLineNum = 6684673;BA.debugLine="mDialog.Close(xui.DialogResponse_Positive)";
-__ref._mdialog /*b4a.example.b4xdialog*/ ._close /*boolean*/ (null,__ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .DialogResponse_Positive);
-RDebugUtils.currentLine=6684674;
- //BA.debugLineNum = 6684674;BA.debugLine="End Sub";
-return "";
-}
-public String  _initialize(b4a.example.b4xdatetemplate __ref,anywheresoftware.b4a.BA _ba) throws Exception{
-__ref = this;
+public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
 innerInitialize(_ba);
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "initialize", true))
-	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=6225920;
- //BA.debugLineNum = 6225920;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=6225921;
- //BA.debugLineNum = 6225921;BA.debugLine="pnlDialog = xui.CreatePanel(\"\")";
-__ref._pnldialog /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreatePanel(ba,"");
-RDebugUtils.currentLine=6225922;
- //BA.debugLineNum = 6225922;BA.debugLine="pnlDialog.SetLayoutAnimated(0, 0, 0, 320dip,300di";
-__ref._pnldialog /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),__c.DipToCurrent((int) (320)),__c.DipToCurrent((int) (300)));
-RDebugUtils.currentLine=6225923;
- //BA.debugLineNum = 6225923;BA.debugLine="pnlDialog.LoadLayout(\"DateTemplate\")";
-__ref._pnldialog /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .LoadLayout("DateTemplate",ba);
-RDebugUtils.currentLine=6225924;
- //BA.debugLineNum = 6225924;BA.debugLine="pnlDialog.Tag = Me";
-__ref._pnldialog /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag(this);
-RDebugUtils.currentLine=6225925;
- //BA.debugLineNum = 6225925;BA.debugLine="month = DateTime.GetMonth(DateTime.Now)";
-__ref._month /*int*/  = __c.DateTime.GetMonth(__c.DateTime.getNow());
-RDebugUtils.currentLine=6225926;
- //BA.debugLineNum = 6225926;BA.debugLine="year = DateTime.GetYear(DateTime.Now)";
-__ref._year /*int*/  = __c.DateTime.GetYear(__c.DateTime.getNow());
-RDebugUtils.currentLine=6225927;
- //BA.debugLineNum = 6225927;BA.debugLine="months = DateUtils.GetMonthsNames";
-__ref._months /*anywheresoftware.b4a.objects.collections.List*/  = _dateutils._getmonthsnames(ba);
-RDebugUtils.currentLine=6225928;
- //BA.debugLineNum = 6225928;BA.debugLine="selectedDate = DateTime.Now";
-__ref._selecteddate /*long*/  = __c.DateTime.getNow();
-RDebugUtils.currentLine=6225929;
- //BA.debugLineNum = 6225929;BA.debugLine="setDate(selectedDate)";
-__ref._setdate /*String*/ (null,__ref._selecteddate /*long*/ );
-RDebugUtils.currentLine=6225930;
- //BA.debugLineNum = 6225930;BA.debugLine="cvs.Initialize(DaysPaneFg)";
-__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Initialize(__ref._dayspanefg /*anywheresoftware.b4a.objects.B4XViewWrapper*/ );
-RDebugUtils.currentLine=6225931;
- //BA.debugLineNum = 6225931;BA.debugLine="cvsBackground.Initialize(DaysPaneBg)";
-__ref._cvsbackground /*anywheresoftware.b4a.objects.B4XCanvas*/ .Initialize(__ref._dayspanebg /*anywheresoftware.b4a.objects.B4XViewWrapper*/ );
-RDebugUtils.currentLine=6225932;
- //BA.debugLineNum = 6225932;BA.debugLine="boxW = cvs.TargetRect.Width / 7";
-__ref._boxw /*float*/  = (float) (__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect().getWidth()/(double)7);
-RDebugUtils.currentLine=6225933;
- //BA.debugLineNum = 6225933;BA.debugLine="boxH = cvs.TargetRect.Height / 6";
-__ref._boxh /*float*/  = (float) (__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect().getHeight()/(double)6);
-RDebugUtils.currentLine=6225934;
- //BA.debugLineNum = 6225934;BA.debugLine="vCorrection = 5dip";
-__ref._vcorrection /*float*/  = (float) (__c.DipToCurrent((int) (5)));
-RDebugUtils.currentLine=6225935;
- //BA.debugLineNum = 6225935;BA.debugLine="cvsDays.Initialize(DaysTitlesPane)";
-__ref._cvsdays /*anywheresoftware.b4a.objects.B4XCanvas*/ .Initialize(__ref._daystitlespane /*anywheresoftware.b4a.objects.B4XViewWrapper*/ );
-RDebugUtils.currentLine=6225941;
- //BA.debugLineNum = 6225941;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="Public Sub Initialize";
+ //BA.debugLineNum = 35;BA.debugLine="pnlDialog = xui.CreatePanel(\"\")";
+_pnldialog = _xui.CreatePanel(ba,"");
+ //BA.debugLineNum = 36;BA.debugLine="pnlDialog.SetLayoutAnimated(0, 0, 0, 320dip,300di";
+_pnldialog.SetLayoutAnimated((int) (0),(int) (0),(int) (0),__c.DipToCurrent((int) (320)),__c.DipToCurrent((int) (300)));
+ //BA.debugLineNum = 37;BA.debugLine="pnlDialog.LoadLayout(\"DateTemplate\")";
+_pnldialog.LoadLayout("DateTemplate",ba);
+ //BA.debugLineNum = 38;BA.debugLine="pnlDialog.Tag = Me";
+_pnldialog.setTag(this);
+ //BA.debugLineNum = 39;BA.debugLine="month = DateTime.GetMonth(DateTime.Now)";
+_month = __c.DateTime.GetMonth(__c.DateTime.getNow());
+ //BA.debugLineNum = 40;BA.debugLine="year = DateTime.GetYear(DateTime.Now)";
+_year = __c.DateTime.GetYear(__c.DateTime.getNow());
+ //BA.debugLineNum = 41;BA.debugLine="months = DateUtils.GetMonthsNames";
+_months = _dateutils._getmonthsnames(ba);
+ //BA.debugLineNum = 42;BA.debugLine="selectedDate = DateTime.Now";
+_selecteddate = __c.DateTime.getNow();
+ //BA.debugLineNum = 43;BA.debugLine="setDate(selectedDate)";
+_setdate(_selecteddate);
+ //BA.debugLineNum = 44;BA.debugLine="cvs.Initialize(DaysPaneFg)";
+_cvs.Initialize(_dayspanefg);
+ //BA.debugLineNum = 45;BA.debugLine="cvsBackground.Initialize(DaysPaneBg)";
+_cvsbackground.Initialize(_dayspanebg);
+ //BA.debugLineNum = 46;BA.debugLine="boxW = cvs.TargetRect.Width / 7";
+_boxw = (float) (_cvs.getTargetRect().getWidth()/(double)7);
+ //BA.debugLineNum = 47;BA.debugLine="boxH = cvs.TargetRect.Height / 6";
+_boxh = (float) (_cvs.getTargetRect().getHeight()/(double)6);
+ //BA.debugLineNum = 48;BA.debugLine="vCorrection = 5dip";
+_vcorrection = (float) (__c.DipToCurrent((int) (5)));
+ //BA.debugLineNum = 49;BA.debugLine="cvsDays.Initialize(DaysTitlesPane)";
+_cvsdays.Initialize(_daystitlespane);
+ //BA.debugLineNum = 55;BA.debugLine="End Sub";
 return "";
 }
-public String  _setdate(b4a.example.b4xdatetemplate __ref,long _date) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "setdate", true))
-	 {return ((String) Debug.delegate(ba, "setdate", new Object[] {_date}));}
-RDebugUtils.currentLine=6488064;
- //BA.debugLineNum = 6488064;BA.debugLine="Public Sub setDate(date As Long)";
-RDebugUtils.currentLine=6488066;
- //BA.debugLineNum = 6488066;BA.debugLine="If lblYear.IsInitialized = False Then";
-if (__ref._lblyear /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .IsInitialized()==__c.False) { 
-RDebugUtils.currentLine=6488067;
- //BA.debugLineNum = 6488067;BA.debugLine="selectedDate = date";
-__ref._selecteddate /*long*/  = _date;
-RDebugUtils.currentLine=6488068;
- //BA.debugLineNum = 6488068;BA.debugLine="Return 'the date will be set after the layout is";
+public String  _selectday(int _day) throws Exception{
+ //BA.debugLineNum = 106;BA.debugLine="Private Sub SelectDay(day As Int)";
+ //BA.debugLineNum = 107;BA.debugLine="selectedDate = DateUtils.setDate(year, month, day";
+_selecteddate = _dateutils._setdate(ba,_year,_month,_day);
+ //BA.debugLineNum = 108;BA.debugLine="selectedDay = day";
+_selectedday = _day;
+ //BA.debugLineNum = 109;BA.debugLine="selectedMonth = month";
+_selectedmonth = _month;
+ //BA.debugLineNum = 110;BA.debugLine="selectedYear = year";
+_selectedyear = _year;
+ //BA.debugLineNum = 111;BA.debugLine="End Sub";
+return "";
+}
+public String  _setdate(long _date) throws Exception{
+ //BA.debugLineNum = 93;BA.debugLine="Public Sub setDate(date As Long)";
+ //BA.debugLineNum = 95;BA.debugLine="If lblYear.IsInitialized = False Then";
+if (_lblyear.IsInitialized()==__c.False) { 
+ //BA.debugLineNum = 96;BA.debugLine="selectedDate = date";
+_selecteddate = _date;
+ //BA.debugLineNum = 97;BA.debugLine="Return 'the date will be set after the layout is";
 if (true) return "";
  };
-RDebugUtils.currentLine=6488070;
- //BA.debugLineNum = 6488070;BA.debugLine="year = DateTime.GetYear(date)";
-__ref._year /*int*/  = __c.DateTime.GetYear(_date);
-RDebugUtils.currentLine=6488071;
- //BA.debugLineNum = 6488071;BA.debugLine="month = DateTime.GetMonth(date)";
-__ref._month /*int*/  = __c.DateTime.GetMonth(_date);
-RDebugUtils.currentLine=6488072;
- //BA.debugLineNum = 6488072;BA.debugLine="SelectDay(DateTime.GetDayOfMonth(date))";
-__ref._selectday /*String*/ (null,__c.DateTime.GetDayOfMonth(_date));
-RDebugUtils.currentLine=6488073;
- //BA.debugLineNum = 6488073;BA.debugLine="lblYear.Text = year";
-__ref._lblyear /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence(__ref._year /*int*/ ));
-RDebugUtils.currentLine=6488074;
- //BA.debugLineNum = 6488074;BA.debugLine="lblMonth.Text = months.Get(month - 1)";
-__ref._lblmonth /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence(__ref._months /*anywheresoftware.b4a.objects.collections.List*/ .Get((int) (__ref._month /*int*/ -1))));
-RDebugUtils.currentLine=6488075;
- //BA.debugLineNum = 6488075;BA.debugLine="End Sub";
+ //BA.debugLineNum = 99;BA.debugLine="year = DateTime.GetYear(date)";
+_year = __c.DateTime.GetYear(_date);
+ //BA.debugLineNum = 100;BA.debugLine="month = DateTime.GetMonth(date)";
+_month = __c.DateTime.GetMonth(_date);
+ //BA.debugLineNum = 101;BA.debugLine="SelectDay(DateTime.GetDayOfMonth(date))";
+_selectday(__c.DateTime.GetDayOfMonth(_date));
+ //BA.debugLineNum = 102;BA.debugLine="lblYear.Text = year";
+_lblyear.setText(BA.ObjectToCharSequence(_year));
+ //BA.debugLineNum = 103;BA.debugLine="lblMonth.Text = months.Get(month - 1)";
+_lblmonth.setText(BA.ObjectToCharSequence(_months.Get((int) (_month-1))));
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
-public String  _show(b4a.example.b4xdatetemplate __ref,b4a.example.b4xdialog _dialog) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="b4xdatetemplate";
-if (Debug.shouldDelegate(ba, "show", true))
-	 {return ((String) Debug.delegate(ba, "show", new Object[] {_dialog}));}
+public String  _show(b4a.example.b4xdialog _dialog) throws Exception{
 anywheresoftware.b4a.objects.collections.List _days = null;
 anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont _daysfont = null;
 int _i = 0;
 String _d = "";
-RDebugUtils.currentLine=7012352;
- //BA.debugLineNum = 7012352;BA.debugLine="Private Sub Show (Dialog As B4XDialog)";
-RDebugUtils.currentLine=7012353;
- //BA.debugLineNum = 7012353;BA.debugLine="Dim days As List = DateUtils.GetDaysNames";
+ //BA.debugLineNum = 163;BA.debugLine="Private Sub Show (Dialog As B4XDialog)";
+ //BA.debugLineNum = 164;BA.debugLine="Dim days As List = DateUtils.GetDaysNames";
 _days = new anywheresoftware.b4a.objects.collections.List();
 _days = _dateutils._getdaysnames(ba);
-RDebugUtils.currentLine=7012354;
- //BA.debugLineNum = 7012354;BA.debugLine="Dim daysFont As B4XFont = xui.CreateDefaultBoldFo";
-_daysfont = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreateDefaultBoldFont((float) (14));
-RDebugUtils.currentLine=7012355;
- //BA.debugLineNum = 7012355;BA.debugLine="cvsDays.ClearRect(cvsDays.TargetRect)";
-__ref._cvsdays /*anywheresoftware.b4a.objects.B4XCanvas*/ .ClearRect(__ref._cvsdays /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect());
-RDebugUtils.currentLine=7012356;
- //BA.debugLineNum = 7012356;BA.debugLine="For i = FirstDay To FirstDay + 7 - 1";
+ //BA.debugLineNum = 165;BA.debugLine="Dim daysFont As B4XFont = xui.CreateDefaultBoldFo";
+_daysfont = _xui.CreateDefaultBoldFont((float) (14));
+ //BA.debugLineNum = 166;BA.debugLine="cvsDays.ClearRect(cvsDays.TargetRect)";
+_cvsdays.ClearRect(_cvsdays.getTargetRect());
+ //BA.debugLineNum = 167;BA.debugLine="For i = FirstDay To FirstDay + 7 - 1";
 {
 final int step4 = 1;
-final int limit4 = (int) (__ref._firstday /*int*/ +7-1);
-_i = __ref._firstday /*int*/  ;
+final int limit4 = (int) (_firstday+7-1);
+_i = _firstday ;
 for (;_i <= limit4 ;_i = _i + step4 ) {
-RDebugUtils.currentLine=7012357;
- //BA.debugLineNum = 7012357;BA.debugLine="Dim d As String = days.Get(i Mod 7)";
+ //BA.debugLineNum = 168;BA.debugLine="Dim d As String = days.Get(i Mod 7)";
 _d = BA.ObjectToString(_days.Get((int) (_i%7)));
-RDebugUtils.currentLine=7012358;
- //BA.debugLineNum = 7012358;BA.debugLine="cvsDays.DrawText(d.SubString2(0, 2), (i - FirstD";
-__ref._cvsdays /*anywheresoftware.b4a.objects.B4XCanvas*/ .DrawText(ba,_d.substring((int) (0),(int) (2)),(float) ((_i-__ref._firstday /*int*/ +0.5)*__ref._boxw /*float*/ ),(float) (__c.DipToCurrent((int) (20))),_daysfont,__ref._daysinweekcolor /*int*/ ,BA.getEnumFromString(android.graphics.Paint.Align.class,"CENTER"));
+ //BA.debugLineNum = 169;BA.debugLine="cvsDays.DrawText(d.SubString2(0, 2), (i - FirstD";
+_cvsdays.DrawText(ba,_d.substring((int) (0),(int) (2)),(float) ((_i-_firstday+0.5)*_boxw),(float) (__c.DipToCurrent((int) (20))),_daysfont,_daysinweekcolor,BA.getEnumFromString(android.graphics.Paint.Align.class,"CENTER"));
  }
 };
-RDebugUtils.currentLine=7012360;
- //BA.debugLineNum = 7012360;BA.debugLine="cvsDays.Invalidate";
-__ref._cvsdays /*anywheresoftware.b4a.objects.B4XCanvas*/ .Invalidate();
-RDebugUtils.currentLine=7012361;
- //BA.debugLineNum = 7012361;BA.debugLine="mDialog = Dialog";
-__ref._mdialog /*b4a.example.b4xdialog*/  = _dialog;
-RDebugUtils.currentLine=7012362;
- //BA.debugLineNum = 7012362;BA.debugLine="DrawDays";
-__ref._drawdays /*String*/ (null);
-RDebugUtils.currentLine=7012363;
- //BA.debugLineNum = 7012363;BA.debugLine="End Sub";
+ //BA.debugLineNum = 171;BA.debugLine="cvsDays.Invalidate";
+_cvsdays.Invalidate();
+ //BA.debugLineNum = 172;BA.debugLine="mDialog = Dialog";
+_mdialog = _dialog;
+ //BA.debugLineNum = 173;BA.debugLine="DrawDays";
+_drawdays();
+ //BA.debugLineNum = 174;BA.debugLine="End Sub";
 return "";
+}
+public Object callSub(String sub, Object sender, Object[] args) throws Exception {
+BA.senderHolder.set(sender);
+if (BA.fastSubCompare(sub, "DIALOGCLOSED"))
+	return _dialogclosed(((Number)args[0]).intValue());
+if (BA.fastSubCompare(sub, "GETPANEL"))
+	return _getpanel((b4a.example.b4xdialog) args[0]);
+if (BA.fastSubCompare(sub, "SHOW"))
+	return _show((b4a.example.b4xdialog) args[0]);
+return BA.SubDelegator.SubNotFound;
 }
 }

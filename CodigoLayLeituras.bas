@@ -259,7 +259,6 @@ Sub TabStrip_PageSelected (Position As Int)
 	
 End Sub
 
-<<<<<<< Updated upstream
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
 	
 	If KeyCode = KeyCodes.KEYCODE_BACK Then
@@ -300,16 +299,3 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 '		Return True
 '	End If		
 End Sub
-=======
-Sub Activity_KeyPress (KeyCode As Int) As ResumableSub 'Return True to consume the event
-    Dim resp As Object = Msgbox2Async("Deseja realmente sair?","Já vai?", "Sim",Null, "Não",Null, True)
-	
-	Wait For (resp) MsgBox_Result (Result As Int)
-	
-	If Result = DialogResponse.POSITIVE Then
-		ExitApplication
-		Return True
-	End If
-	Return False
-End Sub
->>>>>>> Stashed changes

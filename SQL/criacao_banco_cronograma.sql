@@ -74,6 +74,8 @@ begin
 end
 go
 
+use cronograma
+
 create table anotacao(
 
 	id						int				identity(1,1)		primary key,

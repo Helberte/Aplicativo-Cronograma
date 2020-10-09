@@ -64,12 +64,12 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	
+	StartActivity(CodigoLayLogin)
+	Activity.Finish
 End Sub
 
 Sub Activity_Resume
-	StartActivity(CodigoLayLogin)
-	Activity.Finish
+	
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
