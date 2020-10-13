@@ -458,6 +458,7 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.phone.Phone.ContentChooser _fotos = null;
 public static int _id_do_usuario = 0;
+public static boolean _cadastroualgo = false;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.codigocadastro _codigocadastro = null;
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;

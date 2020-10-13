@@ -25,7 +25,8 @@ Sub Globals
 	Dim gradient As GradientDrawable
 	Dim panelNenhumaLeitura As Panel
 	Dim cores(2) As Int
-		
+	Dim tamanhoLista As Int	
+	
 	Private btAdicionarLeitura As Button
 		
 	Private Panel_lendo As Panel
@@ -66,15 +67,13 @@ End Sub
 
 Sub Activity_Resume
 	
-	If CodigoCadastroLivro.cadastrou Or CodigoCadastro.cadastrouUsuario Then
+	If Main.CadastrouAlgo Then
 		Wait For (Atualiza_leituras) Complete (Success As Boolean)
-		
-		CodigoCadastro.cadastrouUsuario = False
-		CodigoCadastroLivro.cadastrou = False
-		If Success = False Then
-			
+	
+		Main.CadastrouAlgo = False
+		If Success = False Then			
 			ToastMessageShow("Impossível carregar leituras",True)
-			CodigoCadastroLivro.cadastrou = True
+			Main.CadastrouAlgo = True
 		End If		
 	End If	
 End Sub
@@ -209,17 +208,19 @@ Sub Atualiza_leituras As ResumableSub
 					'https://www.b4x.com/android/forum/threads/text-files.6690/
 					'https://www.b4x.com/android/help/files.html#file
 					
-					listaInformacoes.Add("'" & Result.GetString("nome") & _
-										 "|¨'" & Result.GetInt("quantidade_paginas") & _
-										 "|¨'" & Result.GetInt("fk_id_Livro") & _
-										 "|¨'" & Result.GetString("usuarioNome") & _
-										 "|¨'" & Result.GetString("tipo_de_leitura") & _
-										 "|¨~'" & Result.GetString("nome") & _
-										 "|¨'" & Result.GetString("usuarioNome") & _
-										 "|¨'" & Result.GetString("paginas_ou_cap_lidos") & _
-										 "|¨'" & Result.GetInt("quantidade_paginas") &"|")											
-										
-					
+					listaInformacoes.Add("'" & Result.GetString("nome") & _						'0
+										 "|¨'" & Result.GetInt("quantidade_paginas") & _		'1
+										 "|¨'" & Result.GetInt("fk_id_Livro") & _				'2
+										 "|¨'" & Result.GetString("usuarioNome") & _			'3
+										 "|¨'" & Result.GetString("tipo_de_leitura") & _		'4
+										 "|¨'" & Result.GetString("paginas_ou_cap_lidos") & _	'5
+										 "|¨'" & Result.GetString("meta") & "|")				'6				
+							
+					tamanhoLista = 7
+					' ' - começo
+					' | - final
+					' ¨ - corte
+				
 					btAnotar(i).Text = "Anotar"
 					btAnotar(i).TextSize = 16
 					btAnotar(i).TextColor = Colors.RGB(244,0,0)
@@ -233,13 +234,12 @@ Sub Atualiza_leituras As ResumableSub
 					btLancar(i).TextColor = Colors.RGB(244,0,0)
 					btLancar(i).Color = Colors.Transparent
 					panels(i).AddView(btLancar(i), 35%x, topoLabel, 30%x, 6.5%y)
-											
-					
+									
 					topo = topo + 25%y + 10dip
 					
 					Result.NextRow
 				Next		
-				File.WriteList(File.DirInternal, nomeArquivo, listaInformacoes)
+				File.WriteList(File.DirDefaultExternal, nomeArquivo, listaInformacoes)
 					
 				scrollView1.Panel.Height = topo
 			End If	
@@ -254,7 +254,6 @@ Sub Atualiza_leituras As ResumableSub
 	End Try	
 End Sub
 
-
 Sub Event_btAnotar_Click
 		
 	Dim b As Button = Sender
@@ -266,33 +265,35 @@ Sub Event_btAnotar_Click
 	
 	Dim lista As List
 	lista.Initialize
-
-	If File.Exists(File.DirInternal, nomeArquivo) Then
-		
-		lista = File.ReadList(File.DirInternal, nomeArquivo)
-		
+	
+	Try
+		lista = File.ReadList(File.DirDefaultExternal, nomeArquivo)
 		informacoes = lista.Get(b.Tag)
 		
-		nomeLivro 	= informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		Dim cols(tamanhoLista), coluna As String
 		
-		qtPag 		= informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+		For i = 0 To cols.Length - 1
+			
+			coluna 	= informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+			informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+			
+			cols(i) = coluna
+		Next
 		
-		codigoLivro = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)	
-		
-		tipoLeitura = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		nomeLivro = cols(0)
+		qtPag = cols(1)
+		codigoLivro = cols(2)
+		tipoLeitura = cols(4)
 		
 		CodigoLayAnotacao.codigoLivro = codigoLivro
-		CodigoLayAnotacao.qtPaginas = qtPag
+		CodigoLayAnotacao.qtPaginas   =	qtPag
 		CodigoLayAnotacao.nomeDoLivro = nomeLivro
 		CodigoLayAnotacao.tipoLeitura = tipoLeitura
 		
 		StartActivity(CodigoLayAnotacao)
-	Else
+	Catch
 		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)
-	End If	
+	End Try
 End Sub
 
 Sub Event_btLancar_Click
@@ -301,43 +302,55 @@ Sub Event_btLancar_Click
 	Dim nomeUsuario As 		String
 	Dim paginasAtuais As 	String
 	Dim totalPaginas As 	String
+	Dim meta As 			String
+	Dim idLivro As 			String
+	Dim tipoLeitura As 		String
 	
 	Dim b As Button = Sender
-	Dim informacoes As String
 
 	Dim lista As List
 	lista.Initialize
-	
-	If File.Exists(File.DirInternal, nomeArquivo) Then
 		
-		lista = File.ReadList(File.DirInternal, nomeArquivo)		
+	Try		
+		Dim colunaValor, valorSalvo, col As String
 		
-		informacoes = lista.Get(b.Tag)
+		lista = File.ReadList(File.DirDefaultExternal, nomeArquivo)
+			
+		colunaValor = lista.Get(b.Tag)
+		Dim testeArray(tamanhoLista) As	String
 		
-		informacoes = informacoes.SubString2(informacoes.IndexOf("~") +1, informacoes.Length)
+					
+		For coluna = 0 To testeArray.Length - 1
+				
+			col = colunaValor.SubString2(colunaValor.IndexOf("'") + 1, colunaValor.IndexOf("|"))
+			valorSalvo = colunaValor.SubString2(colunaValor.IndexOf("¨") + 1, colunaValor.Length)
+					
+			testeArray(coluna) = col
+			colunaValor = valorSalvo
+					
+		Next
 		
-		tituloLivro = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
-		
-		nomeUsuario = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
-		
-		paginasAtuais = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
-		informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
-		
-		totalPaginas = informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+		tituloLivro = testeArray(0)
+		nomeUsuario = testeArray(3)
+		paginasAtuais = testeArray(5)
+		totalPaginas = testeArray(1)
+		meta = testeArray(6)
+		idLivro = testeArray(2)
+		tipoLeitura = testeArray(4)
 		
 		CodigoLancamentoLeitura.nomeUsuario = nomeUsuario
 		CodigoLancamentoLeitura.paginaAtual = paginasAtuais
 		CodigoLancamentoLeitura.tituloLivro = tituloLivro
 		CodigoLancamentoLeitura.totalPaginas = totalPaginas
+		CodigoLancamentoLeitura.meta = meta
+		CodigoLancamentoLeitura.idLivro = idLivro
+		CodigoLancamentoLeitura.tipoLeitura = tipoLeitura
 		
 		StartActivity(CodigoLancamentoLeitura)
+	Catch
 		
-	Else
-		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)		
-	End If
-		
+		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)
+	End Try
 End Sub
 
 Sub btAdicionarLeitura_Click	

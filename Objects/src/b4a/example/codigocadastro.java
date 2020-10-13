@@ -345,7 +345,6 @@ public static void initializeProcessGlobals() {
             }
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
-public static boolean _cadastrouusuario = false;
 public static boolean _mostrarsenha = false;
 public anywheresoftware.b4a.objects.EditTextWrapper _ednome = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _edlogin = null;
@@ -624,8 +623,8 @@ case 22:
 //C
 this.state = 27;
 RDebugUtils.currentLine=917542;
- //BA.debugLineNum = 917542;BA.debugLine="cadastrouUsuario = False";
-parent._cadastrouusuario = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 917542;BA.debugLine="Main.CadastrouAlgo = False";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
 RDebugUtils.currentLine=917543;
  //BA.debugLineNum = 917543;BA.debugLine="MsgboxAsync(\"Problemas na conexão com banco d";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas na conexão com banco de dados. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
@@ -635,8 +634,8 @@ case 24:
 //C
 this.state = 27;
 RDebugUtils.currentLine=917546;
- //BA.debugLineNum = 917546;BA.debugLine="cadastrouUsuario = False";
-parent._cadastrouusuario = anywheresoftware.b4a.keywords.Common.False;
+ //BA.debugLineNum = 917546;BA.debugLine="Main.CadastrouAlgo = False";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
 RDebugUtils.currentLine=917547;
  //BA.debugLineNum = 917547;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"Op";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!"),processBA);
@@ -688,8 +687,8 @@ RDebugUtils.currentLine=917566;
  //BA.debugLineNum = 917566;BA.debugLine="lblCadSalvo.Text = Result.GetString(\"MENSAGEM";
 parent.mostCurrent._lblcadsalvo.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
 RDebugUtils.currentLine=917568;
- //BA.debugLineNum = 917568;BA.debugLine="cadastrouUsuario = True";
-parent._cadastrouusuario = anywheresoftware.b4a.keywords.Common.True;
+ //BA.debugLineNum = 917568;BA.debugLine="Main.CadastrouAlgo = True";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
 RDebugUtils.currentLine=917569;
  //BA.debugLineNum = 917569;BA.debugLine="Sleep(1200)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastro", "btsalvar_click"),(int) (1200));
@@ -811,27 +810,27 @@ RDebugUtils.currentLine=1179650;
  //BA.debugLineNum = 1179650;BA.debugLine="If mostrarSenha Then";
 if (_mostrarsenha) { 
 RDebugUtils.currentLine=1179651;
- //BA.debugLineNum = 1179651;BA.debugLine="edSenha.PasswordMode = True";
-mostCurrent._edsenha.setPasswordMode(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 1179651;BA.debugLine="edSenha.PasswordMode = False";
+mostCurrent._edsenha.setPasswordMode(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=1179652;
  //BA.debugLineNum = 1179652;BA.debugLine="mostrarSenha = False";
 _mostrarsenha = anywheresoftware.b4a.keywords.Common.False;
 RDebugUtils.currentLine=1179653;
- //BA.debugLineNum = 1179653;BA.debugLine="lblMostrarSenha.Text = \"Mostrar senha\"";
-mostCurrent._lblmostrarsenha.setText(BA.ObjectToCharSequence("Mostrar senha"));
- }else {
-RDebugUtils.currentLine=1179656;
- //BA.debugLineNum = 1179656;BA.debugLine="edSenha.PasswordMode = False";
-mostCurrent._edsenha.setPasswordMode(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1179657;
- //BA.debugLineNum = 1179657;BA.debugLine="mostrarSenha = True";
-_mostrarsenha = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=1179658;
- //BA.debugLineNum = 1179658;BA.debugLine="lblMostrarSenha.Text = \"Esconder senha\"";
+ //BA.debugLineNum = 1179653;BA.debugLine="lblMostrarSenha.Text = \"Esconder senha\"";
 mostCurrent._lblmostrarsenha.setText(BA.ObjectToCharSequence("Esconder senha"));
+ }else {
+RDebugUtils.currentLine=1179655;
+ //BA.debugLineNum = 1179655;BA.debugLine="edSenha.PasswordMode = True";
+mostCurrent._edsenha.setPasswordMode(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=1179656;
+ //BA.debugLineNum = 1179656;BA.debugLine="mostrarSenha = True";
+_mostrarsenha = anywheresoftware.b4a.keywords.Common.True;
+RDebugUtils.currentLine=1179657;
+ //BA.debugLineNum = 1179657;BA.debugLine="lblMostrarSenha.Text = \"Mostrar senha\"";
+mostCurrent._lblmostrarsenha.setText(BA.ObjectToCharSequence("Mostrar senha"));
  };
-RDebugUtils.currentLine=1179660;
- //BA.debugLineNum = 1179660;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179659;
+ //BA.debugLineNum = 1179659;BA.debugLine="End Sub";
 return "";
 }
 }

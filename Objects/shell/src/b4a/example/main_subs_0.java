@@ -127,6 +127,8 @@ xuiviewsutils.myClass = BA.getDeviceClass ("b4a.example.xuiviewsutils");
 main._fotos = RemoteObject.createNew ("anywheresoftware.b4a.phone.Phone.ContentChooser");
  //BA.debugLineNum = 21;BA.debugLine="Public Id_do_Usuario As Int";
 main._id_do_usuario = RemoteObject.createImmutable(0);
+ //BA.debugLineNum = 22;BA.debugLine="Public CadastrouAlgo as Boolean = False";
+main._cadastroualgo = main.mostCurrent.__c.getField(true,"False");
  //BA.debugLineNum = 23;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }

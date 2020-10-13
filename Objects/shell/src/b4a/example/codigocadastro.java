@@ -55,7 +55,6 @@ public boolean isSingleton() {
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
-public static RemoteObject _cadastrouusuario = RemoteObject.createImmutable(false);
 public static RemoteObject _mostrarsenha = RemoteObject.createImmutable(false);
 public static RemoteObject _ednome = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _edlogin = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
@@ -75,6 +74,6 @@ public static b4a.example.starter _starter = null;
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",codigocadastro.mostCurrent._activity,"cadastrouUsuario",codigocadastro._cadastrouusuario,"CodigoCadastroLivro",Debug.moduleToString(b4a.example.codigocadastrolivro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayAnotacao",Debug.moduleToString(b4a.example.codigolayanotacao.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"DateUtils",codigocadastro.mostCurrent._dateutils,"edLogin",codigocadastro.mostCurrent._edlogin,"edNome",codigocadastro.mostCurrent._ednome,"edRepitaSenha",codigocadastro.mostCurrent._edrepitasenha,"edSenha",codigocadastro.mostCurrent._edsenha,"funcoes",codigocadastro.mostCurrent._funcoes,"lblCadSalvo",codigocadastro.mostCurrent._lblcadsalvo,"lblMostrarSenha",codigocadastro.mostCurrent._lblmostrarsenha,"Main",Debug.moduleToString(b4a.example.main.class),"mostrarSenha",codigocadastro._mostrarsenha,"panelCadSalvo",codigocadastro.mostCurrent._panelcadsalvo,"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
+		return new Object[] {"Activity",codigocadastro.mostCurrent._activity,"CodigoCadastroLivro",Debug.moduleToString(b4a.example.codigocadastrolivro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayAnotacao",Debug.moduleToString(b4a.example.codigolayanotacao.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"DateUtils",codigocadastro.mostCurrent._dateutils,"edLogin",codigocadastro.mostCurrent._edlogin,"edNome",codigocadastro.mostCurrent._ednome,"edRepitaSenha",codigocadastro.mostCurrent._edrepitasenha,"edSenha",codigocadastro.mostCurrent._edsenha,"funcoes",codigocadastro.mostCurrent._funcoes,"lblCadSalvo",codigocadastro.mostCurrent._lblcadsalvo,"lblMostrarSenha",codigocadastro.mostCurrent._lblmostrarsenha,"Main",Debug.moduleToString(b4a.example.main.class),"mostrarSenha",codigocadastro._mostrarsenha,"panelCadSalvo",codigocadastro.mostCurrent._panelcadsalvo,"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
 }
 }

@@ -1,6 +1,8 @@
 use cronograma
 go
 
+--exec sp_cad_livro_leitura 'Contra a correnteza', 'Daniel', '29', '10/10/2020', 'páginas', '500', '02/12/2020', '10'
+
 alter procedure sp_cad_livro_leitura
 
 @nome					varchar (100),
@@ -23,6 +25,7 @@ begin
 
 		set @fk_id_Livro = SCOPE_IDENTITY()
 
+		
 		insert into leitura (data_inicial,
 							 tipo_de_leitura,
 							 quantidade_paginas,
@@ -44,8 +47,7 @@ begin
 	end try
 	begin catch
 		
-		select 'Inserção de dados falhou!' [MENSAGEM], 0 [RESULTADO]
-
+		select 'Inserção de dados falhou!' [MENSAGEM], 0 [RESULTADO]		
 	end catch
 end 
 go

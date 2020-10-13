@@ -313,7 +313,7 @@ if (RapidSub.canDelegate("getvalue")) { return __ref.runUserSub(false, "roundsli
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 153;BA.debugLine="Return mValue";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
  BA.debugLineNum = 154;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -367,7 +367,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 115;BA.debugLine="If Action = pnl.TOUCH_ACTION_MOVE_NOTOUCH Then Re";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_action,BA.numberCast(double.class, __ref.getField(false,"_pnl" /*RemoteObject*/ ).getField(true,"TOUCH_ACTION_MOVE_NOTOUCH")))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 116;BA.debugLine="Dim dx As Int = x - CircleRect.CenterX";
 Debug.JustUpdateDeviceLine();
 _dx = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_x,__ref.getField(false,"_circlerect" /*RemoteObject*/ ).runMethod(true,"getCenterX")}, "-",1, 0));Debug.locals.put("dx", _dx);Debug.locals.put("dx", _dx);

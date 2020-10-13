@@ -10,7 +10,7 @@ Version=10.2
 #End Region
 
 Sub Process_Globals
-	Public cadastrou As Boolean = False
+
 End Sub
 
 Sub Activity_Resume
@@ -40,6 +40,7 @@ Sub Globals
 	Private dataPrevistaFinal As String
 	
 	Private banco As ClassBancoDados
+	DateTime.DateFormat = "dd/MM/yyy"
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -55,13 +56,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	lblMeta.Text = "Meta - Quantas páginas ler por dia?"
 	edMeta.Hint = "Quantidade de páginas"
 	
-	Dim dia, mes, ano As String
-	
-	dia = DateTime.Date(DateTime.Now).SubString2(3, 5)
-	mes = DateTime.Date(DateTime.Now).SubString2(0, 2)
-	ano = DateTime.Date(DateTime.Now).SubString2(6, 10)
-	
-	hoje = "Dia: " & dia & " / " & mes & " / " & ano
+	hoje = "Dia: " & DateTime.Date(DateTime.Now)
 	
 	lblPrevisao.Text = hoje
 	
@@ -116,16 +111,10 @@ Sub edMeta_TextChanged (Old As String, New As String)
 			lblQuantidadeDias.Text = "Total de dias: " & total
 			
 			Dim data As String = DateTime.Date( DateTime.Add(DateTime.Now, 0,0,total))
+							
+			dataPrevistaFinal = data
 			
-			Dim dia, mes, ano As String
-			
-			dia = data.SubString2(3,5)
-			mes = data.SubString2(0,2)
-			ano = data.SubString2(6,10)
-			
-			dataPrevistaFinal = dia & "/" & mes & "/" & ano
-			
-			lblPrevisao.Text = "Dia: " & dia & " / " & mes & " / " & ano
+			lblPrevisao.Text = data
 		Else
 			lblPrevisao.Text = hoje
 			lblQuantidadeDias.Visible = False
@@ -158,15 +147,9 @@ Sub edQuantPagOuCap_TextChanged (Old As String, New As String)
 			
 			Dim data As String = DateTime.Date( DateTime.Add(DateTime.Now, 0,0,total))
 			
-			Dim dia, mes, ano As String
+			dataPrevistaFinal = data
 			
-			dia = data.SubString2(3,5)
-			mes = data.SubString2(0,2)
-			ano = data.SubString2(6,10)
-			
-			dataPrevistaFinal = dia & "/" & mes & "/" & ano
-			
-			lblPrevisao.Text = "Dia: " & dia & " / " & mes & " / " & ano
+			lblPrevisao.Text = data
 		Else
 			lblPrevisao.Text = hoje
 			lblQuantidadeDias.Visible = False
@@ -251,17 +234,17 @@ Sub btSalvar_Click
 			
 					tipoLeitura = "páginas"
 					If radCapitulo.Checked Then tipoLeitura = "capítulos"
-			
+								
 					dataInicial = DateTime.Date(DateTime.Now)
 			
 					cmd = "exec sp_cad_livro_leitura '" & edTituloLivro.Text & _
-											  "', '" & edAutorLivro.Text & _
-											  "', '" & Main.Id_do_Usuario & _
-											  "', '" & dataInicial & _
-											  "', '" & tipoLeitura & _
-											  "', '" & edQuantPagOuCap.Text & _
-											  "', '" & dataPrevistaFinal & _
-											  "', '" & edMeta.Text & "'"
+												  "', '" & edAutorLivro.Text & _
+												  "', '" & Main.Id_do_Usuario & _
+												  "', '" & dataInicial & _
+												  "', '" & tipoLeitura & _
+												  "', '" & edQuantPagOuCap.Text & _
+												  "', '" & dataPrevistaFinal & _
+												  "', '" & edMeta.Text & "'"
 			
 					Wait For (banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
 			
@@ -269,7 +252,7 @@ Sub btSalvar_Click
 			
 					If Result.GetString("RESULTADO") = 1 Then
 						
-						cadastrou = True
+						Main.CadastrouAlgo = True
 						ToastMessageShow(Result.GetString("MENSAGEM"), True)
 						Sleep(100)
 						StartActivity(CodigoLayLeituras)
@@ -277,7 +260,7 @@ Sub btSalvar_Click
 				
 					else if Result.GetString("RESULTADO") = 0 Then
 						
-						cadastrou = False
+						Main.CadastrouAlgo = False
 						MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!!")
 						Sleep(1000)
 						StartActivity(CodigoLayLeituras)

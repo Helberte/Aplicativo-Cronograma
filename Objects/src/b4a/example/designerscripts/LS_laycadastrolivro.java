@@ -60,21 +60,13 @@ views.get("radpagina").vw.setHeight((int)((5d / 100 * height)));
 views.get("radpagina").vw.setTop((int)((views.get("lbltipoleitura").vw.getTop())+(views.get("lbltipoleitura").vw.getHeight())));
 views.get("radpagina").vw.setWidth((int)((50d / 100 * width)));
 views.get("radpagina").vw.setLeft((int)((0d / 100 * width)));
-//BA.debugLineNum = 68;BA.debugLine="radCapitulo.Height = radPagina.Height"[LayCadastroLivro/General script]
 views.get("radcapitulo").vw.setHeight((int)((views.get("radpagina").vw.getHeight())));
-//BA.debugLineNum = 69;BA.debugLine="radCapitulo.Top = radPagina.Top"[LayCadastroLivro/General script]
 views.get("radcapitulo").vw.setTop((int)((views.get("radpagina").vw.getTop())));
-//BA.debugLineNum = 70;BA.debugLine="radCapitulo.Width = 50%x"[LayCadastroLivro/General script]
 views.get("radcapitulo").vw.setWidth((int)((50d / 100 * width)));
-//BA.debugLineNum = 71;BA.debugLine="radCapitulo.Left = 50%x"[LayCadastroLivro/General script]
 views.get("radcapitulo").vw.setLeft((int)((50d / 100 * width)));
-//BA.debugLineNum = 73;BA.debugLine="panelQuantidadePagCap.Top = radCapitulo.Top + radCapitulo.Height"[LayCadastroLivro/General script]
 views.get("panelquantidadepagcap").vw.setTop((int)((views.get("radcapitulo").vw.getTop())+(views.get("radcapitulo").vw.getHeight())));
-//BA.debugLineNum = 74;BA.debugLine="panelQuantidadePagCap.Height = panelAutorLivro.Height"[LayCadastroLivro/General script]
 views.get("panelquantidadepagcap").vw.setHeight((int)((views.get("panelautorlivro").vw.getHeight())));
-//BA.debugLineNum = 75;BA.debugLine="panelQuantidadePagCap.Width = panelAutorLivro.Width"[LayCadastroLivro/General script]
 views.get("panelquantidadepagcap").vw.setWidth((int)((views.get("panelautorlivro").vw.getWidth())));
-//BA.debugLineNum = 76;BA.debugLine="panelQuantidadePagCap.Left = panelAutorLivro.Left"[LayCadastroLivro/General script]
 views.get("panelquantidadepagcap").vw.setLeft((int)((views.get("panelautorlivro").vw.getLeft())));
 //BA.debugLineNum = 78;BA.debugLine="edQuantPagOuCap.Left = edAutorLivro.Left"[LayCadastroLivro/General script]
 views.get("edquantpagoucap").vw.setLeft((int)((views.get("edautorlivro").vw.getLeft())));

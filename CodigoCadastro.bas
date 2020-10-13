@@ -10,7 +10,6 @@ Version=9.801
 #End Region
 
 Sub Process_Globals
-	Public cadastrouUsuario As Boolean = False
 	Private mostrarSenha As Boolean = True
 End Sub
 
@@ -83,11 +82,11 @@ Sub btSalvar_Click
 				
 				If Result = Null Then
 					
-					cadastrouUsuario = False
+					Main.CadastrouAlgo = False				
 					MsgboxAsync("Problemas na conexão com banco de dados. " & LastException, "Atenção!")					
 				else if Result.GetString("RESULTADO") = 0 Then						
 					
-					cadastrouUsuario = False
+					Main.CadastrouAlgo = False			
 					MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!")
 					edNome.RequestFocus
 				Else
@@ -109,7 +108,7 @@ Sub btSalvar_Click
 					panelCadSalvo.Visible = True
 					lblCadSalvo.Text = Result.GetString("MENSAGEM")		
 					
-					cadastrouUsuario = True								
+					Main.CadastrouAlgo = True						
 					Sleep(1200)
 							
 					StartActivity(CodigoLayLeituras)
@@ -155,13 +154,12 @@ End Sub
 Sub lblMostrarSenha_Click
 	
 	If mostrarSenha Then
-		edSenha.PasswordMode = True
-		mostrarSenha = False
-		lblMostrarSenha.Text = "Mostrar senha"
-		
-	Else		
 		edSenha.PasswordMode = False
-		mostrarSenha = True
+		mostrarSenha = False
 		lblMostrarSenha.Text = "Esconder senha"		
+	Else		
+		edSenha.PasswordMode = True
+		mostrarSenha = True
+		lblMostrarSenha.Text = "Mostrar senha"
 	End If
 End Sub

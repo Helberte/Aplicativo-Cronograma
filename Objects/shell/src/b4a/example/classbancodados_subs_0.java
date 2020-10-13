@@ -107,7 +107,7 @@ this.state = 6;
 this.catchState = 0;
  BA.debugLineNum = 23;BA.debugLine="Return False";
 Debug.ShouldStop(4194304);
-if (true) {
+Debug.CheckDeviceExceptions();if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.__c.getField(true,"False")));return;};
  if (true) break;
 if (true) break;
@@ -304,7 +304,7 @@ this.state = 15;
 this.catchState = 0;
  BA.debugLineNum = 40;BA.debugLine="Return Null";
 Debug.ShouldStop(128);
-if (true) {
+Debug.CheckDeviceExceptions();if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,parent.__c.getField(false,"Null"));return;};
  if (true) break;
 if (true) break;
@@ -321,7 +321,7 @@ case 17:
 this.state = 18;
  BA.debugLineNum = 43;BA.debugLine="Return Null";
 Debug.ShouldStop(1024);
-if (true) {
+Debug.CheckDeviceExceptions();if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,parent.__c.getField(false,"Null"));return;};
  if (true) break;
 
