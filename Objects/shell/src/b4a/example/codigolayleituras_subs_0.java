@@ -159,16 +159,20 @@ Debug.ShouldStop(4096);
 if (RemoteObject.solveBoolean("=",_resp,BA.numberCast(double.class, codigolayleituras.mostCurrent.__c.getField(false,"DialogResponse").getField(true,"POSITIVE")))) { 
  BA.debugLineNum = 367;BA.debugLine="ExitApplication";
 Debug.ShouldStop(16384);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 codigolayleituras.mostCurrent.__c.runVoidMethod ("ExitApplication");
  BA.debugLineNum = 368;BA.debugLine="Return False";
 Debug.ShouldStop(32768);
 =======
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
 if (true) return codigolayleituras.mostCurrent.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 370;BA.debugLine="KeyCode = 0";
 Debug.ShouldStop(131072);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 _keycode = BA.numberCast(int.class, 0);Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 371;BA.debugLine="Return True";
@@ -179,12 +183,17 @@ if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  BA.debugLineNum = 374;BA.debugLine="Return True";
 Debug.ShouldStop(2097152);
 =======
+=======
+>>>>>>> Stashed changes
 if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  }else {
  BA.debugLineNum = 373;BA.debugLine="Return True";
 Debug.ShouldStop(1048576);
+<<<<<<< Updated upstream
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
 if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  BA.debugLineNum = 398;BA.debugLine="End Sub";
@@ -807,12 +816,15 @@ this.state = 27;
 this.catchState = 0;
  BA.debugLineNum = 247;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
 Debug.ShouldStop(4194304);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Impossível carregar leituras")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
  BA.debugLineNum = 248;BA.debugLine="Return False";
 Debug.ShouldStop(8388608);
 =======
 >>>>>>> main
+=======
+>>>>>>> Stashed changes
 if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"False")));return;};
  if (true) break;

@@ -25,10 +25,14 @@ ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 NavigationStack=Visual Designer,Lay_lancamento_leitura.bal,-100,2,CodigoLayLeituras,Event_btAnotar_Click,263,1,CodigoLayLeituras,Atualiza_leituras,155,6,CodigoLayLogin,Globals,23,0,CodigoLayLogin,Activity_Create,14,0,CodigoLayLogin,Process_Globals,12,0,CodigoLayLogin,btConectar_Click,83,0,Visual Designer,LayoutCadastro.bal,-100,1,Visual Designer,LayCadastroLivro.bal,-100,1,CodigoLayLogin,Activity_Resume,85,0
 =======
 NavigationStack=Visual Designer,LayoutCadastro.bal,-100,3,CodigoCadastro,lblMostrarSenha_Click,154,2,CodigoCadastro,edRepitaSenha_TextChanged,130,0,CodigoCadastro,Activity_Create,25,0,CodigoCadastro,Globals,18,0,CodigoCadastro,Process_Globals,8,0,CodigoLayLeituras,Event_btLancar_Click,293,0,CodigoLayLeituras,Event_btAnotar_Click,251,0,ClassBancoDados,Class_Globals,2,0,CodigoLayLeituras,Atualiza_leituras,233,0
 >>>>>>> main
+=======
+NavigationStack=Visual Designer,LayoutCadastro.bal,-100,3,CodigoCadastro,lblMostrarSenha_Click,154,2,CodigoCadastro,edRepitaSenha_TextChanged,130,0,CodigoCadastro,Activity_Create,25,0,CodigoCadastro,Globals,18,0,CodigoCadastro,Process_Globals,8,0,CodigoLayLeituras,Event_btLancar_Click,293,0,CodigoLayLeituras,Event_btAnotar_Click,251,0,ClassBancoDados,Class_Globals,2,0,CodigoLayLeituras,Atualiza_leituras,233,0
+>>>>>>> Stashed changes
 SelectedBuild=0
 VisibleModules=1,2,3,5,6,7,8,4

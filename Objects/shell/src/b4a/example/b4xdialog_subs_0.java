@@ -200,11 +200,15 @@ __ref.runClassMethod (b4a.example.b4xdialog.class, "_setavg" /*RemoteObject*/ ,(
 ;
  BA.debugLineNum = 320;BA.debugLine="Log(\"Time: \" & (DateTime.Now - n))";
 Debug.JustUpdateDeviceLine();
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 b4xdialog.__c.runVoidMethod ("LogImpl","911599908",RemoteObject.concat(RemoteObject.createImmutable("Time: "),(RemoteObject.solve(new RemoteObject[] {b4xdialog.__c.getField(false,"DateTime").runMethod(true,"getNow"),_n}, "-",1, 2))),0);
 =======
 b4xdialog.__c.runVoidMethod ("LogImpl","99240612",RemoteObject.concat(RemoteObject.createImmutable("Time: "),(RemoteObject.solve(new RemoteObject[] {b4xdialog.__c.getField(false,"DateTime").runMethod(true,"getNow"),_n}, "-",1, 2))),0);
 >>>>>>> main
+=======
+b4xdialog.__c.runVoidMethod ("LogImpl","99240612",RemoteObject.concat(RemoteObject.createImmutable("Time: "),(RemoteObject.solve(new RemoteObject[] {b4xdialog.__c.getField(false,"DateTime").runMethod(true,"getNow"),_n}, "-",1, 2))),0);
+>>>>>>> Stashed changes
  BA.debugLineNum = 321;BA.debugLine="Return bc";
 Debug.JustUpdateDeviceLine();
 if (true) return _bc;
