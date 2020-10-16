@@ -162,19 +162,19 @@ Debug.ShouldStop(8192);
 codigolayleituras.mostCurrent.__c.runVoidMethod ("ExitApplication");
  BA.debugLineNum = 367;BA.debugLine="Return False";
 Debug.ShouldStop(16384);
-Debug.CheckDeviceExceptions();if (true) return codigolayleituras.mostCurrent.__c.getField(true,"False");
+if (true) return codigolayleituras.mostCurrent.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 369;BA.debugLine="KeyCode = 0";
 Debug.ShouldStop(65536);
 _keycode = BA.numberCast(int.class, 0);Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 370;BA.debugLine="Return True";
 Debug.ShouldStop(131072);
-Debug.CheckDeviceExceptions();if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
+if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  }else {
  BA.debugLineNum = 373;BA.debugLine="Return True";
 Debug.ShouldStop(1048576);
-Debug.CheckDeviceExceptions();if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
+if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  BA.debugLineNum = 397;BA.debugLine="End Sub";
 Debug.ShouldStop(4096);
@@ -796,7 +796,7 @@ Debug.ShouldStop(2097152);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Impossível carregar leituras")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
  BA.debugLineNum = 247;BA.debugLine="Return False";
 Debug.ShouldStop(4194304);
-Debug.CheckDeviceExceptions();if (true) {
+if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"False")));return;};
  if (true) break;
 if (true) break;

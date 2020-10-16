@@ -296,7 +296,7 @@ if (RapidSub.canDelegate("getdate")) { return __ref.runUserSub(false, "b4xdatete
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 90;BA.debugLine="Return selectedDate";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_selecteddate" /*RemoteObject*/ );
+if (true) return __ref.getField(true,"_selecteddate" /*RemoteObject*/ );
  BA.debugLineNum = 91;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0L);
@@ -316,7 +316,7 @@ Debug.locals.put("Dialog", _dialog);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 160;BA.debugLine="Return pnlDialog";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_pnldialog" /*RemoteObject*/ );
+if (true) return __ref.getField(false,"_pnldialog" /*RemoteObject*/ );
  BA.debugLineNum = 161;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -356,7 +356,7 @@ if (_move.<Boolean>get().booleanValue()) {
  BA.debugLineNum = 119;BA.debugLine="If newSelectedDay = tempSelectedDay Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_newselectedday,BA.numberCast(double.class, __ref.getField(true,"_tempselectedday" /*RemoteObject*/ )))) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 120;BA.debugLine="cvsBackground.ClearRect(cvsBackground.TargetRect";
 Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_cvsbackground" /*RemoteObject*/ ).runVoidMethod ("ClearRect",(Object)(__ref.getField(false,"_cvsbackground" /*RemoteObject*/ ).runMethod(false,"getTargetRect")));
@@ -524,7 +524,7 @@ Debug.JustUpdateDeviceLine();
 __ref.setField ("_selecteddate" /*RemoteObject*/ ,_date);
  BA.debugLineNum = 97;BA.debugLine="Return 'the date will be set after the layout is";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
+if (true) return RemoteObject.createImmutable("");
  };
  BA.debugLineNum = 99;BA.debugLine="year = DateTime.GetYear(date)";
 Debug.JustUpdateDeviceLine();
