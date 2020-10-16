@@ -2,7 +2,7 @@ use cronograma
 go
 
 
-create procedure sp_lancamento_leitura
+alter procedure sp_lancamento_leitura
 
 @id_usuario				int,
 @id_livro				int,
