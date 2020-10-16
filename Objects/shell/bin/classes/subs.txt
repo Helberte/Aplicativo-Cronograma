@@ -340,11 +340,11 @@ codigolayleituras,activity_create,1,0,31,56
 ,btadicionarleitura,,tabstrip,,panel_lendo,,lbl_inicial_leitura,,banco,,cores,,panelnenhumaleitura,main,id_do_usuario,,scrollview1,,gradient,,tempanel,,tamanholista,,nomearquivo
 ,btadicionarleitura,,tabstrip,,panel_lendo,,tempanel,,tamanholista
 classbancodados,initialize,,atualiza_leituras,classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,atualiza_leituras,0,0,79,249
+codigolayleituras,atualiza_leituras,0,0,79,250
 main,id_do_usuario,,banco,,btadicionarleitura,,lbl_inicial_leitura,,scrollview1,,panel_lendo,,gradient,,cores,,tempanel,,tamanholista,,nomearquivo
 ,tempanel,,tamanholista
 classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,activity_keypress,1,0,358,397
+codigolayleituras,activity_keypress,1,0,359,398
 
 
 
@@ -356,15 +356,15 @@ codigolayleituras,activity_resume,0,0,62,73
 main,cadastroualgo,main,id_do_usuario,,banco,,btadicionarleitura,,lbl_inicial_leitura,,scrollview1,,panel_lendo,,gradient,,cores,,tempanel,,tamanholista,,nomearquivo
 main,cadastroualgo,,tempanel,,tamanholista
 ,atualiza_leituras,classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,btadicionarleitura_click,0,0,350,352
+codigolayleituras,btadicionarleitura_click,0,0,351,353
 
 
 
-codigolayleituras,event_btanotar_click,0,0,251,291
+codigolayleituras,event_btanotar_click,0,0,252,292
 ,nomearquivo,,tamanholista,codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 
-codigolayleituras,event_btlancar_click,0,0,293,348
+codigolayleituras,event_btlancar_click,0,0,294,349
 ,nomearquivo,,tamanholista,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 
@@ -380,7 +380,7 @@ codigolayleituras,process_globals,0,1,6,9
 ,tempanel
 ,tempanel
 
-codigolayleituras,tabstrip_pageselected,0,0,354,356
+codigolayleituras,tabstrip_pageselected,0,0,355,357
 
 
 

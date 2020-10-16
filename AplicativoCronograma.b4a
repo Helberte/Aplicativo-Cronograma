@@ -58,7 +58,7 @@ Version=10.2
 Sub Process_Globals
 	Public fotos As ContentChooser
 	Public Id_do_Usuario As Int
-	Public CadastrouAlgo as Boolean = False
+	Public CadastrouAlgo As Boolean = False
 End Sub
 
 Sub Globals

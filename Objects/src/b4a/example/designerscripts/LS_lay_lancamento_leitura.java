@@ -9,14 +9,14 @@ public class LS_lay_lancamento_leitura{
 public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAndAnchor> views, int width, int height, float scale) {
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
 anywheresoftware.b4a.keywords.LayoutBuilder.scaleAll(views);
-views.get("panelprincipal").vw.setWidth((int)((90d / 100 * width)));
+views.get("panelprincipal").vw.setWidth((int)((92d / 100 * width)));
 views.get("panelprincipal").vw.setTop((int)((5d / 100 * height)));
 views.get("panelprincipal").vw.setHeight((int)((100d / 100 * height)-((views.get("panelprincipal").vw.getTop())*2d)));
 views.get("panelprincipal").vw.setLeft((int)(((100d / 100 * width)-(views.get("panelprincipal").vw.getWidth()))/2d));
 views.get("b4ximageviewfoto").vw.setWidth((int)((views.get("panelprincipal").vw.getWidth())));
 views.get("b4ximageviewfoto").vw.setTop((int)((0d / 100 * height)));
 views.get("b4ximageviewfoto").vw.setLeft((int)((0d / 100 * width)));
-views.get("b4ximageviewfoto").vw.setHeight((int)((32d / 100 * height)));
+views.get("b4ximageviewfoto").vw.setHeight((int)((30d / 100 * height)));
 views.get("lbltitulolivro").vw.setTop((int)((views.get("b4ximageviewfoto").vw.getTop())+(views.get("b4ximageviewfoto").vw.getHeight())));
 views.get("lbltitulolivro").vw.setWidth((int)((80d / 100 * width)));
 views.get("lbltitulolivro").vw.setLeft((int)(((views.get("b4ximageviewfoto").vw.getWidth())-(views.get("lbltitulolivro").vw.getWidth()))/2d));

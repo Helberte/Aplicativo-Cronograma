@@ -121,7 +121,7 @@ Sub Atualiza_leituras As ResumableSub
 			gradient.Initialize("TOP_BOTTOM", cores)
 			
 			gradient.CornerRadius = 12
-			
+						
 			Dim quantidade As Int = Result.GetInt("QUANTIDADE")
 			
 			Dim panels(quantidade) As Panel
@@ -170,6 +170,7 @@ Sub Atualiza_leituras As ResumableSub
 					
 					panels(i).Background = gradient
 					panels(i).Padding = Array As Int(0dip, 0dip, 0dip, 0dip)
+					panels(i).Elevation = 3dip
 					
 					scrollView1.Panel.AddView(panels(i), 1%x, topo, 98%x, 25%y)
 							
@@ -237,11 +238,11 @@ Sub Atualiza_leituras As ResumableSub
 									
 					topo = topo + 25%y + 10dip
 					
+					scrollView1.Panel.Height = topo
 					Result.NextRow
 				Next		
-				File.WriteList(File.DirDefaultExternal, nomeArquivo, listaInformacoes)
-					
-				scrollView1.Panel.Height = topo
+				File.WriteList(File.DirInternal, nomeArquivo, listaInformacoes)
+
 			End If	
 			Return True
 		Else
@@ -267,7 +268,7 @@ Sub Event_btAnotar_Click
 	lista.Initialize
 	
 	Try
-		lista = File.ReadList(File.DirDefaultExternal, nomeArquivo)
+		lista = File.ReadList(File.DirInternal, nomeArquivo)
 		informacoes = lista.Get(b.Tag)
 		
 		Dim cols(tamanhoLista), coluna As String
@@ -314,7 +315,7 @@ Sub Event_btLancar_Click
 	Try		
 		Dim colunaValor, valorSalvo, col As String
 		
-		lista = File.ReadList(File.DirDefaultExternal, nomeArquivo)
+		lista = File.ReadList(File.DirInternal, nomeArquivo)
 			
 		colunaValor = lista.Get(b.Tag)
 		Dim testeArray(tamanhoLista) As	String
