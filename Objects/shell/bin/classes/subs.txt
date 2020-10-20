@@ -244,6 +244,46 @@ b4ximageview,setcircleclip,0,0,122,146
 
 
 
+codigolancamentoleitura,activity_create,1,0,32,65
+,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas,,titulolivro,,nomeusuario,,paginaatual,,meta,,totalpaginas,,tipoleitura,,banco
+,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas
+b4ximageview,setresizemode,b4ximageview,load,classbancodados,initialize,b4ximageview,update,b4ximageview,setcircleclip,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill
+codigolancamentoleitura,activity_pause,0,0,79,81
+
+
+
+codigolancamentoleitura,activity_resume,0,0,67,77
+,b4ximageviewfoto,,lbltitulolivro
+
+
+codigolancamentoleitura,aparecepagatual,0,0,158,161
+,lblpaginaatual
+
+
+codigolancamentoleitura,btcancelar_click,0,0,83,85
+
+
+
+codigolancamentoleitura,btok_click,0,0,87,117
+main,id_do_usuario,,idlivro,,edpaginaatual,,banco,main,cadastroualgo
+main,cadastroualgo
+classbancodados,insert_consulta,classbancodados,conecta
+codigolancamentoleitura,edpaginaatual_textchanged,0,0,119,151
+,totalpaginas,,lblivalido,,edpaginaatual,,lblprevisaoporcentagem,,btok,,lblpaginaatual
+
+,somepagatual,,aparecepagatual
+codigolancamentoleitura,somepagatual,0,0,153,156
+,lblpaginaatual
+
+
+codigolancamentoleitura,globals,0,1,16,30
+
+
+
+codigolancamentoleitura,process_globals,0,1,6,14
+
+
+
 codigolayanotacao,activity_create,1,0,24,31
 ,b4xcombobox1,,btcancelar,,btok,,edanotacao,,edtituloanotacao,,lblanotacaorefpag,,lbltitulo,,banco
 ,b4xcombobox1,,btcancelar,,btok,,edanotacao,,edtituloanotacao,,lblanotacaorefpag,,lbltitulo
@@ -445,38 +485,6 @@ starter,service_start,0,0,18,20
 
 
 starter,service_taskremoved,0,0,22,24
-
-
-
-codigolancamentoleitura,activity_create,1,0,32,63
-,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas,,titulolivro,,nomeusuario,,paginaatual,,meta,,totalpaginas,,tipoleitura,,banco
-,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas
-b4ximageview,setresizemode,b4ximageview,load,classbancodados,initialize,b4ximageview,update,b4ximageview,setcircleclip,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill
-codigolancamentoleitura,activity_pause,0,0,69,71
-
-
-
-codigolancamentoleitura,activity_resume,0,0,65,67
-
-
-
-codigolancamentoleitura,btcancelar_click,0,0,73,75
-
-
-
-codigolancamentoleitura,btok_click,0,0,77,107
-main,id_do_usuario,,idlivro,,edpaginaatual,,banco,main,cadastroualgo
-main,cadastroualgo
-classbancodados,insert_consulta,classbancodados,conecta
-codigolancamentoleitura,edpaginaatual_textchanged,0,0,109,140
-,totalpaginas,,lblivalido,,edpaginaatual,,lblpaginaatual,,lblprevisaoporcentagem,,btok
-
-
-codigolancamentoleitura,globals,0,1,16,30
-
-
-
-codigolancamentoleitura,process_globals,0,1,6,14
 
 
 

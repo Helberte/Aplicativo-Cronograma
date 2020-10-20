@@ -67,11 +67,11 @@ public static RemoteObject _lblmostrarsenha = RemoteObject.declareNull("anywhere
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",codigocadastro.mostCurrent._activity,"CodigoCadastroLivro",Debug.moduleToString(b4a.example.codigocadastrolivro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayAnotacao",Debug.moduleToString(b4a.example.codigolayanotacao.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"DateUtils",codigocadastro.mostCurrent._dateutils,"edLogin",codigocadastro.mostCurrent._edlogin,"edNome",codigocadastro.mostCurrent._ednome,"edRepitaSenha",codigocadastro.mostCurrent._edrepitasenha,"edSenha",codigocadastro.mostCurrent._edsenha,"funcoes",codigocadastro.mostCurrent._funcoes,"lblCadSalvo",codigocadastro.mostCurrent._lblcadsalvo,"lblMostrarSenha",codigocadastro.mostCurrent._lblmostrarsenha,"Main",Debug.moduleToString(b4a.example.main.class),"mostrarSenha",codigocadastro._mostrarsenha,"panelCadSalvo",codigocadastro.mostCurrent._panelcadsalvo,"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};

@@ -71,10 +71,10 @@ public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.da
 public static b4a.example.main _main = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
 public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",codigolayleituras.mostCurrent._activity,"banco",codigolayleituras.mostCurrent._banco,"btAdicionarLeitura",codigolayleituras.mostCurrent._btadicionarleitura,"CodigoCadastro",Debug.moduleToString(b4a.example.codigocadastro.class),"CodigoCadastroLivro",Debug.moduleToString(b4a.example.codigocadastrolivro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayAnotacao",Debug.moduleToString(b4a.example.codigolayanotacao.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"cores",codigolayleituras._cores,"DateUtils",codigolayleituras.mostCurrent._dateutils,"gradient",codigolayleituras.mostCurrent._gradient,"lbl_Inicial_Leitura",codigolayleituras.mostCurrent._lbl_inicial_leitura,"Main",Debug.moduleToString(b4a.example.main.class),"nomeArquivo",codigolayleituras.mostCurrent._nomearquivo,"Panel_lendo",codigolayleituras.mostCurrent._panel_lendo,"panelNenhumaLeitura",codigolayleituras.mostCurrent._panelnenhumaleitura,"scrollView1",codigolayleituras.mostCurrent._scrollview1,"Starter",Debug.moduleToString(b4a.example.starter.class),"TabStrip",codigolayleituras.mostCurrent._tabstrip,"tamanhoLista",codigolayleituras._tamanholista,"temPanel",codigolayleituras._tempanel,"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};

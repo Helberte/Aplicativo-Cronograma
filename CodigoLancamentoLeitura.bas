@@ -66,10 +66,20 @@ Sub Activity_Create(FirstTime As Boolean)
 	End If
 	
 	banco.Initialize
+	
+	
 End Sub
 
-Sub Activity_Resume
-
+Sub Activity_Resume	
+	
+	Dim topo As Int = b4XImageViewFoto.mBase.Top + b4XImageViewFoto.mBase.Height
+	
+	lblTituloLivro.TextColor = Colors.Transparent
+	lblTituloLivro.Top = topo - 5%y
+	
+	lblTituloLivro.SetLayoutAnimated(1000, (b4XImageViewFoto.mBase.Width - lblTituloLivro.Width) / 2, topo, 80%x, 7%y)
+	lblTituloLivro.SetTextColorAnimated(1200, Colors.RGB(221,2,2))
+	
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
@@ -123,24 +133,35 @@ Sub edPaginaAtual_TextChanged (Old As String, New As String)
 			lblIvalido.Text = "Inválido"
 			
 			edPaginaAtual.TextColor = Colors.Red
-			lblPaginaAtual.Visible = False
+			SomePagAtual
+						
 			lblPrevisaoPorcentagem.Text = "Próximo avanço 0%"
 			btOk.Enabled = False
 		Else
 			edPaginaAtual.TextColor = Colors.RGB(46,16,16)
 			lblIvalido.Visible = False
-			lblIvalido.Text = "Inválido"
-			
-			lblPaginaAtual.Visible = True			
+			lblIvalido.Text = "Inválido"			
+			AparecePagAtual
+						
 			valor = ((New * 100) / totalPaginas)
 			lblPrevisaoPorcentagem.Text = "Próximo avanço " & valor & "%"
 			btOk.Enabled = True
 		End If	
 	Else
-		lblPaginaAtual.Visible = False
+		SomePagAtual
 		lblPrevisaoPorcentagem.Text = "Próximo avanço 0%"
 		lblIvalido.Visible = True
 		lblIvalido.Text = "Obrigatório"
 		btOk.Enabled = False
 	End If			
+End Sub
+
+Sub SomePagAtual
+	lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 1%y, 28%x, 7%y)
+	lblPaginaAtual.SetTextColorAnimated(800, Colors.Transparent)
+End Sub
+
+Sub AparecePagAtual
+	lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 3%y, 28%x, 7%y)
+	lblPaginaAtual.SetTextColorAnimated(800, Colors.RGB(111,0,0))
 End Sub

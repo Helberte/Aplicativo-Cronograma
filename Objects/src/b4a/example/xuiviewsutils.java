@@ -18,11 +18,11 @@ public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
-public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static String  _performhapticfeedback(anywheresoftware.b4a.BA _ba,anywheresoftware.b4a.objects.B4XViewWrapper _view) throws Exception{
 RDebugUtils.currentModule="xuiviewsutils";
 if (Debug.shouldDelegate(null, "performhapticfeedback", true))

@@ -8,7 +8,7 @@ public class codigolayanotacao_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,24);
+		Debug.PushSubsStack("Activity_Create (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,24);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 24;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -34,7 +34,7 @@ finally {
 		}}
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,102);
+		Debug.PushSubsStack("Activity_KeyPress (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,102);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","activity_keypress", _keycode);}
 Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 102;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
@@ -71,7 +71,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,50);
+		Debug.PushSubsStack("Activity_Pause (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,50);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 50;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -88,7 +88,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,33);
+		Debug.PushSubsStack("Activity_Resume (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,33);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","activity_resume");}
 RemoteObject _paginas = null;
 int _i = 0;
@@ -140,7 +140,7 @@ finally {
 		}}
 public static RemoteObject  _btcancelar_click() throws Exception{
 try {
-		Debug.PushSubsStack("btCancelar_Click (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,55);
+		Debug.PushSubsStack("btCancelar_Click (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,55);
 if (RapidSub.canDelegate("btcancelar_click")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","btcancelar_click");}
  BA.debugLineNum = 55;BA.debugLine="Sub btCancelar_Click";
 Debug.ShouldStop(4194304);
@@ -165,7 +165,7 @@ finally {
 		}}
 public static void  _btok_click() throws Exception{
 try {
-		Debug.PushSubsStack("btOk_Click (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,61);
+		Debug.PushSubsStack("btOk_Click (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,61);
 if (RapidSub.canDelegate("btok_click")) { b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","btok_click"); return;}
 ResumableSub_btOk_Click rsub = new ResumableSub_btOk_Click(null);
 rsub.resume(null, null);
@@ -188,7 +188,7 @@ RemoteObject _result = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQ
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("btOk_Click (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,61);
+		Debug.PushSubsStack("btOk_Click (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,61);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -401,7 +401,7 @@ public static void  _complete(RemoteObject _result) throws Exception{
 }
 public static RemoteObject  _edanotacao_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edAnotacao_TextChanged (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,119);
+		Debug.PushSubsStack("edAnotacao_TextChanged (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,119);
 if (RapidSub.canDelegate("edanotacao_textchanged")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","edanotacao_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -426,7 +426,7 @@ finally {
 		}}
 public static RemoteObject  _edtituloanotacao_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edTituloAnotacao_TextChanged (codigolayanotacao) ","codigolayanotacao",4,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,113);
+		Debug.PushSubsStack("edTituloAnotacao_TextChanged (codigolayanotacao) ","codigolayanotacao",5,codigolayanotacao.mostCurrent.activityBA,codigolayanotacao.mostCurrent,113);
 if (RapidSub.canDelegate("edtituloanotacao_textchanged")) { return b4a.example.codigolayanotacao.remoteMe.runUserSub(false, "codigolayanotacao","edtituloanotacao_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
