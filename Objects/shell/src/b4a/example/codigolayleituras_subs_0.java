@@ -836,9 +836,9 @@ try {
 if (RapidSub.canDelegate("btadicionarleitura_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","btadicionarleitura_click");}
  BA.debugLineNum = 351;BA.debugLine="Sub btAdicionarLeitura_Click";
 Debug.ShouldStop(1073741824);
- BA.debugLineNum = 352;BA.debugLine="StartActivity(CodigoCadastroLivro)";
+ BA.debugLineNum = 352;BA.debugLine="StartActivity(act_TelaCadastro)";
 Debug.ShouldStop(-2147483648);
-codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._codigocadastrolivro.getObject())));
+codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._act_telacadastro.getObject())));
  BA.debugLineNum = 353;BA.debugLine="End Sub";
 Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");

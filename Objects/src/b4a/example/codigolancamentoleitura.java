@@ -372,6 +372,7 @@ public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+public b4a.example.act_telacadastro _act_telacadastro = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
@@ -485,16 +486,16 @@ public static String  _aparecepagatual() throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "aparecepagatual", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "aparecepagatual", null));}
-RDebugUtils.currentLine=26935296;
- //BA.debugLineNum = 26935296;BA.debugLine="Sub AparecePagAtual";
-RDebugUtils.currentLine=26935297;
- //BA.debugLineNum = 26935297;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 3%y,";
+RDebugUtils.currentLine=2818048;
+ //BA.debugLineNum = 2818048;BA.debugLine="Sub AparecePagAtual";
+RDebugUtils.currentLine=2818049;
+ //BA.debugLineNum = 2818049;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 3%y,";
 mostCurrent._lblpaginaatual.SetLayoutAnimated((int) (1200),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (12),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (28),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
-RDebugUtils.currentLine=26935298;
- //BA.debugLineNum = 26935298;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.R";
+RDebugUtils.currentLine=2818050;
+ //BA.debugLineNum = 2818050;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.R";
 mostCurrent._lblpaginaatual.SetTextColorAnimated((int) (800),anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (111),(int) (0),(int) (0)));
-RDebugUtils.currentLine=26935299;
- //BA.debugLineNum = 26935299;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2818051;
+ //BA.debugLineNum = 2818051;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btcancelar_click() throws Exception{
@@ -760,16 +761,16 @@ public static String  _somepagatual() throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "somepagatual", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "somepagatual", null));}
-RDebugUtils.currentLine=25952256;
- //BA.debugLineNum = 25952256;BA.debugLine="Sub SomePagAtual";
-RDebugUtils.currentLine=25952257;
- //BA.debugLineNum = 25952257;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 1%y,";
+RDebugUtils.currentLine=2752512;
+ //BA.debugLineNum = 2752512;BA.debugLine="Sub SomePagAtual";
+RDebugUtils.currentLine=2752513;
+ //BA.debugLineNum = 2752513;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 1%y,";
 mostCurrent._lblpaginaatual.SetLayoutAnimated((int) (1200),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (12),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (28),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
-RDebugUtils.currentLine=25952258;
- //BA.debugLineNum = 25952258;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.T";
+RDebugUtils.currentLine=2752514;
+ //BA.debugLineNum = 2752514;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.T";
 mostCurrent._lblpaginaatual.SetTextColorAnimated((int) (800),anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=25952259;
- //BA.debugLineNum = 25952259;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2752515;
+ //BA.debugLineNum = 2752515;BA.debugLine="End Sub";
 return "";
 }
 }

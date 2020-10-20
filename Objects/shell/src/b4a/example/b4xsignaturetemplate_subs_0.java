@@ -34,7 +34,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _dialogclosed(RemoteObject __ref,RemoteObject _result) throws Exception{
 try {
-		Debug.PushSubsStack("DialogClosed (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,53);
+		Debug.PushSubsStack("DialogClosed (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,53);
 if (RapidSub.canDelegate("dialogclosed")) { return __ref.runUserSub(false, "b4xsignaturetemplate","dialogclosed", __ref, _result);}
 RemoteObject _r = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XCanvas.B4XRect");
 RemoteObject _baseline = RemoteObject.createImmutable(0);
@@ -66,7 +66,7 @@ finally {
 		}}
 public static RemoteObject  _getbitmap(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("getBitmap (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,49);
+		Debug.PushSubsStack("getBitmap (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,49);
 if (RapidSub.canDelegate("getbitmap")) { return __ref.runUserSub(false, "b4xsignaturetemplate","getbitmap", __ref);}
  BA.debugLineNum = 49;BA.debugLine="Public Sub getBitmap As B4XBitmap";
 Debug.JustUpdateDeviceLine();
@@ -85,7 +85,7 @@ finally {
 		}}
 public static RemoteObject  _getpanel(RemoteObject __ref,RemoteObject _dialog) throws Exception{
 try {
-		Debug.PushSubsStack("GetPanel (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,27);
+		Debug.PushSubsStack("GetPanel (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,27);
 if (RapidSub.canDelegate("getpanel")) { return __ref.runUserSub(false, "b4xsignaturetemplate","getpanel", __ref, _dialog);}
 Debug.locals.put("Dialog", _dialog);
  BA.debugLineNum = 27;BA.debugLine="Public Sub GetPanel (Dialog As B4XDialog) As B4XVi";
@@ -105,7 +105,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,14);
+		Debug.PushSubsStack("Initialize (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,14);
 if (RapidSub.canDelegate("initialize")) { return __ref.runUserSub(false, "b4xsignaturetemplate","initialize", __ref, _ba);}
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -135,7 +135,7 @@ finally {
 		}}
 public static RemoteObject  _mbase_touch(RemoteObject __ref,RemoteObject _action,RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("mBase_Touch (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,36);
+		Debug.PushSubsStack("mBase_Touch (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,36);
 if (RapidSub.canDelegate("mbase_touch")) { return __ref.runUserSub(false, "b4xsignaturetemplate","mbase_touch", __ref, _action, _x, _y);}
 Debug.locals.put("Action", _action);
 Debug.locals.put("X", _x);
@@ -181,7 +181,7 @@ finally {
 		}}
 public static RemoteObject  _resize(RemoteObject __ref,RemoteObject _width,RemoteObject _height) throws Exception{
 try {
-		Debug.PushSubsStack("Resize (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,21);
+		Debug.PushSubsStack("Resize (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,21);
 if (RapidSub.canDelegate("resize")) { return __ref.runUserSub(false, "b4xsignaturetemplate","resize", __ref, _width, _height);}
 Debug.locals.put("Width", _width);
 Debug.locals.put("Height", _height);
@@ -205,7 +205,7 @@ finally {
 		}}
 public static RemoteObject  _show(RemoteObject __ref,RemoteObject _dialog) throws Exception{
 try {
-		Debug.PushSubsStack("Show (b4xsignaturetemplate) ","b4xsignaturetemplate",25,__ref.getField(false, "ba"),__ref,31);
+		Debug.PushSubsStack("Show (b4xsignaturetemplate) ","b4xsignaturetemplate",26,__ref.getField(false, "ba"),__ref,31);
 if (RapidSub.canDelegate("show")) { return __ref.runUserSub(false, "b4xsignaturetemplate","show", __ref, _dialog);}
 Debug.locals.put("Dialog", _dialog);
  BA.debugLineNum = 31;BA.debugLine="Private Sub Show (Dialog As B4XDialog) 'ignore";

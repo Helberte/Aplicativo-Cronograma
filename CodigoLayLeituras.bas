@@ -355,7 +355,7 @@ Sub Event_btLancar_Click
 End Sub
 
 Sub btAdicionarLeitura_Click	
-	StartActivity(CodigoCadastroLivro)	
+	StartActivity(act_TelaCadastro)	
 End Sub
 
 Sub TabStrip_PageSelected (Position As Int)

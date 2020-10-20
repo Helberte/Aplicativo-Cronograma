@@ -45,6 +45,7 @@ public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+public b4a.example.act_telacadastro _act_telacadastro = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public String  _class_globals(b4a.example.classbancodados __ref) throws Exception{
 __ref = this;

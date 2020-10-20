@@ -8,7 +8,7 @@ public class anotherprogressbar_subs_0 {
 
 public static RemoteObject  _base_resize(RemoteObject __ref,RemoteObject _width,RemoteObject _height) throws Exception{
 try {
-		Debug.PushSubsStack("Base_Resize (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,49);
+		Debug.PushSubsStack("Base_Resize (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,49);
 if (RapidSub.canDelegate("base_resize")) { return __ref.runUserSub(false, "anotherprogressbar","base_resize", __ref, _width, _height);}
 RemoteObject _v = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 Debug.locals.put("Width", _width);
@@ -53,7 +53,7 @@ finally {
 		}}
 public static void  _busyloop(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("BusyLoop (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,59);
+		Debug.PushSubsStack("BusyLoop (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,59);
 if (RapidSub.canDelegate("busyloop")) { __ref.runUserSub(false, "anotherprogressbar","busyloop", __ref); return;}
 ResumableSub_BusyLoop rsub = new ResumableSub_BusyLoop(null,__ref);
 rsub.resume(null, null);
@@ -83,7 +83,7 @@ RemoteObject _bmp = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XVi
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("BusyLoop (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,59);
+		Debug.PushSubsStack("BusyLoop (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,59);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -404,7 +404,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _designercreateview(RemoteObject __ref,RemoteObject _base,RemoteObject _lbl,RemoteObject _props) throws Exception{
 try {
-		Debug.PushSubsStack("DesignerCreateView (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,32);
+		Debug.PushSubsStack("DesignerCreateView (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,32);
 if (RapidSub.canDelegate("designercreateview")) { return __ref.runUserSub(false, "anotherprogressbar","designercreateview", __ref, _base, _lbl, _props);}
 RemoteObject _iv = RemoteObject.declareNull("anywheresoftware.b4a.objects.ImageViewWrapper");
 Debug.locals.put("Base", _base);
@@ -469,7 +469,7 @@ finally {
 		}}
 public static RemoteObject  _getvalue(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("getValue (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,148);
+		Debug.PushSubsStack("getValue (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,148);
 if (RapidSub.canDelegate("getvalue")) { return __ref.runUserSub(false, "anotherprogressbar","getvalue", __ref);}
  BA.debugLineNum = 148;BA.debugLine="Public Sub getValue As Int";
 Debug.JustUpdateDeviceLine();
@@ -488,7 +488,7 @@ finally {
 		}}
 public static RemoteObject  _getvisible(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("getVisible (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,144);
+		Debug.PushSubsStack("getVisible (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,144);
 if (RapidSub.canDelegate("getvisible")) { return __ref.runUserSub(false, "anotherprogressbar","getvisible", __ref);}
  BA.debugLineNum = 144;BA.debugLine="Public Sub getVisible As Boolean";
 Debug.JustUpdateDeviceLine();
@@ -507,7 +507,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba,RemoteObject _callback,RemoteObject _eventname) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,26);
+		Debug.PushSubsStack("Initialize (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,26);
 if (RapidSub.canDelegate("initialize")) { return __ref.runUserSub(false, "anotherprogressbar","initialize", __ref, _ba, _callback, _eventname);}
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -533,7 +533,7 @@ finally {
 		}}
 public static RemoteObject  _setvalue(RemoteObject __ref,RemoteObject _v) throws Exception{
 try {
-		Debug.PushSubsStack("setValue (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,152);
+		Debug.PushSubsStack("setValue (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,152);
 if (RapidSub.canDelegate("setvalue")) { return __ref.runUserSub(false, "anotherprogressbar","setvalue", __ref, _v);}
 Debug.locals.put("v", _v);
  BA.debugLineNum = 152;BA.debugLine="Public Sub setValue (v As Int)";
@@ -553,7 +553,7 @@ finally {
 		}}
 public static RemoteObject  _setvaluenoanimation(RemoteObject __ref,RemoteObject _v) throws Exception{
 try {
-		Debug.PushSubsStack("SetValueNoAnimation (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,156);
+		Debug.PushSubsStack("SetValueNoAnimation (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,156);
 if (RapidSub.canDelegate("setvaluenoanimation")) { return __ref.runUserSub(false, "anotherprogressbar","setvaluenoanimation", __ref, _v);}
 Debug.locals.put("v", _v);
  BA.debugLineNum = 156;BA.debugLine="Public Sub SetValueNoAnimation (v As Int)";
@@ -576,7 +576,7 @@ finally {
 		}}
 public static RemoteObject  _setvisible(RemoteObject __ref,RemoteObject _b) throws Exception{
 try {
-		Debug.PushSubsStack("setVisible (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,136);
+		Debug.PushSubsStack("setVisible (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,136);
 if (RapidSub.canDelegate("setvisible")) { return __ref.runUserSub(false, "anotherprogressbar","setvisible", __ref, _b);}
 Debug.locals.put("b", _b);
  BA.debugLineNum = 136;BA.debugLine="Public Sub setVisible(b As Boolean)";
@@ -606,7 +606,7 @@ finally {
 		}}
 public static RemoteObject  _updategraphics(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("UpdateGraphics (anotherprogressbar) ","anotherprogressbar",10,__ref.getField(false, "ba"),__ref,103);
+		Debug.PushSubsStack("UpdateGraphics (anotherprogressbar) ","anotherprogressbar",11,__ref.getField(false, "ba"),__ref,103);
 if (RapidSub.canDelegate("updategraphics")) { return __ref.runUserSub(false, "anotherprogressbar","updategraphics", __ref);}
 RemoteObject _width = RemoteObject.createImmutable(0);
 RemoteObject _template = RemoteObject.declareNull("b4a.example.bitmapcreator");
