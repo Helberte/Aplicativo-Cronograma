@@ -11,7 +11,7 @@ public static RemoteObject  _class_globals(RemoteObject __ref) throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private driver As String = \"net.sourceforge.jtds.";
 classbancodados._driver = BA.ObjectToString("net.sourceforge.jtds.jdbc.Driver");__ref.setField("_driver",classbancodados._driver);
  //BA.debugLineNum = 3;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
-classbancodados._jdbcurl = BA.ObjectToString("jdbc:jtds:sqlserver://192.168.1.105:1433;databaseName=cronograma;logintimeout=10");__ref.setField("_jdbcurl",classbancodados._jdbcurl);
+classbancodados._jdbcurl = BA.ObjectToString("jdbc:jtds:sqlserver://192.168.1.106:1433;databaseName=cronograma;logintimeout=10");__ref.setField("_jdbcurl",classbancodados._jdbcurl);
  //BA.debugLineNum = 6;BA.debugLine="Private usuario As String = \"sa\"";
 classbancodados._usuario = BA.ObjectToString("sa");__ref.setField("_usuario",classbancodados._usuario);
  //BA.debugLineNum = 7;BA.debugLine="Private senha As String = \"254685ro\"";

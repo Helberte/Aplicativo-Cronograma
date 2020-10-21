@@ -39,13 +39,6 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".codigocadastrolivro"
-			android:label="Cronograma"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
 			android:name=".codigolancamentoleitura"
 			android:label="Cronograma"
 			android:screenOrientation="unspecified">

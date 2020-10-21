@@ -8,7 +8,7 @@ public class codigolayleituras_subs_0 {
 
 public static void  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,31);
+		Debug.PushSubsStack("Activity_Create (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,31);
 if (RapidSub.canDelegate("activity_create")) { b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","activity_create", _firsttime); return;}
 ResumableSub_Activity_Create rsub = new ResumableSub_Activity_Create(null,_firsttime);
 rsub.resume(null, null);
@@ -32,7 +32,7 @@ RemoteObject _success = RemoteObject.createImmutable(false);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,31);
+		Debug.PushSubsStack("Activity_Create (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,31);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -142,7 +142,7 @@ public static void  _complete(RemoteObject _success) throws Exception{
 }
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,359);
+		Debug.PushSubsStack("Activity_KeyPress (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,359);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","activity_keypress", _keycode);}
 RemoteObject _resp = RemoteObject.createImmutable(0);
 Debug.locals.put("KeyCode", _keycode);
@@ -188,7 +188,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,75);
+		Debug.PushSubsStack("Activity_Pause (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,75);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 75;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -205,7 +205,7 @@ finally {
 		}}
 public static void  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,62);
+		Debug.PushSubsStack("Activity_Resume (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,62);
 if (RapidSub.canDelegate("activity_resume")) { b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","activity_resume"); return;}
 ResumableSub_Activity_Resume rsub = new ResumableSub_Activity_Resume(null);
 rsub.resume(null, null);
@@ -227,7 +227,7 @@ RemoteObject _success = RemoteObject.createImmutable(false);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,62);
+		Debug.PushSubsStack("Activity_Resume (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,62);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -313,7 +313,7 @@ finally {
 }
 public static RemoteObject  _atualiza_leituras() throws Exception{
 try {
-		Debug.PushSubsStack("Atualiza_leituras (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,79);
+		Debug.PushSubsStack("Atualiza_leituras (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,79);
 if (RapidSub.canDelegate("atualiza_leituras")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","atualiza_leituras");}
 ResumableSub_Atualiza_leituras rsub = new ResumableSub_Atualiza_leituras(null);
 rsub.remoteResumableSub = anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSubForFilter();
@@ -354,7 +354,7 @@ int limit45;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Atualiza_leituras (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,79);
+		Debug.PushSubsStack("Atualiza_leituras (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,79);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -832,7 +832,7 @@ finally {
 }
 public static RemoteObject  _btadicionarleitura_click() throws Exception{
 try {
-		Debug.PushSubsStack("btAdicionarLeitura_Click (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,351);
+		Debug.PushSubsStack("btAdicionarLeitura_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,351);
 if (RapidSub.canDelegate("btadicionarleitura_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","btadicionarleitura_click");}
  BA.debugLineNum = 351;BA.debugLine="Sub btAdicionarLeitura_Click";
 Debug.ShouldStop(1073741824);
@@ -851,7 +851,7 @@ finally {
 		}}
 public static RemoteObject  _event_btanotar_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_btAnotar_Click (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,252);
+		Debug.PushSubsStack("Event_btAnotar_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,252);
 if (RapidSub.canDelegate("event_btanotar_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","event_btanotar_click");}
 RemoteObject _b = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _informacoes = RemoteObject.createImmutable("");
@@ -966,7 +966,7 @@ finally {
 		}}
 public static RemoteObject  _event_btlancar_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_btLancar_Click (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,294);
+		Debug.PushSubsStack("Event_btLancar_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,294);
 if (RapidSub.canDelegate("event_btlancar_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","event_btlancar_click");}
 RemoteObject _titulolivro = RemoteObject.createImmutable("");
 RemoteObject _nomeusuario = RemoteObject.createImmutable("");
@@ -1118,13 +1118,13 @@ finally {
 		}}
 public static RemoteObject  _event_lbl_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_lbl_Click (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,58);
+		Debug.PushSubsStack("Event_lbl_Click (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,58);
 if (RapidSub.canDelegate("event_lbl_click")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","event_lbl_click");}
  BA.debugLineNum = 58;BA.debugLine="Sub Event_lbl_Click";
 Debug.ShouldStop(33554432);
- BA.debugLineNum = 59;BA.debugLine="StartActivity(CodigoCadastroLivro)";
+ BA.debugLineNum = 59;BA.debugLine="StartActivity(act_TelaCadastro)";
 Debug.ShouldStop(67108864);
-codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._codigocadastrolivro.getObject())));
+codigolayleituras.mostCurrent.__c.runVoidMethod ("StartActivity",codigolayleituras.processBA,(Object)((codigolayleituras.mostCurrent._act_telacadastro.getObject())));
  BA.debugLineNum = 60;BA.debugLine="End Sub";
 Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
@@ -1171,7 +1171,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _tabstrip_pageselected(RemoteObject _position) throws Exception{
 try {
-		Debug.PushSubsStack("TabStrip_PageSelected (codigolayleituras) ","codigolayleituras",6,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,355);
+		Debug.PushSubsStack("TabStrip_PageSelected (codigolayleituras) ","codigolayleituras",5,codigolayleituras.mostCurrent.activityBA,codigolayleituras.mostCurrent,355);
 if (RapidSub.canDelegate("tabstrip_pageselected")) { return b4a.example.codigolayleituras.remoteMe.runUserSub(false, "codigolayleituras","tabstrip_pageselected", _position);}
 Debug.locals.put("Position", _position);
  BA.debugLineNum = 355;BA.debugLine="Sub TabStrip_PageSelected (Position As Int)";

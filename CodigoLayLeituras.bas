@@ -62,7 +62,7 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Event_lbl_Click
-	StartActivity(CodigoCadastroLivro)
+	StartActivity(act_TelaCadastro)
 End Sub
 
 Sub Activity_Resume

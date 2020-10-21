@@ -356,7 +356,6 @@ public b4a.example.classbancodados _funcoes = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lblmostrarsenha = null;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
-public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;

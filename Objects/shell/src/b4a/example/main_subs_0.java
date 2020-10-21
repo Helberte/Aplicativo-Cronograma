@@ -75,7 +75,6 @@ public static void initializeProcessGlobals() {
 		try {
 		        main_subs_0._process_globals();
 codigocadastro_subs_0._process_globals();
-codigocadastrolivro_subs_0._process_globals();
 codigolancamentoleitura_subs_0._process_globals();
 codigolayanotacao_subs_0._process_globals();
 codigolayleituras_subs_0._process_globals();
@@ -86,7 +85,6 @@ xuiviewsutils_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 classbancodados.myClass = BA.getDeviceClass ("b4a.example.classbancodados");
 codigocadastro.myClass = BA.getDeviceClass ("b4a.example.codigocadastro");
-codigocadastrolivro.myClass = BA.getDeviceClass ("b4a.example.codigocadastrolivro");
 codigolancamentoleitura.myClass = BA.getDeviceClass ("b4a.example.codigolancamentoleitura");
 codigolayanotacao.myClass = BA.getDeviceClass ("b4a.example.codigolayanotacao");
 codigolayleituras.myClass = BA.getDeviceClass ("b4a.example.codigolayleituras");

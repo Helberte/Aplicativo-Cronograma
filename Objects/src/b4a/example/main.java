@@ -353,7 +353,6 @@ public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
 vis = vis | (codigocadastro.mostCurrent != null);
-vis = vis | (codigocadastrolivro.mostCurrent != null);
 vis = vis | (codigolancamentoleitura.mostCurrent != null);
 vis = vis | (codigolayanotacao.mostCurrent != null);
 vis = vis | (codigolayleituras.mostCurrent != null);
@@ -389,18 +388,6 @@ public static void killProgram() {
 			}
             else {
                 BA ba = killProgramHelper(codigocadastro.mostCurrent == null ? null : codigocadastro.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (codigocadastrolivro.previousOne != null) {
-				__a = codigocadastrolivro.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(codigocadastrolivro.mostCurrent == null ? null : codigocadastrolivro.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -474,7 +461,6 @@ public static int _id_do_usuario = 0;
 public static boolean _cadastroualgo = false;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;

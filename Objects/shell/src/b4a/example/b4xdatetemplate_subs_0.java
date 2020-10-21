@@ -8,7 +8,7 @@ public class b4xdatetemplate_subs_0 {
 
 public static RemoteObject  _btnmonth_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("btnMonth_Click (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,147);
+		Debug.PushSubsStack("btnMonth_Click (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,147);
 if (RapidSub.canDelegate("btnmonth_click")) { return __ref.runUserSub(false, "b4xdatetemplate","btnmonth_click", __ref);}
 RemoteObject _btn = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 RemoteObject _m = RemoteObject.createImmutable(0);
@@ -39,7 +39,7 @@ finally {
 		}}
 public static RemoteObject  _btnyear_click(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("btnYear_Click (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,141);
+		Debug.PushSubsStack("btnYear_Click (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,141);
 if (RapidSub.canDelegate("btnyear_click")) { return __ref.runUserSub(false, "b4xdatetemplate","btnyear_click", __ref);}
 RemoteObject _btn = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
  BA.debugLineNum = 141;BA.debugLine="Private Sub btnYear_Click";
@@ -136,7 +136,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _dayspanefg_touch(RemoteObject __ref,RemoteObject _action,RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("DaysPaneFg_Touch (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,154);
+		Debug.PushSubsStack("DaysPaneFg_Touch (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,154);
 if (RapidSub.canDelegate("dayspanefg_touch")) { return __ref.runUserSub(false, "b4xdatetemplate","dayspanefg_touch", __ref, _action, _x, _y);}
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 Debug.locals.put("Action", _action);
@@ -163,7 +163,7 @@ finally {
 		}}
 public static RemoteObject  _dialogclosed(RemoteObject __ref,RemoteObject _result) throws Exception{
 try {
-		Debug.PushSubsStack("DialogClosed (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,176);
+		Debug.PushSubsStack("DialogClosed (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,176);
 if (RapidSub.canDelegate("dialogclosed")) { return __ref.runUserSub(false, "b4xdatetemplate","dialogclosed", __ref, _result);}
 Debug.locals.put("Result", _result);
  BA.debugLineNum = 176;BA.debugLine="Private Sub DialogClosed(Result As Int) 'ignore";
@@ -180,7 +180,7 @@ finally {
 		}}
 public static RemoteObject  _drawbox(RemoteObject __ref,RemoteObject _c,RemoteObject _clr,RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("DrawBox (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,82);
+		Debug.PushSubsStack("DrawBox (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,82);
 if (RapidSub.canDelegate("drawbox")) { return __ref.runUserSub(false, "b4xdatetemplate","drawbox", __ref, _c, _clr, _x, _y);}
 RemoteObject _r = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XCanvas.B4XRect");
 Debug.locals.put("c", _c);
@@ -210,7 +210,7 @@ finally {
 		}}
 public static RemoteObject  _drawdays(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("DrawDays (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,57);
+		Debug.PushSubsStack("DrawDays (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,57);
 if (RapidSub.canDelegate("drawdays")) { return __ref.runUserSub(false, "b4xdatetemplate","drawdays", __ref);}
 RemoteObject _firstdayofmonth = RemoteObject.createImmutable(0L);
 RemoteObject _daysfont = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont");
@@ -290,7 +290,7 @@ finally {
 		}}
 public static RemoteObject  _getdate(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("getDate (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,89);
+		Debug.PushSubsStack("getDate (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,89);
 if (RapidSub.canDelegate("getdate")) { return __ref.runUserSub(false, "b4xdatetemplate","getdate", __ref);}
  BA.debugLineNum = 89;BA.debugLine="Public Sub getDate As Long";
 Debug.JustUpdateDeviceLine();
@@ -309,7 +309,7 @@ finally {
 		}}
 public static RemoteObject  _getpanel(RemoteObject __ref,RemoteObject _dialog) throws Exception{
 try {
-		Debug.PushSubsStack("GetPanel (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,159);
+		Debug.PushSubsStack("GetPanel (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,159);
 if (RapidSub.canDelegate("getpanel")) { return __ref.runUserSub(false, "b4xdatetemplate","getpanel", __ref, _dialog);}
 Debug.locals.put("Dialog", _dialog);
  BA.debugLineNum = 159;BA.debugLine="Public Sub GetPanel (Dialog As B4XDialog) As B4XVi";
@@ -329,7 +329,7 @@ finally {
 		}}
 public static RemoteObject  _handlemouse(RemoteObject __ref,RemoteObject _x,RemoteObject _y,RemoteObject _move) throws Exception{
 try {
-		Debug.PushSubsStack("HandleMouse (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,114);
+		Debug.PushSubsStack("HandleMouse (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,114);
 if (RapidSub.canDelegate("handlemouse")) { return __ref.runUserSub(false, "b4xdatetemplate","handlemouse", __ref, _x, _y, _move);}
 RemoteObject _boxx = RemoteObject.createImmutable(0);
 RemoteObject _boxy = RemoteObject.createImmutable(0);
@@ -400,7 +400,7 @@ finally {
 		}}
 public static RemoteObject  _hide(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Hide (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,136);
+		Debug.PushSubsStack("Hide (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,136);
 if (RapidSub.canDelegate("hide")) { return __ref.runUserSub(false, "b4xdatetemplate","hide", __ref);}
  BA.debugLineNum = 136;BA.debugLine="Private Sub Hide";
 Debug.JustUpdateDeviceLine();
@@ -419,7 +419,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,34);
+		Debug.PushSubsStack("Initialize (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,34);
 if (RapidSub.canDelegate("initialize")) { return __ref.runUserSub(false, "b4xdatetemplate","initialize", __ref, _ba);}
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -482,7 +482,7 @@ finally {
 		}}
 public static RemoteObject  _selectday(RemoteObject __ref,RemoteObject _day) throws Exception{
 try {
-		Debug.PushSubsStack("SelectDay (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,106);
+		Debug.PushSubsStack("SelectDay (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,106);
 if (RapidSub.canDelegate("selectday")) { return __ref.runUserSub(false, "b4xdatetemplate","selectday", __ref, _day);}
 Debug.locals.put("day", _day);
  BA.debugLineNum = 106;BA.debugLine="Private Sub SelectDay(day As Int)";
@@ -511,7 +511,7 @@ finally {
 		}}
 public static RemoteObject  _setdate(RemoteObject __ref,RemoteObject _date) throws Exception{
 try {
-		Debug.PushSubsStack("setDate (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,93);
+		Debug.PushSubsStack("setDate (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,93);
 if (RapidSub.canDelegate("setdate")) { return __ref.runUserSub(false, "b4xdatetemplate","setdate", __ref, _date);}
 Debug.locals.put("date", _date);
  BA.debugLineNum = 93;BA.debugLine="Public Sub setDate(date As Long)";
@@ -553,7 +553,7 @@ finally {
 		}}
 public static RemoteObject  _show(RemoteObject __ref,RemoteObject _dialog) throws Exception{
 try {
-		Debug.PushSubsStack("Show (b4xdatetemplate) ","b4xdatetemplate",15,__ref.getField(false, "ba"),__ref,163);
+		Debug.PushSubsStack("Show (b4xdatetemplate) ","b4xdatetemplate",14,__ref.getField(false, "ba"),__ref,163);
 if (RapidSub.canDelegate("show")) { return __ref.runUserSub(false, "b4xdatetemplate","show", __ref, _dialog);}
 RemoteObject _days = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _daysfont = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont");

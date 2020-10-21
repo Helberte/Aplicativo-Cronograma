@@ -24,7 +24,7 @@ begin
 		begin
 
 			select l.nome,
-				   CONVERT(varchar(10), t.data_inicial, 101) [data_inicial],
+				   CONVERT(varchar(10), t.data_inicial, 103) [data_inicial],
 				   CONVERT(varchar(10), t.data_prevista_final, 103) [data_prevista_final], 
 				   t.paginas_ou_cap_lidos, 
 				   t.quantidade_paginas,

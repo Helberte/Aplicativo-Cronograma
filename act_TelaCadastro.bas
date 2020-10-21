@@ -31,7 +31,12 @@ Sub Globals
 	Dim lblMaximoDigitosAutor As 			Label
 	Dim lblMaximoDigitosPagOuCap As			Label
 	Dim lblMaximoDigitosMetaPagOuCap  As	Label
-			
+	Dim lblIncongruenciaTitulo As			Label
+	Dim lblIncongruenciaAutor As			Label
+	Dim lblIncongruenciaMetaPagOuCap As		Label
+	Dim lblIncongruenciaPagOuCap As			Label
+	
+	
 	Dim btCancelar As 						Button
 	Dim btSalvar As 						Button	
 	Dim btAddFoto As 						Button	
@@ -79,6 +84,10 @@ Sub Activity_Create(FirstTime As Boolean)
 	lblMaximoDigitosAutor.Initialize("")
 	lblMaximoDigitosPagOuCap.Initialize("")
 	lblMaximoDigitosMetaPagOuCap.Initialize("")
+	lblIncongruenciaTitulo.Initialize("")
+	lblIncongruenciaAutor.Initialize("")
+	lblIncongruenciaMetaPagOuCap.Initialize("")
+	lblIncongruenciaPagOuCap.Initialize("")		
 		
 	btCancelar.Initialize ("Event_btCancelar")
 	btSalvar.Initialize("Event_btSalvar")	
@@ -91,12 +100,27 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	banco.Initialize
 	
-	scrol.Initialize( 500 )
-'	cc.Initialize( "CC" )			
+	scrol.Initialize( 500 )		
+	Main.fotos.Initialize("CC")
 	
 	Dim etiqueta As Label
 	etiqueta.Initialize("")	
 	
+	
+	lblMaximoDigitosTitulo.Text = "0/100 "
+	lblMaximoDigitosAutor.Text = "0/100 "
+	lblMaximoDigitosPagOuCap.Text = "0/4 "
+	lblMaximoDigitosMetaPagOuCap.Text = "0/4 "
+	
+	lblMaximoDigitosTitulo.TextColor = Colors.Black
+	lblMaximoDigitosAutor.TextColor = Colors.Black
+	lblMaximoDigitosPagOuCap.TextColor = Colors.Black
+	lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Black
+	
+	lblIncongruenciaAutor.TextColor = Colors.Red
+	lblIncongruenciaMetaPagOuCap.TextColor = Colors.Red
+	lblIncongruenciaPagOuCap.TextColor = Colors.Red
+	lblIncongruenciaTitulo.TextColor = Colors.Red			
 	
 	panelCabecalho.Color = Colors.RGB(0,165,255)
 	Activity.AddView(panelCabecalho, 0%x, 0%y, 100%x, 10%y)
@@ -146,7 +170,11 @@ Sub Activity_Create(FirstTime As Boolean)
 	scrol.Panel.AddView(lblDadosLivro, 0%x, 0%y, 100%x, 5%y)
 	
 	painelImagem.Width = 98%x
+	
+	
+	
 	Dim esquerda As Int = (100%x - painelImagem.Width) / 2
+	Dim tamanhoEdits As Int = painelImagem.Width
 	
 	scrol.Panel.AddView(painelImagem, esquerda , lblDadosLivro.Top + lblDadosLivro.Height, 98%x, 30%y)
 	
@@ -157,18 +185,26 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	scrol.Panel.Height = painelImagem.Top + painelImagem.Height
 	
-	scrol.Panel.AddView(panelEdits, esquerda, painelImagem.Top + painelImagem.Height + 5dip, painelImagem.Width, 8%y)
+	scrol.Panel.AddView(panelEdits, esquerda, painelImagem.Top + painelImagem.Height + 5dip, tamanhoEdits, 8%y)
 	panelEdits.LoadLayout("Lay_edTituloLivro")
 	scrol.Panel.Height = panelEdits.Top + panelEdits.Height
 	
 	
-	etiqueta = AddLabelMaxDigitos(lblMaximoDigitosTitulo, panelEdits.Top + panelEdits.Height, esquerda)
+	Dim tamanhoLabelObrigatorio As Int = (100%x / 2) - esquerda
+	Dim esquerdaDosLabels As Int = esquerda + tamanhoLabelObrigatorio
+	Dim tamanhoDosLabels As Int = panelEdits.Width - tamanhoLabelObrigatorio
+	
+	lblIncongruenciaTitulo.Text = "Obrigatório"
+	AddLabel(Gravity.LEFT, lblIncongruenciaTitulo, panelEdits.Top + panelEdits.Height, esquerda, tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosTitulo, panelEdits.Top + panelEdits.Height, esquerdaDosLabels, tamanhoDosLabels)
 	scrol.Panel.Height = etiqueta.Top + etiqueta.Height	
 	
-	scrol.Panel.AddView(panelEdAutorLivro, esquerda, etiqueta.Top + etiqueta.Height + 5dip, etiqueta.Width, 8%y)
+	scrol.Panel.AddView(panelEdAutorLivro, esquerda, etiqueta.Top + etiqueta.Height + 5dip, tamanhoEdits, 8%y)
 	panelEdAutorLivro.LoadLayout("Lay_edAutorLivro")
-
-	etiqueta = AddLabelMaxDigitos(lblMaximoDigitosAutor, panelEdAutorLivro.Top + panelEdAutorLivro.Height, esquerda)
+	
+	lblIncongruenciaAutor.Text = "Obrigatório"
+	AddLabel(Gravity.LEFT, lblIncongruenciaAutor,panelEdAutorLivro.Top + panelEdAutorLivro.Height, esquerda,tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosAutor, panelEdAutorLivro.Top + panelEdAutorLivro.Height, esquerdaDosLabels, tamanhoDosLabels)
 	scrol.Panel.Height = etiqueta.Top + etiqueta.Height	
 		
 	lblTipoLeitura.Color = Colors.Transparent
@@ -199,11 +235,13 @@ Sub Activity_Create(FirstTime As Boolean)
 	scrol.Panel.AddView(radCapitulo, radPagina.Width, lblTipoLeitura.Top + lblTipoLeitura.Height + 5dip, 50%x, 5%y)
 	scrol.Panel.Height = radPagina.Top + radPagina.Height
 	 
-	scrol.Panel.AddView(panelEdPaginasOuCap, esquerda, radCapitulo.Top + radCapitulo.Height + 5dip, panelEdits.Width, 8%y)
+	scrol.Panel.AddView(panelEdPaginasOuCap, esquerda, radCapitulo.Top + radCapitulo.Height + 5dip, tamanhoEdits, 8%y)
 	panelEdPaginasOuCap.LoadLayout("Lay_edPagOuCapitulo")
-				
-	etiqueta = AddLabelMaxDigitos(lblMaximoDigitosPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, esquerda)
-	scrol.Panel.Height = etiqueta.Top + etiqueta.Height
+			
+	lblIncongruenciaPagOuCap.Text = "Obrigatório"
+	AddLabel(Gravity.LEFT, lblIncongruenciaPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, esquerda, tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, esquerdaDosLabels, tamanhoDosLabels)
+	scrol.Panel.Height = etiqueta.Top + etiqueta.Height 
 
 	lblMeta.Color = Colors.Transparent
 	lblMeta.Text = "Meta - Quantas páginas / cap ler por dia?"
@@ -218,10 +256,12 @@ Sub Activity_Create(FirstTime As Boolean)
 	scrol.Panel.AddView(lblMeta, 0%x, etiqueta.Top + etiqueta.Height + 5dip, 100%x, 5%y)
 	scrol.Panel.Height = lblMeta.Top + lblMeta.Height
 	
-	scrol.Panel.AddView(panelMeta, esquerda, lblMeta.Top + lblMeta.Height + 5dip, panelEdits.Width, 8%y)
+	scrol.Panel.AddView(panelMeta, esquerda, lblMeta.Top + lblMeta.Height + 5dip, tamanhoEdits, 8%y)
 	panelMeta.LoadLayout("Lay_edMetaPagCap")
 		
-	etiqueta = AddLabelMaxDigitos(lblMaximoDigitosMetaPagOuCap, panelMeta.Top + panelMeta.Height, esquerda)
+	lblIncongruenciaMetaPagOuCap.Text = "Obrigatório"
+	AddLabel(Gravity.LEFT, lblIncongruenciaMetaPagOuCap, panelMeta.Top + panelMeta.Height, esquerda, tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosMetaPagOuCap, panelMeta.Top + panelMeta.Height, esquerdaDosLabels, tamanhoDosLabels)
 	scrol.Panel.Height = etiqueta.Top + etiqueta.Height
 		
 	lblPrevisaoTermino.Color = Colors.Transparent
@@ -246,16 +286,23 @@ Sub Activity_Create(FirstTime As Boolean)
 	lblDataPrevisao.Text = hoje
 	
 	lblQuantidadeDias.Visible = False
+	lblMaximoDigitosTitulo.Visible = False
+	lblMaximoDigitosAutor.Visible = False
+	lblMaximoDigitosPagOuCap.Visible = False
+	lblMaximoDigitosMetaPagOuCap.Visible = False
+	
+	lblIncongruenciaAutor.Visible = False
+	lblIncongruenciaMetaPagOuCap.Visible = False
+	lblIncongruenciaPagOuCap.Visible = False
+	lblIncongruenciaTitulo.Visible = False
 End Sub
 
-Sub AddLabelMaxDigitos(etiqueta As Label, topo As Int, esquerda As Int) As Label
+Sub AddLabel(gravidade As Object, etiqueta As Label, topo As Int, esquerda As Int, tamanho As Int) As Label
 	
-	etiqueta.Text = "1/100  "
-	etiqueta.Gravity = Bit.Or(Gravity.RIGHT, Gravity.CENTER_VERTICAL)
-	etiqueta.TextColor = Colors.Black
+	etiqueta.Gravity = Bit.Or(gravidade, Gravity.CENTER_VERTICAL)
 	etiqueta.Color = Colors.Transparent
 	
-	scrol.Panel.AddView(etiqueta, esquerda, topo, panelEdits.Width, 4%y)
+	scrol.Panel.AddView(etiqueta, esquerda, topo, tamanho, 4%y)
 	Return etiqueta
 End Sub
 
@@ -401,15 +448,39 @@ Sub edB4XFloatAutorLivro_TextChanged (Old As String, New As String)
 	If New.IndexOf("'") >= 0 Then
 		edB4XFloatAutorLivro.Text = edB4XFloatAutorLivro.Text.Replace("'","")
 	End If
+	
+	If New.Length > 100 Then
+		lblIncongruenciaAutor.Visible = True
+		lblIncongruenciaAutor.Text = " Texto inválido"
+		lblMaximoDigitosAutor.TextColor = Colors.Red
+	Else
+		lblIncongruenciaAutor.Visible = False
+		lblMaximoDigitosAutor.TextColor = Colors.Black
+	End If
+	lblMaximoDigitosAutor.Text = New.Length & "/100 "
 End Sub
 
 Sub edB4XFloatNomeLivro_TextChanged (Old As String, New As String)
 	If New.IndexOf("'") >= 0 Then
 		edB4XFloatNomeLivro.Text = edB4XFloatNomeLivro.Text.Replace("'","")
 	End If
+	
+	If New.Length > 100 Then
+		lblIncongruenciaTitulo.Visible = True
+		lblIncongruenciaTitulo.Text = " Texto inválido"
+		lblMaximoDigitosTitulo.TextColor = Colors.Red
+	Else
+		lblIncongruenciaTitulo.Visible = False
+		lblMaximoDigitosTitulo.TextColor = Colors.Black
+	End If
+	
+	lblMaximoDigitosTitulo.Text = New.Length & "/100 "			
+	
 End Sub
 
 Sub edB4XFloatMetaPagCap_TextChanged (Old As String, New As String)
+	
+	lblMaximoDigitosMetaPagOuCap.Text = New.Length & "/4 "
 	
 	If edB4XFloatMetaPagCap.Text.Trim <> "" Then
 		
@@ -430,19 +501,31 @@ Sub edB4XFloatMetaPagCap_TextChanged (Old As String, New As String)
 							
 			dataPrevistaFinal = data
 			
-			lblPrevisaoTermino.Text = data
+			lblDataPrevisao.Text = "Dia: " & data
 		Else
-			lblPrevisaoTermino.Text = hoje
+			lblDataPrevisao.Text = hoje
 			lblQuantidadeDias.Visible = False
 		End If
 			
 	Else
-		lblPrevisaoTermino.Text = hoje
+		lblDataPrevisao.Text = hoje
 		lblQuantidadeDias.Visible = False
+	End If
+	
+	If New.Length > 4 Then
+		lblIncongruenciaMetaPagOuCap.Visible = True
+		lblIncongruenciaMetaPagOuCap.Text = " Texto inválido"
+		lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Red
+	Else
+		lblIncongruenciaMetaPagOuCap.Visible = False
+		lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Black
 	End If
 End Sub
 
 Sub edB4XFloatPagOuCap_TextChanged (Old As String, New As String)
+	
+	lblMaximoDigitosPagOuCap.Text = New.Length & "/4 "
+	
 	If edB4XFloatMetaPagCap.Text.Trim <> "" Then
 		
 		Dim meta As Int
@@ -464,14 +547,55 @@ Sub edB4XFloatPagOuCap_TextChanged (Old As String, New As String)
 			
 			dataPrevistaFinal = data
 			
-			lblPrevisaoTermino.Text = data
+			lblDataPrevisao.Text = "Dia: " & data
 		Else
-			lblPrevisaoTermino.Text = hoje
+			lblDataPrevisao.Text = hoje
 			lblQuantidadeDias.Visible = False
 		End If
 					
 	Else
-		lblPrevisaoTermino.Text = hoje
+		lblDataPrevisao.Text = hoje
 		lblQuantidadeDias.Visible = False
+	End If
+	
+	If New.Length > 4 Then
+		lblIncongruenciaPagOuCap.Visible = True
+		lblIncongruenciaPagOuCap.Text = " Texto inválido"
+		lblMaximoDigitosPagOuCap.TextColor = Colors.Red
+	Else
+		lblIncongruenciaPagOuCap.Visible = False
+		lblMaximoDigitosPagOuCap.TextColor = Colors.Black
+	End If
+End Sub
+
+Sub edB4XFloatNomeLivro_FocusChanged (HasFocus As Boolean)
+	If HasFocus Then
+		lblMaximoDigitosTitulo.Visible = True
+	Else
+		lblMaximoDigitosTitulo.Visible = False
+	End If
+End Sub
+
+Sub edB4XFloatAutorLivro_FocusChanged (HasFocus As Boolean)
+	If HasFocus Then
+		lblMaximoDigitosAutor.Visible = True
+	Else
+		lblMaximoDigitosAutor.Visible = False
+	End If
+End Sub
+
+Sub edB4XFloatPagOuCap_FocusChanged (HasFocus As Boolean)
+	If HasFocus Then
+		lblMaximoDigitosPagOuCap.Visible = True
+	Else
+		lblMaximoDigitosPagOuCap.Visible = False
+	End If
+End Sub
+
+Sub edB4XFloatMetaPagCap_FocusChanged (HasFocus As Boolean)
+	If HasFocus Then
+		lblMaximoDigitosMetaPagOuCap.Visible = True
+	Else
+		lblMaximoDigitosMetaPagOuCap.Visible = False
 	End If
 End Sub
