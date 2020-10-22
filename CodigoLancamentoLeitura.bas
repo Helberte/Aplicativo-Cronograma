@@ -44,8 +44,13 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	lblTituloLivro.Text = tituloLivro
 	lblNomeUsuario.Text = nomeUsuario
-	edPaginaAtual.Text = paginaAtual + meta
 	edTotalPaginas.Text = totalPaginas
+	
+	If paginaAtual + meta > totalPaginas Then
+		edPaginaAtual.Text = totalPaginas
+	Else
+		edPaginaAtual.Text = paginaAtual + meta
+	End If	
 	
 	edPaginaAtual.RequestFocus
 	
@@ -108,11 +113,30 @@ Sub btOk_Click
 			Main.CadastrouAlgo = True
 			Sleep(100)
 			Activity.Finish
-		Else if Result.GetInt("RESULTADO") = 0 Then
-			Sleep(100)
-			Main.CadastrouAlgo = True			
+		Else if Result.GetInt("RESULTADO") = 0 Then								
 			ToastMessageShow("Há algo errado na atualização!",True)
+			Main.CadastrouAlgo = True
+			Sleep(100)
 			Activity.Finish
+		else if Result.GetInt("RESULTADO") = 2 Then
+			cmd = "exec sp_adiciona_leitura_concluida " & Main.Id_do_Usuario & ", " & idLivro & ""
+			
+			Wait For (banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
+			
+			Result.NextRow
+			
+			If Result.GetInt("RESULTADO") = 1 Then
+				ToastMessageShow("Leitura concluída",True)
+				Main.CadastrouAlgo = True
+				Sleep(200)
+				Activity.Finish
+			else if Result.GetInt("RESULTADO") = 0 Then
+				ToastMessageShow("Infelizmente algo deu errado.",True)
+				Main.CadastrouAlgo = True
+				Sleep(200)
+				Activity.Finish
+			End If		
+			
 		End If
 		
 	Catch

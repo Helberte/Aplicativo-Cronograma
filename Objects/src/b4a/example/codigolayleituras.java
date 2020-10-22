@@ -511,8 +511,8 @@ int _topo = 0;
 int _topolabel = 0;
 int _i = 0;
 int _altura = 0;
-int step45;
-int limit45;
+int step50;
+int limit50;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
@@ -534,15 +534,15 @@ if (true) break;
 
 case 1:
 //try
-this.state = 27;
-this.catchState = 26;
+this.state = 31;
+this.catchState = 30;
 this.state = 3;
 if (true) break;
 
 case 3:
 //C
 this.state = 4;
-this.catchState = 26;
+this.catchState = 30;
 RDebugUtils.currentLine=2949124;
  //BA.debugLineNum = 2949124;BA.debugLine="Dim cmd As String";
 _cmd = "";
@@ -552,9 +552,9 @@ _cmd = "exec sp_atualiza_leituras "+BA.NumberToString(parent.mostCurrent._main._
 RDebugUtils.currentLine=2949128;
  //BA.debugLineNum = 2949128;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete (";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolayleituras", "atualiza_leituras"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
-this.state = 28;
+this.state = 32;
 return;
-case 28:
+case 32:
 //C
 this.state = 4;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
@@ -568,86 +568,115 @@ if (true) break;
 
 case 4:
 //if
-this.state = 24;
+this.state = 28;
 if (_result.GetInt("RESULTADO")==2) { 
 this.state = 6;
 }else 
-{RDebugUtils.currentLine=2949147;
- //BA.debugLineNum = 2949147;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 0 Then";
+{RDebugUtils.currentLine=2949153;
+ //BA.debugLineNum = 2949153;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 0 Then";
 if (_result.GetInt("RESULTADO")==0) { 
-this.state = 8;
+this.state = 12;
 }else 
-{RDebugUtils.currentLine=2949152;
- //BA.debugLineNum = 2949152;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 1 Then";
+{RDebugUtils.currentLine=2949158;
+ //BA.debugLineNum = 2949158;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 1 Then";
 if (_result.GetInt("RESULTADO")==1) { 
-this.state = 10;
+this.state = 14;
 }else {
-this.state = 23;
+this.state = 27;
 }}}
 if (true) break;
 
 case 6:
 //C
-this.state = 24;
+this.state = 7;
 RDebugUtils.currentLine=2949134;
- //BA.debugLineNum = 2949134;BA.debugLine="btAdicionarLeitura.Visible = False";
-parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2949136;
- //BA.debugLineNum = 2949136;BA.debugLine="lbl_Inicial_Leitura.Text = Result.GetString(\"ME";
-parent.mostCurrent._lbl_inicial_leitura.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
-RDebugUtils.currentLine=2949137;
- //BA.debugLineNum = 2949137;BA.debugLine="lbl_Inicial_Leitura.TextColor = Colors.Black";
-parent.mostCurrent._lbl_inicial_leitura.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=2949138;
- //BA.debugLineNum = 2949138;BA.debugLine="lbl_Inicial_Leitura.TextSize = 20";
-parent.mostCurrent._lbl_inicial_leitura.setTextSize((float) (20));
-RDebugUtils.currentLine=2949140;
- //BA.debugLineNum = 2949140;BA.debugLine="scrollView1.Initialize (500)";
-parent.mostCurrent._scrollview1.Initialize(mostCurrent.activityBA,(int) (500));
-RDebugUtils.currentLine=2949141;
- //BA.debugLineNum = 2949141;BA.debugLine="Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%";
-parent.mostCurrent._panel_lendo.AddView((android.view.View)(parent.mostCurrent._scrollview1.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=2949143;
- //BA.debugLineNum = 2949143;BA.debugLine="scrollView1.Panel.AddView(lbl_Inicial_Leitura,";
-parent.mostCurrent._scrollview1.getPanel().AddView((android.view.View)(parent.mostCurrent._lbl_inicial_leitura.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (10),mostCurrent.activityBA));
-RDebugUtils.currentLine=2949146;
- //BA.debugLineNum = 2949146;BA.debugLine="Return True";
-if (true) {
-anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
- if (true) break;
+ //BA.debugLineNum = 2949134;BA.debugLine="If temPanel Then";
+if (true) break;
 
-case 8:
+case 7:
+//if
+this.state = 10;
+if (parent._tempanel) { 
+this.state = 9;
+}if (true) break;
+
+case 9:
 //C
-this.state = 24;
-RDebugUtils.currentLine=2949148;
- //BA.debugLineNum = 2949148;BA.debugLine="btAdicionarLeitura.Visible = False";
-parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2949150;
- //BA.debugLineNum = 2949150;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"),T";
-anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2949151;
- //BA.debugLineNum = 2949151;BA.debugLine="Return True";
-if (true) {
-anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
+this.state = 10;
+RDebugUtils.currentLine=2949135;
+ //BA.debugLineNum = 2949135;BA.debugLine="scrollView1.Panel.RemoveView";
+parent.mostCurrent._scrollview1.getPanel().RemoveView();
+RDebugUtils.currentLine=2949136;
+ //BA.debugLineNum = 2949136;BA.debugLine="temPanel = False";
+parent._tempanel = anywheresoftware.b4a.keywords.Common.False;
+RDebugUtils.currentLine=2949137;
+ //BA.debugLineNum = 2949137;BA.debugLine="lbl_Inicial_Leitura.Initialize(\"\")";
+parent.mostCurrent._lbl_inicial_leitura.Initialize(mostCurrent.activityBA,"");
  if (true) break;
 
 case 10:
 //C
-this.state = 11;
+this.state = 28;
+;
+RDebugUtils.currentLine=2949140;
+ //BA.debugLineNum = 2949140;BA.debugLine="btAdicionarLeitura.Visible = False";
+parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=2949142;
+ //BA.debugLineNum = 2949142;BA.debugLine="lbl_Inicial_Leitura.Text = Result.GetString(\"ME";
+parent.mostCurrent._lbl_inicial_leitura.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
+RDebugUtils.currentLine=2949143;
+ //BA.debugLineNum = 2949143;BA.debugLine="lbl_Inicial_Leitura.TextColor = Colors.Black";
+parent.mostCurrent._lbl_inicial_leitura.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=2949144;
+ //BA.debugLineNum = 2949144;BA.debugLine="lbl_Inicial_Leitura.TextSize = 20";
+parent.mostCurrent._lbl_inicial_leitura.setTextSize((float) (20));
+RDebugUtils.currentLine=2949146;
+ //BA.debugLineNum = 2949146;BA.debugLine="scrollView1.Initialize (500)";
+parent.mostCurrent._scrollview1.Initialize(mostCurrent.activityBA,(int) (500));
+RDebugUtils.currentLine=2949147;
+ //BA.debugLineNum = 2949147;BA.debugLine="Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%";
+parent.mostCurrent._panel_lendo.AddView((android.view.View)(parent.mostCurrent._scrollview1.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+RDebugUtils.currentLine=2949149;
+ //BA.debugLineNum = 2949149;BA.debugLine="scrollView1.Panel.AddView(lbl_Inicial_Leitura,";
+parent.mostCurrent._scrollview1.getPanel().AddView((android.view.View)(parent.mostCurrent._lbl_inicial_leitura.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (10),mostCurrent.activityBA));
+RDebugUtils.currentLine=2949152;
+ //BA.debugLineNum = 2949152;BA.debugLine="Return True";
+if (true) {
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
+ if (true) break;
+
+case 12:
+//C
+this.state = 28;
 RDebugUtils.currentLine=2949154;
- //BA.debugLineNum = 2949154;BA.debugLine="btAdicionarLeitura.Visible = True";
-parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 2949154;BA.debugLine="btAdicionarLeitura.Visible = False";
+parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=2949156;
- //BA.debugLineNum = 2949156;BA.debugLine="gradient.Initialize(\"TOP_BOTTOM\", cores)";
-parent.mostCurrent._gradient.Initialize(BA.getEnumFromString(android.graphics.drawable.GradientDrawable.Orientation.class,"TOP_BOTTOM"),parent._cores);
-RDebugUtils.currentLine=2949158;
- //BA.debugLineNum = 2949158;BA.debugLine="gradient.CornerRadius = 12";
-parent.mostCurrent._gradient.setCornerRadius((float) (12));
+ //BA.debugLineNum = 2949156;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"),T";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=2949157;
+ //BA.debugLineNum = 2949157;BA.debugLine="Return True";
+if (true) {
+anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
+ if (true) break;
+
+case 14:
+//C
+this.state = 15;
 RDebugUtils.currentLine=2949160;
- //BA.debugLineNum = 2949160;BA.debugLine="Dim quantidade As Int = Result.GetInt(\"QUANTIDA";
-_quantidade = _result.GetInt("QUANTIDADE");
+ //BA.debugLineNum = 2949160;BA.debugLine="btAdicionarLeitura.Visible = True";
+parent.mostCurrent._btadicionarleitura.setVisible(anywheresoftware.b4a.keywords.Common.True);
 RDebugUtils.currentLine=2949162;
- //BA.debugLineNum = 2949162;BA.debugLine="Dim panels(quantidade) As Panel";
+ //BA.debugLineNum = 2949162;BA.debugLine="gradient.Initialize(\"TOP_BOTTOM\", cores)";
+parent.mostCurrent._gradient.Initialize(BA.getEnumFromString(android.graphics.drawable.GradientDrawable.Orientation.class,"TOP_BOTTOM"),parent._cores);
+RDebugUtils.currentLine=2949164;
+ //BA.debugLineNum = 2949164;BA.debugLine="gradient.CornerRadius = 12";
+parent.mostCurrent._gradient.setCornerRadius((float) (12));
+RDebugUtils.currentLine=2949166;
+ //BA.debugLineNum = 2949166;BA.debugLine="Dim quantidade As Int = Result.GetInt(\"QUANTIDA";
+_quantidade = _result.GetInt("QUANTIDADE");
+RDebugUtils.currentLine=2949168;
+ //BA.debugLineNum = 2949168;BA.debugLine="Dim panels(quantidade) As Panel";
 _panels = new anywheresoftware.b4a.objects.PanelWrapper[_quantidade];
 {
 int d0 = _panels.length;
@@ -656,11 +685,11 @@ _panels[i0] = new anywheresoftware.b4a.objects.PanelWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949163;
- //BA.debugLineNum = 2949163;BA.debugLine="Dim listaInformacoes As List";
+RDebugUtils.currentLine=2949169;
+ //BA.debugLineNum = 2949169;BA.debugLine="Dim listaInformacoes As List";
 _listainformacoes = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=2949165;
- //BA.debugLineNum = 2949165;BA.debugLine="Dim lblTituloLivro(quantidade) As Label";
+RDebugUtils.currentLine=2949171;
+ //BA.debugLineNum = 2949171;BA.debugLine="Dim lblTituloLivro(quantidade) As Label";
 _lbltitulolivro = new anywheresoftware.b4a.objects.LabelWrapper[_quantidade];
 {
 int d0 = _lbltitulolivro.length;
@@ -669,8 +698,8 @@ _lbltitulolivro[i0] = new anywheresoftware.b4a.objects.LabelWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949166;
- //BA.debugLineNum = 2949166;BA.debugLine="Dim lblDataComecoLeitura(quantidade) As Label";
+RDebugUtils.currentLine=2949172;
+ //BA.debugLineNum = 2949172;BA.debugLine="Dim lblDataComecoLeitura(quantidade) As Label";
 _lbldatacomecoleitura = new anywheresoftware.b4a.objects.LabelWrapper[_quantidade];
 {
 int d0 = _lbldatacomecoleitura.length;
@@ -679,8 +708,8 @@ _lbldatacomecoleitura[i0] = new anywheresoftware.b4a.objects.LabelWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949167;
- //BA.debugLineNum = 2949167;BA.debugLine="Dim lblPrevisaoTermino(quantidade) As Label";
+RDebugUtils.currentLine=2949173;
+ //BA.debugLineNum = 2949173;BA.debugLine="Dim lblPrevisaoTermino(quantidade) As Label";
 _lblprevisaotermino = new anywheresoftware.b4a.objects.LabelWrapper[_quantidade];
 {
 int d0 = _lblprevisaotermino.length;
@@ -689,8 +718,8 @@ _lblprevisaotermino[i0] = new anywheresoftware.b4a.objects.LabelWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949168;
- //BA.debugLineNum = 2949168;BA.debugLine="Dim lblQuantidadePaginas(quantidade) As Label";
+RDebugUtils.currentLine=2949174;
+ //BA.debugLineNum = 2949174;BA.debugLine="Dim lblQuantidadePaginas(quantidade) As Label";
 _lblquantidadepaginas = new anywheresoftware.b4a.objects.LabelWrapper[_quantidade];
 {
 int d0 = _lblquantidadepaginas.length;
@@ -699,8 +728,8 @@ _lblquantidadepaginas[i0] = new anywheresoftware.b4a.objects.LabelWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949170;
- //BA.debugLineNum = 2949170;BA.debugLine="Dim btAnotar(quantidade) As Button";
+RDebugUtils.currentLine=2949176;
+ //BA.debugLineNum = 2949176;BA.debugLine="Dim btAnotar(quantidade) As Button";
 _btanotar = new anywheresoftware.b4a.objects.ButtonWrapper[_quantidade];
 {
 int d0 = _btanotar.length;
@@ -709,8 +738,8 @@ _btanotar[i0] = new anywheresoftware.b4a.objects.ButtonWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949171;
- //BA.debugLineNum = 2949171;BA.debugLine="Dim btLancar(quantidade) As Button";
+RDebugUtils.currentLine=2949177;
+ //BA.debugLineNum = 2949177;BA.debugLine="Dim btLancar(quantidade) As Button";
 _btlancar = new anywheresoftware.b4a.objects.ButtonWrapper[_quantidade];
 {
 int d0 = _btlancar.length;
@@ -719,304 +748,304 @@ _btlancar[i0] = new anywheresoftware.b4a.objects.ButtonWrapper();
 }
 }
 ;
-RDebugUtils.currentLine=2949173;
- //BA.debugLineNum = 2949173;BA.debugLine="Dim tamanho_fonte As Int = 17.5";
+RDebugUtils.currentLine=2949179;
+ //BA.debugLineNum = 2949179;BA.debugLine="Dim tamanho_fonte As Int = 17.5";
 _tamanho_fonte = (int) (17.5);
-RDebugUtils.currentLine=2949175;
- //BA.debugLineNum = 2949175;BA.debugLine="Dim topo As Int = 1%y";
+RDebugUtils.currentLine=2949181;
+ //BA.debugLineNum = 2949181;BA.debugLine="Dim topo As Int = 1%y";
 _topo = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA);
-RDebugUtils.currentLine=2949176;
- //BA.debugLineNum = 2949176;BA.debugLine="Dim topoLabel As Int = 1%y";
+RDebugUtils.currentLine=2949182;
+ //BA.debugLineNum = 2949182;BA.debugLine="Dim topoLabel As Int = 1%y";
 _topolabel = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA);
-RDebugUtils.currentLine=2949178;
- //BA.debugLineNum = 2949178;BA.debugLine="If temPanel Then";
+RDebugUtils.currentLine=2949184;
+ //BA.debugLineNum = 2949184;BA.debugLine="If temPanel Then";
 if (true) break;
 
-case 11:
+case 15:
 //if
-this.state = 14;
+this.state = 18;
 if (parent._tempanel) { 
-this.state = 13;
+this.state = 17;
 }if (true) break;
 
-case 13:
+case 17:
 //C
-this.state = 14;
-RDebugUtils.currentLine=2949179;
- //BA.debugLineNum = 2949179;BA.debugLine="scrollView1.Panel.RemoveView";
+this.state = 18;
+RDebugUtils.currentLine=2949185;
+ //BA.debugLineNum = 2949185;BA.debugLine="scrollView1.Panel.RemoveView";
 parent.mostCurrent._scrollview1.getPanel().RemoveView();
-RDebugUtils.currentLine=2949180;
- //BA.debugLineNum = 2949180;BA.debugLine="temPanel = False";
+RDebugUtils.currentLine=2949186;
+ //BA.debugLineNum = 2949186;BA.debugLine="temPanel = False";
 parent._tempanel = anywheresoftware.b4a.keywords.Common.False;
  if (true) break;
 ;
-RDebugUtils.currentLine=2949183;
- //BA.debugLineNum = 2949183;BA.debugLine="If temPanel = False Then";
-
-case 14:
-//if
-this.state = 21;
-if (parent._tempanel==anywheresoftware.b4a.keywords.Common.False) { 
-this.state = 16;
-}if (true) break;
-
-case 16:
-//C
-this.state = 17;
-RDebugUtils.currentLine=2949185;
- //BA.debugLineNum = 2949185;BA.debugLine="temPanel = True";
-parent._tempanel = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=2949186;
- //BA.debugLineNum = 2949186;BA.debugLine="scrollView1.Initialize( 500 )";
-parent.mostCurrent._scrollview1.Initialize(mostCurrent.activityBA,(int) (500));
-RDebugUtils.currentLine=2949187;
- //BA.debugLineNum = 2949187;BA.debugLine="listaInformacoes.Initialize";
-_listainformacoes.Initialize();
 RDebugUtils.currentLine=2949189;
- //BA.debugLineNum = 2949189;BA.debugLine="Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100";
-parent.mostCurrent._panel_lendo.AddView((android.view.View)(parent.mostCurrent._scrollview1.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),parent.mostCurrent._btadicionarleitura.getTop());
-RDebugUtils.currentLine=2949192;
- //BA.debugLineNum = 2949192;BA.debugLine="Dim i As Int";
-_i = 0;
-RDebugUtils.currentLine=2949193;
- //BA.debugLineNum = 2949193;BA.debugLine="For i = 0 To panels.Length - 1";
-if (true) break;
+ //BA.debugLineNum = 2949189;BA.debugLine="If temPanel = False Then";
 
-case 17:
-//for
+case 18:
+//if
+this.state = 25;
+if (parent._tempanel==anywheresoftware.b4a.keywords.Common.False) { 
 this.state = 20;
-step45 = 1;
-limit45 = (int) (_panels.length-1);
-_i = (int) (0) ;
-this.state = 29;
-if (true) break;
-
-case 29:
-//C
-this.state = 20;
-if ((step45 > 0 && _i <= limit45) || (step45 < 0 && _i >= limit45)) this.state = 19;
-if (true) break;
-
-case 30:
-//C
-this.state = 29;
-_i = ((int)(0 + _i + step45)) ;
-if (true) break;
-
-case 19:
-//C
-this.state = 30;
-RDebugUtils.currentLine=2949195;
- //BA.debugLineNum = 2949195;BA.debugLine="topoLabel = 1%y";
-_topolabel = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA);
-RDebugUtils.currentLine=2949196;
- //BA.debugLineNum = 2949196;BA.debugLine="panels(i).Initialize( \"Event_panels\" )";
-_panels[_i].Initialize(mostCurrent.activityBA,"Event_panels");
-RDebugUtils.currentLine=2949198;
- //BA.debugLineNum = 2949198;BA.debugLine="lblTituloLivro(i).Initialize(\"\")";
-_lbltitulolivro[_i].Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=2949199;
- //BA.debugLineNum = 2949199;BA.debugLine="lblDataComecoLeitura(i).Initialize(\"\")";
-_lbldatacomecoleitura[_i].Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=2949200;
- //BA.debugLineNum = 2949200;BA.debugLine="lblPrevisaoTermino(i).Initialize(\"\")";
-_lblprevisaotermino[_i].Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=2949201;
- //BA.debugLineNum = 2949201;BA.debugLine="lblQuantidadePaginas(i).Initialize(\"\")";
-_lblquantidadepaginas[_i].Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=2949203;
- //BA.debugLineNum = 2949203;BA.debugLine="btAnotar(i).Initialize(\"Event_btAnotar\")";
-_btanotar[_i].Initialize(mostCurrent.activityBA,"Event_btAnotar");
-RDebugUtils.currentLine=2949204;
- //BA.debugLineNum = 2949204;BA.debugLine="btLancar(i).Initialize(\"Event_btLancar\")";
-_btlancar[_i].Initialize(mostCurrent.activityBA,"Event_btLancar");
-RDebugUtils.currentLine=2949206;
- //BA.debugLineNum = 2949206;BA.debugLine="panels(i).Background = gradient";
-_panels[_i].setBackground((android.graphics.drawable.Drawable)(parent.mostCurrent._gradient.getObject()));
-RDebugUtils.currentLine=2949207;
- //BA.debugLineNum = 2949207;BA.debugLine="panels(i).Padding = Array As Int(0dip, 0dip,";
-_panels[_i].setPadding(new int[]{anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0))});
-RDebugUtils.currentLine=2949208;
- //BA.debugLineNum = 2949208;BA.debugLine="panels(i).Elevation = 3dip";
-_panels[_i].setElevation((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (3))));
-RDebugUtils.currentLine=2949210;
- //BA.debugLineNum = 2949210;BA.debugLine="scrollView1.Panel.AddView(panels(i), 1%x, top";
-parent.mostCurrent._scrollview1.getPanel().AddView((android.view.View)(_panels[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),_topo,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (25),mostCurrent.activityBA));
-RDebugUtils.currentLine=2949212;
- //BA.debugLineNum = 2949212;BA.debugLine="lblTituloLivro(i).Text = Result.GetString(\"no";
-_lbltitulolivro[_i].setText(BA.ObjectToCharSequence(_result.GetString("nome")));
-RDebugUtils.currentLine=2949213;
- //BA.debugLineNum = 2949213;BA.debugLine="lblTituloLivro(i).TextColor = Colors.RGB(189,";
-_lbltitulolivro[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (189),(int) (151),(int) (1)));
-RDebugUtils.currentLine=2949214;
- //BA.debugLineNum = 2949214;BA.debugLine="lblTituloLivro(i).TextSize = 23";
-_lbltitulolivro[_i].setTextSize((float) (23));
-RDebugUtils.currentLine=2949217;
- //BA.debugLineNum = 2949217;BA.debugLine="lblDataComecoLeitura(i).Text = \"Começei ler d";
-_lbldatacomecoleitura[_i].setText(BA.ObjectToCharSequence("Começei ler dia "+_result.GetString("data_inicial")));
-RDebugUtils.currentLine=2949218;
- //BA.debugLineNum = 2949218;BA.debugLine="lblDataComecoLeitura(i).TextColor = Colors.RG";
-_lbldatacomecoleitura[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
-RDebugUtils.currentLine=2949219;
- //BA.debugLineNum = 2949219;BA.debugLine="lblDataComecoLeitura(i).TextSize = tamanho_fo";
-_lbldatacomecoleitura[_i].setTextSize((float) (_tamanho_fonte));
-RDebugUtils.currentLine=2949222;
- //BA.debugLineNum = 2949222;BA.debugLine="lblPrevisaoTermino(i).Text = \"Previsão de Tér";
-_lblprevisaotermino[_i].setText(BA.ObjectToCharSequence("Previsão de Término "+_result.GetString("data_prevista_final")));
-RDebugUtils.currentLine=2949223;
- //BA.debugLineNum = 2949223;BA.debugLine="lblPrevisaoTermino(i).TextColor = Colors.RGB(";
-_lblprevisaotermino[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
-RDebugUtils.currentLine=2949224;
- //BA.debugLineNum = 2949224;BA.debugLine="lblPrevisaoTermino(i).TextSize = tamanho_font";
-_lblprevisaotermino[_i].setTextSize((float) (_tamanho_fonte));
-RDebugUtils.currentLine=2949227;
- //BA.debugLineNum = 2949227;BA.debugLine="lblQuantidadePaginas(i).Text = Result.GetStri";
-_lblquantidadepaginas[_i].setText(BA.ObjectToCharSequence(_result.GetString("paginas_ou_cap_lidos")+" "+_result.GetString("tipo_de_leitura")+" de "+_result.GetString("quantidade_paginas")));
-RDebugUtils.currentLine=2949228;
- //BA.debugLineNum = 2949228;BA.debugLine="lblQuantidadePaginas(i).TextColor = Colors.RG";
-_lblquantidadepaginas[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
-RDebugUtils.currentLine=2949229;
- //BA.debugLineNum = 2949229;BA.debugLine="lblQuantidadePaginas(i).TextSize = tamanho_fo";
-_lblquantidadepaginas[_i].setTextSize((float) (_tamanho_fonte));
-RDebugUtils.currentLine=2949232;
- //BA.debugLineNum = 2949232;BA.debugLine="Dim altura As Int = 3.5%y";
-_altura = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3.5),mostCurrent.activityBA);
-RDebugUtils.currentLine=2949233;
- //BA.debugLineNum = 2949233;BA.debugLine="panels(i).AddView(lblTituloLivro(i), 3%x, top";
-_panels[_i].AddView((android.view.View)(_lbltitulolivro[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=2949234;
- //BA.debugLineNum = 2949234;BA.debugLine="topoLabel = topoLabel + altura + 18dip";
-_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (18)));
-RDebugUtils.currentLine=2949235;
- //BA.debugLineNum = 2949235;BA.debugLine="panels(i).AddView(lblDataComecoLeitura(i), 3%";
-_panels[_i].AddView((android.view.View)(_lbldatacomecoleitura[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),_altura);
-RDebugUtils.currentLine=2949236;
- //BA.debugLineNum = 2949236;BA.debugLine="topoLabel = topoLabel + altura + 1dip";
-_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1)));
-RDebugUtils.currentLine=2949237;
- //BA.debugLineNum = 2949237;BA.debugLine="panels(i).AddView(lblPrevisaoTermino(i), 3%x,";
-_panels[_i].AddView((android.view.View)(_lblprevisaotermino[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),_altura);
-RDebugUtils.currentLine=2949238;
- //BA.debugLineNum = 2949238;BA.debugLine="topoLabel = topoLabel + altura + 1dip";
-_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1)));
-RDebugUtils.currentLine=2949239;
- //BA.debugLineNum = 2949239;BA.debugLine="panels(i).AddView(lblQuantidadePaginas(i), 3%";
-_panels[_i].AddView((android.view.View)(_lblquantidadepaginas[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),_altura);
-RDebugUtils.currentLine=2949240;
- //BA.debugLineNum = 2949240;BA.debugLine="topoLabel = topoLabel + altura + 2dip";
-_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)));
-RDebugUtils.currentLine=2949242;
- //BA.debugLineNum = 2949242;BA.debugLine="btAnotar(i).Tag = i";
-_btanotar[_i].setTag((Object)(_i));
-RDebugUtils.currentLine=2949247;
- //BA.debugLineNum = 2949247;BA.debugLine="listaInformacoes.Add(\"'\" & Result.GetString(\"";
-_listainformacoes.Add((Object)("'"+_result.GetString("nome")+"|¨'"+BA.NumberToString(_result.GetInt("quantidade_paginas"))+"|¨'"+BA.NumberToString(_result.GetInt("fk_id_Livro"))+"|¨'"+_result.GetString("usuarioNome")+"|¨'"+_result.GetString("tipo_de_leitura")+"|¨'"+_result.GetString("paginas_ou_cap_lidos")+"|¨'"+_result.GetString("meta")+"|"));
-RDebugUtils.currentLine=2949255;
- //BA.debugLineNum = 2949255;BA.debugLine="tamanhoLista = 7";
-parent._tamanholista = (int) (7);
-RDebugUtils.currentLine=2949260;
- //BA.debugLineNum = 2949260;BA.debugLine="btAnotar(i).Text = \"Anotar\"";
-_btanotar[_i].setText(BA.ObjectToCharSequence("Anotar"));
-RDebugUtils.currentLine=2949261;
- //BA.debugLineNum = 2949261;BA.debugLine="btAnotar(i).TextSize = 16";
-_btanotar[_i].setTextSize((float) (16));
-RDebugUtils.currentLine=2949262;
- //BA.debugLineNum = 2949262;BA.debugLine="btAnotar(i).TextColor = Colors.RGB(244,0,0)";
-_btanotar[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (244),(int) (0),(int) (0)));
-RDebugUtils.currentLine=2949263;
- //BA.debugLineNum = 2949263;BA.debugLine="btAnotar(i).Color = Colors.Transparent";
-_btanotar[_i].setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=2949264;
- //BA.debugLineNum = 2949264;BA.debugLine="panels(i).AddView(btAnotar(i), 3%x, topoLabel";
-_panels[_i].AddView((android.view.View)(_btanotar[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (30),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (6.5),mostCurrent.activityBA));
-RDebugUtils.currentLine=2949266;
- //BA.debugLineNum = 2949266;BA.debugLine="btLancar(i).Tag = i";
-_btlancar[_i].setTag((Object)(_i));
-RDebugUtils.currentLine=2949268;
- //BA.debugLineNum = 2949268;BA.debugLine="btLancar(i).Text = \"Lançar\"";
-_btlancar[_i].setText(BA.ObjectToCharSequence("Lançar"));
-RDebugUtils.currentLine=2949269;
- //BA.debugLineNum = 2949269;BA.debugLine="btLancar(i).TextSize = 16";
-_btlancar[_i].setTextSize((float) (16));
-RDebugUtils.currentLine=2949270;
- //BA.debugLineNum = 2949270;BA.debugLine="btLancar(i).TextColor = Colors.RGB(244,0,0)";
-_btlancar[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (244),(int) (0),(int) (0)));
-RDebugUtils.currentLine=2949271;
- //BA.debugLineNum = 2949271;BA.debugLine="btLancar(i).Color = Colors.Transparent";
-_btlancar[_i].setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=2949272;
- //BA.debugLineNum = 2949272;BA.debugLine="panels(i).AddView(btLancar(i), 35%x, topoLabe";
-_panels[_i].AddView((android.view.View)(_btlancar[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (35),mostCurrent.activityBA),_topolabel,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (30),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (6.5),mostCurrent.activityBA));
-RDebugUtils.currentLine=2949274;
- //BA.debugLineNum = 2949274;BA.debugLine="topo = topo + 25%y + 10dip";
-_topo = (int) (_topo+anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (25),mostCurrent.activityBA)+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)));
-RDebugUtils.currentLine=2949276;
- //BA.debugLineNum = 2949276;BA.debugLine="scrollView1.Panel.Height = topo";
-parent.mostCurrent._scrollview1.getPanel().setHeight(_topo);
-RDebugUtils.currentLine=2949277;
- //BA.debugLineNum = 2949277;BA.debugLine="Result.NextRow";
-_result.NextRow();
- if (true) break;
-if (true) break;
+}if (true) break;
 
 case 20:
 //C
 this.state = 21;
+RDebugUtils.currentLine=2949191;
+ //BA.debugLineNum = 2949191;BA.debugLine="temPanel = True";
+parent._tempanel = anywheresoftware.b4a.keywords.Common.True;
+RDebugUtils.currentLine=2949192;
+ //BA.debugLineNum = 2949192;BA.debugLine="scrollView1.Initialize( 500 )";
+parent.mostCurrent._scrollview1.Initialize(mostCurrent.activityBA,(int) (500));
+RDebugUtils.currentLine=2949193;
+ //BA.debugLineNum = 2949193;BA.debugLine="listaInformacoes.Initialize";
+_listainformacoes.Initialize();
+RDebugUtils.currentLine=2949195;
+ //BA.debugLineNum = 2949195;BA.debugLine="Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100";
+parent.mostCurrent._panel_lendo.AddView((android.view.View)(parent.mostCurrent._scrollview1.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),parent.mostCurrent._btadicionarleitura.getTop());
+RDebugUtils.currentLine=2949198;
+ //BA.debugLineNum = 2949198;BA.debugLine="Dim i As Int";
+_i = 0;
+RDebugUtils.currentLine=2949199;
+ //BA.debugLineNum = 2949199;BA.debugLine="For i = 0 To panels.Length - 1";
+if (true) break;
+
+case 21:
+//for
+this.state = 24;
+step50 = 1;
+limit50 = (int) (_panels.length-1);
+_i = (int) (0) ;
+this.state = 33;
+if (true) break;
+
+case 33:
+//C
+this.state = 24;
+if ((step50 > 0 && _i <= limit50) || (step50 < 0 && _i >= limit50)) this.state = 23;
+if (true) break;
+
+case 34:
+//C
+this.state = 33;
+_i = ((int)(0 + _i + step50)) ;
+if (true) break;
+
+case 23:
+//C
+this.state = 34;
+RDebugUtils.currentLine=2949201;
+ //BA.debugLineNum = 2949201;BA.debugLine="topoLabel = 1%y";
+_topolabel = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA);
+RDebugUtils.currentLine=2949202;
+ //BA.debugLineNum = 2949202;BA.debugLine="panels(i).Initialize( \"Event_panels\" )";
+_panels[_i].Initialize(mostCurrent.activityBA,"Event_panels");
+RDebugUtils.currentLine=2949204;
+ //BA.debugLineNum = 2949204;BA.debugLine="lblTituloLivro(i).Initialize(\"\")";
+_lbltitulolivro[_i].Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=2949205;
+ //BA.debugLineNum = 2949205;BA.debugLine="lblDataComecoLeitura(i).Initialize(\"\")";
+_lbldatacomecoleitura[_i].Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=2949206;
+ //BA.debugLineNum = 2949206;BA.debugLine="lblPrevisaoTermino(i).Initialize(\"\")";
+_lblprevisaotermino[_i].Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=2949207;
+ //BA.debugLineNum = 2949207;BA.debugLine="lblQuantidadePaginas(i).Initialize(\"\")";
+_lblquantidadepaginas[_i].Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=2949209;
+ //BA.debugLineNum = 2949209;BA.debugLine="btAnotar(i).Initialize(\"Event_btAnotar\")";
+_btanotar[_i].Initialize(mostCurrent.activityBA,"Event_btAnotar");
+RDebugUtils.currentLine=2949210;
+ //BA.debugLineNum = 2949210;BA.debugLine="btLancar(i).Initialize(\"Event_btLancar\")";
+_btlancar[_i].Initialize(mostCurrent.activityBA,"Event_btLancar");
+RDebugUtils.currentLine=2949212;
+ //BA.debugLineNum = 2949212;BA.debugLine="panels(i).Background = gradient";
+_panels[_i].setBackground((android.graphics.drawable.Drawable)(parent.mostCurrent._gradient.getObject()));
+RDebugUtils.currentLine=2949213;
+ //BA.debugLineNum = 2949213;BA.debugLine="panels(i).Padding = Array As Int(0dip, 0dip,";
+_panels[_i].setPadding(new int[]{anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0))});
+RDebugUtils.currentLine=2949214;
+ //BA.debugLineNum = 2949214;BA.debugLine="panels(i).Elevation = 3dip";
+_panels[_i].setElevation((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (3))));
+RDebugUtils.currentLine=2949216;
+ //BA.debugLineNum = 2949216;BA.debugLine="scrollView1.Panel.AddView(panels(i), 1%x, top";
+parent.mostCurrent._scrollview1.getPanel().AddView((android.view.View)(_panels[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),_topo,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (25),mostCurrent.activityBA));
+RDebugUtils.currentLine=2949218;
+ //BA.debugLineNum = 2949218;BA.debugLine="lblTituloLivro(i).Text = Result.GetString(\"no";
+_lbltitulolivro[_i].setText(BA.ObjectToCharSequence(_result.GetString("nome")));
+RDebugUtils.currentLine=2949219;
+ //BA.debugLineNum = 2949219;BA.debugLine="lblTituloLivro(i).TextColor = Colors.RGB(189,";
+_lbltitulolivro[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (189),(int) (151),(int) (1)));
+RDebugUtils.currentLine=2949220;
+ //BA.debugLineNum = 2949220;BA.debugLine="lblTituloLivro(i).TextSize = 23";
+_lbltitulolivro[_i].setTextSize((float) (23));
+RDebugUtils.currentLine=2949223;
+ //BA.debugLineNum = 2949223;BA.debugLine="lblDataComecoLeitura(i).Text = \"Começei ler d";
+_lbldatacomecoleitura[_i].setText(BA.ObjectToCharSequence("Começei ler dia "+_result.GetString("data_inicial")));
+RDebugUtils.currentLine=2949224;
+ //BA.debugLineNum = 2949224;BA.debugLine="lblDataComecoLeitura(i).TextColor = Colors.RG";
+_lbldatacomecoleitura[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
+RDebugUtils.currentLine=2949225;
+ //BA.debugLineNum = 2949225;BA.debugLine="lblDataComecoLeitura(i).TextSize = tamanho_fo";
+_lbldatacomecoleitura[_i].setTextSize((float) (_tamanho_fonte));
+RDebugUtils.currentLine=2949228;
+ //BA.debugLineNum = 2949228;BA.debugLine="lblPrevisaoTermino(i).Text = \"Previsão de Tér";
+_lblprevisaotermino[_i].setText(BA.ObjectToCharSequence("Previsão de Término "+_result.GetString("data_prevista_final")));
+RDebugUtils.currentLine=2949229;
+ //BA.debugLineNum = 2949229;BA.debugLine="lblPrevisaoTermino(i).TextColor = Colors.RGB(";
+_lblprevisaotermino[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
+RDebugUtils.currentLine=2949230;
+ //BA.debugLineNum = 2949230;BA.debugLine="lblPrevisaoTermino(i).TextSize = tamanho_font";
+_lblprevisaotermino[_i].setTextSize((float) (_tamanho_fonte));
+RDebugUtils.currentLine=2949233;
+ //BA.debugLineNum = 2949233;BA.debugLine="lblQuantidadePaginas(i).Text = Result.GetStri";
+_lblquantidadepaginas[_i].setText(BA.ObjectToCharSequence(_result.GetString("paginas_ou_cap_lidos")+" "+_result.GetString("tipo_de_leitura")+" de "+_result.GetString("quantidade_paginas")));
+RDebugUtils.currentLine=2949234;
+ //BA.debugLineNum = 2949234;BA.debugLine="lblQuantidadePaginas(i).TextColor = Colors.RG";
+_lblquantidadepaginas[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
+RDebugUtils.currentLine=2949235;
+ //BA.debugLineNum = 2949235;BA.debugLine="lblQuantidadePaginas(i).TextSize = tamanho_fo";
+_lblquantidadepaginas[_i].setTextSize((float) (_tamanho_fonte));
+RDebugUtils.currentLine=2949238;
+ //BA.debugLineNum = 2949238;BA.debugLine="Dim altura As Int = 3.5%y";
+_altura = anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3.5),mostCurrent.activityBA);
+RDebugUtils.currentLine=2949239;
+ //BA.debugLineNum = 2949239;BA.debugLine="panels(i).AddView(lblTituloLivro(i), 3%x, top";
+_panels[_i].AddView((android.view.View)(_lbltitulolivro[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=2949240;
+ //BA.debugLineNum = 2949240;BA.debugLine="topoLabel = topoLabel + altura + 18dip";
+_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (18)));
+RDebugUtils.currentLine=2949241;
+ //BA.debugLineNum = 2949241;BA.debugLine="panels(i).AddView(lblDataComecoLeitura(i), 3%";
+_panels[_i].AddView((android.view.View)(_lbldatacomecoleitura[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),_altura);
+RDebugUtils.currentLine=2949242;
+ //BA.debugLineNum = 2949242;BA.debugLine="topoLabel = topoLabel + altura + 1dip";
+_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1)));
+RDebugUtils.currentLine=2949243;
+ //BA.debugLineNum = 2949243;BA.debugLine="panels(i).AddView(lblPrevisaoTermino(i), 3%x,";
+_panels[_i].AddView((android.view.View)(_lblprevisaotermino[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),_altura);
+RDebugUtils.currentLine=2949244;
+ //BA.debugLineNum = 2949244;BA.debugLine="topoLabel = topoLabel + altura + 1dip";
+_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (1)));
+RDebugUtils.currentLine=2949245;
+ //BA.debugLineNum = 2949245;BA.debugLine="panels(i).AddView(lblQuantidadePaginas(i), 3%";
+_panels[_i].AddView((android.view.View)(_lblquantidadepaginas[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,(int) (_panels[_i].getWidth()-anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (5),mostCurrent.activityBA)),_altura);
+RDebugUtils.currentLine=2949246;
+ //BA.debugLineNum = 2949246;BA.debugLine="topoLabel = topoLabel + altura + 2dip";
+_topolabel = (int) (_topolabel+_altura+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)));
+RDebugUtils.currentLine=2949248;
+ //BA.debugLineNum = 2949248;BA.debugLine="btAnotar(i).Tag = i";
+_btanotar[_i].setTag((Object)(_i));
+RDebugUtils.currentLine=2949253;
+ //BA.debugLineNum = 2949253;BA.debugLine="listaInformacoes.Add(\"'\" & Result.GetString(\"";
+_listainformacoes.Add((Object)("'"+_result.GetString("nome")+"|¨'"+BA.NumberToString(_result.GetInt("quantidade_paginas"))+"|¨'"+BA.NumberToString(_result.GetInt("fk_id_Livro"))+"|¨'"+_result.GetString("usuarioNome")+"|¨'"+_result.GetString("tipo_de_leitura")+"|¨'"+_result.GetString("paginas_ou_cap_lidos")+"|¨'"+_result.GetString("meta")+"|"));
+RDebugUtils.currentLine=2949261;
+ //BA.debugLineNum = 2949261;BA.debugLine="tamanhoLista = 7";
+parent._tamanholista = (int) (7);
+RDebugUtils.currentLine=2949266;
+ //BA.debugLineNum = 2949266;BA.debugLine="btAnotar(i).Text = \"Anotar\"";
+_btanotar[_i].setText(BA.ObjectToCharSequence("Anotar"));
+RDebugUtils.currentLine=2949267;
+ //BA.debugLineNum = 2949267;BA.debugLine="btAnotar(i).TextSize = 16";
+_btanotar[_i].setTextSize((float) (16));
+RDebugUtils.currentLine=2949268;
+ //BA.debugLineNum = 2949268;BA.debugLine="btAnotar(i).TextColor = Colors.RGB(244,0,0)";
+_btanotar[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (244),(int) (0),(int) (0)));
+RDebugUtils.currentLine=2949269;
+ //BA.debugLineNum = 2949269;BA.debugLine="btAnotar(i).Color = Colors.Transparent";
+_btanotar[_i].setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+RDebugUtils.currentLine=2949270;
+ //BA.debugLineNum = 2949270;BA.debugLine="panels(i).AddView(btAnotar(i), 3%x, topoLabel";
+_panels[_i].AddView((android.view.View)(_btanotar[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (3),mostCurrent.activityBA),_topolabel,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (30),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (6.5),mostCurrent.activityBA));
+RDebugUtils.currentLine=2949272;
+ //BA.debugLineNum = 2949272;BA.debugLine="btLancar(i).Tag = i";
+_btlancar[_i].setTag((Object)(_i));
+RDebugUtils.currentLine=2949274;
+ //BA.debugLineNum = 2949274;BA.debugLine="btLancar(i).Text = \"Lançar\"";
+_btlancar[_i].setText(BA.ObjectToCharSequence("Lançar"));
+RDebugUtils.currentLine=2949275;
+ //BA.debugLineNum = 2949275;BA.debugLine="btLancar(i).TextSize = 16";
+_btlancar[_i].setTextSize((float) (16));
+RDebugUtils.currentLine=2949276;
+ //BA.debugLineNum = 2949276;BA.debugLine="btLancar(i).TextColor = Colors.RGB(244,0,0)";
+_btlancar[_i].setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (244),(int) (0),(int) (0)));
+RDebugUtils.currentLine=2949277;
+ //BA.debugLineNum = 2949277;BA.debugLine="btLancar(i).Color = Colors.Transparent";
+_btlancar[_i].setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+RDebugUtils.currentLine=2949278;
+ //BA.debugLineNum = 2949278;BA.debugLine="panels(i).AddView(btLancar(i), 35%x, topoLabe";
+_panels[_i].AddView((android.view.View)(_btlancar[_i].getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (35),mostCurrent.activityBA),_topolabel,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (30),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (6.5),mostCurrent.activityBA));
+RDebugUtils.currentLine=2949280;
+ //BA.debugLineNum = 2949280;BA.debugLine="topo = topo + 25%y + 10dip";
+_topo = (int) (_topo+anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (25),mostCurrent.activityBA)+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)));
+RDebugUtils.currentLine=2949282;
+ //BA.debugLineNum = 2949282;BA.debugLine="scrollView1.Panel.Height = topo";
+parent.mostCurrent._scrollview1.getPanel().setHeight(_topo);
+RDebugUtils.currentLine=2949283;
+ //BA.debugLineNum = 2949283;BA.debugLine="Result.NextRow";
+_result.NextRow();
+ if (true) break;
+if (true) break;
+
+case 24:
+//C
+this.state = 25;
 ;
-RDebugUtils.currentLine=2949279;
- //BA.debugLineNum = 2949279;BA.debugLine="File.WriteList(File.DirInternal, nomeArquivo,";
+RDebugUtils.currentLine=2949285;
+ //BA.debugLineNum = 2949285;BA.debugLine="File.WriteList(File.DirInternal, nomeArquivo,";
 anywheresoftware.b4a.keywords.Common.File.WriteList(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),parent.mostCurrent._nomearquivo,_listainformacoes);
  if (true) break;
 
-case 21:
+case 25:
 //C
-this.state = 24;
+this.state = 28;
 ;
-RDebugUtils.currentLine=2949282;
- //BA.debugLineNum = 2949282;BA.debugLine="Return True";
+RDebugUtils.currentLine=2949288;
+ //BA.debugLineNum = 2949288;BA.debugLine="Return True";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.True));return;};
  if (true) break;
 
-case 23:
+case 27:
 //C
-this.state = 24;
-RDebugUtils.currentLine=2949284;
- //BA.debugLineNum = 2949284;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\"";
+this.state = 28;
+RDebugUtils.currentLine=2949290;
+ //BA.debugLineNum = 2949290;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\"";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Impossível carregar leituras"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2949285;
- //BA.debugLineNum = 2949285;BA.debugLine="Return False";
+RDebugUtils.currentLine=2949291;
+ //BA.debugLineNum = 2949291;BA.debugLine="Return False";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.False));return;};
  if (true) break;
 
-case 24:
+case 28:
 //C
-this.state = 27;
+this.state = 31;
 ;
  if (true) break;
 
-case 26:
+case 30:
 //C
-this.state = 27;
+this.state = 31;
 this.catchState = 0;
-RDebugUtils.currentLine=2949288;
- //BA.debugLineNum = 2949288;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
+RDebugUtils.currentLine=2949294;
+ //BA.debugLineNum = 2949294;BA.debugLine="ToastMessageShow(\"Impossível carregar leituras\",";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Impossível carregar leituras"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2949289;
- //BA.debugLineNum = 2949289;BA.debugLine="Return False";
+RDebugUtils.currentLine=2949295;
+ //BA.debugLineNum = 2949295;BA.debugLine="Return False";
 if (true) {
 anywheresoftware.b4a.keywords.Common.ReturnFromResumableSub(this,(Object)(anywheresoftware.b4a.keywords.Common.False));return;};
  if (true) break;
 if (true) break;
 
-case 27:
+case 31:
 //C
 this.state = -1;
 this.catchState = 0;
 ;
-RDebugUtils.currentLine=2949291;
- //BA.debugLineNum = 2949291;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2949297;
+ //BA.debugLineNum = 2949297;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {

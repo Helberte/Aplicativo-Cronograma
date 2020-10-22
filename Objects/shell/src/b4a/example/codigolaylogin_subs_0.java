@@ -47,11 +47,11 @@ Debug.ShouldStop(131072);
 codigolaylogin.mostCurrent._activity.runVoidMethod ("Finish");
  BA.debugLineNum = 115;BA.debugLine="Return False";
 Debug.ShouldStop(262144);
-if (true) return codigolaylogin.mostCurrent.__c.getField(true,"False");
+Debug.CheckDeviceExceptions();if (true) return codigolaylogin.mostCurrent.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 117;BA.debugLine="Return True";
 Debug.ShouldStop(1048576);
-if (true) return codigolaylogin.mostCurrent.__c.getField(true,"True");
+Debug.CheckDeviceExceptions();if (true) return codigolaylogin.mostCurrent.__c.getField(true,"True");
  };
  BA.debugLineNum = 119;BA.debugLine="End Sub";
 Debug.ShouldStop(4194304);

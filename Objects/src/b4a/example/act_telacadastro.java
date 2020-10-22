@@ -336,6 +336,34 @@ public class act_telacadastro extends Activity implements B4AActivity{
     }
 
 
+public static class _edit{
+public boolean IsInitialized;
+public int tamanho;
+public int esquerda;
+public int topo;
+public void Initialize() {
+IsInitialized = true;
+tamanho = 0;
+esquerda = 0;
+topo = 0;
+}
+@Override
+		public String toString() {
+			return BA.TypeToString(this, false);
+		}}
+public static class _rotulodimencoes{
+public boolean IsInitialized;
+public int tamanho;
+public int esquerda;
+public void Initialize() {
+IsInitialized = true;
+tamanho = 0;
+esquerda = 0;
+}
+@Override
+		public String toString() {
+			return BA.TypeToString(this, false);
+		}}
 
 public static void initializeProcessGlobals() {
              try {
@@ -365,6 +393,8 @@ public anywheresoftware.b4a.objects.LabelWrapper _lblincongruenciatitulo = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lblincongruenciaautor = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lblincongruenciametapagoucap = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lblincongruenciapagoucap = null;
+public anywheresoftware.b4a.objects.LabelWrapper _lbldataprevisao = null;
+public anywheresoftware.b4a.objects.LabelWrapper _lblquantidadedias = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btcancelar = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btsalvar = null;
 public anywheresoftware.b4a.objects.ButtonWrapper _btaddfoto = null;
@@ -373,14 +403,19 @@ public anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper _ra
 public anywheresoftware.b4a.objects.ScrollViewWrapper _scrol = null;
 public b4a.example.b4ximageview _b4ximagem = null;
 public b4a.example.b4xfloattextfield _edb4xfloatnomelivro = null;
-public static String _hoje = "";
-public anywheresoftware.b4a.objects.LabelWrapper _lbldataprevisao = null;
-public anywheresoftware.b4a.objects.LabelWrapper _lblquantidadedias = null;
 public b4a.example.b4xfloattextfield _edb4xfloatpagoucap = null;
 public b4a.example.b4xfloattextfield _edb4xfloatautorlivro = null;
 public b4a.example.b4xfloattextfield _edb4xfloatmetapagcap = null;
-public static String _dataprevistafinal = "";
 public b4a.example.classbancodados _banco = null;
+public b4a.example.act_telacadastro._rotulodimencoes _rotulo = null;
+public b4a.example.act_telacadastro._edit _edit = null;
+public anywheresoftware.b4a.keywords.constants.TypefaceWrapper _negritoitalico = null;
+public static String _hoje = "";
+public static String _dataprevistafinal = "";
+public static boolean _txt_titulo_invalido = false;
+public static boolean _txt_autor_invalido = false;
+public static boolean _txt_pagoucap_invalido = false;
+public static boolean _txt_metapagoucap_invalido = false;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
@@ -395,528 +430,506 @@ RDebugUtils.currentModule="act_telacadastro";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 anywheresoftware.b4a.objects.LabelWrapper _etiqueta = null;
-int _esquerda = 0;
+int _btsalvaresquerda = 0;
 int _toposcrol = 0;
-anywheresoftware.b4a.keywords.constants.TypefaceWrapper _tf = null;
-int _tamanhoedits = 0;
 int _tamanholabelobrigatorio = 0;
-int _esquerdadoslabels = 0;
-int _tamanhodoslabels = 0;
-anywheresoftware.b4a.keywords.constants.TypefaceWrapper _tl = null;
-anywheresoftware.b4a.keywords.constants.TypefaceWrapper _lm = null;
-anywheresoftware.b4a.keywords.constants.TypefaceWrapper _pt = null;
 RDebugUtils.currentLine=4521984;
  //BA.debugLineNum = 4521984;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
 RDebugUtils.currentLine=4521985;
  //BA.debugLineNum = 4521985;BA.debugLine="Activity.LoadLayout(\"Lay_TelaCadastro\")";
 mostCurrent._activity.LoadLayout("Lay_TelaCadastro",mostCurrent.activityBA);
-RDebugUtils.currentLine=4521987;
- //BA.debugLineNum = 4521987;BA.debugLine="painelImagem.Initialize(\"\")";
-mostCurrent._painelimagem.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521988;
- //BA.debugLineNum = 4521988;BA.debugLine="panelCabecalho.Initialize (\"\")";
-mostCurrent._panelcabecalho.Initialize(mostCurrent.activityBA,"");
 RDebugUtils.currentLine=4521989;
- //BA.debugLineNum = 4521989;BA.debugLine="panelEdTituloLivro.Initialize(\"\")";
-mostCurrent._paneledtitulolivro.Initialize(mostCurrent.activityBA,"");
+ //BA.debugLineNum = 4521989;BA.debugLine="negritoItalico = negritoItalico.CreateNew(Typefac";
+mostCurrent._negritoitalico = (anywheresoftware.b4a.keywords.constants.TypefaceWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.constants.TypefaceWrapper(), (android.graphics.Typeface)(mostCurrent._negritoitalico.CreateNew(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD,anywheresoftware.b4a.keywords.Common.Typeface.STYLE_ITALIC)));
 RDebugUtils.currentLine=4521990;
- //BA.debugLineNum = 4521990;BA.debugLine="panelEdAutorLivro.Initialize(\"\")";
-mostCurrent._paneledautorlivro.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521991;
- //BA.debugLineNum = 4521991;BA.debugLine="panelEdPaginasOuCap.Initialize(\"\")";
-mostCurrent._paneledpaginasoucap.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521992;
- //BA.debugLineNum = 4521992;BA.debugLine="panelMeta.Initialize(\"\")";
-mostCurrent._panelmeta.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521993;
- //BA.debugLineNum = 4521993;BA.debugLine="panelDataPrevistaFim.Initialize(\"\")";
-mostCurrent._paneldataprevistafim.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521994;
- //BA.debugLineNum = 4521994;BA.debugLine="panelEdits.Initialize(\"\")";
-mostCurrent._paneledits.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521996;
- //BA.debugLineNum = 4521996;BA.debugLine="lblDadosLivro.Initialize(\"\")";
-mostCurrent._lbldadoslivro.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521997;
- //BA.debugLineNum = 4521997;BA.debugLine="lblTipoLeitura.Initialize(\"\")";
-mostCurrent._lbltipoleitura.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521998;
- //BA.debugLineNum = 4521998;BA.debugLine="lblMeta.Initialize(\"\")";
-mostCurrent._lblmeta.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4521999;
- //BA.debugLineNum = 4521999;BA.debugLine="lblPrevisaoTermino.Initialize(\"\")";
-mostCurrent._lblprevisaotermino.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522000;
- //BA.debugLineNum = 4522000;BA.debugLine="lblMaximoDigitosTitulo.Initialize(\"\")";
-mostCurrent._lblmaximodigitostitulo.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522001;
- //BA.debugLineNum = 4522001;BA.debugLine="lblMaximoDigitosAutor.Initialize(\"\")";
-mostCurrent._lblmaximodigitosautor.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522002;
- //BA.debugLineNum = 4522002;BA.debugLine="lblMaximoDigitosPagOuCap.Initialize(\"\")";
-mostCurrent._lblmaximodigitospagoucap.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522003;
- //BA.debugLineNum = 4522003;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Initialize(\"\")";
-mostCurrent._lblmaximodigitosmetapagoucap.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522004;
- //BA.debugLineNum = 4522004;BA.debugLine="lblIncongruenciaTitulo.Initialize(\"\")";
-mostCurrent._lblincongruenciatitulo.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522005;
- //BA.debugLineNum = 4522005;BA.debugLine="lblIncongruenciaAutor.Initialize(\"\")";
-mostCurrent._lblincongruenciaautor.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522006;
- //BA.debugLineNum = 4522006;BA.debugLine="lblIncongruenciaMetaPagOuCap.Initialize(\"\")";
-mostCurrent._lblincongruenciametapagoucap.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522007;
- //BA.debugLineNum = 4522007;BA.debugLine="lblIncongruenciaPagOuCap.Initialize(\"\")";
-mostCurrent._lblincongruenciapagoucap.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522009;
- //BA.debugLineNum = 4522009;BA.debugLine="btCancelar.Initialize (\"Event_btCancelar\")";
-mostCurrent._btcancelar.Initialize(mostCurrent.activityBA,"Event_btCancelar");
-RDebugUtils.currentLine=4522010;
- //BA.debugLineNum = 4522010;BA.debugLine="btSalvar.Initialize(\"Event_btSalvar\")";
-mostCurrent._btsalvar.Initialize(mostCurrent.activityBA,"Event_btSalvar");
-RDebugUtils.currentLine=4522011;
- //BA.debugLineNum = 4522011;BA.debugLine="btAddFoto.Initialize(\"\")";
-mostCurrent._btaddfoto.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522013;
- //BA.debugLineNum = 4522013;BA.debugLine="radPagina.Initialize(\"radPagina\")";
-mostCurrent._radpagina.Initialize(mostCurrent.activityBA,"radPagina");
-RDebugUtils.currentLine=4522014;
- //BA.debugLineNum = 4522014;BA.debugLine="radCapitulo.Initialize(\"radCapitulo\")";
-mostCurrent._radcapitulo.Initialize(mostCurrent.activityBA,"radCapitulo");
-RDebugUtils.currentLine=4522015;
- //BA.debugLineNum = 4522015;BA.debugLine="radPagina.Checked = True";
-mostCurrent._radpagina.setChecked(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=4522018;
- //BA.debugLineNum = 4522018;BA.debugLine="banco.Initialize";
+ //BA.debugLineNum = 4521990;BA.debugLine="banco.Initialize";
 mostCurrent._banco._initialize /*String*/ (null,processBA);
-RDebugUtils.currentLine=4522020;
- //BA.debugLineNum = 4522020;BA.debugLine="scrol.Initialize( 500 )";
-mostCurrent._scrol.Initialize(mostCurrent.activityBA,(int) (500));
+RDebugUtils.currentLine=4521992;
+ //BA.debugLineNum = 4521992;BA.debugLine="painelImagem.Initialize(\"\")";
+mostCurrent._painelimagem.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521993;
+ //BA.debugLineNum = 4521993;BA.debugLine="panelCabecalho.Initialize (\"\")";
+mostCurrent._panelcabecalho.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521994;
+ //BA.debugLineNum = 4521994;BA.debugLine="panelEdTituloLivro.Initialize(\"\")";
+mostCurrent._paneledtitulolivro.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521995;
+ //BA.debugLineNum = 4521995;BA.debugLine="panelEdAutorLivro.Initialize(\"\")";
+mostCurrent._paneledautorlivro.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521996;
+ //BA.debugLineNum = 4521996;BA.debugLine="panelEdPaginasOuCap.Initialize(\"\")";
+mostCurrent._paneledpaginasoucap.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521997;
+ //BA.debugLineNum = 4521997;BA.debugLine="panelMeta.Initialize(\"\")";
+mostCurrent._panelmeta.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521998;
+ //BA.debugLineNum = 4521998;BA.debugLine="panelDataPrevistaFim.Initialize(\"\")";
+mostCurrent._paneldataprevistafim.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4521999;
+ //BA.debugLineNum = 4521999;BA.debugLine="panelEdits.Initialize(\"\")";
+mostCurrent._paneledits.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522001;
+ //BA.debugLineNum = 4522001;BA.debugLine="lblDadosLivro.Initialize(\"\")";
+mostCurrent._lbldadoslivro.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522002;
+ //BA.debugLineNum = 4522002;BA.debugLine="lblTipoLeitura.Initialize(\"\")";
+mostCurrent._lbltipoleitura.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522003;
+ //BA.debugLineNum = 4522003;BA.debugLine="lblMeta.Initialize(\"\")";
+mostCurrent._lblmeta.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522004;
+ //BA.debugLineNum = 4522004;BA.debugLine="lblPrevisaoTermino.Initialize(\"\")";
+mostCurrent._lblprevisaotermino.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522005;
+ //BA.debugLineNum = 4522005;BA.debugLine="lblMaximoDigitosTitulo.Initialize(\"\")";
+mostCurrent._lblmaximodigitostitulo.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522006;
+ //BA.debugLineNum = 4522006;BA.debugLine="lblMaximoDigitosAutor.Initialize(\"\")";
+mostCurrent._lblmaximodigitosautor.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522007;
+ //BA.debugLineNum = 4522007;BA.debugLine="lblMaximoDigitosPagOuCap.Initialize(\"\")";
+mostCurrent._lblmaximodigitospagoucap.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522008;
+ //BA.debugLineNum = 4522008;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Initialize(\"\")";
+mostCurrent._lblmaximodigitosmetapagoucap.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522009;
+ //BA.debugLineNum = 4522009;BA.debugLine="lblIncongruenciaTitulo.Initialize(\"\")";
+mostCurrent._lblincongruenciatitulo.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522010;
+ //BA.debugLineNum = 4522010;BA.debugLine="lblIncongruenciaAutor.Initialize(\"\")";
+mostCurrent._lblincongruenciaautor.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522011;
+ //BA.debugLineNum = 4522011;BA.debugLine="lblIncongruenciaMetaPagOuCap.Initialize(\"\")";
+mostCurrent._lblincongruenciametapagoucap.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522012;
+ //BA.debugLineNum = 4522012;BA.debugLine="lblIncongruenciaPagOuCap.Initialize(\"\")";
+mostCurrent._lblincongruenciapagoucap.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522014;
+ //BA.debugLineNum = 4522014;BA.debugLine="lblDadosLivro.Color = Colors.Transparent";
+mostCurrent._lbldadoslivro.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+RDebugUtils.currentLine=4522015;
+ //BA.debugLineNum = 4522015;BA.debugLine="lblDadosLivro.Text = \"Dados do Livro\"";
+mostCurrent._lbldadoslivro.setText(BA.ObjectToCharSequence("Dados do Livro"));
+RDebugUtils.currentLine=4522016;
+ //BA.debugLineNum = 4522016;BA.debugLine="lblDadosLivro.TextColor = Colors.Black";
+mostCurrent._lbldadoslivro.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=4522017;
+ //BA.debugLineNum = 4522017;BA.debugLine="lblDadosLivro.TextSize = 17";
+mostCurrent._lbldadoslivro.setTextSize((float) (17));
+RDebugUtils.currentLine=4522018;
+ //BA.debugLineNum = 4522018;BA.debugLine="lblDadosLivro.Typeface = negritoItalico";
+mostCurrent._lbldadoslivro.setTypeface((android.graphics.Typeface)(mostCurrent._negritoitalico.getObject()));
+RDebugUtils.currentLine=4522019;
+ //BA.debugLineNum = 4522019;BA.debugLine="lblDadosLivro.Gravity = Gravity.CENTER";
+mostCurrent._lbldadoslivro.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
 RDebugUtils.currentLine=4522021;
- //BA.debugLineNum = 4522021;BA.debugLine="Main.fotos.Initialize(\"CC\")";
-mostCurrent._main._fotos /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Initialize("CC");
+ //BA.debugLineNum = 4522021;BA.debugLine="lblTipoLeitura.Color = Colors.Transparent";
+mostCurrent._lbltipoleitura.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+RDebugUtils.currentLine=4522022;
+ //BA.debugLineNum = 4522022;BA.debugLine="lblTipoLeitura.Text = \"Tipo de leitura\"";
+mostCurrent._lbltipoleitura.setText(BA.ObjectToCharSequence("Tipo de leitura"));
 RDebugUtils.currentLine=4522023;
- //BA.debugLineNum = 4522023;BA.debugLine="Dim etiqueta As Label";
-_etiqueta = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 4522023;BA.debugLine="lblTipoLeitura.TextColor = Colors.Black";
+mostCurrent._lbltipoleitura.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
 RDebugUtils.currentLine=4522024;
- //BA.debugLineNum = 4522024;BA.debugLine="etiqueta.Initialize(\"\")";
-_etiqueta.Initialize(mostCurrent.activityBA,"");
-RDebugUtils.currentLine=4522027;
- //BA.debugLineNum = 4522027;BA.debugLine="lblMaximoDigitosTitulo.Text = \"0/100 \"";
-mostCurrent._lblmaximodigitostitulo.setText(BA.ObjectToCharSequence("0/100 "));
+ //BA.debugLineNum = 4522024;BA.debugLine="lblTipoLeitura.TextSize = 17";
+mostCurrent._lbltipoleitura.setTextSize((float) (17));
+RDebugUtils.currentLine=4522025;
+ //BA.debugLineNum = 4522025;BA.debugLine="lblTipoLeitura.Typeface = negritoItalico";
+mostCurrent._lbltipoleitura.setTypeface((android.graphics.Typeface)(mostCurrent._negritoitalico.getObject()));
+RDebugUtils.currentLine=4522026;
+ //BA.debugLineNum = 4522026;BA.debugLine="lblTipoLeitura.Gravity = Gravity.CENTER";
+mostCurrent._lbltipoleitura.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
 RDebugUtils.currentLine=4522028;
- //BA.debugLineNum = 4522028;BA.debugLine="lblMaximoDigitosAutor.Text = \"0/100 \"";
-mostCurrent._lblmaximodigitosautor.setText(BA.ObjectToCharSequence("0/100 "));
+ //BA.debugLineNum = 4522028;BA.debugLine="lblMeta.Color = Colors.Transparent";
+mostCurrent._lblmeta.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
 RDebugUtils.currentLine=4522029;
- //BA.debugLineNum = 4522029;BA.debugLine="lblMaximoDigitosPagOuCap.Text = \"0/4 \"";
-mostCurrent._lblmaximodigitospagoucap.setText(BA.ObjectToCharSequence("0/4 "));
+ //BA.debugLineNum = 4522029;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas / cap ler";
+mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantas páginas / cap ler por dia?"));
 RDebugUtils.currentLine=4522030;
- //BA.debugLineNum = 4522030;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Text = \"0/4 \"";
-mostCurrent._lblmaximodigitosmetapagoucap.setText(BA.ObjectToCharSequence("0/4 "));
+ //BA.debugLineNum = 4522030;BA.debugLine="lblMeta.TextColor = Colors.Black";
+mostCurrent._lblmeta.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=4522031;
+ //BA.debugLineNum = 4522031;BA.debugLine="lblMeta.TextSize = 17";
+mostCurrent._lblmeta.setTextSize((float) (17));
 RDebugUtils.currentLine=4522032;
- //BA.debugLineNum = 4522032;BA.debugLine="lblMaximoDigitosTitulo.TextColor = Colors.Black";
-mostCurrent._lblmaximodigitostitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+ //BA.debugLineNum = 4522032;BA.debugLine="lblMeta.Typeface = negritoItalico";
+mostCurrent._lblmeta.setTypeface((android.graphics.Typeface)(mostCurrent._negritoitalico.getObject()));
 RDebugUtils.currentLine=4522033;
- //BA.debugLineNum = 4522033;BA.debugLine="lblMaximoDigitosAutor.TextColor = Colors.Black";
-mostCurrent._lblmaximodigitosautor.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=4522034;
- //BA.debugLineNum = 4522034;BA.debugLine="lblMaximoDigitosPagOuCap.TextColor = Colors.Black";
-mostCurrent._lblmaximodigitospagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+ //BA.debugLineNum = 4522033;BA.debugLine="lblMeta.Gravity = Gravity.CENTER";
+mostCurrent._lblmeta.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
 RDebugUtils.currentLine=4522035;
- //BA.debugLineNum = 4522035;BA.debugLine="lblMaximoDigitosMetaPagOuCap.TextColor = Colors.B";
-mostCurrent._lblmaximodigitosmetapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+ //BA.debugLineNum = 4522035;BA.debugLine="lblPrevisaoTermino.Color = Colors.Transparent";
+mostCurrent._lblprevisaotermino.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+RDebugUtils.currentLine=4522036;
+ //BA.debugLineNum = 4522036;BA.debugLine="lblPrevisaoTermino.Text = \"Previsão para término\"";
+mostCurrent._lblprevisaotermino.setText(BA.ObjectToCharSequence("Previsão para término"));
 RDebugUtils.currentLine=4522037;
- //BA.debugLineNum = 4522037;BA.debugLine="lblIncongruenciaAutor.TextColor = Colors.Red";
-mostCurrent._lblincongruenciaautor.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 4522037;BA.debugLine="lblPrevisaoTermino.TextColor = Colors.Black";
+mostCurrent._lblprevisaotermino.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
 RDebugUtils.currentLine=4522038;
- //BA.debugLineNum = 4522038;BA.debugLine="lblIncongruenciaMetaPagOuCap.TextColor = Colors.R";
-mostCurrent._lblincongruenciametapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 4522038;BA.debugLine="lblPrevisaoTermino.TextSize = 17";
+mostCurrent._lblprevisaotermino.setTextSize((float) (17));
 RDebugUtils.currentLine=4522039;
- //BA.debugLineNum = 4522039;BA.debugLine="lblIncongruenciaPagOuCap.TextColor = Colors.Red";
-mostCurrent._lblincongruenciapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 4522039;BA.debugLine="lblPrevisaoTermino.Typeface = negritoItalico";
+mostCurrent._lblprevisaotermino.setTypeface((android.graphics.Typeface)(mostCurrent._negritoitalico.getObject()));
 RDebugUtils.currentLine=4522040;
- //BA.debugLineNum = 4522040;BA.debugLine="lblIncongruenciaTitulo.TextColor = Colors.Red";
-mostCurrent._lblincongruenciatitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+ //BA.debugLineNum = 4522040;BA.debugLine="lblPrevisaoTermino.Gravity = Gravity.CENTER";
+mostCurrent._lblprevisaotermino.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
 RDebugUtils.currentLine=4522042;
- //BA.debugLineNum = 4522042;BA.debugLine="panelCabecalho.Color = Colors.RGB(0,165,255)";
-mostCurrent._panelcabecalho.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (0),(int) (165),(int) (255)));
+ //BA.debugLineNum = 4522042;BA.debugLine="btCancelar.Initialize (\"Event_btCancelar\")";
+mostCurrent._btcancelar.Initialize(mostCurrent.activityBA,"Event_btCancelar");
 RDebugUtils.currentLine=4522043;
- //BA.debugLineNum = 4522043;BA.debugLine="Activity.AddView(panelCabecalho, 0%x, 0%y, 100%x,";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._panelcabecalho.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (10),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522045;
- //BA.debugLineNum = 4522045;BA.debugLine="btCancelar.Color = Colors.Transparent";
-mostCurrent._btcancelar.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
+ //BA.debugLineNum = 4522043;BA.debugLine="btSalvar.Initialize(\"Event_btSalvar\")";
+mostCurrent._btsalvar.Initialize(mostCurrent.activityBA,"Event_btSalvar");
+RDebugUtils.currentLine=4522044;
+ //BA.debugLineNum = 4522044;BA.debugLine="btAddFoto.Initialize(\"\")";
+mostCurrent._btaddfoto.Initialize(mostCurrent.activityBA,"");
 RDebugUtils.currentLine=4522046;
- //BA.debugLineNum = 4522046;BA.debugLine="btCancelar.Text = \"CANCELAR\"";
-mostCurrent._btcancelar.setText(BA.ObjectToCharSequence("CANCELAR"));
+ //BA.debugLineNum = 4522046;BA.debugLine="btCancelar.Color = Colors.Transparent";
+mostCurrent._btcancelar.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
 RDebugUtils.currentLine=4522047;
- //BA.debugLineNum = 4522047;BA.debugLine="btCancelar.TextSize = 19";
-mostCurrent._btcancelar.setTextSize((float) (19));
+ //BA.debugLineNum = 4522047;BA.debugLine="btCancelar.Text = \"CANCELAR\"";
+mostCurrent._btcancelar.setText(BA.ObjectToCharSequence("CANCELAR"));
 RDebugUtils.currentLine=4522048;
- //BA.debugLineNum = 4522048;BA.debugLine="btCancelar.Typeface = Typeface.DEFAULT_BOLD";
+ //BA.debugLineNum = 4522048;BA.debugLine="btCancelar.TextSize = 19";
+mostCurrent._btcancelar.setTextSize((float) (19));
+RDebugUtils.currentLine=4522049;
+ //BA.debugLineNum = 4522049;BA.debugLine="btCancelar.Typeface = Typeface.DEFAULT_BOLD";
 mostCurrent._btcancelar.setTypeface(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD);
-RDebugUtils.currentLine=4522050;
- //BA.debugLineNum = 4522050;BA.debugLine="btSalvar.Color = Colors.Transparent";
-mostCurrent._btsalvar.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
 RDebugUtils.currentLine=4522051;
- //BA.debugLineNum = 4522051;BA.debugLine="btSalvar.Text = \"SALVAR\"";
-mostCurrent._btsalvar.setText(BA.ObjectToCharSequence("SALVAR"));
+ //BA.debugLineNum = 4522051;BA.debugLine="btSalvar.Color = Colors.Transparent";
+mostCurrent._btsalvar.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
 RDebugUtils.currentLine=4522052;
- //BA.debugLineNum = 4522052;BA.debugLine="btSalvar.TextSize = 19";
-mostCurrent._btsalvar.setTextSize((float) (19));
+ //BA.debugLineNum = 4522052;BA.debugLine="btSalvar.Text = \"SALVAR\"";
+mostCurrent._btsalvar.setText(BA.ObjectToCharSequence("SALVAR"));
 RDebugUtils.currentLine=4522053;
- //BA.debugLineNum = 4522053;BA.debugLine="btSalvar.Typeface = Typeface.DEFAULT_BOLD";
+ //BA.debugLineNum = 4522053;BA.debugLine="btSalvar.TextSize = 19";
+mostCurrent._btsalvar.setTextSize((float) (19));
+RDebugUtils.currentLine=4522054;
+ //BA.debugLineNum = 4522054;BA.debugLine="btSalvar.Typeface = Typeface.DEFAULT_BOLD";
 mostCurrent._btsalvar.setTypeface(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD);
 RDebugUtils.currentLine=4522056;
- //BA.debugLineNum = 4522056;BA.debugLine="panelCabecalho.AddView(btCancelar, 1%x,  1%y, 35%";
-mostCurrent._panelcabecalho.AddView((android.view.View)(mostCurrent._btcancelar.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (35),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
+ //BA.debugLineNum = 4522056;BA.debugLine="radPagina.Initialize(\"radPagina\")";
+mostCurrent._radpagina.Initialize(mostCurrent.activityBA,"radPagina");
 RDebugUtils.currentLine=4522057;
- //BA.debugLineNum = 4522057;BA.debugLine="Dim esquerda As Int = 100%x - btCancelar.Width -";
-_esquerda = (int) (anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-mostCurrent._btcancelar.getWidth()-mostCurrent._btcancelar.getLeft());
+ //BA.debugLineNum = 4522057;BA.debugLine="radCapitulo.Initialize(\"radCapitulo\")";
+mostCurrent._radcapitulo.Initialize(mostCurrent.activityBA,"radCapitulo");
 RDebugUtils.currentLine=4522058;
- //BA.debugLineNum = 4522058;BA.debugLine="panelCabecalho.AddView(btSalvar, esquerda, 1%y, 3";
-mostCurrent._panelcabecalho.AddView((android.view.View)(mostCurrent._btsalvar.getObject()),_esquerda,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (35),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522061;
- //BA.debugLineNum = 4522061;BA.debugLine="scrol.Color = Colors.Cyan";
-mostCurrent._scrol.setColor(anywheresoftware.b4a.keywords.Common.Colors.Cyan);
-RDebugUtils.currentLine=4522062;
- //BA.debugLineNum = 4522062;BA.debugLine="scrol.Panel.Color = Colors.RGB(223,223,223)";
-mostCurrent._scrol.getPanel().setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (223),(int) (223),(int) (223)));
-RDebugUtils.currentLine=4522064;
- //BA.debugLineNum = 4522064;BA.debugLine="Dim topoScrol As Int = panelCabecalho.Top + panel";
-_toposcrol = (int) (mostCurrent._panelcabecalho.getTop()+mostCurrent._panelcabecalho.getHeight());
-RDebugUtils.currentLine=4522065;
- //BA.debugLineNum = 4522065;BA.debugLine="Activity.AddView(scrol, 0%x, topoScrol , 100%x, 1";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrol.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),_toposcrol,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),(int) (anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-_toposcrol));
-RDebugUtils.currentLine=4522067;
- //BA.debugLineNum = 4522067;BA.debugLine="lblDadosLivro.Color = Colors.Transparent";
-mostCurrent._lbldadoslivro.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=4522068;
- //BA.debugLineNum = 4522068;BA.debugLine="lblDadosLivro.Text = \"Dados do Livro\"";
-mostCurrent._lbldadoslivro.setText(BA.ObjectToCharSequence("Dados do Livro"));
-RDebugUtils.currentLine=4522069;
- //BA.debugLineNum = 4522069;BA.debugLine="lblDadosLivro.TextColor = Colors.Black";
-mostCurrent._lbldadoslivro.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=4522070;
- //BA.debugLineNum = 4522070;BA.debugLine="lblDadosLivro.TextSize = 17";
-mostCurrent._lbldadoslivro.setTextSize((float) (17));
-RDebugUtils.currentLine=4522074;
- //BA.debugLineNum = 4522074;BA.debugLine="Dim tf As Typeface";
-_tf = new anywheresoftware.b4a.keywords.constants.TypefaceWrapper();
-RDebugUtils.currentLine=4522075;
- //BA.debugLineNum = 4522075;BA.debugLine="tf = tf.CreateNew(Typeface.DEFAULT_BOLD, Typeface";
-_tf = (anywheresoftware.b4a.keywords.constants.TypefaceWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.constants.TypefaceWrapper(), (android.graphics.Typeface)(_tf.CreateNew(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD,anywheresoftware.b4a.keywords.Common.Typeface.STYLE_ITALIC)));
-RDebugUtils.currentLine=4522076;
- //BA.debugLineNum = 4522076;BA.debugLine="lblDadosLivro.Typeface = tf";
-mostCurrent._lbldadoslivro.setTypeface((android.graphics.Typeface)(_tf.getObject()));
-RDebugUtils.currentLine=4522085;
- //BA.debugLineNum = 4522085;BA.debugLine="lblDadosLivro.Gravity = Gravity.CENTER";
-mostCurrent._lbldadoslivro.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
-RDebugUtils.currentLine=4522087;
- //BA.debugLineNum = 4522087;BA.debugLine="scrol.Panel.AddView(lblDadosLivro, 0%x, 0%y, 100%";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lbldadoslivro.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522089;
- //BA.debugLineNum = 4522089;BA.debugLine="painelImagem.Width = 98%x";
-mostCurrent._painelimagem.setWidth(anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522093;
- //BA.debugLineNum = 4522093;BA.debugLine="Dim esquerda As Int = (100%x - painelImagem.Width";
-_esquerda = (int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-mostCurrent._painelimagem.getWidth())/(double)2);
-RDebugUtils.currentLine=4522094;
- //BA.debugLineNum = 4522094;BA.debugLine="Dim tamanhoEdits As Int = painelImagem.Width";
-_tamanhoedits = mostCurrent._painelimagem.getWidth();
-RDebugUtils.currentLine=4522096;
- //BA.debugLineNum = 4522096;BA.debugLine="scrol.Panel.AddView(painelImagem, esquerda , lblD";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._painelimagem.getObject()),_esquerda,(int) (mostCurrent._lbldadoslivro.getTop()+mostCurrent._lbldadoslivro.getHeight()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (30),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522098;
- //BA.debugLineNum = 4522098;BA.debugLine="painelImagem.LoadLayout(\"Lay_Imagem\")";
-mostCurrent._painelimagem.LoadLayout("Lay_Imagem",mostCurrent.activityBA);
-RDebugUtils.currentLine=4522100;
- //BA.debugLineNum = 4522100;BA.debugLine="B4XImagem.ResizeMode = \"FILL\"";
-mostCurrent._b4ximagem._setresizemode /*String*/ (null,"FILL");
-RDebugUtils.currentLine=4522101;
- //BA.debugLineNum = 4522101;BA.debugLine="B4XImagem.Load(File.DirAssets, \"livro.jpg\")";
-mostCurrent._b4ximagem._load /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"livro.jpg");
-RDebugUtils.currentLine=4522103;
- //BA.debugLineNum = 4522103;BA.debugLine="scrol.Panel.Height = painelImagem.Top + painelIma";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._painelimagem.getTop()+mostCurrent._painelimagem.getHeight()));
-RDebugUtils.currentLine=4522105;
- //BA.debugLineNum = 4522105;BA.debugLine="scrol.Panel.AddView(panelEdits, esquerda, painelI";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneledits.getObject()),_esquerda,(int) (mostCurrent._painelimagem.getTop()+mostCurrent._painelimagem.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),_tamanhoedits,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522106;
- //BA.debugLineNum = 4522106;BA.debugLine="panelEdits.LoadLayout(\"Lay_edTituloLivro\")";
-mostCurrent._paneledits.LoadLayout("Lay_edTituloLivro",mostCurrent.activityBA);
-RDebugUtils.currentLine=4522107;
- //BA.debugLineNum = 4522107;BA.debugLine="scrol.Panel.Height = panelEdits.Top + panelEdits.";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._paneledits.getTop()+mostCurrent._paneledits.getHeight()));
-RDebugUtils.currentLine=4522110;
- //BA.debugLineNum = 4522110;BA.debugLine="Dim tamanhoLabelObrigatorio As Int = (100%x / 2)";
-_tamanholabelobrigatorio = (int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)/(double)2)-_esquerda);
-RDebugUtils.currentLine=4522111;
- //BA.debugLineNum = 4522111;BA.debugLine="Dim esquerdaDosLabels As Int = esquerda + tamanho";
-_esquerdadoslabels = (int) (_esquerda+_tamanholabelobrigatorio);
-RDebugUtils.currentLine=4522112;
- //BA.debugLineNum = 4522112;BA.debugLine="Dim tamanhoDosLabels As Int = panelEdits.Width -";
-_tamanhodoslabels = (int) (mostCurrent._paneledits.getWidth()-_tamanholabelobrigatorio);
-RDebugUtils.currentLine=4522114;
- //BA.debugLineNum = 4522114;BA.debugLine="lblIncongruenciaTitulo.Text = \"Obrigatório\"";
-mostCurrent._lblincongruenciatitulo.setText(BA.ObjectToCharSequence("Obrigatório"));
-RDebugUtils.currentLine=4522115;
- //BA.debugLineNum = 4522115;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaTitulo, pa";
-_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciatitulo,(int) (mostCurrent._paneledits.getTop()+mostCurrent._paneledits.getHeight()),_esquerda,_tamanholabelobrigatorio);
-RDebugUtils.currentLine=4522116;
- //BA.debugLineNum = 4522116;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
-_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitostitulo,(int) (mostCurrent._paneledits.getTop()+mostCurrent._paneledits.getHeight()),_esquerdadoslabels,_tamanhodoslabels);
-RDebugUtils.currentLine=4522117;
- //BA.debugLineNum = 4522117;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
-mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
-RDebugUtils.currentLine=4522119;
- //BA.debugLineNum = 4522119;BA.debugLine="scrol.Panel.AddView(panelEdAutorLivro, esquerda,";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneledautorlivro.getObject()),_esquerda,(int) (_etiqueta.getTop()+_etiqueta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),_tamanhoedits,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522120;
- //BA.debugLineNum = 4522120;BA.debugLine="panelEdAutorLivro.LoadLayout(\"Lay_edAutorLivro\")";
-mostCurrent._paneledautorlivro.LoadLayout("Lay_edAutorLivro",mostCurrent.activityBA);
-RDebugUtils.currentLine=4522122;
- //BA.debugLineNum = 4522122;BA.debugLine="lblIncongruenciaAutor.Text = \"Obrigatório\"";
-mostCurrent._lblincongruenciaautor.setText(BA.ObjectToCharSequence("Obrigatório"));
-RDebugUtils.currentLine=4522123;
- //BA.debugLineNum = 4522123;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaAutor,pane";
-_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciaautor,(int) (mostCurrent._paneledautorlivro.getTop()+mostCurrent._paneledautorlivro.getHeight()),_esquerda,_tamanholabelobrigatorio);
-RDebugUtils.currentLine=4522124;
- //BA.debugLineNum = 4522124;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
-_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitosautor,(int) (mostCurrent._paneledautorlivro.getTop()+mostCurrent._paneledautorlivro.getHeight()),_esquerdadoslabels,_tamanhodoslabels);
-RDebugUtils.currentLine=4522125;
- //BA.debugLineNum = 4522125;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
-mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
-RDebugUtils.currentLine=4522127;
- //BA.debugLineNum = 4522127;BA.debugLine="lblTipoLeitura.Color = Colors.Transparent";
-mostCurrent._lbltipoleitura.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=4522128;
- //BA.debugLineNum = 4522128;BA.debugLine="lblTipoLeitura.Text = \"Tipo de leitura\"";
-mostCurrent._lbltipoleitura.setText(BA.ObjectToCharSequence("Tipo de leitura"));
-RDebugUtils.currentLine=4522129;
- //BA.debugLineNum = 4522129;BA.debugLine="lblTipoLeitura.TextColor = Colors.Black";
-mostCurrent._lbltipoleitura.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=4522130;
- //BA.debugLineNum = 4522130;BA.debugLine="lblTipoLeitura.TextSize = 17";
-mostCurrent._lbltipoleitura.setTextSize((float) (17));
-RDebugUtils.currentLine=4522132;
- //BA.debugLineNum = 4522132;BA.debugLine="Dim tl As Typeface";
-_tl = new anywheresoftware.b4a.keywords.constants.TypefaceWrapper();
-RDebugUtils.currentLine=4522133;
- //BA.debugLineNum = 4522133;BA.debugLine="tl = Typeface.CreateNew(Typeface.DEFAULT_BOLD, Ty";
-_tl = (anywheresoftware.b4a.keywords.constants.TypefaceWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.constants.TypefaceWrapper(), (android.graphics.Typeface)(anywheresoftware.b4a.keywords.Common.Typeface.CreateNew(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD,anywheresoftware.b4a.keywords.Common.Typeface.STYLE_ITALIC)));
-RDebugUtils.currentLine=4522134;
- //BA.debugLineNum = 4522134;BA.debugLine="lblTipoLeitura.Typeface = tl";
-mostCurrent._lbltipoleitura.setTypeface((android.graphics.Typeface)(_tl.getObject()));
-RDebugUtils.currentLine=4522135;
- //BA.debugLineNum = 4522135;BA.debugLine="lblTipoLeitura.Gravity = Gravity.CENTER";
-mostCurrent._lbltipoleitura.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
-RDebugUtils.currentLine=4522137;
- //BA.debugLineNum = 4522137;BA.debugLine="scrol.Panel.AddView(lblTipoLeitura, 0%x, lblMaxim";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lbltipoleitura.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (mostCurrent._lblmaximodigitosautor.getTop()+mostCurrent._lblmaximodigitosautor.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522138;
- //BA.debugLineNum = 4522138;BA.debugLine="scrol.Panel.Height = lblTipoLeitura.Top + lblTipo";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._lbltipoleitura.getTop()+mostCurrent._lbltipoleitura.getHeight()));
-RDebugUtils.currentLine=4522140;
- //BA.debugLineNum = 4522140;BA.debugLine="radPagina.Text = \"Por página\"";
+ //BA.debugLineNum = 4522058;BA.debugLine="radPagina.Checked = True";
+mostCurrent._radpagina.setChecked(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=4522060;
+ //BA.debugLineNum = 4522060;BA.debugLine="radPagina.Text = \"Por página\"";
 mostCurrent._radpagina.setText(BA.ObjectToCharSequence("Por página"));
-RDebugUtils.currentLine=4522141;
- //BA.debugLineNum = 4522141;BA.debugLine="radPagina.TextColor = Colors.RGB(83,0,0)";
+RDebugUtils.currentLine=4522061;
+ //BA.debugLineNum = 4522061;BA.debugLine="radPagina.TextColor = Colors.RGB(83,0,0)";
 mostCurrent._radpagina.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (83),(int) (0),(int) (0)));
-RDebugUtils.currentLine=4522142;
- //BA.debugLineNum = 4522142;BA.debugLine="radPagina.TextSize = 16";
+RDebugUtils.currentLine=4522062;
+ //BA.debugLineNum = 4522062;BA.debugLine="radPagina.TextSize = 16";
 mostCurrent._radpagina.setTextSize((float) (16));
-RDebugUtils.currentLine=4522143;
- //BA.debugLineNum = 4522143;BA.debugLine="radPagina.Gravity = Gravity.CENTER";
+RDebugUtils.currentLine=4522063;
+ //BA.debugLineNum = 4522063;BA.debugLine="radPagina.Gravity = Gravity.CENTER";
 mostCurrent._radpagina.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
-RDebugUtils.currentLine=4522145;
- //BA.debugLineNum = 4522145;BA.debugLine="radCapitulo.Text = \"Por capítulo\"";
+RDebugUtils.currentLine=4522065;
+ //BA.debugLineNum = 4522065;BA.debugLine="radCapitulo.Text = \"Por capítulo\"";
 mostCurrent._radcapitulo.setText(BA.ObjectToCharSequence("Por capítulo"));
-RDebugUtils.currentLine=4522146;
- //BA.debugLineNum = 4522146;BA.debugLine="radCapitulo.TextColor = Colors.RGB(83,0,0)";
+RDebugUtils.currentLine=4522066;
+ //BA.debugLineNum = 4522066;BA.debugLine="radCapitulo.TextColor = Colors.RGB(83,0,0)";
 mostCurrent._radcapitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (83),(int) (0),(int) (0)));
-RDebugUtils.currentLine=4522147;
- //BA.debugLineNum = 4522147;BA.debugLine="radCapitulo.TextSize = 16";
+RDebugUtils.currentLine=4522067;
+ //BA.debugLineNum = 4522067;BA.debugLine="radCapitulo.TextSize = 16";
 mostCurrent._radcapitulo.setTextSize((float) (16));
-RDebugUtils.currentLine=4522148;
- //BA.debugLineNum = 4522148;BA.debugLine="radCapitulo.Gravity = Gravity.CENTER";
+RDebugUtils.currentLine=4522068;
+ //BA.debugLineNum = 4522068;BA.debugLine="radCapitulo.Gravity = Gravity.CENTER";
 mostCurrent._radcapitulo.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
-RDebugUtils.currentLine=4522150;
- //BA.debugLineNum = 4522150;BA.debugLine="scrol.Panel.AddView(radPagina, 0%x , lblTipoLeitu";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._radpagina.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (mostCurrent._lbltipoleitura.getTop()+mostCurrent._lbltipoleitura.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (50),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522152;
- //BA.debugLineNum = 4522152;BA.debugLine="scrol.Panel.AddView(radCapitulo, radPagina.Width,";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._radcapitulo.getObject()),mostCurrent._radpagina.getWidth(),(int) (mostCurrent._lbltipoleitura.getTop()+mostCurrent._lbltipoleitura.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (50),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522153;
- //BA.debugLineNum = 4522153;BA.debugLine="scrol.Panel.Height = radPagina.Top + radPagina.He";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._radpagina.getTop()+mostCurrent._radpagina.getHeight()));
-RDebugUtils.currentLine=4522155;
- //BA.debugLineNum = 4522155;BA.debugLine="scrol.Panel.AddView(panelEdPaginasOuCap, esquerda";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneledpaginasoucap.getObject()),_esquerda,(int) (mostCurrent._radcapitulo.getTop()+mostCurrent._radcapitulo.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),_tamanhoedits,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522156;
- //BA.debugLineNum = 4522156;BA.debugLine="panelEdPaginasOuCap.LoadLayout(\"Lay_edPagOuCapitu";
-mostCurrent._paneledpaginasoucap.LoadLayout("Lay_edPagOuCapitulo",mostCurrent.activityBA);
-RDebugUtils.currentLine=4522158;
- //BA.debugLineNum = 4522158;BA.debugLine="lblIncongruenciaPagOuCap.Text = \"Obrigatório\"";
-mostCurrent._lblincongruenciapagoucap.setText(BA.ObjectToCharSequence("Obrigatório"));
-RDebugUtils.currentLine=4522159;
- //BA.debugLineNum = 4522159;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaPagOuCap,";
-_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciapagoucap,(int) (mostCurrent._paneledpaginasoucap.getTop()+mostCurrent._paneledpaginasoucap.getHeight()),_esquerda,_tamanholabelobrigatorio);
-RDebugUtils.currentLine=4522160;
- //BA.debugLineNum = 4522160;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
-_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitospagoucap,(int) (mostCurrent._paneledpaginasoucap.getTop()+mostCurrent._paneledpaginasoucap.getHeight()),_esquerdadoslabels,_tamanhodoslabels);
-RDebugUtils.currentLine=4522161;
- //BA.debugLineNum = 4522161;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
-mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
-RDebugUtils.currentLine=4522163;
- //BA.debugLineNum = 4522163;BA.debugLine="lblMeta.Color = Colors.Transparent";
-mostCurrent._lblmeta.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=4522164;
- //BA.debugLineNum = 4522164;BA.debugLine="lblMeta.Text = \"Meta - Quantas páginas / cap ler";
-mostCurrent._lblmeta.setText(BA.ObjectToCharSequence("Meta - Quantas páginas / cap ler por dia?"));
-RDebugUtils.currentLine=4522165;
- //BA.debugLineNum = 4522165;BA.debugLine="lblMeta.TextColor = Colors.Black";
-mostCurrent._lblmeta.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=4522166;
- //BA.debugLineNum = 4522166;BA.debugLine="lblMeta.TextSize = 17";
-mostCurrent._lblmeta.setTextSize((float) (17));
-RDebugUtils.currentLine=4522168;
- //BA.debugLineNum = 4522168;BA.debugLine="Dim lm As Typeface";
-_lm = new anywheresoftware.b4a.keywords.constants.TypefaceWrapper();
-RDebugUtils.currentLine=4522169;
- //BA.debugLineNum = 4522169;BA.debugLine="lm = Typeface.CreateNew(Typeface.DEFAULT_BOLD, Ty";
-_lm = (anywheresoftware.b4a.keywords.constants.TypefaceWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.constants.TypefaceWrapper(), (android.graphics.Typeface)(anywheresoftware.b4a.keywords.Common.Typeface.CreateNew(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD,anywheresoftware.b4a.keywords.Common.Typeface.STYLE_ITALIC)));
-RDebugUtils.currentLine=4522170;
- //BA.debugLineNum = 4522170;BA.debugLine="lblMeta.Typeface = lm";
-mostCurrent._lblmeta.setTypeface((android.graphics.Typeface)(_lm.getObject()));
-RDebugUtils.currentLine=4522171;
- //BA.debugLineNum = 4522171;BA.debugLine="lblMeta.Gravity = Gravity.CENTER";
-mostCurrent._lblmeta.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
-RDebugUtils.currentLine=4522173;
- //BA.debugLineNum = 4522173;BA.debugLine="scrol.Panel.AddView(lblMeta, 0%x, etiqueta.Top +";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lblmeta.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (_etiqueta.getTop()+_etiqueta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522174;
- //BA.debugLineNum = 4522174;BA.debugLine="scrol.Panel.Height = lblMeta.Top + lblMeta.Height";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._lblmeta.getTop()+mostCurrent._lblmeta.getHeight()));
-RDebugUtils.currentLine=4522176;
- //BA.debugLineNum = 4522176;BA.debugLine="scrol.Panel.AddView(panelMeta, esquerda, lblMeta.";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._panelmeta.getObject()),_esquerda,(int) (mostCurrent._lblmeta.getTop()+mostCurrent._lblmeta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),_tamanhoedits,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522177;
- //BA.debugLineNum = 4522177;BA.debugLine="panelMeta.LoadLayout(\"Lay_edMetaPagCap\")";
-mostCurrent._panelmeta.LoadLayout("Lay_edMetaPagCap",mostCurrent.activityBA);
-RDebugUtils.currentLine=4522179;
- //BA.debugLineNum = 4522179;BA.debugLine="lblIncongruenciaMetaPagOuCap.Text = \"Obrigatório\"";
-mostCurrent._lblincongruenciametapagoucap.setText(BA.ObjectToCharSequence("Obrigatório"));
-RDebugUtils.currentLine=4522180;
- //BA.debugLineNum = 4522180;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaMetaPagOuC";
-_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciametapagoucap,(int) (mostCurrent._panelmeta.getTop()+mostCurrent._panelmeta.getHeight()),_esquerda,_tamanholabelobrigatorio);
-RDebugUtils.currentLine=4522181;
- //BA.debugLineNum = 4522181;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
-_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitosmetapagoucap,(int) (mostCurrent._panelmeta.getTop()+mostCurrent._panelmeta.getHeight()),_esquerdadoslabels,_tamanhodoslabels);
-RDebugUtils.currentLine=4522182;
- //BA.debugLineNum = 4522182;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
-mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
-RDebugUtils.currentLine=4522184;
- //BA.debugLineNum = 4522184;BA.debugLine="lblPrevisaoTermino.Color = Colors.Transparent";
-mostCurrent._lblprevisaotermino.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=4522185;
- //BA.debugLineNum = 4522185;BA.debugLine="lblPrevisaoTermino.Text = \"Previsão para término\"";
-mostCurrent._lblprevisaotermino.setText(BA.ObjectToCharSequence("Previsão para término"));
-RDebugUtils.currentLine=4522186;
- //BA.debugLineNum = 4522186;BA.debugLine="lblPrevisaoTermino.TextColor = Colors.Black";
-mostCurrent._lblprevisaotermino.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
-RDebugUtils.currentLine=4522187;
- //BA.debugLineNum = 4522187;BA.debugLine="lblPrevisaoTermino.TextSize = 17";
-mostCurrent._lblprevisaotermino.setTextSize((float) (17));
-RDebugUtils.currentLine=4522189;
- //BA.debugLineNum = 4522189;BA.debugLine="Dim pt As Typeface";
-_pt = new anywheresoftware.b4a.keywords.constants.TypefaceWrapper();
-RDebugUtils.currentLine=4522190;
- //BA.debugLineNum = 4522190;BA.debugLine="pt = Typeface.CreateNew(Typeface.DEFAULT_BOLD, Ty";
-_pt = (anywheresoftware.b4a.keywords.constants.TypefaceWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.constants.TypefaceWrapper(), (android.graphics.Typeface)(anywheresoftware.b4a.keywords.Common.Typeface.CreateNew(anywheresoftware.b4a.keywords.Common.Typeface.DEFAULT_BOLD,anywheresoftware.b4a.keywords.Common.Typeface.STYLE_ITALIC)));
-RDebugUtils.currentLine=4522191;
- //BA.debugLineNum = 4522191;BA.debugLine="lblPrevisaoTermino.Typeface = pt";
-mostCurrent._lblprevisaotermino.setTypeface((android.graphics.Typeface)(_pt.getObject()));
-RDebugUtils.currentLine=4522192;
- //BA.debugLineNum = 4522192;BA.debugLine="lblPrevisaoTermino.Gravity = Gravity.CENTER";
-mostCurrent._lblprevisaotermino.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
-RDebugUtils.currentLine=4522194;
- //BA.debugLineNum = 4522194;BA.debugLine="scrol.Panel.AddView(lblPrevisaoTermino, 0%x, etiq";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lblprevisaotermino.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (_etiqueta.getTop()+_etiqueta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522195;
- //BA.debugLineNum = 4522195;BA.debugLine="scrol.Panel.Height = lblPrevisaoTermino.Top + lbl";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._lblprevisaotermino.getTop()+mostCurrent._lblprevisaotermino.getHeight()));
-RDebugUtils.currentLine=4522197;
- //BA.debugLineNum = 4522197;BA.debugLine="panelDataPrevistaFim.Color = Colors.Blue";
-mostCurrent._paneldataprevistafim.setColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
-RDebugUtils.currentLine=4522198;
- //BA.debugLineNum = 4522198;BA.debugLine="scrol.Panel.AddView(panelDataPrevistaFim, esquerd";
-mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneldataprevistafim.getObject()),_esquerda,(int) (mostCurrent._lblprevisaotermino.getTop()+mostCurrent._lblprevisaotermino.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),mostCurrent._paneledits.getWidth(),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (15),mostCurrent.activityBA));
-RDebugUtils.currentLine=4522199;
- //BA.debugLineNum = 4522199;BA.debugLine="panelDataPrevistaFim.LoadLayout(\"Lay_Previsao_ter";
-mostCurrent._paneldataprevistafim.LoadLayout("Lay_Previsao_termino",mostCurrent.activityBA);
-RDebugUtils.currentLine=4522200;
- //BA.debugLineNum = 4522200;BA.debugLine="scrol.Panel.Height = panelDataPrevistaFim.Top + p";
-mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._paneldataprevistafim.getTop()+mostCurrent._paneldataprevistafim.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))));
-RDebugUtils.currentLine=4522202;
- //BA.debugLineNum = 4522202;BA.debugLine="hoje = \"Dia: \" & DateTime.Date(DateTime.Now)";
-mostCurrent._hoje = "Dia: "+anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
-RDebugUtils.currentLine=4522203;
- //BA.debugLineNum = 4522203;BA.debugLine="lblDataPrevisao.Text = hoje";
-mostCurrent._lbldataprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
-RDebugUtils.currentLine=4522205;
- //BA.debugLineNum = 4522205;BA.debugLine="lblQuantidadeDias.Visible = False";
-mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522206;
- //BA.debugLineNum = 4522206;BA.debugLine="lblMaximoDigitosTitulo.Visible = False";
+RDebugUtils.currentLine=4522070;
+ //BA.debugLineNum = 4522070;BA.debugLine="lblMaximoDigitosTitulo.Text = \"0/100 \"";
+mostCurrent._lblmaximodigitostitulo.setText(BA.ObjectToCharSequence("0/100 "));
+RDebugUtils.currentLine=4522071;
+ //BA.debugLineNum = 4522071;BA.debugLine="lblMaximoDigitosAutor.Text = \"0/100 \"";
+mostCurrent._lblmaximodigitosautor.setText(BA.ObjectToCharSequence("0/100 "));
+RDebugUtils.currentLine=4522072;
+ //BA.debugLineNum = 4522072;BA.debugLine="lblMaximoDigitosPagOuCap.Text = \"0/4 \"";
+mostCurrent._lblmaximodigitospagoucap.setText(BA.ObjectToCharSequence("0/4 "));
+RDebugUtils.currentLine=4522073;
+ //BA.debugLineNum = 4522073;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Text = \"0/4 \"";
+mostCurrent._lblmaximodigitosmetapagoucap.setText(BA.ObjectToCharSequence("0/4 "));
+RDebugUtils.currentLine=4522075;
+ //BA.debugLineNum = 4522075;BA.debugLine="lblMaximoDigitosTitulo.Visible = False";
 mostCurrent._lblmaximodigitostitulo.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522207;
- //BA.debugLineNum = 4522207;BA.debugLine="lblMaximoDigitosAutor.Visible = False";
+RDebugUtils.currentLine=4522076;
+ //BA.debugLineNum = 4522076;BA.debugLine="lblMaximoDigitosAutor.Visible = False";
 mostCurrent._lblmaximodigitosautor.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522208;
- //BA.debugLineNum = 4522208;BA.debugLine="lblMaximoDigitosPagOuCap.Visible = False";
+RDebugUtils.currentLine=4522077;
+ //BA.debugLineNum = 4522077;BA.debugLine="lblMaximoDigitosPagOuCap.Visible = False";
 mostCurrent._lblmaximodigitospagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522209;
- //BA.debugLineNum = 4522209;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Visible = False";
+RDebugUtils.currentLine=4522078;
+ //BA.debugLineNum = 4522078;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Visible = False";
 mostCurrent._lblmaximodigitosmetapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522211;
- //BA.debugLineNum = 4522211;BA.debugLine="lblIncongruenciaAutor.Visible = False";
+RDebugUtils.currentLine=4522080;
+ //BA.debugLineNum = 4522080;BA.debugLine="lblMaximoDigitosTitulo.TextColor = Colors.Black";
+mostCurrent._lblmaximodigitostitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=4522081;
+ //BA.debugLineNum = 4522081;BA.debugLine="lblMaximoDigitosAutor.TextColor = Colors.Black";
+mostCurrent._lblmaximodigitosautor.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=4522082;
+ //BA.debugLineNum = 4522082;BA.debugLine="lblMaximoDigitosPagOuCap.TextColor = Colors.Black";
+mostCurrent._lblmaximodigitospagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=4522083;
+ //BA.debugLineNum = 4522083;BA.debugLine="lblMaximoDigitosMetaPagOuCap.TextColor = Colors.B";
+mostCurrent._lblmaximodigitosmetapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=4522085;
+ //BA.debugLineNum = 4522085;BA.debugLine="lblIncongruenciaAutor.TextColor = Colors.Red";
+mostCurrent._lblincongruenciaautor.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=4522086;
+ //BA.debugLineNum = 4522086;BA.debugLine="lblIncongruenciaMetaPagOuCap.TextColor = Colors.R";
+mostCurrent._lblincongruenciametapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=4522087;
+ //BA.debugLineNum = 4522087;BA.debugLine="lblIncongruenciaPagOuCap.TextColor = Colors.Red";
+mostCurrent._lblincongruenciapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=4522088;
+ //BA.debugLineNum = 4522088;BA.debugLine="lblIncongruenciaTitulo.TextColor = Colors.Red";
+mostCurrent._lblincongruenciatitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=4522090;
+ //BA.debugLineNum = 4522090;BA.debugLine="lblIncongruenciaAutor.Visible = False";
 mostCurrent._lblincongruenciaautor.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522212;
- //BA.debugLineNum = 4522212;BA.debugLine="lblIncongruenciaMetaPagOuCap.Visible = False";
+RDebugUtils.currentLine=4522091;
+ //BA.debugLineNum = 4522091;BA.debugLine="lblIncongruenciaMetaPagOuCap.Visible = False";
 mostCurrent._lblincongruenciametapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522213;
- //BA.debugLineNum = 4522213;BA.debugLine="lblIncongruenciaPagOuCap.Visible = False";
+RDebugUtils.currentLine=4522092;
+ //BA.debugLineNum = 4522092;BA.debugLine="lblIncongruenciaPagOuCap.Visible = False";
 mostCurrent._lblincongruenciapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522214;
- //BA.debugLineNum = 4522214;BA.debugLine="lblIncongruenciaTitulo.Visible = False";
+RDebugUtils.currentLine=4522093;
+ //BA.debugLineNum = 4522093;BA.debugLine="lblIncongruenciaTitulo.Visible = False";
 mostCurrent._lblincongruenciatitulo.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=4522215;
- //BA.debugLineNum = 4522215;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4522095;
+ //BA.debugLineNum = 4522095;BA.debugLine="scrol.Initialize( 500 )";
+mostCurrent._scrol.Initialize(mostCurrent.activityBA,(int) (500));
+RDebugUtils.currentLine=4522096;
+ //BA.debugLineNum = 4522096;BA.debugLine="Main.fotos.Initialize(\"CC\")";
+mostCurrent._main._fotos /*anywheresoftware.b4a.phone.Phone.ContentChooser*/ .Initialize("CC");
+RDebugUtils.currentLine=4522098;
+ //BA.debugLineNum = 4522098;BA.debugLine="Dim etiqueta As Label";
+_etiqueta = new anywheresoftware.b4a.objects.LabelWrapper();
+RDebugUtils.currentLine=4522099;
+ //BA.debugLineNum = 4522099;BA.debugLine="etiqueta.Initialize(\"\")";
+_etiqueta.Initialize(mostCurrent.activityBA,"");
+RDebugUtils.currentLine=4522101;
+ //BA.debugLineNum = 4522101;BA.debugLine="edit.Initialize";
+mostCurrent._edit.Initialize();
+RDebugUtils.currentLine=4522102;
+ //BA.debugLineNum = 4522102;BA.debugLine="rotulo.Initialize";
+mostCurrent._rotulo.Initialize();
+RDebugUtils.currentLine=4522107;
+ //BA.debugLineNum = 4522107;BA.debugLine="panelCabecalho.Color = Colors.RGB(0,165,255)";
+mostCurrent._panelcabecalho.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (0),(int) (165),(int) (255)));
+RDebugUtils.currentLine=4522108;
+ //BA.debugLineNum = 4522108;BA.debugLine="Activity.AddView(panelCabecalho, 0%x, 0%y, 100%x,";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._panelcabecalho.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (10),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522110;
+ //BA.debugLineNum = 4522110;BA.debugLine="panelCabecalho.AddView(btCancelar, 1%x,  1%y, 35%";
+mostCurrent._panelcabecalho.AddView((android.view.View)(mostCurrent._btcancelar.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (35),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522111;
+ //BA.debugLineNum = 4522111;BA.debugLine="Dim btSalvarEsquerda As Int = 100%x - btCancelar.";
+_btsalvaresquerda = (int) (anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-mostCurrent._btcancelar.getWidth()-mostCurrent._btcancelar.getLeft());
+RDebugUtils.currentLine=4522112;
+ //BA.debugLineNum = 4522112;BA.debugLine="panelCabecalho.AddView(btSalvar, btSalvarEsquerda";
+mostCurrent._panelcabecalho.AddView((android.view.View)(mostCurrent._btsalvar.getObject()),_btsalvaresquerda,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (35),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522114;
+ //BA.debugLineNum = 4522114;BA.debugLine="scrol.Color = Colors.Cyan";
+mostCurrent._scrol.setColor(anywheresoftware.b4a.keywords.Common.Colors.Cyan);
+RDebugUtils.currentLine=4522115;
+ //BA.debugLineNum = 4522115;BA.debugLine="scrol.Panel.Color = Colors.RGB(223,223,223)";
+mostCurrent._scrol.getPanel().setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (223),(int) (223),(int) (223)));
+RDebugUtils.currentLine=4522117;
+ //BA.debugLineNum = 4522117;BA.debugLine="Dim topoScrol As Int = panelCabecalho.Top + panel";
+_toposcrol = (int) (mostCurrent._panelcabecalho.getTop()+mostCurrent._panelcabecalho.getHeight());
+RDebugUtils.currentLine=4522118;
+ //BA.debugLineNum = 4522118;BA.debugLine="Activity.AddView(scrol, 0%x, topoScrol , 100%x, 1";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrol.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),_toposcrol,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),(int) (anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-_toposcrol));
+RDebugUtils.currentLine=4522120;
+ //BA.debugLineNum = 4522120;BA.debugLine="scrol.Panel.AddView(lblDadosLivro, 0%x, 0%y, 100%";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lbldadoslivro.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522122;
+ //BA.debugLineNum = 4522122;BA.debugLine="painelImagem.Width = 98%x";
+mostCurrent._painelimagem.setWidth(anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522124;
+ //BA.debugLineNum = 4522124;BA.debugLine="edit.esquerda = (100%x - painelImagem.Width) / 2";
+mostCurrent._edit.esquerda /*int*/  = (int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-mostCurrent._painelimagem.getWidth())/(double)2);
+RDebugUtils.currentLine=4522125;
+ //BA.debugLineNum = 4522125;BA.debugLine="edit.tamanho =  painelImagem.Width";
+mostCurrent._edit.tamanho /*int*/  = mostCurrent._painelimagem.getWidth();
+RDebugUtils.currentLine=4522127;
+ //BA.debugLineNum = 4522127;BA.debugLine="scrol.Panel.AddView(painelImagem, edit.esquerda ,";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._painelimagem.getObject()),mostCurrent._edit.esquerda /*int*/ ,(int) (mostCurrent._lbldadoslivro.getTop()+mostCurrent._lbldadoslivro.getHeight()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (98),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (30),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522129;
+ //BA.debugLineNum = 4522129;BA.debugLine="painelImagem.LoadLayout(\"Lay_Imagem\")";
+mostCurrent._painelimagem.LoadLayout("Lay_Imagem",mostCurrent.activityBA);
+RDebugUtils.currentLine=4522131;
+ //BA.debugLineNum = 4522131;BA.debugLine="B4XImagem.ResizeMode = \"FILL\"";
+mostCurrent._b4ximagem._setresizemode /*String*/ (null,"FILL");
+RDebugUtils.currentLine=4522132;
+ //BA.debugLineNum = 4522132;BA.debugLine="B4XImagem.Load(File.DirAssets, \"livro.jpg\")";
+mostCurrent._b4ximagem._load /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"livro.jpg");
+RDebugUtils.currentLine=4522134;
+ //BA.debugLineNum = 4522134;BA.debugLine="scrol.Panel.Height = painelImagem.Top + painelIma";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._painelimagem.getTop()+mostCurrent._painelimagem.getHeight()));
+RDebugUtils.currentLine=4522136;
+ //BA.debugLineNum = 4522136;BA.debugLine="scrol.Panel.AddView(panelEdits, edit.esquerda, pa";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneledits.getObject()),mostCurrent._edit.esquerda /*int*/ ,(int) (mostCurrent._painelimagem.getTop()+mostCurrent._painelimagem.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),mostCurrent._edit.tamanho /*int*/ ,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522137;
+ //BA.debugLineNum = 4522137;BA.debugLine="panelEdits.LoadLayout(\"Lay_edTituloLivro\")";
+mostCurrent._paneledits.LoadLayout("Lay_edTituloLivro",mostCurrent.activityBA);
+RDebugUtils.currentLine=4522139;
+ //BA.debugLineNum = 4522139;BA.debugLine="scrol.Panel.Height = panelEdits.Top + panelEdits.";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._paneledits.getTop()+mostCurrent._paneledits.getHeight()));
+RDebugUtils.currentLine=4522141;
+ //BA.debugLineNum = 4522141;BA.debugLine="Dim tamanhoLabelObrigatorio As Int = (100%x / 2)";
+_tamanholabelobrigatorio = (int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)/(double)2)-mostCurrent._edit.esquerda /*int*/ );
+RDebugUtils.currentLine=4522143;
+ //BA.debugLineNum = 4522143;BA.debugLine="rotulo.esquerda =  edit.esquerda + tamanhoLabelOb";
+mostCurrent._rotulo.esquerda /*int*/  = (int) (mostCurrent._edit.esquerda /*int*/ +_tamanholabelobrigatorio);
+RDebugUtils.currentLine=4522144;
+ //BA.debugLineNum = 4522144;BA.debugLine="rotulo.tamanho = panelEdits.Width - tamanhoLabelO";
+mostCurrent._rotulo.tamanho /*int*/  = (int) (mostCurrent._paneledits.getWidth()-_tamanholabelobrigatorio);
+RDebugUtils.currentLine=4522146;
+ //BA.debugLineNum = 4522146;BA.debugLine="lblIncongruenciaTitulo.Text = \"Obrigatório\"";
+mostCurrent._lblincongruenciatitulo.setText(BA.ObjectToCharSequence("Obrigatório"));
+RDebugUtils.currentLine=4522147;
+ //BA.debugLineNum = 4522147;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaTitulo, pa";
+_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciatitulo,(int) (mostCurrent._paneledits.getTop()+mostCurrent._paneledits.getHeight()),mostCurrent._edit.esquerda /*int*/ ,_tamanholabelobrigatorio);
+RDebugUtils.currentLine=4522148;
+ //BA.debugLineNum = 4522148;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
+_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitostitulo,(int) (mostCurrent._paneledits.getTop()+mostCurrent._paneledits.getHeight()),mostCurrent._rotulo.esquerda /*int*/ ,mostCurrent._rotulo.tamanho /*int*/ );
+RDebugUtils.currentLine=4522149;
+ //BA.debugLineNum = 4522149;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
+mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
+RDebugUtils.currentLine=4522151;
+ //BA.debugLineNum = 4522151;BA.debugLine="scrol.Panel.AddView(panelEdAutorLivro, edit.esque";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneledautorlivro.getObject()),mostCurrent._edit.esquerda /*int*/ ,(int) (_etiqueta.getTop()+_etiqueta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),mostCurrent._edit.tamanho /*int*/ ,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522152;
+ //BA.debugLineNum = 4522152;BA.debugLine="panelEdAutorLivro.LoadLayout(\"Lay_edAutorLivro\")";
+mostCurrent._paneledautorlivro.LoadLayout("Lay_edAutorLivro",mostCurrent.activityBA);
+RDebugUtils.currentLine=4522154;
+ //BA.debugLineNum = 4522154;BA.debugLine="lblIncongruenciaAutor.Text = \"Obrigatório\"";
+mostCurrent._lblincongruenciaautor.setText(BA.ObjectToCharSequence("Obrigatório"));
+RDebugUtils.currentLine=4522155;
+ //BA.debugLineNum = 4522155;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaAutor,pane";
+_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciaautor,(int) (mostCurrent._paneledautorlivro.getTop()+mostCurrent._paneledautorlivro.getHeight()),mostCurrent._edit.esquerda /*int*/ ,_tamanholabelobrigatorio);
+RDebugUtils.currentLine=4522156;
+ //BA.debugLineNum = 4522156;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
+_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitosautor,(int) (mostCurrent._paneledautorlivro.getTop()+mostCurrent._paneledautorlivro.getHeight()),mostCurrent._rotulo.esquerda /*int*/ ,mostCurrent._rotulo.tamanho /*int*/ );
+RDebugUtils.currentLine=4522157;
+ //BA.debugLineNum = 4522157;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
+mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
+RDebugUtils.currentLine=4522159;
+ //BA.debugLineNum = 4522159;BA.debugLine="scrol.Panel.AddView(lblTipoLeitura, 0%x, lblMaxim";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lbltipoleitura.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (mostCurrent._lblmaximodigitosautor.getTop()+mostCurrent._lblmaximodigitosautor.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522160;
+ //BA.debugLineNum = 4522160;BA.debugLine="scrol.Panel.Height = lblTipoLeitura.Top + lblTipo";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._lbltipoleitura.getTop()+mostCurrent._lbltipoleitura.getHeight()));
+RDebugUtils.currentLine=4522162;
+ //BA.debugLineNum = 4522162;BA.debugLine="scrol.Panel.AddView(radPagina, 0%x , lblTipoLeitu";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._radpagina.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (mostCurrent._lbltipoleitura.getTop()+mostCurrent._lbltipoleitura.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (50),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522164;
+ //BA.debugLineNum = 4522164;BA.debugLine="scrol.Panel.AddView(radCapitulo, radPagina.Width,";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._radcapitulo.getObject()),mostCurrent._radpagina.getWidth(),(int) (mostCurrent._lbltipoleitura.getTop()+mostCurrent._lbltipoleitura.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (50),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522165;
+ //BA.debugLineNum = 4522165;BA.debugLine="scrol.Panel.Height = radPagina.Top + radPagina.He";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._radpagina.getTop()+mostCurrent._radpagina.getHeight()));
+RDebugUtils.currentLine=4522167;
+ //BA.debugLineNum = 4522167;BA.debugLine="scrol.Panel.AddView(panelEdPaginasOuCap, edit.esq";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneledpaginasoucap.getObject()),mostCurrent._edit.esquerda /*int*/ ,(int) (mostCurrent._radcapitulo.getTop()+mostCurrent._radcapitulo.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),mostCurrent._edit.tamanho /*int*/ ,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522168;
+ //BA.debugLineNum = 4522168;BA.debugLine="panelEdPaginasOuCap.LoadLayout(\"Lay_edPagOuCapitu";
+mostCurrent._paneledpaginasoucap.LoadLayout("Lay_edPagOuCapitulo",mostCurrent.activityBA);
+RDebugUtils.currentLine=4522170;
+ //BA.debugLineNum = 4522170;BA.debugLine="lblIncongruenciaPagOuCap.Text = \"Obrigatório\"";
+mostCurrent._lblincongruenciapagoucap.setText(BA.ObjectToCharSequence("Obrigatório"));
+RDebugUtils.currentLine=4522171;
+ //BA.debugLineNum = 4522171;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaPagOuCap,";
+_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciapagoucap,(int) (mostCurrent._paneledpaginasoucap.getTop()+mostCurrent._paneledpaginasoucap.getHeight()),mostCurrent._edit.esquerda /*int*/ ,_tamanholabelobrigatorio);
+RDebugUtils.currentLine=4522172;
+ //BA.debugLineNum = 4522172;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
+_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitospagoucap,(int) (mostCurrent._paneledpaginasoucap.getTop()+mostCurrent._paneledpaginasoucap.getHeight()),mostCurrent._rotulo.esquerda /*int*/ ,mostCurrent._rotulo.tamanho /*int*/ );
+RDebugUtils.currentLine=4522173;
+ //BA.debugLineNum = 4522173;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
+mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
+RDebugUtils.currentLine=4522175;
+ //BA.debugLineNum = 4522175;BA.debugLine="scrol.Panel.AddView(lblMeta, 0%x, etiqueta.Top +";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lblmeta.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (_etiqueta.getTop()+_etiqueta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522176;
+ //BA.debugLineNum = 4522176;BA.debugLine="scrol.Panel.Height = lblMeta.Top + lblMeta.Height";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._lblmeta.getTop()+mostCurrent._lblmeta.getHeight()));
+RDebugUtils.currentLine=4522178;
+ //BA.debugLineNum = 4522178;BA.debugLine="scrol.Panel.AddView(panelMeta, edit.esquerda, lbl";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._panelmeta.getObject()),mostCurrent._edit.esquerda /*int*/ ,(int) (mostCurrent._lblmeta.getTop()+mostCurrent._lblmeta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),mostCurrent._edit.tamanho /*int*/ ,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (8),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522179;
+ //BA.debugLineNum = 4522179;BA.debugLine="panelMeta.LoadLayout(\"Lay_edMetaPagCap\")";
+mostCurrent._panelmeta.LoadLayout("Lay_edMetaPagCap",mostCurrent.activityBA);
+RDebugUtils.currentLine=4522181;
+ //BA.debugLineNum = 4522181;BA.debugLine="lblIncongruenciaMetaPagOuCap.Text = \"Obrigatório\"";
+mostCurrent._lblincongruenciametapagoucap.setText(BA.ObjectToCharSequence("Obrigatório"));
+RDebugUtils.currentLine=4522182;
+ //BA.debugLineNum = 4522182;BA.debugLine="AddLabel(Gravity.LEFT, lblIncongruenciaMetaPagOuC";
+_addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.LEFT),mostCurrent._lblincongruenciametapagoucap,(int) (mostCurrent._panelmeta.getTop()+mostCurrent._panelmeta.getHeight()),mostCurrent._edit.esquerda /*int*/ ,_tamanholabelobrigatorio);
+RDebugUtils.currentLine=4522183;
+ //BA.debugLineNum = 4522183;BA.debugLine="etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigit";
+_etiqueta = _addlabel((Object)(anywheresoftware.b4a.keywords.Common.Gravity.RIGHT),mostCurrent._lblmaximodigitosmetapagoucap,(int) (mostCurrent._panelmeta.getTop()+mostCurrent._panelmeta.getHeight()),mostCurrent._rotulo.esquerda /*int*/ ,mostCurrent._rotulo.tamanho /*int*/ );
+RDebugUtils.currentLine=4522184;
+ //BA.debugLineNum = 4522184;BA.debugLine="scrol.Panel.Height = etiqueta.Top + etiqueta.Heig";
+mostCurrent._scrol.getPanel().setHeight((int) (_etiqueta.getTop()+_etiqueta.getHeight()));
+RDebugUtils.currentLine=4522186;
+ //BA.debugLineNum = 4522186;BA.debugLine="scrol.Panel.AddView(lblPrevisaoTermino, 0%x, etiq";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._lblprevisaotermino.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),(int) (_etiqueta.getTop()+_etiqueta.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522187;
+ //BA.debugLineNum = 4522187;BA.debugLine="scrol.Panel.Height = lblPrevisaoTermino.Top + lbl";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._lblprevisaotermino.getTop()+mostCurrent._lblprevisaotermino.getHeight()));
+RDebugUtils.currentLine=4522189;
+ //BA.debugLineNum = 4522189;BA.debugLine="panelDataPrevistaFim.Color = Colors.Blue";
+mostCurrent._paneldataprevistafim.setColor(anywheresoftware.b4a.keywords.Common.Colors.Blue);
+RDebugUtils.currentLine=4522190;
+ //BA.debugLineNum = 4522190;BA.debugLine="scrol.Panel.AddView(panelDataPrevistaFim, edit.es";
+mostCurrent._scrol.getPanel().AddView((android.view.View)(mostCurrent._paneldataprevistafim.getObject()),mostCurrent._edit.esquerda /*int*/ ,(int) (mostCurrent._lblprevisaotermino.getTop()+mostCurrent._lblprevisaotermino.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))),mostCurrent._paneledits.getWidth(),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (15),mostCurrent.activityBA));
+RDebugUtils.currentLine=4522191;
+ //BA.debugLineNum = 4522191;BA.debugLine="panelDataPrevistaFim.LoadLayout(\"Lay_Previsao_ter";
+mostCurrent._paneldataprevistafim.LoadLayout("Lay_Previsao_termino",mostCurrent.activityBA);
+RDebugUtils.currentLine=4522192;
+ //BA.debugLineNum = 4522192;BA.debugLine="scrol.Panel.Height = panelDataPrevistaFim.Top + p";
+mostCurrent._scrol.getPanel().setHeight((int) (mostCurrent._paneldataprevistafim.getTop()+mostCurrent._paneldataprevistafim.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))));
+RDebugUtils.currentLine=4522194;
+ //BA.debugLineNum = 4522194;BA.debugLine="hoje = \"Dia: \" & DateTime.Date(DateTime.Now)";
+mostCurrent._hoje = "Dia: "+anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
+RDebugUtils.currentLine=4522195;
+ //BA.debugLineNum = 4522195;BA.debugLine="lblDataPrevisao.Text = hoje";
+mostCurrent._lbldataprevisao.setText(BA.ObjectToCharSequence(mostCurrent._hoje));
+RDebugUtils.currentLine=4522197;
+ //BA.debugLineNum = 4522197;BA.debugLine="lblQuantidadeDias.Visible = False";
+mostCurrent._lblquantidadedias.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=4522198;
+ //BA.debugLineNum = 4522198;BA.debugLine="End Sub";
 return "";
 }
 public static anywheresoftware.b4a.objects.LabelWrapper  _addlabel(Object _gravidade,anywheresoftware.b4a.objects.LabelWrapper _etiqueta,int _topo,int _esquerda,int _tamanho) throws Exception{
 RDebugUtils.currentModule="act_telacadastro";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "addlabel", false))
 	 {return ((anywheresoftware.b4a.objects.LabelWrapper) Debug.delegate(mostCurrent.activityBA, "addlabel", new Object[] {_gravidade,_etiqueta,_topo,_esquerda,_tamanho}));}
-RDebugUtils.currentLine=26017792;
- //BA.debugLineNum = 26017792;BA.debugLine="Sub AddLabel(gravidade As Object, etiqueta As Labe";
-RDebugUtils.currentLine=26017794;
- //BA.debugLineNum = 26017794;BA.debugLine="etiqueta.Gravity = Bit.Or(gravidade, Gravity.CENT";
+RDebugUtils.currentLine=4587520;
+ //BA.debugLineNum = 4587520;BA.debugLine="Sub AddLabel(gravidade As Object, etiqueta As Labe";
+RDebugUtils.currentLine=4587522;
+ //BA.debugLineNum = 4587522;BA.debugLine="etiqueta.Gravity = Bit.Or(gravidade, Gravity.CENT";
 _etiqueta.setGravity(anywheresoftware.b4a.keywords.Common.Bit.Or((int)(BA.ObjectToNumber(_gravidade)),anywheresoftware.b4a.keywords.Common.Gravity.CENTER_VERTICAL));
-RDebugUtils.currentLine=26017795;
- //BA.debugLineNum = 26017795;BA.debugLine="etiqueta.Color = Colors.Transparent";
+RDebugUtils.currentLine=4587523;
+ //BA.debugLineNum = 4587523;BA.debugLine="etiqueta.Color = Colors.Transparent";
 _etiqueta.setColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=26017797;
- //BA.debugLineNum = 26017797;BA.debugLine="scrol.Panel.AddView(etiqueta, esquerda, topo, tam";
+RDebugUtils.currentLine=4587525;
+ //BA.debugLineNum = 4587525;BA.debugLine="scrol.Panel.AddView(etiqueta, esquerda, topo, tam";
 mostCurrent._scrol.getPanel().AddView((android.view.View)(_etiqueta.getObject()),_esquerda,_topo,_tamanho,anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (4),mostCurrent.activityBA));
-RDebugUtils.currentLine=26017798;
- //BA.debugLineNum = 26017798;BA.debugLine="Return etiqueta";
+RDebugUtils.currentLine=4587526;
+ //BA.debugLineNum = 4587526;BA.debugLine="Return etiqueta";
 if (true) return _etiqueta;
-RDebugUtils.currentLine=26017799;
- //BA.debugLineNum = 26017799;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4587527;
+ //BA.debugLineNum = 4587527;BA.debugLine="End Sub";
 return null;
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -1020,11 +1033,15 @@ RDebugUtils.currentLine=5505026;
 mostCurrent._lblmaximodigitosautor.setVisible(anywheresoftware.b4a.keywords.Common.True);
  }else {
 RDebugUtils.currentLine=5505028;
- //BA.debugLineNum = 5505028;BA.debugLine="lblMaximoDigitosAutor.Visible = False";
+ //BA.debugLineNum = 5505028;BA.debugLine="If lblIncongruenciaAutor.Visible = False Or txt_";
+if (mostCurrent._lblincongruenciaautor.getVisible()==anywheresoftware.b4a.keywords.Common.False || _txt_autor_invalido==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=5505029;
+ //BA.debugLineNum = 5505029;BA.debugLine="lblMaximoDigitosAutor.Visible = False";
 mostCurrent._lblmaximodigitosautor.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=5505030;
- //BA.debugLineNum = 5505030;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=5505032;
+ //BA.debugLineNum = 5505032;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatautorlivro_textchanged(String _old,String _new) throws Exception{
@@ -1052,19 +1069,25 @@ mostCurrent._lblincongruenciaautor.setText(BA.ObjectToCharSequence(" Texto invá
 RDebugUtils.currentLine=5177352;
  //BA.debugLineNum = 5177352;BA.debugLine="lblMaximoDigitosAutor.TextColor = Colors.Red";
 mostCurrent._lblmaximodigitosautor.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=5177353;
+ //BA.debugLineNum = 5177353;BA.debugLine="txt_Autor_invalido = True";
+_txt_autor_invalido = anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=5177354;
- //BA.debugLineNum = 5177354;BA.debugLine="lblIncongruenciaAutor.Visible = False";
-mostCurrent._lblincongruenciaautor.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=5177355;
- //BA.debugLineNum = 5177355;BA.debugLine="lblMaximoDigitosAutor.TextColor = Colors.Black";
+ //BA.debugLineNum = 5177355;BA.debugLine="lblIncongruenciaAutor.Visible = False";
+mostCurrent._lblincongruenciaautor.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=5177356;
+ //BA.debugLineNum = 5177356;BA.debugLine="lblMaximoDigitosAutor.TextColor = Colors.Black";
 mostCurrent._lblmaximodigitosautor.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- };
 RDebugUtils.currentLine=5177357;
- //BA.debugLineNum = 5177357;BA.debugLine="lblMaximoDigitosAutor.Text = New.Length & \"/100 \"";
+ //BA.debugLineNum = 5177357;BA.debugLine="txt_Autor_invalido = False";
+_txt_autor_invalido = anywheresoftware.b4a.keywords.Common.False;
+ };
+RDebugUtils.currentLine=5177359;
+ //BA.debugLineNum = 5177359;BA.debugLine="lblMaximoDigitosAutor.Text = New.Length & \"/100 \"";
 mostCurrent._lblmaximodigitosautor.setText(BA.ObjectToCharSequence(BA.NumberToString(_new.length())+"/100 "));
-RDebugUtils.currentLine=5177358;
- //BA.debugLineNum = 5177358;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5177360;
+ //BA.debugLineNum = 5177360;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatmetapagcap_focuschanged(boolean _hasfocus) throws Exception{
@@ -1081,11 +1104,15 @@ RDebugUtils.currentLine=5636098;
 mostCurrent._lblmaximodigitosmetapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.True);
  }else {
 RDebugUtils.currentLine=5636100;
- //BA.debugLineNum = 5636100;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Visible = False";
+ //BA.debugLineNum = 5636100;BA.debugLine="If lblIncongruenciaMetaPagOuCap.Visible = False";
+if (mostCurrent._lblincongruenciametapagoucap.getVisible()==anywheresoftware.b4a.keywords.Common.False || _txt_metapagoucap_invalido==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=5636101;
+ //BA.debugLineNum = 5636101;BA.debugLine="lblMaximoDigitosMetaPagOuCap.Visible = False";
 mostCurrent._lblmaximodigitosmetapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=5636102;
- //BA.debugLineNum = 5636102;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=5636104;
+ //BA.debugLineNum = 5636104;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatmetapagcap_textchanged(String _old,String _new) throws Exception{
@@ -1165,16 +1192,22 @@ mostCurrent._lblincongruenciametapagoucap.setText(BA.ObjectToCharSequence(" Text
 RDebugUtils.currentLine=5308453;
  //BA.debugLineNum = 5308453;BA.debugLine="lblMaximoDigitosMetaPagOuCap.TextColor = Colors.";
 mostCurrent._lblmaximodigitosmetapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=5308454;
+ //BA.debugLineNum = 5308454;BA.debugLine="txt_MetaPagOuCap_invalido = True";
+_txt_metapagoucap_invalido = anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=5308455;
- //BA.debugLineNum = 5308455;BA.debugLine="lblIncongruenciaMetaPagOuCap.Visible = False";
-mostCurrent._lblincongruenciametapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=5308456;
- //BA.debugLineNum = 5308456;BA.debugLine="lblMaximoDigitosMetaPagOuCap.TextColor = Colors.";
+ //BA.debugLineNum = 5308456;BA.debugLine="lblIncongruenciaMetaPagOuCap.Visible = False";
+mostCurrent._lblincongruenciametapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=5308457;
+ //BA.debugLineNum = 5308457;BA.debugLine="lblMaximoDigitosMetaPagOuCap.TextColor = Colors.";
 mostCurrent._lblmaximodigitosmetapagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- };
 RDebugUtils.currentLine=5308458;
- //BA.debugLineNum = 5308458;BA.debugLine="End Sub";
+ //BA.debugLineNum = 5308458;BA.debugLine="txt_MetaPagOuCap_invalido = False";
+_txt_metapagoucap_invalido = anywheresoftware.b4a.keywords.Common.False;
+ };
+RDebugUtils.currentLine=5308460;
+ //BA.debugLineNum = 5308460;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatnomelivro_focuschanged(boolean _hasfocus) throws Exception{
@@ -1191,11 +1224,15 @@ RDebugUtils.currentLine=5439490;
 mostCurrent._lblmaximodigitostitulo.setVisible(anywheresoftware.b4a.keywords.Common.True);
  }else {
 RDebugUtils.currentLine=5439492;
- //BA.debugLineNum = 5439492;BA.debugLine="lblMaximoDigitosTitulo.Visible = False";
+ //BA.debugLineNum = 5439492;BA.debugLine="If lblIncongruenciaTitulo.Visible = False Or txt";
+if (mostCurrent._lblincongruenciatitulo.getVisible()==anywheresoftware.b4a.keywords.Common.False || _txt_titulo_invalido==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=5439493;
+ //BA.debugLineNum = 5439493;BA.debugLine="lblMaximoDigitosTitulo.Visible = False";
 mostCurrent._lblmaximodigitostitulo.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=5439494;
- //BA.debugLineNum = 5439494;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=5439496;
+ //BA.debugLineNum = 5439496;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatnomelivro_textchanged(String _old,String _new) throws Exception{
@@ -1223,19 +1260,25 @@ mostCurrent._lblincongruenciatitulo.setText(BA.ObjectToCharSequence(" Texto inv�
 RDebugUtils.currentLine=5242888;
  //BA.debugLineNum = 5242888;BA.debugLine="lblMaximoDigitosTitulo.TextColor = Colors.Red";
 mostCurrent._lblmaximodigitostitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=5242889;
+ //BA.debugLineNum = 5242889;BA.debugLine="txt_titulo_invalido = True";
+_txt_titulo_invalido = anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=5242890;
- //BA.debugLineNum = 5242890;BA.debugLine="lblIncongruenciaTitulo.Visible = False";
-mostCurrent._lblincongruenciatitulo.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=5242891;
- //BA.debugLineNum = 5242891;BA.debugLine="lblMaximoDigitosTitulo.TextColor = Colors.Black";
+ //BA.debugLineNum = 5242891;BA.debugLine="lblIncongruenciaTitulo.Visible = False";
+mostCurrent._lblincongruenciatitulo.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=5242892;
+ //BA.debugLineNum = 5242892;BA.debugLine="lblMaximoDigitosTitulo.TextColor = Colors.Black";
 mostCurrent._lblmaximodigitostitulo.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=5242893;
+ //BA.debugLineNum = 5242893;BA.debugLine="txt_titulo_invalido = False";
+_txt_titulo_invalido = anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=5242894;
- //BA.debugLineNum = 5242894;BA.debugLine="lblMaximoDigitosTitulo.Text = New.Length & \"/100";
-mostCurrent._lblmaximodigitostitulo.setText(BA.ObjectToCharSequence(BA.NumberToString(_new.length())+"/100 "));
 RDebugUtils.currentLine=5242896;
- //BA.debugLineNum = 5242896;BA.debugLine="End Sub";
+ //BA.debugLineNum = 5242896;BA.debugLine="lblMaximoDigitosTitulo.Text = New.Length & \"/100";
+mostCurrent._lblmaximodigitostitulo.setText(BA.ObjectToCharSequence(BA.NumberToString(_new.length())+"/100 "));
+RDebugUtils.currentLine=5242898;
+ //BA.debugLineNum = 5242898;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatpagoucap_focuschanged(boolean _hasfocus) throws Exception{
@@ -1252,11 +1295,15 @@ RDebugUtils.currentLine=5570562;
 mostCurrent._lblmaximodigitospagoucap.setVisible(anywheresoftware.b4a.keywords.Common.True);
  }else {
 RDebugUtils.currentLine=5570564;
- //BA.debugLineNum = 5570564;BA.debugLine="lblMaximoDigitosPagOuCap.Visible = False";
+ //BA.debugLineNum = 5570564;BA.debugLine="If lblIncongruenciaPagOuCap.Visible = False Or t";
+if (mostCurrent._lblincongruenciapagoucap.getVisible()==anywheresoftware.b4a.keywords.Common.False || _txt_pagoucap_invalido==anywheresoftware.b4a.keywords.Common.False) { 
+RDebugUtils.currentLine=5570565;
+ //BA.debugLineNum = 5570565;BA.debugLine="lblMaximoDigitosPagOuCap.Visible = False";
 mostCurrent._lblmaximodigitospagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=5570566;
- //BA.debugLineNum = 5570566;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=5570568;
+ //BA.debugLineNum = 5570568;BA.debugLine="End Sub";
 return "";
 }
 public static String  _edb4xfloatpagoucap_textchanged(String _old,String _new) throws Exception{
@@ -1339,16 +1386,22 @@ mostCurrent._lblincongruenciapagoucap.setText(BA.ObjectToCharSequence(" Texto in
 RDebugUtils.currentLine=5373991;
  //BA.debugLineNum = 5373991;BA.debugLine="lblMaximoDigitosPagOuCap.TextColor = Colors.Red";
 mostCurrent._lblmaximodigitospagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
+RDebugUtils.currentLine=5373992;
+ //BA.debugLineNum = 5373992;BA.debugLine="txt_PagOuCap_invalido = True";
+_txt_pagoucap_invalido = anywheresoftware.b4a.keywords.Common.True;
  }else {
-RDebugUtils.currentLine=5373993;
- //BA.debugLineNum = 5373993;BA.debugLine="lblIncongruenciaPagOuCap.Visible = False";
-mostCurrent._lblincongruenciapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
 RDebugUtils.currentLine=5373994;
- //BA.debugLineNum = 5373994;BA.debugLine="lblMaximoDigitosPagOuCap.TextColor = Colors.Blac";
+ //BA.debugLineNum = 5373994;BA.debugLine="lblIncongruenciaPagOuCap.Visible = False";
+mostCurrent._lblincongruenciapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=5373995;
+ //BA.debugLineNum = 5373995;BA.debugLine="lblMaximoDigitosPagOuCap.TextColor = Colors.Blac";
 mostCurrent._lblmaximodigitospagoucap.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
- };
 RDebugUtils.currentLine=5373996;
- //BA.debugLineNum = 5373996;BA.debugLine="End Sub";
+ //BA.debugLineNum = 5373996;BA.debugLine="txt_PagOuCap_invalido = False";
+_txt_pagoucap_invalido = anywheresoftware.b4a.keywords.Common.False;
+ };
+RDebugUtils.currentLine=5373998;
+ //BA.debugLineNum = 5373998;BA.debugLine="End Sub";
 return "";
 }
 public static String  _event_btcancelar_click() throws Exception{
@@ -1411,312 +1464,354 @@ RDebugUtils.currentLine=4849667;
  //BA.debugLineNum = 4849667;BA.debugLine="Dim pag_ou_cap As String";
 _pag_ou_cap = "";
 RDebugUtils.currentLine=4849669;
- //BA.debugLineNum = 4849669;BA.debugLine="If edB4XFloatNomeLivro.Text.Trim = \"\" Then";
+ //BA.debugLineNum = 4849669;BA.debugLine="If VerificaTamanhoTexto Then";
 if (true) break;
 
 case 1:
 //if
-this.state = 46;
-if ((parent.mostCurrent._edb4xfloatnomelivro._gettext /*String*/ (null).trim()).equals("")) { 
+this.state = 52;
+if (_verificatamanhotexto()) { 
 this.state = 3;
-}else 
-{RDebugUtils.currentLine=4849672;
- //BA.debugLineNum = 4849672;BA.debugLine="Else If edB4XFloatAutorLivro.Text.Trim = \"\" Then";
-if ((parent.mostCurrent._edb4xfloatautorlivro._gettext /*String*/ (null).trim()).equals("")) { 
-this.state = 5;
 }else {
-this.state = 7;
-}}
-if (true) break;
+this.state = 51;
+}if (true) break;
 
 case 3:
 //C
-this.state = 46;
-RDebugUtils.currentLine=4849670;
- //BA.debugLineNum = 4849670;BA.debugLine="MsgboxAsync(\"Opa! qual o título do livro?\",\"Calm";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual o título do livro?"),BA.ObjectToCharSequence("Calma..."),processBA);
- if (true) break;
-
-case 5:
-//C
-this.state = 46;
-RDebugUtils.currentLine=4849673;
- //BA.debugLineNum = 4849673;BA.debugLine="MsgboxAsync(\"Opa! qual o nome do autor do livro?";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual o nome do autor do livro?"),BA.ObjectToCharSequence("Calma..."),processBA);
- if (true) break;
-
-case 7:
-//C
-this.state = 8;
-RDebugUtils.currentLine=4849677;
- //BA.debugLineNum = 4849677;BA.debugLine="pag_ou_cap = \"Quantos capítulos\"";
-_pag_ou_cap = "Quantos capítulos";
-RDebugUtils.currentLine=4849678;
- //BA.debugLineNum = 4849678;BA.debugLine="If radPagina.Checked Then pag_ou_cap = \"Quantas";
+this.state = 4;
+RDebugUtils.currentLine=4849671;
+ //BA.debugLineNum = 4849671;BA.debugLine="If edB4XFloatNomeLivro.Text.Trim = \"\" Then";
 if (true) break;
 
-case 8:
+case 4:
 //if
-this.state = 13;
-if (parent.mostCurrent._radpagina.getChecked()) { 
+this.state = 49;
+if ((parent.mostCurrent._edb4xfloatnomelivro._gettext /*String*/ (null).trim()).equals("")) { 
+this.state = 6;
+}else 
+{RDebugUtils.currentLine=4849674;
+ //BA.debugLineNum = 4849674;BA.debugLine="Else If edB4XFloatAutorLivro.Text.Trim = \"\" Then";
+if ((parent.mostCurrent._edb4xfloatautorlivro._gettext /*String*/ (null).trim()).equals("")) { 
+this.state = 8;
+}else {
 this.state = 10;
-;}if (true) break;
+}}
+if (true) break;
+
+case 6:
+//C
+this.state = 49;
+RDebugUtils.currentLine=4849672;
+ //BA.debugLineNum = 4849672;BA.debugLine="MsgboxAsync(\"Opa! qual o título do livro?\",\"Cal";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual o título do livro?"),BA.ObjectToCharSequence("Calma..."),processBA);
+RDebugUtils.currentLine=4849673;
+ //BA.debugLineNum = 4849673;BA.debugLine="TextoObrigatorio";
+_textoobrigatorio();
+ if (true) break;
+
+case 8:
+//C
+this.state = 49;
+RDebugUtils.currentLine=4849675;
+ //BA.debugLineNum = 4849675;BA.debugLine="MsgboxAsync(\"Opa! qual o nome do autor do livro";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual o nome do autor do livro?"),BA.ObjectToCharSequence("Calma..."),processBA);
+RDebugUtils.currentLine=4849676;
+ //BA.debugLineNum = 4849676;BA.debugLine="TextoObrigatorio";
+_textoobrigatorio();
+ if (true) break;
 
 case 10:
 //C
-this.state = 13;
-_pag_ou_cap = "Quantas páginas";
+this.state = 11;
+RDebugUtils.currentLine=4849679;
+ //BA.debugLineNum = 4849679;BA.debugLine="pag_ou_cap = \"Quantos capítulos\"";
+_pag_ou_cap = "Quantos capítulos";
+RDebugUtils.currentLine=4849680;
+ //BA.debugLineNum = 4849680;BA.debugLine="If radPagina.Checked Then pag_ou_cap = \"Quantas";
 if (true) break;
+
+case 11:
+//if
+this.state = 16;
+if (parent.mostCurrent._radpagina.getChecked()) { 
+this.state = 13;
+;}if (true) break;
 
 case 13:
 //C
-this.state = 14;
-;
-RDebugUtils.currentLine=4849680;
- //BA.debugLineNum = 4849680;BA.debugLine="If edB4XFloatPagOuCap.Text.Trim = \"\" Then";
-if (true) break;
-
-case 14:
-//if
-this.state = 45;
-if ((parent.mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null).trim()).equals("")) { 
 this.state = 16;
-}else 
-{RDebugUtils.currentLine=4849684;
- //BA.debugLineNum = 4849684;BA.debugLine="else If edB4XFloatMetaPagCap.Text.Trim = \"\" Then";
-if ((parent.mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null).trim()).equals("")) { 
-this.state = 18;
-}else {
-this.state = 20;
-}}
+_pag_ou_cap = "Quantas páginas";
 if (true) break;
 
 case 16:
 //C
-this.state = 45;
-RDebugUtils.currentLine=4849681;
- //BA.debugLineNum = 4849681;BA.debugLine="MsgboxAsync(\"Opa! \" & pag_ou_cap & \" o livro te";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! "+_pag_ou_cap+" o livro tem?"),BA.ObjectToCharSequence("Calma..."),processBA);
- if (true) break;
-
-case 18:
-//C
-this.state = 45;
-RDebugUtils.currentLine=4849686;
- //BA.debugLineNum = 4849686;BA.debugLine="MsgboxAsync(\"Opa! qual a sua meta diária?\",\"Cal";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual a sua meta diária?"),BA.ObjectToCharSequence("Calma..."),processBA);
- if (true) break;
-
-case 20:
-//C
-this.state = 21;
-RDebugUtils.currentLine=4849689;
- //BA.debugLineNum = 4849689;BA.debugLine="Dim meta, quantidade_pag_cap As Int";
-_meta = 0;
-_quantidade_pag_cap = 0;
-RDebugUtils.currentLine=4849691;
- //BA.debugLineNum = 4849691;BA.debugLine="meta = edB4XFloatMetaPagCap.Text";
-_meta = (int)(Double.parseDouble(parent.mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null)));
-RDebugUtils.currentLine=4849692;
- //BA.debugLineNum = 4849692;BA.debugLine="quantidade_pag_cap = edB4XFloatPagOuCap.Text";
-_quantidade_pag_cap = (int)(Double.parseDouble(parent.mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null)));
-RDebugUtils.currentLine=4849694;
- //BA.debugLineNum = 4849694;BA.debugLine="If meta > quantidade_pag_cap Then";
+this.state = 17;
+;
+RDebugUtils.currentLine=4849682;
+ //BA.debugLineNum = 4849682;BA.debugLine="If edB4XFloatPagOuCap.Text.Trim = \"\" Then";
 if (true) break;
 
-case 21:
+case 17:
 //if
-this.state = 44;
-if (_meta>_quantidade_pag_cap) { 
-this.state = 23;
+this.state = 48;
+if ((parent.mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null).trim()).equals("")) { 
+this.state = 19;
+}else 
+{RDebugUtils.currentLine=4849686;
+ //BA.debugLineNum = 4849686;BA.debugLine="else If edB4XFloatMetaPagCap.Text.Trim = \"\" The";
+if ((parent.mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null).trim()).equals("")) { 
+this.state = 21;
 }else {
-this.state = 25;
-}if (true) break;
+this.state = 23;
+}}
+if (true) break;
+
+case 19:
+//C
+this.state = 48;
+RDebugUtils.currentLine=4849683;
+ //BA.debugLineNum = 4849683;BA.debugLine="MsgboxAsync(\"Opa! \" & pag_ou_cap & \" o livro t";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! "+_pag_ou_cap+" o livro tem?"),BA.ObjectToCharSequence("Calma..."),processBA);
+RDebugUtils.currentLine=4849684;
+ //BA.debugLineNum = 4849684;BA.debugLine="TextoObrigatorio";
+_textoobrigatorio();
+ if (true) break;
+
+case 21:
+//C
+this.state = 48;
+RDebugUtils.currentLine=4849688;
+ //BA.debugLineNum = 4849688;BA.debugLine="MsgboxAsync(\"Opa! qual a sua meta diária?\",\"Ca";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Opa! qual a sua meta diária?"),BA.ObjectToCharSequence("Calma..."),processBA);
+RDebugUtils.currentLine=4849689;
+ //BA.debugLineNum = 4849689;BA.debugLine="TextoObrigatorio";
+_textoobrigatorio();
+ if (true) break;
 
 case 23:
 //C
-this.state = 44;
-RDebugUtils.currentLine=4849695;
- //BA.debugLineNum = 4849695;BA.debugLine="ToastMessageShow(\"Informações incoerentes\",Tru";
-anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Informações incoerentes"),anywheresoftware.b4a.keywords.Common.True);
- if (true) break;
-
-case 25:
-//C
-this.state = 26;
-RDebugUtils.currentLine=4849698;
- //BA.debugLineNum = 4849698;BA.debugLine="Try";
-if (true) break;
-
-case 26:
-//try
-this.state = 43;
-this.catchState = 42;
-this.state = 28;
-if (true) break;
-
-case 28:
-//C
-this.state = 29;
-this.catchState = 42;
-RDebugUtils.currentLine=4849699;
- //BA.debugLineNum = 4849699;BA.debugLine="Dim cmd, dataInicial, tipoLeitura As String";
+this.state = 24;
+RDebugUtils.currentLine=4849691;
+ //BA.debugLineNum = 4849691;BA.debugLine="Dim meta, quantidade_pag_cap As Int";
+_meta = 0;
+_quantidade_pag_cap = 0;
+RDebugUtils.currentLine=4849693;
+ //BA.debugLineNum = 4849693;BA.debugLine="meta = edB4XFloatMetaPagCap.Text";
+_meta = (int)(Double.parseDouble(parent.mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null)));
+RDebugUtils.currentLine=4849694;
+ //BA.debugLineNum = 4849694;BA.debugLine="quantidade_pag_cap = edB4XFloatPagOuCap.Text";
+_quantidade_pag_cap = (int)(Double.parseDouble(parent.mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null)));
+RDebugUtils.currentLine=4849696;
+ //BA.debugLineNum = 4849696;BA.debugLine="Dim cmd, dataInicial, tipoLeitura As String";
 _cmd = "";
 _datainicial = "";
 _tipoleitura = "";
-RDebugUtils.currentLine=4849701;
- //BA.debugLineNum = 4849701;BA.debugLine="tipoLeitura = \"páginas\"";
+RDebugUtils.currentLine=4849698;
+ //BA.debugLineNum = 4849698;BA.debugLine="tipoLeitura = \"páginas\"";
 _tipoleitura = "páginas";
-RDebugUtils.currentLine=4849702;
- //BA.debugLineNum = 4849702;BA.debugLine="If radCapitulo.Checked Then tipoLeitura = \"ca";
+RDebugUtils.currentLine=4849699;
+ //BA.debugLineNum = 4849699;BA.debugLine="If radCapitulo.Checked Then tipoLeitura = \"cap";
+if (true) break;
+
+case 24:
+//if
+this.state = 29;
+if (parent.mostCurrent._radcapitulo.getChecked()) { 
+this.state = 26;
+;}if (true) break;
+
+case 26:
+//C
+this.state = 29;
+_tipoleitura = "capítulos";
 if (true) break;
 
 case 29:
-//if
-this.state = 34;
-if (parent.mostCurrent._radcapitulo.getChecked()) { 
-this.state = 31;
-;}if (true) break;
-
-case 31:
 //C
-this.state = 34;
-_tipoleitura = "capítulos";
+this.state = 30;
+;
+RDebugUtils.currentLine=4849701;
+ //BA.debugLineNum = 4849701;BA.debugLine="If meta > quantidade_pag_cap Then";
 if (true) break;
+
+case 30:
+//if
+this.state = 47;
+if (_meta>_quantidade_pag_cap) { 
+this.state = 32;
+}else {
+this.state = 34;
+}if (true) break;
+
+case 32:
+//C
+this.state = 47;
+RDebugUtils.currentLine=4849702;
+ //BA.debugLineNum = 4849702;BA.debugLine="ToastMessageShow(\"Sua meta é maior que o n° d";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Sua meta é maior que o n° de "+_tipoleitura),anywheresoftware.b4a.keywords.Common.True);
+ if (true) break;
 
 case 34:
 //C
 this.state = 35;
-;
-RDebugUtils.currentLine=4849704;
- //BA.debugLineNum = 4849704;BA.debugLine="dataInicial = DateTime.Date(DateTime.Now)";
-_datainicial = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
-RDebugUtils.currentLine=4849706;
- //BA.debugLineNum = 4849706;BA.debugLine="cmd = \"exec sp_cad_livro_leitura '\" & edB4XFl";
-_cmd = "exec sp_cad_livro_leitura '"+parent.mostCurrent._edb4xfloatnomelivro._gettext /*String*/ (null)+"', '"+parent.mostCurrent._edb4xfloatautorlivro._gettext /*String*/ (null)+"', '"+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+"', '"+_datainicial+"', '"+_tipoleitura+"', '"+parent.mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null)+"', '"+parent.mostCurrent._dataprevistafinal+"', '"+parent.mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null)+"'";
-RDebugUtils.currentLine=4849715;
- //BA.debugLineNum = 4849715;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complet";
-anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "act_telacadastro", "event_btsalvar_click"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
-this.state = 47;
-return;
-case 47:
-//C
-this.state = 35;
-_result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
-;
-RDebugUtils.currentLine=4849717;
- //BA.debugLineNum = 4849717;BA.debugLine="Result.NextRow";
-_result.NextRow();
-RDebugUtils.currentLine=4849719;
- //BA.debugLineNum = 4849719;BA.debugLine="If Result.GetString(\"RESULTADO\") = 1 Then";
+RDebugUtils.currentLine=4849705;
+ //BA.debugLineNum = 4849705;BA.debugLine="Try";
 if (true) break;
 
 case 35:
-//if
-this.state = 40;
-if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(1))) { 
+//try
+this.state = 46;
+this.catchState = 45;
 this.state = 37;
-}else 
-{RDebugUtils.currentLine=4849727;
- //BA.debugLineNum = 4849727;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 0 The";
-if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
-this.state = 39;
-}}
 if (true) break;
 
 case 37:
 //C
-this.state = 40;
-RDebugUtils.currentLine=4849721;
- //BA.debugLineNum = 4849721;BA.debugLine="Main.CadastrouAlgo = True";
-parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
+this.state = 38;
+this.catchState = 45;
+RDebugUtils.currentLine=4849707;
+ //BA.debugLineNum = 4849707;BA.debugLine="dataInicial = DateTime.Date(DateTime.Now)";
+_datainicial = anywheresoftware.b4a.keywords.Common.DateTime.Date(anywheresoftware.b4a.keywords.Common.DateTime.getNow());
+RDebugUtils.currentLine=4849709;
+ //BA.debugLineNum = 4849709;BA.debugLine="cmd = \"exec sp_cad_livro_leitura '\" & edB4XF";
+_cmd = "exec sp_cad_livro_leitura '"+parent.mostCurrent._edb4xfloatnomelivro._gettext /*String*/ (null)+"', '"+parent.mostCurrent._edb4xfloatautorlivro._gettext /*String*/ (null)+"', '"+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+"', '"+_datainicial+"', '"+_tipoleitura+"', '"+parent.mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null)+"', '"+parent.mostCurrent._dataprevistafinal+"', '"+parent.mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null)+"'";
+RDebugUtils.currentLine=4849718;
+ //BA.debugLineNum = 4849718;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Comple";
+anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "act_telacadastro", "event_btsalvar_click"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
+this.state = 53;
+return;
+case 53:
+//C
+this.state = 38;
+_result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
+;
+RDebugUtils.currentLine=4849720;
+ //BA.debugLineNum = 4849720;BA.debugLine="Result.NextRow";
+_result.NextRow();
 RDebugUtils.currentLine=4849722;
- //BA.debugLineNum = 4849722;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"";
-anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=4849723;
- //BA.debugLineNum = 4849723;BA.debugLine="Sleep(100)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "act_telacadastro", "event_btsalvar_click"),(int) (100));
-this.state = 48;
-return;
-case 48:
-//C
-this.state = 40;
-;
-RDebugUtils.currentLine=4849724;
- //BA.debugLineNum = 4849724;BA.debugLine="StartActivity(CodigoLayLeituras)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=4849725;
- //BA.debugLineNum = 4849725;BA.debugLine="Activity.Finish";
-parent.mostCurrent._activity.Finish();
- if (true) break;
+ //BA.debugLineNum = 4849722;BA.debugLine="If Result.GetString(\"RESULTADO\") = 1 Then";
+if (true) break;
 
-case 39:
-//C
+case 38:
+//if
+this.state = 43;
+if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(1))) { 
 this.state = 40;
-RDebugUtils.currentLine=4849729;
- //BA.debugLineNum = 4849729;BA.debugLine="Main.CadastrouAlgo = False";
-parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=4849730;
- //BA.debugLineNum = 4849730;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"O";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!!"),processBA);
-RDebugUtils.currentLine=4849731;
- //BA.debugLineNum = 4849731;BA.debugLine="Sleep(1000)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "act_telacadastro", "event_btsalvar_click"),(int) (1000));
-this.state = 49;
-return;
-case 49:
-//C
-this.state = 40;
-;
-RDebugUtils.currentLine=4849732;
- //BA.debugLineNum = 4849732;BA.debugLine="StartActivity(CodigoLayLeituras)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=4849733;
- //BA.debugLineNum = 4849733;BA.debugLine="Activity.Finish";
-parent.mostCurrent._activity.Finish();
- if (true) break;
+}else 
+{RDebugUtils.currentLine=4849730;
+ //BA.debugLineNum = 4849730;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 0 Th";
+if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
+this.state = 42;
+}}
+if (true) break;
 
 case 40:
 //C
 this.state = 43;
+RDebugUtils.currentLine=4849724;
+ //BA.debugLineNum = 4849724;BA.debugLine="Main.CadastrouAlgo = True";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
+RDebugUtils.currentLine=4849725;
+ //BA.debugLineNum = 4849725;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=4849726;
+ //BA.debugLineNum = 4849726;BA.debugLine="Sleep(100)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "act_telacadastro", "event_btsalvar_click"),(int) (100));
+this.state = 54;
+return;
+case 54:
+//C
+this.state = 43;
 ;
+RDebugUtils.currentLine=4849727;
+ //BA.debugLineNum = 4849727;BA.debugLine="StartActivity(CodigoLayLeituras)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
+RDebugUtils.currentLine=4849728;
+ //BA.debugLineNum = 4849728;BA.debugLine="Activity.Finish";
+parent.mostCurrent._activity.Finish();
  if (true) break;
 
 case 42:
 //C
 this.state = 43;
-this.catchState = 0;
-RDebugUtils.currentLine=4849737;
- //BA.debugLineNum = 4849737;BA.debugLine="MsgboxAsync(\"Problemas ao tentar estabelecer";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas ao tentar estabelecer a conexão. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção"),processBA);
+RDebugUtils.currentLine=4849732;
+ //BA.debugLineNum = 4849732;BA.debugLine="Main.CadastrouAlgo = False";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
+RDebugUtils.currentLine=4849733;
+ //BA.debugLineNum = 4849733;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!!"),processBA);
+RDebugUtils.currentLine=4849734;
+ //BA.debugLineNum = 4849734;BA.debugLine="Sleep(1000)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "act_telacadastro", "event_btsalvar_click"),(int) (1000));
+this.state = 55;
+return;
+case 55:
+//C
+this.state = 43;
+;
+RDebugUtils.currentLine=4849735;
+ //BA.debugLineNum = 4849735;BA.debugLine="StartActivity(CodigoLayLeituras)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
+RDebugUtils.currentLine=4849736;
+ //BA.debugLineNum = 4849736;BA.debugLine="Activity.Finish";
+parent.mostCurrent._activity.Finish();
  if (true) break;
-if (true) break;
 
 case 43:
 //C
-this.state = 44;
-this.catchState = 0;
-;
- if (true) break;
-
-case 44:
-//C
-this.state = 45;
+this.state = 46;
 ;
  if (true) break;
 
 case 45:
 //C
 this.state = 46;
-;
+this.catchState = 0;
+RDebugUtils.currentLine=4849740;
+ //BA.debugLineNum = 4849740;BA.debugLine="MsgboxAsync(\"Problemas ao tentar estabelecer";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas ao tentar estabelecer a conexão. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção"),processBA);
  if (true) break;
+if (true) break;
 
 case 46:
 //C
+this.state = 47;
+this.catchState = 0;
+;
+ if (true) break;
+
+case 47:
+//C
+this.state = 48;
+;
+ if (true) break;
+
+case 48:
+//C
+this.state = 49;
+;
+ if (true) break;
+
+case 49:
+//C
+this.state = 52;
+;
+ if (true) break;
+
+case 51:
+//C
+this.state = 52;
+RDebugUtils.currentLine=4849747;
+ //BA.debugLineNum = 4849747;BA.debugLine="ToastMessageShow(\"Informações incoerentes\",True)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Informações incoerentes"),anywheresoftware.b4a.keywords.Common.True);
+ if (true) break;
+
+case 52:
+//C
 this.state = -1;
 ;
-RDebugUtils.currentLine=4849742;
- //BA.debugLineNum = 4849742;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4849749;
+ //BA.debugLineNum = 4849749;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -1729,6 +1824,101 @@ processBA.setLastException(e0);}
             }
         }
     }
+}
+public static boolean  _verificatamanhotexto() throws Exception{
+RDebugUtils.currentModule="act_telacadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "verificatamanhotexto", false))
+	 {return ((Boolean) Debug.delegate(mostCurrent.activityBA, "verificatamanhotexto", null));}
+RDebugUtils.currentLine=5767168;
+ //BA.debugLineNum = 5767168;BA.debugLine="Sub VerificaTamanhoTexto As Boolean";
+RDebugUtils.currentLine=5767170;
+ //BA.debugLineNum = 5767170;BA.debugLine="If edB4XFloatNomeLivro.Text.Length > 100 Then Ret";
+if (mostCurrent._edb4xfloatnomelivro._gettext /*String*/ (null).length()>100) { 
+if (true) return anywheresoftware.b4a.keywords.Common.False;};
+RDebugUtils.currentLine=5767171;
+ //BA.debugLineNum = 5767171;BA.debugLine="If edB4XFloatAutorLivro.Text.Length > 100 Then Re";
+if (mostCurrent._edb4xfloatautorlivro._gettext /*String*/ (null).length()>100) { 
+if (true) return anywheresoftware.b4a.keywords.Common.False;};
+RDebugUtils.currentLine=5767172;
+ //BA.debugLineNum = 5767172;BA.debugLine="If edB4XFloatPagOuCap.Text.Length > 4 Then Return";
+if (mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null).length()>4) { 
+if (true) return anywheresoftware.b4a.keywords.Common.False;};
+RDebugUtils.currentLine=5767173;
+ //BA.debugLineNum = 5767173;BA.debugLine="If edB4XFloatMetaPagCap.Text.Length > 4 Then Retu";
+if (mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null).length()>4) { 
+if (true) return anywheresoftware.b4a.keywords.Common.False;};
+RDebugUtils.currentLine=5767174;
+ //BA.debugLineNum = 5767174;BA.debugLine="Return True";
+if (true) return anywheresoftware.b4a.keywords.Common.True;
+RDebugUtils.currentLine=5767175;
+ //BA.debugLineNum = 5767175;BA.debugLine="End Sub";
+return false;
+}
+public static String  _textoobrigatorio() throws Exception{
+RDebugUtils.currentModule="act_telacadastro";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "textoobrigatorio", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "textoobrigatorio", null));}
+RDebugUtils.currentLine=5701632;
+ //BA.debugLineNum = 5701632;BA.debugLine="Sub TextoObrigatorio";
+RDebugUtils.currentLine=5701633;
+ //BA.debugLineNum = 5701633;BA.debugLine="lblIncongruenciaAutor.Text = \" Texto obrigatório\"";
+mostCurrent._lblincongruenciaautor.setText(BA.ObjectToCharSequence(" Texto obrigatório"));
+RDebugUtils.currentLine=5701634;
+ //BA.debugLineNum = 5701634;BA.debugLine="lblIncongruenciaTitulo.Text = \" Texto obrigatório";
+mostCurrent._lblincongruenciatitulo.setText(BA.ObjectToCharSequence(" Texto obrigatório"));
+RDebugUtils.currentLine=5701635;
+ //BA.debugLineNum = 5701635;BA.debugLine="lblIncongruenciaPagOuCap.Text = \" Quantidade obri";
+mostCurrent._lblincongruenciapagoucap.setText(BA.ObjectToCharSequence(" Quantidade obrigatória"));
+RDebugUtils.currentLine=5701636;
+ //BA.debugLineNum = 5701636;BA.debugLine="lblIncongruenciaMetaPagOuCap.Text = \" Quantidade";
+mostCurrent._lblincongruenciametapagoucap.setText(BA.ObjectToCharSequence(" Quantidade obrigatória"));
+RDebugUtils.currentLine=5701638;
+ //BA.debugLineNum = 5701638;BA.debugLine="If edB4XFloatAutorLivro.Text.Trim = \"\" Then";
+if ((mostCurrent._edb4xfloatautorlivro._gettext /*String*/ (null).trim()).equals("")) { 
+RDebugUtils.currentLine=5701639;
+ //BA.debugLineNum = 5701639;BA.debugLine="lblIncongruenciaAutor.Visible = True";
+mostCurrent._lblincongruenciaautor.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else {
+RDebugUtils.currentLine=5701641;
+ //BA.debugLineNum = 5701641;BA.debugLine="lblIncongruenciaAutor.Visible = False";
+mostCurrent._lblincongruenciaautor.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ };
+RDebugUtils.currentLine=5701644;
+ //BA.debugLineNum = 5701644;BA.debugLine="If edB4XFloatNomeLivro.Text.Trim = \"\" Then";
+if ((mostCurrent._edb4xfloatnomelivro._gettext /*String*/ (null).trim()).equals("")) { 
+RDebugUtils.currentLine=5701645;
+ //BA.debugLineNum = 5701645;BA.debugLine="lblIncongruenciaTitulo.Visible = True";
+mostCurrent._lblincongruenciatitulo.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else {
+RDebugUtils.currentLine=5701647;
+ //BA.debugLineNum = 5701647;BA.debugLine="lblIncongruenciaTitulo.Visible = False";
+mostCurrent._lblincongruenciatitulo.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ };
+RDebugUtils.currentLine=5701650;
+ //BA.debugLineNum = 5701650;BA.debugLine="If edB4XFloatPagOuCap.Text.Trim = \"\" Then";
+if ((mostCurrent._edb4xfloatpagoucap._gettext /*String*/ (null).trim()).equals("")) { 
+RDebugUtils.currentLine=5701651;
+ //BA.debugLineNum = 5701651;BA.debugLine="lblIncongruenciaPagOuCap.Visible = True";
+mostCurrent._lblincongruenciapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else {
+RDebugUtils.currentLine=5701653;
+ //BA.debugLineNum = 5701653;BA.debugLine="lblIncongruenciaPagOuCap.Visible = False";
+mostCurrent._lblincongruenciapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ };
+RDebugUtils.currentLine=5701656;
+ //BA.debugLineNum = 5701656;BA.debugLine="If edB4XFloatMetaPagCap.Text.Trim = \"\" Then";
+if ((mostCurrent._edb4xfloatmetapagcap._gettext /*String*/ (null).trim()).equals("")) { 
+RDebugUtils.currentLine=5701657;
+ //BA.debugLineNum = 5701657;BA.debugLine="lblIncongruenciaMetaPagOuCap.Visible = True";
+mostCurrent._lblincongruenciametapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.True);
+ }else {
+RDebugUtils.currentLine=5701659;
+ //BA.debugLineNum = 5701659;BA.debugLine="lblIncongruenciaMetaPagOuCap.Visible = False";
+mostCurrent._lblincongruenciametapagoucap.setVisible(anywheresoftware.b4a.keywords.Common.False);
+ };
+RDebugUtils.currentLine=5701661;
+ //BA.debugLineNum = 5701661;BA.debugLine="End Sub";
+return "";
 }
 public static String  _radcapitulo_checkedchange(boolean _checked) throws Exception{
 RDebugUtils.currentModule="act_telacadastro";

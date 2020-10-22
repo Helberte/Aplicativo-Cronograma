@@ -128,35 +128,35 @@ codigocadastro,process_globals,0,1,6,8
 ,mostrarsenha
 ,mostrarsenha
 
-codigolancamentoleitura,activity_create,1,0,32,65
-,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas,,titulolivro,,nomeusuario,,paginaatual,,meta,,totalpaginas,,tipoleitura,,banco
+codigolancamentoleitura,activity_create,1,0,32,70
+,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas,,titulolivro,,nomeusuario,,totalpaginas,,paginaatual,,meta,,tipoleitura,,banco
 ,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas
 b4ximageview,setresizemode,b4ximageview,load,classbancodados,initialize,b4ximageview,update,b4ximageview,setcircleclip,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill
-codigolancamentoleitura,activity_pause,0,0,79,81
+codigolancamentoleitura,activity_pause,0,0,84,86
 
 
 
-codigolancamentoleitura,activity_resume,0,0,67,77
+codigolancamentoleitura,activity_resume,0,0,72,82
 ,b4ximageviewfoto,,lbltitulolivro
 
 
-codigolancamentoleitura,aparecepagatual,0,0,158,161
+codigolancamentoleitura,aparecepagatual,0,0,182,185
 ,lblpaginaatual
 
 
-codigolancamentoleitura,btcancelar_click,0,0,83,85
+codigolancamentoleitura,btcancelar_click,0,0,88,90
 
 
 
-codigolancamentoleitura,btok_click,0,0,87,117
+codigolancamentoleitura,btok_click,0,0,92,141
 main,id_do_usuario,,idlivro,,edpaginaatual,,banco,main,cadastroualgo
 main,cadastroualgo
 classbancodados,insert_consulta,classbancodados,conecta
-codigolancamentoleitura,edpaginaatual_textchanged,0,0,119,151
+codigolancamentoleitura,edpaginaatual_textchanged,0,0,143,175
 ,totalpaginas,,lblivalido,,edpaginaatual,,lblprevisaoporcentagem,,btok,,lblpaginaatual
 
 ,somepagatual,,aparecepagatual
-codigolancamentoleitura,somepagatual,0,0,153,156
+codigolancamentoleitura,somepagatual,0,0,177,180
 ,lblpaginaatual
 
 
@@ -317,14 +317,14 @@ b4xcombobox,setselectedindex,0,0,106,118
 
 
 codigolayleituras,activity_create,1,0,31,56
-,btadicionarleitura,,tabstrip,,panel_lendo,,lbl_inicial_leitura,,banco,,cores,,panelnenhumaleitura,main,id_do_usuario,,scrollview1,,gradient,,tempanel,,tamanholista,,nomearquivo
+,btadicionarleitura,,tabstrip,,panel_lendo,,lbl_inicial_leitura,,banco,,cores,,panelnenhumaleitura,main,id_do_usuario,,tempanel,,scrollview1,,gradient,,tamanholista,,nomearquivo
 ,btadicionarleitura,,tabstrip,,panel_lendo,,tempanel,,tamanholista
 classbancodados,initialize,,atualiza_leituras,classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,atualiza_leituras,0,0,79,250
-main,id_do_usuario,,banco,,btadicionarleitura,,lbl_inicial_leitura,,scrollview1,,panel_lendo,,gradient,,cores,,tempanel,,tamanholista,,nomearquivo
+codigolayleituras,atualiza_leituras,0,1,79,256
+main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,btadicionarleitura,,panel_lendo,,gradient,,cores,,tamanholista,,nomearquivo
 ,tempanel,,tamanholista
 classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,activity_keypress,1,0,359,398
+codigolayleituras,activity_keypress,1,0,365,404
 
 
 
@@ -333,18 +333,18 @@ codigolayleituras,activity_pause,0,0,75,77
 
 
 codigolayleituras,activity_resume,0,0,62,73
-main,cadastroualgo,main,id_do_usuario,,banco,,btadicionarleitura,,lbl_inicial_leitura,,scrollview1,,panel_lendo,,gradient,,cores,,tempanel,,tamanholista,,nomearquivo
+main,cadastroualgo,main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,btadicionarleitura,,panel_lendo,,gradient,,cores,,tamanholista,,nomearquivo
 main,cadastroualgo,,tempanel,,tamanholista
 ,atualiza_leituras,classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,btadicionarleitura_click,0,0,351,353
+codigolayleituras,btadicionarleitura_click,0,0,357,359
 
 
 
-codigolayleituras,event_btanotar_click,0,0,252,292
+codigolayleituras,event_btanotar_click,0,0,258,298
 ,nomearquivo,,tamanholista,codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 
-codigolayleituras,event_btlancar_click,0,0,294,349
+codigolayleituras,event_btlancar_click,0,0,300,355
 ,nomearquivo,,tamanholista,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 
@@ -360,7 +360,7 @@ codigolayleituras,process_globals,0,1,6,9
 ,tempanel
 ,tempanel
 
-codigolayleituras,tabstrip_pageselected,0,0,355,357
+codigolayleituras,tabstrip_pageselected,0,0,361,363
 
 
 
@@ -428,83 +428,91 @@ starter,service_taskremoved,0,0,22,24
 
 
 
-act_telacadastro,activity_create,1,0,61,292
-,painelimagem,,panelcabecalho,,paneledtitulolivro,,paneledautorlivro,,paneledpaginasoucap,,panelmeta,,paneldataprevistafim,,paneledits,,lbldadoslivro,,lbltipoleitura,,lblmeta,,lblprevisaotermino,,lblmaximodigitostitulo,,lblmaximodigitosautor,,lblmaximodigitospagoucap,,lblmaximodigitosmetapagoucap,,lblincongruenciatitulo,,lblincongruenciaautor,,lblincongruenciametapagoucap,,lblincongruenciapagoucap,,btcancelar,,btsalvar,,btaddfoto,,radpagina,,radcapitulo,,banco,,scrol,main,fotos,,b4ximagem,,edb4xfloatnomelivro,,edb4xfloatautorlivro,,edb4xfloatpagoucap,,edb4xfloatmetapagcap,,lbldataprevisao,,lblquantidadedias,,hoje
-,b4ximagem,,edb4xfloatnomelivro,,edb4xfloatautorlivro,,edb4xfloatpagoucap,,edb4xfloatmetapagcap,,lbldataprevisao,,lblquantidadedias,,hoje
+act_telacadastro,activity_create,1,0,76,290
+,negritoitalico,,banco,,painelimagem,,panelcabecalho,,paneledtitulolivro,,paneledautorlivro,,paneledpaginasoucap,,panelmeta,,paneldataprevistafim,,paneledits,,lbldadoslivro,,lbltipoleitura,,lblmeta,,lblprevisaotermino,,lblmaximodigitostitulo,,lblmaximodigitosautor,,lblmaximodigitospagoucap,,lblmaximodigitosmetapagoucap,,lblincongruenciatitulo,,lblincongruenciaautor,,lblincongruenciametapagoucap,,lblincongruenciapagoucap,,btcancelar,,btsalvar,,btaddfoto,,radpagina,,radcapitulo,,scrol,main,fotos,,edit,,rotulo,,b4ximagem,,edb4xfloatnomelivro,,edb4xfloatautorlivro,,edb4xfloatpagoucap,,edb4xfloatmetapagcap,,lbldataprevisao,,lblquantidadedias,,hoje
+,negritoitalico,,b4ximagem,,edb4xfloatnomelivro,,edb4xfloatautorlivro,,edb4xfloatpagoucap,,edb4xfloatmetapagcap,,lbldataprevisao,,lblquantidadedias,,hoje
 classbancodados,initialize,b4ximageview,setresizemode,b4ximageview,load,,addlabel,b4ximageview,update,b4ximageview,setcircleclip,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill
-act_telacadastro,addlabel,0,0,294,301
+act_telacadastro,addlabel,0,0,292,299
 ,scrol
 
 
-act_telacadastro,activity_pause,0,0,316,317
+act_telacadastro,activity_pause,0,0,314,315
 
 
 
-act_telacadastro,activity_resume,0,0,303,314
+act_telacadastro,activity_resume,0,0,301,312
 ,btcancelar,,btsalvar
 
 
-act_telacadastro,btaddimagem_click,0,0,406,412
+act_telacadastro,btaddimagem_click,0,0,411,417
 main,fotos
 
 
-act_telacadastro,cc_result,0,0,414,423
+act_telacadastro,cc_result,0,0,419,428
 ,b4ximagem
 
 b4ximageview,setresizemode,b4ximageview,load,b4ximageview,update,b4ximageview,setcircleclip,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill
-act_telacadastro,edb4xfloatautorlivro_focuschanged,0,0,573,579
-,lblmaximodigitosautor
+act_telacadastro,edb4xfloatautorlivro_focuschanged,0,0,588,596
+,lblmaximodigitosautor,,lblincongruenciaautor,,txt_autor_invalido
 
 
-act_telacadastro,edb4xfloatautorlivro_textchanged,1,0,441,455
-,edb4xfloatautorlivro,,lblincongruenciaautor,,lblmaximodigitosautor
-
+act_telacadastro,edb4xfloatautorlivro_textchanged,1,0,446,462
+,edb4xfloatautorlivro,,lblincongruenciaautor,,lblmaximodigitosautor,,txt_autor_invalido
+,txt_autor_invalido
 b4xfloattextfield,settext,b4xfloattextfield,gettext,b4xfloattextfield,tf_textchanged,b4xfloattextfield,updatelabel
-act_telacadastro,edb4xfloatmetapagcap_focuschanged,0,0,589,595
-,lblmaximodigitosmetapagoucap
+act_telacadastro,edb4xfloatmetapagcap_focuschanged,0,0,608,616
+,lblmaximodigitosmetapagoucap,,lblincongruenciametapagoucap,,txt_metapagoucap_invalido
 
 
-act_telacadastro,edb4xfloatmetapagcap_textchanged,0,0,475,517
-,lblmaximodigitosmetapagoucap,,edb4xfloatmetapagcap,,edb4xfloatpagoucap,,lblquantidadedias,,dataprevistafinal,,lbldataprevisao,,hoje,,lblincongruenciametapagoucap
-,dataprevistafinal
+act_telacadastro,edb4xfloatmetapagcap_textchanged,0,0,484,528
+,lblmaximodigitosmetapagoucap,,edb4xfloatmetapagcap,,edb4xfloatpagoucap,,lblquantidadedias,,dataprevistafinal,,lbldataprevisao,,hoje,,lblincongruenciametapagoucap,,txt_metapagoucap_invalido
+,dataprevistafinal,,txt_metapagoucap_invalido
 b4xfloattextfield,gettext
-act_telacadastro,edb4xfloatnomelivro_focuschanged,0,0,565,571
-,lblmaximodigitostitulo
+act_telacadastro,edb4xfloatnomelivro_focuschanged,0,0,578,586
+,lblmaximodigitostitulo,,lblincongruenciatitulo,,txt_titulo_invalido
 
 
-act_telacadastro,edb4xfloatnomelivro_textchanged,1,0,457,473
-,edb4xfloatnomelivro,,lblincongruenciatitulo,,lblmaximodigitostitulo
-
+act_telacadastro,edb4xfloatnomelivro_textchanged,1,0,464,482
+,edb4xfloatnomelivro,,lblincongruenciatitulo,,lblmaximodigitostitulo,,txt_titulo_invalido
+,txt_titulo_invalido
 b4xfloattextfield,settext,b4xfloattextfield,gettext,b4xfloattextfield,tf_textchanged,b4xfloattextfield,updatelabel
-act_telacadastro,edb4xfloatpagoucap_focuschanged,0,0,581,587
-,lblmaximodigitospagoucap
+act_telacadastro,edb4xfloatpagoucap_focuschanged,0,0,598,606
+,lblmaximodigitospagoucap,,lblincongruenciapagoucap,,txt_pagoucap_invalido
 
 
-act_telacadastro,edb4xfloatpagoucap_textchanged,0,0,519,563
-,lblmaximodigitospagoucap,,edb4xfloatmetapagcap,,edb4xfloatpagoucap,,lblquantidadedias,,dataprevistafinal,,lbldataprevisao,,hoje,,lblincongruenciapagoucap
-,dataprevistafinal
+act_telacadastro,edb4xfloatpagoucap_textchanged,0,0,530,576
+,lblmaximodigitospagoucap,,edb4xfloatmetapagcap,,edb4xfloatpagoucap,,lblquantidadedias,,dataprevistafinal,,lbldataprevisao,,hoje,,lblincongruenciapagoucap,,txt_pagoucap_invalido
+,dataprevistafinal,,txt_pagoucap_invalido
 b4xfloattextfield,gettext
-act_telacadastro,event_btcancelar_click,0,0,320,324
+act_telacadastro,event_btcancelar_click,0,0,318,322
 ,btcancelar
 
 
-act_telacadastro,event_btsalvar_click,0,0,326,404
-,btsalvar,,edb4xfloatnomelivro,,edb4xfloatautorlivro,,radpagina,,edb4xfloatpagoucap,,edb4xfloatmetapagcap,,radcapitulo,main,id_do_usuario,,dataprevistafinal,,banco,main,cadastroualgo
+act_telacadastro,event_btsalvar_click,0,0,324,409
+,btsalvar,,edb4xfloatnomelivro,,edb4xfloatautorlivro,,radpagina,,edb4xfloatpagoucap,,edb4xfloatmetapagcap,,radcapitulo,main,id_do_usuario,,dataprevistafinal,,banco,main,cadastroualgo,,lblincongruenciaautor,,lblincongruenciatitulo,,lblincongruenciapagoucap,,lblincongruenciametapagoucap
 main,cadastroualgo
-b4xfloattextfield,gettext,classbancodados,insert_consulta,classbancodados,conecta
-act_telacadastro,globals,0,1,10,59
+,verificatamanhotexto,b4xfloattextfield,gettext,,textoobrigatorio,classbancodados,insert_consulta,classbancodados,conecta
+act_telacadastro,verificatamanhotexto,0,0,650,657
+,edb4xfloatnomelivro,,edb4xfloatautorlivro,,edb4xfloatpagoucap,,edb4xfloatmetapagcap
 
+b4xfloattextfield,gettext
+act_telacadastro,textoobrigatorio,0,0,618,647
+,lblincongruenciaautor,,lblincongruenciatitulo,,lblincongruenciapagoucap,,lblincongruenciametapagoucap,,edb4xfloatautorlivro,,edb4xfloatnomelivro,,edb4xfloatpagoucap,,edb4xfloatmetapagcap
 
+b4xfloattextfield,gettext
+act_telacadastro,globals,0,1,20,74
+,txt_titulo_invalido,,txt_autor_invalido,,txt_pagoucap_invalido,,txt_metapagoucap_invalido
+,txt_titulo_invalido,,txt_autor_invalido,,txt_pagoucap_invalido,,txt_metapagoucap_invalido
 
 act_telacadastro,process_globals,0,1,6,8
 
 
 
-act_telacadastro,radcapitulo_checkedchange,0,0,433,439
+act_telacadastro,radcapitulo_checkedchange,0,0,438,444
 ,lblmeta
 
 
-act_telacadastro,radpagina_checkedchange,0,0,425,431
+act_telacadastro,radpagina_checkedchange,0,0,430,436
 ,lblmeta
 
 

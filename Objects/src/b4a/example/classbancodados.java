@@ -56,7 +56,7 @@ RDebugUtils.currentLine=327681;
 _driver = "net.sourceforge.jtds.jdbc.Driver";
 RDebugUtils.currentLine=327682;
  //BA.debugLineNum = 327682;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
-_jdbcurl = "jdbc:jtds:sqlserver://192.168.1.106:1433;databaseName=cronograma;logintimeout=10";
+_jdbcurl = "jdbc:jtds:sqlserver://192.168.1.108:1433;databaseName=cronograma;logintimeout=10";
 RDebugUtils.currentLine=327685;
  //BA.debugLineNum = 327685;BA.debugLine="Private usuario As String = \"sa\"";
 _usuario = "sa";

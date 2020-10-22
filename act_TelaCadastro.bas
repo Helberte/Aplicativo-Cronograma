@@ -13,6 +13,16 @@ Sub Process_Globals
 	
 End Sub
 
+	'Deixar texto em italico via linha de código
+	'https://www.b4x.com/android/forum/threads/how-do-i-set-an-edittext-view-to-italic.123206/
+
+	'Definir texto no centro
+	'https://www.b4x.com/android/forum/threads/centering-text-in-label-programmatically.100900/
+	'Dim lblCard1 As B4XView 'in Globals
+	'lblCard1.SetTextAlignment("CENTER", "CENTER")
+	'lblCard1.Gravity = Gravity.CENTER
+	'lblDadosLivro.Gravity = Bit.Or(Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL)
+	
 Sub Globals	
 	Dim painelImagem As			 			Panel
 	Dim panelCabecalho As 					Panel
@@ -34,8 +44,9 @@ Sub Globals
 	Dim lblIncongruenciaTitulo As			Label
 	Dim lblIncongruenciaAutor As			Label
 	Dim lblIncongruenciaMetaPagOuCap As		Label
-	Dim lblIncongruenciaPagOuCap As			Label
-	
+	Dim lblIncongruenciaPagOuCap As			Label	
+	Private lblDataPrevisao As			 	Label
+	Private lblQuantidadeDias As 			Label
 	
 	Dim btCancelar As 						Button
 	Dim btSalvar As 						Button	
@@ -46,26 +57,35 @@ Sub Globals
 		
 	Dim scrol As 							ScrollView
 	Private B4XImagem As 					B4XImageView
-	Private edB4XFloatNomeLivro As 			B4XFloatTextField
+	Private edB4XFloatNomeLivro As 			B4XFloatTextField		
+	Private edB4XFloatPagOuCap As 			B4XFloatTextField
+	Private edB4XFloatAutorLivro As	 		B4XFloatTextField
+	Private edB4XFloatMetaPagCap As 		B4XFloatTextField
 	
-	Dim hoje As String
+	Dim banco As 							ClassBancoDados		
 	
-'	Dim cc As ContentChooser
 	DateTime.DateFormat = "dd/MM/yyy"
+	Type edit (tamanho As Int, esquerda As Int, topo As Int)
+	Type rotuloDimencoes (tamanho As Int, esquerda As Int)
+	Dim rotulo As 							rotuloDimencoes
+	Dim edit As 							edit
+	Dim negritoItalico As Typeface
+	Dim hoje As 							String
+	Private dataPrevistaFinal As 			String
 	
-	Private lblDataPrevisao As Label
-	Private lblQuantidadeDias As Label
-	Private edB4XFloatPagOuCap As B4XFloatTextField
-	Private edB4XFloatAutorLivro As B4XFloatTextField
-	Private edB4XFloatMetaPagCap As B4XFloatTextField
-	Private dataPrevistaFinal As String
-	
-	
-	Dim banco As ClassBancoDados
+	Dim txt_titulo_invalido As					Boolean = False
+	Dim txt_Autor_invalido As					Boolean = False
+	Dim txt_PagOuCap_invalido As				Boolean = False
+	Dim txt_MetaPagOuCap_invalido As			Boolean = False
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)	
 	Activity.LoadLayout("Lay_TelaCadastro")
+		
+	'INICIALIZAÇÕES E CONFIGURAÇÕES DOS COMPONENTES
+		
+	negritoItalico = negritoItalico.CreateNew(Typeface.DEFAULT_BOLD, Typeface.STYLE_ITALIC)
+	banco.Initialize	
 	
 	painelImagem.Initialize("")
 	panelCabecalho.Initialize ("")
@@ -87,44 +107,40 @@ Sub Activity_Create(FirstTime As Boolean)
 	lblIncongruenciaTitulo.Initialize("")
 	lblIncongruenciaAutor.Initialize("")
 	lblIncongruenciaMetaPagOuCap.Initialize("")
-	lblIncongruenciaPagOuCap.Initialize("")		
-		
+	lblIncongruenciaPagOuCap.Initialize("")
+	
+	lblDadosLivro.Color = Colors.Transparent
+	lblDadosLivro.Text = "Dados do Livro"
+	lblDadosLivro.TextColor = Colors.Black
+	lblDadosLivro.TextSize = 17
+	lblDadosLivro.Typeface = negritoItalico
+	lblDadosLivro.Gravity = Gravity.CENTER
+	
+	lblTipoLeitura.Color = Colors.Transparent
+	lblTipoLeitura.Text = "Tipo de leitura"
+	lblTipoLeitura.TextColor = Colors.Black
+	lblTipoLeitura.TextSize = 17	
+	lblTipoLeitura.Typeface = negritoItalico
+	lblTipoLeitura.Gravity = Gravity.CENTER
+	
+	lblMeta.Color = Colors.Transparent
+	lblMeta.Text = "Meta - Quantas páginas / cap ler por dia?"
+	lblMeta.TextColor = Colors.Black
+	lblMeta.TextSize = 17		
+	lblMeta.Typeface = negritoItalico
+	lblMeta.Gravity = Gravity.CENTER
+	
+	lblPrevisaoTermino.Color = Colors.Transparent
+	lblPrevisaoTermino.Text = "Previsão para término"
+	lblPrevisaoTermino.TextColor = Colors.Black
+	lblPrevisaoTermino.TextSize = 17	
+	lblPrevisaoTermino.Typeface = negritoItalico
+	lblPrevisaoTermino.Gravity = Gravity.CENTER
+	
 	btCancelar.Initialize ("Event_btCancelar")
 	btSalvar.Initialize("Event_btSalvar")	
 	btAddFoto.Initialize("")
 	
-	radPagina.Initialize("radPagina")
-	radCapitulo.Initialize("radCapitulo")
-	radPagina.Checked = True
-	
-	
-	banco.Initialize
-	
-	scrol.Initialize( 500 )		
-	Main.fotos.Initialize("CC")
-	
-	Dim etiqueta As Label
-	etiqueta.Initialize("")	
-	
-	
-	lblMaximoDigitosTitulo.Text = "0/100 "
-	lblMaximoDigitosAutor.Text = "0/100 "
-	lblMaximoDigitosPagOuCap.Text = "0/4 "
-	lblMaximoDigitosMetaPagOuCap.Text = "0/4 "
-	
-	lblMaximoDigitosTitulo.TextColor = Colors.Black
-	lblMaximoDigitosAutor.TextColor = Colors.Black
-	lblMaximoDigitosPagOuCap.TextColor = Colors.Black
-	lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Black
-	
-	lblIncongruenciaAutor.TextColor = Colors.Red
-	lblIncongruenciaMetaPagOuCap.TextColor = Colors.Red
-	lblIncongruenciaPagOuCap.TextColor = Colors.Red
-	lblIncongruenciaTitulo.TextColor = Colors.Red			
-	
-	panelCabecalho.Color = Colors.RGB(0,165,255)
-	Activity.AddView(panelCabecalho, 0%x, 0%y, 100%x, 10%y)
-		
 	btCancelar.Color = Colors.Transparent
 	btCancelar.Text = "CANCELAR"
 	btCancelar.TextSize = 19
@@ -135,91 +151,10 @@ Sub Activity_Create(FirstTime As Boolean)
 	btSalvar.TextSize = 19
 	btSalvar.Typeface = Typeface.DEFAULT_BOLD
 	
+	radPagina.Initialize("radPagina")
+	radCapitulo.Initialize("radCapitulo")
+	radPagina.Checked = True
 	
-	panelCabecalho.AddView(btCancelar, 1%x,  1%y, 35%x, 7%y)
-	Dim esquerda As Int = 100%x - btCancelar.Width - btCancelar.Left
-	panelCabecalho.AddView(btSalvar, esquerda, 1%y, 35%x, 7%y)
-		
-	
-	scrol.Color = Colors.Cyan
-	scrol.Panel.Color = Colors.RGB(223,223,223)
-	
-	Dim topoScrol As Int = panelCabecalho.Top + panelCabecalho.Height
-	Activity.AddView(scrol, 0%x, topoScrol , 100%x, 100%y - topoScrol)	
-	
-	lblDadosLivro.Color = Colors.Transparent
-	lblDadosLivro.Text = "Dados do Livro"
-	lblDadosLivro.TextColor = Colors.Black
-	lblDadosLivro.TextSize = 17
-	
-	'Deixar texto em italico via linha de código
-	'https://www.b4x.com/android/forum/threads/how-do-i-set-an-edittext-view-to-italic.123206/
-	Dim tf As Typeface
-	tf = tf.CreateNew(Typeface.DEFAULT_BOLD, Typeface.STYLE_ITALIC)	
-	lblDadosLivro.Typeface = tf	
-		
-	'Definir texto no centro
-	'https://www.b4x.com/android/forum/threads/centering-text-in-label-programmatically.100900/
-	'Dim lblCard1 As B4XView 'in Globals
-	'lblCard1.SetTextAlignment("CENTER", "CENTER")
-	'lblCard1.Gravity = Gravity.CENTER
-	'lblDadosLivro.Gravity = Bit.Or(Gravity.CENTER_HORIZONTAL, Gravity.CENTER_VERTICAL)
-	
-	lblDadosLivro.Gravity = Gravity.CENTER
-	
-	scrol.Panel.AddView(lblDadosLivro, 0%x, 0%y, 100%x, 5%y)
-	
-	painelImagem.Width = 98%x
-	
-	
-	
-	Dim esquerda As Int = (100%x - painelImagem.Width) / 2
-	Dim tamanhoEdits As Int = painelImagem.Width
-	
-	scrol.Panel.AddView(painelImagem, esquerda , lblDadosLivro.Top + lblDadosLivro.Height, 98%x, 30%y)
-	
-	painelImagem.LoadLayout("Lay_Imagem")
-	
-	B4XImagem.ResizeMode = "FILL"
-	B4XImagem.Load(File.DirAssets, "livro.jpg")
-	
-	scrol.Panel.Height = painelImagem.Top + painelImagem.Height
-	
-	scrol.Panel.AddView(panelEdits, esquerda, painelImagem.Top + painelImagem.Height + 5dip, tamanhoEdits, 8%y)
-	panelEdits.LoadLayout("Lay_edTituloLivro")
-	scrol.Panel.Height = panelEdits.Top + panelEdits.Height
-	
-	
-	Dim tamanhoLabelObrigatorio As Int = (100%x / 2) - esquerda
-	Dim esquerdaDosLabels As Int = esquerda + tamanhoLabelObrigatorio
-	Dim tamanhoDosLabels As Int = panelEdits.Width - tamanhoLabelObrigatorio
-	
-	lblIncongruenciaTitulo.Text = "Obrigatório"
-	AddLabel(Gravity.LEFT, lblIncongruenciaTitulo, panelEdits.Top + panelEdits.Height, esquerda, tamanhoLabelObrigatorio)
-	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosTitulo, panelEdits.Top + panelEdits.Height, esquerdaDosLabels, tamanhoDosLabels)
-	scrol.Panel.Height = etiqueta.Top + etiqueta.Height	
-	
-	scrol.Panel.AddView(panelEdAutorLivro, esquerda, etiqueta.Top + etiqueta.Height + 5dip, tamanhoEdits, 8%y)
-	panelEdAutorLivro.LoadLayout("Lay_edAutorLivro")
-	
-	lblIncongruenciaAutor.Text = "Obrigatório"
-	AddLabel(Gravity.LEFT, lblIncongruenciaAutor,panelEdAutorLivro.Top + panelEdAutorLivro.Height, esquerda,tamanhoLabelObrigatorio)
-	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosAutor, panelEdAutorLivro.Top + panelEdAutorLivro.Height, esquerdaDosLabels, tamanhoDosLabels)
-	scrol.Panel.Height = etiqueta.Top + etiqueta.Height	
-		
-	lblTipoLeitura.Color = Colors.Transparent
-	lblTipoLeitura.Text = "Tipo de leitura"
-	lblTipoLeitura.TextColor = Colors.Black
-	lblTipoLeitura.TextSize = 17
-	
-	Dim tl As Typeface
-	tl = Typeface.CreateNew(Typeface.DEFAULT_BOLD, Typeface.STYLE_ITALIC)
-	lblTipoLeitura.Typeface = tl
-	lblTipoLeitura.Gravity = Gravity.CENTER
-	
-	scrol.Panel.AddView(lblTipoLeitura, 0%x, lblMaximoDigitosAutor.Top + lblMaximoDigitosAutor.Height + 5dip, 100%x, 5%y)
-	scrol.Panel.Height = lblTipoLeitura.Top + lblTipoLeitura.Height
-		
 	radPagina.Text = "Por página"
 	radPagina.TextColor = Colors.RGB(83,0,0)
 	radPagina.TextSize = 16
@@ -230,71 +165,134 @@ Sub Activity_Create(FirstTime As Boolean)
 	radCapitulo.TextSize = 16
 	radCapitulo.Gravity = Gravity.CENTER
 	
+	lblMaximoDigitosTitulo.Text = "0/100 "
+	lblMaximoDigitosAutor.Text = "0/100 "
+	lblMaximoDigitosPagOuCap.Text = "0/4 "
+	lblMaximoDigitosMetaPagOuCap.Text = "0/4 "
+	
+	lblMaximoDigitosTitulo.Visible = False
+	lblMaximoDigitosAutor.Visible = False
+	lblMaximoDigitosPagOuCap.Visible = False
+	lblMaximoDigitosMetaPagOuCap.Visible = False
+		
+	lblMaximoDigitosTitulo.TextColor = Colors.Black
+	lblMaximoDigitosAutor.TextColor = Colors.Black
+	lblMaximoDigitosPagOuCap.TextColor = Colors.Black
+	lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Black
+	
+	lblIncongruenciaAutor.TextColor = Colors.Red
+	lblIncongruenciaMetaPagOuCap.TextColor = Colors.Red
+	lblIncongruenciaPagOuCap.TextColor = Colors.Red
+	lblIncongruenciaTitulo.TextColor = Colors.Red
+	
+	lblIncongruenciaAutor.Visible = False
+	lblIncongruenciaMetaPagOuCap.Visible = False
+	lblIncongruenciaPagOuCap.Visible = False
+	lblIncongruenciaTitulo.Visible = False
+	
+	scrol.Initialize( 500 )
+	Main.fotos.Initialize("CC")
+	
+	Dim etiqueta As Label
+	etiqueta.Initialize("")
+	
+	edit.Initialize
+	rotulo.Initialize
+	
+	
+	'INCERÇÕES NA ATIVIDADE E DENTRO DO SCROL
+	
+	panelCabecalho.Color = Colors.RGB(0,165,255)
+	Activity.AddView(panelCabecalho, 0%x, 0%y, 100%x, 10%y)	
+			
+	panelCabecalho.AddView(btCancelar, 1%x,  1%y, 35%x, 7%y)
+	Dim btSalvarEsquerda As Int = 100%x - btCancelar.Width - btCancelar.Left
+	panelCabecalho.AddView(btSalvar, btSalvarEsquerda, 1%y, 35%x, 7%y)
+			
+	scrol.Color = Colors.Cyan
+	scrol.Panel.Color = Colors.RGB(223,223,223)
+	
+	Dim topoScrol As Int = panelCabecalho.Top + panelCabecalho.Height
+	Activity.AddView(scrol, 0%x, topoScrol , 100%x, 100%y - topoScrol)	
+	
+	scrol.Panel.AddView(lblDadosLivro, 0%x, 0%y, 100%x, 5%y)
+	
+	painelImagem.Width = 98%x
+	
+	edit.esquerda = (100%x - painelImagem.Width) / 2
+	edit.tamanho =  painelImagem.Width
+
+	scrol.Panel.AddView(painelImagem, edit.esquerda , lblDadosLivro.Top + lblDadosLivro.Height, 98%x, 30%y)
+	
+	painelImagem.LoadLayout("Lay_Imagem")
+	
+	B4XImagem.ResizeMode = "FILL"
+	B4XImagem.Load(File.DirAssets, "livro.jpg")
+	
+	scrol.Panel.Height = painelImagem.Top + painelImagem.Height
+	
+	scrol.Panel.AddView(panelEdits, edit.esquerda, painelImagem.Top + painelImagem.Height + 5dip, edit.tamanho, 8%y)
+	panelEdits.LoadLayout("Lay_edTituloLivro")
+	
+	scrol.Panel.Height = panelEdits.Top + panelEdits.Height
+		
+	Dim tamanhoLabelObrigatorio As Int = (100%x / 2) - edit.esquerda
+	
+	rotulo.esquerda =  edit.esquerda + tamanhoLabelObrigatorio
+	rotulo.tamanho = panelEdits.Width - tamanhoLabelObrigatorio
+
+	lblIncongruenciaTitulo.Text = "Obrigatório"
+	AddLabel(Gravity.LEFT, lblIncongruenciaTitulo, panelEdits.Top + panelEdits.Height, edit.esquerda, tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosTitulo, panelEdits.Top + panelEdits.Height, rotulo.esquerda, rotulo.tamanho)
+	scrol.Panel.Height = etiqueta.Top + etiqueta.Height	
+	
+	scrol.Panel.AddView(panelEdAutorLivro, edit.esquerda, etiqueta.Top + etiqueta.Height + 5dip, edit.tamanho, 8%y)
+	panelEdAutorLivro.LoadLayout("Lay_edAutorLivro")
+	
+	lblIncongruenciaAutor.Text = "Obrigatório"
+	AddLabel(Gravity.LEFT, lblIncongruenciaAutor,panelEdAutorLivro.Top + panelEdAutorLivro.Height, edit.esquerda,tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosAutor, panelEdAutorLivro.Top + panelEdAutorLivro.Height, rotulo.esquerda, rotulo.tamanho)
+	scrol.Panel.Height = etiqueta.Top + etiqueta.Height	
+	
+	scrol.Panel.AddView(lblTipoLeitura, 0%x, lblMaximoDigitosAutor.Top + lblMaximoDigitosAutor.Height + 5dip, 100%x, 5%y)
+	scrol.Panel.Height = lblTipoLeitura.Top + lblTipoLeitura.Height
+	
 	scrol.Panel.AddView(radPagina, 0%x , lblTipoLeitura.Top + lblTipoLeitura.Height + 5dip, 50%x, 5%y)
 
 	scrol.Panel.AddView(radCapitulo, radPagina.Width, lblTipoLeitura.Top + lblTipoLeitura.Height + 5dip, 50%x, 5%y)
 	scrol.Panel.Height = radPagina.Top + radPagina.Height
 	 
-	scrol.Panel.AddView(panelEdPaginasOuCap, esquerda, radCapitulo.Top + radCapitulo.Height + 5dip, tamanhoEdits, 8%y)
+	scrol.Panel.AddView(panelEdPaginasOuCap, edit.esquerda, radCapitulo.Top + radCapitulo.Height + 5dip, edit.tamanho, 8%y)
 	panelEdPaginasOuCap.LoadLayout("Lay_edPagOuCapitulo")
 			
 	lblIncongruenciaPagOuCap.Text = "Obrigatório"
-	AddLabel(Gravity.LEFT, lblIncongruenciaPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, esquerda, tamanhoLabelObrigatorio)
-	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, esquerdaDosLabels, tamanhoDosLabels)
+	AddLabel(Gravity.LEFT, lblIncongruenciaPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, edit.esquerda, tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosPagOuCap, panelEdPaginasOuCap.Top + panelEdPaginasOuCap.Height, rotulo.esquerda, rotulo.tamanho)
 	scrol.Panel.Height = etiqueta.Top + etiqueta.Height 
-
-	lblMeta.Color = Colors.Transparent
-	lblMeta.Text = "Meta - Quantas páginas / cap ler por dia?"
-	lblMeta.TextColor = Colors.Black
-	lblMeta.TextSize = 17
-	
-	Dim lm As Typeface
-	lm = Typeface.CreateNew(Typeface.DEFAULT_BOLD, Typeface.STYLE_ITALIC)
-	lblMeta.Typeface = lm
-	lblMeta.Gravity = Gravity.CENTER
 	
 	scrol.Panel.AddView(lblMeta, 0%x, etiqueta.Top + etiqueta.Height + 5dip, 100%x, 5%y)
 	scrol.Panel.Height = lblMeta.Top + lblMeta.Height
 	
-	scrol.Panel.AddView(panelMeta, esquerda, lblMeta.Top + lblMeta.Height + 5dip, tamanhoEdits, 8%y)
+	scrol.Panel.AddView(panelMeta, edit.esquerda, lblMeta.Top + lblMeta.Height + 5dip, edit.tamanho, 8%y)
 	panelMeta.LoadLayout("Lay_edMetaPagCap")
 		
 	lblIncongruenciaMetaPagOuCap.Text = "Obrigatório"
-	AddLabel(Gravity.LEFT, lblIncongruenciaMetaPagOuCap, panelMeta.Top + panelMeta.Height, esquerda, tamanhoLabelObrigatorio)
-	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosMetaPagOuCap, panelMeta.Top + panelMeta.Height, esquerdaDosLabels, tamanhoDosLabels)
+	AddLabel(Gravity.LEFT, lblIncongruenciaMetaPagOuCap, panelMeta.Top + panelMeta.Height, edit.esquerda, tamanhoLabelObrigatorio)
+	etiqueta = AddLabel(Gravity.RIGHT, lblMaximoDigitosMetaPagOuCap, panelMeta.Top + panelMeta.Height, rotulo.esquerda, rotulo.tamanho)
 	scrol.Panel.Height = etiqueta.Top + etiqueta.Height
-		
-	lblPrevisaoTermino.Color = Colors.Transparent
-	lblPrevisaoTermino.Text = "Previsão para término"
-	lblPrevisaoTermino.TextColor = Colors.Black
-	lblPrevisaoTermino.TextSize = 17
-	
-	Dim pt As Typeface
-	pt = Typeface.CreateNew(Typeface.DEFAULT_BOLD, Typeface.STYLE_ITALIC)
-	lblPrevisaoTermino.Typeface = pt
-	lblPrevisaoTermino.Gravity = Gravity.CENTER
 	
 	scrol.Panel.AddView(lblPrevisaoTermino, 0%x, etiqueta.Top + etiqueta.Height + 5dip, 100%x, 5%y)
 	scrol.Panel.Height = lblPrevisaoTermino.Top + lblPrevisaoTermino.Height
 	
 	panelDataPrevistaFim.Color = Colors.Blue	
-	scrol.Panel.AddView(panelDataPrevistaFim, esquerda, lblPrevisaoTermino.Top + lblPrevisaoTermino.Height + 5dip, panelEdits.Width, 15%y)
+	scrol.Panel.AddView(panelDataPrevistaFim, edit.esquerda, lblPrevisaoTermino.Top + lblPrevisaoTermino.Height + 5dip, panelEdits.Width, 15%y)
 	panelDataPrevistaFim.LoadLayout("Lay_Previsao_termino")
 	scrol.Panel.Height = panelDataPrevistaFim.Top + panelDataPrevistaFim.Height + 10dip
 
 	hoje = "Dia: " & DateTime.Date(DateTime.Now)
 	lblDataPrevisao.Text = hoje
 	
-	lblQuantidadeDias.Visible = False
-	lblMaximoDigitosTitulo.Visible = False
-	lblMaximoDigitosAutor.Visible = False
-	lblMaximoDigitosPagOuCap.Visible = False
-	lblMaximoDigitosMetaPagOuCap.Visible = False
-	
-	lblIncongruenciaAutor.Visible = False
-	lblIncongruenciaMetaPagOuCap.Visible = False
-	lblIncongruenciaPagOuCap.Visible = False
-	lblIncongruenciaTitulo.Visible = False
+	lblQuantidadeDias.Visible = False	
 End Sub
 
 Sub AddLabel(gravidade As Object, etiqueta As Label, topo As Int, esquerda As Int, tamanho As Int) As Label
@@ -334,79 +332,86 @@ Sub Event_btSalvar_Click
 	
 	Dim pag_ou_cap As String
 	
-	If edB4XFloatNomeLivro.Text.Trim = "" Then
-		MsgboxAsync("Opa! qual o título do livro?","Calma...")
-		'edTituloLivro.RequestFocus
-	Else If edB4XFloatAutorLivro.Text.Trim = "" Then
-		MsgboxAsync("Opa! qual o nome do autor do livro?","Calma...")
-		'edAutorLivro.RequestFocus
-	Else
+	If VerificaTamanhoTexto Then
 		
-		pag_ou_cap = "Quantos capítulos"
-		If radPagina.Checked Then pag_ou_cap = "Quantas páginas"
-		
-		If edB4XFloatPagOuCap.Text.Trim = "" Then
-			MsgboxAsync("Opa! " & pag_ou_cap & " o livro tem?","Calma...")
-			'edQuantPagOuCap.RequestFocus
-			
-		else If edB4XFloatMetaPagCap.Text.Trim = "" Then
-		
-			MsgboxAsync("Opa! qual a sua meta diária?","Calma...")
-			'edMeta.RequestFocus
+		If edB4XFloatNomeLivro.Text.Trim = "" Then
+			MsgboxAsync("Opa! qual o título do livro?","Calma...")
+			TextoObrigatorio
+		Else If edB4XFloatAutorLivro.Text.Trim = "" Then
+			MsgboxAsync("Opa! qual o nome do autor do livro?","Calma...")
+			TextoObrigatorio
 		Else
-			Dim meta, quantidade_pag_cap As Int
 			
-			meta = edB4XFloatMetaPagCap.Text
-			quantidade_pag_cap = edB4XFloatPagOuCap.Text
+			pag_ou_cap = "Quantos capítulos"
+			If radPagina.Checked Then pag_ou_cap = "Quantas páginas"
 			
-			If meta > quantidade_pag_cap Then
-				ToastMessageShow("Informações incoerentes",True)
+			If edB4XFloatPagOuCap.Text.Trim = "" Then
+				MsgboxAsync("Opa! " & pag_ou_cap & " o livro tem?","Calma...")
+				TextoObrigatorio
+				
+			else If edB4XFloatMetaPagCap.Text.Trim = "" Then
+			
+				MsgboxAsync("Opa! qual a sua meta diária?","Calma...")
+				TextoObrigatorio
 			Else
+				Dim meta, quantidade_pag_cap As Int
 				
-				Try
-					Dim cmd, dataInicial, tipoLeitura As String
-			
-					tipoLeitura = "páginas"
-					If radCapitulo.Checked Then tipoLeitura = "capítulos"
-								
-					dataInicial = DateTime.Date(DateTime.Now)
+				meta = edB4XFloatMetaPagCap.Text
+				quantidade_pag_cap = edB4XFloatPagOuCap.Text
+				
+				Dim cmd, dataInicial, tipoLeitura As String
+				
+				tipoLeitura = "páginas"
+				If radCapitulo.Checked Then tipoLeitura = "capítulos"
+				
+				If meta > quantidade_pag_cap Then
+					ToastMessageShow("Sua meta é maior que o n° de " & tipoLeitura,True)
+				Else
 					
-					cmd = "exec sp_cad_livro_leitura '" & edB4XFloatNomeLivro.Text & _
-												  "', '" & edB4XFloatAutorLivro.Text & _
-												  "', '" & Main.Id_do_Usuario & _
-												  "', '" & dataInicial & _
-												  "', '" & tipoLeitura & _
-												  "', '" & edB4XFloatPagOuCap.Text & _
-												  "', '" & dataPrevistaFinal & _
-												  "', '" & edB4XFloatMetaPagCap.Text & "'"
-			
-					Wait For (banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
-			
-					Result.NextRow
-			
-					If Result.GetString("RESULTADO") = 1 Then
+					Try						
+									
+						dataInicial = DateTime.Date(DateTime.Now)
 						
-						Main.CadastrouAlgo = True
-						ToastMessageShow(Result.GetString("MENSAGEM"), True)
-						Sleep(100)
-						StartActivity(CodigoLayLeituras)
-						Activity.Finish
+						cmd = "exec sp_cad_livro_leitura '" & edB4XFloatNomeLivro.Text & _
+													  "', '" & edB4XFloatAutorLivro.Text & _
+													  "', '" & Main.Id_do_Usuario & _
+													  "', '" & dataInicial & _
+													  "', '" & tipoLeitura & _
+													  "', '" & edB4XFloatPagOuCap.Text & _
+													  "', '" & dataPrevistaFinal & _
+													  "', '" & edB4XFloatMetaPagCap.Text & "'"
 				
-					else if Result.GetString("RESULTADO") = 0 Then
-						
-						Main.CadastrouAlgo = False
-						MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!!")
-						Sleep(1000)
-						StartActivity(CodigoLayLeituras)
-						Activity.Finish
-					End If
-			
-				Catch
-					MsgboxAsync("Problemas ao tentar estabelecer a conexão. " & LastException,"Atenção")
-				End Try
+						Wait For (banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
+				
+						Result.NextRow
+				
+						If Result.GetString("RESULTADO") = 1 Then
+							
+							Main.CadastrouAlgo = True
+							ToastMessageShow(Result.GetString("MENSAGEM"), True)
+							Sleep(100)
+							StartActivity(CodigoLayLeituras)
+							Activity.Finish
+					
+						else if Result.GetString("RESULTADO") = 0 Then
+							
+							Main.CadastrouAlgo = False
+							MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!!")
+							Sleep(1000)
+							StartActivity(CodigoLayLeituras)
+							Activity.Finish
+						End If
+				
+					Catch
+						MsgboxAsync("Problemas ao tentar estabelecer a conexão. " & LastException,"Atenção")
+					End Try
+				End If
 			End If
 		End If
-	End If
+		
+	Else
+		ToastMessageShow("Informações incoerentes",True)
+	End If		
 End Sub
 
 Sub btAddImagem_Click
@@ -453,9 +458,11 @@ Sub edB4XFloatAutorLivro_TextChanged (Old As String, New As String)
 		lblIncongruenciaAutor.Visible = True
 		lblIncongruenciaAutor.Text = " Texto inválido"
 		lblMaximoDigitosAutor.TextColor = Colors.Red
+		txt_Autor_invalido = True
 	Else
 		lblIncongruenciaAutor.Visible = False
 		lblMaximoDigitosAutor.TextColor = Colors.Black
+		txt_Autor_invalido = False
 	End If
 	lblMaximoDigitosAutor.Text = New.Length & "/100 "
 End Sub
@@ -469,9 +476,11 @@ Sub edB4XFloatNomeLivro_TextChanged (Old As String, New As String)
 		lblIncongruenciaTitulo.Visible = True
 		lblIncongruenciaTitulo.Text = " Texto inválido"
 		lblMaximoDigitosTitulo.TextColor = Colors.Red
+		txt_titulo_invalido = True
 	Else
 		lblIncongruenciaTitulo.Visible = False
 		lblMaximoDigitosTitulo.TextColor = Colors.Black
+		txt_titulo_invalido = False
 	End If
 	
 	lblMaximoDigitosTitulo.Text = New.Length & "/100 "			
@@ -516,9 +525,11 @@ Sub edB4XFloatMetaPagCap_TextChanged (Old As String, New As String)
 		lblIncongruenciaMetaPagOuCap.Visible = True
 		lblIncongruenciaMetaPagOuCap.Text = " Texto inválido"
 		lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Red
+		txt_MetaPagOuCap_invalido = True
 	Else
 		lblIncongruenciaMetaPagOuCap.Visible = False
 		lblMaximoDigitosMetaPagOuCap.TextColor = Colors.Black
+		txt_MetaPagOuCap_invalido = False
 	End If
 End Sub
 
@@ -562,17 +573,21 @@ Sub edB4XFloatPagOuCap_TextChanged (Old As String, New As String)
 		lblIncongruenciaPagOuCap.Visible = True
 		lblIncongruenciaPagOuCap.Text = " Texto inválido"
 		lblMaximoDigitosPagOuCap.TextColor = Colors.Red
+		txt_PagOuCap_invalido = True
 	Else
 		lblIncongruenciaPagOuCap.Visible = False
 		lblMaximoDigitosPagOuCap.TextColor = Colors.Black
+		txt_PagOuCap_invalido = False
 	End If
 End Sub
 
 Sub edB4XFloatNomeLivro_FocusChanged (HasFocus As Boolean)
 	If HasFocus Then
 		lblMaximoDigitosTitulo.Visible = True
-	Else
-		lblMaximoDigitosTitulo.Visible = False
+	Else		
+		If lblIncongruenciaTitulo.Visible = False Or txt_titulo_invalido = False Then
+			lblMaximoDigitosTitulo.Visible = False
+		End If
 	End If
 End Sub
 
@@ -580,7 +595,9 @@ Sub edB4XFloatAutorLivro_FocusChanged (HasFocus As Boolean)
 	If HasFocus Then
 		lblMaximoDigitosAutor.Visible = True
 	Else
-		lblMaximoDigitosAutor.Visible = False
+		If lblIncongruenciaAutor.Visible = False Or txt_Autor_invalido = False Then
+			lblMaximoDigitosAutor.Visible = False
+		End If		
 	End If
 End Sub
 
@@ -588,7 +605,9 @@ Sub edB4XFloatPagOuCap_FocusChanged (HasFocus As Boolean)
 	If HasFocus Then
 		lblMaximoDigitosPagOuCap.Visible = True
 	Else
-		lblMaximoDigitosPagOuCap.Visible = False
+		If lblIncongruenciaPagOuCap.Visible = False Or txt_PagOuCap_invalido = False Then
+			lblMaximoDigitosPagOuCap.Visible = False
+		End If		
 	End If
 End Sub
 
@@ -596,6 +615,49 @@ Sub edB4XFloatMetaPagCap_FocusChanged (HasFocus As Boolean)
 	If HasFocus Then
 		lblMaximoDigitosMetaPagOuCap.Visible = True
 	Else
-		lblMaximoDigitosMetaPagOuCap.Visible = False
+		If lblIncongruenciaMetaPagOuCap.Visible = False Or txt_MetaPagOuCap_invalido = False Then
+			lblMaximoDigitosMetaPagOuCap.Visible = False
+		End If		
 	End If
+End Sub
+
+Sub TextoObrigatorio
+	lblIncongruenciaAutor.Text = " Texto obrigatório"
+	lblIncongruenciaTitulo.Text = " Texto obrigatório"
+	lblIncongruenciaPagOuCap.Text = " Quantidade obrigatória"
+	lblIncongruenciaMetaPagOuCap.Text = " Quantidade obrigatória"
+	
+	If edB4XFloatAutorLivro.Text.Trim = "" Then
+		lblIncongruenciaAutor.Visible = True 
+	Else 
+		lblIncongruenciaAutor.Visible = False
+	End If
+	
+	If edB4XFloatNomeLivro.Text.Trim = "" Then
+		lblIncongruenciaTitulo.Visible = True 
+	Else 
+		lblIncongruenciaTitulo.Visible = False
+	End If
+	
+	If edB4XFloatPagOuCap.Text.Trim = "" Then
+		lblIncongruenciaPagOuCap.Visible = True 
+	Else 
+		lblIncongruenciaPagOuCap.Visible = False
+	End If
+	
+	If edB4XFloatMetaPagCap.Text.Trim = "" Then
+		lblIncongruenciaMetaPagOuCap.Visible = True 
+	Else 
+		lblIncongruenciaMetaPagOuCap.Visible = False
+	End If
+End Sub
+
+
+Sub VerificaTamanhoTexto As Boolean
+	
+	If edB4XFloatNomeLivro.Text.Length > 100 Then Return False
+	If edB4XFloatAutorLivro.Text.Length > 100 Then Return False
+	If edB4XFloatPagOuCap.Text.Length > 4 Then Return False
+	If edB4XFloatMetaPagCap.Text.Length > 4 Then Return False
+	Return True	
 End Sub

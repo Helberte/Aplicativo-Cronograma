@@ -123,14 +123,3 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 		Return True
 	End If
 End Sub
-
-
-
-
-
-
-
-
-
-
-

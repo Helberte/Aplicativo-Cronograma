@@ -2,7 +2,7 @@ use cronograma
 go
 
 --select * from leitura
---exec sp_lancamento_leitura 29, 70, 60
+--exec sp_lancamento_leitura 29, 72, 44
 
 alter procedure sp_lancamento_leitura
 
@@ -57,7 +57,15 @@ begin
 		where leitura.fk_id_usuario = @id_usuario
 		and leitura.fk_id_Livro = @id_livro
 		
-		select 1 [RESULTADO]
+
+		if @quantidadePaginas >= @paginasLivro
+		begin
+			select 2 [RESULTADO]
+		end 
+		else
+		begin
+			select 1 [RESULTADO]
+		end		
 	
 	end try
 	begin catch
