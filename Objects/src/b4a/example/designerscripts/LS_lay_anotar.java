@@ -58,53 +58,61 @@ views.get("panel_anotacao").vw.setTop((int)((views.get("panel_cabecalho").vw.get
 views.get("panel_anotacao").vw.setLeft((int)((views.get("panel_cabecalho").vw.getLeft())));
 //BA.debugLineNum = 32;BA.debugLine="panel_anotacao.Height = (100%y - panel_anotacao.Top) - 8%y"[Lay_Anotar/General script]
 views.get("panel_anotacao").vw.setHeight((int)(((100d / 100 * height)-(views.get("panel_anotacao").vw.getTop()))-(8d / 100 * height)));
-//BA.debugLineNum = 34;BA.debugLine="edTituloAnotacao.Width = panel_anotacao.Width - 3%x"[Lay_Anotar/General script]
-views.get("edtituloanotacao").vw.setWidth((int)((views.get("panel_anotacao").vw.getWidth())-(3d / 100 * width)));
-//BA.debugLineNum = 35;BA.debugLine="edTituloAnotacao.Left = (panel_anotacao.Width - edTituloAnotacao.Width) / 2"[Lay_Anotar/General script]
-views.get("edtituloanotacao").vw.setLeft((int)(((views.get("panel_anotacao").vw.getWidth())-(views.get("edtituloanotacao").vw.getWidth()))/2d));
-//BA.debugLineNum = 36;BA.debugLine="edTituloAnotacao.Top = 1%y"[Lay_Anotar/General script]
-views.get("edtituloanotacao").vw.setTop((int)((1d / 100 * height)));
-//BA.debugLineNum = 37;BA.debugLine="edTituloAnotacao.Height = 6.5%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 35;BA.debugLine="lblTituloAnotacao.Width = panel_anotacao.Width - 3%x"[Lay_Anotar/General script]
+views.get("lbltituloanotacao").vw.setWidth((int)((views.get("panel_anotacao").vw.getWidth())-(3d / 100 * width)));
+//BA.debugLineNum = 36;BA.debugLine="lblTituloAnotacao.Left = (panel_anotacao.Width - lblTituloAnotacao.Width) / 2"[Lay_Anotar/General script]
+views.get("lbltituloanotacao").vw.setLeft((int)(((views.get("panel_anotacao").vw.getWidth())-(views.get("lbltituloanotacao").vw.getWidth()))/2d));
+//BA.debugLineNum = 37;BA.debugLine="lblTituloAnotacao.Top = 1%y"[Lay_Anotar/General script]
+views.get("lbltituloanotacao").vw.setTop((int)((1d / 100 * height)));
+//BA.debugLineNum = 38;BA.debugLine="lblTituloAnotacao.Height = 3.2%y"[Lay_Anotar/General script]
+views.get("lbltituloanotacao").vw.setHeight((int)((3.2d / 100 * height)));
+//BA.debugLineNum = 40;BA.debugLine="edTituloAnotacao.Width = lblTituloAnotacao.Width"[Lay_Anotar/General script]
+views.get("edtituloanotacao").vw.setWidth((int)((views.get("lbltituloanotacao").vw.getWidth())));
+//BA.debugLineNum = 41;BA.debugLine="edTituloAnotacao.Left = lblTituloAnotacao.Left"[Lay_Anotar/General script]
+views.get("edtituloanotacao").vw.setLeft((int)((views.get("lbltituloanotacao").vw.getLeft())));
+//BA.debugLineNum = 42;BA.debugLine="edTituloAnotacao.Top = lblTituloAnotacao.Top + lblTituloAnotacao.Height"[Lay_Anotar/General script]
+views.get("edtituloanotacao").vw.setTop((int)((views.get("lbltituloanotacao").vw.getTop())+(views.get("lbltituloanotacao").vw.getHeight())));
+//BA.debugLineNum = 43;BA.debugLine="edTituloAnotacao.Height = 6.5%y"[Lay_Anotar/General script]
 views.get("edtituloanotacao").vw.setHeight((int)((6.5d / 100 * height)));
-//BA.debugLineNum = 39;BA.debugLine="lblAnotacao.Left = edTituloAnotacao.Left"[Lay_Anotar/General script]
+//BA.debugLineNum = 45;BA.debugLine="lblAnotacao.Left = edTituloAnotacao.Left"[Lay_Anotar/General script]
 views.get("lblanotacao").vw.setLeft((int)((views.get("edtituloanotacao").vw.getLeft())));
-//BA.debugLineNum = 40;BA.debugLine="lblAnotacao.Top = edTituloAnotacao.Top + edTituloAnotacao.Height"[Lay_Anotar/General script]
+//BA.debugLineNum = 46;BA.debugLine="lblAnotacao.Top = edTituloAnotacao.Top + edTituloAnotacao.Height"[Lay_Anotar/General script]
 views.get("lblanotacao").vw.setTop((int)((views.get("edtituloanotacao").vw.getTop())+(views.get("edtituloanotacao").vw.getHeight())));
-//BA.debugLineNum = 41;BA.debugLine="lblAnotacao.Height = 4%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 47;BA.debugLine="lblAnotacao.Height = 4%y"[Lay_Anotar/General script]
 views.get("lblanotacao").vw.setHeight((int)((4d / 100 * height)));
-//BA.debugLineNum = 42;BA.debugLine="lblAnotacao.Width = edTituloAnotacao.Width / 2"[Lay_Anotar/General script]
+//BA.debugLineNum = 48;BA.debugLine="lblAnotacao.Width = edTituloAnotacao.Width / 2"[Lay_Anotar/General script]
 views.get("lblanotacao").vw.setWidth((int)((views.get("edtituloanotacao").vw.getWidth())/2d));
-//BA.debugLineNum = 44;BA.debugLine="panel_borda_anotacao.Left = lblAnotacao.Left"[Lay_Anotar/General script]
+//BA.debugLineNum = 50;BA.debugLine="panel_borda_anotacao.Left = lblAnotacao.Left"[Lay_Anotar/General script]
 views.get("panel_borda_anotacao").vw.setLeft((int)((views.get("lblanotacao").vw.getLeft())));
-//BA.debugLineNum = 45;BA.debugLine="panel_borda_anotacao.Top = lblAnotacao.Top + lblAnotacao.Height + 1%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 51;BA.debugLine="panel_borda_anotacao.Top = lblAnotacao.Top + lblAnotacao.Height + 1%y"[Lay_Anotar/General script]
 views.get("panel_borda_anotacao").vw.setTop((int)((views.get("lblanotacao").vw.getTop())+(views.get("lblanotacao").vw.getHeight())+(1d / 100 * height)));
-//BA.debugLineNum = 46;BA.debugLine="panel_borda_anotacao.Height = panel_anotacao.Height - panel_borda_anotacao.Top - 1%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 52;BA.debugLine="panel_borda_anotacao.Height = panel_anotacao.Height - panel_borda_anotacao.Top - 1%y"[Lay_Anotar/General script]
 views.get("panel_borda_anotacao").vw.setHeight((int)((views.get("panel_anotacao").vw.getHeight())-(views.get("panel_borda_anotacao").vw.getTop())-(1d / 100 * height)));
-//BA.debugLineNum = 47;BA.debugLine="panel_borda_anotacao.Width = edTituloAnotacao.Width"[Lay_Anotar/General script]
+//BA.debugLineNum = 53;BA.debugLine="panel_borda_anotacao.Width = edTituloAnotacao.Width"[Lay_Anotar/General script]
 views.get("panel_borda_anotacao").vw.setWidth((int)((views.get("edtituloanotacao").vw.getWidth())));
-//BA.debugLineNum = 49;BA.debugLine="edAnotacao.Top = 0.5%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 55;BA.debugLine="edAnotacao.Top = 0.5%y"[Lay_Anotar/General script]
 views.get("edanotacao").vw.setTop((int)((0.5d / 100 * height)));
-//BA.debugLineNum = 50;BA.debugLine="edAnotacao.Width = panel_borda_anotacao.Width - 1.5%x"[Lay_Anotar/General script]
+//BA.debugLineNum = 56;BA.debugLine="edAnotacao.Width = panel_borda_anotacao.Width - 1.5%x"[Lay_Anotar/General script]
 views.get("edanotacao").vw.setWidth((int)((views.get("panel_borda_anotacao").vw.getWidth())-(1.5d / 100 * width)));
-//BA.debugLineNum = 51;BA.debugLine="edAnotacao.Left = (panel_borda_anotacao.Width - edAnotacao.Width) / 2"[Lay_Anotar/General script]
+//BA.debugLineNum = 57;BA.debugLine="edAnotacao.Left = (panel_borda_anotacao.Width - edAnotacao.Width) / 2"[Lay_Anotar/General script]
 views.get("edanotacao").vw.setLeft((int)(((views.get("panel_borda_anotacao").vw.getWidth())-(views.get("edanotacao").vw.getWidth()))/2d));
-//BA.debugLineNum = 52;BA.debugLine="edAnotacao.Height = (panel_borda_anotacao.Height - edAnotacao.Top) - 0.5%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 58;BA.debugLine="edAnotacao.Height = (panel_borda_anotacao.Height - edAnotacao.Top) - 0.5%y"[Lay_Anotar/General script]
 views.get("edanotacao").vw.setHeight((int)(((views.get("panel_borda_anotacao").vw.getHeight())-(views.get("edanotacao").vw.getTop()))-(0.5d / 100 * height)));
-//BA.debugLineNum = 54;BA.debugLine="btOk.Width = 40%x"[Lay_Anotar/General script]
+//BA.debugLineNum = 60;BA.debugLine="btOk.Width = 40%x"[Lay_Anotar/General script]
 views.get("btok").vw.setWidth((int)((40d / 100 * width)));
-//BA.debugLineNum = 55;BA.debugLine="btOk.Top = panel_anotacao.Top + panel_anotacao.Height"[Lay_Anotar/General script]
+//BA.debugLineNum = 61;BA.debugLine="btOk.Top = panel_anotacao.Top + panel_anotacao.Height"[Lay_Anotar/General script]
 views.get("btok").vw.setTop((int)((views.get("panel_anotacao").vw.getTop())+(views.get("panel_anotacao").vw.getHeight())));
-//BA.debugLineNum = 56;BA.debugLine="btOk.Left = (panel_anotacao.Left + panel_anotacao.Width) - btOk.Width"[Lay_Anotar/General script]
+//BA.debugLineNum = 62;BA.debugLine="btOk.Left = (panel_anotacao.Left + panel_anotacao.Width) - btOk.Width"[Lay_Anotar/General script]
 views.get("btok").vw.setLeft((int)(((views.get("panel_anotacao").vw.getLeft())+(views.get("panel_anotacao").vw.getWidth()))-(views.get("btok").vw.getWidth())));
-//BA.debugLineNum = 57;BA.debugLine="btOk.Height = 100%y - btOk.Top - 1%y"[Lay_Anotar/General script]
+//BA.debugLineNum = 63;BA.debugLine="btOk.Height = 100%y - btOk.Top - 1%y"[Lay_Anotar/General script]
 views.get("btok").vw.setHeight((int)((100d / 100 * height)-(views.get("btok").vw.getTop())-(1d / 100 * height)));
-//BA.debugLineNum = 59;BA.debugLine="btCancelar.Top = btOk.Top"[Lay_Anotar/General script]
+//BA.debugLineNum = 65;BA.debugLine="btCancelar.Top = btOk.Top"[Lay_Anotar/General script]
 views.get("btcancelar").vw.setTop((int)((views.get("btok").vw.getTop())));
-//BA.debugLineNum = 60;BA.debugLine="btCancelar.Height = btOk.Height"[Lay_Anotar/General script]
+//BA.debugLineNum = 66;BA.debugLine="btCancelar.Height = btOk.Height"[Lay_Anotar/General script]
 views.get("btcancelar").vw.setHeight((int)((views.get("btok").vw.getHeight())));
-//BA.debugLineNum = 61;BA.debugLine="btCancelar.Width = btOk.Width"[Lay_Anotar/General script]
+//BA.debugLineNum = 67;BA.debugLine="btCancelar.Width = btOk.Width"[Lay_Anotar/General script]
 views.get("btcancelar").vw.setWidth((int)((views.get("btok").vw.getWidth())));
-//BA.debugLineNum = 62;BA.debugLine="btCancelar.Left = btOk.Left - btCancelar.Width - 2%x"[Lay_Anotar/General script]
+//BA.debugLineNum = 68;BA.debugLine="btCancelar.Left = btOk.Left - btCancelar.Width - 2%x"[Lay_Anotar/General script]
 views.get("btcancelar").vw.setLeft((int)((views.get("btok").vw.getLeft())-(views.get("btcancelar").vw.getWidth())-(2d / 100 * width)));
 
 }

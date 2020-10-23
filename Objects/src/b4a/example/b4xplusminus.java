@@ -61,143 +61,143 @@ public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
-public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public String  _base_resize(b4a.example.b4xplusminus __ref,double _width,double _height) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "base_resize", true))
 	 {return ((String) Debug.delegate(ba, "base_resize", new Object[] {_width,_height}));}
-RDebugUtils.currentLine=17629184;
- //BA.debugLineNum = 17629184;BA.debugLine="Public Sub Base_Resize (Width As Double, Height As";
-RDebugUtils.currentLine=17629185;
- //BA.debugLineNum = 17629185;BA.debugLine="If Formation = \"Horizontal\" Then";
+RDebugUtils.currentLine=14614528;
+ //BA.debugLineNum = 14614528;BA.debugLine="Public Sub Base_Resize (Width As Double, Height As";
+RDebugUtils.currentLine=14614529;
+ //BA.debugLineNum = 14614529;BA.debugLine="If Formation = \"Horizontal\" Then";
 if ((__ref._formation /*String*/ ).equals("Horizontal")) { 
-RDebugUtils.currentLine=17629186;
- //BA.debugLineNum = 17629186;BA.debugLine="pnlMinus.SetLayoutAnimated(0, 0, 0, ArrowsSize,";
+RDebugUtils.currentLine=14614530;
+ //BA.debugLineNum = 14614530;BA.debugLine="pnlMinus.SetLayoutAnimated(0, 0, 0, ArrowsSize,";
 __ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),__ref._arrowssize /*int*/ ,(int) (_height));
-RDebugUtils.currentLine=17629187;
- //BA.debugLineNum = 17629187;BA.debugLine="pnlPlus.SetLayoutAnimated(0, Width - ArrowsSize,";
+RDebugUtils.currentLine=14614531;
+ //BA.debugLineNum = 14614531;BA.debugLine="pnlPlus.SetLayoutAnimated(0, Width - ArrowsSize,";
 __ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (_width-__ref._arrowssize /*int*/ ),(int) (0),__ref._arrowssize /*int*/ ,(int) (_height));
-RDebugUtils.currentLine=17629188;
- //BA.debugLineNum = 17629188;BA.debugLine="MainLabel.SetLayoutAnimated(0, 0, 0, Width, Heig";
+RDebugUtils.currentLine=14614532;
+ //BA.debugLineNum = 14614532;BA.debugLine="MainLabel.SetLayoutAnimated(0, 0, 0, Width, Heig";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
  }else 
-{RDebugUtils.currentLine=17629189;
- //BA.debugLineNum = 17629189;BA.debugLine="Else if Formation = \"Vertical\" Then";
+{RDebugUtils.currentLine=14614533;
+ //BA.debugLineNum = 14614533;BA.debugLine="Else if Formation = \"Vertical\" Then";
 if ((__ref._formation /*String*/ ).equals("Vertical")) { 
-RDebugUtils.currentLine=17629190;
- //BA.debugLineNum = 17629190;BA.debugLine="pnlPlus.SetLayoutAnimated(0, 0, 0, Width, Arrows";
+RDebugUtils.currentLine=14614534;
+ //BA.debugLineNum = 14614534;BA.debugLine="pnlPlus.SetLayoutAnimated(0, 0, 0, Width, Arrows";
 __ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),__ref._arrowssize /*int*/ );
-RDebugUtils.currentLine=17629191;
- //BA.debugLineNum = 17629191;BA.debugLine="pnlMinus.SetLayoutAnimated(0, 0, Height - Arrows";
+RDebugUtils.currentLine=14614535;
+ //BA.debugLineNum = 14614535;BA.debugLine="pnlMinus.SetLayoutAnimated(0, 0, Height - Arrows";
 __ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (_height-__ref._arrowssize /*int*/ ),(int) (_width),__ref._arrowssize /*int*/ );
-RDebugUtils.currentLine=17629192;
- //BA.debugLineNum = 17629192;BA.debugLine="MainLabel.SetLayoutAnimated(0, 0, 0, Width, Heig";
+RDebugUtils.currentLine=14614536;
+ //BA.debugLineNum = 14614536;BA.debugLine="MainLabel.SetLayoutAnimated(0, 0, 0, Width, Heig";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
  }else {
-RDebugUtils.currentLine=17629194;
- //BA.debugLineNum = 17629194;BA.debugLine="pnlMinus.SetLayoutAnimated(0, 0, Height - Arrows";
+RDebugUtils.currentLine=14614538;
+ //BA.debugLineNum = 14614538;BA.debugLine="pnlMinus.SetLayoutAnimated(0, 0, Height - Arrows";
 __ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (_height-__ref._arrowssize /*int*/ ),(int) (_width/(double)2),__ref._arrowssize /*int*/ );
-RDebugUtils.currentLine=17629195;
- //BA.debugLineNum = 17629195;BA.debugLine="pnlPlus.SetLayoutAnimated(0, Width / 2, pnlMinus";
+RDebugUtils.currentLine=14614539;
+ //BA.debugLineNum = 14614539;BA.debugLine="pnlPlus.SetLayoutAnimated(0, Width / 2, pnlMinus";
 __ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (_width/(double)2),__ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTop(),__ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=17629196;
- //BA.debugLineNum = 17629196;BA.debugLine="MainLabel.SetLayoutAnimated(0, 0, 0, Width, Heig";
+RDebugUtils.currentLine=14614540;
+ //BA.debugLineNum = 14614540;BA.debugLine="MainLabel.SetLayoutAnimated(0, 0, 0, Width, Heig";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height-__ref._arrowssize /*int*/ +__c.DipToCurrent((int) (5))));
  }}
 ;
-RDebugUtils.currentLine=17629198;
- //BA.debugLineNum = 17629198;BA.debugLine="lblMinus.SetLayoutAnimated(0, 0, 0, pnlMinus.Widt";
+RDebugUtils.currentLine=14614542;
+ //BA.debugLineNum = 14614542;BA.debugLine="lblMinus.SetLayoutAnimated(0, 0, 0, pnlMinus.Widt";
 __ref._lblminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),__ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=17629199;
- //BA.debugLineNum = 17629199;BA.debugLine="lblPlus.SetLayoutAnimated(0, 0, 0, pnlPlus.Width,";
+RDebugUtils.currentLine=14614543;
+ //BA.debugLineNum = 14614543;BA.debugLine="lblPlus.SetLayoutAnimated(0, 0, 0, pnlPlus.Width,";
 __ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetLayoutAnimated((int) (0),(int) (0),(int) (0),__ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=17629200;
- //BA.debugLineNum = 17629200;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14614544;
+ //BA.debugLineNum = 14614544;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4a.example.b4xplusminus __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
-RDebugUtils.currentLine=17432576;
- //BA.debugLineNum = 17432576;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=17432577;
- //BA.debugLineNum = 17432577;BA.debugLine="Private mEventName As String 'ignore";
+RDebugUtils.currentLine=14417920;
+ //BA.debugLineNum = 14417920;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=14417921;
+ //BA.debugLineNum = 14417921;BA.debugLine="Private mEventName As String 'ignore";
 _meventname = "";
-RDebugUtils.currentLine=17432578;
- //BA.debugLineNum = 17432578;BA.debugLine="Private mCallBack As Object 'ignore";
+RDebugUtils.currentLine=14417922;
+ //BA.debugLineNum = 14417922;BA.debugLine="Private mCallBack As Object 'ignore";
 _mcallback = new Object();
-RDebugUtils.currentLine=17432579;
- //BA.debugLineNum = 17432579;BA.debugLine="Public mBase As B4XView 'ignore";
+RDebugUtils.currentLine=14417923;
+ //BA.debugLineNum = 14417923;BA.debugLine="Public mBase As B4XView 'ignore";
 _mbase = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=17432580;
- //BA.debugLineNum = 17432580;BA.debugLine="Private xui As XUI 'ignore";
+RDebugUtils.currentLine=14417924;
+ //BA.debugLineNum = 14417924;BA.debugLine="Private xui As XUI 'ignore";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=17432581;
- //BA.debugLineNum = 17432581;BA.debugLine="Public Tag As Object";
+RDebugUtils.currentLine=14417925;
+ //BA.debugLineNum = 14417925;BA.debugLine="Public Tag As Object";
 _tag = new Object();
-RDebugUtils.currentLine=17432582;
- //BA.debugLineNum = 17432582;BA.debugLine="Public pnlPlus, pnlMinus As B4XView";
+RDebugUtils.currentLine=14417926;
+ //BA.debugLineNum = 14417926;BA.debugLine="Public pnlPlus, pnlMinus As B4XView";
 _pnlplus = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _pnlminus = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=17432583;
- //BA.debugLineNum = 17432583;BA.debugLine="Public lblPlus, lblMinus As B4XView";
+RDebugUtils.currentLine=14417927;
+ //BA.debugLineNum = 14417927;BA.debugLine="Public lblPlus, lblMinus As B4XView";
 _lblplus = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _lblminus = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=17432584;
- //BA.debugLineNum = 17432584;BA.debugLine="Public Formation As String";
+RDebugUtils.currentLine=14417928;
+ //BA.debugLineNum = 14417928;BA.debugLine="Public Formation As String";
 _formation = "";
-RDebugUtils.currentLine=17432585;
- //BA.debugLineNum = 17432585;BA.debugLine="Public mCyclic As Boolean";
+RDebugUtils.currentLine=14417929;
+ //BA.debugLineNum = 14417929;BA.debugLine="Public mCyclic As Boolean";
 _mcyclic = false;
-RDebugUtils.currentLine=17432586;
- //BA.debugLineNum = 17432586;BA.debugLine="Public mRapid As Boolean";
+RDebugUtils.currentLine=14417930;
+ //BA.debugLineNum = 14417930;BA.debugLine="Public mRapid As Boolean";
 _mrapid = false;
-RDebugUtils.currentLine=17432587;
- //BA.debugLineNum = 17432587;BA.debugLine="Public MainLabel As B4XView";
+RDebugUtils.currentLine=14417931;
+ //BA.debugLineNum = 14417931;BA.debugLine="Public MainLabel As B4XView";
 _mainlabel = new anywheresoftware.b4a.objects.B4XViewWrapper();
-RDebugUtils.currentLine=17432588;
- //BA.debugLineNum = 17432588;BA.debugLine="Public ArrowsSize As Int = 30dip";
+RDebugUtils.currentLine=14417932;
+ //BA.debugLineNum = 14417932;BA.debugLine="Public ArrowsSize As Int = 30dip";
 _arrowssize = __c.DipToCurrent((int) (30));
-RDebugUtils.currentLine=17432589;
- //BA.debugLineNum = 17432589;BA.debugLine="Private mStringItems As List";
+RDebugUtils.currentLine=14417933;
+ //BA.debugLineNum = 14417933;BA.debugLine="Private mStringItems As List";
 _mstringitems = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=17432590;
- //BA.debugLineNum = 17432590;BA.debugLine="Private mStartRange, mInterval, mEndRange As Doub";
+RDebugUtils.currentLine=14417934;
+ //BA.debugLineNum = 14417934;BA.debugLine="Private mStartRange, mInterval, mEndRange As Doub";
 _mstartrange = 0;
 _minterval = 0;
 _mendrange = 0;
-RDebugUtils.currentLine=17432591;
- //BA.debugLineNum = 17432591;BA.debugLine="Private mSelectedIndex As Int = -1";
+RDebugUtils.currentLine=14417935;
+ //BA.debugLineNum = 14417935;BA.debugLine="Private mSelectedIndex As Int = -1";
 _mselectedindex = (int) (-1);
-RDebugUtils.currentLine=17432592;
- //BA.debugLineNum = 17432592;BA.debugLine="Private LoopIndex As Int";
+RDebugUtils.currentLine=14417936;
+ //BA.debugLineNum = 14417936;BA.debugLine="Private LoopIndex As Int";
 _loopindex = 0;
-RDebugUtils.currentLine=17432593;
- //BA.debugLineNum = 17432593;BA.debugLine="Public RapidPeriod1 As Int = 1000";
+RDebugUtils.currentLine=14417937;
+ //BA.debugLineNum = 14417937;BA.debugLine="Public RapidPeriod1 As Int = 1000";
 _rapidperiod1 = (int) (1000);
-RDebugUtils.currentLine=17432594;
- //BA.debugLineNum = 17432594;BA.debugLine="Public RapidPeriod2 As Int = 30";
+RDebugUtils.currentLine=14417938;
+ //BA.debugLineNum = 14417938;BA.debugLine="Public RapidPeriod2 As Int = 30";
 _rapidperiod2 = (int) (30);
-RDebugUtils.currentLine=17432595;
- //BA.debugLineNum = 17432595;BA.debugLine="Public Formatter As B4XFormatter";
+RDebugUtils.currentLine=14417939;
+ //BA.debugLineNum = 14417939;BA.debugLine="Public Formatter As B4XFormatter";
 _formatter = new b4a.example.b4xformatter();
-RDebugUtils.currentLine=17432596;
- //BA.debugLineNum = 17432596;BA.debugLine="Private StringMode As Boolean";
+RDebugUtils.currentLine=14417940;
+ //BA.debugLineNum = 14417940;BA.debugLine="Private StringMode As Boolean";
 _stringmode = false;
-RDebugUtils.currentLine=17432597;
- //BA.debugLineNum = 17432597;BA.debugLine="Private Size As Int";
+RDebugUtils.currentLine=14417941;
+ //BA.debugLineNum = 14417941;BA.debugLine="Private Size As Int";
 _size = 0;
-RDebugUtils.currentLine=17432598;
- //BA.debugLineNum = 17432598;BA.debugLine="Public mHaptic As Boolean";
+RDebugUtils.currentLine=14417942;
+ //BA.debugLineNum = 14417942;BA.debugLine="Public mHaptic As Boolean";
 _mhaptic = false;
-RDebugUtils.currentLine=17432599;
- //BA.debugLineNum = 17432599;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14417943;
+ //BA.debugLineNum = 14417943;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4a.objects.B4XViewWrapper  _createlabel(b4a.example.b4xplusminus __ref,String _text) throws Exception{
@@ -207,32 +207,32 @@ if (Debug.shouldDelegate(ba, "createlabel", true))
 	 {return ((anywheresoftware.b4a.objects.B4XViewWrapper) Debug.delegate(ba, "createlabel", new Object[] {_text}));}
 anywheresoftware.b4a.objects.LabelWrapper _lbl = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _xlbl = null;
-RDebugUtils.currentLine=18415616;
- //BA.debugLineNum = 18415616;BA.debugLine="Private Sub CreateLabel (text As String) As B4XVie";
-RDebugUtils.currentLine=18415617;
- //BA.debugLineNum = 18415617;BA.debugLine="Dim lbl As Label";
+RDebugUtils.currentLine=15400960;
+ //BA.debugLineNum = 15400960;BA.debugLine="Private Sub CreateLabel (text As String) As B4XVie";
+RDebugUtils.currentLine=15400961;
+ //BA.debugLineNum = 15400961;BA.debugLine="Dim lbl As Label";
 _lbl = new anywheresoftware.b4a.objects.LabelWrapper();
-RDebugUtils.currentLine=18415618;
- //BA.debugLineNum = 18415618;BA.debugLine="lbl.Initialize(\"\")";
+RDebugUtils.currentLine=15400962;
+ //BA.debugLineNum = 15400962;BA.debugLine="lbl.Initialize(\"\")";
 _lbl.Initialize(ba,"");
-RDebugUtils.currentLine=18415619;
- //BA.debugLineNum = 18415619;BA.debugLine="Dim xlbl As B4XView = lbl";
+RDebugUtils.currentLine=15400963;
+ //BA.debugLineNum = 15400963;BA.debugLine="Dim xlbl As B4XView = lbl";
 _xlbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _xlbl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
-RDebugUtils.currentLine=18415620;
- //BA.debugLineNum = 18415620;BA.debugLine="xlbl.Font = xui.CreateMaterialIcons(30)";
+RDebugUtils.currentLine=15400964;
+ //BA.debugLineNum = 15400964;BA.debugLine="xlbl.Font = xui.CreateMaterialIcons(30)";
 _xlbl.setFont(__ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreateMaterialIcons((float) (30)));
-RDebugUtils.currentLine=18415621;
- //BA.debugLineNum = 18415621;BA.debugLine="xlbl.Text = text";
+RDebugUtils.currentLine=15400965;
+ //BA.debugLineNum = 15400965;BA.debugLine="xlbl.Text = text";
 _xlbl.setText(BA.ObjectToCharSequence(_text));
-RDebugUtils.currentLine=18415622;
- //BA.debugLineNum = 18415622;BA.debugLine="xlbl.TextColor = MainLabel.TextColor";
+RDebugUtils.currentLine=15400966;
+ //BA.debugLineNum = 15400966;BA.debugLine="xlbl.TextColor = MainLabel.TextColor";
 _xlbl.setTextColor(__ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTextColor());
-RDebugUtils.currentLine=18415623;
- //BA.debugLineNum = 18415623;BA.debugLine="Return xlbl";
+RDebugUtils.currentLine=15400967;
+ //BA.debugLineNum = 15400967;BA.debugLine="Return xlbl";
 if (true) return _xlbl;
-RDebugUtils.currentLine=18415624;
- //BA.debugLineNum = 18415624;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15400968;
+ //BA.debugLineNum = 15400968;BA.debugLine="End Sub";
 return null;
 }
 public String  _decrement(b4a.example.b4xplusminus __ref) throws Exception{
@@ -240,34 +240,34 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "decrement", true))
 	 {return ((String) Debug.delegate(ba, "decrement", null));}
-RDebugUtils.currentLine=18153472;
- //BA.debugLineNum = 18153472;BA.debugLine="Public Sub Decrement";
-RDebugUtils.currentLine=18153473;
- //BA.debugLineNum = 18153473;BA.debugLine="If mSelectedIndex <= 0 Then";
+RDebugUtils.currentLine=15138816;
+ //BA.debugLineNum = 15138816;BA.debugLine="Public Sub Decrement";
+RDebugUtils.currentLine=15138817;
+ //BA.debugLineNum = 15138817;BA.debugLine="If mSelectedIndex <= 0 Then";
 if (__ref._mselectedindex /*int*/ <=0) { 
-RDebugUtils.currentLine=18153474;
- //BA.debugLineNum = 18153474;BA.debugLine="If mCyclic Then";
+RDebugUtils.currentLine=15138818;
+ //BA.debugLineNum = 15138818;BA.debugLine="If mCyclic Then";
 if (__ref._mcyclic /*boolean*/ ) { 
-RDebugUtils.currentLine=18153475;
- //BA.debugLineNum = 18153475;BA.debugLine="mSelectedIndex = Size";
+RDebugUtils.currentLine=15138819;
+ //BA.debugLineNum = 15138819;BA.debugLine="mSelectedIndex = Size";
 __ref._mselectedindex /*int*/  = __ref._size /*int*/ ;
  }else {
-RDebugUtils.currentLine=18153477;
- //BA.debugLineNum = 18153477;BA.debugLine="mSelectedIndex = 0";
+RDebugUtils.currentLine=15138821;
+ //BA.debugLineNum = 15138821;BA.debugLine="mSelectedIndex = 0";
 __ref._mselectedindex /*int*/  = (int) (0);
-RDebugUtils.currentLine=18153478;
- //BA.debugLineNum = 18153478;BA.debugLine="LoopIndex = LoopIndex + 1";
+RDebugUtils.currentLine=15138822;
+ //BA.debugLineNum = 15138822;BA.debugLine="LoopIndex = LoopIndex + 1";
 __ref._loopindex /*int*/  = (int) (__ref._loopindex /*int*/ +1);
-RDebugUtils.currentLine=18153479;
- //BA.debugLineNum = 18153479;BA.debugLine="Return";
+RDebugUtils.currentLine=15138823;
+ //BA.debugLineNum = 15138823;BA.debugLine="Return";
 if (true) return "";
  };
  };
-RDebugUtils.currentLine=18153482;
- //BA.debugLineNum = 18153482;BA.debugLine="SetIndex(mSelectedIndex - 1, True)";
+RDebugUtils.currentLine=15138826;
+ //BA.debugLineNum = 15138826;BA.debugLine="SetIndex(mSelectedIndex - 1, True)";
 __ref._setindex /*String*/ (null,(int) (__ref._mselectedindex /*int*/ -1),__c.True);
-RDebugUtils.currentLine=18153483;
- //BA.debugLineNum = 18153483;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15138827;
+ //BA.debugLineNum = 15138827;BA.debugLine="End Sub";
 return "";
 }
 public String  _setindex(b4a.example.b4xplusminus __ref,int _i,boolean _raiseevent) throws Exception{
@@ -276,52 +276,52 @@ RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "setindex", true))
 	 {return ((String) Debug.delegate(ba, "setindex", new Object[] {_i,_raiseevent}));}
 Object _value = null;
-RDebugUtils.currentLine=18022400;
- //BA.debugLineNum = 18022400;BA.debugLine="Private Sub SetIndex(i As Int, RaiseEvent As Boole";
-RDebugUtils.currentLine=18022401;
- //BA.debugLineNum = 18022401;BA.debugLine="If i >= Size Then i = -1";
+RDebugUtils.currentLine=15007744;
+ //BA.debugLineNum = 15007744;BA.debugLine="Private Sub SetIndex(i As Int, RaiseEvent As Boole";
+RDebugUtils.currentLine=15007745;
+ //BA.debugLineNum = 15007745;BA.debugLine="If i >= Size Then i = -1";
 if (_i>=__ref._size /*int*/ ) { 
 _i = (int) (-1);};
-RDebugUtils.currentLine=18022402;
- //BA.debugLineNum = 18022402;BA.debugLine="mSelectedIndex = i";
+RDebugUtils.currentLine=15007746;
+ //BA.debugLineNum = 15007746;BA.debugLine="mSelectedIndex = i";
 __ref._mselectedindex /*int*/  = _i;
-RDebugUtils.currentLine=18022403;
- //BA.debugLineNum = 18022403;BA.debugLine="If mSelectedIndex = -1 Then";
+RDebugUtils.currentLine=15007747;
+ //BA.debugLineNum = 15007747;BA.debugLine="If mSelectedIndex = -1 Then";
 if (__ref._mselectedindex /*int*/ ==-1) { 
-RDebugUtils.currentLine=18022404;
- //BA.debugLineNum = 18022404;BA.debugLine="MainLabel.Text = \"\"";
+RDebugUtils.currentLine=15007748;
+ //BA.debugLineNum = 15007748;BA.debugLine="MainLabel.Text = \"\"";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence(""));
  }else {
-RDebugUtils.currentLine=18022406;
- //BA.debugLineNum = 18022406;BA.debugLine="Dim value As Object = GetValueImpl (mSelectedInd";
+RDebugUtils.currentLine=15007750;
+ //BA.debugLineNum = 15007750;BA.debugLine="Dim value As Object = GetValueImpl (mSelectedInd";
 _value = __ref._getvalueimpl /*Object*/ (null,__ref._mselectedindex /*int*/ );
-RDebugUtils.currentLine=18022407;
- //BA.debugLineNum = 18022407;BA.debugLine="If StringMode Then";
+RDebugUtils.currentLine=15007751;
+ //BA.debugLineNum = 15007751;BA.debugLine="If StringMode Then";
 if (__ref._stringmode /*boolean*/ ) { 
-RDebugUtils.currentLine=18022408;
- //BA.debugLineNum = 18022408;BA.debugLine="InternalSetTextOrCSBuilderToLabel(MainLabel, va";
+RDebugUtils.currentLine=15007752;
+ //BA.debugLineNum = 15007752;BA.debugLine="InternalSetTextOrCSBuilderToLabel(MainLabel, va";
 __ref._internalsettextorcsbuildertolabel /*String*/ (null,__ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ ,_value);
  }else {
-RDebugUtils.currentLine=18022410;
- //BA.debugLineNum = 18022410;BA.debugLine="MainLabel.Text = Formatter.Format(value)";
+RDebugUtils.currentLine=15007754;
+ //BA.debugLineNum = 15007754;BA.debugLine="MainLabel.Text = Formatter.Format(value)";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setText(BA.ObjectToCharSequence(__ref._formatter /*b4a.example.b4xformatter*/ ._format /*String*/ (null,(double)(BA.ObjectToNumber(_value)))));
  };
-RDebugUtils.currentLine=18022412;
- //BA.debugLineNum = 18022412;BA.debugLine="If RaiseEvent And xui.SubExists(mCallBack, mEven";
+RDebugUtils.currentLine=15007756;
+ //BA.debugLineNum = 15007756;BA.debugLine="If RaiseEvent And xui.SubExists(mCallBack, mEven";
 if (_raiseevent && __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .SubExists(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_valuechanged",(int) (1))) { 
-RDebugUtils.currentLine=18022413;
- //BA.debugLineNum = 18022413;BA.debugLine="CallSub2(mCallBack, mEventName & \"_valuechanged";
+RDebugUtils.currentLine=15007757;
+ //BA.debugLineNum = 15007757;BA.debugLine="CallSub2(mCallBack, mEventName & \"_valuechanged";
 __c.CallSubNew2(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_valuechanged",_value);
  };
  };
-RDebugUtils.currentLine=18022416;
- //BA.debugLineNum = 18022416;BA.debugLine="lblPlus.Enabled = Size > 0 And (mCyclic Or mSelec";
+RDebugUtils.currentLine=15007760;
+ //BA.debugLineNum = 15007760;BA.debugLine="lblPlus.Enabled = Size > 0 And (mCyclic Or mSelec";
 __ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setEnabled(__ref._size /*int*/ >0 && (__ref._mcyclic /*boolean*/  || __ref._mselectedindex /*int*/ <__ref._size /*int*/ -1));
-RDebugUtils.currentLine=18022417;
- //BA.debugLineNum = 18022417;BA.debugLine="lblMinus.Enabled = Size > 0 And (mCyclic Or mSele";
+RDebugUtils.currentLine=15007761;
+ //BA.debugLineNum = 15007761;BA.debugLine="lblMinus.Enabled = Size > 0 And (mCyclic Or mSele";
 __ref._lblminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setEnabled(__ref._size /*int*/ >0 && (__ref._mcyclic /*boolean*/  || __ref._mselectedindex /*int*/ >0));
-RDebugUtils.currentLine=18022418;
- //BA.debugLineNum = 18022418;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15007762;
+ //BA.debugLineNum = 15007762;BA.debugLine="End Sub";
 return "";
 }
 public String  _designercreateview(b4a.example.b4xplusminus __ref,Object _base,anywheresoftware.b4a.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
@@ -330,106 +330,106 @@ RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "designercreateview", true))
 	 {return ((String) Debug.delegate(ba, "designercreateview", new Object[] {_base,_lbl,_props}));}
 anywheresoftware.b4a.objects.B4XViewWrapper _pnl = null;
-RDebugUtils.currentLine=17563648;
- //BA.debugLineNum = 17563648;BA.debugLine="Public Sub DesignerCreateView (Base As Object, lbl";
-RDebugUtils.currentLine=17563649;
- //BA.debugLineNum = 17563649;BA.debugLine="mBase = Base";
+RDebugUtils.currentLine=14548992;
+ //BA.debugLineNum = 14548992;BA.debugLine="Public Sub DesignerCreateView (Base As Object, lbl";
+RDebugUtils.currentLine=14548993;
+ //BA.debugLineNum = 14548993;BA.debugLine="mBase = Base";
 __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
-RDebugUtils.currentLine=17563650;
- //BA.debugLineNum = 17563650;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
+RDebugUtils.currentLine=14548994;
+ //BA.debugLineNum = 14548994;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
 __ref._tag /*Object*/  = __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTag();
-RDebugUtils.currentLine=17563650;
- //BA.debugLineNum = 17563650;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
+RDebugUtils.currentLine=14548994;
+ //BA.debugLineNum = 14548994;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
 __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag(this);
-RDebugUtils.currentLine=17563651;
- //BA.debugLineNum = 17563651;BA.debugLine="MainLabel = lbl";
+RDebugUtils.currentLine=14548995;
+ //BA.debugLineNum = 14548995;BA.debugLine="MainLabel = lbl";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
-RDebugUtils.currentLine=17563652;
- //BA.debugLineNum = 17563652;BA.debugLine="MainLabel.SetTextAlignment(\"CENTER\", \"CENTER\")";
+RDebugUtils.currentLine=14548996;
+ //BA.debugLineNum = 14548996;BA.debugLine="MainLabel.SetTextAlignment(\"CENTER\", \"CENTER\")";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetTextAlignment("CENTER","CENTER");
-RDebugUtils.currentLine=17563653;
- //BA.debugLineNum = 17563653;BA.debugLine="Dim pnl As B4XView = Props.Get(\"page\")";
+RDebugUtils.currentLine=14548997;
+ //BA.debugLineNum = 14548997;BA.debugLine="Dim pnl As B4XView = Props.Get(\"page\")";
 _pnl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _pnl = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_props.Get((Object)("page"))));
-RDebugUtils.currentLine=17563663;
- //BA.debugLineNum = 17563663;BA.debugLine="pnlPlus = xui.CreatePanel(\"pnlArrow\")";
+RDebugUtils.currentLine=14549007;
+ //BA.debugLineNum = 14549007;BA.debugLine="pnlPlus = xui.CreatePanel(\"pnlArrow\")";
 __ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreatePanel(ba,"pnlArrow");
-RDebugUtils.currentLine=17563664;
- //BA.debugLineNum = 17563664;BA.debugLine="pnlMinus = xui.CreatePanel(\"pnlArrow\")";
+RDebugUtils.currentLine=14549008;
+ //BA.debugLineNum = 14549008;BA.debugLine="pnlMinus = xui.CreatePanel(\"pnlArrow\")";
 __ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreatePanel(ba,"pnlArrow");
-RDebugUtils.currentLine=17563666;
- //BA.debugLineNum = 17563666;BA.debugLine="pnlPlus.Tag = True";
+RDebugUtils.currentLine=14549010;
+ //BA.debugLineNum = 14549010;BA.debugLine="pnlPlus.Tag = True";
 __ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag((Object)(__c.True));
-RDebugUtils.currentLine=17563667;
- //BA.debugLineNum = 17563667;BA.debugLine="pnlMinus.Tag = False";
+RDebugUtils.currentLine=14549011;
+ //BA.debugLineNum = 14549011;BA.debugLine="pnlMinus.Tag = False";
 __ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag((Object)(__c.False));
-RDebugUtils.currentLine=17563668;
- //BA.debugLineNum = 17563668;BA.debugLine="Formation = Props.Get(\"Orientation\")";
+RDebugUtils.currentLine=14549012;
+ //BA.debugLineNum = 14549012;BA.debugLine="Formation = Props.Get(\"Orientation\")";
 __ref._formation /*String*/  = BA.ObjectToString(_props.Get((Object)("Orientation")));
-RDebugUtils.currentLine=17563669;
- //BA.debugLineNum = 17563669;BA.debugLine="mCyclic = Props.Get(\"Cyclic\")";
+RDebugUtils.currentLine=14549013;
+ //BA.debugLineNum = 14549013;BA.debugLine="mCyclic = Props.Get(\"Cyclic\")";
 __ref._mcyclic /*boolean*/  = BA.ObjectToBoolean(_props.Get((Object)("Cyclic")));
-RDebugUtils.currentLine=17563670;
- //BA.debugLineNum = 17563670;BA.debugLine="mRapid = Props.Get(\"Rapid\")";
+RDebugUtils.currentLine=14549014;
+ //BA.debugLineNum = 14549014;BA.debugLine="mRapid = Props.Get(\"Rapid\")";
 __ref._mrapid /*boolean*/  = BA.ObjectToBoolean(_props.Get((Object)("Rapid")));
-RDebugUtils.currentLine=17563671;
- //BA.debugLineNum = 17563671;BA.debugLine="mHaptic = Props.GetDefault(\"HapticFeedback\", Fals";
+RDebugUtils.currentLine=14549015;
+ //BA.debugLineNum = 14549015;BA.debugLine="mHaptic = Props.GetDefault(\"HapticFeedback\", Fals";
 __ref._mhaptic /*boolean*/  = BA.ObjectToBoolean(_props.GetDefault((Object)("HapticFeedback"),(Object)(__c.False)));
-RDebugUtils.currentLine=17563672;
- //BA.debugLineNum = 17563672;BA.debugLine="Formatter.GetDefaultFormat.FormatFont = MainLabel";
+RDebugUtils.currentLine=14549016;
+ //BA.debugLineNum = 14549016;BA.debugLine="Formatter.GetDefaultFormat.FormatFont = MainLabel";
 __ref._formatter /*b4a.example.b4xformatter*/ ._getdefaultformat /*b4a.example.b4xformatter._b4xformatdata*/ (null).FormatFont /*anywheresoftware.b4a.objects.B4XViewWrapper.B4XFont*/  = __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getFont();
-RDebugUtils.currentLine=17563673;
- //BA.debugLineNum = 17563673;BA.debugLine="Formatter.GetDefaultFormat.TextColor = MainLabel.";
+RDebugUtils.currentLine=14549017;
+ //BA.debugLineNum = 14549017;BA.debugLine="Formatter.GetDefaultFormat.TextColor = MainLabel.";
 __ref._formatter /*b4a.example.b4xformatter*/ ._getdefaultformat /*b4a.example.b4xformatter._b4xformatdata*/ (null).TextColor /*int*/  = __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTextColor();
-RDebugUtils.currentLine=17563674;
- //BA.debugLineNum = 17563674;BA.debugLine="If Formation = \"Horizontal\" Then";
+RDebugUtils.currentLine=14549018;
+ //BA.debugLineNum = 14549018;BA.debugLine="If Formation = \"Horizontal\" Then";
 if ((__ref._formation /*String*/ ).equals("Horizontal")) { 
-RDebugUtils.currentLine=17563675;
- //BA.debugLineNum = 17563675;BA.debugLine="lblPlus = CreateLabel(Chr(0xE315))";
+RDebugUtils.currentLine=14549019;
+ //BA.debugLineNum = 14549019;BA.debugLine="lblPlus = CreateLabel(Chr(0xE315))";
 __ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._createlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ (null,BA.ObjectToString(__c.Chr((int) (0xe315))));
-RDebugUtils.currentLine=17563676;
- //BA.debugLineNum = 17563676;BA.debugLine="lblMinus = CreateLabel(Chr(0xE314))";
+RDebugUtils.currentLine=14549020;
+ //BA.debugLineNum = 14549020;BA.debugLine="lblMinus = CreateLabel(Chr(0xE314))";
 __ref._lblminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._createlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ (null,BA.ObjectToString(__c.Chr((int) (0xe314))));
  }else {
-RDebugUtils.currentLine=17563678;
- //BA.debugLineNum = 17563678;BA.debugLine="lblPlus = CreateLabel(Chr(0xE316))";
+RDebugUtils.currentLine=14549022;
+ //BA.debugLineNum = 14549022;BA.debugLine="lblPlus = CreateLabel(Chr(0xE316))";
 __ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._createlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ (null,BA.ObjectToString(__c.Chr((int) (0xe316))));
-RDebugUtils.currentLine=17563679;
- //BA.debugLineNum = 17563679;BA.debugLine="lblMinus = CreateLabel(Chr(0xE313))";
+RDebugUtils.currentLine=14549023;
+ //BA.debugLineNum = 14549023;BA.debugLine="lblMinus = CreateLabel(Chr(0xE313))";
 __ref._lblminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = __ref._createlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ (null,BA.ObjectToString(__c.Chr((int) (0xe313))));
  };
-RDebugUtils.currentLine=17563681;
- //BA.debugLineNum = 17563681;BA.debugLine="lblMinus.SetTextAlignment(\"CENTER\", \"CENTER\")";
+RDebugUtils.currentLine=14549025;
+ //BA.debugLineNum = 14549025;BA.debugLine="lblMinus.SetTextAlignment(\"CENTER\", \"CENTER\")";
 __ref._lblminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetTextAlignment("CENTER","CENTER");
-RDebugUtils.currentLine=17563682;
- //BA.debugLineNum = 17563682;BA.debugLine="lblPlus.SetTextAlignment(\"CENTER\", \"CENTER\")";
+RDebugUtils.currentLine=14549026;
+ //BA.debugLineNum = 14549026;BA.debugLine="lblPlus.SetTextAlignment(\"CENTER\", \"CENTER\")";
 __ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetTextAlignment("CENTER","CENTER");
-RDebugUtils.currentLine=17563683;
- //BA.debugLineNum = 17563683;BA.debugLine="MainLabel.SetTextAlignment(\"CENTER\", \"CENTER\")";
+RDebugUtils.currentLine=14549027;
+ //BA.debugLineNum = 14549027;BA.debugLine="MainLabel.SetTextAlignment(\"CENTER\", \"CENTER\")";
 __ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetTextAlignment("CENTER","CENTER");
-RDebugUtils.currentLine=17563684;
- //BA.debugLineNum = 17563684;BA.debugLine="mBase.AddView(MainLabel, 0, 0, 0, 0)";
+RDebugUtils.currentLine=14549028;
+ //BA.debugLineNum = 14549028;BA.debugLine="mBase.AddView(MainLabel, 0, 0, 0, 0)";
 __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._mainlabel /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
-RDebugUtils.currentLine=17563685;
- //BA.debugLineNum = 17563685;BA.debugLine="mBase.AddView(pnlPlus, 0, 0, 0, 0)";
+RDebugUtils.currentLine=14549029;
+ //BA.debugLineNum = 14549029;BA.debugLine="mBase.AddView(pnlPlus, 0, 0, 0, 0)";
 __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
-RDebugUtils.currentLine=17563686;
- //BA.debugLineNum = 17563686;BA.debugLine="mBase.AddView(pnlMinus, 0, 0, 0, 0)";
+RDebugUtils.currentLine=14549030;
+ //BA.debugLineNum = 14549030;BA.debugLine="mBase.AddView(pnlMinus, 0, 0, 0, 0)";
 __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
-RDebugUtils.currentLine=17563687;
- //BA.debugLineNum = 17563687;BA.debugLine="pnlPlus.AddView(lblPlus, 0, 0, 0, 0)";
+RDebugUtils.currentLine=14549031;
+ //BA.debugLineNum = 14549031;BA.debugLine="pnlPlus.AddView(lblPlus, 0, 0, 0, 0)";
 __ref._pnlplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
-RDebugUtils.currentLine=17563688;
- //BA.debugLineNum = 17563688;BA.debugLine="pnlMinus.AddView(lblMinus, 0, 0, 0, 0)";
+RDebugUtils.currentLine=14549032;
+ //BA.debugLineNum = 14549032;BA.debugLine="pnlMinus.AddView(lblMinus, 0, 0, 0, 0)";
 __ref._pnlminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._lblminus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
-RDebugUtils.currentLine=17563689;
- //BA.debugLineNum = 17563689;BA.debugLine="SetIndex(-1, False)";
+RDebugUtils.currentLine=14549033;
+ //BA.debugLineNum = 14549033;BA.debugLine="SetIndex(-1, False)";
 __ref._setindex /*String*/ (null,(int) (-1),__c.False);
-RDebugUtils.currentLine=17563690;
- //BA.debugLineNum = 17563690;BA.debugLine="Base_Resize(mBase.Width, mBase.Height)";
+RDebugUtils.currentLine=14549034;
+ //BA.debugLineNum = 14549034;BA.debugLine="Base_Resize(mBase.Width, mBase.Height)";
 __ref._base_resize /*String*/ (null,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=17563691;
- //BA.debugLineNum = 17563691;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14549035;
+ //BA.debugLineNum = 14549035;BA.debugLine="End Sub";
 return "";
 }
 public Object  _getselectedvalue(b4a.example.b4xplusminus __ref) throws Exception{
@@ -437,13 +437,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "getselectedvalue", true))
 	 {return ((Object) Debug.delegate(ba, "getselectedvalue", null));}
-RDebugUtils.currentLine=17825792;
- //BA.debugLineNum = 17825792;BA.debugLine="Public Sub getSelectedValue As Object";
-RDebugUtils.currentLine=17825793;
- //BA.debugLineNum = 17825793;BA.debugLine="Return GetValueImpl (mSelectedIndex)";
+RDebugUtils.currentLine=14811136;
+ //BA.debugLineNum = 14811136;BA.debugLine="Public Sub getSelectedValue As Object";
+RDebugUtils.currentLine=14811137;
+ //BA.debugLineNum = 14811137;BA.debugLine="Return GetValueImpl (mSelectedIndex)";
 if (true) return __ref._getvalueimpl /*Object*/ (null,__ref._mselectedindex /*int*/ );
-RDebugUtils.currentLine=17825794;
- //BA.debugLineNum = 17825794;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14811138;
+ //BA.debugLineNum = 14811138;BA.debugLine="End Sub";
 return null;
 }
 public Object  _getvalueimpl(b4a.example.b4xplusminus __ref,int _index) throws Exception{
@@ -451,29 +451,29 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "getvalueimpl", true))
 	 {return ((Object) Debug.delegate(ba, "getvalueimpl", new Object[] {_index}));}
-RDebugUtils.currentLine=17956864;
- //BA.debugLineNum = 17956864;BA.debugLine="Private Sub GetValueImpl (Index As Int) As Object";
-RDebugUtils.currentLine=17956865;
- //BA.debugLineNum = 17956865;BA.debugLine="If StringMode Then";
+RDebugUtils.currentLine=14942208;
+ //BA.debugLineNum = 14942208;BA.debugLine="Private Sub GetValueImpl (Index As Int) As Object";
+RDebugUtils.currentLine=14942209;
+ //BA.debugLineNum = 14942209;BA.debugLine="If StringMode Then";
 if (__ref._stringmode /*boolean*/ ) { 
-RDebugUtils.currentLine=17956866;
- //BA.debugLineNum = 17956866;BA.debugLine="Return mStringItems.Get(Index)";
+RDebugUtils.currentLine=14942210;
+ //BA.debugLineNum = 14942210;BA.debugLine="Return mStringItems.Get(Index)";
 if (true) return __ref._mstringitems /*anywheresoftware.b4a.objects.collections.List*/ .Get(_index);
  }else {
-RDebugUtils.currentLine=17956868;
- //BA.debugLineNum = 17956868;BA.debugLine="If Index = Size - 1 Then";
+RDebugUtils.currentLine=14942212;
+ //BA.debugLineNum = 14942212;BA.debugLine="If Index = Size - 1 Then";
 if (_index==__ref._size /*int*/ -1) { 
-RDebugUtils.currentLine=17956869;
- //BA.debugLineNum = 17956869;BA.debugLine="Return mEndRange";
+RDebugUtils.currentLine=14942213;
+ //BA.debugLineNum = 14942213;BA.debugLine="Return mEndRange";
 if (true) return (Object)(__ref._mendrange /*double*/ );
  }else {
-RDebugUtils.currentLine=17956871;
- //BA.debugLineNum = 17956871;BA.debugLine="Return mStartRange + Index * mInterval";
+RDebugUtils.currentLine=14942215;
+ //BA.debugLineNum = 14942215;BA.debugLine="Return mStartRange + Index * mInterval";
 if (true) return (Object)(__ref._mstartrange /*double*/ +_index*__ref._minterval /*double*/ );
  };
  };
-RDebugUtils.currentLine=17956874;
- //BA.debugLineNum = 17956874;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14942218;
+ //BA.debugLineNum = 14942218;BA.debugLine="End Sub";
 return null;
 }
 public String  _increment(b4a.example.b4xplusminus __ref) throws Exception{
@@ -483,51 +483,51 @@ if (Debug.shouldDelegate(ba, "increment", true))
 	 {return ((String) Debug.delegate(ba, "increment", null));}
 double _v1 = 0;
 double _v2 = 0;
-RDebugUtils.currentLine=18087936;
- //BA.debugLineNum = 18087936;BA.debugLine="Public Sub Increment";
-RDebugUtils.currentLine=18087937;
- //BA.debugLineNum = 18087937;BA.debugLine="If mSelectedIndex = Size - 3 And StringMode = Fal";
+RDebugUtils.currentLine=15073280;
+ //BA.debugLineNum = 15073280;BA.debugLine="Public Sub Increment";
+RDebugUtils.currentLine=15073281;
+ //BA.debugLineNum = 15073281;BA.debugLine="If mSelectedIndex = Size - 3 And StringMode = Fal";
 if (__ref._mselectedindex /*int*/ ==__ref._size /*int*/ -3 && __ref._stringmode /*boolean*/ ==__c.False) { 
-RDebugUtils.currentLine=18087938;
- //BA.debugLineNum = 18087938;BA.debugLine="Dim v1 As Double = GetValueImpl(mSelectedIndex +";
+RDebugUtils.currentLine=15073282;
+ //BA.debugLineNum = 15073282;BA.debugLine="Dim v1 As Double = GetValueImpl(mSelectedIndex +";
 _v1 = (double)(BA.ObjectToNumber(__ref._getvalueimpl /*Object*/ (null,(int) (__ref._mselectedindex /*int*/ +1))));
-RDebugUtils.currentLine=18087939;
- //BA.debugLineNum = 18087939;BA.debugLine="Dim v2 As Double = GetValueImpl(mSelectedIndex +";
+RDebugUtils.currentLine=15073283;
+ //BA.debugLineNum = 15073283;BA.debugLine="Dim v2 As Double = GetValueImpl(mSelectedIndex +";
 _v2 = (double)(BA.ObjectToNumber(__ref._getvalueimpl /*Object*/ (null,(int) (__ref._mselectedindex /*int*/ +2))));
-RDebugUtils.currentLine=18087940;
- //BA.debugLineNum = 18087940;BA.debugLine="If Formatter.Format(v1) = Formatter.Format(v2) T";
+RDebugUtils.currentLine=15073284;
+ //BA.debugLineNum = 15073284;BA.debugLine="If Formatter.Format(v1) = Formatter.Format(v2) T";
 if ((__ref._formatter /*b4a.example.b4xformatter*/ ._format /*String*/ (null,_v1)).equals(__ref._formatter /*b4a.example.b4xformatter*/ ._format /*String*/ (null,_v2))) { 
-RDebugUtils.currentLine=18087941;
- //BA.debugLineNum = 18087941;BA.debugLine="mSelectedIndex = mSelectedIndex + 1";
+RDebugUtils.currentLine=15073285;
+ //BA.debugLineNum = 15073285;BA.debugLine="mSelectedIndex = mSelectedIndex + 1";
 __ref._mselectedindex /*int*/  = (int) (__ref._mselectedindex /*int*/ +1);
  };
  };
-RDebugUtils.currentLine=18087944;
- //BA.debugLineNum = 18087944;BA.debugLine="If mSelectedIndex >= Size - 1 Then";
+RDebugUtils.currentLine=15073288;
+ //BA.debugLineNum = 15073288;BA.debugLine="If mSelectedIndex >= Size - 1 Then";
 if (__ref._mselectedindex /*int*/ >=__ref._size /*int*/ -1) { 
-RDebugUtils.currentLine=18087945;
- //BA.debugLineNum = 18087945;BA.debugLine="If mCyclic Then";
+RDebugUtils.currentLine=15073289;
+ //BA.debugLineNum = 15073289;BA.debugLine="If mCyclic Then";
 if (__ref._mcyclic /*boolean*/ ) { 
-RDebugUtils.currentLine=18087946;
- //BA.debugLineNum = 18087946;BA.debugLine="mSelectedIndex = -1";
+RDebugUtils.currentLine=15073290;
+ //BA.debugLineNum = 15073290;BA.debugLine="mSelectedIndex = -1";
 __ref._mselectedindex /*int*/  = (int) (-1);
  }else {
-RDebugUtils.currentLine=18087948;
- //BA.debugLineNum = 18087948;BA.debugLine="mSelectedIndex = Size - 1";
+RDebugUtils.currentLine=15073292;
+ //BA.debugLineNum = 15073292;BA.debugLine="mSelectedIndex = Size - 1";
 __ref._mselectedindex /*int*/  = (int) (__ref._size /*int*/ -1);
-RDebugUtils.currentLine=18087949;
- //BA.debugLineNum = 18087949;BA.debugLine="LoopIndex = LoopIndex + 1";
+RDebugUtils.currentLine=15073293;
+ //BA.debugLineNum = 15073293;BA.debugLine="LoopIndex = LoopIndex + 1";
 __ref._loopindex /*int*/  = (int) (__ref._loopindex /*int*/ +1);
-RDebugUtils.currentLine=18087950;
- //BA.debugLineNum = 18087950;BA.debugLine="Return";
+RDebugUtils.currentLine=15073294;
+ //BA.debugLineNum = 15073294;BA.debugLine="Return";
 if (true) return "";
  };
  };
-RDebugUtils.currentLine=18087953;
- //BA.debugLineNum = 18087953;BA.debugLine="SetIndex(mSelectedIndex + 1, True)";
+RDebugUtils.currentLine=15073297;
+ //BA.debugLineNum = 15073297;BA.debugLine="SetIndex(mSelectedIndex + 1, True)";
 __ref._setindex /*String*/ (null,(int) (__ref._mselectedindex /*int*/ +1),__c.True);
-RDebugUtils.currentLine=18087954;
- //BA.debugLineNum = 18087954;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15073298;
+ //BA.debugLineNum = 15073298;BA.debugLine="End Sub";
 return "";
 }
 public String  _initialize(b4a.example.b4xplusminus __ref,anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -536,19 +536,19 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "initialize", true))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba,_callback,_eventname}));}
-RDebugUtils.currentLine=17498112;
- //BA.debugLineNum = 17498112;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
-RDebugUtils.currentLine=17498113;
- //BA.debugLineNum = 17498113;BA.debugLine="mEventName = EventName";
+RDebugUtils.currentLine=14483456;
+ //BA.debugLineNum = 14483456;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
+RDebugUtils.currentLine=14483457;
+ //BA.debugLineNum = 14483457;BA.debugLine="mEventName = EventName";
 __ref._meventname /*String*/  = _eventname;
-RDebugUtils.currentLine=17498114;
- //BA.debugLineNum = 17498114;BA.debugLine="mCallBack = Callback";
+RDebugUtils.currentLine=14483458;
+ //BA.debugLineNum = 14483458;BA.debugLine="mCallBack = Callback";
 __ref._mcallback /*Object*/  = _callback;
-RDebugUtils.currentLine=17498115;
- //BA.debugLineNum = 17498115;BA.debugLine="Formatter.Initialize";
+RDebugUtils.currentLine=14483459;
+ //BA.debugLineNum = 14483459;BA.debugLine="Formatter.Initialize";
 __ref._formatter /*b4a.example.b4xformatter*/ ._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=17498116;
- //BA.debugLineNum = 17498116;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14483460;
+ //BA.debugLineNum = 14483460;BA.debugLine="End Sub";
 return "";
 }
 public String  _internalsettextorcsbuildertolabel(b4a.example.b4xplusminus __ref,anywheresoftware.b4a.objects.B4XViewWrapper _xlbl,Object _text) throws Exception{
@@ -556,13 +556,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "internalsettextorcsbuildertolabel", true))
 	 {return ((String) Debug.delegate(ba, "internalsettextorcsbuildertolabel", new Object[] {_xlbl,_text}));}
-RDebugUtils.currentLine=18481152;
- //BA.debugLineNum = 18481152;BA.debugLine="Private Sub InternalSetTextOrCSBuilderToLabel(xlbl";
-RDebugUtils.currentLine=18481154;
- //BA.debugLineNum = 18481154;BA.debugLine="xlbl.Text = Text";
+RDebugUtils.currentLine=15466496;
+ //BA.debugLineNum = 15466496;BA.debugLine="Private Sub InternalSetTextOrCSBuilderToLabel(xlbl";
+RDebugUtils.currentLine=15466498;
+ //BA.debugLineNum = 15466498;BA.debugLine="xlbl.Text = Text";
 _xlbl.setText(BA.ObjectToCharSequence(_text));
-RDebugUtils.currentLine=18481164;
- //BA.debugLineNum = 18481164;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15466508;
+ //BA.debugLineNum = 15466508;BA.debugLine="End Sub";
 return "";
 }
 public String  _pnlarrow_touch(b4a.example.b4xplusminus __ref,int _action,float _x,float _y) throws Exception{
@@ -570,13 +570,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "pnlarrow_touch", true))
 	 {return ((String) Debug.delegate(ba, "pnlarrow_touch", new Object[] {_action,_x,_y}));}
-RDebugUtils.currentLine=18219008;
- //BA.debugLineNum = 18219008;BA.debugLine="Private Sub pnlArrow_Touch (Action As Int, X As Fl";
-RDebugUtils.currentLine=18219009;
- //BA.debugLineNum = 18219009;BA.debugLine="Touch(Action = lblPlus.TOUCH_ACTION_DOWN, Action";
+RDebugUtils.currentLine=15204352;
+ //BA.debugLineNum = 15204352;BA.debugLine="Private Sub pnlArrow_Touch (Action As Int, X As Fl";
+RDebugUtils.currentLine=15204353;
+ //BA.debugLineNum = 15204353;BA.debugLine="Touch(Action = lblPlus.TOUCH_ACTION_DOWN, Action";
 __ref._touch /*String*/ (null,_action==__ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .TOUCH_ACTION_DOWN,_action!=__ref._lblplus /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .TOUCH_ACTION_MOVE,(anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(__c.Sender(ba))));
-RDebugUtils.currentLine=18219010;
- //BA.debugLineNum = 18219010;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15204354;
+ //BA.debugLineNum = 15204354;BA.debugLine="End Sub";
 return "";
 }
 public String  _touch(b4a.example.b4xplusminus __ref,boolean _start,boolean _stop,anywheresoftware.b4a.objects.B4XViewWrapper _pnl) throws Exception{
@@ -584,47 +584,47 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "touch", true))
 	 {return ((String) Debug.delegate(ba, "touch", new Object[] {_start,_stop,_pnl}));}
-RDebugUtils.currentLine=18284544;
- //BA.debugLineNum = 18284544;BA.debugLine="Private Sub Touch (Start As Boolean, Stop As Boole";
-RDebugUtils.currentLine=18284545;
- //BA.debugLineNum = 18284545;BA.debugLine="If pnl.GetView(0).Enabled = False Then Return";
+RDebugUtils.currentLine=15269888;
+ //BA.debugLineNum = 15269888;BA.debugLine="Private Sub Touch (Start As Boolean, Stop As Boole";
+RDebugUtils.currentLine=15269889;
+ //BA.debugLineNum = 15269889;BA.debugLine="If pnl.GetView(0).Enabled = False Then Return";
 if (_pnl.GetView((int) (0)).getEnabled()==__c.False) { 
 if (true) return "";};
-RDebugUtils.currentLine=18284546;
- //BA.debugLineNum = 18284546;BA.debugLine="If Start Then";
+RDebugUtils.currentLine=15269890;
+ //BA.debugLineNum = 15269890;BA.debugLine="If Start Then";
 if (_start) { 
-RDebugUtils.currentLine=18284547;
- //BA.debugLineNum = 18284547;BA.debugLine="If mHaptic Then XUIViewsUtils.PerformHapticFeedb";
+RDebugUtils.currentLine=15269891;
+ //BA.debugLineNum = 15269891;BA.debugLine="If mHaptic Then XUIViewsUtils.PerformHapticFeedb";
 if (__ref._mhaptic /*boolean*/ ) { 
 _xuiviewsutils._performhapticfeedback /*String*/ (ba,_pnl);};
-RDebugUtils.currentLine=18284548;
- //BA.debugLineNum = 18284548;BA.debugLine="If pnl.Tag = True Then";
+RDebugUtils.currentLine=15269892;
+ //BA.debugLineNum = 15269892;BA.debugLine="If pnl.Tag = True Then";
 if ((_pnl.getTag()).equals((Object)(__c.True))) { 
-RDebugUtils.currentLine=18284549;
- //BA.debugLineNum = 18284549;BA.debugLine="Increment";
+RDebugUtils.currentLine=15269893;
+ //BA.debugLineNum = 15269893;BA.debugLine="Increment";
 __ref._increment /*String*/ (null);
-RDebugUtils.currentLine=18284550;
- //BA.debugLineNum = 18284550;BA.debugLine="StartDownLoop(True)";
+RDebugUtils.currentLine=15269894;
+ //BA.debugLineNum = 15269894;BA.debugLine="StartDownLoop(True)";
 __ref._startdownloop /*void*/ (null,__c.True);
  }else {
-RDebugUtils.currentLine=18284552;
- //BA.debugLineNum = 18284552;BA.debugLine="Decrement";
+RDebugUtils.currentLine=15269896;
+ //BA.debugLineNum = 15269896;BA.debugLine="Decrement";
 __ref._decrement /*String*/ (null);
-RDebugUtils.currentLine=18284553;
- //BA.debugLineNum = 18284553;BA.debugLine="StartDownLoop(False)";
+RDebugUtils.currentLine=15269897;
+ //BA.debugLineNum = 15269897;BA.debugLine="StartDownLoop(False)";
 __ref._startdownloop /*void*/ (null,__c.False);
  };
  }else 
-{RDebugUtils.currentLine=18284555;
- //BA.debugLineNum = 18284555;BA.debugLine="Else If Stop Then";
+{RDebugUtils.currentLine=15269899;
+ //BA.debugLineNum = 15269899;BA.debugLine="Else If Stop Then";
 if (_stop) { 
-RDebugUtils.currentLine=18284556;
- //BA.debugLineNum = 18284556;BA.debugLine="LoopIndex = LoopIndex + 1";
+RDebugUtils.currentLine=15269900;
+ //BA.debugLineNum = 15269900;BA.debugLine="LoopIndex = LoopIndex + 1";
 __ref._loopindex /*int*/  = (int) (__ref._loopindex /*int*/ +1);
  }}
 ;
-RDebugUtils.currentLine=18284558;
- //BA.debugLineNum = 18284558;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15269902;
+ //BA.debugLineNum = 15269902;BA.debugLine="End Sub";
 return "";
 }
 public String  _setnumericrange(b4a.example.b4xplusminus __ref,double _startrange,double _endrange,double _interval) throws Exception{
@@ -632,28 +632,28 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "setnumericrange", true))
 	 {return ((String) Debug.delegate(ba, "setnumericrange", new Object[] {_startrange,_endrange,_interval}));}
-RDebugUtils.currentLine=17760256;
- //BA.debugLineNum = 17760256;BA.debugLine="Public Sub SetNumericRange (StartRange As Double,";
-RDebugUtils.currentLine=17760257;
- //BA.debugLineNum = 17760257;BA.debugLine="Size = Ceil((EndRange - StartRange) / Interval) +";
+RDebugUtils.currentLine=14745600;
+ //BA.debugLineNum = 14745600;BA.debugLine="Public Sub SetNumericRange (StartRange As Double,";
+RDebugUtils.currentLine=14745601;
+ //BA.debugLineNum = 14745601;BA.debugLine="Size = Ceil((EndRange - StartRange) / Interval) +";
 __ref._size /*int*/  = (int) (__c.Ceil((_endrange-_startrange)/(double)_interval)+1);
-RDebugUtils.currentLine=17760258;
- //BA.debugLineNum = 17760258;BA.debugLine="mStartRange = StartRange";
+RDebugUtils.currentLine=14745602;
+ //BA.debugLineNum = 14745602;BA.debugLine="mStartRange = StartRange";
 __ref._mstartrange /*double*/  = _startrange;
-RDebugUtils.currentLine=17760259;
- //BA.debugLineNum = 17760259;BA.debugLine="mEndRange = EndRange";
+RDebugUtils.currentLine=14745603;
+ //BA.debugLineNum = 14745603;BA.debugLine="mEndRange = EndRange";
 __ref._mendrange /*double*/  = _endrange;
-RDebugUtils.currentLine=17760260;
- //BA.debugLineNum = 17760260;BA.debugLine="mInterval = Interval";
+RDebugUtils.currentLine=14745604;
+ //BA.debugLineNum = 14745604;BA.debugLine="mInterval = Interval";
 __ref._minterval /*double*/  = _interval;
-RDebugUtils.currentLine=17760261;
- //BA.debugLineNum = 17760261;BA.debugLine="StringMode = False";
+RDebugUtils.currentLine=14745605;
+ //BA.debugLineNum = 14745605;BA.debugLine="StringMode = False";
 __ref._stringmode /*boolean*/  = __c.False;
-RDebugUtils.currentLine=17760262;
- //BA.debugLineNum = 17760262;BA.debugLine="SetIndex(0, False)";
+RDebugUtils.currentLine=14745606;
+ //BA.debugLineNum = 14745606;BA.debugLine="SetIndex(0, False)";
 __ref._setindex /*String*/ (null,(int) (0),__c.False);
-RDebugUtils.currentLine=17760263;
- //BA.debugLineNum = 17760263;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14745607;
+ //BA.debugLineNum = 14745607;BA.debugLine="End Sub";
 return "";
 }
 public String  _setselectedvalue(b4a.example.b4xplusminus __ref,Object _v) throws Exception{
@@ -662,24 +662,24 @@ RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "setselectedvalue", true))
 	 {return ((String) Debug.delegate(ba, "setselectedvalue", new Object[] {_v}));}
 double _n = 0;
-RDebugUtils.currentLine=17891328;
- //BA.debugLineNum = 17891328;BA.debugLine="Public Sub setSelectedValue (v As Object)";
-RDebugUtils.currentLine=17891329;
- //BA.debugLineNum = 17891329;BA.debugLine="If StringMode Then";
+RDebugUtils.currentLine=14876672;
+ //BA.debugLineNum = 14876672;BA.debugLine="Public Sub setSelectedValue (v As Object)";
+RDebugUtils.currentLine=14876673;
+ //BA.debugLineNum = 14876673;BA.debugLine="If StringMode Then";
 if (__ref._stringmode /*boolean*/ ) { 
-RDebugUtils.currentLine=17891330;
- //BA.debugLineNum = 17891330;BA.debugLine="SetIndex(mStringItems.IndexOf(v), False)";
+RDebugUtils.currentLine=14876674;
+ //BA.debugLineNum = 14876674;BA.debugLine="SetIndex(mStringItems.IndexOf(v), False)";
 __ref._setindex /*String*/ (null,__ref._mstringitems /*anywheresoftware.b4a.objects.collections.List*/ .IndexOf(_v),__c.False);
  }else {
-RDebugUtils.currentLine=17891332;
- //BA.debugLineNum = 17891332;BA.debugLine="Dim n As Double = v";
+RDebugUtils.currentLine=14876676;
+ //BA.debugLineNum = 14876676;BA.debugLine="Dim n As Double = v";
 _n = (double)(BA.ObjectToNumber(_v));
-RDebugUtils.currentLine=17891333;
- //BA.debugLineNum = 17891333;BA.debugLine="SetIndex(Min(Size - 1, Max(0, Round((n - mStartR";
+RDebugUtils.currentLine=14876677;
+ //BA.debugLineNum = 14876677;BA.debugLine="SetIndex(Min(Size - 1, Max(0, Round((n - mStartR";
 __ref._setindex /*String*/ (null,(int) (__c.Min(__ref._size /*int*/ -1,__c.Max(0,__c.Round((_n-__ref._mstartrange /*double*/ )/(double)__ref._minterval /*double*/ )))),__c.False);
  };
-RDebugUtils.currentLine=17891335;
- //BA.debugLineNum = 17891335;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14876679;
+ //BA.debugLineNum = 14876679;BA.debugLine="End Sub";
 return "";
 }
 public String  _setstringitems(b4a.example.b4xplusminus __ref,anywheresoftware.b4a.objects.collections.List _list) throws Exception{
@@ -687,22 +687,22 @@ __ref = this;
 RDebugUtils.currentModule="b4xplusminus";
 if (Debug.shouldDelegate(ba, "setstringitems", true))
 	 {return ((String) Debug.delegate(ba, "setstringitems", new Object[] {_list}));}
-RDebugUtils.currentLine=17694720;
- //BA.debugLineNum = 17694720;BA.debugLine="Public Sub SetStringItems (list As List)";
-RDebugUtils.currentLine=17694721;
- //BA.debugLineNum = 17694721;BA.debugLine="mStringItems = list";
+RDebugUtils.currentLine=14680064;
+ //BA.debugLineNum = 14680064;BA.debugLine="Public Sub SetStringItems (list As List)";
+RDebugUtils.currentLine=14680065;
+ //BA.debugLineNum = 14680065;BA.debugLine="mStringItems = list";
 __ref._mstringitems /*anywheresoftware.b4a.objects.collections.List*/  = _list;
-RDebugUtils.currentLine=17694722;
- //BA.debugLineNum = 17694722;BA.debugLine="StringMode = True";
+RDebugUtils.currentLine=14680066;
+ //BA.debugLineNum = 14680066;BA.debugLine="StringMode = True";
 __ref._stringmode /*boolean*/  = __c.True;
-RDebugUtils.currentLine=17694723;
- //BA.debugLineNum = 17694723;BA.debugLine="Size = mStringItems.Size";
+RDebugUtils.currentLine=14680067;
+ //BA.debugLineNum = 14680067;BA.debugLine="Size = mStringItems.Size";
 __ref._size /*int*/  = __ref._mstringitems /*anywheresoftware.b4a.objects.collections.List*/ .getSize();
-RDebugUtils.currentLine=17694724;
- //BA.debugLineNum = 17694724;BA.debugLine="SetIndex(-1, False)";
+RDebugUtils.currentLine=14680068;
+ //BA.debugLineNum = 14680068;BA.debugLine="SetIndex(-1, False)";
 __ref._setindex /*String*/ (null,(int) (-1),__c.False);
-RDebugUtils.currentLine=17694725;
- //BA.debugLineNum = 17694725;BA.debugLine="End Sub";
+RDebugUtils.currentLine=14680069;
+ //BA.debugLineNum = 14680069;BA.debugLine="End Sub";
 return "";
 }
 public void  _startdownloop(b4a.example.b4xplusminus __ref,boolean _up) throws Exception{
@@ -736,11 +736,11 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=18350081;
- //BA.debugLineNum = 18350081;BA.debugLine="LoopIndex = LoopIndex + 1";
+RDebugUtils.currentLine=15335425;
+ //BA.debugLineNum = 15335425;BA.debugLine="LoopIndex = LoopIndex + 1";
 __ref._loopindex /*int*/  = (int) (__ref._loopindex /*int*/ +1);
-RDebugUtils.currentLine=18350082;
- //BA.debugLineNum = 18350082;BA.debugLine="If mRapid = False Then Return";
+RDebugUtils.currentLine=15335426;
+ //BA.debugLineNum = 15335426;BA.debugLine="If mRapid = False Then Return";
 if (true) break;
 
 case 1:
@@ -760,11 +760,11 @@ case 6:
 //C
 this.state = 7;
 ;
-RDebugUtils.currentLine=18350083;
- //BA.debugLineNum = 18350083;BA.debugLine="Dim MyIndex As Int = LoopIndex";
+RDebugUtils.currentLine=15335427;
+ //BA.debugLineNum = 15335427;BA.debugLine="Dim MyIndex As Int = LoopIndex";
 _myindex = __ref._loopindex /*int*/ ;
-RDebugUtils.currentLine=18350084;
- //BA.debugLineNum = 18350084;BA.debugLine="Sleep(RapidPeriod1)";
+RDebugUtils.currentLine=15335428;
+ //BA.debugLineNum = 15335428;BA.debugLine="Sleep(RapidPeriod1)";
 parent.__c.Sleep(ba,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "b4xplusminus", "startdownloop"),__ref._rapidperiod1 /*int*/ );
 this.state = 19;
 return;
@@ -772,8 +772,8 @@ case 19:
 //C
 this.state = 7;
 ;
-RDebugUtils.currentLine=18350085;
- //BA.debugLineNum = 18350085;BA.debugLine="Do While MyIndex = LoopIndex";
+RDebugUtils.currentLine=15335429;
+ //BA.debugLineNum = 15335429;BA.debugLine="Do While MyIndex = LoopIndex";
 if (true) break;
 
 case 7:
@@ -788,8 +788,8 @@ if (true) break;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=18350086;
- //BA.debugLineNum = 18350086;BA.debugLine="If Up Then Increment Else Decrement";
+RDebugUtils.currentLine=15335430;
+ //BA.debugLineNum = 15335430;BA.debugLine="If Up Then Increment Else Decrement";
 if (true) break;
 
 case 10:
@@ -818,8 +818,8 @@ case 17:
 //C
 this.state = 7;
 ;
-RDebugUtils.currentLine=18350087;
- //BA.debugLineNum = 18350087;BA.debugLine="Sleep(RapidPeriod2)";
+RDebugUtils.currentLine=15335431;
+ //BA.debugLineNum = 15335431;BA.debugLine="Sleep(RapidPeriod2)";
 parent.__c.Sleep(ba,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "b4xplusminus", "startdownloop"),__ref._rapidperiod2 /*int*/ );
 this.state = 20;
 return;
@@ -833,8 +833,8 @@ case 18:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=18350089;
- //BA.debugLineNum = 18350089;BA.debugLine="End Sub";
+RDebugUtils.currentLine=15335433;
+ //BA.debugLineNum = 15335433;BA.debugLine="End Sub";
 if (true) break;
 
             }

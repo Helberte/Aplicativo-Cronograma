@@ -25,6 +25,10 @@ Sub Globals
 	Private btOk As Button
 	Dim banco As ClassBancoDados
 	Private lblAnotacaoRefPag As Label
+	Private panel_cabecalho As Panel
+	Private lblTituloAnotacao As Label
+	Private panel_anotacao As Panel
+	Dim verifica As Boolean = True
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -43,13 +47,27 @@ Sub Activity_Resume
 		paginas(i) = i + 1
 	Next
 	
-	lblTitulo.Text = nomeDoLivro
-	B4XComboBox1.SetItems(paginas)
 	
 	If lblAnotacaoRefPag.Text = "página" Then
 		lblAnotacaoRefPag.Text = "Anotação referente à página"
 	Else
 		lblAnotacaoRefPag.Text = "Anotação referente ao capítulo"
+	End If
+	
+	lblTitulo.Text = nomeDoLivro
+	B4XComboBox1.SetItems(paginas)
+
+
+	lblTitulo.TextColor = Colors.Transparent
+	lblTitulo.Top = -2.5%y
+	
+	lblTitulo.SetTextColorAnimated(1000, Colors.RGB(195,21,21))
+	lblTitulo.SetLayoutAnimated(1000, 0%x, 2.5%y, panel_cabecalho.Width, 6%y)
+
+	If edTituloAnotacao.Text.Trim = "" Then
+		lblTituloAnotacao.TextColor = Colors.Transparent
+	Else
+		ApareceTituloAnotacao
 	End If
 End Sub
 
@@ -119,7 +137,32 @@ End Sub
 Sub edTituloAnotacao_TextChanged (Old As String, New As String)
 	If New.IndexOf("'") >= 0 Then
 		edTituloAnotacao.Text = edTituloAnotacao.Text.Replace("'","")
+	Else
+		If edTituloAnotacao.Text.Trim = "" Then
+			SomeTituloAnotacao
+		Else
+			If verifica Then
+				ApareceTituloAnotacao
+			End If				
+		End If
 	End If
+End Sub
+
+Sub SomeTituloAnotacao
+	verifica = True
+	lblTituloAnotacao.SetTextColorAnimated(600, Colors.Transparent)
+	lblTituloAnotacao.SetLayoutAnimated(900, (panel_anotacao.Width - lblTituloAnotacao.Width) / 2, 0%y, panel_anotacao.Width - 3%x, 3.2%y)
+End Sub
+
+Sub ApareceTituloAnotacao
+	
+	verifica = False
+	lblTituloAnotacao.Top = 0%y
+	lblTituloAnotacao.TextColor = Colors.Transparent
+	
+	lblTituloAnotacao.SetTextColorAnimated(600, Colors.RGB(195,21,21))
+	lblTituloAnotacao.SetLayoutAnimated(900, (panel_anotacao.Width - lblTituloAnotacao.Width) / 2, 1%y, panel_anotacao.Width - 3%x, 3.2%y)
+
 End Sub
 
 Sub edAnotacao_TextChanged (Old As String, New As String)

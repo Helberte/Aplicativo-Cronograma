@@ -67,16 +67,20 @@ public static RemoteObject _btcancelar = RemoteObject.declareNull("anywheresoftw
 public static RemoteObject _btok = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static RemoteObject _banco = RemoteObject.declareNull("b4a.example.classbancodados");
 public static RemoteObject _lblanotacaorefpag = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _panel_cabecalho = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
+public static RemoteObject _lbltituloanotacao = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _panel_anotacao = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
+public static RemoteObject _verifica = RemoteObject.createImmutable(false);
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
 public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",codigolayanotacao.mostCurrent._activity,"B4XComboBox1",codigolayanotacao.mostCurrent._b4xcombobox1,"banco",codigolayanotacao.mostCurrent._banco,"btCancelar",codigolayanotacao.mostCurrent._btcancelar,"btOk",codigolayanotacao.mostCurrent._btok,"CodigoCadastro",Debug.moduleToString(b4a.example.codigocadastro.class),"CodigoCadastroLivro",Debug.moduleToString(b4a.example.codigocadastrolivro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"codigoLivro",codigolayanotacao._codigolivro,"DateUtils",codigolayanotacao.mostCurrent._dateutils,"edAnotacao",codigolayanotacao.mostCurrent._edanotacao,"edTituloAnotacao",codigolayanotacao.mostCurrent._edtituloanotacao,"lblAnotacaoRefPag",codigolayanotacao.mostCurrent._lblanotacaorefpag,"lblTitulo",codigolayanotacao.mostCurrent._lbltitulo,"Main",Debug.moduleToString(b4a.example.main.class),"nomeDoLivro",codigolayanotacao._nomedolivro,"qtPaginas",codigolayanotacao._qtpaginas,"Starter",Debug.moduleToString(b4a.example.starter.class),"tipoLeitura",codigolayanotacao._tipoleitura,"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
+		return new Object[] {"Activity",codigolayanotacao.mostCurrent._activity,"B4XComboBox1",codigolayanotacao.mostCurrent._b4xcombobox1,"banco",codigolayanotacao.mostCurrent._banco,"btCancelar",codigolayanotacao.mostCurrent._btcancelar,"btOk",codigolayanotacao.mostCurrent._btok,"CodigoCadastro",Debug.moduleToString(b4a.example.codigocadastro.class),"CodigoCadastroLivro",Debug.moduleToString(b4a.example.codigocadastrolivro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"codigoLivro",codigolayanotacao._codigolivro,"DateUtils",codigolayanotacao.mostCurrent._dateutils,"edAnotacao",codigolayanotacao.mostCurrent._edanotacao,"edTituloAnotacao",codigolayanotacao.mostCurrent._edtituloanotacao,"lblAnotacaoRefPag",codigolayanotacao.mostCurrent._lblanotacaorefpag,"lblTitulo",codigolayanotacao.mostCurrent._lbltitulo,"lblTituloAnotacao",codigolayanotacao.mostCurrent._lbltituloanotacao,"Main",Debug.moduleToString(b4a.example.main.class),"nomeDoLivro",codigolayanotacao._nomedolivro,"panel_anotacao",codigolayanotacao.mostCurrent._panel_anotacao,"panel_cabecalho",codigolayanotacao.mostCurrent._panel_cabecalho,"qtPaginas",codigolayanotacao._qtpaginas,"Starter",Debug.moduleToString(b4a.example.starter.class),"tipoLeitura",codigolayanotacao._tipoleitura,"verifica",codigolayanotacao._verifica,"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};
 }
 }

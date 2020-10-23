@@ -56,13 +56,9 @@ views.get("lblporcentagem").vw.setLeft((int)((views.get("panellancamento").vw.ge
 views.get("lblprevisaoporcentagem").vw.setTop((int)((views.get("lblporcentagem").vw.getTop())+(views.get("lblporcentagem").vw.getHeight())-(0.5d / 100 * height)));
 views.get("lblprevisaoporcentagem").vw.setWidth((int)((views.get("lblporcentagem").vw.getWidth())));
 views.get("lblprevisaoporcentagem").vw.setLeft((int)((views.get("lblporcentagem").vw.getLeft())));
-//BA.debugLineNum = 62;BA.debugLine="lblPrevisaoPorcentagem.Height = 3%y"[Lay_lancamento_leitura/General script]
 views.get("lblprevisaoporcentagem").vw.setHeight((int)((3d / 100 * height)));
-//BA.debugLineNum = 64;BA.debugLine="btOk.Width = 32%x"[Lay_lancamento_leitura/General script]
 views.get("btok").vw.setWidth((int)((32d / 100 * width)));
-//BA.debugLineNum = 65;BA.debugLine="btOk.Height = 8%y"[Lay_lancamento_leitura/General script]
 views.get("btok").vw.setHeight((int)((8d / 100 * height)));
-//BA.debugLineNum = 66;BA.debugLine="btOk.Top = PanelPrincipal.Height - btOk.Height - 2%y"[Lay_lancamento_leitura/General script]
 views.get("btok").vw.setTop((int)((views.get("panelprincipal").vw.getHeight())-(views.get("btok").vw.getHeight())-(2d / 100 * height)));
 //BA.debugLineNum = 67;BA.debugLine="btOk.Left = panelLancamento.Left + panelLancamento.Width - btOk.Width"[Lay_lancamento_leitura/General script]
 views.get("btok").vw.setLeft((int)((views.get("panellancamento").vw.getLeft())+(views.get("panellancamento").vw.getWidth())-(views.get("btok").vw.getWidth())));

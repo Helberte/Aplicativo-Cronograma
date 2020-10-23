@@ -65,6 +65,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	B4XImageView1.ResizeMode = "FILL"
 	B4XImageView1.Load(File.DirAssets, "livro.jpg")
 	
+		
 	banco.Initialize
 End Sub
 

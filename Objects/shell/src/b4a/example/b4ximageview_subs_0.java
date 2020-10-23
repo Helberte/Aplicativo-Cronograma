@@ -431,15 +431,7 @@ _imageviewheight = BA.numberCast(float.class, __ref.getField(false,"_mbitmap" /*
 default: {
  BA.debugLineNum = 92;BA.debugLine="Log(\"Invalid resize mode: \"  & mResizeMode)";
 Debug.JustUpdateDeviceLine();
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-b4ximageview.__c.runVoidMethod ("LogImpl","914286875",RemoteObject.concat(RemoteObject.createImmutable("Invalid resize mode: "),__ref.getField(true,"_mresizemode" /*RemoteObject*/ )),0);
-=======
-b4ximageview.__c.runVoidMethod ("LogImpl","911927579",RemoteObject.concat(RemoteObject.createImmutable("Invalid resize mode: "),__ref.getField(true,"_mresizemode" /*RemoteObject*/ )),0);
->>>>>>> main
-=======
-b4ximageview.__c.runVoidMethod ("LogImpl","911927579",RemoteObject.concat(RemoteObject.createImmutable("Invalid resize mode: "),__ref.getField(true,"_mresizemode" /*RemoteObject*/ )),0);
->>>>>>> Stashed changes
+b4ximageview.__c.runVoidMethod ("LogImpl","911272219",RemoteObject.concat(RemoteObject.createImmutable("Invalid resize mode: "),__ref.getField(true,"_mresizemode" /*RemoteObject*/ )),0);
  break; }
 }
 ;

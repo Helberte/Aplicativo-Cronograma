@@ -8,7 +8,7 @@ public class codigolaylogin_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,14);
+		Debug.PushSubsStack("Activity_Create (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,14);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 14;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -34,7 +34,7 @@ finally {
 		}}
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,112);
+		Debug.PushSubsStack("Activity_KeyPress (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,112);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_keypress", _keycode);}
 Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 112;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
@@ -65,7 +65,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,89);
+		Debug.PushSubsStack("Activity_Pause (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,89);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 89;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -82,7 +82,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,85);
+		Debug.PushSubsStack("Activity_Resume (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,85);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_resume");}
  BA.debugLineNum = 85;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(1048576);
@@ -98,7 +98,7 @@ finally {
 		}}
 public static RemoteObject  _btcadastro_click() throws Exception{
 try {
-		Debug.PushSubsStack("btCadastro_Click (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,93);
+		Debug.PushSubsStack("btCadastro_Click (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,93);
 if (RapidSub.canDelegate("btcadastro_click")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","btcadastro_click");}
  BA.debugLineNum = 93;BA.debugLine="Sub btCadastro_Click";
 Debug.ShouldStop(268435456);
@@ -120,7 +120,7 @@ finally {
 		}}
 public static void  _btconectar_click() throws Exception{
 try {
-		Debug.PushSubsStack("btConectar_Click (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,31);
+		Debug.PushSubsStack("btConectar_Click (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,31);
 if (RapidSub.canDelegate("btconectar_click")) { b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","btconectar_click"); return;}
 ResumableSub_btConectar_Click rsub = new ResumableSub_btConectar_Click(null);
 rsub.resume(null, null);
@@ -145,7 +145,7 @@ RemoteObject _result_2 = RemoteObject.declareNull("anywheresoftware.b4j.objects.
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("btConectar_Click (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,31);
+		Debug.PushSubsStack("btConectar_Click (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,31);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -395,7 +395,7 @@ public static void  _complete(RemoteObject _result_2) throws Exception{
 }
 public static RemoteObject  _edlogin_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("EdLogin_TextChanged (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,105);
+		Debug.PushSubsStack("EdLogin_TextChanged (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,105);
 if (RapidSub.canDelegate("edlogin_textchanged")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","edlogin_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -420,7 +420,7 @@ finally {
 		}}
 public static RemoteObject  _edsenha_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("EdSenha_TextChanged (codigolaylogin) ","codigolaylogin",6,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,98);
+		Debug.PushSubsStack("EdSenha_TextChanged (codigolaylogin) ","codigolaylogin",7,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,98);
 if (RapidSub.canDelegate("edsenha_textchanged")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","edsenha_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);

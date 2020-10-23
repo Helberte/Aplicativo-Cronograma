@@ -8,7 +8,7 @@ public class codigolancamentoleitura_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,32);
+		Debug.PushSubsStack("Activity_Create (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,32);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","activity_create", _firsttime);}
 RemoteObject _p = RemoteObject.createImmutable(0);
 Debug.locals.put("FirstTime", _firsttime);
@@ -89,7 +89,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,69);
+		Debug.PushSubsStack("Activity_Pause (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,69);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 69;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -106,7 +106,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,65);
+		Debug.PushSubsStack("Activity_Resume (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,65);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","activity_resume");}
  BA.debugLineNum = 65;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(1);
@@ -122,7 +122,7 @@ finally {
 		}}
 public static RemoteObject  _btcancelar_click() throws Exception{
 try {
-		Debug.PushSubsStack("btCancelar_Click (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,73);
+		Debug.PushSubsStack("btCancelar_Click (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,73);
 if (RapidSub.canDelegate("btcancelar_click")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","btcancelar_click");}
  BA.debugLineNum = 73;BA.debugLine="Sub btCancelar_Click";
 Debug.ShouldStop(256);
@@ -141,7 +141,7 @@ finally {
 		}}
 public static void  _btok_click() throws Exception{
 try {
-		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,77);
+		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,77);
 if (RapidSub.canDelegate("btok_click")) { b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","btok_click"); return;}
 ResumableSub_btOk_Click rsub = new ResumableSub_btOk_Click(null);
 rsub.resume(null, null);
@@ -164,7 +164,7 @@ RemoteObject _result = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQ
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,77);
+		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,77);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -327,7 +327,7 @@ public static void  _complete(RemoteObject _result) throws Exception{
 }
 public static RemoteObject  _edpaginaatual_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edPaginaAtual_TextChanged (codigolancamentoleitura) ","codigolancamentoleitura",8,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,109);
+		Debug.PushSubsStack("edPaginaAtual_TextChanged (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,109);
 if (RapidSub.canDelegate("edpaginaatual_textchanged")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","edpaginaatual_textchanged", _old, _new);}
 RemoteObject _valor = RemoteObject.createImmutable(0);
 Debug.locals.put("Old", _old);
