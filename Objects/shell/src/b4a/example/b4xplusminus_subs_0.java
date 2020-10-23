@@ -150,7 +150,7 @@ Debug.JustUpdateDeviceLine();
 _xlbl.runMethod(true,"setTextColor",__ref.getField(false,"_mainlabel" /*RemoteObject*/ ).runMethod(true,"getTextColor"));
  BA.debugLineNum = 254;BA.debugLine="Return xlbl";
 Debug.JustUpdateDeviceLine();
-if (true) return _xlbl;
+Debug.CheckDeviceExceptions();if (true) return _xlbl;
  BA.debugLineNum = 255;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -185,7 +185,7 @@ Debug.JustUpdateDeviceLine();
 __ref.setField ("_loopindex" /*RemoteObject*/ ,RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_loopindex" /*RemoteObject*/ ),RemoteObject.createImmutable(1)}, "+",1, 1));
  BA.debugLineNum = 189;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.createImmutable("");
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
  };
  };
  BA.debugLineNum = 192;BA.debugLine="SetIndex(mSelectedIndex - 1, True)";
@@ -325,7 +325,7 @@ if (RapidSub.canDelegate("getselectedvalue")) { return __ref.runUserSub(false, "
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 118;BA.debugLine="Return GetValueImpl (mSelectedIndex)";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.runClassMethod (b4a.example.b4xplusminus.class, "_getvalueimpl" /*RemoteObject*/ ,(Object)(__ref.getField(true,"_mselectedindex" /*RemoteObject*/ )));
+Debug.CheckDeviceExceptions();if (true) return __ref.runClassMethod (b4a.example.b4xplusminus.class, "_getvalueimpl" /*RemoteObject*/ ,(Object)(__ref.getField(true,"_mselectedindex" /*RemoteObject*/ )));
  BA.debugLineNum = 119;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -348,18 +348,18 @@ Debug.JustUpdateDeviceLine();
 if (__ref.getField(true,"_stringmode" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 132;BA.debugLine="Return mStringItems.Get(Index)";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mstringitems" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(_index));
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mstringitems" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(_index));
  }else {
  BA.debugLineNum = 134;BA.debugLine="If Index = Size - 1 Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_index,BA.numberCast(double.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_size" /*RemoteObject*/ ),RemoteObject.createImmutable(1)}, "-",1, 1)))) { 
  BA.debugLineNum = 135;BA.debugLine="Return mEndRange";
 Debug.JustUpdateDeviceLine();
-if (true) return (__ref.getField(true,"_mendrange" /*RemoteObject*/ ));
+Debug.CheckDeviceExceptions();if (true) return (__ref.getField(true,"_mendrange" /*RemoteObject*/ ));
  }else {
  BA.debugLineNum = 137;BA.debugLine="Return mStartRange + Index * mInterval";
 Debug.JustUpdateDeviceLine();
-if (true) return (RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_mstartrange" /*RemoteObject*/ ),_index,__ref.getField(true,"_minterval" /*RemoteObject*/ )}, "+*",1, 0));
+Debug.CheckDeviceExceptions();if (true) return (RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_mstartrange" /*RemoteObject*/ ),_index,__ref.getField(true,"_minterval" /*RemoteObject*/ )}, "+*",1, 0));
  };
  };
  BA.debugLineNum = 140;BA.debugLine="End Sub";
@@ -415,7 +415,7 @@ Debug.JustUpdateDeviceLine();
 __ref.setField ("_loopindex" /*RemoteObject*/ ,RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_loopindex" /*RemoteObject*/ ),RemoteObject.createImmutable(1)}, "+",1, 1));
  BA.debugLineNum = 176;BA.debugLine="Return";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.createImmutable("");
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");
  };
  };
  BA.debugLineNum = 179;BA.debugLine="SetIndex(mSelectedIndex + 1, True)";
@@ -720,7 +720,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 6;
-if (true) return ;
+Debug.CheckDeviceExceptions();if (true) return ;
 if (true) break;
 
 case 6:
@@ -826,7 +826,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 200;BA.debugLine="If pnl.GetView(0).Enabled = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_pnl.runMethod(false,"GetView",(Object)(BA.numberCast(int.class, 0))).runMethod(true,"getEnabled"),b4xplusminus.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 201;BA.debugLine="If Start Then";
 Debug.JustUpdateDeviceLine();
 if (_start.<Boolean>get().booleanValue()) { 

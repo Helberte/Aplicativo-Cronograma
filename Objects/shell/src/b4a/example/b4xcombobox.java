@@ -24,12 +24,19 @@ public static RemoteObject _b4icancelbutton = RemoteObject.createImmutable("");
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
+<<<<<<< HEAD
 public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+=======
+>>>>>>> main
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
+<<<<<<< HEAD
+=======
+public static b4a.example.act_telacadastro _act_telacadastro = null;
+>>>>>>> main
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"B4iCancelButton",_ref.getField(false, "_b4icancelbutton"),"cmbBox",_ref.getField(false, "_cmbbox"),"DateUtils",_ref.getField(false, "_dateutils"),"DelayBeforeChangeEvent",_ref.getField(false, "_delaybeforechangeevent"),"DelayIndex",_ref.getField(false, "_delayindex"),"LastSelectedIndex",_ref.getField(false, "_lastselectedindex"),"mBase",_ref.getField(false, "_mbase"),"mCallBack",_ref.getField(false, "_mcallback"),"mEventName",_ref.getField(false, "_meventname"),"Tag",_ref.getField(false, "_tag"),"xui",_ref.getField(false, "_xui")};

@@ -353,11 +353,18 @@ public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
 vis = vis | (codigocadastro.mostCurrent != null);
+<<<<<<< HEAD
 vis = vis | (codigocadastrolivro.mostCurrent != null);
+=======
+>>>>>>> main
 vis = vis | (codigolancamentoleitura.mostCurrent != null);
 vis = vis | (codigolayanotacao.mostCurrent != null);
 vis = vis | (codigolayleituras.mostCurrent != null);
 vis = vis | (codigolaylogin.mostCurrent != null);
+<<<<<<< HEAD
+=======
+vis = vis | (act_telacadastro.mostCurrent != null);
+>>>>>>> main
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -395,6 +402,7 @@ public static void killProgram() {
 
  {
             Activity __a = null;
+<<<<<<< HEAD
             if (codigocadastrolivro.previousOne != null) {
 				__a = codigocadastrolivro.previousOne.get();
 			}
@@ -407,6 +415,8 @@ public static void killProgram() {
 
  {
             Activity __a = null;
+=======
+>>>>>>> main
             if (codigolancamentoleitura.previousOne != null) {
 				__a = codigolancamentoleitura.previousOne.get();
 			}
@@ -454,6 +464,21 @@ public static void killProgram() {
 				__a.finish();}
 
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
+<<<<<<< HEAD
+=======
+ {
+            Activity __a = null;
+            if (act_telacadastro.previousOne != null) {
+				__a = act_telacadastro.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(act_telacadastro.mostCurrent == null ? null : act_telacadastro.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+>>>>>>> main
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.phone.Phone.ContentChooser _fotos = null;
@@ -461,12 +486,19 @@ public static int _id_do_usuario = 0;
 public static boolean _cadastroualgo = false;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.codigocadastro _codigocadastro = null;
+<<<<<<< HEAD
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+=======
+>>>>>>> main
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+<<<<<<< HEAD
+=======
+public b4a.example.act_telacadastro _act_telacadastro = null;
+>>>>>>> main
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";

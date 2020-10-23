@@ -39,12 +39,19 @@ public anywheresoftware.b4j.objects.SQL _conexao = null;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
+<<<<<<< HEAD
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+=======
+>>>>>>> main
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+<<<<<<< HEAD
+=======
+public b4a.example.act_telacadastro _act_telacadastro = null;
+>>>>>>> main
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public String  _class_globals(b4a.example.classbancodados __ref) throws Exception{
 __ref = this;
@@ -56,7 +63,11 @@ RDebugUtils.currentLine=327681;
 _driver = "net.sourceforge.jtds.jdbc.Driver";
 RDebugUtils.currentLine=327682;
  //BA.debugLineNum = 327682;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
+<<<<<<< HEAD
 _jdbcurl = "jdbc:jtds:sqlserver://192.168.2.5:1433;databaseName=cronograma;logintimeout=10";
+=======
+_jdbcurl = "jdbc:jtds:sqlserver://192.168.1.108:1433;databaseName=cronograma;logintimeout=10";
+>>>>>>> main
 RDebugUtils.currentLine=327685;
  //BA.debugLineNum = 327685;BA.debugLine="Private usuario As String = \"sa\"";
 _usuario = "sa";

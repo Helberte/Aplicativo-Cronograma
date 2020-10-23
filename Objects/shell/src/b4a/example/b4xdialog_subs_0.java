@@ -200,10 +200,14 @@ __ref.runClassMethod (b4a.example.b4xdialog.class, "_setavg" /*RemoteObject*/ ,(
 ;
  BA.debugLineNum = 320;BA.debugLine="Log(\"Time: \" & (DateTime.Now - n))";
 Debug.JustUpdateDeviceLine();
+<<<<<<< HEAD
 b4xdialog.__c.runVoidMethod ("LogImpl","98585252",RemoteObject.concat(RemoteObject.createImmutable("Time: "),(RemoteObject.solve(new RemoteObject[] {b4xdialog.__c.getField(false,"DateTime").runMethod(true,"getNow"),_n}, "-",1, 2))),0);
+=======
+b4xdialog.__c.runVoidMethod ("LogImpl","912189732",RemoteObject.concat(RemoteObject.createImmutable("Time: "),(RemoteObject.solve(new RemoteObject[] {b4xdialog.__c.getField(false,"DateTime").runMethod(true,"getNow"),_n}, "-",1, 2))),0);
+>>>>>>> main
  BA.debugLineNum = 321;BA.debugLine="Return bc";
 Debug.JustUpdateDeviceLine();
-if (true) return _bc;
+Debug.CheckDeviceExceptions();if (true) return _bc;
  BA.debugLineNum = 322;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -228,7 +232,7 @@ _b = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod
  BA.debugLineNum = 232;BA.debugLine="If ButtonsState.GetDefault(b.Tag, True) = False T";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_buttonsstate" /*RemoteObject*/ ).runMethod(false,"GetDefault",(Object)(_b.runMethod(false,"getTag")),(Object)((b4xdialog.__c.getField(true,"True")))),(b4xdialog.__c.getField(true,"False")))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 233;BA.debugLine="Close(b.Tag)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xdialog.class, "_close" /*RemoteObject*/ ,(Object)(BA.numberCast(int.class, _b.runMethod(false,"getTag"))));
@@ -320,11 +324,11 @@ Debug.JustUpdateDeviceLine();
 b4xdialog.__c.runVoidMethod ("CallSubDelayed2",__ref.getField(false, "ba"),(Object)(__ref),(Object)(BA.ObjectToString("CloseMessage")),(Object)((_result)));
  BA.debugLineNum = 239;BA.debugLine="Return True";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xdialog.__c.getField(true,"True");
+Debug.CheckDeviceExceptions();if (true) return b4xdialog.__c.getField(true,"True");
  };
  BA.debugLineNum = 241;BA.debugLine="Return False";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xdialog.__c.getField(true,"False");
+Debug.CheckDeviceExceptions();if (true) return b4xdialog.__c.getField(true,"False");
  BA.debugLineNum = 242;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -349,7 +353,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 191;BA.debugLine="If Text = \"\" Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_text,RemoteObject.createImmutable(("")))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 195;BA.debugLine="Dim btn As Label";
 Debug.JustUpdateDeviceLine();
 _btn = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("btn", _btn);
@@ -420,13 +424,13 @@ Debug.locals.put("b", _b);
  BA.debugLineNum = 214;BA.debugLine="If b.Tag = ResultCode Then Return b 'ignore";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_b.runMethod(false,"getTag"),(_resultcode))) { 
-if (true) return _b;};
+Debug.CheckDeviceExceptions();if (true) return _b;};
  }
 }Debug.locals.put("b", _b);
 ;
  BA.debugLineNum = 216;BA.debugLine="Return Null";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), b4xdialog.__c.getField(false,"Null"));
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), b4xdialog.__c.getField(false,"Null"));
  BA.debugLineNum = 217;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -445,7 +449,7 @@ if (RapidSub.canDelegate("getvisible")) { return __ref.runUserSub(false, "b4xdia
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 187;BA.debugLine="Return Background.IsInitialized And Background.Pa";
 Debug.JustUpdateDeviceLine();
-if (true) return BA.ObjectToBoolean(RemoteObject.solveBoolean(".",__ref.getField(false,"_background" /*RemoteObject*/ ).runMethod(true,"IsInitialized")) && RemoteObject.solveBoolean(".",__ref.getField(false,"_background" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"IsInitialized")));
+Debug.CheckDeviceExceptions();if (true) return BA.ObjectToBoolean(RemoteObject.solveBoolean(".",__ref.getField(false,"_background" /*RemoteObject*/ ).runMethod(true,"IsInitialized")) && RemoteObject.solveBoolean(".",__ref.getField(false,"_background" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"IsInitialized")));
  BA.debugLineNum = 188;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -801,7 +805,7 @@ _result = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutabl
 ;
  BA.debugLineNum = 91;BA.debugLine="Return Result";
 Debug.JustUpdateDeviceLine();
-if (true) {
+Debug.CheckDeviceExceptions();if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(_result));return;};
  BA.debugLineNum = 92;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
@@ -1448,7 +1452,7 @@ Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_background" /*RemoteObject*/ ).runVoidMethod ("RemoveViewFromParent");
  BA.debugLineNum = 183;BA.debugLine="Return Result";
 Debug.JustUpdateDeviceLine();
-if (true) {
+Debug.CheckDeviceExceptions();if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(_result));return;};
  BA.debugLineNum = 184;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
@@ -1544,7 +1548,7 @@ Debug.JustUpdateDeviceLine();
 __ref.setField ("_putattop" /*RemoteObject*/ ,parent.__c.getField(true,"False"));
  BA.debugLineNum = 68;BA.debugLine="Return Result";
 Debug.JustUpdateDeviceLine();
-if (true) {
+Debug.CheckDeviceExceptions();if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(_result));return;};
  BA.debugLineNum = 69;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
@@ -1587,7 +1591,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 272;BA.debugLine="If BlurBackground = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(true,"_blurbackground" /*RemoteObject*/ ),b4xdialog.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 273;BA.debugLine="Background.Visible = False";
 Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_background" /*RemoteObject*/ ).runMethod(true,"setVisible",b4xdialog.__c.getField(true,"False"));

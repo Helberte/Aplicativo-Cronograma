@@ -62,7 +62,7 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Event_lbl_Click
-	StartActivity(CodigoCadastroLivro)
+	StartActivity(act_TelaCadastro)
 End Sub
 
 Sub Activity_Resume
@@ -95,7 +95,13 @@ Sub Atualiza_leituras As ResumableSub
 		Result.NextRow
 		
 		If Result.GetInt("RESULTADO") = 2 Then
-						
+			
+			If temPanel Then
+				scrollView1.Panel.RemoveView
+				temPanel = False
+				lbl_Inicial_Leitura.Initialize("")
+			End If			
+			
 			btAdicionarLeitura.Visible = False
 			
 			lbl_Inicial_Leitura.Text = Result.GetString("MENSAGEM")
@@ -355,7 +361,7 @@ Sub Event_btLancar_Click
 End Sub
 
 Sub btAdicionarLeitura_Click	
-	StartActivity(CodigoCadastroLivro)	
+	StartActivity(act_TelaCadastro)	
 End Sub
 
 Sub TabStrip_PageSelected (Position As Int)

@@ -8,7 +8,11 @@ public class codigolancamentoleitura_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("Activity_Create (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,32);
+=======
+		Debug.PushSubsStack("Activity_Create (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,32);
+>>>>>>> main
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","activity_create", _firsttime);}
 RemoteObject _p = RemoteObject.createImmutable(0);
 Debug.locals.put("FirstTime", _firsttime);
@@ -29,56 +33,64 @@ codigolancamentoleitura.mostCurrent._lbltitulolivro.runMethod(true,"setText",BA.
  BA.debugLineNum = 40;BA.debugLine="lblNomeUsuario.Text = nomeUsuario";
 Debug.ShouldStop(128);
 codigolancamentoleitura.mostCurrent._lblnomeusuario.runMethod(true,"setText",BA.ObjectToCharSequence(codigolancamentoleitura._nomeusuario));
- BA.debugLineNum = 41;BA.debugLine="edPaginaAtual.Text = paginaAtual + meta";
+ BA.debugLineNum = 41;BA.debugLine="edTotalPaginas.Text = totalPaginas";
 Debug.ShouldStop(256);
-codigolancamentoleitura.mostCurrent._edpaginaatual.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,codigolancamentoleitura._meta}, "+",1, 1)));
- BA.debugLineNum = 42;BA.debugLine="edTotalPaginas.Text = totalPaginas";
-Debug.ShouldStop(512);
 codigolancamentoleitura.mostCurrent._edtotalpaginas.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(codigolancamentoleitura._totalpaginas));
- BA.debugLineNum = 44;BA.debugLine="edPaginaAtual.RequestFocus";
+ BA.debugLineNum = 43;BA.debugLine="If paginaAtual + meta > totalPaginas Then";
+Debug.ShouldStop(1024);
+if (RemoteObject.solveBoolean(">",RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,codigolancamentoleitura._meta}, "+",1, 1),BA.numberCast(double.class, codigolancamentoleitura._totalpaginas))) { 
+ BA.debugLineNum = 44;BA.debugLine="edPaginaAtual.Text = totalPaginas";
 Debug.ShouldStop(2048);
-codigolancamentoleitura.mostCurrent._edpaginaatual.runVoidMethod ("RequestFocus");
- BA.debugLineNum = 46;BA.debugLine="Dim p As Int";
+codigolancamentoleitura.mostCurrent._edpaginaatual.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(codigolancamentoleitura._totalpaginas));
+ }else {
+ BA.debugLineNum = 46;BA.debugLine="edPaginaAtual.Text = paginaAtual + meta";
 Debug.ShouldStop(8192);
-_p = RemoteObject.createImmutable(0);Debug.locals.put("p", _p);
- BA.debugLineNum = 48;BA.debugLine="p = (paginaAtual * 100) / totalPaginas";
-Debug.ShouldStop(32768);
-_p = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,RemoteObject.createImmutable(100)}, "*",0, 1)),codigolancamentoleitura._totalpaginas}, "/",0, 0));Debug.locals.put("p", _p);
- BA.debugLineNum = 49;BA.debugLine="lblPorcentagem.Text = p & \" % Lidos\"";
+codigolancamentoleitura.mostCurrent._edpaginaatual.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,codigolancamentoleitura._meta}, "+",1, 1)));
+ };
+ BA.debugLineNum = 49;BA.debugLine="edPaginaAtual.RequestFocus";
 Debug.ShouldStop(65536);
-codigolancamentoleitura.mostCurrent._lblporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_p,RemoteObject.createImmutable(" % Lidos"))));
- BA.debugLineNum = 51;BA.debugLine="p = ((paginaAtual + meta) * 100) / totalPaginas";
+codigolancamentoleitura.mostCurrent._edpaginaatual.runVoidMethod ("RequestFocus");
+ BA.debugLineNum = 51;BA.debugLine="Dim p As Int";
 Debug.ShouldStop(262144);
-_p = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,codigolancamentoleitura._meta}, "+",1, 1)),RemoteObject.createImmutable(100)}, "*",0, 1)),codigolancamentoleitura._totalpaginas}, "/",0, 0));Debug.locals.put("p", _p);
- BA.debugLineNum = 52;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \" &";
-Debug.ShouldStop(524288);
-codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Próximo avanço "),_p,RemoteObject.createImmutable("%"))));
- BA.debugLineNum = 54;BA.debugLine="If tipoLeitura = \"capítulos\" Then";
+_p = RemoteObject.createImmutable(0);Debug.locals.put("p", _p);
+ BA.debugLineNum = 53;BA.debugLine="p = (paginaAtual * 100) / totalPaginas";
+Debug.ShouldStop(1048576);
+_p = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,RemoteObject.createImmutable(100)}, "*",0, 1)),codigolancamentoleitura._totalpaginas}, "/",0, 0));Debug.locals.put("p", _p);
+ BA.debugLineNum = 54;BA.debugLine="lblPorcentagem.Text = p & \" % Lidos\"";
 Debug.ShouldStop(2097152);
-if (RemoteObject.solveBoolean("=",codigolancamentoleitura._tipoleitura,BA.ObjectToString("capítulos"))) { 
- BA.debugLineNum = 55;BA.debugLine="lblPaginaAtual.Text = \"Capítulo atual\"";
-Debug.ShouldStop(4194304);
-codigolancamentoleitura.mostCurrent._lblpaginaatual.runMethod(true,"setText",BA.ObjectToCharSequence("Capítulo atual"));
- BA.debugLineNum = 56;BA.debugLine="lblTotalPaginas.Text = \"Total capítulos\"";
+codigolancamentoleitura.mostCurrent._lblporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_p,RemoteObject.createImmutable(" % Lidos"))));
+ BA.debugLineNum = 56;BA.debugLine="p = ((paginaAtual + meta) * 100) / totalPaginas";
 Debug.ShouldStop(8388608);
+_p = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura._paginaatual,codigolancamentoleitura._meta}, "+",1, 1)),RemoteObject.createImmutable(100)}, "*",0, 1)),codigolancamentoleitura._totalpaginas}, "/",0, 0));Debug.locals.put("p", _p);
+ BA.debugLineNum = 57;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \" &";
+Debug.ShouldStop(16777216);
+codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Próximo avanço "),_p,RemoteObject.createImmutable("%"))));
+ BA.debugLineNum = 59;BA.debugLine="If tipoLeitura = \"capítulos\" Then";
+Debug.ShouldStop(67108864);
+if (RemoteObject.solveBoolean("=",codigolancamentoleitura._tipoleitura,BA.ObjectToString("capítulos"))) { 
+ BA.debugLineNum = 60;BA.debugLine="lblPaginaAtual.Text = \"Capítulo atual\"";
+Debug.ShouldStop(134217728);
+codigolancamentoleitura.mostCurrent._lblpaginaatual.runMethod(true,"setText",BA.ObjectToCharSequence("Capítulo atual"));
+ BA.debugLineNum = 61;BA.debugLine="lblTotalPaginas.Text = \"Total capítulos\"";
+Debug.ShouldStop(268435456);
 codigolancamentoleitura.mostCurrent._lbltotalpaginas.runMethod(true,"setText",BA.ObjectToCharSequence("Total capítulos"));
  }else 
-{ BA.debugLineNum = 57;BA.debugLine="else if tipoLeitura = \"páginas\" Then";
-Debug.ShouldStop(16777216);
+{ BA.debugLineNum = 62;BA.debugLine="else if tipoLeitura = \"páginas\" Then";
+Debug.ShouldStop(536870912);
 if (RemoteObject.solveBoolean("=",codigolancamentoleitura._tipoleitura,BA.ObjectToString("páginas"))) { 
- BA.debugLineNum = 58;BA.debugLine="lblPaginaAtual.Text = \"Página atual\"";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 63;BA.debugLine="lblPaginaAtual.Text = \"Página atual\"";
+Debug.ShouldStop(1073741824);
 codigolancamentoleitura.mostCurrent._lblpaginaatual.runMethod(true,"setText",BA.ObjectToCharSequence("Página atual"));
- BA.debugLineNum = 59;BA.debugLine="lblTotalPaginas.Text = \"Total páginas\"";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 64;BA.debugLine="lblTotalPaginas.Text = \"Total páginas\"";
+Debug.ShouldStop(-2147483648);
 codigolancamentoleitura.mostCurrent._lbltotalpaginas.runMethod(true,"setText",BA.ObjectToCharSequence("Total páginas"));
  }}
 ;
- BA.debugLineNum = 62;BA.debugLine="banco.Initialize";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 67;BA.debugLine="banco.Initialize";
+Debug.ShouldStop(4);
 codigolancamentoleitura.mostCurrent._banco.runClassMethod (b4a.example.classbancodados.class, "_initialize" /*RemoteObject*/ ,codigolancamentoleitura.processBA);
- BA.debugLineNum = 63;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 70;BA.debugLine="End Sub";
+Debug.ShouldStop(32);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -89,13 +101,17 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("Activity_Pause (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,69);
+=======
+		Debug.PushSubsStack("Activity_Pause (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,84);
+>>>>>>> main
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 69;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(16);
- BA.debugLineNum = 71;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 84;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(524288);
+ BA.debugLineNum = 86;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -106,12 +122,54 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("Activity_Resume (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,65);
+=======
+		Debug.PushSubsStack("Activity_Resume (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,72);
+>>>>>>> main
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","activity_resume");}
- BA.debugLineNum = 65;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(1);
- BA.debugLineNum = 67;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+RemoteObject _topo = RemoteObject.createImmutable(0);
+ BA.debugLineNum = 72;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(128);
+ BA.debugLineNum = 74;BA.debugLine="Dim topo As Int = b4XImageViewFoto.mBase.Top + b4";
+Debug.ShouldStop(512);
+_topo = RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura.mostCurrent._b4ximageviewfoto.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getTop"),codigolancamentoleitura.mostCurrent._b4ximageviewfoto.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getHeight")}, "+",1, 1);Debug.locals.put("topo", _topo);Debug.locals.put("topo", _topo);
+ BA.debugLineNum = 76;BA.debugLine="lblTituloLivro.TextColor = Colors.Transparent";
+Debug.ShouldStop(2048);
+codigolancamentoleitura.mostCurrent._lbltitulolivro.runMethod(true,"setTextColor",codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").getField(true,"Transparent"));
+ BA.debugLineNum = 77;BA.debugLine="lblTituloLivro.Top = topo - 5%y";
+Debug.ShouldStop(4096);
+codigolancamentoleitura.mostCurrent._lbltitulolivro.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_topo,codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 5)),codigolancamentoleitura.mostCurrent.activityBA)}, "-",1, 1));
+ BA.debugLineNum = 79;BA.debugLine="lblTituloLivro.SetLayoutAnimated(1000, (b4XImageV";
+Debug.ShouldStop(16384);
+codigolancamentoleitura.mostCurrent._lbltitulolivro.runVoidMethod ("SetLayoutAnimated",(Object)(BA.numberCast(int.class, 1000)),(Object)(BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {codigolancamentoleitura.mostCurrent._b4ximageviewfoto.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getWidth"),codigolancamentoleitura.mostCurrent._lbltitulolivro.runMethod(true,"getWidth")}, "-",1, 1)),RemoteObject.createImmutable(2)}, "/",0, 0))),(Object)(_topo),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 80)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 7)),codigolancamentoleitura.mostCurrent.activityBA)));
+ BA.debugLineNum = 80;BA.debugLine="lblTituloLivro.SetTextColorAnimated(1200, Colors.";
+Debug.ShouldStop(32768);
+codigolancamentoleitura.mostCurrent._lbltitulolivro.runVoidMethod ("SetTextColorAnimated",(Object)(BA.numberCast(int.class, 1200)),(Object)(codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 221)),(Object)(BA.numberCast(int.class, 2)),(Object)(BA.numberCast(int.class, 2)))));
+ BA.debugLineNum = 82;BA.debugLine="End Sub";
+Debug.ShouldStop(131072);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
+public static RemoteObject  _aparecepagatual() throws Exception{
+try {
+		Debug.PushSubsStack("AparecePagAtual (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,182);
+if (RapidSub.canDelegate("aparecepagatual")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","aparecepagatual");}
+ BA.debugLineNum = 182;BA.debugLine="Sub AparecePagAtual";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 183;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 3%y,";
+Debug.ShouldStop(4194304);
+codigolancamentoleitura.mostCurrent._lblpaginaatual.runVoidMethod ("SetLayoutAnimated",(Object)(BA.numberCast(int.class, 1200)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 12)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 3)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 28)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 7)),codigolancamentoleitura.mostCurrent.activityBA)));
+ BA.debugLineNum = 184;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.R";
+Debug.ShouldStop(8388608);
+codigolancamentoleitura.mostCurrent._lblpaginaatual.runVoidMethod ("SetTextColorAnimated",(Object)(BA.numberCast(int.class, 800)),(Object)(codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 111)),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)))));
+ BA.debugLineNum = 185;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -122,15 +180,19 @@ finally {
 		}}
 public static RemoteObject  _btcancelar_click() throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("btCancelar_Click (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,73);
+=======
+		Debug.PushSubsStack("btCancelar_Click (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,88);
+>>>>>>> main
 if (RapidSub.canDelegate("btcancelar_click")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","btcancelar_click");}
- BA.debugLineNum = 73;BA.debugLine="Sub btCancelar_Click";
-Debug.ShouldStop(256);
- BA.debugLineNum = 74;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 88;BA.debugLine="Sub btCancelar_Click";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 89;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(16777216);
 codigolancamentoleitura.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 75;BA.debugLine="End Sub";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 90;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -141,7 +203,11 @@ finally {
 		}}
 public static void  _btok_click() throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,77);
+=======
+		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,92);
+>>>>>>> main
 if (RapidSub.canDelegate("btok_click")) { b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","btok_click"); return;}
 ResumableSub_btOk_Click rsub = new ResumableSub_btOk_Click(null);
 rsub.resume(null, null);
@@ -164,7 +230,11 @@ RemoteObject _result = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQ
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,77);
+=======
+		Debug.PushSubsStack("btOk_Click (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,92);
+>>>>>>> main
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -177,133 +247,226 @@ return;
 case 0:
 //C
 this.state = 1;
- BA.debugLineNum = 78;BA.debugLine="Try";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 93;BA.debugLine="Try";
+Debug.ShouldStop(268435456);
 if (true) break;
 
 case 1:
 //try
-this.state = 12;
-this.catchState = 11;
+this.state = 20;
+this.catchState = 19;
 this.state = 3;
 if (true) break;
 
 case 3:
 //C
 this.state = 4;
-this.catchState = 11;
- BA.debugLineNum = 80;BA.debugLine="Dim cmd As String";
-Debug.ShouldStop(32768);
+this.catchState = 19;
+ BA.debugLineNum = 95;BA.debugLine="Dim cmd As String";
+Debug.ShouldStop(1073741824);
 _cmd = RemoteObject.createImmutable("");Debug.locals.put("cmd", _cmd);
- BA.debugLineNum = 82;BA.debugLine="cmd = \"exec sp_lancamento_leitura \" & Main.Id_do";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 97;BA.debugLine="cmd = \"exec sp_lancamento_leitura \" & Main.Id_do";
+Debug.ShouldStop(1);
 _cmd = RemoteObject.concat(RemoteObject.createImmutable("exec sp_lancamento_leitura "),parent.mostCurrent._main._id_do_usuario /*RemoteObject*/ ,RemoteObject.createImmutable(", "),parent._idlivro,RemoteObject.createImmutable(", "),parent.mostCurrent._edpaginaatual.runMethod(true,"getText"),RemoteObject.createImmutable(""));Debug.locals.put("cmd", _cmd);
- BA.debugLineNum = 86;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete (";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 101;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete (";
+Debug.ShouldStop(16);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","complete", codigolancamentoleitura.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolancamentoleitura", "btok_click"), parent.mostCurrent._banco.runClassMethod (b4a.example.classbancodados.class, "_insert_consulta" /*RemoteObject*/ ,(Object)(_cmd)));
-this.state = 13;
+this.state = 21;
 return;
-case 13:
+case 21:
 //C
 this.state = 4;
 _result = (RemoteObject) result.getArrayElement(false,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
 ;
- BA.debugLineNum = 88;BA.debugLine="Result.NextRow";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 103;BA.debugLine="Result.NextRow";
+Debug.ShouldStop(64);
 _result.runVoidMethod ("NextRow");
- BA.debugLineNum = 90;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 105;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
+Debug.ShouldStop(256);
 if (true) break;
 
 case 4:
 //if
-this.state = 9;
+this.state = 17;
 if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.numberCast(double.class, 1))) { 
 this.state = 6;
 }else 
-{ BA.debugLineNum = 95;BA.debugLine="Else if Result.GetInt(\"RESULTADO\") = 0 Then";
-Debug.ShouldStop(1073741824);
+{ BA.debugLineNum = 110;BA.debugLine="Else if Result.GetInt(\"RESULTADO\") = 0 Then";
+Debug.ShouldStop(8192);
 if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.numberCast(double.class, 0))) { 
 this.state = 8;
-}}
+}else 
+{ BA.debugLineNum = 115;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 2 Then";
+Debug.ShouldStop(262144);
+if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.numberCast(double.class, 2))) { 
+this.state = 10;
+}}}
 if (true) break;
 
 case 6:
 //C
-this.state = 9;
- BA.debugLineNum = 91;BA.debugLine="ToastMessageShow(\"Sucesso\",True)";
-Debug.ShouldStop(67108864);
+this.state = 17;
+ BA.debugLineNum = 106;BA.debugLine="ToastMessageShow(\"Sucesso\",True)";
+Debug.ShouldStop(512);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Sucesso")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
- BA.debugLineNum = 92;BA.debugLine="Main.CadastrouAlgo = True";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 107;BA.debugLine="Main.CadastrouAlgo = True";
+Debug.ShouldStop(1024);
 parent.mostCurrent._main._cadastroualgo /*RemoteObject*/  = parent.mostCurrent.__c.getField(true,"True");
- BA.debugLineNum = 93;BA.debugLine="Sleep(100)";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 108;BA.debugLine="Sleep(100)";
+Debug.ShouldStop(2048);
 parent.mostCurrent.__c.runVoidMethod ("Sleep",codigolancamentoleitura.mostCurrent.activityBA,anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolancamentoleitura", "btok_click"),BA.numberCast(int.class, 100));
-this.state = 14;
+this.state = 22;
 return;
-case 14:
+case 22:
 //C
-this.state = 9;
+this.state = 17;
 ;
- BA.debugLineNum = 94;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 109;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(4096);
 parent.mostCurrent._activity.runVoidMethod ("Finish");
  if (true) break;
 
 case 8:
 //C
-this.state = 9;
- BA.debugLineNum = 96;BA.debugLine="Sleep(100)";
-Debug.ShouldStop(-2147483648);
+this.state = 17;
+ BA.debugLineNum = 111;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização";
+Debug.ShouldStop(16384);
+parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Há algo errado na atualização!")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
+ BA.debugLineNum = 112;BA.debugLine="Main.CadastrouAlgo = True";
+Debug.ShouldStop(32768);
+parent.mostCurrent._main._cadastroualgo /*RemoteObject*/  = parent.mostCurrent.__c.getField(true,"True");
+ BA.debugLineNum = 113;BA.debugLine="Sleep(100)";
+Debug.ShouldStop(65536);
 parent.mostCurrent.__c.runVoidMethod ("Sleep",codigolancamentoleitura.mostCurrent.activityBA,anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolancamentoleitura", "btok_click"),BA.numberCast(int.class, 100));
-this.state = 15;
+this.state = 23;
 return;
+case 23:
+//C
+this.state = 17;
+;
+ BA.debugLineNum = 114;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(131072);
+parent.mostCurrent._activity.runVoidMethod ("Finish");
+ if (true) break;
+
+case 10:
+//C
+this.state = 11;
+ BA.debugLineNum = 116;BA.debugLine="cmd = \"exec sp_adiciona_leitura_concluida \" & M";
+Debug.ShouldStop(524288);
+_cmd = RemoteObject.concat(RemoteObject.createImmutable("exec sp_adiciona_leitura_concluida "),parent.mostCurrent._main._id_do_usuario /*RemoteObject*/ ,RemoteObject.createImmutable(", "),parent._idlivro,RemoteObject.createImmutable(""));Debug.locals.put("cmd", _cmd);
+ BA.debugLineNum = 118;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete";
+Debug.ShouldStop(2097152);
+parent.mostCurrent.__c.runVoidMethod ("WaitFor","complete", codigolancamentoleitura.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolancamentoleitura", "btok_click"), parent.mostCurrent._banco.runClassMethod (b4a.example.classbancodados.class, "_insert_consulta" /*RemoteObject*/ ,(Object)(_cmd)));
+this.state = 24;
+return;
+case 24:
+//C
+this.state = 11;
+_result = (RemoteObject) result.getArrayElement(false,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
+;
+ BA.debugLineNum = 120;BA.debugLine="Result.NextRow";
+Debug.ShouldStop(8388608);
+_result.runVoidMethod ("NextRow");
+ BA.debugLineNum = 122;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
+Debug.ShouldStop(33554432);
+if (true) break;
+
+case 11:
+//if
+this.state = 16;
+if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.numberCast(double.class, 1))) { 
+this.state = 13;
+}else 
+{ BA.debugLineNum = 127;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 0 Then";
+Debug.ShouldStop(1073741824);
+if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.numberCast(double.class, 0))) { 
+this.state = 15;
+}}
+if (true) break;
+
+case 13:
+//C
+this.state = 16;
+ BA.debugLineNum = 123;BA.debugLine="ToastMessageShow(\"Leitura concluída\",True)";
+Debug.ShouldStop(67108864);
+parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Leitura concluída")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
+ BA.debugLineNum = 124;BA.debugLine="Main.CadastrouAlgo = True";
+Debug.ShouldStop(134217728);
+parent.mostCurrent._main._cadastroualgo /*RemoteObject*/  = parent.mostCurrent.__c.getField(true,"True");
+ BA.debugLineNum = 125;BA.debugLine="Sleep(200)";
+Debug.ShouldStop(268435456);
+parent.mostCurrent.__c.runVoidMethod ("Sleep",codigolancamentoleitura.mostCurrent.activityBA,anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolancamentoleitura", "btok_click"),BA.numberCast(int.class, 200));
+this.state = 25;
+return;
+case 25:
+//C
+this.state = 16;
+;
+ BA.debugLineNum = 126;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(536870912);
+parent.mostCurrent._activity.runVoidMethod ("Finish");
+ if (true) break;
+
 case 15:
 //C
-this.state = 9;
-;
- BA.debugLineNum = 97;BA.debugLine="Main.CadastrouAlgo = True";
+this.state = 16;
+ BA.debugLineNum = 128;BA.debugLine="ToastMessageShow(\"Infelizmente algo deu errado";
+Debug.ShouldStop(-2147483648);
+parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Infelizmente algo deu errado.")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
+ BA.debugLineNum = 129;BA.debugLine="Main.CadastrouAlgo = True";
 Debug.ShouldStop(1);
 parent.mostCurrent._main._cadastroualgo /*RemoteObject*/  = parent.mostCurrent.__c.getField(true,"True");
- BA.debugLineNum = 98;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização";
+ BA.debugLineNum = 130;BA.debugLine="Sleep(200)";
 Debug.ShouldStop(2);
-parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Há algo errado na atualização!")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
- BA.debugLineNum = 99;BA.debugLine="Activity.Finish";
+parent.mostCurrent.__c.runVoidMethod ("Sleep",codigolancamentoleitura.mostCurrent.activityBA,anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolancamentoleitura", "btok_click"),BA.numberCast(int.class, 200));
+this.state = 26;
+return;
+case 26:
+//C
+this.state = 16;
+;
+ BA.debugLineNum = 131;BA.debugLine="Activity.Finish";
 Debug.ShouldStop(4);
 parent.mostCurrent._activity.runVoidMethod ("Finish");
  if (true) break;
 
-case 9:
+case 16:
 //C
-this.state = 12;
+this.state = 17;
+;
+ if (true) break;
+
+case 17:
+//C
+this.state = 20;
 ;
  Debug.CheckDeviceExceptions();
 if (true) break;
 
-case 11:
+case 19:
 //C
-this.state = 12;
+this.state = 20;
 this.catchState = 0;
- BA.debugLineNum = 103;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização!";
-Debug.ShouldStop(64);
-parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Há algo errado na atualização!")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
- BA.debugLineNum = 104;BA.debugLine="Main.CadastrouAlgo = False";
-Debug.ShouldStop(128);
-parent.mostCurrent._main._cadastroualgo /*RemoteObject*/  = parent.mostCurrent.__c.getField(true,"False");
- BA.debugLineNum = 105;BA.debugLine="Activity.Finish";
+ BA.debugLineNum = 137;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização!";
 Debug.ShouldStop(256);
+parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Há algo errado na atualização!")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
+ BA.debugLineNum = 138;BA.debugLine="Main.CadastrouAlgo = False";
+Debug.ShouldStop(512);
+parent.mostCurrent._main._cadastroualgo /*RemoteObject*/  = parent.mostCurrent.__c.getField(true,"False");
+ BA.debugLineNum = 139;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(1024);
 parent.mostCurrent._activity.runVoidMethod ("Finish");
  if (true) break;
 if (true) break;
 
-case 12:
+case 20:
 //C
 this.state = -1;
 this.catchState = 0;
 ;
- BA.debugLineNum = 107;BA.debugLine="End Sub";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 141;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -327,82 +490,86 @@ public static void  _complete(RemoteObject _result) throws Exception{
 }
 public static RemoteObject  _edpaginaatual_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
+<<<<<<< HEAD
 		Debug.PushSubsStack("edPaginaAtual_TextChanged (codigolancamentoleitura) ","codigolancamentoleitura",4,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,109);
+=======
+		Debug.PushSubsStack("edPaginaAtual_TextChanged (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,143);
+>>>>>>> main
 if (RapidSub.canDelegate("edpaginaatual_textchanged")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","edpaginaatual_textchanged", _old, _new);}
 RemoteObject _valor = RemoteObject.createImmutable(0);
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
- BA.debugLineNum = 109;BA.debugLine="Sub edPaginaAtual_TextChanged (Old As String, New";
-Debug.ShouldStop(4096);
- BA.debugLineNum = 111;BA.debugLine="Dim valor As Int";
+ BA.debugLineNum = 143;BA.debugLine="Sub edPaginaAtual_TextChanged (Old As String, New";
 Debug.ShouldStop(16384);
-_valor = RemoteObject.createImmutable(0);Debug.locals.put("valor", _valor);
- BA.debugLineNum = 113;BA.debugLine="If New.Trim <> \"\" Then";
+ BA.debugLineNum = 145;BA.debugLine="Dim valor As Int";
 Debug.ShouldStop(65536);
-if (RemoteObject.solveBoolean("!",_new.runMethod(true,"trim"),BA.ObjectToString(""))) { 
- BA.debugLineNum = 115;BA.debugLine="If New > totalPaginas Then";
+_valor = RemoteObject.createImmutable(0);Debug.locals.put("valor", _valor);
+ BA.debugLineNum = 147;BA.debugLine="If New.Trim <> \"\" Then";
 Debug.ShouldStop(262144);
-if (RemoteObject.solveBoolean(">",BA.numberCast(double.class, _new),BA.numberCast(double.class, codigolancamentoleitura._totalpaginas))) { 
- BA.debugLineNum = 116;BA.debugLine="lblIvalido.Visible = True";
-Debug.ShouldStop(524288);
-codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 117;BA.debugLine="lblIvalido.Text = \"Inválido\"";
+if (RemoteObject.solveBoolean("!",_new.runMethod(true,"trim"),BA.ObjectToString(""))) { 
+ BA.debugLineNum = 149;BA.debugLine="If New > totalPaginas Then";
 Debug.ShouldStop(1048576);
-codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setText",BA.ObjectToCharSequence("Inválido"));
- BA.debugLineNum = 119;BA.debugLine="edPaginaAtual.TextColor = Colors.Red";
+if (RemoteObject.solveBoolean(">",BA.numberCast(double.class, _new),BA.numberCast(double.class, codigolancamentoleitura._totalpaginas))) { 
+ BA.debugLineNum = 150;BA.debugLine="lblIvalido.Visible = True";
+Debug.ShouldStop(2097152);
+codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 151;BA.debugLine="lblIvalido.Text = \"Inválido\"";
 Debug.ShouldStop(4194304);
-codigolancamentoleitura.mostCurrent._edpaginaatual.runMethod(true,"setTextColor",codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").getField(true,"Red"));
- BA.debugLineNum = 120;BA.debugLine="lblPaginaAtual.Visible = False";
-Debug.ShouldStop(8388608);
-codigolancamentoleitura.mostCurrent._lblpaginaatual.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 121;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0";
+codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setText",BA.ObjectToCharSequence("Inválido"));
+ BA.debugLineNum = 153;BA.debugLine="edPaginaAtual.TextColor = Colors.Red";
 Debug.ShouldStop(16777216);
-codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence("Próximo avanço 0%"));
- BA.debugLineNum = 122;BA.debugLine="btOk.Enabled = False";
+codigolancamentoleitura.mostCurrent._edpaginaatual.runMethod(true,"setTextColor",codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").getField(true,"Red"));
+ BA.debugLineNum = 154;BA.debugLine="SomePagAtual";
 Debug.ShouldStop(33554432);
+_somepagatual();
+ BA.debugLineNum = 156;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0";
+Debug.ShouldStop(134217728);
+codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence("Próximo avanço 0%"));
+ BA.debugLineNum = 157;BA.debugLine="btOk.Enabled = False";
+Debug.ShouldStop(268435456);
 codigolancamentoleitura.mostCurrent._btok.runMethod(true,"setEnabled",codigolancamentoleitura.mostCurrent.__c.getField(true,"False"));
  }else {
- BA.debugLineNum = 124;BA.debugLine="edPaginaAtual.TextColor = Colors.RGB(46,16,16)";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 159;BA.debugLine="edPaginaAtual.TextColor = Colors.RGB(46,16,16)";
+Debug.ShouldStop(1073741824);
 codigolancamentoleitura.mostCurrent._edpaginaatual.runMethod(true,"setTextColor",codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 46)),(Object)(BA.numberCast(int.class, 16)),(Object)(BA.numberCast(int.class, 16))));
- BA.debugLineNum = 125;BA.debugLine="lblIvalido.Visible = False";
-Debug.ShouldStop(268435456);
-codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 126;BA.debugLine="lblIvalido.Text = \"Inválido\"";
-Debug.ShouldStop(536870912);
-codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setText",BA.ObjectToCharSequence("Inválido"));
- BA.debugLineNum = 128;BA.debugLine="lblPaginaAtual.Visible = True";
+ BA.debugLineNum = 160;BA.debugLine="lblIvalido.Visible = False";
 Debug.ShouldStop(-2147483648);
-codigolancamentoleitura.mostCurrent._lblpaginaatual.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 129;BA.debugLine="valor = ((New * 100) / totalPaginas)";
+codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 161;BA.debugLine="lblIvalido.Text = \"Inválido\"";
 Debug.ShouldStop(1);
-_valor = BA.numberCast(int.class, (RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, _new),RemoteObject.createImmutable(100)}, "*",0, 0)),codigolancamentoleitura._totalpaginas}, "/",0, 0)));Debug.locals.put("valor", _valor);
- BA.debugLineNum = 130;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
+codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setText",BA.ObjectToCharSequence("Inválido"));
+ BA.debugLineNum = 162;BA.debugLine="AparecePagAtual";
 Debug.ShouldStop(2);
+_aparecepagatual();
+ BA.debugLineNum = 164;BA.debugLine="valor = ((New * 100) / totalPaginas)";
+Debug.ShouldStop(8);
+_valor = BA.numberCast(int.class, (RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, _new),RemoteObject.createImmutable(100)}, "*",0, 0)),codigolancamentoleitura._totalpaginas}, "/",0, 0)));Debug.locals.put("valor", _valor);
+ BA.debugLineNum = 165;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
+Debug.ShouldStop(16);
 codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Próximo avanço "),_valor,RemoteObject.createImmutable("%"))));
- BA.debugLineNum = 131;BA.debugLine="btOk.Enabled = True";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 166;BA.debugLine="btOk.Enabled = True";
+Debug.ShouldStop(32);
 codigolancamentoleitura.mostCurrent._btok.runMethod(true,"setEnabled",codigolancamentoleitura.mostCurrent.__c.getField(true,"True"));
  };
  }else {
- BA.debugLineNum = 134;BA.debugLine="lblPaginaAtual.Visible = False";
-Debug.ShouldStop(32);
-codigolancamentoleitura.mostCurrent._lblpaginaatual.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 135;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0%";
-Debug.ShouldStop(64);
-codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence("Próximo avanço 0%"));
- BA.debugLineNum = 136;BA.debugLine="lblIvalido.Visible = True";
-Debug.ShouldStop(128);
-codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 137;BA.debugLine="lblIvalido.Text = \"Obrigatório\"";
+ BA.debugLineNum = 169;BA.debugLine="SomePagAtual";
 Debug.ShouldStop(256);
-codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setText",BA.ObjectToCharSequence("Obrigatório"));
- BA.debugLineNum = 138;BA.debugLine="btOk.Enabled = False";
+_somepagatual();
+ BA.debugLineNum = 170;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0%";
 Debug.ShouldStop(512);
+codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem.runMethod(true,"setText",BA.ObjectToCharSequence("Próximo avanço 0%"));
+ BA.debugLineNum = 171;BA.debugLine="lblIvalido.Visible = True";
+Debug.ShouldStop(1024);
+codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setVisible",codigolancamentoleitura.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 172;BA.debugLine="lblIvalido.Text = \"Obrigatório\"";
+Debug.ShouldStop(2048);
+codigolancamentoleitura.mostCurrent._lblivalido.runMethod(true,"setText",BA.ObjectToCharSequence("Obrigatório"));
+ BA.debugLineNum = 173;BA.debugLine="btOk.Enabled = False";
+Debug.ShouldStop(4096);
 codigolancamentoleitura.mostCurrent._btok.runMethod(true,"setEnabled",codigolancamentoleitura.mostCurrent.__c.getField(true,"False"));
  };
- BA.debugLineNum = 140;BA.debugLine="End Sub";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 175;BA.debugLine="End Sub";
+Debug.ShouldStop(16384);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -459,4 +626,26 @@ codigolancamentoleitura._tipoleitura = RemoteObject.createImmutable("");
  //BA.debugLineNum = 14;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
+public static RemoteObject  _somepagatual() throws Exception{
+try {
+		Debug.PushSubsStack("SomePagAtual (codigolancamentoleitura) ","codigolancamentoleitura",3,codigolancamentoleitura.mostCurrent.activityBA,codigolancamentoleitura.mostCurrent,177);
+if (RapidSub.canDelegate("somepagatual")) { return b4a.example.codigolancamentoleitura.remoteMe.runUserSub(false, "codigolancamentoleitura","somepagatual");}
+ BA.debugLineNum = 177;BA.debugLine="Sub SomePagAtual";
+Debug.ShouldStop(65536);
+ BA.debugLineNum = 178;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 1%y,";
+Debug.ShouldStop(131072);
+codigolancamentoleitura.mostCurrent._lblpaginaatual.runVoidMethod ("SetLayoutAnimated",(Object)(BA.numberCast(int.class, 1200)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 12)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 1)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 28)),codigolancamentoleitura.mostCurrent.activityBA)),(Object)(codigolancamentoleitura.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 7)),codigolancamentoleitura.mostCurrent.activityBA)));
+ BA.debugLineNum = 179;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.T";
+Debug.ShouldStop(262144);
+codigolancamentoleitura.mostCurrent._lblpaginaatual.runVoidMethod ("SetTextColorAnimated",(Object)(BA.numberCast(int.class, 800)),(Object)(codigolancamentoleitura.mostCurrent.__c.getField(false,"Colors").getField(true,"Transparent")));
+ BA.debugLineNum = 180;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 }

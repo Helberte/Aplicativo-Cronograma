@@ -49,12 +49,19 @@ public boolean _mhaptic = false;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
+<<<<<<< HEAD
 public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+=======
+>>>>>>> main
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+<<<<<<< HEAD
+=======
+public b4a.example.act_telacadastro _act_telacadastro = null;
+>>>>>>> main
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public String  _base_resize(b4a.example.swiftbutton __ref,double _width,double _height) throws Exception{
 __ref = this;
@@ -62,6 +69,7 @@ RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "base_resize", true))
 	 {return ((String) Debug.delegate(ba, "base_resize", new Object[] {_width,_height}));}
 anywheresoftware.b4a.objects.B4XViewWrapper _v = null;
+<<<<<<< HEAD
 RDebugUtils.currentLine=21168128;
  //BA.debugLineNum = 21168128;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
 RDebugUtils.currentLine=21168129;
@@ -69,6 +77,15 @@ RDebugUtils.currentLine=21168129;
 __ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Resize((float) (_width),(float) (_height));
 RDebugUtils.currentLine=21168130;
  //BA.debugLineNum = 21168130;BA.debugLine="For Each v As B4XView In mBase.GetAllViewsRecursi";
+=======
+RDebugUtils.currentLine=24772608;
+ //BA.debugLineNum = 24772608;BA.debugLine="Private Sub Base_Resize (Width As Double, Height A";
+RDebugUtils.currentLine=24772609;
+ //BA.debugLineNum = 24772609;BA.debugLine="cvs.Resize(Width, Height)";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Resize((float) (_width),(float) (_height));
+RDebugUtils.currentLine=24772610;
+ //BA.debugLineNum = 24772610;BA.debugLine="For Each v As B4XView In mBase.GetAllViewsRecursi";
+>>>>>>> main
 _v = new anywheresoftware.b4a.objects.B4XViewWrapper();
 {
 final anywheresoftware.b4a.BA.IterableList group2 = __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .GetAllViewsRecursive();
@@ -77,6 +94,7 @@ final int groupLen2 = group2.getSize()
 ;
 for (; index2 < groupLen2;index2++){
 _v = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(group2.Get(index2)));
+<<<<<<< HEAD
 RDebugUtils.currentLine=21168131;
  //BA.debugLineNum = 21168131;BA.debugLine="v.SetLayoutAnimated(0, 0, 0, Width, Height)";
 _v.SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
@@ -87,6 +105,18 @@ RDebugUtils.currentLine=21168133;
 __ref._draw /*String*/ (null);
 RDebugUtils.currentLine=21168134;
  //BA.debugLineNum = 21168134;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24772611;
+ //BA.debugLineNum = 24772611;BA.debugLine="v.SetLayoutAnimated(0, 0, 0, Width, Height)";
+_v.SetLayoutAnimated((int) (0),(int) (0),(int) (0),(int) (_width),(int) (_height));
+ }
+};
+RDebugUtils.currentLine=24772613;
+ //BA.debugLineNum = 24772613;BA.debugLine="Draw";
+__ref._draw /*String*/ (null);
+RDebugUtils.currentLine=24772614;
+ //BA.debugLineNum = 24772614;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _draw(b4a.example.swiftbutton __ref) throws Exception{
@@ -97,6 +127,7 @@ if (Debug.shouldDelegate(ba, "draw", true))
 anywheresoftware.b4a.objects.B4XCanvas.B4XRect _r = null;
 anywheresoftware.b4a.objects.B4XCanvas.B4XPath _p = null;
 int _c = 0;
+<<<<<<< HEAD
 RDebugUtils.currentLine=21626880;
  //BA.debugLineNum = 21626880;BA.debugLine="Private Sub Draw";
 RDebugUtils.currentLine=21626881;
@@ -144,10 +175,60 @@ RDebugUtils.currentLine=21626895;
 _c = 0;
 RDebugUtils.currentLine=21626896;
  //BA.debugLineNum = 21626896;BA.debugLine="If mDisabled Then c = disabledColor Else c = clr";
+=======
+RDebugUtils.currentLine=25231360;
+ //BA.debugLineNum = 25231360;BA.debugLine="Private Sub Draw";
+RDebugUtils.currentLine=25231361;
+ //BA.debugLineNum = 25231361;BA.debugLine="cvs.ClearRect(cvs.TargetRect)";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .ClearRect(__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .getTargetRect());
+RDebugUtils.currentLine=25231362;
+ //BA.debugLineNum = 25231362;BA.debugLine="Dim r As B4XRect";
+_r = new anywheresoftware.b4a.objects.B4XCanvas.B4XRect();
+RDebugUtils.currentLine=25231363;
+ //BA.debugLineNum = 25231363;BA.debugLine="Dim p As B4XPath";
+_p = new anywheresoftware.b4a.objects.B4XCanvas.B4XPath();
+RDebugUtils.currentLine=25231364;
+ //BA.debugLineNum = 25231364;BA.debugLine="r.Initialize(0, SideHeight, mBase.Width, mBase.He";
+_r.Initialize((float) (0),(float) (__ref._sideheight /*int*/ ),(float) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()),(float) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight()));
+RDebugUtils.currentLine=25231365;
+ //BA.debugLineNum = 25231365;BA.debugLine="If pressed = False Then";
+if (__ref._pressed /*boolean*/ ==__c.False) { 
+RDebugUtils.currentLine=25231366;
+ //BA.debugLineNum = 25231366;BA.debugLine="xLBL.Top = 0";
+__ref._xlbl /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTop((int) (0));
+RDebugUtils.currentLine=25231367;
+ //BA.debugLineNum = 25231367;BA.debugLine="p.InitializeRoundedRect(r, CornersRadius)";
+_p.InitializeRoundedRect(_r,(float) (__ref._cornersradius /*int*/ ));
+RDebugUtils.currentLine=25231368;
+ //BA.debugLineNum = 25231368;BA.debugLine="cvs.DrawPath(p, clr2, True, 0)";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .DrawPath(_p,__ref._clr2 /*int*/ ,__c.True,(float) (0));
+RDebugUtils.currentLine=25231369;
+ //BA.debugLineNum = 25231369;BA.debugLine="r.Initialize(0, 0, mBase.Width, mBase.Height - S";
+_r.Initialize((float) (0),(float) (0),(float) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()),(float) (__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight()-__ref._sideheight /*int*/ ));
+RDebugUtils.currentLine=25231370;
+ //BA.debugLineNum = 25231370;BA.debugLine="p.InitializeRoundedRect(r, CornersRadius)";
+_p.InitializeRoundedRect(_r,(float) (__ref._cornersradius /*int*/ ));
+RDebugUtils.currentLine=25231371;
+ //BA.debugLineNum = 25231371;BA.debugLine="cvs.DrawPath(p, clr1, True, 0)";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .DrawPath(_p,__ref._clr1 /*int*/ ,__c.True,(float) (0));
+ }else {
+RDebugUtils.currentLine=25231373;
+ //BA.debugLineNum = 25231373;BA.debugLine="xLBL.Top = SideHeight";
+__ref._xlbl /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTop(__ref._sideheight /*int*/ );
+RDebugUtils.currentLine=25231374;
+ //BA.debugLineNum = 25231374;BA.debugLine="p.InitializeRoundedRect(r, CornersRadius)";
+_p.InitializeRoundedRect(_r,(float) (__ref._cornersradius /*int*/ ));
+RDebugUtils.currentLine=25231375;
+ //BA.debugLineNum = 25231375;BA.debugLine="Dim c As Int";
+_c = 0;
+RDebugUtils.currentLine=25231376;
+ //BA.debugLineNum = 25231376;BA.debugLine="If mDisabled Then c = disabledColor Else c = clr";
+>>>>>>> main
 if (__ref._mdisabled /*boolean*/ ) { 
 _c = __ref._disabledcolor /*int*/ ;}
 else {
 _c = __ref._clr1 /*int*/ ;};
+<<<<<<< HEAD
 RDebugUtils.currentLine=21626897;
  //BA.debugLineNum = 21626897;BA.debugLine="cvs.DrawPath(p, c, True, 0)";
 __ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .DrawPath(_p,_c,__c.True,(float) (0));
@@ -157,11 +238,23 @@ RDebugUtils.currentLine=21626900;
 __ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Invalidate();
 RDebugUtils.currentLine=21626901;
  //BA.debugLineNum = 21626901;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=25231377;
+ //BA.debugLineNum = 25231377;BA.debugLine="cvs.DrawPath(p, c, True, 0)";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .DrawPath(_p,_c,__c.True,(float) (0));
+ };
+RDebugUtils.currentLine=25231380;
+ //BA.debugLineNum = 25231380;BA.debugLine="cvs.Invalidate";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Invalidate();
+RDebugUtils.currentLine=25231381;
+ //BA.debugLineNum = 25231381;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _class_globals(b4a.example.swiftbutton __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="swiftbutton";
+<<<<<<< HEAD
 RDebugUtils.currentLine=20971520;
  //BA.debugLineNum = 20971520;BA.debugLine="Sub Class_Globals";
 RDebugUtils.currentLine=20971521;
@@ -205,6 +298,51 @@ RDebugUtils.currentLine=20971532;
 _mhaptic = false;
 RDebugUtils.currentLine=20971533;
  //BA.debugLineNum = 20971533;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24576000;
+ //BA.debugLineNum = 24576000;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=24576001;
+ //BA.debugLineNum = 24576001;BA.debugLine="Private mEventName As String 'ignore";
+_meventname = "";
+RDebugUtils.currentLine=24576002;
+ //BA.debugLineNum = 24576002;BA.debugLine="Private mCallBack As Object 'ignore";
+_mcallback = new Object();
+RDebugUtils.currentLine=24576003;
+ //BA.debugLineNum = 24576003;BA.debugLine="Public mBase As B4XView 'ignore";
+_mbase = new anywheresoftware.b4a.objects.B4XViewWrapper();
+RDebugUtils.currentLine=24576004;
+ //BA.debugLineNum = 24576004;BA.debugLine="Private xui As XUI 'ignore";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+RDebugUtils.currentLine=24576005;
+ //BA.debugLineNum = 24576005;BA.debugLine="Private cvs As B4XCanvas";
+_cvs = new anywheresoftware.b4a.objects.B4XCanvas();
+RDebugUtils.currentLine=24576006;
+ //BA.debugLineNum = 24576006;BA.debugLine="Public xLBL As B4XView";
+_xlbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
+RDebugUtils.currentLine=24576007;
+ //BA.debugLineNum = 24576007;BA.debugLine="Public clr1, clr2, disabledColor As Int";
+_clr1 = 0;
+_clr2 = 0;
+_disabledcolor = 0;
+RDebugUtils.currentLine=24576008;
+ //BA.debugLineNum = 24576008;BA.debugLine="Private pressed As Boolean";
+_pressed = false;
+RDebugUtils.currentLine=24576009;
+ //BA.debugLineNum = 24576009;BA.debugLine="Public Tag As Object";
+_tag = new Object();
+RDebugUtils.currentLine=24576010;
+ //BA.debugLineNum = 24576010;BA.debugLine="Private mDisabled As Boolean";
+_mdisabled = false;
+RDebugUtils.currentLine=24576011;
+ //BA.debugLineNum = 24576011;BA.debugLine="Public CornersRadius, SideHeight As Int";
+_cornersradius = 0;
+_sideheight = 0;
+RDebugUtils.currentLine=24576012;
+ //BA.debugLineNum = 24576012;BA.debugLine="Public mHaptic As Boolean";
+_mhaptic = false;
+RDebugUtils.currentLine=24576013;
+ //BA.debugLineNum = 24576013;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _designercreateview(b4a.example.swiftbutton __ref,Object _base,anywheresoftware.b4a.objects.LabelWrapper _lbl,anywheresoftware.b4a.objects.collections.Map _props) throws Exception{
@@ -213,6 +351,7 @@ RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "designercreateview", true))
 	 {return ((String) Debug.delegate(ba, "designercreateview", new Object[] {_base,_lbl,_props}));}
 anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
+<<<<<<< HEAD
 RDebugUtils.currentLine=21102592;
  //BA.debugLineNum = 21102592;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
 RDebugUtils.currentLine=21102593;
@@ -275,6 +414,70 @@ RDebugUtils.currentLine=21102610;
 __ref._base_resize /*String*/ (null,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
 RDebugUtils.currentLine=21102611;
  //BA.debugLineNum = 21102611;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24707072;
+ //BA.debugLineNum = 24707072;BA.debugLine="Public Sub DesignerCreateView (Base As Object, Lbl";
+RDebugUtils.currentLine=24707073;
+ //BA.debugLineNum = 24707073;BA.debugLine="mBase = Base";
+__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_base));
+RDebugUtils.currentLine=24707074;
+ //BA.debugLineNum = 24707074;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
+__ref._tag /*Object*/  = __ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTag();
+RDebugUtils.currentLine=24707074;
+ //BA.debugLineNum = 24707074;BA.debugLine="Tag = mBase.Tag : mBase.Tag = Me";
+__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .setTag(this);
+RDebugUtils.currentLine=24707075;
+ //BA.debugLineNum = 24707075;BA.debugLine="Dim p As B4XView = xui.CreatePanel(\"p\")";
+_p = new anywheresoftware.b4a.objects.B4XViewWrapper();
+_p = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .CreatePanel(ba,"p");
+RDebugUtils.currentLine=24707076;
+ //BA.debugLineNum = 24707076;BA.debugLine="p.Color = xui.Color_Transparent";
+_p.setColor(__ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .Color_Transparent);
+RDebugUtils.currentLine=24707077;
+ //BA.debugLineNum = 24707077;BA.debugLine="clr1 = xui.PaintOrColorToColor(Props.Get(\"Primary";
+__ref._clr1 /*int*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .PaintOrColorToColor(_props.Get((Object)("PrimaryColor")));
+RDebugUtils.currentLine=24707078;
+ //BA.debugLineNum = 24707078;BA.debugLine="clr2 = xui.PaintOrColorToColor(Props.Get(\"Seconda";
+__ref._clr2 /*int*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .PaintOrColorToColor(_props.Get((Object)("SecondaryColor")));
+RDebugUtils.currentLine=24707079;
+ //BA.debugLineNum = 24707079;BA.debugLine="disabledColor = xui.PaintOrColorToColor(Props.Get";
+__ref._disabledcolor /*int*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .PaintOrColorToColor(_props.GetDefault((Object)("DisabledColor"),(Object)(0xff999999)));
+RDebugUtils.currentLine=24707080;
+ //BA.debugLineNum = 24707080;BA.debugLine="CornersRadius = DipToCurrent(Props.GetDefault(\"Co";
+__ref._cornersradius /*int*/  = __c.DipToCurrent((int)(BA.ObjectToNumber(_props.GetDefault((Object)("CornersRadius"),(Object)(15)))));
+RDebugUtils.currentLine=24707081;
+ //BA.debugLineNum = 24707081;BA.debugLine="SideHeight = DipToCurrent(Props.GetDefault(\"SideH";
+__ref._sideheight /*int*/  = __c.DipToCurrent((int)(BA.ObjectToNumber(_props.GetDefault((Object)("SideHeight"),(Object)(5)))));
+RDebugUtils.currentLine=24707082;
+ //BA.debugLineNum = 24707082;BA.debugLine="mDisabled = Not(Props.GetDefault(\"ButtonEnabled\",";
+__ref._mdisabled /*boolean*/  = __c.Not(BA.ObjectToBoolean(_props.GetDefault((Object)("ButtonEnabled"),(Object)(__c.True))));
+RDebugUtils.currentLine=24707083;
+ //BA.debugLineNum = 24707083;BA.debugLine="mHaptic = Props.GetDefault(\"HapticFeedback\", Fals";
+__ref._mhaptic /*boolean*/  = BA.ObjectToBoolean(_props.GetDefault((Object)("HapticFeedback"),(Object)(__c.False)));
+RDebugUtils.currentLine=24707084;
+ //BA.debugLineNum = 24707084;BA.debugLine="pressed = mDisabled";
+__ref._pressed /*boolean*/  = __ref._mdisabled /*boolean*/ ;
+RDebugUtils.currentLine=24707085;
+ //BA.debugLineNum = 24707085;BA.debugLine="xLBL = Lbl";
+__ref._xlbl /*anywheresoftware.b4a.objects.B4XViewWrapper*/  = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_lbl.getObject()));
+RDebugUtils.currentLine=24707086;
+ //BA.debugLineNum = 24707086;BA.debugLine="mBase.AddView(xLBL, 0, 0, 0, 0)";
+__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(__ref._xlbl /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
+RDebugUtils.currentLine=24707087;
+ //BA.debugLineNum = 24707087;BA.debugLine="mBase.AddView(p, 0, 0, 0, 0)";
+__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .AddView((android.view.View)(_p.getObject()),(int) (0),(int) (0),(int) (0),(int) (0));
+RDebugUtils.currentLine=24707088;
+ //BA.debugLineNum = 24707088;BA.debugLine="xLBL.SetTextAlignment(\"CENTER\", \"CENTER\")";
+__ref._xlbl /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .SetTextAlignment("CENTER","CENTER");
+RDebugUtils.currentLine=24707089;
+ //BA.debugLineNum = 24707089;BA.debugLine="cvs.Initialize(mBase)";
+__ref._cvs /*anywheresoftware.b4a.objects.B4XCanvas*/ .Initialize(__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ );
+RDebugUtils.currentLine=24707090;
+ //BA.debugLineNum = 24707090;BA.debugLine="Base_Resize(mBase.Width, mBase.Height)";
+__ref._base_resize /*String*/ (null,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth(),__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
+RDebugUtils.currentLine=24707091;
+ //BA.debugLineNum = 24707091;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public boolean  _getenabled(b4a.example.swiftbutton __ref) throws Exception{
@@ -282,6 +485,7 @@ __ref = this;
 RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "getenabled", true))
 	 {return ((Boolean) Debug.delegate(ba, "getenabled", null));}
+<<<<<<< HEAD
 RDebugUtils.currentLine=21233664;
  //BA.debugLineNum = 21233664;BA.debugLine="Public Sub getEnabled As Boolean";
 RDebugUtils.currentLine=21233665;
@@ -289,6 +493,15 @@ RDebugUtils.currentLine=21233665;
 if (true) return __c.Not(__ref._mdisabled /*boolean*/ );
 RDebugUtils.currentLine=21233666;
  //BA.debugLineNum = 21233666;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24838144;
+ //BA.debugLineNum = 24838144;BA.debugLine="Public Sub getEnabled As Boolean";
+RDebugUtils.currentLine=24838145;
+ //BA.debugLineNum = 24838145;BA.debugLine="Return Not(mDisabled)";
+if (true) return __c.Not(__ref._mdisabled /*boolean*/ );
+RDebugUtils.currentLine=24838146;
+ //BA.debugLineNum = 24838146;BA.debugLine="End Sub";
+>>>>>>> main
 return false;
 }
 public String  _initialize(b4a.example.swiftbutton __ref,anywheresoftware.b4a.BA _ba,Object _callback,String _eventname) throws Exception{
@@ -297,6 +510,7 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "initialize", true))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba,_callback,_eventname}));}
+<<<<<<< HEAD
 RDebugUtils.currentLine=21037056;
  //BA.debugLineNum = 21037056;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
 RDebugUtils.currentLine=21037057;
@@ -307,6 +521,18 @@ RDebugUtils.currentLine=21037058;
 __ref._mcallback /*Object*/  = _callback;
 RDebugUtils.currentLine=21037059;
  //BA.debugLineNum = 21037059;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24641536;
+ //BA.debugLineNum = 24641536;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
+RDebugUtils.currentLine=24641537;
+ //BA.debugLineNum = 24641537;BA.debugLine="mEventName = EventName";
+__ref._meventname /*String*/  = _eventname;
+RDebugUtils.currentLine=24641538;
+ //BA.debugLineNum = 24641538;BA.debugLine="mCallBack = Callback";
+__ref._mcallback /*Object*/  = _callback;
+RDebugUtils.currentLine=24641539;
+ //BA.debugLineNum = 24641539;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _p_touch(b4a.example.swiftbutton __ref,int _action,float _x,float _y) throws Exception{
@@ -315,6 +541,7 @@ RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "p_touch", true))
 	 {return ((String) Debug.delegate(ba, "p_touch", new Object[] {_action,_x,_y}));}
 boolean _inside = false;
+<<<<<<< HEAD
 RDebugUtils.currentLine=21364736;
  //BA.debugLineNum = 21364736;BA.debugLine="Private Sub p_Touch (Action As Int, X As Float, Y";
 RDebugUtils.currentLine=21364737;
@@ -344,10 +571,42 @@ RDebugUtils.currentLine=21364745;
 __ref._setpressedstate /*String*/ (null,_inside);
 RDebugUtils.currentLine=21364746;
  //BA.debugLineNum = 21364746;BA.debugLine="Draw";
+=======
+RDebugUtils.currentLine=24969216;
+ //BA.debugLineNum = 24969216;BA.debugLine="Private Sub p_Touch (Action As Int, X As Float, Y";
+RDebugUtils.currentLine=24969217;
+ //BA.debugLineNum = 24969217;BA.debugLine="If mDisabled Then Return";
+if (__ref._mdisabled /*boolean*/ ) { 
+if (true) return "";};
+RDebugUtils.currentLine=24969218;
+ //BA.debugLineNum = 24969218;BA.debugLine="Dim Inside As Boolean = x > 0 And x < mBase.Width";
+_inside = _x>0 && _x<__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth() && _y>0 && _y<__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight();
+RDebugUtils.currentLine=24969219;
+ //BA.debugLineNum = 24969219;BA.debugLine="Select Action";
+switch (BA.switchObjectToInt(_action,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .TOUCH_ACTION_DOWN,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .TOUCH_ACTION_MOVE,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .TOUCH_ACTION_UP)) {
+case 0: {
+RDebugUtils.currentLine=24969221;
+ //BA.debugLineNum = 24969221;BA.debugLine="SetPressedState(True)";
+__ref._setpressedstate /*String*/ (null,__c.True);
+RDebugUtils.currentLine=24969222;
+ //BA.debugLineNum = 24969222;BA.debugLine="Draw";
+__ref._draw /*String*/ (null);
+ break; }
+case 1: {
+RDebugUtils.currentLine=24969224;
+ //BA.debugLineNum = 24969224;BA.debugLine="If pressed <> Inside Then";
+if (__ref._pressed /*boolean*/ !=_inside) { 
+RDebugUtils.currentLine=24969225;
+ //BA.debugLineNum = 24969225;BA.debugLine="SetPressedState(Inside)";
+__ref._setpressedstate /*String*/ (null,_inside);
+RDebugUtils.currentLine=24969226;
+ //BA.debugLineNum = 24969226;BA.debugLine="Draw";
+>>>>>>> main
 __ref._draw /*String*/ (null);
  };
  break; }
 case 2: {
+<<<<<<< HEAD
 RDebugUtils.currentLine=21364749;
  //BA.debugLineNum = 21364749;BA.debugLine="SetPressedState(False)";
 __ref._setpressedstate /*String*/ (null,__c.False);
@@ -363,13 +622,35 @@ if (__ref._mhaptic /*boolean*/ ) {
 _xuiviewsutils._performhapticfeedback /*String*/ (ba,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ );};
 RDebugUtils.currentLine=21364753;
  //BA.debugLineNum = 21364753;BA.debugLine="CallSubDelayed(mCallBack, mEventName & \"_Click";
+=======
+RDebugUtils.currentLine=24969229;
+ //BA.debugLineNum = 24969229;BA.debugLine="SetPressedState(False)";
+__ref._setpressedstate /*String*/ (null,__c.False);
+RDebugUtils.currentLine=24969230;
+ //BA.debugLineNum = 24969230;BA.debugLine="Draw";
+__ref._draw /*String*/ (null);
+RDebugUtils.currentLine=24969231;
+ //BA.debugLineNum = 24969231;BA.debugLine="If Inside Then";
+if (_inside) { 
+RDebugUtils.currentLine=24969232;
+ //BA.debugLineNum = 24969232;BA.debugLine="If mHaptic Then XUIViewsUtils.PerformHapticFee";
+if (__ref._mhaptic /*boolean*/ ) { 
+_xuiviewsutils._performhapticfeedback /*String*/ (ba,__ref._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ );};
+RDebugUtils.currentLine=24969233;
+ //BA.debugLineNum = 24969233;BA.debugLine="CallSubDelayed(mCallBack, mEventName & \"_Click";
+>>>>>>> main
 __c.CallSubDelayed(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_Click");
  };
  break; }
 }
 ;
+<<<<<<< HEAD
 RDebugUtils.currentLine=21364756;
  //BA.debugLineNum = 21364756;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24969236;
+ //BA.debugLineNum = 24969236;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _setpressedstate(b4a.example.swiftbutton __ref,boolean _newstate) throws Exception{
@@ -377,6 +658,7 @@ __ref = this;
 RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "setpressedstate", true))
 	 {return ((String) Debug.delegate(ba, "setpressedstate", new Object[] {_newstate}));}
+<<<<<<< HEAD
 RDebugUtils.currentLine=21430272;
  //BA.debugLineNum = 21430272;BA.debugLine="Private Sub SetPressedState(NewState As Boolean)";
 RDebugUtils.currentLine=21430273;
@@ -402,6 +684,33 @@ RDebugUtils.currentLine=21430280;
 __ref._pressed /*boolean*/  = _newstate;
 RDebugUtils.currentLine=21430281;
  //BA.debugLineNum = 21430281;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=25034752;
+ //BA.debugLineNum = 25034752;BA.debugLine="Private Sub SetPressedState(NewState As Boolean)";
+RDebugUtils.currentLine=25034753;
+ //BA.debugLineNum = 25034753;BA.debugLine="If pressed = NewState Then Return";
+if (__ref._pressed /*boolean*/ ==_newstate) { 
+if (true) return "";};
+RDebugUtils.currentLine=25034754;
+ //BA.debugLineNum = 25034754;BA.debugLine="If NewState And xui.SubExists(mCallBack, mEventNa";
+if (_newstate && __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .SubExists(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_ButtonDown",(int) (0))) { 
+RDebugUtils.currentLine=25034755;
+ //BA.debugLineNum = 25034755;BA.debugLine="CallSubDelayed(mCallBack, mEventName & \"_ButtonD";
+__c.CallSubDelayed(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_ButtonDown");
+ };
+RDebugUtils.currentLine=25034757;
+ //BA.debugLineNum = 25034757;BA.debugLine="If NewState = False And xui.SubExists(mCallBack,";
+if (_newstate==__c.False && __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .SubExists(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_ButtonUp",(int) (0))) { 
+RDebugUtils.currentLine=25034758;
+ //BA.debugLineNum = 25034758;BA.debugLine="CallSubDelayed(mCallBack, mEventName & \"_ButtonU";
+__c.CallSubDelayed(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_ButtonUp");
+ };
+RDebugUtils.currentLine=25034760;
+ //BA.debugLineNum = 25034760;BA.debugLine="pressed= NewState";
+__ref._pressed /*boolean*/  = _newstate;
+RDebugUtils.currentLine=25034761;
+ //BA.debugLineNum = 25034761;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _setcolors(b4a.example.swiftbutton __ref,int _primary,int _secondary) throws Exception{
@@ -409,6 +718,7 @@ __ref = this;
 RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "setcolors", true))
 	 {return ((String) Debug.delegate(ba, "setcolors", new Object[] {_primary,_secondary}));}
+<<<<<<< HEAD
 RDebugUtils.currentLine=21495808;
  //BA.debugLineNum = 21495808;BA.debugLine="Public Sub SetColors(Primary As Int, Secondary As";
 RDebugUtils.currentLine=21495809;
@@ -422,6 +732,21 @@ RDebugUtils.currentLine=21495811;
 __ref._draw /*String*/ (null);
 RDebugUtils.currentLine=21495812;
  //BA.debugLineNum = 21495812;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=25100288;
+ //BA.debugLineNum = 25100288;BA.debugLine="Public Sub SetColors(Primary As Int, Secondary As";
+RDebugUtils.currentLine=25100289;
+ //BA.debugLineNum = 25100289;BA.debugLine="clr1 = Primary";
+__ref._clr1 /*int*/  = _primary;
+RDebugUtils.currentLine=25100290;
+ //BA.debugLineNum = 25100290;BA.debugLine="clr2 = Secondary";
+__ref._clr2 /*int*/  = _secondary;
+RDebugUtils.currentLine=25100291;
+ //BA.debugLineNum = 25100291;BA.debugLine="Draw";
+__ref._draw /*String*/ (null);
+RDebugUtils.currentLine=25100292;
+ //BA.debugLineNum = 25100292;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _setenabled(b4a.example.swiftbutton __ref,boolean _b) throws Exception{
@@ -429,6 +754,7 @@ __ref = this;
 RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "setenabled", true))
 	 {return ((String) Debug.delegate(ba, "setenabled", new Object[] {_b}));}
+<<<<<<< HEAD
 RDebugUtils.currentLine=21299200;
  //BA.debugLineNum = 21299200;BA.debugLine="Public Sub setEnabled(b As Boolean)";
 RDebugUtils.currentLine=21299201;
@@ -442,6 +768,21 @@ RDebugUtils.currentLine=21299203;
 __ref._draw /*String*/ (null);
 RDebugUtils.currentLine=21299204;
  //BA.debugLineNum = 21299204;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=24903680;
+ //BA.debugLineNum = 24903680;BA.debugLine="Public Sub setEnabled(b As Boolean)";
+RDebugUtils.currentLine=24903681;
+ //BA.debugLineNum = 24903681;BA.debugLine="mDisabled = Not(b)";
+__ref._mdisabled /*boolean*/  = __c.Not(_b);
+RDebugUtils.currentLine=24903682;
+ //BA.debugLineNum = 24903682;BA.debugLine="pressed = mDisabled";
+__ref._pressed /*boolean*/  = __ref._mdisabled /*boolean*/ ;
+RDebugUtils.currentLine=24903683;
+ //BA.debugLineNum = 24903683;BA.debugLine="Draw";
+__ref._draw /*String*/ (null);
+RDebugUtils.currentLine=24903684;
+ //BA.debugLineNum = 24903684;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 public String  _update(b4a.example.swiftbutton __ref) throws Exception{
@@ -449,6 +790,7 @@ __ref = this;
 RDebugUtils.currentModule="swiftbutton";
 if (Debug.shouldDelegate(ba, "update", true))
 	 {return ((String) Debug.delegate(ba, "update", null));}
+<<<<<<< HEAD
 RDebugUtils.currentLine=21561344;
  //BA.debugLineNum = 21561344;BA.debugLine="Public Sub Update";
 RDebugUtils.currentLine=21561345;
@@ -456,6 +798,15 @@ RDebugUtils.currentLine=21561345;
 __ref._draw /*String*/ (null);
 RDebugUtils.currentLine=21561346;
  //BA.debugLineNum = 21561346;BA.debugLine="End Sub";
+=======
+RDebugUtils.currentLine=25165824;
+ //BA.debugLineNum = 25165824;BA.debugLine="Public Sub Update";
+RDebugUtils.currentLine=25165825;
+ //BA.debugLineNum = 25165825;BA.debugLine="Draw";
+__ref._draw /*String*/ (null);
+RDebugUtils.currentLine=25165826;
+ //BA.debugLineNum = 25165826;BA.debugLine="End Sub";
+>>>>>>> main
 return "";
 }
 }

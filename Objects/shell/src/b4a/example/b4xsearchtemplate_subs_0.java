@@ -23,7 +23,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 128;BA.debugLine="If li.IsInitialized = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_li.runMethod(true,"IsInitialized"),b4xsearchtemplate.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 133;BA.debugLine="For i = 0 To li.Size - 1";
 Debug.JustUpdateDeviceLine();
 {
@@ -35,7 +35,7 @@ Debug.locals.put("i", _i);
  BA.debugLineNum = 134;BA.debugLine="If CustomListView1.Size >= MaxNumberOfItemsToSho";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("g",__ref.getField(false,"_customlistview1" /*RemoteObject*/ ).runMethod(true,"_getsize"),BA.numberCast(double.class, __ref.getField(true,"_maxnumberofitemstoshow" /*RemoteObject*/ )))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 135;BA.debugLine="Dim item As String = li.Get(i)";
 Debug.JustUpdateDeviceLine();
 _item = BA.ObjectToString(_li.runMethod(false,"Get",(Object)(BA.numberCast(int.class, _i))));Debug.locals.put("item", _item);Debug.locals.put("item", _item);
@@ -183,7 +183,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 122;BA.debugLine="If Value = \"\" Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_value,RemoteObject.createImmutable(("")))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 123;BA.debugLine="SelectedItem = Value";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_selecteditem" /*RemoteObject*/ ,BA.ObjectToString(_value));
@@ -226,7 +226,7 @@ Debug.locals.put("Dialog", _dialog);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 61;BA.debugLine="Return mBase";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
  BA.debugLineNum = 62;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -549,13 +549,17 @@ _count = RemoteObject.solve(new RemoteObject[] {_count,RemoteObject.createImmuta
 ;
  BA.debugLineNum = 227;BA.debugLine="Log(\"Index time: \" & (DateTime.Now - startTime) &";
 Debug.JustUpdateDeviceLine();
+<<<<<<< HEAD
 b4xsearchtemplate.__c.runVoidMethod ("LogImpl","916187425",RemoteObject.concat(RemoteObject.createImmutable("Index time: "),(RemoteObject.solve(new RemoteObject[] {b4xsearchtemplate.__c.getField(false,"DateTime").runMethod(true,"getNow"),_starttime}, "-",1, 2)),RemoteObject.createImmutable(" ms ("),_items.runMethod(true,"getSize"),RemoteObject.createImmutable(" Items)")),0);
+=======
+b4xsearchtemplate.__c.runVoidMethod ("LogImpl","919791905",RemoteObject.concat(RemoteObject.createImmutable("Index time: "),(RemoteObject.solve(new RemoteObject[] {b4xsearchtemplate.__c.getField(false,"DateTime").runMethod(true,"getNow"),_starttime}, "-",1, 2)),RemoteObject.createImmutable(" ms ("),_items.runMethod(true,"getSize"),RemoteObject.createImmutable(" Items)")),0);
+>>>>>>> main
  BA.debugLineNum = 228;BA.debugLine="AllItems = Items";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_allitems" /*RemoteObject*/ ,_items);
  BA.debugLineNum = 229;BA.debugLine="Return Array(prefixList, substringList, AllItems)";
 Debug.JustUpdateDeviceLine();
-if (true) return (RemoteObject.createNewArray("Object",new int[] {3},new Object[] {(__ref.getField(false,"_prefixlist" /*RemoteObject*/ ).getObject()),(__ref.getField(false,"_substringlist" /*RemoteObject*/ ).getObject()),(__ref.getField(false,"_allitems" /*RemoteObject*/ ).getObject())}));
+Debug.CheckDeviceExceptions();if (true) return (RemoteObject.createNewArray("Object",new int[] {3},new Object[] {(__ref.getField(false,"_prefixlist" /*RemoteObject*/ ).getObject()),(__ref.getField(false,"_substringlist" /*RemoteObject*/ ).getObject()),(__ref.getField(false,"_allitems" /*RemoteObject*/ ).getObject())}));
  BA.debugLineNum = 230;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -674,7 +678,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 85;BA.debugLine="If Term = LastTerm And Force = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_term,__ref.getField(true,"_lastterm" /*RemoteObject*/ )) && RemoteObject.solveBoolean("=",_force,b4xsearchtemplate.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 86;BA.debugLine="LastTerm = Term";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_lastterm" /*RemoteObject*/ ,_term);

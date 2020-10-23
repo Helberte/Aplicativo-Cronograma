@@ -75,22 +75,36 @@ public static void initializeProcessGlobals() {
 		try {
 		        main_subs_0._process_globals();
 codigocadastro_subs_0._process_globals();
+<<<<<<< HEAD
 codigocadastrolivro_subs_0._process_globals();
+=======
+>>>>>>> main
 codigolancamentoleitura_subs_0._process_globals();
 codigolayanotacao_subs_0._process_globals();
 codigolayleituras_subs_0._process_globals();
 codigolaylogin_subs_0._process_globals();
 starter_subs_0._process_globals();
+<<<<<<< HEAD
+=======
+act_telacadastro_subs_0._process_globals();
+>>>>>>> main
 xuiviewsutils_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 classbancodados.myClass = BA.getDeviceClass ("b4a.example.classbancodados");
 codigocadastro.myClass = BA.getDeviceClass ("b4a.example.codigocadastro");
+<<<<<<< HEAD
 codigocadastrolivro.myClass = BA.getDeviceClass ("b4a.example.codigocadastrolivro");
+=======
+>>>>>>> main
 codigolancamentoleitura.myClass = BA.getDeviceClass ("b4a.example.codigolancamentoleitura");
 codigolayanotacao.myClass = BA.getDeviceClass ("b4a.example.codigolayanotacao");
 codigolayleituras.myClass = BA.getDeviceClass ("b4a.example.codigolayleituras");
 codigolaylogin.myClass = BA.getDeviceClass ("b4a.example.codigolaylogin");
 starter.myClass = BA.getDeviceClass ("b4a.example.starter");
+<<<<<<< HEAD
+=======
+act_telacadastro.myClass = BA.getDeviceClass ("b4a.example.act_telacadastro");
+>>>>>>> main
 animatedcounter.myClass = BA.getDeviceClass ("b4a.example.animatedcounter");
 anotherprogressbar.myClass = BA.getDeviceClass ("b4a.example.anotherprogressbar");
 b4xbreadcrumb.myClass = BA.getDeviceClass ("b4a.example.b4xbreadcrumb");

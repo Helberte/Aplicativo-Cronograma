@@ -135,7 +135,7 @@ if (RapidSub.canDelegate("getbitmap")) { return __ref.runUserSub(false, "b4ximag
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 119;BA.debugLine="Return mBitmap";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mbitmap" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbitmap" /*RemoteObject*/ );
  BA.debugLineNum = 120;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -154,7 +154,7 @@ if (RapidSub.canDelegate("getresizemode")) { return __ref.runUserSub(false, "b4x
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 56;BA.debugLine="Return mResizeMode";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(true,"_mresizemode" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mresizemode" /*RemoteObject*/ );
  BA.debugLineNum = 57;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
@@ -173,7 +173,7 @@ if (RapidSub.canDelegate("getroundedimage")) { return __ref.runUserSub(false, "b
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 44;BA.debugLine="Return mRound";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(true,"_mround" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mround" /*RemoteObject*/ );
  BA.debugLineNum = 45;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -303,7 +303,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 60;BA.debugLine="If s = mResizeMode Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_s,__ref.getField(true,"_mresizemode" /*RemoteObject*/ ))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 61;BA.debugLine="mResizeMode = s";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_mresizemode" /*RemoteObject*/ ,_s);
@@ -330,7 +330,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 48;BA.debugLine="If b = mRound Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_b,__ref.getField(true,"_mround" /*RemoteObject*/ ))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 49;BA.debugLine="mRound = b";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_mround" /*RemoteObject*/ ,_b);
@@ -360,7 +360,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 66;BA.debugLine="If mBitmap.IsInitialized = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mbitmap" /*RemoteObject*/ ).runMethod(true,"IsInitialized"),b4ximageview.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 67;BA.debugLine="SetCircleClip(mRound)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4ximageview.class, "_setcircleclip" /*RemoteObject*/ ,(Object)(__ref.getField(true,"_mround" /*RemoteObject*/ )));
@@ -431,7 +431,11 @@ _imageviewheight = BA.numberCast(float.class, __ref.getField(false,"_mbitmap" /*
 default: {
  BA.debugLineNum = 92;BA.debugLine="Log(\"Invalid resize mode: \"  & mResizeMode)";
 Debug.JustUpdateDeviceLine();
+<<<<<<< HEAD
 b4ximageview.__c.runVoidMethod ("LogImpl","911272219",RemoteObject.concat(RemoteObject.createImmutable("Invalid resize mode: "),__ref.getField(true,"_mresizemode" /*RemoteObject*/ )),0);
+=======
+b4ximageview.__c.runVoidMethod ("LogImpl","914876699",RemoteObject.concat(RemoteObject.createImmutable("Invalid resize mode: "),__ref.getField(true,"_mresizemode" /*RemoteObject*/ )),0);
+>>>>>>> main
  break; }
 }
 ;

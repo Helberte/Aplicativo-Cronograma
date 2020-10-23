@@ -127,7 +127,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 126;BA.debugLine="If mProps.GetDefault(\"ShowAccept\", True) = False";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mprops" /*RemoteObject*/ ).runMethod(false,"GetDefault",(Object)(RemoteObject.createImmutable(("ShowAccept"))),(Object)((b4xfloattextfield.__c.getField(true,"True")))),(b4xfloattextfield.__c.getField(true,"False")))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 127;BA.debugLine="lblV = CreateButton(Chr(0xE5CA))";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_lblv" /*RemoteObject*/ ,__ref.runClassMethod (b4a.example.b4xfloattextfield.class, "_createbutton" /*RemoteObject*/ ,(Object)(BA.ObjectToString(b4xfloattextfield.__c.runMethod(true,"Chr",(Object)(BA.numberCast(int.class, 0xe5ca)))))));
@@ -185,7 +185,7 @@ Debug.JustUpdateDeviceLine();
 _c.runVoidMethod ("Release");
  BA.debugLineNum = 266;BA.debugLine="Return bmp";
 Debug.JustUpdateDeviceLine();
-if (true) return _bmp;
+Debug.CheckDeviceExceptions();if (true) return _bmp;
  BA.debugLineNum = 267;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -238,7 +238,7 @@ Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_mbase" /*RemoteObject*/ ).runVoidMethod ("AddView",(Object)((_x.getObject())),(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 0)),(Object)(b4xfloattextfield.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))),(Object)(b4xfloattextfield.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))));
  BA.debugLineNum = 193;BA.debugLine="Return x";
 Debug.JustUpdateDeviceLine();
-if (true) return _x;
+Debug.CheckDeviceExceptions();if (true) return _x;
  BA.debugLineNum = 194;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -258,7 +258,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 118;BA.debugLine="If mProps.GetDefault(\"ShowClear\", True) = False T";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mprops" /*RemoteObject*/ ).runMethod(false,"GetDefault",(Object)(RemoteObject.createImmutable(("ShowClear"))),(Object)((b4xfloattextfield.__c.getField(true,"True")))),(b4xfloattextfield.__c.getField(true,"False")))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 119;BA.debugLine="If lblClear.IsInitialized And lblClear.Parent.IsI";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(".",__ref.getField(false,"_lblclear" /*RemoteObject*/ ).runMethod(true,"IsInitialized")) && RemoteObject.solveBoolean(".",__ref.getField(false,"_lblclear" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"IsInitialized"))) { 
@@ -354,7 +354,7 @@ _tf.runMethod(true,"setInputType",_tf.getField(true,"INPUT_TYPE_DECIMAL_NUMBERS"
  };
  BA.debugLineNum = 362;BA.debugLine="Return tf";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), _tf.getObject());
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), _tf.getObject());
  BA.debugLineNum = 386;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -469,7 +469,11 @@ Debug.JustUpdateDeviceLine();
 __ref.setField ("_multiline" /*RemoteObject*/ ,b4xfloattextfield.__c.getField(true,"False"));
  BA.debugLineNum = 91;BA.debugLine="Log(\"Multiline not supported with password mode.";
 Debug.JustUpdateDeviceLine();
+<<<<<<< HEAD
 b4xfloattextfield.__c.runVoidMethod ("LogImpl","99043992",RemoteObject.createImmutable("Multiline not supported with password mode."),0);
+=======
+b4xfloattextfield.__c.runVoidMethod ("LogImpl","912648472",RemoteObject.createImmutable("Multiline not supported with password mode."),0);
+>>>>>>> main
  };
  BA.debugLineNum = 93;BA.debugLine="CreateTextFieldAll(PasswordMode, PassedLabel.Font";
 Debug.JustUpdateDeviceLine();
@@ -525,7 +529,7 @@ if (RapidSub.canDelegate("getnextfield")) { return __ref.runUserSub(false, "b4xf
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 296;BA.debugLine="Return mNextTextField";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mnexttextfield" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mnexttextfield" /*RemoteObject*/ );
  BA.debugLineNum = 297;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -544,7 +548,7 @@ if (RapidSub.canDelegate("gettext")) { return __ref.runUserSub(false, "b4xfloatt
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 389;BA.debugLine="Return mTextField.Text";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mtextfield" /*RemoteObject*/ ).runMethod(true,"getText");
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mtextfield" /*RemoteObject*/ ).runMethod(true,"getText");
  BA.debugLineNum = 390;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
@@ -563,7 +567,7 @@ if (RapidSub.canDelegate("gettextfield")) { return __ref.runUserSub(false, "b4xf
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 446;BA.debugLine="Return mTextField";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mtextfield" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mtextfield" /*RemoteObject*/ );
  BA.debugLineNum = 447;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -586,10 +590,10 @@ __ref.runClassMethod (b4a.example.b4xfloattextfield.class, "_tf_enterpressed" /*
  BA.debugLineNum = 316;BA.debugLine="If mNextTextField.IsInitialized Then Return True";
 Debug.JustUpdateDeviceLine();
 if (__ref.getField(false,"_mnexttextfield" /*RemoteObject*/ ).runMethod(true,"IsInitialized" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
-if (true) return b4xfloattextfield.__c.getField(true,"True");};
+Debug.CheckDeviceExceptions();if (true) return b4xfloattextfield.__c.getField(true,"True");};
  BA.debugLineNum = 317;BA.debugLine="Return False";
 Debug.JustUpdateDeviceLine();
-if (true) return b4xfloattextfield.__c.getField(true,"False");
+Debug.CheckDeviceExceptions();if (true) return b4xfloattextfield.__c.getField(true,"False");
  BA.debugLineNum = 318;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -727,7 +731,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 300;BA.debugLine="If Field.IsInitialized = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_field.runMethod(true,"IsInitialized" /*RemoteObject*/ ),b4xfloattextfield.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 302;BA.debugLine="If Multiline = False Then";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(true,"_multiline" /*RemoteObject*/ ),b4xfloattextfield.__c.getField(true,"False"))) { 
@@ -1252,7 +1256,7 @@ _goingtolarge = BA.ObjectToBoolean(RemoteObject.solveBoolean("=",_txt.runMethod(
  BA.debugLineNum = 216;BA.debugLine="If GoingToLarge = LargeLabel And force = False Th";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_goingtolarge,__ref.getField(true,"_largelabel" /*RemoteObject*/ )) && RemoteObject.solveBoolean("=",_force,b4xfloattextfield.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 217;BA.debugLine="Dim b As B4XBitmap";
 Debug.JustUpdateDeviceLine();
 _b = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper.B4XBitmapWrapper");Debug.locals.put("b", _b);
@@ -1276,7 +1280,7 @@ _b = __ref.getField(false,"_smallnotfocused" /*RemoteObject*/ );Debug.locals.put
  BA.debugLineNum = 223;BA.debugLine="If b.IsInitialized = False Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_b.runMethod(true,"IsInitialized"),b4xfloattextfield.__c.getField(true,"False"))) { 
-if (true) return RemoteObject.createImmutable("");};
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 224;BA.debugLine="HintImageView.SetBitmap(b)";
 Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_hintimageview" /*RemoteObject*/ ).runVoidMethod ("SetBitmap",(Object)((_b.getObject())));

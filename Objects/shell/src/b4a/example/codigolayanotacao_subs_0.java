@@ -51,6 +51,7 @@ codigolayanotacao._qtpaginas = BA.numberCast(int.class, 0);
  BA.debugLineNum = 124;BA.debugLine="Activity.Finish";
 Debug.ShouldStop(134217728);
 codigolayanotacao.mostCurrent._activity.runVoidMethod ("Finish");
+<<<<<<< HEAD
  BA.debugLineNum = 125;BA.debugLine="Return True";
 Debug.ShouldStop(268435456);
 if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"True");
@@ -58,6 +59,15 @@ if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"True");
  BA.debugLineNum = 127;BA.debugLine="Return False";
 Debug.ShouldStop(1073741824);
 if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"False");
+=======
+ BA.debugLineNum = 107;BA.debugLine="Return True";
+Debug.ShouldStop(1024);
+Debug.CheckDeviceExceptions();if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"True");
+ }else {
+ BA.debugLineNum = 109;BA.debugLine="Return False";
+Debug.ShouldStop(4096);
+Debug.CheckDeviceExceptions();if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"False");
+>>>>>>> main
  };
  BA.debugLineNum = 129;BA.debugLine="End Sub";
 Debug.ShouldStop(1);

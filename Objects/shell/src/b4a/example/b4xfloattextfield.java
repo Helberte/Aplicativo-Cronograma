@@ -46,12 +46,19 @@ public static RemoteObject _lastswitchtextfieldtime = RemoteObject.createImmutab
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
+<<<<<<< HEAD
 public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+=======
+>>>>>>> main
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
+<<<<<<< HEAD
+=======
+public static b4a.example.act_telacadastro _act_telacadastro = null;
+>>>>>>> main
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"AnimationDuration",_ref.getField(false, "_animationduration"),"DateUtils",_ref.getField(false, "_dateutils"),"Focused",_ref.getField(false, "_focused"),"HintColor",_ref.getField(false, "_hintcolor"),"HintFont",_ref.getField(false, "_hintfont"),"HintImageView",_ref.getField(false, "_hintimageview"),"HintLabelLargeOffsetX",_ref.getField(false, "_hintlabellargeoffsetx"),"HintLabelSmallOffsetX",_ref.getField(false, "_hintlabelsmalloffsetx"),"HintLabelSmallOffsetY",_ref.getField(false, "_hintlabelsmalloffsety"),"HintText",_ref.getField(false, "_hinttext"),"IME",_ref.getField(false, "_ime"),"KeyboardType",_ref.getField(false, "_keyboardtype"),"LargeFocused",_ref.getField(false, "_largefocused"),"LargeLabel",_ref.getField(false, "_largelabel"),"LargeLabelTextSize",_ref.getField(false, "_largelabeltextsize"),"LargeNotFocused",_ref.getField(false, "_largenotfocused"),"LastSwitchTextFieldTime",_ref.getField(false, "_lastswitchtextfieldtime"),"lblClear",_ref.getField(false, "_lblclear"),"lblV",_ref.getField(false, "_lblv"),"mBase",_ref.getField(false, "_mbase"),"mCallBack",_ref.getField(false, "_mcallback"),"MeasuringCanvas",_ref.getField(false, "_measuringcanvas"),"mEventName",_ref.getField(false, "_meventname"),"mNextTextField",_ref.getField(false, "_mnexttextfield"),"mProps",_ref.getField(false, "_mprops"),"mTextField",_ref.getField(false, "_mtextfield"),"Multiline",_ref.getField(false, "_multiline"),"NonFocusedHintColor",_ref.getField(false, "_nonfocusedhintcolor"),"SmallFocused",_ref.getField(false, "_smallfocused"),"SmallLabelTextSize",_ref.getField(false, "_smalllabeltextsize"),"SmallNotFocused",_ref.getField(false, "_smallnotfocused"),"Tag",_ref.getField(false, "_tag"),"xui",_ref.getField(false, "_xui")};

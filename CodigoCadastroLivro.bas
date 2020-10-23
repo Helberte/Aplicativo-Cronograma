@@ -22,7 +22,7 @@ Sub Activity_Pause (UserClosed As Boolean)
 End Sub
 
 Sub Globals
-
+	
 	Private edTituloLivro As EditText
 	Private radPagina As RadioButton
 	Private radCapitulo As RadioButton

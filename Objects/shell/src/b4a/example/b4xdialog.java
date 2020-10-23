@@ -43,12 +43,19 @@ public static RemoteObject _buttonsstate = RemoteObject.declareNull("anywheresof
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
+<<<<<<< HEAD
 public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
+=======
+>>>>>>> main
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
+<<<<<<< HEAD
+=======
+public static b4a.example.act_telacadastro _act_telacadastro = null;
+>>>>>>> main
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"Background",_ref.getField(false, "_background"),"BackgroundColor",_ref.getField(false, "_backgroundcolor"),"Base",_ref.getField(false, "_base"),"BlurBackground",_ref.getField(false, "_blurbackground"),"BlurImageView",_ref.getField(false, "_blurimageview"),"BlurReduceScale",_ref.getField(false, "_blurreducescale"),"BodyTextColor",_ref.getField(false, "_bodytextcolor"),"BorderColor",_ref.getField(false, "_bordercolor"),"BorderCornersRadius",_ref.getField(false, "_bordercornersradius"),"BorderWidth",_ref.getField(false, "_borderwidth"),"ButtonsColor",_ref.getField(false, "_buttonscolor"),"ButtonsFont",_ref.getField(false, "_buttonsfont"),"ButtonsHeight",_ref.getField(false, "_buttonsheight"),"ButtonsOrder",_ref.getField(false, "_buttonsorder"),"ButtonsState",_ref.getField(false, "_buttonsstate"),"ButtonsTextColor",_ref.getField(false, "_buttonstextcolor"),"ButtonsTextColorDisabled",_ref.getField(false, "_buttonstextcolordisabled"),"ButtonWidth",_ref.getField(false, "_buttonwidth"),"DateUtils",_ref.getField(false, "_dateutils"),"mParent",_ref.getField(false, "_mparent"),"OverlayColor",_ref.getField(false, "_overlaycolor"),"PutAtTop",_ref.getField(false, "_putattop"),"Title",_ref.getField(false, "_title"),"TitleBar",_ref.getField(false, "_titlebar"),"TitleBarColor",_ref.getField(false, "_titlebarcolor"),"TitleBarFont",_ref.getField(false, "_titlebarfont"),"TitleBarHeight",_ref.getField(false, "_titlebarheight"),"TitleBarTextColor",_ref.getField(false, "_titlebartextcolor"),"VisibleAnimationDuration",_ref.getField(false, "_visibleanimationduration"),"xui",_ref.getField(false, "_xui")};
