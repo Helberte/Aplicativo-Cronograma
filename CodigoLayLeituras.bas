@@ -11,7 +11,7 @@ Version=9.801
 
 Sub Process_Globals
 	Dim temPanel As Boolean = False
-	
+	Dim temPanelLeituraConcluida As Boolean = False
 End Sub
 
 Sub Globals	
@@ -21,6 +21,7 @@ Sub Globals
 	Dim lbl_Inicial_Leitura As Label
 	
 	Dim scrollView1 As ScrollView
+	Dim scrollView2 As ScrollView
 
 	Dim gradient As GradientDrawable
 	Dim panelNenhumaLeitura As Panel
@@ -31,7 +32,11 @@ Sub Globals
 		
 	Private Panel_lendo As Panel
 	Private nomeArquivo As String = "Informacoes.ini"
-		
+	Dim carrega_leitura_concluida As Boolean
+	
+	Private Panel_lidos As Panel
+	Private Panel_parabens As Panel
+	Private B4XImage_parabens As B4XImageView
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -49,17 +54,18 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	panelNenhumaLeitura.Initialize( "" )
 	
-	btAdicionarLeitura.Visible = False
-	
+	carrega_leitura_concluida = FirstTime
 	If FirstTime Then		
 		Wait For (Atualiza_leituras) Complete (Success As Boolean)
 		
 		If Success = False Then
 			ToastMessageShow("Impossível carregar leituras",True)
 		End If
-	End If
+	End If	
 	
+	btAdicionarLeitura.SetBackgroundImage(LoadBitmap(File.DirAssets, "bt_adicionar.png"))
 End Sub
+
 
 Sub Event_lbl_Click
 	StartActivity(act_TelaCadastro)
@@ -76,6 +82,13 @@ Sub Activity_Resume
 			Main.CadastrouAlgo = True
 		End If		
 	End If	
+	
+	If CodigoLancamentoLeitura.de_os_parabens Then
+		CodigoLancamentoLeitura.de_os_parabens = False
+				
+		B4XImage_parabens.Load(File.DirAssets, "vitoriaLivro.jpg")
+		Panel_parabens.SetVisibleAnimated(1000, True)	
+	End If
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
@@ -83,7 +96,6 @@ Sub Activity_Pause (UserClosed As Boolean)
 End Sub
 
 Sub Atualiza_leituras As ResumableSub
-	
 	Try
 		
 		Dim cmd As String
@@ -102,27 +114,24 @@ Sub Atualiza_leituras As ResumableSub
 				lbl_Inicial_Leitura.Initialize("Event_lbl")
 			End If			
 			
-			btAdicionarLeitura.Visible = False
-			
+			lbl_Inicial_Leitura.Visible = True
 			lbl_Inicial_Leitura.Text = Result.GetString("MENSAGEM")
-			lbl_Inicial_Leitura.TextColor = Colors.Black
+			lbl_Inicial_Leitura.TextColor = Colors.RGB(161,92,92)
 			lbl_Inicial_Leitura.TextSize = 20			
+			lbl_Inicial_Leitura.Gravity = Gravity.CENTER
 			
-			scrollView1.Initialize (500)
+			scrollView1.Initialize (800)
 			Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, 100%y)
 			
-			scrollView1.Panel.AddView(lbl_Inicial_Leitura, 1%x, 3%y, 98%x, 10%y)
+			scrollView1.Panel.AddView(lbl_Inicial_Leitura, 1%x, 37%y, 98%x, 10%y)
 						
-			
 			Return True	
 		else if Result.GetInt("RESULTADO") = 0 Then
-			btAdicionarLeitura.Visible = False
-			
+		
 			ToastMessageShow(Result.GetString("MENSAGEM"),True)
 			Return True
 		else if Result.GetInt("RESULTADO") = 1 Then
 			
-			btAdicionarLeitura.Visible = True
 			
 			gradient.Initialize("TOP_BOTTOM", cores)
 			
@@ -154,12 +163,11 @@ Sub Atualiza_leituras As ResumableSub
 			If temPanel = False Then
 				
 				temPanel = True
-				scrollView1.Initialize( 500 )
+				scrollView1.Initialize( 800 )
 				listaInformacoes.Initialize
 				
 				Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
-				
-									
+													
 				Dim i As Int	
 				For i = 0 To panels.Length - 1
 																										
@@ -179,27 +187,13 @@ Sub Atualiza_leituras As ResumableSub
 					panels(i).Elevation = 3dip
 					
 					scrollView1.Panel.AddView(panels(i), 1%x, topo, 98%x, 25%y)
-							
-					lblTituloLivro(i).Text = Result.GetString("nome")
-					lblTituloLivro(i).TextColor = Colors.RGB(189,151,1)
-					lblTituloLivro(i).TextSize = 23
-					'lblTituloLivro(i).Color = Colors.Cyan					
+					panels(i).Tag = i			
+									 
+					lblTituloLivro(i) = configuraLabel(Result.GetString("nome"), 23, Colors.RGB(189,151,1))	
+					lblDataComecoLeitura(i) = configuraLabel("Começei ler dia " & Result.GetString("data_inicial"), tamanho_fonte, Colors.RGB(72,72,72))			
+					lblPrevisaoTermino(i) = configuraLabel("Previsão de Término " & Result.GetString("data_prevista_final"), tamanho_fonte, Colors.RGB(72,72,72))
+					lblQuantidadePaginas(i) = configuraLabel(Result.GetString("paginas_ou_cap_lidos") & " " & Result.GetString("tipo_de_leitura") & " de " & Result.GetString("quantidade_paginas"), tamanho_fonte, Colors.RGB(72,72,72))
 										
-					lblDataComecoLeitura(i).Text = "Começei ler dia " & Result.GetString("data_inicial")
-					lblDataComecoLeitura(i).TextColor = Colors.RGB(72,72,72)
-					lblDataComecoLeitura(i).TextSize = tamanho_fonte
-					'lblDataComecoLeitura(i).Color = Colors.Cyan
-					
-					lblPrevisaoTermino(i).Text = "Previsão de Término " & Result.GetString("data_prevista_final")
-					lblPrevisaoTermino(i).TextColor = Colors.RGB(72,72,72)
-					lblPrevisaoTermino(i).TextSize = tamanho_fonte
-					'lblPrevisaoTermino(i).Color = Colors.Cyan
-					
-					lblQuantidadePaginas(i).Text = Result.GetString("paginas_ou_cap_lidos") & " " & Result.GetString("tipo_de_leitura") & " de " & Result.GetString("quantidade_paginas")
-					lblQuantidadePaginas(i).TextColor = Colors.RGB(72,72,72)
-					lblQuantidadePaginas(i).TextSize = tamanho_fonte
-					'lblQuantidadePaginas(i).Color = Colors.Cyan
-					
 					Dim altura As Int = 3.5%y
 					panels(i).AddView(lblTituloLivro(i), 3%x, topoLabel, panels(i).Width - 5%x, 5%y)
 					topoLabel = topoLabel + altura + 18dip
@@ -250,6 +244,7 @@ Sub Atualiza_leituras As ResumableSub
 				File.WriteList(File.DirInternal, nomeArquivo, listaInformacoes)
 
 			End If	
+			lbl_Inicial_Leitura.Visible = False
 			Return True
 		Else
 			ToastMessageShow("Impossível carregar leituras",True)
@@ -259,6 +254,14 @@ Sub Atualiza_leituras As ResumableSub
 		ToastMessageShow("Impossível carregar leituras",True)
 		Return False
 	End Try	
+End Sub
+
+Sub Event_panels_Click
+'	Dim p As Panel
+	
+'	p = Sender
+
+'	MsgboxAsync(p.Tag, "")
 End Sub
 
 Sub Event_btAnotar_Click
@@ -365,7 +368,125 @@ Sub btAdicionarLeitura_Click
 End Sub
 
 Sub TabStrip_PageSelected (Position As Int)
+
+	If Position = 1 Then
+		If carrega_leitura_concluida Or CodigoLancamentoLeitura.terminouLeitura Then
+			carrega_leitura_concluida = False
+			CodigoLancamentoLeitura.terminouLeitura = False
+			
+			Try
+		
+				Dim cmd As String
+		
+				cmd = "exec sp_atualiza_leitura_concluida " & Main.Id_do_Usuario
+				
+				Wait For (banco.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
+		
+				Result.NextRow
+				
+				If Result.GetInt("RESULTADO") = 0 Then
+					ToastMessageShow("Algo deu errado.",True)
+				else if Result.GetInt("RESULTADO") = 1 Then
+					
+					
+					If temPanelLeituraConcluida Then
+						temPanelLeituraConcluida = False
+						
+						scrollView2.RemoveView
+					End If
+					
+					If temPanelLeituraConcluida = False Then
+						temPanelLeituraConcluida = True
+						
+						Dim quantidade_linhas As Int = Result.GetInt("QUANTIDADE_LINHAS")
+					
+						scrollView2.Initialize(500)
+						Dim panels(quantidade_linhas) As Panel
+					
+						Dim lbl_titulo(quantidade_linhas) As Label
+						Dim lbl_data_termino(quantidade_linhas) As Label
+						Dim lbl_total_paginas(quantidade_linhas) As Label
+						Dim lbl_quantidade_lidas(quantidade_linhas) As Label
+						Dim lbl_dias_utilizados(quantidade_linhas) As Label
+					
+						Panel_lidos.AddView(scrollView2, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
+					
+					
+						Dim tamanho_fonte As Int = 17.5
+						Dim topoLabel As Int = 1%y
+						Dim topo As Int = 1%y
+						Dim g As GradientDrawable
+						Dim cores(2) As Int
+						cores(0) = Colors.RGB(255,255,255)
+						cores(1) = Colors.RGB(255,255,255)
+					
+						g.Initialize("TOP_BOTTOM", cores)
+										
+						g.CornerRadius = 12
+					
+						For i = 0 To panels.Length - 1
+						
+							topoLabel = 1%y
+						
+							lbl_titulo(i).Initialize("")
+							lbl_data_termino(i).Initialize("")
+							lbl_total_paginas(i).Initialize("")
+							lbl_quantidade_lidas(i).Initialize("")
+							lbl_dias_utilizados(i).Initialize("")
+						
+							panels(i).Initialize("")
+							panels(i).Background = g
+							panels(i).Padding = Array As Int(0dip, 0dip, 0dip, 0dip)
+							panels(i).Elevation = 3dip
+						
+							panels(i).Color = Colors.White
+												
+							scrollView2.Panel.AddView(panels(i), 1%x, topo, 98%x, 19%y)
+							
+							lbl_titulo(i) = configuraLabel(Result.GetString("titulo"), 23, Colors.RGB(189,151,1))
+							lbl_data_termino(i) = configuraLabel("Terminei no dia " & Result.GetString("data_canclusao"), tamanho_fonte, Colors.RGB(72,72,72))
+							lbl_total_paginas(i) = configuraLabel(Result.GetInt("paginas_ou_cap_lidos") & " páginas de " & Result.GetInt("quantidade_paginas"), tamanho_fonte, Colors.RGB(72,72,72))
+							lbl_dias_utilizados(i) = configuraLabel("Gastei " & Result.GetInt("total_dias_utilizados") & " dias para terminar", tamanho_fonte, Colors.RGB(72,72,72))
+						
+							Dim altura As Int = 3.5%y
+							panels(i).AddView(lbl_titulo(i), 3%x, topoLabel, panels(i).Width - 5%x, 5%y)
+							topoLabel = topoLabel + altura + 18dip
+							panels(i).AddView(lbl_data_termino(i), 3%x, topoLabel, panels(i).Width - 5%x, altura)
+							topoLabel = topoLabel + altura + 1dip
+							panels(i).AddView(lbl_total_paginas(i), 3%x, topoLabel, panels(i).Width - 5%x, altura)
+							topoLabel = topoLabel + altura + 1dip
+							panels(i).AddView(lbl_dias_utilizados(i), 3%x, topoLabel, panels(i).Width - 5%x, altura)
+							topoLabel = topoLabel + altura + 2dip
+						
+							topo = topo + 19%y + 10dip
+					
+							scrollView2.Panel.Height = topo
+							Result.NextRow
+						Next
+						
+					End If				
+					
+				else if Result.GetInt("RESULTADO") = 2 Then
+					
+					ToastMessageShow("Não existem leituras concluídas",True)
+				End If
+				
+			Catch
+				ToastMessageShow("Problemas ao carregar leituras concluídas",True)
+			End Try		
+		End If	
+	End If
+End Sub
+
+Sub configuraLabel(texto As String, fonte As Int, cor As Int) As Label
+	Dim label As Label
+	label.Initialize("")
 	
+	label.Text = texto
+	label.TextColor = cor
+	label.TextSize = fonte
+	
+	Return label
 End Sub
 
 Sub Activity_KeyPress (KeyCode As Int) As Boolean
@@ -407,4 +528,8 @@ Sub Activity_KeyPress (KeyCode As Int) As Boolean
 '	Else
 '		Return True
 '	End If		
+End Sub
+
+Sub btOk_parabens_Click
+	Panel_parabens.Visible = False
 End Sub

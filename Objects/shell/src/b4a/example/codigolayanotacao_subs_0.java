@@ -53,11 +53,11 @@ Debug.ShouldStop(134217728);
 codigolayanotacao.mostCurrent._activity.runVoidMethod ("Finish");
  BA.debugLineNum = 125;BA.debugLine="Return True";
 Debug.ShouldStop(268435456);
-if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"True");
+Debug.CheckDeviceExceptions();if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"True");
  }else {
  BA.debugLineNum = 127;BA.debugLine="Return False";
 Debug.ShouldStop(1073741824);
-if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"False");
+Debug.CheckDeviceExceptions();if (true) return codigolayanotacao.mostCurrent.__c.getField(true,"False");
  };
  BA.debugLineNum = 129;BA.debugLine="End Sub";
 Debug.ShouldStop(1);

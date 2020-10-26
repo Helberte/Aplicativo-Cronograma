@@ -41,7 +41,7 @@ begin
 		end
 		else 
 		begin
-			select 'Nenhuma leitura ainda, vamos começar?' [MENSAGEM], 2 [RESULTADO]
+			select 'Nenhuma leitura ainda.' [MENSAGEM], 2 [RESULTADO]
 		end		
 		
 	end try

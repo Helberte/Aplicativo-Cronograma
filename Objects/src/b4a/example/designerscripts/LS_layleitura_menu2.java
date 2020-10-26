@@ -9,10 +9,10 @@ public class LS_layleitura_menu2{
 public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAndAnchor> views, int width, int height, float scale) {
 anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
 anywheresoftware.b4a.keywords.LayoutBuilder.scaleAll(views);
-views.get("panel").vw.setTop((int)((0d / 100 * height)));
-views.get("panel").vw.setHeight((int)((100d / 100 * height)));
-views.get("panel").vw.setWidth((int)((100d / 100 * width)));
-views.get("panel").vw.setLeft((int)((0d / 100 * width)));
+views.get("panel_lidos").vw.setTop((int)((0d / 100 * height)));
+views.get("panel_lidos").vw.setHeight((int)((100d / 100 * height)));
+views.get("panel_lidos").vw.setWidth((int)((100d / 100 * width)));
+views.get("panel_lidos").vw.setLeft((int)((0d / 100 * width)));
 
 }
 }

@@ -127,7 +127,7 @@ if (RapidSub.canDelegate("gettext")) { return __ref.runUserSub(false, "scrolling
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 92;BA.debugLine="Return mText";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(true,"_mtext" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mtext" /*RemoteObject*/ );
  BA.debugLineNum = 93;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
@@ -146,7 +146,7 @@ if (RapidSub.canDelegate("gettextcolor")) { return __ref.runUserSub(false, "scro
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 125;BA.debugLine="Return mTextColor";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(true,"_mtextcolor" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mtextcolor" /*RemoteObject*/ );
  BA.debugLineNum = 126;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -193,7 +193,7 @@ Debug.locals.put("font1", _font1);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 116;BA.debugLine="Return cvs.MeasureText(s, font1).Width";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_cvs" /*RemoteObject*/ ).runMethod(false,"MeasureText",(Object)(_s),(Object)(_font1)).runMethod(true,"getWidth");
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_cvs" /*RemoteObject*/ ).runMethod(false,"MeasureText",(Object)(_s),(Object)(_font1)).runMethod(true,"getWidth");
  BA.debugLineNum = 117;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0f);
@@ -444,7 +444,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 6;
-if (true) return ;
+Debug.CheckDeviceExceptions();if (true) return ;
 if (true) break;
 
 case 6:
@@ -493,7 +493,7 @@ this.state = 12;
 case 12:
 //C
 this.state = 15;
-if (true) return ;
+Debug.CheckDeviceExceptions();if (true) return ;
 if (true) break;
 
 case 15:
@@ -523,7 +523,7 @@ this.state = 18;
 case 18:
 //C
 this.state = 21;
-if (true) return ;
+Debug.CheckDeviceExceptions();if (true) return ;
 if (true) break;
 
 case 21:

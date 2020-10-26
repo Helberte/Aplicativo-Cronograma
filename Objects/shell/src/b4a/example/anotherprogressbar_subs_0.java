@@ -475,7 +475,7 @@ if (RapidSub.canDelegate("getvalue")) { return __ref.runUserSub(false, "anotherp
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 149;BA.debugLine="Return mValue";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
  BA.debugLineNum = 150;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -494,7 +494,7 @@ if (RapidSub.canDelegate("getvisible")) { return __ref.runUserSub(false, "anothe
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 145;BA.debugLine="Return mBase.Visible";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getVisible");
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getVisible");
  BA.debugLineNum = 146;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);

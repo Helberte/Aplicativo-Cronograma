@@ -591,7 +591,7 @@ Debug.locals.put("alpha", _alpha);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 92;BA.debugLine="Return Bit.And(0xffffff, c) + Bit.ShiftLeft(alpha";
 Debug.JustUpdateDeviceLine();
-if (true) return RemoteObject.solve(new RemoteObject[] {b4xloadingindicator.__c.getField(false,"Bit").runMethod(true,"And",(Object)(BA.numberCast(int.class, 0xffffff)),(Object)(_c)),b4xloadingindicator.__c.getField(false,"Bit").runMethod(true,"ShiftLeft",(Object)(_alpha),(Object)(BA.numberCast(int.class, 24)))}, "+",1, 1);
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.solve(new RemoteObject[] {b4xloadingindicator.__c.getField(false,"Bit").runMethod(true,"And",(Object)(BA.numberCast(int.class, 0xffffff)),(Object)(_c)),b4xloadingindicator.__c.getField(false,"Bit").runMethod(true,"ShiftLeft",(Object)(_alpha),(Object)(BA.numberCast(int.class, 24)))}, "+",1, 1);
  BA.debugLineNum = 93;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);

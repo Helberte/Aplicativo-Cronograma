@@ -80,7 +80,7 @@ __ref.getField(false,"_mbase" /*RemoteObject*/ ).runVoidMethod ("AddView",(Objec
  };
  BA.debugLineNum = 25;BA.debugLine="Return mBase";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
  BA.debugLineNum = 26;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);

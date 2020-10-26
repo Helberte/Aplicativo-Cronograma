@@ -1,20 +1,22 @@
 ﻿Build1=Default,b4a.example
-File1=Lay_Anotar.bal
-File10=LayLeitura_menu1.bal
-File11=LayLeitura_menu2.bal
-File12=LayLeiturasTabStrip.bal
-File13=LayLogin.bal
-File14=LayoutCadastro.bal
-File15=livro.jpg
-File16=vitoriaLivro.jpg
-File2=lay_edautorlivro.bal
-File3=lay_edmetapagcap.bal
-File4=lay_edpagoucapitulo.bal
-File5=lay_edtitulolivro.bal
-File6=lay_imagem.bal
-File7=Lay_lancamento_leitura.bal
-File8=lay_previsao_termino.bal
-File9=lay_telacadastro.bal
+File1=bt_adicionar.png
+File10=lay_previsao_termino.bal
+File11=lay_telacadastro.bal
+File12=LayLeitura_menu1.bal
+File13=LayLeitura_menu2.bal
+File14=LayLeiturasTabStrip.bal
+File15=LayLogin.bal
+File16=LayoutCadastro.bal
+File17=livro.jpg
+File18=vitoriaLivro.jpg
+File2=Lay_Anotar.bal
+File3=Lay_detalhes_leituras.bal
+File4=lay_edautorlivro.bal
+File5=lay_edmetapagcap.bal
+File6=lay_edpagoucapitulo.bal
+File7=lay_edtitulolivro.bal
+File8=lay_imagem.bal
+File9=Lay_lancamento_leitura.bal
 FileGroup1=Default Group
 FileGroup10=Default Group
 FileGroup11=Default Group
@@ -23,6 +25,8 @@ FileGroup13=Default Group
 FileGroup14=Default Group
 FileGroup15=Default Group
 FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
 FileGroup2=Default Group
 FileGroup3=Default Group
 FileGroup4=Default Group
@@ -46,7 +50,7 @@ Module5=CodigoLayAnotacao
 Module6=CodigoLayLeituras
 Module7=CodigoLayLogin
 Module8=Starter
-NumberOfFiles=16
+NumberOfFiles=18
 NumberOfLibraries=5
 NumberOfModules=8
 Version=10.2
@@ -79,9 +83,11 @@ Sub Globals
 	
 End Sub
 
-Sub Activity_Create(FirstTime As Boolean)
+Sub Activity_Create(FirstTime As Boolean)	
+	
 	StartActivity(CodigoLayLogin)
 	Activity.Finish
+	
 End Sub
 
 Sub Activity_Resume

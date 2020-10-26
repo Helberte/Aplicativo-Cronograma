@@ -17,6 +17,8 @@ Sub Process_Globals
 	Public meta As Int
 	Public idLivro As Int
 	Public tipoLeitura As String
+	Public terminouLeitura As Boolean = False
+	Public de_os_parabens As Boolean = False
 End Sub
 
 Sub Globals
@@ -35,32 +37,30 @@ Sub Globals
 	Private lblTotalPaginas As Label
 End Sub
 
-Sub Activity_Create(FirstTime As Boolean)
-	
+Sub Activity_Create(FirstTime As Boolean)	
 	Activity.LoadLayout("Lay_lancamento_leitura")
 		
 	b4XImageViewFoto.ResizeMode = "FILL"
 	b4XImageViewFoto.Load(File.DirAssets, "livro.jpg")
-	
+		
 	lblTituloLivro.Text = tituloLivro
 	lblNomeUsuario.Text = nomeUsuario
 	edTotalPaginas.Text = totalPaginas
 	
-	If paginaAtual + meta > totalPaginas Then
-		edPaginaAtual.Text = totalPaginas
-	Else
-		edPaginaAtual.Text = paginaAtual + meta
-	End If	
-	
-	edPaginaAtual.RequestFocus
-	
 	Dim p As Int
 	
-	p = (paginaAtual * 100) / totalPaginas 		
+	p = (paginaAtual * 100) / totalPaginas
 	lblPorcentagem.Text = p & " % Lidos"
 	
-	p = ((paginaAtual + meta) * 100) / totalPaginas	
-	lblPrevisaoPorcentagem.Text = "Próximo avanço " & p & "%"
+	If paginaAtual + meta > totalPaginas Then
+		edPaginaAtual.Text = totalPaginas
+		p = (totalPaginas * 100) / totalPaginas
+		lblPrevisaoPorcentagem.Text = "Próximo avanço " & p & "%"
+	Else
+		edPaginaAtual.Text = paginaAtual + meta
+		p = ((paginaAtual + meta) * 100) / totalPaginas
+		lblPrevisaoPorcentagem.Text = "Próximo avanço " & p & "%"
+	End If	
 			
 	If tipoLeitura = "capítulos" Then
 		lblPaginaAtual.Text = "Capítulo atual"
@@ -70,9 +70,8 @@ Sub Activity_Create(FirstTime As Boolean)
 		lblTotalPaginas.Text = "Total páginas"
 	End If
 	
+	edPaginaAtual.RequestFocus
 	banco.Initialize
-	
-	
 End Sub
 
 Sub Activity_Resume	
@@ -111,11 +110,13 @@ Sub btOk_Click
 		If Result.GetInt("RESULTADO") = 1 Then
 			ToastMessageShow("Sucesso",True)
 			Main.CadastrouAlgo = True
+			terminouLeitura = False
 			Sleep(100)
 			Activity.Finish
 		Else if Result.GetInt("RESULTADO") = 0 Then								
 			ToastMessageShow("Há algo errado na atualização!",True)
 			Main.CadastrouAlgo = True
+			terminouLeitura = True
 			Sleep(100)
 			Activity.Finish
 		else if Result.GetInt("RESULTADO") = 2 Then
@@ -127,11 +128,17 @@ Sub btOk_Click
 			
 			If Result.GetInt("RESULTADO") = 1 Then
 				ToastMessageShow("Leitura concluída",True)
+				
+				terminouLeitura = True
+				de_os_parabens = True
 				Main.CadastrouAlgo = True
 				Sleep(200)
 				Activity.Finish
 			else if Result.GetInt("RESULTADO") = 0 Then
 				ToastMessageShow("Infelizmente algo deu errado.",True)
+				
+				terminouLeitura = True
+				de_os_parabens = False
 				Main.CadastrouAlgo = True
 				Sleep(200)
 				Activity.Finish
@@ -142,6 +149,8 @@ Sub btOk_Click
 	Catch
 		ToastMessageShow("Há algo errado na atualização!",True)
 		Main.CadastrouAlgo = False
+		terminouLeitura = False
+		de_os_parabens = False
 		Activity.Finish
 	End Try
 End Sub

@@ -52,15 +52,15 @@ roundslider
 scrollinglabel
 swiftbutton
 xuiviewsutils
-main,activity_create,0,0,29,32
+main,activity_create,0,0,29,34
 
 
 
-main,activity_pause,0,0,38,40
+main,activity_pause,0,0,40,42
 
 
 
-main,activity_resume,0,0,34,36
+main,activity_resume,0,0,36,38
 
 
 
@@ -384,45 +384,45 @@ codigocadastro,process_globals,0,1,6,8
 ,mostrarsenha
 ,mostrarsenha
 
-codigolancamentoleitura,activity_create,1,0,32,70
+codigolancamentoleitura,activity_create,1,0,34,69
 ,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas,,titulolivro,,nomeusuario,,totalpaginas,,paginaatual,,meta,,tipoleitura,,banco
 ,b4ximageviewfoto,,btok,,edpaginaatual,,edtotalpaginas,,lblivalido,,lblnomeusuario,,lblpaginaatual,,lblporcentagem,,lblprevisaoporcentagem,,lbltitulolivro,,lbltotalpaginas
 b4ximageview,setresizemode,b4ximageview,load,classbancodados,initialize,b4ximageview,update,b4ximageview,setcircleclip,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill
-codigolancamentoleitura,activity_pause,0,0,84,86
+codigolancamentoleitura,activity_pause,0,0,83,85
 
 
 
-codigolancamentoleitura,activity_resume,0,0,72,82
+codigolancamentoleitura,activity_resume,0,0,71,81
 ,b4ximageviewfoto,,lbltitulolivro
 
 
-codigolancamentoleitura,aparecepagatual,0,0,182,185
+codigolancamentoleitura,aparecepagatual,0,0,191,194
 ,lblpaginaatual
 
 
-codigolancamentoleitura,btcancelar_click,0,0,88,90
+codigolancamentoleitura,btcancelar_click,0,0,87,89
 
 
 
-codigolancamentoleitura,btok_click,0,0,92,141
-main,id_do_usuario,,idlivro,,edpaginaatual,,banco,main,cadastroualgo
-main,cadastroualgo
+codigolancamentoleitura,btok_click,0,0,91,150
+main,id_do_usuario,,idlivro,,edpaginaatual,,banco,main,cadastroualgo,,terminouleitura,,de_os_parabens
+main,cadastroualgo,,terminouleitura,,de_os_parabens
 classbancodados,insert_consulta,classbancodados,conecta
-codigolancamentoleitura,edpaginaatual_textchanged,0,0,143,175
+codigolancamentoleitura,edpaginaatual_textchanged,0,0,152,184
 ,totalpaginas,,lblivalido,,edpaginaatual,,lblprevisaoporcentagem,,btok,,lblpaginaatual
 
 ,somepagatual,,aparecepagatual
-codigolancamentoleitura,somepagatual,0,0,177,180
+codigolancamentoleitura,somepagatual,0,0,186,189
 ,lblpaginaatual
 
 
-codigolancamentoleitura,globals,0,1,16,30
+codigolancamentoleitura,globals,0,1,18,32
 
 
 
-codigolancamentoleitura,process_globals,0,1,6,14
-
-
+codigolancamentoleitura,process_globals,0,1,6,16
+,terminouleitura,,de_os_parabens
+,terminouleitura,,de_os_parabens
 
 codigolayanotacao,activity_create,1,0,28,35
 ,b4xcombobox1,,btcancelar,,btok,,edanotacao,,edtituloanotacao,,lblanotacaorefpag,,lbltitulo,,lbltituloanotacao,,panel_anotacao,,panel_cabecalho,,banco
@@ -524,54 +524,66 @@ b4xcombobox,setselectedindex,0,0,106,118
 
 
 
-codigolayleituras,activity_create,1,0,31,56
-,btadicionarleitura,,tabstrip,,panel_lendo,,lbl_inicial_leitura,,banco,,cores,,panelnenhumaleitura,main,id_do_usuario,,tempanel,,scrollview1,,gradient,,tamanholista,,nomearquivo
-,btadicionarleitura,,tabstrip,,panel_lendo,,tempanel,,tamanholista
-classbancodados,initialize,,atualiza_leituras,classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,atualiza_leituras,0,1,79,256
-main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,btadicionarleitura,,panel_lendo,,gradient,,cores,,tamanholista,,nomearquivo
+codigolayleituras,activity_create,1,0,36,61
+,b4ximage_parabens,,btadicionarleitura,,panel_parabens,,tabstrip,,panel_lendo,,panel_lidos,,lbl_inicial_leitura,,banco,,cores,,panelnenhumaleitura,,carrega_leitura_concluida,main,id_do_usuario,,tempanel,,scrollview1,,gradient,,tamanholista,,nomearquivo
+,b4ximage_parabens,,btadicionarleitura,,panel_parabens,,tabstrip,,panel_lendo,,panel_lidos,,carrega_leitura_concluida,,tempanel,,tamanholista
+classbancodados,initialize,,atualiza_leituras,classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
+codigolayleituras,atualiza_leituras,0,0,92,251
+main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,panel_lendo,,gradient,,cores,,btadicionarleitura,,tamanholista,,nomearquivo
 ,tempanel,,tamanholista
-classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,activity_keypress,1,0,365,404
+classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
+codigolayleituras,activity_keypress,1,0,486,525
 
 
 
-codigolayleituras,activity_pause,0,0,75,77
+codigolayleituras,activity_pause,0,0,88,90
 
 
 
-codigolayleituras,activity_resume,0,0,62,73
-main,cadastroualgo,main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,btadicionarleitura,,panel_lendo,,gradient,,cores,,tamanholista,,nomearquivo
-main,cadastroualgo,,tempanel,,tamanholista
-,atualiza_leituras,classbancodados,insert_consulta,classbancodados,conecta
-codigolayleituras,btadicionarleitura_click,0,0,357,359
+codigolayleituras,activity_resume,0,0,68,86
+main,cadastroualgo,codigolancamentoleitura,de_os_parabens,,b4ximage_parabens,,panel_parabens,main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,panel_lendo,,gradient,,cores,,btadicionarleitura,,tamanholista,,nomearquivo
+main,cadastroualgo,codigolancamentoleitura,de_os_parabens,,tempanel,,tamanholista
+,atualiza_leituras,b4ximageview,load,classbancodados,insert_consulta,,configuralabel,classbancodados,conecta,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill,b4ximageview,update,b4ximageview,setcircleclip
+codigolayleituras,configuralabel,0,0,475,484
 
 
 
-codigolayleituras,event_btanotar_click,0,0,258,298
+codigolayleituras,btadicionarleitura_click,0,0,360,362
+
+
+
+codigolayleituras,btok_parabens_click,0,0,527,529
+,panel_parabens
+
+
+codigolayleituras,event_btanotar_click,0,0,261,301
 ,nomearquivo,,tamanholista,codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 
-codigolayleituras,event_btlancar_click,0,0,300,355
+codigolayleituras,event_btlancar_click,0,0,303,358
 ,nomearquivo,,tamanholista,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 
-codigolayleituras,event_lbl_click,0,0,58,60
+codigolayleituras,event_lbl_click,0,0,64,66
 
 
 
-codigolayleituras,globals,0,1,11,29
+codigolayleituras,event_panels_click,0,0,253,259
+
+
+
+codigolayleituras,globals,0,1,11,34
 ,nomearquivo
 ,nomearquivo
 
 codigolayleituras,process_globals,0,1,6,9
-,tempanel
-,tempanel
+,tempanel,,tempanelleituraconcluida
+,tempanel,,tempanelleituraconcluida
 
-codigolayleituras,tabstrip_pageselected,0,0,361,363
-
-
-
+codigolayleituras,tabstrip_pageselected,0,0,364,473
+,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,main,id_do_usuario,,banco,,tempanelleituraconcluida,,scrollview2,,panel_lidos,,btadicionarleitura,,cores
+,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,,tempanelleituraconcluida,,cores
+classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
 codigolaylogin,activity_create,1,0,14,21
 ,btconectar,,edlogin,,edsenha,,funcoes
 ,btconectar,,edlogin,,edsenha
