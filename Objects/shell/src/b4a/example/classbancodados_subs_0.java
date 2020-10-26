@@ -11,7 +11,7 @@ public static RemoteObject  _class_globals(RemoteObject __ref) throws Exception{
  //BA.debugLineNum = 2;BA.debugLine="Private driver As String = \"net.sourceforge.jtds.";
 classbancodados._driver = BA.ObjectToString("net.sourceforge.jtds.jdbc.Driver");__ref.setField("_driver",classbancodados._driver);
  //BA.debugLineNum = 3;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
-classbancodados._jdbcurl = BA.ObjectToString("jdbc:jtds:sqlserver://192.168.1.108:1433;databaseName=cronograma;logintimeout=10");__ref.setField("_jdbcurl",classbancodados._jdbcurl);
+classbancodados._jdbcurl = BA.ObjectToString("jdbc:jtds:sqlserver://192.168.2.5:1433;databaseName=cronograma;logintimeout=10");__ref.setField("_jdbcurl",classbancodados._jdbcurl);
  //BA.debugLineNum = 6;BA.debugLine="Private usuario As String = \"sa\"";
 classbancodados._usuario = BA.ObjectToString("sa");__ref.setField("_usuario",classbancodados._usuario);
  //BA.debugLineNum = 7;BA.debugLine="Private senha As String = \"254685ro\"";
@@ -23,7 +23,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _conecta(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Conecta (classbancodados) ","classbancodados",1,__ref.getField(false, "ba"),__ref,16);
+		Debug.PushSubsStack("Conecta (classbancodados) ","classbancodados",2,__ref.getField(false, "ba"),__ref,16);
 if (RapidSub.canDelegate("conecta")) { return __ref.runUserSub(false, "classbancodados","conecta", __ref);}
 ResumableSub_Conecta rsub = new ResumableSub_Conecta(null,__ref);
 rsub.remoteResumableSub = anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSubForFilter();
@@ -49,7 +49,7 @@ RemoteObject _success = RemoteObject.createImmutable(false);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Conecta (classbancodados) ","classbancodados",1,__ref.getField(false, "ba"),__ref,16);
+		Debug.PushSubsStack("Conecta (classbancodados) ","classbancodados",2,__ref.getField(false, "ba"),__ref,16);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -107,7 +107,7 @@ this.state = 6;
 this.catchState = 0;
  BA.debugLineNum = 23;BA.debugLine="Return False";
 Debug.ShouldStop(4194304);
-Debug.CheckDeviceExceptions();if (true) {
+if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.__c.getField(true,"False")));return;};
  if (true) break;
 if (true) break;
@@ -142,7 +142,7 @@ public static void  _mssql_ready(RemoteObject __ref,RemoteObject _success) throw
 }
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (classbancodados) ","classbancodados",1,__ref.getField(false, "ba"),__ref,12);
+		Debug.PushSubsStack("Initialize (classbancodados) ","classbancodados",2,__ref.getField(false, "ba"),__ref,12);
 if (RapidSub.canDelegate("initialize")) { return __ref.runUserSub(false, "classbancodados","initialize", __ref, _ba);}
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -160,7 +160,7 @@ finally {
 		}}
 public static RemoteObject  _insert_consulta(RemoteObject __ref,RemoteObject _cmd) throws Exception{
 try {
-		Debug.PushSubsStack("Insert_Consulta (classbancodados) ","classbancodados",1,__ref.getField(false, "ba"),__ref,28);
+		Debug.PushSubsStack("Insert_Consulta (classbancodados) ","classbancodados",2,__ref.getField(false, "ba"),__ref,28);
 if (RapidSub.canDelegate("insert_consulta")) { return __ref.runUserSub(false, "classbancodados","insert_consulta", __ref, _cmd);}
 ResumableSub_Insert_Consulta rsub = new ResumableSub_Insert_Consulta(null,__ref,_cmd);
 rsub.remoteResumableSub = anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSubForFilter();
@@ -190,7 +190,7 @@ RemoteObject _rs = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.Re
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Insert_Consulta (classbancodados) ","classbancodados",1,__ref.getField(false, "ba"),__ref,28);
+		Debug.PushSubsStack("Insert_Consulta (classbancodados) ","classbancodados",2,__ref.getField(false, "ba"),__ref,28);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -304,7 +304,7 @@ this.state = 15;
 this.catchState = 0;
  BA.debugLineNum = 40;BA.debugLine="Return Null";
 Debug.ShouldStop(128);
-Debug.CheckDeviceExceptions();if (true) {
+if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,parent.__c.getField(false,"Null"));return;};
  if (true) break;
 if (true) break;
@@ -321,7 +321,7 @@ case 17:
 this.state = 18;
  BA.debugLineNum = 43;BA.debugLine="Return Null";
 Debug.ShouldStop(1024);
-Debug.CheckDeviceExceptions();if (true) {
+if (true) {
 parent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,parent.__c.getField(false,"Null"));return;};
  if (true) break;
 

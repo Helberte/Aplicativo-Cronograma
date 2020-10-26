@@ -76,12 +76,12 @@ public static RemoteObject _banco = RemoteObject.declareNull("b4a.example.classb
 public static RemoteObject _lbltotalpaginas = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
+public static b4a.example.act_telacadastro _act_telacadastro = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
-public static b4a.example.act_telacadastro _act_telacadastro = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
 		return new Object[] {"act_TelaCadastro",Debug.moduleToString(b4a.example.act_telacadastro.class),"Activity",codigolancamentoleitura.mostCurrent._activity,"b4XImageViewFoto",codigolancamentoleitura.mostCurrent._b4ximageviewfoto,"banco",codigolancamentoleitura.mostCurrent._banco,"btOk",codigolancamentoleitura.mostCurrent._btok,"CodigoCadastro",Debug.moduleToString(b4a.example.codigocadastro.class),"CodigoLayAnotacao",Debug.moduleToString(b4a.example.codigolayanotacao.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"CodigoLayLogin",Debug.moduleToString(b4a.example.codigolaylogin.class),"DateUtils",codigolancamentoleitura.mostCurrent._dateutils,"edPaginaAtual",codigolancamentoleitura.mostCurrent._edpaginaatual,"edTotalPaginas",codigolancamentoleitura.mostCurrent._edtotalpaginas,"idLivro",codigolancamentoleitura._idlivro,"lblIvalido",codigolancamentoleitura.mostCurrent._lblivalido,"lblNomeUsuario",codigolancamentoleitura.mostCurrent._lblnomeusuario,"lblPaginaAtual",codigolancamentoleitura.mostCurrent._lblpaginaatual,"lblPorcentagem",codigolancamentoleitura.mostCurrent._lblporcentagem,"lblPrevisaoPorcentagem",codigolancamentoleitura.mostCurrent._lblprevisaoporcentagem,"lblTituloLivro",codigolancamentoleitura.mostCurrent._lbltitulolivro,"lblTotalPaginas",codigolancamentoleitura.mostCurrent._lbltotalpaginas,"Main",Debug.moduleToString(b4a.example.main.class),"meta",codigolancamentoleitura._meta,"nomeUsuario",codigolancamentoleitura._nomeusuario,"paginaAtual",codigolancamentoleitura._paginaatual,"Starter",Debug.moduleToString(b4a.example.starter.class),"tipoLeitura",codigolancamentoleitura._tipoleitura,"tituloLivro",codigolancamentoleitura._titulolivro,"totalPaginas",codigolancamentoleitura._totalpaginas,"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};

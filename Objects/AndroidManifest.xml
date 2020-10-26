@@ -32,14 +32,14 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".codigocadastro"
+			android:name=".act_telacadastro"
 			android:label="Cronograma"
 			android:screenOrientation="unspecified">
 		</activity>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".codigolancamentoleitura"
+			android:name=".codigocadastro"
 			android:label="Cronograma"
 			android:screenOrientation="unspecified">
 		</activity>
@@ -75,15 +75,5 @@
 		</service>
 		<receiver android:name=".starter$starter_BR">
 		</receiver>
-<<<<<<< HEAD
-=======
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".act_telacadastro"
-			android:label="Cronograma"
-			android:screenOrientation="unspecified">
-		</activity>
->>>>>>> main
 	</application>
 </manifest>

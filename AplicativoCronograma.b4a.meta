@@ -25,12 +25,6 @@ ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
-<<<<<<< HEAD
-NavigationStack=CodigoLayAnotacao,Globals,24,5,CodigoLayAnotacao,ApareceTituloAnotacao,155,6,CodigoLayAnotacao,SomeTituloAnotacao,150,3,CodigoLayAnotacao,Activity_Resume,65,6,Visual Designer,LayLeitura_menu1.bal,-100,1,Visual Designer,LayLeitura_menu2.bal,-100,1,Visual Designer,LayLeiturasTabStrip.bal,-100,1,Visual Designer,LayoutCadastro.bal,-100,1,Visual Designer,LayCadastroLivro.bal,-100,1,CodigoCadastroLivro,Globals,37,0,CodigoCadastroLivro,Activity_Create,50,6
+NavigationStack=ClassBancoDados,Class_Globals,2,0,CodigoLayLeituras,Activity_Create,36,0,CodigoLayLeituras,Atualiza_leituras,96,0
 SelectedBuild=0
 VisibleModules=1,2,3,4,5,6,7,8
-=======
-NavigationStack=act_TelaCadastro,Event_btSalvar_Click,363,6,CodigoLayLogin,Process_Globals,12,0,CodigoLancamentoLeitura,Activity_Create,46,4,CodigoLancamentoLeitura,btOk_Click,128,6,ClassBancoDados,Insert_Consulta,27,0,ClassBancoDados,Class_Globals,6,0,CodigoLayLeituras,Activity_Resume,63,0,CodigoLayLeituras,Process_Globals,6,0,CodigoLayLeituras,Globals,14,0,CodigoLayLeituras,Atualiza_leituras,110,3
-SelectedBuild=0
-VisibleModules=2,3,4,5,6,7,8,1
->>>>>>> main

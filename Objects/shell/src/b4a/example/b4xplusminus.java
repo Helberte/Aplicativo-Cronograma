@@ -39,20 +39,13 @@ public static RemoteObject _size = RemoteObject.createImmutable(0);
 public static RemoteObject _mhaptic = RemoteObject.createImmutable(false);
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
+public static b4a.example.act_telacadastro _act_telacadastro = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
-<<<<<<< HEAD
-public static b4a.example.codigocadastrolivro _codigocadastrolivro = null;
-=======
->>>>>>> main
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
-<<<<<<< HEAD
-=======
-public static b4a.example.act_telacadastro _act_telacadastro = null;
->>>>>>> main
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"ArrowsSize",_ref.getField(false, "_arrowssize"),"DateUtils",_ref.getField(false, "_dateutils"),"Formation",_ref.getField(false, "_formation"),"Formatter",_ref.getField(false, "_formatter"),"lblMinus",_ref.getField(false, "_lblminus"),"lblPlus",_ref.getField(false, "_lblplus"),"LoopIndex",_ref.getField(false, "_loopindex"),"MainLabel",_ref.getField(false, "_mainlabel"),"mBase",_ref.getField(false, "_mbase"),"mCallBack",_ref.getField(false, "_mcallback"),"mCyclic",_ref.getField(false, "_mcyclic"),"mEndRange",_ref.getField(false, "_mendrange"),"mEventName",_ref.getField(false, "_meventname"),"mHaptic",_ref.getField(false, "_mhaptic"),"mInterval",_ref.getField(false, "_minterval"),"mRapid",_ref.getField(false, "_mrapid"),"mSelectedIndex",_ref.getField(false, "_mselectedindex"),"mStartRange",_ref.getField(false, "_mstartrange"),"mStringItems",_ref.getField(false, "_mstringitems"),"pnlMinus",_ref.getField(false, "_pnlminus"),"pnlPlus",_ref.getField(false, "_pnlplus"),"RapidPeriod1",_ref.getField(false, "_rapidperiod1"),"RapidPeriod2",_ref.getField(false, "_rapidperiod2"),"Size",_ref.getField(false, "_size"),"StringMode",_ref.getField(false, "_stringmode"),"Tag",_ref.getField(false, "_tag"),"xui",_ref.getField(false, "_xui")};

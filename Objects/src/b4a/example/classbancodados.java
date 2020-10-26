@@ -38,159 +38,24 @@ public String _senha = "";
 public anywheresoftware.b4j.objects.SQL _conexao = null;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
+public b4a.example.act_telacadastro _act_telacadastro = null;
 public b4a.example.codigocadastro _codigocadastro = null;
-<<<<<<< HEAD
-public b4a.example.codigocadastrolivro _codigocadastrolivro = null;
-=======
->>>>>>> main
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
-<<<<<<< HEAD
-=======
-public b4a.example.act_telacadastro _act_telacadastro = null;
->>>>>>> main
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
-public String  _class_globals(b4a.example.classbancodados __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="classbancodados";
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=327681;
- //BA.debugLineNum = 327681;BA.debugLine="Private driver As String = \"net.sourceforge.jtds.";
-_driver = "net.sourceforge.jtds.jdbc.Driver";
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
-<<<<<<< HEAD
-_jdbcurl = "jdbc:jtds:sqlserver://192.168.2.5:1433;databaseName=cronograma;logintimeout=10";
-=======
-_jdbcurl = "jdbc:jtds:sqlserver://192.168.1.108:1433;databaseName=cronograma;logintimeout=10";
->>>>>>> main
-RDebugUtils.currentLine=327685;
- //BA.debugLineNum = 327685;BA.debugLine="Private usuario As String = \"sa\"";
-_usuario = "sa";
-RDebugUtils.currentLine=327686;
- //BA.debugLineNum = 327686;BA.debugLine="Private senha As String = \"254685ro\"";
-_senha = "254685ro";
-RDebugUtils.currentLine=327687;
- //BA.debugLineNum = 327687;BA.debugLine="Private conexao As JdbcSQL";
-_conexao = new anywheresoftware.b4j.objects.SQL();
-RDebugUtils.currentLine=327688;
- //BA.debugLineNum = 327688;BA.debugLine="End Sub";
-return "";
-}
-public anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _conecta(b4a.example.classbancodados __ref) throws Exception{
-RDebugUtils.currentModule="classbancodados";
-if (Debug.shouldDelegate(ba, "conecta", false))
-	 {return ((anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) Debug.delegate(ba, "conecta", null));}
-ResumableSub_Conecta rsub = new ResumableSub_Conecta(this,__ref);
-rsub.resume(ba, null);
-return (anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper(), rsub);
-}
-public static class ResumableSub_Conecta extends BA.ResumableSub {
-public ResumableSub_Conecta(b4a.example.classbancodados parent,b4a.example.classbancodados __ref) {
-this.parent = parent;
-this.__ref = __ref;
-this.__ref = parent;
-}
-b4a.example.classbancodados __ref;
-b4a.example.classbancodados parent;
-boolean _success = false;
-
-@Override
-public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="classbancodados";
-
-    while (true) {
-try {
-
-        switch (state) {
-            case -1:
-{
-parent.__c.ReturnFromResumableSub(this,null);return;}
-case 0:
-//C
-this.state = 1;
-RDebugUtils.currentLine=458753;
- //BA.debugLineNum = 458753;BA.debugLine="Try";
-if (true) break;
-
-case 1:
-//try
-this.state = 6;
-this.catchState = 5;
-this.state = 3;
-if (true) break;
-
-case 3:
-//C
-this.state = 6;
-this.catchState = 5;
-RDebugUtils.currentLine=458754;
- //BA.debugLineNum = 458754;BA.debugLine="conexao.Close";
-__ref._conexao /*anywheresoftware.b4j.objects.SQL*/ .Close();
-RDebugUtils.currentLine=458755;
- //BA.debugLineNum = 458755;BA.debugLine="conexao.InitializeAsync(\"MSSQL\", driver, jdbcUrl";
-__ref._conexao /*anywheresoftware.b4j.objects.SQL*/ .InitializeAsync(ba,"MSSQL",__ref._driver /*String*/ ,__ref._jdbcurl /*String*/ ,__ref._usuario /*String*/ ,__ref._senha /*String*/ );
-RDebugUtils.currentLine=458756;
- //BA.debugLineNum = 458756;BA.debugLine="Wait For MSSQL_Ready (Success As Boolean)";
-parent.__c.WaitFor("mssql_ready", ba, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "classbancodados", "conecta"), null);
-this.state = 7;
-return;
-case 7:
-//C
-this.state = 6;
-_success = (Boolean) result[1];
-;
-RDebugUtils.currentLine=458757;
- //BA.debugLineNum = 458757;BA.debugLine="Return Success";
-if (true) {
-parent.__c.ReturnFromResumableSub(this,(Object)(_success));return;};
- if (true) break;
-
-case 5:
-//C
-this.state = 6;
-this.catchState = 0;
-RDebugUtils.currentLine=458759;
- //BA.debugLineNum = 458759;BA.debugLine="Return False";
-if (true) {
-parent.__c.ReturnFromResumableSub(this,(Object)(parent.__c.False));return;};
- if (true) break;
-if (true) break;
-
-case 6:
-//C
-this.state = -1;
-this.catchState = 0;
-;
-RDebugUtils.currentLine=458761;
- //BA.debugLineNum = 458761;BA.debugLine="End Sub";
-if (true) break;
-}} 
-       catch (Exception e0) {
-			
-if (catchState == 0)
-    throw e0;
-else {
-    state = catchState;
-ba.setLastException(e0);}
-            }
-        }
-    }
-}
 public String  _initialize(b4a.example.classbancodados __ref,anywheresoftware.b4a.BA _ba) throws Exception{
 __ref = this;
 innerInitialize(_ba);
 RDebugUtils.currentModule="classbancodados";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Public Sub Initialize()";
-RDebugUtils.currentLine=393218;
- //BA.debugLineNum = 393218;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21692416;
+ //BA.debugLineNum = 21692416;BA.debugLine="Public Sub Initialize()";
+RDebugUtils.currentLine=21692418;
+ //BA.debugLineNum = 21692418;BA.debugLine="End Sub";
 return "";
 }
 public anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _insert_consulta(b4a.example.classbancodados __ref,String _cmd) throws Exception{
@@ -229,8 +94,8 @@ parent.__c.ReturnFromResumableSub(this,null);return;}
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=524289;
- //BA.debugLineNum = 524289;BA.debugLine="Wait For (Conecta) Complete (Success As Boolean)";
+RDebugUtils.currentLine=21823489;
+ //BA.debugLineNum = 21823489;BA.debugLine="Wait For (Conecta) Complete (Success As Boolean)";
 parent.__c.WaitFor("complete", ba, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "classbancodados", "insert_consulta"), __ref._conecta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null));
 this.state = 19;
 return;
@@ -239,8 +104,8 @@ case 19:
 this.state = 1;
 _success = (Boolean) result[1];
 ;
-RDebugUtils.currentLine=524290;
- //BA.debugLineNum = 524290;BA.debugLine="If Success Then";
+RDebugUtils.currentLine=21823490;
+ //BA.debugLineNum = 21823490;BA.debugLine="If Success Then";
 if (true) break;
 
 case 1:
@@ -255,11 +120,11 @@ this.state = 17;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=524291;
- //BA.debugLineNum = 524291;BA.debugLine="Dim result As Object = conexao.ExecQueryAsync(\"S";
+RDebugUtils.currentLine=21823491;
+ //BA.debugLineNum = 21823491;BA.debugLine="Dim result As Object = conexao.ExecQueryAsync(\"S";
 _result = __ref._conexao /*anywheresoftware.b4j.objects.SQL*/ .ExecQueryAsync(ba,"SP",_cmd,(anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(parent.__c.Null)));
-RDebugUtils.currentLine=524292;
- //BA.debugLineNum = 524292;BA.debugLine="Try";
+RDebugUtils.currentLine=21823492;
+ //BA.debugLineNum = 21823492;BA.debugLine="Try";
 if (true) break;
 
 case 4:
@@ -273,8 +138,8 @@ case 6:
 //C
 this.state = 7;
 this.catchState = 14;
-RDebugUtils.currentLine=524293;
- //BA.debugLineNum = 524293;BA.debugLine="Wait For (result) SP_QueryComplete (Success As";
+RDebugUtils.currentLine=21823493;
+ //BA.debugLineNum = 21823493;BA.debugLine="Wait For (result) SP_QueryComplete (Success As";
 parent.__c.WaitFor("sp_querycomplete", ba, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "classbancodados", "insert_consulta"), _result);
 this.state = 20;
 return;
@@ -284,8 +149,8 @@ this.state = 7;
 _success = (Boolean) result[1];
 _rs = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[2];
 ;
-RDebugUtils.currentLine=524294;
- //BA.debugLineNum = 524294;BA.debugLine="If Success Then";
+RDebugUtils.currentLine=21823494;
+ //BA.debugLineNum = 21823494;BA.debugLine="If Success Then";
 if (true) break;
 
 case 7:
@@ -300,8 +165,8 @@ this.state = 11;
 case 9:
 //C
 this.state = 12;
-RDebugUtils.currentLine=524295;
- //BA.debugLineNum = 524295;BA.debugLine="Return rs";
+RDebugUtils.currentLine=21823495;
+ //BA.debugLineNum = 21823495;BA.debugLine="Return rs";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,(Object)(_rs));return;};
  if (true) break;
@@ -309,8 +174,8 @@ parent.__c.ReturnFromResumableSub(this,(Object)(_rs));return;};
 case 11:
 //C
 this.state = 12;
-RDebugUtils.currentLine=524297;
- //BA.debugLineNum = 524297;BA.debugLine="Return Null";
+RDebugUtils.currentLine=21823497;
+ //BA.debugLineNum = 21823497;BA.debugLine="Return Null";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,parent.__c.Null);return;};
  if (true) break;
@@ -325,8 +190,8 @@ case 14:
 //C
 this.state = 15;
 this.catchState = 0;
-RDebugUtils.currentLine=524300;
- //BA.debugLineNum = 524300;BA.debugLine="Return Null";
+RDebugUtils.currentLine=21823500;
+ //BA.debugLineNum = 21823500;BA.debugLine="Return Null";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,parent.__c.Null);return;};
  if (true) break;
@@ -342,8 +207,8 @@ this.catchState = 0;
 case 17:
 //C
 this.state = 18;
-RDebugUtils.currentLine=524303;
- //BA.debugLineNum = 524303;BA.debugLine="Return Null";
+RDebugUtils.currentLine=21823503;
+ //BA.debugLineNum = 21823503;BA.debugLine="Return Null";
 if (true) {
 parent.__c.ReturnFromResumableSub(this,parent.__c.Null);return;};
  if (true) break;
@@ -352,8 +217,132 @@ case 18:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=524305;
- //BA.debugLineNum = 524305;BA.debugLine="End Sub";
+RDebugUtils.currentLine=21823505;
+ //BA.debugLineNum = 21823505;BA.debugLine="End Sub";
+if (true) break;
+}} 
+       catch (Exception e0) {
+			
+if (catchState == 0)
+    throw e0;
+else {
+    state = catchState;
+ba.setLastException(e0);}
+            }
+        }
+    }
+}
+public String  _class_globals(b4a.example.classbancodados __ref) throws Exception{
+__ref = this;
+RDebugUtils.currentModule="classbancodados";
+RDebugUtils.currentLine=21626880;
+ //BA.debugLineNum = 21626880;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=21626881;
+ //BA.debugLineNum = 21626881;BA.debugLine="Private driver As String = \"net.sourceforge.jtds.";
+_driver = "net.sourceforge.jtds.jdbc.Driver";
+RDebugUtils.currentLine=21626882;
+ //BA.debugLineNum = 21626882;BA.debugLine="Private jdbcUrl As String = \"jdbc:jtds:sqlserver:";
+_jdbcurl = "jdbc:jtds:sqlserver://192.168.2.5:1433;databaseName=cronograma;logintimeout=10";
+RDebugUtils.currentLine=21626885;
+ //BA.debugLineNum = 21626885;BA.debugLine="Private usuario As String = \"sa\"";
+_usuario = "sa";
+RDebugUtils.currentLine=21626886;
+ //BA.debugLineNum = 21626886;BA.debugLine="Private senha As String = \"254685ro\"";
+_senha = "254685ro";
+RDebugUtils.currentLine=21626887;
+ //BA.debugLineNum = 21626887;BA.debugLine="Private conexao As JdbcSQL";
+_conexao = new anywheresoftware.b4j.objects.SQL();
+RDebugUtils.currentLine=21626888;
+ //BA.debugLineNum = 21626888;BA.debugLine="End Sub";
+return "";
+}
+public anywheresoftware.b4a.keywords.Common.ResumableSubWrapper  _conecta(b4a.example.classbancodados __ref) throws Exception{
+RDebugUtils.currentModule="classbancodados";
+if (Debug.shouldDelegate(ba, "conecta", false))
+	 {return ((anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) Debug.delegate(ba, "conecta", null));}
+ResumableSub_Conecta rsub = new ResumableSub_Conecta(this,__ref);
+rsub.resume(ba, null);
+return (anywheresoftware.b4a.keywords.Common.ResumableSubWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.keywords.Common.ResumableSubWrapper(), rsub);
+}
+public static class ResumableSub_Conecta extends BA.ResumableSub {
+public ResumableSub_Conecta(b4a.example.classbancodados parent,b4a.example.classbancodados __ref) {
+this.parent = parent;
+this.__ref = __ref;
+this.__ref = parent;
+}
+b4a.example.classbancodados __ref;
+b4a.example.classbancodados parent;
+boolean _success = false;
+
+@Override
+public void resume(BA ba, Object[] result) throws Exception{
+RDebugUtils.currentModule="classbancodados";
+
+    while (true) {
+try {
+
+        switch (state) {
+            case -1:
+{
+parent.__c.ReturnFromResumableSub(this,null);return;}
+case 0:
+//C
+this.state = 1;
+RDebugUtils.currentLine=21757953;
+ //BA.debugLineNum = 21757953;BA.debugLine="Try";
+if (true) break;
+
+case 1:
+//try
+this.state = 6;
+this.catchState = 5;
+this.state = 3;
+if (true) break;
+
+case 3:
+//C
+this.state = 6;
+this.catchState = 5;
+RDebugUtils.currentLine=21757954;
+ //BA.debugLineNum = 21757954;BA.debugLine="conexao.Close";
+__ref._conexao /*anywheresoftware.b4j.objects.SQL*/ .Close();
+RDebugUtils.currentLine=21757955;
+ //BA.debugLineNum = 21757955;BA.debugLine="conexao.InitializeAsync(\"MSSQL\", driver, jdbcUrl";
+__ref._conexao /*anywheresoftware.b4j.objects.SQL*/ .InitializeAsync(ba,"MSSQL",__ref._driver /*String*/ ,__ref._jdbcurl /*String*/ ,__ref._usuario /*String*/ ,__ref._senha /*String*/ );
+RDebugUtils.currentLine=21757956;
+ //BA.debugLineNum = 21757956;BA.debugLine="Wait For MSSQL_Ready (Success As Boolean)";
+parent.__c.WaitFor("mssql_ready", ba, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "classbancodados", "conecta"), null);
+this.state = 7;
+return;
+case 7:
+//C
+this.state = 6;
+_success = (Boolean) result[1];
+;
+RDebugUtils.currentLine=21757957;
+ //BA.debugLineNum = 21757957;BA.debugLine="Return Success";
+if (true) {
+parent.__c.ReturnFromResumableSub(this,(Object)(_success));return;};
+ if (true) break;
+
+case 5:
+//C
+this.state = 6;
+this.catchState = 0;
+RDebugUtils.currentLine=21757959;
+ //BA.debugLineNum = 21757959;BA.debugLine="Return False";
+if (true) {
+parent.__c.ReturnFromResumableSub(this,(Object)(parent.__c.False));return;};
+ if (true) break;
+if (true) break;
+
+case 6:
+//C
+this.state = -1;
+this.catchState = 0;
+;
+RDebugUtils.currentLine=21757961;
+ //BA.debugLineNum = 21757961;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {

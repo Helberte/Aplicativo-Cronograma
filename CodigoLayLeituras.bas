@@ -99,7 +99,7 @@ Sub Atualiza_leituras As ResumableSub
 			If temPanel Then
 				scrollView1.Panel.RemoveView
 				temPanel = False
-				lbl_Inicial_Leitura.Initialize("")
+				lbl_Inicial_Leitura.Initialize("Event_lbl")
 			End If			
 			
 			btAdicionarLeitura.Visible = False

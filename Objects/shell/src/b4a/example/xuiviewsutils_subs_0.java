@@ -21,7 +21,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 35;BA.debugLine="If CustomListView1.Size = 0 Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_customlistview1.runMethod(true,"_getsize"),BA.numberCast(double.class, 0))) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 36;BA.debugLine="Dim LastItem As CLVItem = CustomListView1.GetRawL";
 Debug.JustUpdateDeviceLine();
 _lastitem = _customlistview1.runMethod(false,"_getrawlistitem",(Object)(RemoteObject.solve(new RemoteObject[] {_customlistview1.runMethod(true,"_getsize"),RemoteObject.createImmutable(1)}, "-",1, 1)));Debug.locals.put("LastItem", _lastitem);Debug.locals.put("LastItem", _lastitem);
@@ -72,7 +72,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 11;BA.debugLine="If UtilsInitialized Then Return";
 Debug.JustUpdateDeviceLine();
 if (xuiviewsutils._utilsinitialized.<Boolean>get().booleanValue()) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 12;BA.debugLine="UtilsInitialized = True";
 Debug.JustUpdateDeviceLine();
 xuiviewsutils._utilsinitialized = xuiviewsutils.mostCurrent.__c.getField(true,"True");

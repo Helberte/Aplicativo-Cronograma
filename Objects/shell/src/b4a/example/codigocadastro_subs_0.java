@@ -8,7 +8,7 @@ public class codigocadastro_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,23);
+		Debug.PushSubsStack("Activity_Create (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,23);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 23;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -40,7 +40,7 @@ finally {
 		}}
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,138);
+		Debug.PushSubsStack("Activity_KeyPress (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,138);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","activity_keypress", _keycode);}
 Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 138;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
@@ -56,11 +56,11 @@ Debug.ShouldStop(4096);
 codigocadastro.mostCurrent._activity.runVoidMethod ("Finish");
  BA.debugLineNum = 142;BA.debugLine="Return False";
 Debug.ShouldStop(8192);
-Debug.CheckDeviceExceptions();if (true) return codigocadastro.mostCurrent.__c.getField(true,"False");
+if (true) return codigocadastro.mostCurrent.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 144;BA.debugLine="Return True";
 Debug.ShouldStop(32768);
-Debug.CheckDeviceExceptions();if (true) return codigocadastro.mostCurrent.__c.getField(true,"True");
+if (true) return codigocadastro.mostCurrent.__c.getField(true,"True");
  };
  BA.debugLineNum = 146;BA.debugLine="End Sub";
 Debug.ShouldStop(131072);
@@ -74,7 +74,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,37);
+		Debug.PushSubsStack("Activity_Pause (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,37);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 37;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -91,7 +91,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,33);
+		Debug.PushSubsStack("Activity_Resume (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,33);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","activity_resume");}
  BA.debugLineNum = 33;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(1);
@@ -107,7 +107,7 @@ finally {
 		}}
 public static void  _btsalvar_click() throws Exception{
 try {
-		Debug.PushSubsStack("btSalvar_Click (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,41);
+		Debug.PushSubsStack("btSalvar_Click (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,41);
 if (RapidSub.canDelegate("btsalvar_click")) { b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","btsalvar_click"); return;}
 ResumableSub_btSalvar_Click rsub = new ResumableSub_btSalvar_Click(null);
 rsub.resume(null, null);
@@ -130,7 +130,7 @@ RemoteObject _result = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQ
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("btSalvar_Click (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,41);
+		Debug.PushSubsStack("btSalvar_Click (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,41);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -452,7 +452,7 @@ public static void  _complete(RemoteObject _result) throws Exception{
 }
 public static RemoteObject  _edrepitasenha_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edRepitaSenha_TextChanged (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,130);
+		Debug.PushSubsStack("edRepitaSenha_TextChanged (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,130);
 if (RapidSub.canDelegate("edrepitasenha_textchanged")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","edrepitasenha_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -480,7 +480,7 @@ finally {
 		}}
 public static RemoteObject  _edsenha_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edSenha_TextChanged (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,122);
+		Debug.PushSubsStack("edSenha_TextChanged (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,122);
 if (RapidSub.canDelegate("edsenha_textchanged")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","edsenha_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -529,7 +529,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _lblmostrarsenha_click() throws Exception{
 try {
-		Debug.PushSubsStack("lblMostrarSenha_Click (codigocadastro) ","codigocadastro",2,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,148);
+		Debug.PushSubsStack("lblMostrarSenha_Click (codigocadastro) ","codigocadastro",3,codigocadastro.mostCurrent.activityBA,codigocadastro.mostCurrent,148);
 if (RapidSub.canDelegate("lblmostrarsenha_click")) { return b4a.example.codigocadastro.remoteMe.runUserSub(false, "codigocadastro","lblmostrarsenha_click");}
  BA.debugLineNum = 148;BA.debugLine="Sub lblMostrarSenha_Click";
 Debug.ShouldStop(524288);

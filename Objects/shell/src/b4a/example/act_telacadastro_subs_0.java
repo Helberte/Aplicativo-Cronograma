@@ -8,7 +8,7 @@ public class act_telacadastro_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,76);
+		Debug.PushSubsStack("Activity_Create (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,76);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","activity_create", _firsttime);}
 RemoteObject _etiqueta = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 RemoteObject _btsalvaresquerda = RemoteObject.createImmutable(0);
@@ -500,7 +500,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,314);
+		Debug.PushSubsStack("Activity_Pause (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,314);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 314;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -517,7 +517,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,301);
+		Debug.PushSubsStack("Activity_Resume (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,301);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","activity_resume");}
  BA.debugLineNum = 301;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(4096);
@@ -557,7 +557,7 @@ finally {
 		}}
 public static RemoteObject  _addlabel(RemoteObject _gravidade,RemoteObject _etiqueta,RemoteObject _topo,RemoteObject _esquerda,RemoteObject _tamanho) throws Exception{
 try {
-		Debug.PushSubsStack("AddLabel (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,292);
+		Debug.PushSubsStack("AddLabel (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,292);
 if (RapidSub.canDelegate("addlabel")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","addlabel", _gravidade, _etiqueta, _topo, _esquerda, _tamanho);}
 Debug.locals.put("gravidade", _gravidade);
 Debug.locals.put("etiqueta", _etiqueta);
@@ -577,7 +577,7 @@ Debug.ShouldStop(256);
 act_telacadastro.mostCurrent._scrol.runMethod(false,"getPanel").runVoidMethod ("AddView",(Object)((_etiqueta.getObject())),(Object)(_esquerda),(Object)(_topo),(Object)(_tamanho),(Object)(act_telacadastro.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 4)),act_telacadastro.mostCurrent.activityBA)));
  BA.debugLineNum = 298;BA.debugLine="Return etiqueta";
 Debug.ShouldStop(512);
-Debug.CheckDeviceExceptions();if (true) return _etiqueta;
+if (true) return _etiqueta;
  BA.debugLineNum = 299;BA.debugLine="End Sub";
 Debug.ShouldStop(1024);
 return RemoteObject.createImmutable(null);
@@ -590,7 +590,7 @@ finally {
 		}}
 public static RemoteObject  _btaddimagem_click() throws Exception{
 try {
-		Debug.PushSubsStack("btAddImagem_Click (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,411);
+		Debug.PushSubsStack("btAddImagem_Click (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,411);
 if (RapidSub.canDelegate("btaddimagem_click")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","btaddimagem_click");}
  BA.debugLineNum = 411;BA.debugLine="Sub btAddImagem_Click";
 Debug.ShouldStop(67108864);
@@ -618,7 +618,7 @@ finally {
 		}}
 public static RemoteObject  _cc_result(RemoteObject _success,RemoteObject _dir,RemoteObject _filename) throws Exception{
 try {
-		Debug.PushSubsStack("CC_Result (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,419);
+		Debug.PushSubsStack("CC_Result (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,419);
 if (RapidSub.canDelegate("cc_result")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","cc_result", _success, _dir, _filename);}
 Debug.locals.put("Success", _success);
 Debug.locals.put("Dir", _dir);
@@ -651,7 +651,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatautorlivro_focuschanged(RemoteObject _hasfocus) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatAutorLivro_FocusChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,588);
+		Debug.PushSubsStack("edB4XFloatAutorLivro_FocusChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,588);
 if (RapidSub.canDelegate("edb4xfloatautorlivro_focuschanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatautorlivro_focuschanged", _hasfocus);}
 Debug.locals.put("HasFocus", _hasfocus);
  BA.debugLineNum = 588;BA.debugLine="Sub edB4XFloatAutorLivro_FocusChanged (HasFocus As";
@@ -683,7 +683,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatautorlivro_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatAutorLivro_TextChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,446);
+		Debug.PushSubsStack("edB4XFloatAutorLivro_TextChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,446);
 if (RapidSub.canDelegate("edb4xfloatautorlivro_textchanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatautorlivro_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -737,7 +737,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatmetapagcap_focuschanged(RemoteObject _hasfocus) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatMetaPagCap_FocusChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,608);
+		Debug.PushSubsStack("edB4XFloatMetaPagCap_FocusChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,608);
 if (RapidSub.canDelegate("edb4xfloatmetapagcap_focuschanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatmetapagcap_focuschanged", _hasfocus);}
 Debug.locals.put("HasFocus", _hasfocus);
  BA.debugLineNum = 608;BA.debugLine="Sub edB4XFloatMetaPagCap_FocusChanged (HasFocus As";
@@ -769,7 +769,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatmetapagcap_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatMetaPagCap_TextChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,484);
+		Debug.PushSubsStack("edB4XFloatMetaPagCap_TextChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,484);
 if (RapidSub.canDelegate("edb4xfloatmetapagcap_textchanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatmetapagcap_textchanged", _old, _new);}
 RemoteObject _meta = RemoteObject.createImmutable(0);
 RemoteObject _total = RemoteObject.createImmutable(0);
@@ -872,7 +872,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatnomelivro_focuschanged(RemoteObject _hasfocus) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatNomeLivro_FocusChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,578);
+		Debug.PushSubsStack("edB4XFloatNomeLivro_FocusChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,578);
 if (RapidSub.canDelegate("edb4xfloatnomelivro_focuschanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatnomelivro_focuschanged", _hasfocus);}
 Debug.locals.put("HasFocus", _hasfocus);
  BA.debugLineNum = 578;BA.debugLine="Sub edB4XFloatNomeLivro_FocusChanged (HasFocus As";
@@ -904,7 +904,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatnomelivro_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatNomeLivro_TextChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,464);
+		Debug.PushSubsStack("edB4XFloatNomeLivro_TextChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,464);
 if (RapidSub.canDelegate("edb4xfloatnomelivro_textchanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatnomelivro_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -958,7 +958,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatpagoucap_focuschanged(RemoteObject _hasfocus) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatPagOuCap_FocusChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,598);
+		Debug.PushSubsStack("edB4XFloatPagOuCap_FocusChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,598);
 if (RapidSub.canDelegate("edb4xfloatpagoucap_focuschanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatpagoucap_focuschanged", _hasfocus);}
 Debug.locals.put("HasFocus", _hasfocus);
  BA.debugLineNum = 598;BA.debugLine="Sub edB4XFloatPagOuCap_FocusChanged (HasFocus As B";
@@ -990,7 +990,7 @@ finally {
 		}}
 public static RemoteObject  _edb4xfloatpagoucap_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("edB4XFloatPagOuCap_TextChanged (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,530);
+		Debug.PushSubsStack("edB4XFloatPagOuCap_TextChanged (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,530);
 if (RapidSub.canDelegate("edb4xfloatpagoucap_textchanged")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","edb4xfloatpagoucap_textchanged", _old, _new);}
 RemoteObject _meta = RemoteObject.createImmutable(0);
 RemoteObject _total = RemoteObject.createImmutable(0);
@@ -1096,7 +1096,7 @@ finally {
 		}}
 public static RemoteObject  _event_btcancelar_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_btCancelar_Click (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,318);
+		Debug.PushSubsStack("Event_btCancelar_Click (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,318);
 if (RapidSub.canDelegate("event_btcancelar_click")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","event_btcancelar_click");}
  BA.debugLineNum = 318;BA.debugLine="Sub Event_btCancelar_Click";
 Debug.ShouldStop(536870912);
@@ -1121,7 +1121,7 @@ finally {
 		}}
 public static void  _event_btsalvar_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_btSalvar_Click (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,324);
+		Debug.PushSubsStack("Event_btSalvar_Click (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,324);
 if (RapidSub.canDelegate("event_btsalvar_click")) { b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","event_btsalvar_click"); return;}
 ResumableSub_Event_btSalvar_Click rsub = new ResumableSub_Event_btSalvar_Click(null);
 rsub.resume(null, null);
@@ -1149,7 +1149,7 @@ RemoteObject _result = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQ
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Event_btSalvar_Click (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,324);
+		Debug.PushSubsStack("Event_btSalvar_Click (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,324);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1643,7 +1643,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _radcapitulo_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("radCapitulo_CheckedChange (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,438);
+		Debug.PushSubsStack("radCapitulo_CheckedChange (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,438);
 if (RapidSub.canDelegate("radcapitulo_checkedchange")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","radcapitulo_checkedchange", _checked);}
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 438;BA.debugLine="Sub radCapitulo_CheckedChange(Checked As Boolean)";
@@ -1671,7 +1671,7 @@ finally {
 		}}
 public static RemoteObject  _radpagina_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("radPagina_CheckedChange (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,430);
+		Debug.PushSubsStack("radPagina_CheckedChange (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,430);
 if (RapidSub.canDelegate("radpagina_checkedchange")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","radpagina_checkedchange", _checked);}
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 430;BA.debugLine="Sub radPagina_CheckedChange(Checked As Boolean)";
@@ -1699,7 +1699,7 @@ finally {
 		}}
 public static RemoteObject  _textoobrigatorio() throws Exception{
 try {
-		Debug.PushSubsStack("TextoObrigatorio (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,618);
+		Debug.PushSubsStack("TextoObrigatorio (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,618);
 if (RapidSub.canDelegate("textoobrigatorio")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","textoobrigatorio");}
  BA.debugLineNum = 618;BA.debugLine="Sub TextoObrigatorio";
 Debug.ShouldStop(512);
@@ -1771,29 +1771,29 @@ finally {
 		}}
 public static RemoteObject  _verificatamanhotexto() throws Exception{
 try {
-		Debug.PushSubsStack("VerificaTamanhoTexto (act_telacadastro) ","act_telacadastro",8,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,650);
+		Debug.PushSubsStack("VerificaTamanhoTexto (act_telacadastro) ","act_telacadastro",1,act_telacadastro.mostCurrent.activityBA,act_telacadastro.mostCurrent,650);
 if (RapidSub.canDelegate("verificatamanhotexto")) { return b4a.example.act_telacadastro.remoteMe.runUserSub(false, "act_telacadastro","verificatamanhotexto");}
  BA.debugLineNum = 650;BA.debugLine="Sub VerificaTamanhoTexto As Boolean";
 Debug.ShouldStop(512);
  BA.debugLineNum = 652;BA.debugLine="If edB4XFloatNomeLivro.Text.Length > 100 Then Ret";
 Debug.ShouldStop(2048);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatnomelivro.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 100))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 653;BA.debugLine="If edB4XFloatAutorLivro.Text.Length > 100 Then Re";
 Debug.ShouldStop(4096);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatautorlivro.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 100))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 654;BA.debugLine="If edB4XFloatPagOuCap.Text.Length > 4 Then Return";
 Debug.ShouldStop(8192);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatpagoucap.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 4))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 655;BA.debugLine="If edB4XFloatMetaPagCap.Text.Length > 4 Then Retu";
 Debug.ShouldStop(16384);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatmetapagcap.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 4))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 656;BA.debugLine="Return True";
 Debug.ShouldStop(32768);
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"True");
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"True");
  BA.debugLineNum = 657;BA.debugLine="End Sub";
 Debug.ShouldStop(65536);
 return RemoteObject.createImmutable(false);
