@@ -50,11 +50,11 @@ public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.da
 public static b4a.example.main _main = null;
 public static b4a.example.act_telacadastro _act_telacadastro = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
-public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
-public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
+public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"boxH",_ref.getField(false, "_boxh"),"boxW",_ref.getField(false, "_boxw"),"btnMonthLeft",_ref.getField(false, "_btnmonthleft"),"btnMonthRight",_ref.getField(false, "_btnmonthright"),"btnYearLeft",_ref.getField(false, "_btnyearleft"),"btnYearRight",_ref.getField(false, "_btnyearright"),"cvs",_ref.getField(false, "_cvs"),"cvsBackground",_ref.getField(false, "_cvsbackground"),"cvsDays",_ref.getField(false, "_cvsdays"),"DateUtils",_ref.getField(false, "_dateutils"),"dayOfWeekOffset",_ref.getField(false, "_dayofweekoffset"),"daysInMonth",_ref.getField(false, "_daysinmonth"),"DaysInMonthColor",_ref.getField(false, "_daysinmonthcolor"),"DaysInWeekColor",_ref.getField(false, "_daysinweekcolor"),"DaysPaneBg",_ref.getField(false, "_dayspanebg"),"DaysPaneFg",_ref.getField(false, "_dayspanefg"),"DaysTitlesPane",_ref.getField(false, "_daystitlespane"),"FirstDay",_ref.getField(false, "_firstday"),"HighlightedColor",_ref.getField(false, "_highlightedcolor"),"lblMonth",_ref.getField(false, "_lblmonth"),"lblYear",_ref.getField(false, "_lblyear"),"MaxYear",_ref.getField(false, "_maxyear"),"mDialog",_ref.getField(false, "_mdialog"),"MinYear",_ref.getField(false, "_minyear"),"month",_ref.getField(false, "_month"),"months",_ref.getField(false, "_months"),"pnlDialog",_ref.getField(false, "_pnldialog"),"SelectedColor",_ref.getField(false, "_selectedcolor"),"selectedDate",_ref.getField(false, "_selecteddate"),"selectedDay",_ref.getField(false, "_selectedday"),"selectedMonth",_ref.getField(false, "_selectedmonth"),"selectedYear",_ref.getField(false, "_selectedyear"),"tempSelectedDay",_ref.getField(false, "_tempselectedday"),"vCorrection",_ref.getField(false, "_vcorrection"),"xui",_ref.getField(false, "_xui"),"year",_ref.getField(false, "_year")};

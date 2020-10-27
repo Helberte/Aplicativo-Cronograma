@@ -56,11 +56,11 @@ Debug.ShouldStop(4096);
 codigocadastro.mostCurrent._activity.runVoidMethod ("Finish");
  BA.debugLineNum = 142;BA.debugLine="Return False";
 Debug.ShouldStop(8192);
-Debug.CheckDeviceExceptions();if (true) return codigocadastro.mostCurrent.__c.getField(true,"False");
+if (true) return codigocadastro.mostCurrent.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 144;BA.debugLine="Return True";
 Debug.ShouldStop(32768);
-Debug.CheckDeviceExceptions();if (true) return codigocadastro.mostCurrent.__c.getField(true,"True");
+if (true) return codigocadastro.mostCurrent.__c.getField(true,"True");
  };
  BA.debugLineNum = 146;BA.debugLine="End Sub";
 Debug.ShouldStop(131072);

@@ -124,7 +124,7 @@ Debug.locals.put("Index", _index);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 131;BA.debugLine="Return cmbBox.GetItem(Index)";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"GetItem",(Object)(_index));
+if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"GetItem",(Object)(_index));
  BA.debugLineNum = 135;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
@@ -143,7 +143,7 @@ if (RapidSub.canDelegate("getselectedindex")) { return __ref.runUserSub(false, "
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 100;BA.debugLine="Return cmbBox.SelectedIndex";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"getSelectedIndex");
+if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"getSelectedIndex");
  BA.debugLineNum = 104;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -167,10 +167,10 @@ _i = __ref.runClassMethod (b4a.example.b4xcombobox.class, "_getselectedindex" /*
  BA.debugLineNum = 123;BA.debugLine="If i = -1 Then Return \"\"";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_i,BA.numberCast(double.class, -(double) (0 + 1)))) { 
-Debug.CheckDeviceExceptions();if (true) return BA.ObjectToString("");};
+if (true) return BA.ObjectToString("");};
  BA.debugLineNum = 124;BA.debugLine="Return GetItem(i)";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.runClassMethod (b4a.example.b4xcombobox.class, "_getitem" /*RemoteObject*/ ,(Object)(_i));
+if (true) return __ref.runClassMethod (b4a.example.b4xcombobox.class, "_getitem" /*RemoteObject*/ ,(Object)(_i));
  BA.debugLineNum = 125;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable("");
@@ -189,7 +189,7 @@ if (RapidSub.canDelegate("getsize")) { return __ref.runUserSub(false, "b4xcombob
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 80;BA.debugLine="Return cmbBox.Size";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"getSize");
+if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"getSize");
  BA.debugLineNum = 84;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -209,7 +209,7 @@ Debug.locals.put("Item", _item);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 91;BA.debugLine="Return cmbBox.IndexOf(Item)";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"IndexOf",(Object)(_item));
+if (true) return __ref.getField(false,"_cmbbox" /*RemoteObject*/ ).runMethod(true,"IndexOf",(Object)(_item));
  BA.debugLineNum = 95;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -309,7 +309,7 @@ this.state = 3;
 case 3:
 //C
 this.state = 6;
-Debug.CheckDeviceExceptions();if (true) return ;
+if (true) return ;
 if (true) break;
 
 case 6:
@@ -359,7 +359,7 @@ this.state = 12;
 case 12:
 //C
 this.state = 15;
-Debug.CheckDeviceExceptions();if (true) return ;
+if (true) return ;
 if (true) break;
 
 case 15:

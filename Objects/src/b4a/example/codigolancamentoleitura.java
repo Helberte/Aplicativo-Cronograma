@@ -371,104 +371,104 @@ public b4a.example.main _main = null;
 public b4a.example.act_telacadastro _act_telacadastro = null;
 public b4a.example.codigocadastro _codigocadastro = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
-public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
 int _p = 0;
-RDebugUtils.currentLine=2818048;
- //BA.debugLineNum = 2818048;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=2818049;
- //BA.debugLineNum = 2818049;BA.debugLine="Activity.LoadLayout(\"Lay_lancamento_leitura\")";
+RDebugUtils.currentLine=4653056;
+ //BA.debugLineNum = 4653056;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=4653057;
+ //BA.debugLineNum = 4653057;BA.debugLine="Activity.LoadLayout(\"Lay_lancamento_leitura\")";
 mostCurrent._activity.LoadLayout("Lay_lancamento_leitura",mostCurrent.activityBA);
-RDebugUtils.currentLine=2818051;
- //BA.debugLineNum = 2818051;BA.debugLine="b4XImageViewFoto.ResizeMode = \"FILL\"";
+RDebugUtils.currentLine=4653059;
+ //BA.debugLineNum = 4653059;BA.debugLine="b4XImageViewFoto.ResizeMode = \"FILL\"";
 mostCurrent._b4ximageviewfoto._setresizemode /*String*/ (null,"FILL");
-RDebugUtils.currentLine=2818052;
- //BA.debugLineNum = 2818052;BA.debugLine="b4XImageViewFoto.Load(File.DirAssets, \"livro.jpg\"";
+RDebugUtils.currentLine=4653060;
+ //BA.debugLineNum = 4653060;BA.debugLine="b4XImageViewFoto.Load(File.DirAssets, \"livro.jpg\"";
 mostCurrent._b4ximageviewfoto._load /*String*/ (null,anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"livro.jpg");
-RDebugUtils.currentLine=2818054;
- //BA.debugLineNum = 2818054;BA.debugLine="lblTituloLivro.Text = tituloLivro";
+RDebugUtils.currentLine=4653062;
+ //BA.debugLineNum = 4653062;BA.debugLine="lblTituloLivro.Text = tituloLivro";
 mostCurrent._lbltitulolivro.setText(BA.ObjectToCharSequence(_titulolivro));
-RDebugUtils.currentLine=2818055;
- //BA.debugLineNum = 2818055;BA.debugLine="lblNomeUsuario.Text = nomeUsuario";
+RDebugUtils.currentLine=4653063;
+ //BA.debugLineNum = 4653063;BA.debugLine="lblNomeUsuario.Text = nomeUsuario";
 mostCurrent._lblnomeusuario.setText(BA.ObjectToCharSequence(_nomeusuario));
-RDebugUtils.currentLine=2818056;
- //BA.debugLineNum = 2818056;BA.debugLine="edTotalPaginas.Text = totalPaginas";
+RDebugUtils.currentLine=4653064;
+ //BA.debugLineNum = 4653064;BA.debugLine="edTotalPaginas.Text = totalPaginas";
 mostCurrent._edtotalpaginas.setText(BA.ObjectToCharSequence(_totalpaginas));
-RDebugUtils.currentLine=2818058;
- //BA.debugLineNum = 2818058;BA.debugLine="Dim p As Int";
+RDebugUtils.currentLine=4653066;
+ //BA.debugLineNum = 4653066;BA.debugLine="Dim p As Int";
 _p = 0;
-RDebugUtils.currentLine=2818060;
- //BA.debugLineNum = 2818060;BA.debugLine="p = (paginaAtual * 100) / totalPaginas";
+RDebugUtils.currentLine=4653068;
+ //BA.debugLineNum = 4653068;BA.debugLine="p = (paginaAtual * 100) / totalPaginas";
 _p = (int) ((_paginaatual*100)/(double)_totalpaginas);
-RDebugUtils.currentLine=2818061;
- //BA.debugLineNum = 2818061;BA.debugLine="lblPorcentagem.Text = p & \" % Lidos\"";
+RDebugUtils.currentLine=4653069;
+ //BA.debugLineNum = 4653069;BA.debugLine="lblPorcentagem.Text = p & \" % Lidos\"";
 mostCurrent._lblporcentagem.setText(BA.ObjectToCharSequence(BA.NumberToString(_p)+" % Lidos"));
-RDebugUtils.currentLine=2818063;
- //BA.debugLineNum = 2818063;BA.debugLine="If paginaAtual + meta > totalPaginas Then";
+RDebugUtils.currentLine=4653071;
+ //BA.debugLineNum = 4653071;BA.debugLine="If paginaAtual + meta > totalPaginas Then";
 if (_paginaatual+_meta>_totalpaginas) { 
-RDebugUtils.currentLine=2818064;
- //BA.debugLineNum = 2818064;BA.debugLine="edPaginaAtual.Text = totalPaginas";
+RDebugUtils.currentLine=4653072;
+ //BA.debugLineNum = 4653072;BA.debugLine="edPaginaAtual.Text = totalPaginas";
 mostCurrent._edpaginaatual.setText(BA.ObjectToCharSequence(_totalpaginas));
-RDebugUtils.currentLine=2818065;
- //BA.debugLineNum = 2818065;BA.debugLine="p = (totalPaginas * 100) / totalPaginas";
+RDebugUtils.currentLine=4653073;
+ //BA.debugLineNum = 4653073;BA.debugLine="p = (totalPaginas * 100) / totalPaginas";
 _p = (int) ((_totalpaginas*100)/(double)_totalpaginas);
-RDebugUtils.currentLine=2818066;
- //BA.debugLineNum = 2818066;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
+RDebugUtils.currentLine=4653074;
+ //BA.debugLineNum = 4653074;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
 mostCurrent._lblprevisaoporcentagem.setText(BA.ObjectToCharSequence("Próximo avanço "+BA.NumberToString(_p)+"%"));
  }else {
-RDebugUtils.currentLine=2818068;
- //BA.debugLineNum = 2818068;BA.debugLine="edPaginaAtual.Text = paginaAtual + meta";
+RDebugUtils.currentLine=4653076;
+ //BA.debugLineNum = 4653076;BA.debugLine="edPaginaAtual.Text = paginaAtual + meta";
 mostCurrent._edpaginaatual.setText(BA.ObjectToCharSequence(_paginaatual+_meta));
-RDebugUtils.currentLine=2818069;
- //BA.debugLineNum = 2818069;BA.debugLine="p = ((paginaAtual + meta) * 100) / totalPaginas";
+RDebugUtils.currentLine=4653077;
+ //BA.debugLineNum = 4653077;BA.debugLine="p = ((paginaAtual + meta) * 100) / totalPaginas";
 _p = (int) (((_paginaatual+_meta)*100)/(double)_totalpaginas);
-RDebugUtils.currentLine=2818070;
- //BA.debugLineNum = 2818070;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
+RDebugUtils.currentLine=4653078;
+ //BA.debugLineNum = 4653078;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
 mostCurrent._lblprevisaoporcentagem.setText(BA.ObjectToCharSequence("Próximo avanço "+BA.NumberToString(_p)+"%"));
  };
-RDebugUtils.currentLine=2818073;
- //BA.debugLineNum = 2818073;BA.debugLine="If tipoLeitura = \"capítulos\" Then";
+RDebugUtils.currentLine=4653081;
+ //BA.debugLineNum = 4653081;BA.debugLine="If tipoLeitura = \"capítulos\" Then";
 if ((_tipoleitura).equals("capítulos")) { 
-RDebugUtils.currentLine=2818074;
- //BA.debugLineNum = 2818074;BA.debugLine="lblPaginaAtual.Text = \"Capítulo atual\"";
+RDebugUtils.currentLine=4653082;
+ //BA.debugLineNum = 4653082;BA.debugLine="lblPaginaAtual.Text = \"Capítulo atual\"";
 mostCurrent._lblpaginaatual.setText(BA.ObjectToCharSequence("Capítulo atual"));
-RDebugUtils.currentLine=2818075;
- //BA.debugLineNum = 2818075;BA.debugLine="lblTotalPaginas.Text = \"Total capítulos\"";
+RDebugUtils.currentLine=4653083;
+ //BA.debugLineNum = 4653083;BA.debugLine="lblTotalPaginas.Text = \"Total capítulos\"";
 mostCurrent._lbltotalpaginas.setText(BA.ObjectToCharSequence("Total capítulos"));
  }else 
-{RDebugUtils.currentLine=2818076;
- //BA.debugLineNum = 2818076;BA.debugLine="else if tipoLeitura = \"páginas\" Then";
+{RDebugUtils.currentLine=4653084;
+ //BA.debugLineNum = 4653084;BA.debugLine="else if tipoLeitura = \"páginas\" Then";
 if ((_tipoleitura).equals("páginas")) { 
-RDebugUtils.currentLine=2818077;
- //BA.debugLineNum = 2818077;BA.debugLine="lblPaginaAtual.Text = \"Página atual\"";
+RDebugUtils.currentLine=4653085;
+ //BA.debugLineNum = 4653085;BA.debugLine="lblPaginaAtual.Text = \"Página atual\"";
 mostCurrent._lblpaginaatual.setText(BA.ObjectToCharSequence("Página atual"));
-RDebugUtils.currentLine=2818078;
- //BA.debugLineNum = 2818078;BA.debugLine="lblTotalPaginas.Text = \"Total páginas\"";
+RDebugUtils.currentLine=4653086;
+ //BA.debugLineNum = 4653086;BA.debugLine="lblTotalPaginas.Text = \"Total páginas\"";
 mostCurrent._lbltotalpaginas.setText(BA.ObjectToCharSequence("Total páginas"));
  }}
 ;
-RDebugUtils.currentLine=2818081;
- //BA.debugLineNum = 2818081;BA.debugLine="edPaginaAtual.RequestFocus";
+RDebugUtils.currentLine=4653089;
+ //BA.debugLineNum = 4653089;BA.debugLine="edPaginaAtual.RequestFocus";
 mostCurrent._edpaginaatual.RequestFocus();
-RDebugUtils.currentLine=2818082;
- //BA.debugLineNum = 2818082;BA.debugLine="banco.Initialize";
+RDebugUtils.currentLine=4653090;
+ //BA.debugLineNum = 4653090;BA.debugLine="banco.Initialize";
 mostCurrent._banco._initialize /*String*/ (null,processBA);
-RDebugUtils.currentLine=2818083;
- //BA.debugLineNum = 2818083;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4653091;
+ //BA.debugLineNum = 4653091;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
-RDebugUtils.currentLine=2949120;
- //BA.debugLineNum = 2949120;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=2949122;
- //BA.debugLineNum = 2949122;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4784128;
+ //BA.debugLineNum = 4784128;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=4784130;
+ //BA.debugLineNum = 4784130;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
@@ -476,54 +476,54 @@ RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
 int _topo = 0;
-RDebugUtils.currentLine=2883584;
- //BA.debugLineNum = 2883584;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=2883586;
- //BA.debugLineNum = 2883586;BA.debugLine="Dim topo As Int = b4XImageViewFoto.mBase.Top + b4";
+RDebugUtils.currentLine=4718592;
+ //BA.debugLineNum = 4718592;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=4718594;
+ //BA.debugLineNum = 4718594;BA.debugLine="Dim topo As Int = b4XImageViewFoto.mBase.Top + b4";
 _topo = (int) (mostCurrent._b4ximageviewfoto._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getTop()+mostCurrent._b4ximageviewfoto._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getHeight());
-RDebugUtils.currentLine=2883588;
- //BA.debugLineNum = 2883588;BA.debugLine="lblTituloLivro.TextColor = Colors.Transparent";
+RDebugUtils.currentLine=4718596;
+ //BA.debugLineNum = 4718596;BA.debugLine="lblTituloLivro.TextColor = Colors.Transparent";
 mostCurrent._lbltitulolivro.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=2883589;
- //BA.debugLineNum = 2883589;BA.debugLine="lblTituloLivro.Top = topo - 5%y";
+RDebugUtils.currentLine=4718597;
+ //BA.debugLineNum = 4718597;BA.debugLine="lblTituloLivro.Top = topo - 5%y";
 mostCurrent._lbltitulolivro.setTop((int) (_topo-anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (5),mostCurrent.activityBA)));
-RDebugUtils.currentLine=2883591;
- //BA.debugLineNum = 2883591;BA.debugLine="lblTituloLivro.SetLayoutAnimated(1000, (b4XImageV";
+RDebugUtils.currentLine=4718599;
+ //BA.debugLineNum = 4718599;BA.debugLine="lblTituloLivro.SetLayoutAnimated(1000, (b4XImageV";
 mostCurrent._lbltitulolivro.SetLayoutAnimated((int) (1000),(int) ((mostCurrent._b4ximageviewfoto._mbase /*anywheresoftware.b4a.objects.B4XViewWrapper*/ .getWidth()-mostCurrent._lbltitulolivro.getWidth())/(double)2),_topo,anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (80),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
-RDebugUtils.currentLine=2883592;
- //BA.debugLineNum = 2883592;BA.debugLine="lblTituloLivro.SetTextColorAnimated(1200, Colors.";
+RDebugUtils.currentLine=4718600;
+ //BA.debugLineNum = 4718600;BA.debugLine="lblTituloLivro.SetTextColorAnimated(1200, Colors.";
 mostCurrent._lbltitulolivro.SetTextColorAnimated((int) (1200),anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (221),(int) (2),(int) (2)));
-RDebugUtils.currentLine=2883594;
- //BA.debugLineNum = 2883594;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4718602;
+ //BA.debugLineNum = 4718602;BA.debugLine="End Sub";
 return "";
 }
 public static String  _aparecepagatual() throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "aparecepagatual", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "aparecepagatual", null));}
-RDebugUtils.currentLine=3276800;
- //BA.debugLineNum = 3276800;BA.debugLine="Sub AparecePagAtual";
-RDebugUtils.currentLine=3276801;
- //BA.debugLineNum = 3276801;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 3%y,";
+RDebugUtils.currentLine=5111808;
+ //BA.debugLineNum = 5111808;BA.debugLine="Sub AparecePagAtual";
+RDebugUtils.currentLine=5111809;
+ //BA.debugLineNum = 5111809;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 3%y,";
 mostCurrent._lblpaginaatual.SetLayoutAnimated((int) (1200),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (12),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (3),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (28),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
-RDebugUtils.currentLine=3276802;
- //BA.debugLineNum = 3276802;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.R";
+RDebugUtils.currentLine=5111810;
+ //BA.debugLineNum = 5111810;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.R";
 mostCurrent._lblpaginaatual.SetTextColorAnimated((int) (800),anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (111),(int) (0),(int) (0)));
-RDebugUtils.currentLine=3276803;
- //BA.debugLineNum = 3276803;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5111811;
+ //BA.debugLineNum = 5111811;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btcancelar_click() throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "btcancelar_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btcancelar_click", null));}
-RDebugUtils.currentLine=3014656;
- //BA.debugLineNum = 3014656;BA.debugLine="Sub btCancelar_Click";
-RDebugUtils.currentLine=3014657;
- //BA.debugLineNum = 3014657;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4849664;
+ //BA.debugLineNum = 4849664;BA.debugLine="Sub btCancelar_Click";
+RDebugUtils.currentLine=4849665;
+ //BA.debugLineNum = 4849665;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=3014658;
- //BA.debugLineNum = 3014658;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4849666;
+ //BA.debugLineNum = 4849666;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btok_click() throws Exception{
@@ -555,8 +555,8 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=3080193;
- //BA.debugLineNum = 3080193;BA.debugLine="Try";
+RDebugUtils.currentLine=4915201;
+ //BA.debugLineNum = 4915201;BA.debugLine="Try";
 if (true) break;
 
 case 1:
@@ -570,14 +570,14 @@ case 3:
 //C
 this.state = 4;
 this.catchState = 19;
-RDebugUtils.currentLine=3080195;
- //BA.debugLineNum = 3080195;BA.debugLine="Dim cmd As String";
+RDebugUtils.currentLine=4915203;
+ //BA.debugLineNum = 4915203;BA.debugLine="Dim cmd As String";
 _cmd = "";
-RDebugUtils.currentLine=3080197;
- //BA.debugLineNum = 3080197;BA.debugLine="cmd = \"exec sp_lancamento_leitura \" & Main.Id_do";
+RDebugUtils.currentLine=4915205;
+ //BA.debugLineNum = 4915205;BA.debugLine="cmd = \"exec sp_lancamento_leitura \" & Main.Id_do";
 _cmd = "exec sp_lancamento_leitura "+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+", "+BA.NumberToString(parent._idlivro)+", "+parent.mostCurrent._edpaginaatual.getText()+"";
-RDebugUtils.currentLine=3080201;
- //BA.debugLineNum = 3080201;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete (";
+RDebugUtils.currentLine=4915209;
+ //BA.debugLineNum = 4915209;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete (";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolancamentoleitura", "btok_click"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
 this.state = 21;
 return;
@@ -586,11 +586,11 @@ case 21:
 this.state = 4;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
-RDebugUtils.currentLine=3080203;
- //BA.debugLineNum = 3080203;BA.debugLine="Result.NextRow";
+RDebugUtils.currentLine=4915211;
+ //BA.debugLineNum = 4915211;BA.debugLine="Result.NextRow";
 _result.NextRow();
-RDebugUtils.currentLine=3080205;
- //BA.debugLineNum = 3080205;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
+RDebugUtils.currentLine=4915213;
+ //BA.debugLineNum = 4915213;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
 if (true) break;
 
 case 4:
@@ -599,13 +599,13 @@ this.state = 17;
 if (_result.GetInt("RESULTADO")==1) { 
 this.state = 6;
 }else 
-{RDebugUtils.currentLine=3080211;
- //BA.debugLineNum = 3080211;BA.debugLine="Else if Result.GetInt(\"RESULTADO\") = 0 Then";
+{RDebugUtils.currentLine=4915219;
+ //BA.debugLineNum = 4915219;BA.debugLine="Else if Result.GetInt(\"RESULTADO\") = 0 Then";
 if (_result.GetInt("RESULTADO")==0) { 
 this.state = 8;
 }else 
-{RDebugUtils.currentLine=3080217;
- //BA.debugLineNum = 3080217;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 2 Then";
+{RDebugUtils.currentLine=4915225;
+ //BA.debugLineNum = 4915225;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 2 Then";
 if (_result.GetInt("RESULTADO")==2) { 
 this.state = 10;
 }}}
@@ -614,17 +614,17 @@ if (true) break;
 case 6:
 //C
 this.state = 17;
-RDebugUtils.currentLine=3080206;
- //BA.debugLineNum = 3080206;BA.debugLine="ToastMessageShow(\"Sucesso\",True)";
+RDebugUtils.currentLine=4915214;
+ //BA.debugLineNum = 4915214;BA.debugLine="ToastMessageShow(\"Sucesso\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Sucesso"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3080207;
- //BA.debugLineNum = 3080207;BA.debugLine="Main.CadastrouAlgo = True";
+RDebugUtils.currentLine=4915215;
+ //BA.debugLineNum = 4915215;BA.debugLine="Main.CadastrouAlgo = True";
 parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080208;
- //BA.debugLineNum = 3080208;BA.debugLine="terminouLeitura = False";
+RDebugUtils.currentLine=4915216;
+ //BA.debugLineNum = 4915216;BA.debugLine="terminouLeitura = False";
 parent._terminouleitura = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=3080209;
- //BA.debugLineNum = 3080209;BA.debugLine="Sleep(100)";
+RDebugUtils.currentLine=4915217;
+ //BA.debugLineNum = 4915217;BA.debugLine="Sleep(100)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolancamentoleitura", "btok_click"),(int) (100));
 this.state = 22;
 return;
@@ -632,25 +632,25 @@ case 22:
 //C
 this.state = 17;
 ;
-RDebugUtils.currentLine=3080210;
- //BA.debugLineNum = 3080210;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4915218;
+ //BA.debugLineNum = 4915218;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
 case 8:
 //C
 this.state = 17;
-RDebugUtils.currentLine=3080212;
- //BA.debugLineNum = 3080212;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização";
+RDebugUtils.currentLine=4915220;
+ //BA.debugLineNum = 4915220;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Há algo errado na atualização!"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3080213;
- //BA.debugLineNum = 3080213;BA.debugLine="Main.CadastrouAlgo = True";
+RDebugUtils.currentLine=4915221;
+ //BA.debugLineNum = 4915221;BA.debugLine="Main.CadastrouAlgo = True";
 parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080214;
- //BA.debugLineNum = 3080214;BA.debugLine="terminouLeitura = True";
+RDebugUtils.currentLine=4915222;
+ //BA.debugLineNum = 4915222;BA.debugLine="terminouLeitura = True";
 parent._terminouleitura = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080215;
- //BA.debugLineNum = 3080215;BA.debugLine="Sleep(100)";
+RDebugUtils.currentLine=4915223;
+ //BA.debugLineNum = 4915223;BA.debugLine="Sleep(100)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolancamentoleitura", "btok_click"),(int) (100));
 this.state = 23;
 return;
@@ -658,19 +658,19 @@ case 23:
 //C
 this.state = 17;
 ;
-RDebugUtils.currentLine=3080216;
- //BA.debugLineNum = 3080216;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4915224;
+ //BA.debugLineNum = 4915224;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
 case 10:
 //C
 this.state = 11;
-RDebugUtils.currentLine=3080218;
- //BA.debugLineNum = 3080218;BA.debugLine="cmd = \"exec sp_adiciona_leitura_concluida \" & M";
+RDebugUtils.currentLine=4915226;
+ //BA.debugLineNum = 4915226;BA.debugLine="cmd = \"exec sp_adiciona_leitura_concluida \" & M";
 _cmd = "exec sp_adiciona_leitura_concluida "+BA.NumberToString(parent.mostCurrent._main._id_do_usuario /*int*/ )+", "+BA.NumberToString(parent._idlivro)+"";
-RDebugUtils.currentLine=3080220;
- //BA.debugLineNum = 3080220;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete";
+RDebugUtils.currentLine=4915228;
+ //BA.debugLineNum = 4915228;BA.debugLine="Wait For (banco.Insert_Consulta(cmd)) Complete";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolancamentoleitura", "btok_click"), parent.mostCurrent._banco._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
 this.state = 24;
 return;
@@ -679,11 +679,11 @@ case 24:
 this.state = 11;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
-RDebugUtils.currentLine=3080222;
- //BA.debugLineNum = 3080222;BA.debugLine="Result.NextRow";
+RDebugUtils.currentLine=4915230;
+ //BA.debugLineNum = 4915230;BA.debugLine="Result.NextRow";
 _result.NextRow();
-RDebugUtils.currentLine=3080224;
- //BA.debugLineNum = 3080224;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
+RDebugUtils.currentLine=4915232;
+ //BA.debugLineNum = 4915232;BA.debugLine="If Result.GetInt(\"RESULTADO\") = 1 Then";
 if (true) break;
 
 case 11:
@@ -692,8 +692,8 @@ this.state = 16;
 if (_result.GetInt("RESULTADO")==1) { 
 this.state = 13;
 }else 
-{RDebugUtils.currentLine=3080232;
- //BA.debugLineNum = 3080232;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 0 Then";
+{RDebugUtils.currentLine=4915240;
+ //BA.debugLineNum = 4915240;BA.debugLine="else if Result.GetInt(\"RESULTADO\") = 0 Then";
 if (_result.GetInt("RESULTADO")==0) { 
 this.state = 15;
 }}
@@ -702,20 +702,20 @@ if (true) break;
 case 13:
 //C
 this.state = 16;
-RDebugUtils.currentLine=3080225;
- //BA.debugLineNum = 3080225;BA.debugLine="ToastMessageShow(\"Leitura concluída\",True)";
+RDebugUtils.currentLine=4915233;
+ //BA.debugLineNum = 4915233;BA.debugLine="ToastMessageShow(\"Leitura concluída\",True)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Leitura concluída"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3080227;
- //BA.debugLineNum = 3080227;BA.debugLine="terminouLeitura = True";
+RDebugUtils.currentLine=4915235;
+ //BA.debugLineNum = 4915235;BA.debugLine="terminouLeitura = True";
 parent._terminouleitura = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080228;
- //BA.debugLineNum = 3080228;BA.debugLine="de_os_parabens = True";
+RDebugUtils.currentLine=4915236;
+ //BA.debugLineNum = 4915236;BA.debugLine="de_os_parabens = True";
 parent._de_os_parabens = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080229;
- //BA.debugLineNum = 3080229;BA.debugLine="Main.CadastrouAlgo = True";
+RDebugUtils.currentLine=4915237;
+ //BA.debugLineNum = 4915237;BA.debugLine="Main.CadastrouAlgo = True";
 parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080230;
- //BA.debugLineNum = 3080230;BA.debugLine="Sleep(200)";
+RDebugUtils.currentLine=4915238;
+ //BA.debugLineNum = 4915238;BA.debugLine="Sleep(200)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolancamentoleitura", "btok_click"),(int) (200));
 this.state = 25;
 return;
@@ -723,28 +723,28 @@ case 25:
 //C
 this.state = 16;
 ;
-RDebugUtils.currentLine=3080231;
- //BA.debugLineNum = 3080231;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4915239;
+ //BA.debugLineNum = 4915239;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
 case 15:
 //C
 this.state = 16;
-RDebugUtils.currentLine=3080233;
- //BA.debugLineNum = 3080233;BA.debugLine="ToastMessageShow(\"Infelizmente algo deu errado";
+RDebugUtils.currentLine=4915241;
+ //BA.debugLineNum = 4915241;BA.debugLine="ToastMessageShow(\"Infelizmente algo deu errado";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Infelizmente algo deu errado."),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3080235;
- //BA.debugLineNum = 3080235;BA.debugLine="terminouLeitura = True";
+RDebugUtils.currentLine=4915243;
+ //BA.debugLineNum = 4915243;BA.debugLine="terminouLeitura = True";
 parent._terminouleitura = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080236;
- //BA.debugLineNum = 3080236;BA.debugLine="de_os_parabens = False";
+RDebugUtils.currentLine=4915244;
+ //BA.debugLineNum = 4915244;BA.debugLine="de_os_parabens = False";
 parent._de_os_parabens = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=3080237;
- //BA.debugLineNum = 3080237;BA.debugLine="Main.CadastrouAlgo = True";
+RDebugUtils.currentLine=4915245;
+ //BA.debugLineNum = 4915245;BA.debugLine="Main.CadastrouAlgo = True";
 parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=3080238;
- //BA.debugLineNum = 3080238;BA.debugLine="Sleep(200)";
+RDebugUtils.currentLine=4915246;
+ //BA.debugLineNum = 4915246;BA.debugLine="Sleep(200)";
 anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolancamentoleitura", "btok_click"),(int) (200));
 this.state = 26;
 return;
@@ -752,8 +752,8 @@ case 26:
 //C
 this.state = 16;
 ;
-RDebugUtils.currentLine=3080239;
- //BA.debugLineNum = 3080239;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4915247;
+ //BA.debugLineNum = 4915247;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 
@@ -773,20 +773,20 @@ case 19:
 //C
 this.state = 20;
 this.catchState = 0;
-RDebugUtils.currentLine=3080245;
- //BA.debugLineNum = 3080245;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização!";
+RDebugUtils.currentLine=4915253;
+ //BA.debugLineNum = 4915253;BA.debugLine="ToastMessageShow(\"Há algo errado na atualização!";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Há algo errado na atualização!"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3080246;
- //BA.debugLineNum = 3080246;BA.debugLine="Main.CadastrouAlgo = False";
+RDebugUtils.currentLine=4915254;
+ //BA.debugLineNum = 4915254;BA.debugLine="Main.CadastrouAlgo = False";
 parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=3080247;
- //BA.debugLineNum = 3080247;BA.debugLine="terminouLeitura = False";
+RDebugUtils.currentLine=4915255;
+ //BA.debugLineNum = 4915255;BA.debugLine="terminouLeitura = False";
 parent._terminouleitura = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=3080248;
- //BA.debugLineNum = 3080248;BA.debugLine="de_os_parabens = False";
+RDebugUtils.currentLine=4915256;
+ //BA.debugLineNum = 4915256;BA.debugLine="de_os_parabens = False";
 parent._de_os_parabens = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=3080249;
- //BA.debugLineNum = 3080249;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4915257;
+ //BA.debugLineNum = 4915257;BA.debugLine="Activity.Finish";
 parent.mostCurrent._activity.Finish();
  if (true) break;
 if (true) break;
@@ -796,8 +796,8 @@ case 20:
 this.state = -1;
 this.catchState = 0;
 ;
-RDebugUtils.currentLine=3080251;
- //BA.debugLineNum = 3080251;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4915259;
+ //BA.debugLineNum = 4915259;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -816,93 +816,93 @@ RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "edpaginaatual_textchanged", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "edpaginaatual_textchanged", new Object[] {_old,_new}));}
 int _valor = 0;
-RDebugUtils.currentLine=3145728;
- //BA.debugLineNum = 3145728;BA.debugLine="Sub edPaginaAtual_TextChanged (Old As String, New";
-RDebugUtils.currentLine=3145730;
- //BA.debugLineNum = 3145730;BA.debugLine="Dim valor As Int";
+RDebugUtils.currentLine=4980736;
+ //BA.debugLineNum = 4980736;BA.debugLine="Sub edPaginaAtual_TextChanged (Old As String, New";
+RDebugUtils.currentLine=4980738;
+ //BA.debugLineNum = 4980738;BA.debugLine="Dim valor As Int";
 _valor = 0;
-RDebugUtils.currentLine=3145732;
- //BA.debugLineNum = 3145732;BA.debugLine="If New.Trim <> \"\" Then";
+RDebugUtils.currentLine=4980740;
+ //BA.debugLineNum = 4980740;BA.debugLine="If New.Trim <> \"\" Then";
 if ((_new.trim()).equals("") == false) { 
-RDebugUtils.currentLine=3145734;
- //BA.debugLineNum = 3145734;BA.debugLine="If New > totalPaginas Then";
+RDebugUtils.currentLine=4980742;
+ //BA.debugLineNum = 4980742;BA.debugLine="If New > totalPaginas Then";
 if ((double)(Double.parseDouble(_new))>_totalpaginas) { 
-RDebugUtils.currentLine=3145735;
- //BA.debugLineNum = 3145735;BA.debugLine="lblIvalido.Visible = True";
+RDebugUtils.currentLine=4980743;
+ //BA.debugLineNum = 4980743;BA.debugLine="lblIvalido.Visible = True";
 mostCurrent._lblivalido.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3145736;
- //BA.debugLineNum = 3145736;BA.debugLine="lblIvalido.Text = \"Inválido\"";
+RDebugUtils.currentLine=4980744;
+ //BA.debugLineNum = 4980744;BA.debugLine="lblIvalido.Text = \"Inválido\"";
 mostCurrent._lblivalido.setText(BA.ObjectToCharSequence("Inválido"));
-RDebugUtils.currentLine=3145738;
- //BA.debugLineNum = 3145738;BA.debugLine="edPaginaAtual.TextColor = Colors.Red";
+RDebugUtils.currentLine=4980746;
+ //BA.debugLineNum = 4980746;BA.debugLine="edPaginaAtual.TextColor = Colors.Red";
 mostCurrent._edpaginaatual.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Red);
-RDebugUtils.currentLine=3145739;
- //BA.debugLineNum = 3145739;BA.debugLine="SomePagAtual";
+RDebugUtils.currentLine=4980747;
+ //BA.debugLineNum = 4980747;BA.debugLine="SomePagAtual";
 _somepagatual();
-RDebugUtils.currentLine=3145741;
- //BA.debugLineNum = 3145741;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0";
+RDebugUtils.currentLine=4980749;
+ //BA.debugLineNum = 4980749;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0";
 mostCurrent._lblprevisaoporcentagem.setText(BA.ObjectToCharSequence("Próximo avanço 0%"));
-RDebugUtils.currentLine=3145742;
- //BA.debugLineNum = 3145742;BA.debugLine="btOk.Enabled = False";
+RDebugUtils.currentLine=4980750;
+ //BA.debugLineNum = 4980750;BA.debugLine="btOk.Enabled = False";
 mostCurrent._btok.setEnabled(anywheresoftware.b4a.keywords.Common.False);
  }else {
-RDebugUtils.currentLine=3145744;
- //BA.debugLineNum = 3145744;BA.debugLine="edPaginaAtual.TextColor = Colors.RGB(46,16,16)";
+RDebugUtils.currentLine=4980752;
+ //BA.debugLineNum = 4980752;BA.debugLine="edPaginaAtual.TextColor = Colors.RGB(46,16,16)";
 mostCurrent._edpaginaatual.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (46),(int) (16),(int) (16)));
-RDebugUtils.currentLine=3145745;
- //BA.debugLineNum = 3145745;BA.debugLine="lblIvalido.Visible = False";
+RDebugUtils.currentLine=4980753;
+ //BA.debugLineNum = 4980753;BA.debugLine="lblIvalido.Visible = False";
 mostCurrent._lblivalido.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=3145746;
- //BA.debugLineNum = 3145746;BA.debugLine="lblIvalido.Text = \"Inválido\"";
+RDebugUtils.currentLine=4980754;
+ //BA.debugLineNum = 4980754;BA.debugLine="lblIvalido.Text = \"Inválido\"";
 mostCurrent._lblivalido.setText(BA.ObjectToCharSequence("Inválido"));
-RDebugUtils.currentLine=3145747;
- //BA.debugLineNum = 3145747;BA.debugLine="AparecePagAtual";
+RDebugUtils.currentLine=4980755;
+ //BA.debugLineNum = 4980755;BA.debugLine="AparecePagAtual";
 _aparecepagatual();
-RDebugUtils.currentLine=3145749;
- //BA.debugLineNum = 3145749;BA.debugLine="valor = ((New * 100) / totalPaginas)";
+RDebugUtils.currentLine=4980757;
+ //BA.debugLineNum = 4980757;BA.debugLine="valor = ((New * 100) / totalPaginas)";
 _valor = (int) ((((double)(Double.parseDouble(_new))*100)/(double)_totalpaginas));
-RDebugUtils.currentLine=3145750;
- //BA.debugLineNum = 3145750;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
+RDebugUtils.currentLine=4980758;
+ //BA.debugLineNum = 4980758;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço \"";
 mostCurrent._lblprevisaoporcentagem.setText(BA.ObjectToCharSequence("Próximo avanço "+BA.NumberToString(_valor)+"%"));
-RDebugUtils.currentLine=3145751;
- //BA.debugLineNum = 3145751;BA.debugLine="btOk.Enabled = True";
+RDebugUtils.currentLine=4980759;
+ //BA.debugLineNum = 4980759;BA.debugLine="btOk.Enabled = True";
 mostCurrent._btok.setEnabled(anywheresoftware.b4a.keywords.Common.True);
  };
  }else {
-RDebugUtils.currentLine=3145754;
- //BA.debugLineNum = 3145754;BA.debugLine="SomePagAtual";
+RDebugUtils.currentLine=4980762;
+ //BA.debugLineNum = 4980762;BA.debugLine="SomePagAtual";
 _somepagatual();
-RDebugUtils.currentLine=3145755;
- //BA.debugLineNum = 3145755;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0%";
+RDebugUtils.currentLine=4980763;
+ //BA.debugLineNum = 4980763;BA.debugLine="lblPrevisaoPorcentagem.Text = \"Próximo avanço 0%";
 mostCurrent._lblprevisaoporcentagem.setText(BA.ObjectToCharSequence("Próximo avanço 0%"));
-RDebugUtils.currentLine=3145756;
- //BA.debugLineNum = 3145756;BA.debugLine="lblIvalido.Visible = True";
+RDebugUtils.currentLine=4980764;
+ //BA.debugLineNum = 4980764;BA.debugLine="lblIvalido.Visible = True";
 mostCurrent._lblivalido.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=3145757;
- //BA.debugLineNum = 3145757;BA.debugLine="lblIvalido.Text = \"Obrigatório\"";
+RDebugUtils.currentLine=4980765;
+ //BA.debugLineNum = 4980765;BA.debugLine="lblIvalido.Text = \"Obrigatório\"";
 mostCurrent._lblivalido.setText(BA.ObjectToCharSequence("Obrigatório"));
-RDebugUtils.currentLine=3145758;
- //BA.debugLineNum = 3145758;BA.debugLine="btOk.Enabled = False";
+RDebugUtils.currentLine=4980766;
+ //BA.debugLineNum = 4980766;BA.debugLine="btOk.Enabled = False";
 mostCurrent._btok.setEnabled(anywheresoftware.b4a.keywords.Common.False);
  };
-RDebugUtils.currentLine=3145760;
- //BA.debugLineNum = 3145760;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4980768;
+ //BA.debugLineNum = 4980768;BA.debugLine="End Sub";
 return "";
 }
 public static String  _somepagatual() throws Exception{
 RDebugUtils.currentModule="codigolancamentoleitura";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "somepagatual", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "somepagatual", null));}
-RDebugUtils.currentLine=3211264;
- //BA.debugLineNum = 3211264;BA.debugLine="Sub SomePagAtual";
-RDebugUtils.currentLine=3211265;
- //BA.debugLineNum = 3211265;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 1%y,";
+RDebugUtils.currentLine=5046272;
+ //BA.debugLineNum = 5046272;BA.debugLine="Sub SomePagAtual";
+RDebugUtils.currentLine=5046273;
+ //BA.debugLineNum = 5046273;BA.debugLine="lblPaginaAtual.SetLayoutAnimated(1200, 12%x, 1%y,";
 mostCurrent._lblpaginaatual.SetLayoutAnimated((int) (1200),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (12),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (1),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (28),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (7),mostCurrent.activityBA));
-RDebugUtils.currentLine=3211266;
- //BA.debugLineNum = 3211266;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.T";
+RDebugUtils.currentLine=5046274;
+ //BA.debugLineNum = 5046274;BA.debugLine="lblPaginaAtual.SetTextColorAnimated(800, Colors.T";
 mostCurrent._lblpaginaatual.SetTextColorAnimated((int) (800),anywheresoftware.b4a.keywords.Common.Colors.Transparent);
-RDebugUtils.currentLine=3211267;
- //BA.debugLineNum = 3211267;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5046275;
+ //BA.debugLineNum = 5046275;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -241,7 +241,7 @@ if (RapidSub.canDelegate("getenabled")) { return __ref.runUserSub(false, "swiftb
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 62;BA.debugLine="Return Not(mDisabled)";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return swiftbutton.__c.runMethod(true,"Not",(Object)(__ref.getField(true,"_mdisabled" /*RemoteObject*/ )));
+if (true) return swiftbutton.__c.runMethod(true,"Not",(Object)(__ref.getField(true,"_mdisabled" /*RemoteObject*/ )));
  BA.debugLineNum = 63;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -291,7 +291,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 72;BA.debugLine="If mDisabled Then Return";
 Debug.JustUpdateDeviceLine();
 if (__ref.getField(true,"_mdisabled" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 73;BA.debugLine="Dim Inside As Boolean = x > 0 And x < mBase.Width";
 Debug.JustUpdateDeviceLine();
 _inside = BA.ObjectToBoolean(RemoteObject.solveBoolean(">",_x,BA.numberCast(double.class, 0)) && RemoteObject.solveBoolean("<",_x,BA.numberCast(double.class, __ref.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getWidth"))) && RemoteObject.solveBoolean(">",_y,BA.numberCast(double.class, 0)) && RemoteObject.solveBoolean("<",_y,BA.numberCast(double.class, __ref.getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getHeight"))));Debug.locals.put("Inside", _inside);Debug.locals.put("Inside", _inside);
@@ -412,7 +412,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 94;BA.debugLine="If pressed = NewState Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(true,"_pressed" /*RemoteObject*/ ),_newstate)) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 95;BA.debugLine="If NewState And xui.SubExists(mCallBack, mEventNa";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(".",_newstate) && RemoteObject.solveBoolean(".",__ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(true,"SubExists",__ref.getField(false, "ba"),(Object)(__ref.getField(false,"_mcallback" /*RemoteObject*/ )),(Object)(RemoteObject.concat(__ref.getField(true,"_meventname" /*RemoteObject*/ ),RemoteObject.createImmutable("_ButtonDown"))),(Object)(BA.numberCast(int.class, 0))))) { 

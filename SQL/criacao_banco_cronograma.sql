@@ -19,6 +19,10 @@ begin
 		id				int			identity(1,1)	primary key
 	)
 end
+else
+begin
+	select 'existe'
+end
 go
 
 
@@ -94,3 +98,12 @@ go
 --	constraint				fk_usuario_fk_anotacao_usuario foreign key (fk_anotacao_usuario) references usuario (id),
 --	constraint				fk_usuario_fk_anotacao_livro   foreign key (fk_anotacao_livro) references livro (id)
 --)
+use cronograma
+go
+create table data_atualizacao(
+	
+	id								int			identity(1,1)		primary key,
+	fk_atualizacao_usuario			int			not null,
+	data_da_atualizacao				date		not null,
+	constraint						fk_usuario_fk_atualizacao_usuario		foreign key (fk_atualizacao_usuario) references usuario (id),
+)

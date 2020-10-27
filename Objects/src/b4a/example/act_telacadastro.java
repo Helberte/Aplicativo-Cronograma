@@ -419,11 +419,11 @@ public static boolean _txt_metapagoucap_invalido = false;
 public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
-public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
+public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="act_telacadastro";

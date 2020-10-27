@@ -1,0 +1,18 @@
+package b4a.example.designerscripts;
+import anywheresoftware.b4a.objects.TextViewWrapper;
+import anywheresoftware.b4a.objects.ImageViewWrapper;
+import anywheresoftware.b4a.BA;
+
+
+public class LS_lay_detalhes_leituras{
+
+public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAndAnchor> views, int width, int height, float scale) {
+anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
+anywheresoftware.b4a.keywords.LayoutBuilder.scaleAll(views);
+views.get("scrol").vw.setTop((int)((0d / 100 * height)));
+views.get("scrol").vw.setLeft((int)((0d / 100 * width)));
+views.get("scrol").vw.setWidth((int)((100d / 100 * width)));
+views.get("scrol").vw.setHeight((int)((100d / 100 * height)));
+
+}
+}

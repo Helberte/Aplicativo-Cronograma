@@ -63,10 +63,10 @@ public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.da
 public static b4a.example.main _main = null;
 public static b4a.example.act_telacadastro _act_telacadastro = null;
 public static b4a.example.codigocadastro _codigocadastro = null;
-public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayanotacao _codigolayanotacao = null;
-public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
+public static b4a.example.codigolayleituras _codigolayleituras = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
   public Object[] GetGlobals() {
 		return new Object[] {"act_TelaCadastro",Debug.moduleToString(b4a.example.act_telacadastro.class),"Activity",codigolaylogin.mostCurrent._activity,"btConectar",codigolaylogin.mostCurrent._btconectar,"CodigoCadastro",Debug.moduleToString(b4a.example.codigocadastro.class),"CodigoLancamentoLeitura",Debug.moduleToString(b4a.example.codigolancamentoleitura.class),"CodigoLayAnotacao",Debug.moduleToString(b4a.example.codigolayanotacao.class),"CodigoLayLeituras",Debug.moduleToString(b4a.example.codigolayleituras.class),"DateUtils",codigolaylogin.mostCurrent._dateutils,"EdLogin",codigolaylogin.mostCurrent._edlogin,"EdSenha",codigolaylogin.mostCurrent._edsenha,"funcoes",codigolaylogin.mostCurrent._funcoes,"Main",Debug.moduleToString(b4a.example.main.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"XUIViewsUtils",Debug.moduleToString(b4a.example.xuiviewsutils.class)};

@@ -40,11 +40,11 @@ public b4a.example.dateutils _dateutils = null;
 public b4a.example.main _main = null;
 public b4a.example.act_telacadastro _act_telacadastro = null;
 public b4a.example.codigocadastro _codigocadastro = null;
-public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayanotacao _codigolayanotacao = null;
-public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
+public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
+public b4a.example.codigolayleituras _codigolayleituras = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public String  _initialize(b4a.example.classbancodados __ref,anywheresoftware.b4a.BA _ba) throws Exception{
 __ref = this;
