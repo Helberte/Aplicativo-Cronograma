@@ -76,6 +76,8 @@ public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public b4a.example.modulo_funcoes _modulo_funcoes = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public String  _alpha_touch(b4a.example.b4xcolortemplate __ref,int _action,float _x,float _y) throws Exception{
 __ref = this;

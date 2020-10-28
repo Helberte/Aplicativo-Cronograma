@@ -32,6 +32,8 @@ public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
+public static b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public static b4a.example.modulo_funcoes _modulo_funcoes = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"cvs",_ref.getField(false, "_cvs"),"DateUtils",_ref.getField(false, "_dateutils"),"fnt",_ref.getField(false, "_fnt"),"mBase",_ref.getField(false, "_mbase"),"mCallBack",_ref.getField(false, "_mcallback"),"mEventName",_ref.getField(false, "_meventname"),"mText",_ref.getField(false, "_mtext"),"mTextColor",_ref.getField(false, "_mtextcolor"),"StartPositionDelay",_ref.getField(false, "_startpositiondelay"),"Tag",_ref.getField(false, "_tag"),"taskIndex",_ref.getField(false, "_taskindex"),"WidthPerSecond",_ref.getField(false, "_widthpersecond"),"xui",_ref.getField(false, "_xui")};

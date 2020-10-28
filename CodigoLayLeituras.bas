@@ -166,7 +166,7 @@ Sub Atualiza_leituras As ResumableSub
 				scrollView1.Initialize( 800 )
 				listaInformacoes.Initialize
 				
-				Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
+				Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100%x, btAdicionarLeitura.Top - (btAdicionarLeitura.Height / 2) + 9dip)
 													
 				Dim i As Int	
 				For i = 0 To panels.Length - 1
@@ -188,7 +188,7 @@ Sub Atualiza_leituras As ResumableSub
 					
 					scrollView1.Panel.AddView(panels(i), 1%x, topo, 98%x, 25%y)
 					panels(i).Tag = i			
-									 
+					
 					lblTituloLivro(i) = configuraLabel(Result.GetString("nome"), 23, Colors.RGB(189,151,1))	
 					lblDataComecoLeitura(i) = configuraLabel("Começei ler dia " & Result.GetString("data_inicial"), tamanho_fonte, Colors.RGB(72,72,72))			
 					lblPrevisaoTermino(i) = configuraLabel("Previsão de Término " & Result.GetString("data_prevista_final"), tamanho_fonte, Colors.RGB(72,72,72))
@@ -257,11 +257,15 @@ Sub Atualiza_leituras As ResumableSub
 End Sub
 
 Sub Event_panels_Click
-'	Dim p As Panel
+	Dim p As Panel
+	Dim t As Int
 	
-'	p = Sender
-
-'	MsgboxAsync(p.Tag, "")
+	p = Sender
+	t = p.Tag
+	
+	If t = 1 Then
+		StartActivity(Codigo_LayDetalhesLivro)
+	End If
 End Sub
 
 Sub Event_btAnotar_Click
@@ -409,7 +413,7 @@ Sub TabStrip_PageSelected (Position As Int)
 						Dim lbl_quantidade_lidas(quantidade_linhas) As Label
 						Dim lbl_dias_utilizados(quantidade_linhas) As Label
 					
-						Panel_lidos.AddView(scrollView2, 0%x, 0%y, 100%x, btAdicionarLeitura.Top)
+						Panel_lidos.AddView(scrollView2, 0%x, 0%y, 100%x, btAdicionarLeitura.Top - (btAdicionarLeitura.Height / 2) + 9dip)
 					
 					
 						Dim tamanho_fonte As Int = 17.5
@@ -445,7 +449,7 @@ Sub TabStrip_PageSelected (Position As Int)
 							
 							lbl_titulo(i) = configuraLabel(Result.GetString("titulo"), 23, Colors.RGB(189,151,1))
 							lbl_data_termino(i) = configuraLabel("Terminei no dia " & Result.GetString("data_canclusao"), tamanho_fonte, Colors.RGB(72,72,72))
-							lbl_total_paginas(i) = configuraLabel(Result.GetInt("paginas_ou_cap_lidos") & " páginas de " & Result.GetInt("quantidade_paginas"), tamanho_fonte, Colors.RGB(72,72,72))
+							lbl_total_paginas(i) = configuraLabel(Result.GetInt("paginas_ou_cap_lidos") & " " & Result.GetString("tipo_de_leitura") & " de " & Result.GetInt("quantidade_paginas"), tamanho_fonte, Colors.RGB(72,72,72))
 							lbl_dias_utilizados(i) = configuraLabel("Gastei " & Result.GetInt("total_dias_utilizados") & " dias para terminar", tamanho_fonte, Colors.RGB(72,72,72))
 						
 							Dim altura As Int = 3.5%y

@@ -23,6 +23,8 @@ public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public b4a.example.modulo_funcoes _modulo_funcoes = null;
 public static String  _performhapticfeedback(anywheresoftware.b4a.BA _ba,anywheresoftware.b4a.objects.B4XViewWrapper _view) throws Exception{
 RDebugUtils.currentModule="xuiviewsutils";
 if (Debug.shouldDelegate(null, "performhapticfeedback", true))

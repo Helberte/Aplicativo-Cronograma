@@ -358,6 +358,7 @@ vis = vis | (codigolayanotacao.mostCurrent != null);
 vis = vis | (codigolaylogin.mostCurrent != null);
 vis = vis | (codigolancamentoleitura.mostCurrent != null);
 vis = vis | (codigolayleituras.mostCurrent != null);
+vis = vis | (codigo_laydetalheslivro.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -454,6 +455,18 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
             if (__a != null)
 				__a.finish();}
 
+ {
+            Activity __a = null;
+            if (codigo_laydetalheslivro.previousOne != null) {
+				__a = codigo_laydetalheslivro.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(codigo_laydetalheslivro.mostCurrent == null ? null : codigo_laydetalheslivro.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.phone.Phone.ContentChooser _fotos = null;
@@ -467,6 +480,8 @@ public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public b4a.example.modulo_funcoes _modulo_funcoes = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";

@@ -39,6 +39,8 @@ public static b4a.example.codigolaylogin _codigolaylogin = null;
 public static b4a.example.starter _starter = null;
 public static b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public static b4a.example.codigolayleituras _codigolayleituras = null;
+public static b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public static b4a.example.modulo_funcoes _modulo_funcoes = null;
 public static b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"BackgroundColor",_ref.getField(false, "_backgroundcolor"),"bc",_ref.getField(false, "_bc"),"BrushOffsetDelta",_ref.getField(false, "_brushoffsetdelta"),"BusyBrush",_ref.getField(false, "_busybrush"),"BusyIndex",_ref.getField(false, "_busyindex"),"CornerRadius",_ref.getField(false, "_cornerradius"),"CurrentValue",_ref.getField(false, "_currentvalue"),"DateUtils",_ref.getField(false, "_dateutils"),"EmptyBrush",_ref.getField(false, "_emptybrush"),"EmptyColor",_ref.getField(false, "_emptycolor"),"mBase",_ref.getField(false, "_mbase"),"mCallBack",_ref.getField(false, "_mcallback"),"mEventName",_ref.getField(false, "_meventname"),"mIV",_ref.getField(false, "_miv"),"mValue",_ref.getField(false, "_mvalue"),"Tag",_ref.getField(false, "_tag"),"TransparentBrush",_ref.getField(false, "_transparentbrush"),"ValueChangePerSecond",_ref.getField(false, "_valuechangepersecond"),"Vertical",_ref.getField(false, "_vertical"),"xui",_ref.getField(false, "_xui")};

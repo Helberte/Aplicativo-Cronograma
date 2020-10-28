@@ -75,5 +75,12 @@
 			android:label="Cronograma"
 			android:screenOrientation="unspecified">
 		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".codigo_laydetalheslivro"
+			android:label="Cronograma"
+			android:screenOrientation="unspecified">
+		</activity>
 	</application>
 </manifest>

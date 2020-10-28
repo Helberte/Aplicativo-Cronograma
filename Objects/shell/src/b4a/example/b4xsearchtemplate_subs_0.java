@@ -8,7 +8,7 @@ public class b4xsearchtemplate_subs_0 {
 
 public static RemoteObject  _additemstolist(RemoteObject __ref,RemoteObject _li,RemoteObject _full) throws Exception{
 try {
-		Debug.PushSubsStack("AddItemsToList (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,127);
+		Debug.PushSubsStack("AddItemsToList (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,127);
 if (RapidSub.canDelegate("additemstolist")) { return __ref.runUserSub(false, "b4xsearchtemplate","additemstolist", __ref, _li, _full);}
 int _i = 0;
 RemoteObject _item = RemoteObject.createImmutable("");
@@ -174,7 +174,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _customlistview1_itemclick(RemoteObject __ref,RemoteObject _index,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("CustomListView1_ItemClick (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,121);
+		Debug.PushSubsStack("CustomListView1_ItemClick (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,121);
 if (RapidSub.canDelegate("customlistview1_itemclick")) { return __ref.runUserSub(false, "b4xsearchtemplate","customlistview1_itemclick", __ref, _index, _value);}
 Debug.locals.put("Index", _index);
 Debug.locals.put("Value", _value);
@@ -202,7 +202,7 @@ finally {
 		}}
 public static RemoteObject  _dialogclosed(RemoteObject __ref,RemoteObject _result) throws Exception{
 try {
-		Debug.PushSubsStack("DialogClosed (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,241);
+		Debug.PushSubsStack("DialogClosed (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,241);
 if (RapidSub.canDelegate("dialogclosed")) { return __ref.runUserSub(false, "b4xsearchtemplate","dialogclosed", __ref, _result);}
 Debug.locals.put("Result", _result);
  BA.debugLineNum = 241;BA.debugLine="Private Sub DialogClosed(Result As Int) 'ignore";
@@ -219,7 +219,7 @@ finally {
 		}}
 public static RemoteObject  _getpanel(RemoteObject __ref,RemoteObject _dialog) throws Exception{
 try {
-		Debug.PushSubsStack("GetPanel (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,60);
+		Debug.PushSubsStack("GetPanel (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,60);
 if (RapidSub.canDelegate("getpanel")) { return __ref.runUserSub(false, "b4xsearchtemplate","getpanel", __ref, _dialog);}
 Debug.locals.put("Dialog", _dialog);
  BA.debugLineNum = 60;BA.debugLine="Public Sub GetPanel (Dialog As B4XDialog) As B4XVi";
@@ -239,7 +239,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,23);
+		Debug.PushSubsStack("Initialize (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,23);
 if (RapidSub.canDelegate("initialize")) { return __ref.runUserSub(false, "b4xsearchtemplate","initialize", __ref, _ba);}
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 RemoteObject _height = RemoteObject.createImmutable(0);
@@ -308,7 +308,7 @@ finally {
 		}}
 public static RemoteObject  _resize(RemoteObject __ref,RemoteObject _width,RemoteObject _height) throws Exception{
 try {
-		Debug.PushSubsStack("Resize (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,53);
+		Debug.PushSubsStack("Resize (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,53);
 if (RapidSub.canDelegate("resize")) { return __ref.runUserSub(false, "b4xsearchtemplate","resize", __ref, _width, _height);}
 RemoteObject _c = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 Debug.locals.put("Width", _width);
@@ -340,7 +340,7 @@ finally {
 		}}
 public static RemoteObject  _searchfield_enterpressed(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("SearchField_EnterPressed (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,111);
+		Debug.PushSubsStack("SearchField_EnterPressed (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,111);
 if (RapidSub.canDelegate("searchfield_enterpressed")) { return __ref.runUserSub(false, "b4xsearchtemplate","searchfield_enterpressed", __ref);}
  BA.debugLineNum = 111;BA.debugLine="Private Sub SearchField_EnterPressed";
 Debug.JustUpdateDeviceLine();
@@ -374,7 +374,7 @@ finally {
 		}}
 public static RemoteObject  _searchfield_textchanged(RemoteObject __ref,RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("SearchField_TextChanged (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,80);
+		Debug.PushSubsStack("SearchField_TextChanged (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,80);
 if (RapidSub.canDelegate("searchfield_textchanged")) { return __ref.runUserSub(false, "b4xsearchtemplate","searchfield_textchanged", __ref, _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
@@ -395,7 +395,7 @@ finally {
 		}}
 public static RemoteObject  _setindex(RemoteObject __ref,RemoteObject _index) throws Exception{
 try {
-		Debug.PushSubsStack("SetIndex (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,233);
+		Debug.PushSubsStack("SetIndex (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,233);
 if (RapidSub.canDelegate("setindex")) { return __ref.runUserSub(false, "b4xsearchtemplate","setindex", __ref, _index);}
 RemoteObject _obj = null;
 Debug.locals.put("Index", _index);
@@ -429,7 +429,7 @@ finally {
 		}}
 public static RemoteObject  _setitems(RemoteObject __ref,RemoteObject _items) throws Exception{
 try {
-		Debug.PushSubsStack("SetItems (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,194);
+		Debug.PushSubsStack("SetItems (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,194);
 if (RapidSub.canDelegate("setitems")) { return __ref.runUserSub(false, "b4xsearchtemplate","setitems", __ref, _items);}
 RemoteObject _starttime = RemoteObject.createImmutable(0L);
 RemoteObject _noduplicates = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
@@ -568,7 +568,7 @@ finally {
 		}}
 public static void  _show(RemoteObject __ref,RemoteObject _dialog) throws Exception{
 try {
-		Debug.PushSubsStack("Show (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,64);
+		Debug.PushSubsStack("Show (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,64);
 if (RapidSub.canDelegate("show")) { __ref.runUserSub(false, "b4xsearchtemplate","show", __ref, _dialog); return;}
 ResumableSub_Show rsub = new ResumableSub_Show(null,__ref,_dialog);
 rsub.resume(null, null);
@@ -593,7 +593,7 @@ RemoteObject _dialog;
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Show (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,64);
+		Debug.PushSubsStack("Show (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,64);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -661,7 +661,7 @@ finally {
 }
 public static RemoteObject  _update(RemoteObject __ref,RemoteObject _term,RemoteObject _force) throws Exception{
 try {
-		Debug.PushSubsStack("Update (b4xsearchtemplate) ","b4xsearchtemplate",23,__ref.getField(false, "ba"),__ref,84);
+		Debug.PushSubsStack("Update (b4xsearchtemplate) ","b4xsearchtemplate",25,__ref.getField(false, "ba"),__ref,84);
 if (RapidSub.canDelegate("update")) { return __ref.runUserSub(false, "b4xsearchtemplate","update", __ref, _term, _force);}
 int _i = 0;
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");

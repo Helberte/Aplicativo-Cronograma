@@ -371,6 +371,8 @@ public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.starter _starter = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
+public b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public b4a.example.modulo_funcoes _modulo_funcoes = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static void  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="codigolayleituras";
@@ -809,7 +811,7 @@ RDebugUtils.currentLine=5570629;
 _listainformacoes.Initialize();
 RDebugUtils.currentLine=5570631;
  //BA.debugLineNum = 5570631;BA.debugLine="Panel_lendo.AddView(scrollView1, 0%x, 0%y, 100";
-parent.mostCurrent._panel_lendo.AddView((android.view.View)(parent.mostCurrent._scrollview1.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),parent.mostCurrent._btadicionarleitura.getTop());
+parent.mostCurrent._panel_lendo.AddView((android.view.View)(parent.mostCurrent._scrollview1.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),(int) (parent.mostCurrent._btadicionarleitura.getTop()-(parent.mostCurrent._btadicionarleitura.getHeight()/(double)2)+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (9))));
 RDebugUtils.currentLine=5570633;
  //BA.debugLineNum = 5570633;BA.debugLine="Dim i As Int";
 _i = 0;
@@ -1534,10 +1536,31 @@ public static String  _event_panels_click() throws Exception{
 RDebugUtils.currentModule="codigolayleituras";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "event_panels_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "event_panels_click", null));}
+anywheresoftware.b4a.objects.PanelWrapper _p = null;
+int _t = 0;
 RDebugUtils.currentLine=5636096;
  //BA.debugLineNum = 5636096;BA.debugLine="Sub Event_panels_Click";
-RDebugUtils.currentLine=5636102;
- //BA.debugLineNum = 5636102;BA.debugLine="End Sub";
+RDebugUtils.currentLine=5636097;
+ //BA.debugLineNum = 5636097;BA.debugLine="Dim p As Panel";
+_p = new anywheresoftware.b4a.objects.PanelWrapper();
+RDebugUtils.currentLine=5636098;
+ //BA.debugLineNum = 5636098;BA.debugLine="Dim t As Int";
+_t = 0;
+RDebugUtils.currentLine=5636100;
+ //BA.debugLineNum = 5636100;BA.debugLine="p = Sender";
+_p = (anywheresoftware.b4a.objects.PanelWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.PanelWrapper(), (android.view.ViewGroup)(anywheresoftware.b4a.keywords.Common.Sender(mostCurrent.activityBA)));
+RDebugUtils.currentLine=5636101;
+ //BA.debugLineNum = 5636101;BA.debugLine="t = p.Tag";
+_t = (int)(BA.ObjectToNumber(_p.getTag()));
+RDebugUtils.currentLine=5636103;
+ //BA.debugLineNum = 5636103;BA.debugLine="If t = 1 Then";
+if (_t==1) { 
+RDebugUtils.currentLine=5636104;
+ //BA.debugLineNum = 5636104;BA.debugLine="StartActivity(Codigo_LayDetalhesLivro)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._codigo_laydetalheslivro.getObject()));
+ };
+RDebugUtils.currentLine=5636106;
+ //BA.debugLineNum = 5636106;BA.debugLine="End Sub";
 return "";
 }
 public static void  _tabstrip_pageselected(int _position) throws Exception{
@@ -1793,7 +1816,7 @@ _lbl_dias_utilizados[i0] = new anywheresoftware.b4a.objects.LabelWrapper();
 ;
 RDebugUtils.currentLine=5898282;
  //BA.debugLineNum = 5898282;BA.debugLine="Panel_lidos.AddView(scrollView2, 0%x, 0%y, 1";
-parent.mostCurrent._panel_lidos.AddView((android.view.View)(parent.mostCurrent._scrollview2.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),parent.mostCurrent._btadicionarleitura.getTop());
+parent.mostCurrent._panel_lidos.AddView((android.view.View)(parent.mostCurrent._scrollview2.getObject()),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (0),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),(int) (parent.mostCurrent._btadicionarleitura.getTop()-(parent.mostCurrent._btadicionarleitura.getHeight()/(double)2)+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (9))));
 RDebugUtils.currentLine=5898285;
  //BA.debugLineNum = 5898285;BA.debugLine="Dim tamanho_fonte As Int = 17.5";
 _tamanho_fonte = (int) (17.5);
@@ -1894,7 +1917,7 @@ RDebugUtils.currentLine=5898317;
 _lbl_data_termino[_i] = _configuralabel("Terminei no dia "+_result.GetString("data_canclusao"),_tamanho_fonte,anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
 RDebugUtils.currentLine=5898318;
  //BA.debugLineNum = 5898318;BA.debugLine="lbl_total_paginas(i) = configuraLabel(Resul";
-_lbl_total_paginas[_i] = _configuralabel(BA.NumberToString(_result.GetInt("paginas_ou_cap_lidos"))+" páginas de "+BA.NumberToString(_result.GetInt("quantidade_paginas")),_tamanho_fonte,anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
+_lbl_total_paginas[_i] = _configuralabel(BA.NumberToString(_result.GetInt("paginas_ou_cap_lidos"))+" "+_result.GetString("tipo_de_leitura")+" de "+BA.NumberToString(_result.GetInt("quantidade_paginas")),_tamanho_fonte,anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));
 RDebugUtils.currentLine=5898319;
  //BA.debugLineNum = 5898319;BA.debugLine="lbl_dias_utilizados(i) = configuraLabel(\"Ga";
 _lbl_dias_utilizados[_i] = _configuralabel("Gastei "+BA.NumberToString(_result.GetInt("total_dias_utilizados"))+" dias para terminar",_tamanho_fonte,anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (72),(int) (72),(int) (72)));

@@ -134,6 +134,8 @@ public b4a.example.codigolayanotacao _codigolayanotacao = null;
 public b4a.example.codigolaylogin _codigolaylogin = null;
 public b4a.example.codigolancamentoleitura _codigolancamentoleitura = null;
 public b4a.example.codigolayleituras _codigolayleituras = null;
+public b4a.example.codigo_laydetalheslivro _codigo_laydetalheslivro = null;
+public b4a.example.modulo_funcoes _modulo_funcoes = null;
 public b4a.example.xuiviewsutils _xuiviewsutils = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
 RDebugUtils.currentModule="starter";

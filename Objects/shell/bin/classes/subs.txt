@@ -596,7 +596,7 @@ codigolayleituras,atualiza_leituras,0,0,92,251
 main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,panel_lendo,,gradient,,cores,,btadicionarleitura,,tamanholista,,nomearquivo
 ,tempanel,,tamanholista
 classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
-codigolayleituras,activity_keypress,1,0,486,525
+codigolayleituras,activity_keypress,1,0,490,529
 
 
 
@@ -608,23 +608,23 @@ codigolayleituras,activity_resume,0,0,68,86
 main,cadastroualgo,codigolancamentoleitura,de_os_parabens,,b4ximage_parabens,,panel_parabens,main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,panel_lendo,,gradient,,cores,,btadicionarleitura,,tamanholista,,nomearquivo
 main,cadastroualgo,codigolancamentoleitura,de_os_parabens,,tempanel,,tamanholista
 ,atualiza_leituras,b4ximageview,load,classbancodados,insert_consulta,,configuralabel,classbancodados,conecta,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill,b4ximageview,update,b4ximageview,setcircleclip
-codigolayleituras,configuralabel,0,0,475,484
+codigolayleituras,configuralabel,0,0,479,488
 
 
 
-codigolayleituras,btadicionarleitura_click,0,0,360,362
+codigolayleituras,btadicionarleitura_click,0,0,364,366
 
 
 
-codigolayleituras,btok_parabens_click,0,0,527,529
+codigolayleituras,btok_parabens_click,0,0,531,533
 ,panel_parabens
 
 
-codigolayleituras,event_btanotar_click,0,0,261,301
+codigolayleituras,event_btanotar_click,0,0,265,305
 ,nomearquivo,,tamanholista,codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 
-codigolayleituras,event_btlancar_click,0,0,303,358
+codigolayleituras,event_btlancar_click,0,0,307,362
 ,nomearquivo,,tamanholista,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 
@@ -632,7 +632,7 @@ codigolayleituras,event_lbl_click,0,0,64,66
 
 
 
-codigolayleituras,event_panels_click,0,0,253,259
+codigolayleituras,event_panels_click,0,0,253,263
 
 
 
@@ -644,10 +644,42 @@ codigolayleituras,process_globals,0,1,6,9
 ,tempanel,,tempanelleituraconcluida
 ,tempanel,,tempanelleituraconcluida
 
-codigolayleituras,tabstrip_pageselected,0,0,364,473
+codigolayleituras,tabstrip_pageselected,0,0,368,477
 ,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,main,id_do_usuario,,banco,,tempanelleituraconcluida,,scrollview2,,panel_lidos,,btadicionarleitura,,cores
 ,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,,tempanelleituraconcluida,,cores
 classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
+codigo_laydetalheslivro,activity_create,1,0,31,89
+,bt_voltar,,panel_cabecalho,,scrol,,painel_imagem,,lbl_livro,,lbl_usuario,,dm,,lbl,,cores,,gradient,,botoes
+,bt_voltar,,panel_cabecalho,,scrol,,lbl_livro,,lbl_usuario
+,configura_label
+codigo_laydetalheslivro,configura_label,0,0,91,102
+
+
+
+codigo_laydetalheslivro,activity_pause,0,0,108,110
+
+
+
+codigo_laydetalheslivro,activity_resume,0,0,104,106
+
+
+
+codigo_laydetalheslivro,bt_voltar_click,0,0,113,115
+
+
+
+codigo_laydetalheslivro,globals,0,1,11,29
+
+
+
+codigo_laydetalheslivro,process_globals,0,1,6,9
+
+
+
+modulo_funcoes,process_globals,0,1,3,6
+
+
+
 animatedcounter,base_resize,0,0,70,86
 
 
