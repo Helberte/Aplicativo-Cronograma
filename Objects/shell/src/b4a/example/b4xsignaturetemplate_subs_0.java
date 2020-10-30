@@ -72,7 +72,7 @@ if (RapidSub.canDelegate("getbitmap")) { return __ref.runUserSub(false, "b4xsign
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 50;BA.debugLine="Return cvs.CreateBitmap";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_cvs" /*RemoteObject*/ ).runMethod(false,"CreateBitmap");
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_cvs" /*RemoteObject*/ ).runMethod(false,"CreateBitmap");
  BA.debugLineNum = 51;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
@@ -92,7 +92,7 @@ Debug.locals.put("Dialog", _dialog);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 28;BA.debugLine="Return mBase";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
  BA.debugLineNum = 29;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);

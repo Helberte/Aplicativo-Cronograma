@@ -50,7 +50,7 @@ begin
 		set @pagQueRestam = @paginasLivro - @quantidadePaginas
 		set @diasRestantes = @pagQueRestam / @meta
 
-		set @novaData = DATEADD(day, @diasRestantes, @dataInicioLeitura)
+		set @novaData = DATEADD(day, @diasRestantes, CONVERT(date, GETDATE(), 103))
 
 
 		update leitura set data_prevista_final = @novaData 

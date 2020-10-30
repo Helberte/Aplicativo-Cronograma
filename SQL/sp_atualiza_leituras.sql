@@ -1,7 +1,7 @@
 use cronograma
 go
 
---exec sp_atualiza_leituras 29
+--exec sp_atualiza_leituras 64
 
 alter procedure sp_atualiza_leituras
 
@@ -98,7 +98,7 @@ begin
 							   set @pagQueRestam = @total_paginas_livro - @paginas_livro_lidas
 							   set @diasRestantes = @pagQueRestam / @meta		
 
-							   update leitura set data_prevista_final = DATEADD(day, @diasRestantes, @dataInicioLeitura)
+							   update leitura set data_prevista_final = DATEADD(day, @diasRestantes, CONVERT(date, GETDATE(), 103))
 							   where leitura.id_leitura = @id_leitura	
 						set @i = @i + 1					  	  
 					end								

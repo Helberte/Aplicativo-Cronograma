@@ -592,11 +592,11 @@ codigolayleituras,activity_create,1,0,36,61
 ,b4ximage_parabens,,btadicionarleitura,,panel_parabens,,tabstrip,,panel_lendo,,panel_lidos,,lbl_inicial_leitura,,banco,,cores,,panelnenhumaleitura,,carrega_leitura_concluida,main,id_do_usuario,,tempanel,,scrollview1,,gradient,,tamanholista,,nomearquivo
 ,b4ximage_parabens,,btadicionarleitura,,panel_parabens,,tabstrip,,panel_lendo,,panel_lidos,,carrega_leitura_concluida,,tempanel,,tamanholista
 classbancodados,initialize,,atualiza_leituras,classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
-codigolayleituras,atualiza_leituras,0,0,92,251
+codigolayleituras,atualiza_leituras,0,0,92,253
 main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,panel_lendo,,gradient,,cores,,btadicionarleitura,,tamanholista,,nomearquivo
 ,tempanel,,tamanholista
 classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
-codigolayleituras,activity_keypress,1,0,490,529
+codigolayleituras,activity_keypress,1,0,520,559
 
 
 
@@ -608,23 +608,23 @@ codigolayleituras,activity_resume,0,0,68,86
 main,cadastroualgo,codigolancamentoleitura,de_os_parabens,,b4ximage_parabens,,panel_parabens,main,id_do_usuario,,banco,,tempanel,,scrollview1,,lbl_inicial_leitura,,panel_lendo,,gradient,,cores,,btadicionarleitura,,tamanholista,,nomearquivo
 main,cadastroualgo,codigolancamentoleitura,de_os_parabens,,tempanel,,tamanholista
 ,atualiza_leituras,b4ximageview,load,classbancodados,insert_consulta,,configuralabel,classbancodados,conecta,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill,b4ximageview,update,b4ximageview,setcircleclip
-codigolayleituras,configuralabel,0,0,479,488
+codigolayleituras,configuralabel,0,0,509,518
 
 
 
-codigolayleituras,btadicionarleitura_click,0,0,364,366
+codigolayleituras,btadicionarleitura_click,0,0,394,396
 
 
 
-codigolayleituras,btok_parabens_click,0,0,531,533
+codigolayleituras,btok_parabens_click,0,0,561,563
 ,panel_parabens
 
 
-codigolayleituras,event_btanotar_click,0,0,265,305
+codigolayleituras,event_btanotar_click,0,0,295,335
 ,nomearquivo,,tamanholista,codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 codigolayanotacao,codigolivro,codigolayanotacao,qtpaginas,codigolayanotacao,nomedolivro,codigolayanotacao,tipoleitura
 
-codigolayleituras,event_btlancar_click,0,0,307,362
+codigolayleituras,event_btlancar_click,0,0,337,392
 ,nomearquivo,,tamanholista,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,titulolivro,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,meta,codigolancamentoleitura,idlivro,codigolancamentoleitura,tipoleitura
 
@@ -632,9 +632,9 @@ codigolayleituras,event_lbl_click,0,0,64,66
 
 
 
-codigolayleituras,event_panels_click,0,0,253,263
-
-
+codigolayleituras,event_panels_click,0,0,255,293
+,nomearquivo,,tamanholista,codigo_laydetalheslivro,dt_inicio,codigo_laydetalheslivro,dt_termino,codigo_laydetalheslivro,nome_livro,codigo_laydetalheslivro,nome_usuario,codigo_laydetalheslivro,pg_atual,codigo_laydetalheslivro,pg_meta,codigo_laydetalheslivro,pg_total,codigo_laydetalheslivro,tipo_leitura,codigo_laydetalheslivro,id_livro
+codigo_laydetalheslivro,dt_inicio,codigo_laydetalheslivro,dt_termino,codigo_laydetalheslivro,nome_livro,codigo_laydetalheslivro,nome_usuario,codigo_laydetalheslivro,pg_atual,codigo_laydetalheslivro,pg_meta,codigo_laydetalheslivro,pg_total,codigo_laydetalheslivro,tipo_leitura,codigo_laydetalheslivro,id_livro
 
 codigolayleituras,globals,0,1,11,34
 ,nomearquivo
@@ -644,35 +644,43 @@ codigolayleituras,process_globals,0,1,6,9
 ,tempanel,,tempanelleituraconcluida
 ,tempanel,,tempanelleituraconcluida
 
-codigolayleituras,tabstrip_pageselected,0,0,368,477
+codigolayleituras,tabstrip_pageselected,0,0,398,507
 ,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,main,id_do_usuario,,banco,,tempanelleituraconcluida,,scrollview2,,panel_lidos,,btadicionarleitura,,cores
 ,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,,tempanelleituraconcluida,,cores
 classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
-codigo_laydetalheslivro,activity_create,1,0,31,89
-,bt_voltar,,panel_cabecalho,,scrol,,painel_imagem,,lbl_livro,,lbl_usuario,,dm,,lbl,,cores,,gradient,,botoes
-,bt_voltar,,panel_cabecalho,,scrol,,lbl_livro,,lbl_usuario
-,configura_label
-codigo_laydetalheslivro,configura_label,0,0,91,102
+codigo_laydetalheslivro,activity_create,1,1,55,222
+,bt_voltar,,panel_cabecalho,,scrol,,painel_botoes,,banco,,painel_imagem,,lbl_livro,,lbl_usuario,,panel_detalhes,,lbl_dt_inicio,,lbl_dt_termino,,lbl_pg_atual,,lbl_pg_total,,lbl_pg_meta,,rot_dt_inicio,,rot_dt_termino,,rot_pg_atual,,rot_pg_meta,,rot_pg_total,,dt_inicio,,dt_termino,,pg_atual,,pg_total,,pg_meta,,tipo_leitura,,nome_livro,,nome_usuario,,dm,,lbl,,b4x_imagem,,botoes
+,bt_voltar,,panel_cabecalho,,scrol,,lbl_dt_inicio,,lbl_dt_termino,,lbl_pg_atual,,lbl_pg_total,,lbl_pg_meta,,tipo_leitura,,rot_dt_inicio,,rot_dt_termino,,rot_pg_atual,,rot_pg_meta,,rot_pg_total,,lbl_livro,,lbl_usuario,,b4x_imagem
+classbancodados,initialize,,configura_label,b4ximageview,load,b4ximageview,setresizemode,,gradient_border,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill,b4ximageview,update,b4ximageview,setcircleclip
+codigo_laydetalheslivro,configura_label,0,0,235,246
 
 
 
-codigo_laydetalheslivro,activity_pause,0,0,108,110
+codigo_laydetalheslivro,gradient_border,0,0,224,233
 
 
 
-codigo_laydetalheslivro,activity_resume,0,0,104,106
+codigo_laydetalheslivro,activity_pause,0,0,311,314
+main,cadastroualgo,,seguro_cadastrou_algo
+main,cadastroualgo,,seguro_cadastrou_algo
+
+codigo_laydetalheslivro,activity_resume,0,1,248,309
+main,cadastroualgo,,seguro_cadastrou_algo,main,id_do_usuario,,banco,codigolancamentoleitura,terminouleitura,,painel_botoes,,id_livro,,lbl_dt_inicio,,lbl_dt_termino,,lbl_pg_atual,,lbl_pg_total,,lbl_pg_meta,,pg_meta,,nome_usuario,,pg_atual,,tipo_leitura,,pg_total,,nome_livro
+,seguro_cadastrou_algo,main,cadastroualgo,,pg_meta,,nome_usuario,,pg_atual,,tipo_leitura,,pg_total,,id_livro,,nome_livro
+classbancodados,insert_consulta,classbancodados,conecta
+codigo_laydetalheslivro,bt_voltar_click,0,0,317,319
 
 
 
-codigo_laydetalheslivro,bt_voltar_click,0,0,113,115
+codigo_laydetalheslivro,event_botoes_click,0,0,321,340
+codigolancamentoleitura,meta,,pg_meta,codigolancamentoleitura,nomeusuario,,nome_usuario,codigolancamentoleitura,paginaatual,,pg_atual,codigolancamentoleitura,tipoleitura,,tipo_leitura,codigolancamentoleitura,totalpaginas,,pg_total,codigolancamentoleitura,idlivro,,id_livro,codigolancamentoleitura,titulolivro,,nome_livro
+codigolancamentoleitura,meta,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,tipoleitura,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,idlivro,codigolancamentoleitura,titulolivro
 
+codigo_laydetalheslivro,globals,0,1,21,53
+,seguro_cadastrou_algo
+,seguro_cadastrou_algo
 
-
-codigo_laydetalheslivro,globals,0,1,11,29
-
-
-
-codigo_laydetalheslivro,process_globals,0,1,6,9
+codigo_laydetalheslivro,process_globals,0,1,6,19
 
 
 

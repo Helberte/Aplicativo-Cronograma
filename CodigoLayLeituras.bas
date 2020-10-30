@@ -215,9 +215,11 @@ Sub Atualiza_leituras As ResumableSub
 										 "|¨'" & Result.GetString("usuarioNome") & _			'3
 										 "|¨'" & Result.GetString("tipo_de_leitura") & _		'4
 										 "|¨'" & Result.GetString("paginas_ou_cap_lidos") & _	'5
-										 "|¨'" & Result.GetString("meta") & "|")				'6				
+										 "|¨'" & Result.GetString("meta") & _					'6
+										 "|¨'" & Result.GetString("data_inicial") & _			'7
+										 "|¨'" & Result.GetString("data_prevista_final") & "|")	'8					
 							
-					tamanhoLista = 7
+					tamanhoLista = 9
 					' ' - começo
 					' | - final
 					' ¨ - corte
@@ -258,14 +260,42 @@ End Sub
 
 Sub Event_panels_Click
 	Dim p As Panel
-	Dim t As Int
+	Dim lista As List
+	Dim informacoes As String
+	
+	lista.Initialize
 	
 	p = Sender
-	t = p.Tag
-	
-	If t = 1 Then
+		
+	Try
+		lista = File.ReadList(File.DirInternal, nomeArquivo)
+		informacoes = lista.Get(p.Tag)
+		
+		Dim cols(tamanhoLista), coluna As String
+		
+		For i = 0 To cols.Length - 1
+			
+			coluna 	= informacoes.SubString2(informacoes.IndexOf("'") + 1, informacoes.IndexOf("|"))
+			informacoes = informacoes.SubString2(informacoes.IndexOf("¨") + 1, informacoes.Length)
+			
+			cols(i) = coluna			
+		Next
+		
+		Codigo_LayDetalhesLivro.dt_inicio = cols(7)
+		Codigo_LayDetalhesLivro.dt_termino = cols(8)
+		Codigo_LayDetalhesLivro.nome_livro = cols(0)
+		Codigo_LayDetalhesLivro.nome_usuario = cols(3)
+		Codigo_LayDetalhesLivro.pg_atual = cols(5)
+		Codigo_LayDetalhesLivro.pg_meta = cols(6)
+		Codigo_LayDetalhesLivro.pg_total = cols(1)
+		Codigo_LayDetalhesLivro.tipo_leitura = cols(4)
+		Codigo_LayDetalhesLivro.id_livro = cols(2)
+		
 		StartActivity(Codigo_LayDetalhesLivro)
-	End If
+	Catch
+		ToastMessageShow("Arquivos inexistentes, reinicie o app.",True)
+	End Try
+		
 End Sub
 
 Sub Event_btAnotar_Click

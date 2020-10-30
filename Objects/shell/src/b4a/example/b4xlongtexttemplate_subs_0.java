@@ -45,7 +45,7 @@ Debug.locals.put("Dialog", _dialog);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 31;BA.debugLine="Return mBase";
 Debug.JustUpdateDeviceLine();
-if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
+Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
  BA.debugLineNum = 32;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);
