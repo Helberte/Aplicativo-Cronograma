@@ -474,7 +474,7 @@ if (true) break;
 
 case 1:
 //if
-this.state = 28;
+this.state = 34;
 if ((parent.mostCurrent._edlogin.getText().trim()).equals("") && (parent.mostCurrent._edsenha.getText().trim()).equals("")) { 
 this.state = 3;
 }else 
@@ -502,9 +502,9 @@ _ms = anywheresoftware.b4a.keywords.Common.Msgbox2Async(BA.ObjectToCharSequence(
 RDebugUtils.currentLine=3670025;
  //BA.debugLineNum = 3670025;BA.debugLine="Wait For (ms) Msgbox_Result (Result As Int)";
 anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolaylogin", "btconectar_click"), _ms);
-this.state = 29;
+this.state = 35;
 return;
-case 29:
+case 35:
 //C
 this.state = 4;
 _result = (Integer) result[0];
@@ -560,13 +560,13 @@ parent.mostCurrent._edlogin.RequestFocus();
 
 case 11:
 //C
-this.state = 28;
+this.state = 34;
 ;
  if (true) break;
 
 case 13:
 //C
-this.state = 28;
+this.state = 34;
 RDebugUtils.currentLine=3670040;
  //BA.debugLineNum = 3670040;BA.debugLine="EdSenha.RequestFocus";
 parent.mostCurrent._edsenha.RequestFocus();
@@ -581,39 +581,36 @@ if (true) break;
 
 case 16:
 //try
-this.state = 27;
-this.catchState = 26;
+this.state = 33;
+this.catchState = 32;
 this.state = 18;
 if (true) break;
 
 case 18:
 //C
 this.state = 19;
-this.catchState = 26;
+this.catchState = 32;
 RDebugUtils.currentLine=3670045;
  //BA.debugLineNum = 3670045;BA.debugLine="Dim exec As String = \"exec sp_encontra_usuario";
 _exec = "exec sp_encontra_usuario '"+parent.mostCurrent._edlogin.getText()+"', '"+parent.mostCurrent._edsenha.getText()+"'";
 RDebugUtils.currentLine=3670047;
  //BA.debugLineNum = 3670047;BA.debugLine="wait For (funcoes.Insert_Consulta(exec)) Comple";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigolaylogin", "btconectar_click"), parent.mostCurrent._funcoes._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_exec));
-this.state = 30;
+this.state = 36;
 return;
-case 30:
+case 36:
 //C
 this.state = 19;
 _result_2 = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
 RDebugUtils.currentLine=3670049;
- //BA.debugLineNum = 3670049;BA.debugLine="Result_2.NextRow";
-_result_2.NextRow();
-RDebugUtils.currentLine=3670051;
- //BA.debugLineNum = 3670051;BA.debugLine="If Result_2.GetString(\"RESULTADO\") = 0 Then";
+ //BA.debugLineNum = 3670049;BA.debugLine="If Result_2 = Null Then";
 if (true) break;
 
 case 19:
 //if
-this.state = 24;
-if ((_result_2.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
+this.state = 30;
+if (_result_2== null) { 
 this.state = 21;
 }else {
 this.state = 23;
@@ -621,64 +618,97 @@ this.state = 23;
 
 case 21:
 //C
-this.state = 24;
-RDebugUtils.currentLine=3670053;
- //BA.debugLineNum = 3670053;BA.debugLine="MsgboxAsync(\"Usuário não encontrado.\",\"Ops!\")";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Usuário não encontrado."),BA.ObjectToCharSequence("Ops!"),processBA);
-RDebugUtils.currentLine=3670054;
- //BA.debugLineNum = 3670054;BA.debugLine="EdLogin.Text = \"\"";
-parent.mostCurrent._edlogin.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=3670055;
- //BA.debugLineNum = 3670055;BA.debugLine="EdSenha.Text = \"\"";
-parent.mostCurrent._edsenha.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=3670056;
- //BA.debugLineNum = 3670056;BA.debugLine="EdLogin.RequestFocus";
-parent.mostCurrent._edlogin.RequestFocus();
+this.state = 30;
+RDebugUtils.currentLine=3670050;
+ //BA.debugLineNum = 3670050;BA.debugLine="MsgboxAsync(\"Problemas ao verificar usuário. \"";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas ao verificar usuário. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
  if (true) break;
 
 case 23:
 //C
 this.state = 24;
-RDebugUtils.currentLine=3670059;
- //BA.debugLineNum = 3670059;BA.debugLine="Main.Id_do_Usuario = Result_2.GetInt(\"ID_USUAR";
-parent.mostCurrent._main._id_do_usuario /*int*/  = _result_2.GetInt("ID_USUARIO");
-RDebugUtils.currentLine=3670061;
- //BA.debugLineNum = 3670061;BA.debugLine="StartActivity(CodigoLayLeituras)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=3670062;
- //BA.debugLineNum = 3670062;BA.debugLine="Activity.Finish";
-parent.mostCurrent._activity.Finish();
- if (true) break;
+RDebugUtils.currentLine=3670052;
+ //BA.debugLineNum = 3670052;BA.debugLine="Result_2.NextRow";
+_result_2.NextRow();
+RDebugUtils.currentLine=3670054;
+ //BA.debugLineNum = 3670054;BA.debugLine="If Result_2.GetString(\"RESULTADO\") = 0 Then";
+if (true) break;
 
 case 24:
-//C
-this.state = 27;
-;
- if (true) break;
+//if
+this.state = 29;
+if ((_result_2.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
+this.state = 26;
+}else {
+this.state = 28;
+}if (true) break;
 
 case 26:
 //C
-this.state = 27;
-this.catchState = 0;
-RDebugUtils.currentLine=3670065;
- //BA.debugLineNum = 3670065;BA.debugLine="MsgboxAsync(\"Problemas ao verificar usuário. \"";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas ao verificar usuário. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
- if (true) break;
-if (true) break;
-
-case 27:
-//C
-this.state = 28;
-this.catchState = 0;
-;
+this.state = 29;
+RDebugUtils.currentLine=3670056;
+ //BA.debugLineNum = 3670056;BA.debugLine="MsgboxAsync(\"Usuário não encontrado.\",\"Ops!\")";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Usuário não encontrado."),BA.ObjectToCharSequence("Ops!"),processBA);
+RDebugUtils.currentLine=3670057;
+ //BA.debugLineNum = 3670057;BA.debugLine="EdLogin.Text = \"\"";
+parent.mostCurrent._edlogin.setText(BA.ObjectToCharSequence(""));
+RDebugUtils.currentLine=3670058;
+ //BA.debugLineNum = 3670058;BA.debugLine="EdSenha.Text = \"\"";
+parent.mostCurrent._edsenha.setText(BA.ObjectToCharSequence(""));
+RDebugUtils.currentLine=3670059;
+ //BA.debugLineNum = 3670059;BA.debugLine="EdLogin.RequestFocus";
+parent.mostCurrent._edlogin.RequestFocus();
  if (true) break;
 
 case 28:
 //C
+this.state = 29;
+RDebugUtils.currentLine=3670061;
+ //BA.debugLineNum = 3670061;BA.debugLine="Main.Id_do_Usuario = Result_2.GetInt(\"ID_USUA";
+parent.mostCurrent._main._id_do_usuario /*int*/  = _result_2.GetInt("ID_USUARIO");
+RDebugUtils.currentLine=3670063;
+ //BA.debugLineNum = 3670063;BA.debugLine="StartActivity(CodigoLayLeituras)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
+RDebugUtils.currentLine=3670064;
+ //BA.debugLineNum = 3670064;BA.debugLine="Activity.Finish";
+parent.mostCurrent._activity.Finish();
+ if (true) break;
+
+case 29:
+//C
+this.state = 30;
+;
+ if (true) break;
+
+case 30:
+//C
+this.state = 33;
+;
+ if (true) break;
+
+case 32:
+//C
+this.state = 33;
+this.catchState = 0;
+RDebugUtils.currentLine=3670068;
+ //BA.debugLineNum = 3670068;BA.debugLine="MsgboxAsync(\"Problemas ao verificar usuário. \"";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas ao verificar usuário. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
+ if (true) break;
+if (true) break;
+
+case 33:
+//C
+this.state = 34;
+this.catchState = 0;
+;
+ if (true) break;
+
+case 34:
+//C
 this.state = -1;
 ;
-RDebugUtils.currentLine=3670068;
- //BA.debugLineNum = 3670068;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3670071;
+ //BA.debugLineNum = 3670071;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {

@@ -77,48 +77,50 @@ Sub btSalvar_Click
 																"', '" & edSenha.Text & "' "
 			
 				Wait For (funcoes.Insert_Consulta(cmd)) Complete (Result As JdbcResultSet)
-				
-				Result.NextRow
+								
 				
 				If Result = Null Then
 					
 					Main.CadastrouAlgo = False				
-					MsgboxAsync("Problemas na conexão com banco de dados. " & LastException, "Atenção!")					
-				else if Result.GetString("RESULTADO") = 0 Then						
-					
-					Main.CadastrouAlgo = False			
-					MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!")
-					edNome.RequestFocus
+					MsgboxAsync("Problemas na conexão com banco de dados. " & LastException, "Atenção!")	
 				Else
+					Result.NextRow
 					
-					edLogin.Enabled = False
-					edNome.Enabled = False
-					edRepitaSenha.Enabled = False
-					edSenha.Enabled = False
+					If Result.GetString("RESULTADO") = 0 Then
+															
+						Main.CadastrouAlgo = False
+						MsgboxAsync(Result.GetString("MENSAGEM"), "Ops!")
+						edNome.RequestFocus
+						Result.Close
+					Else
+											
+						edLogin.Enabled = False
+						edNome.Enabled = False
+						edRepitaSenha.Enabled = False
+						edSenha.Enabled = False
 							
-					edSenha.TextColor = Colors.RGB(158, 130, 130)
-					edLogin.TextColor = Colors.RGB(158, 130, 130)
-					edNome.TextColor = Colors.RGB(158, 130, 130)
-					edRepitaSenha.TextColor = Colors.RGB(158, 130, 130)
-					
-					Main.Id_do_Usuario = Result.GetInt("ID")
-					ToastMessageShow("Sucesso!",True)
+						edSenha.TextColor = Colors.RGB(158, 130, 130)
+						edLogin.TextColor = Colors.RGB(158, 130, 130)
+						edNome.TextColor = Colors.RGB(158, 130, 130)
+						edRepitaSenha.TextColor = Colors.RGB(158, 130, 130)
+											
+						Main.Id_do_Usuario = Result.GetInt("ID")
+						ToastMessageShow("Sucesso!",True)
 						
-					lblCadSalvo.Visible = True
-					panelCadSalvo.Visible = True
-					lblCadSalvo.Text = Result.GetString("MENSAGEM")		
+						lblCadSalvo.Visible = True
+						panelCadSalvo.Visible = True
+						lblCadSalvo.Text = Result.GetString("MENSAGEM")
 					
-					Main.CadastrouAlgo = True						
-					Sleep(1200)
-							
-					StartActivity(CodigoLayLeituras)
-					Activity.Finish
-				End If
-				Result.Close
-			Catch
-				Result.Close
+						Main.CadastrouAlgo = True
+						Sleep(1200)
+						Result.Close
+					
+						StartActivity(CodigoLayLeituras)
+						Activity.Finish
+					End If
+				End If											
+			Catch				
 				MsgboxAsync("Problemas na inserção de dados. " & LastException, "Atenção!")
-
 			End Try				
 		End If		
 	End If

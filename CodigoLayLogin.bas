@@ -66,22 +66,25 @@ Sub btConectar_Click
 			Dim exec As String = "exec sp_encontra_usuario '" & EdLogin.Text & "', '" & EdSenha.Text & "'"
 					
 			wait For (funcoes.Insert_Consulta(exec)) Complete (Result_2 As JdbcResultSet)
-			
-			Result_2.NextRow
-			
-			If Result_2.GetString("RESULTADO") = 0 Then
-					
-				MsgboxAsync("Usuário não encontrado.","Ops!")
-				EdLogin.Text = ""
-				EdSenha.Text = ""
-				EdLogin.RequestFocus
+									
+			If Result_2 = Null Then
+				MsgboxAsync("Problemas ao verificar usuário. " & LastException, "Atenção!")
 			Else
+				Result_2.NextRow
 				
-				Main.Id_do_Usuario = Result_2.GetInt("ID_USUARIO")
+				If Result_2.GetString("RESULTADO") = 0 Then
+								
+					MsgboxAsync("Usuário não encontrado.","Ops!")
+					EdLogin.Text = ""
+					EdSenha.Text = ""
+					EdLogin.RequestFocus
+				Else				
+					Main.Id_do_Usuario = Result_2.GetInt("ID_USUARIO")
 				
-				StartActivity(CodigoLayLeituras)
-				Activity.Finish						
-			End If										
+					StartActivity(CodigoLayLeituras)
+					Activity.Finish
+				End If				
+			End If															
 		Catch
 			MsgboxAsync("Problemas ao verificar usuário. " & LastException, "Atenção!")
 		End Try		

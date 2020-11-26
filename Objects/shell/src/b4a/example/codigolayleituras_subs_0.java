@@ -165,19 +165,19 @@ Debug.ShouldStop(32768);
 codigolayleituras.mostCurrent.__c.runVoidMethod ("ExitApplication");
  BA.debugLineNum = 529;BA.debugLine="Return False";
 Debug.ShouldStop(65536);
-Debug.CheckDeviceExceptions();if (true) return codigolayleituras.mostCurrent.__c.getField(true,"False");
+if (true) return codigolayleituras.mostCurrent.__c.getField(true,"False");
  }else {
  BA.debugLineNum = 531;BA.debugLine="KeyCode = 0";
 Debug.ShouldStop(262144);
 _keycode = BA.numberCast(int.class, 0);Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 532;BA.debugLine="Return True";
 Debug.ShouldStop(524288);
-Debug.CheckDeviceExceptions();if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
+if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  }else {
  BA.debugLineNum = 535;BA.debugLine="Return True";
 Debug.ShouldStop(4194304);
-Debug.CheckDeviceExceptions();if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
+if (true) return codigolayleituras.mostCurrent.__c.getField(true,"True");
  };
  BA.debugLineNum = 559;BA.debugLine="End Sub";
 Debug.ShouldStop(16384);
@@ -834,7 +834,7 @@ Debug.ShouldStop(33554432);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Impossível carregar leituras")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
  BA.debugLineNum = 251;BA.debugLine="Return False";
 Debug.ShouldStop(67108864);
-Debug.CheckDeviceExceptions();if (true) {
+if (true) {
 parent.mostCurrent.__c.runVoidMethod ("ReturnFromResumableSub",this.remoteResumableSub,(parent.mostCurrent.__c.getField(true,"False")));return;};
  if (true) break;
 if (true) break;
@@ -930,7 +930,7 @@ Debug.ShouldStop(4);
 _label.runMethod(true,"setTextSize",BA.numberCast(float.class, _fonte));
  BA.debugLineNum = 517;BA.debugLine="Return label";
 Debug.ShouldStop(16);
-Debug.CheckDeviceExceptions();if (true) return _label;
+if (true) return _label;
  BA.debugLineNum = 518;BA.debugLine="End Sub";
 Debug.ShouldStop(32);
 return RemoteObject.createImmutable(null);

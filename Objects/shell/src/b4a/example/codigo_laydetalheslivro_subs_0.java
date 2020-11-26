@@ -409,19 +409,19 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigo_laydetalheslivro) ","codigo_laydetalheslivro",9,codigo_laydetalheslivro.mostCurrent.activityBA,codigo_laydetalheslivro.mostCurrent,311);
+		Debug.PushSubsStack("Activity_Pause (codigo_laydetalheslivro) ","codigo_laydetalheslivro",9,codigo_laydetalheslivro.mostCurrent.activityBA,codigo_laydetalheslivro.mostCurrent,308);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigo_laydetalheslivro.remoteMe.runUserSub(false, "codigo_laydetalheslivro","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 311;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(4194304);
- BA.debugLineNum = 312;BA.debugLine="Main.CadastrouAlgo = seguro_cadastrou_algo";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 308;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(524288);
+ BA.debugLineNum = 309;BA.debugLine="Main.CadastrouAlgo = seguro_cadastrou_algo";
+Debug.ShouldStop(1048576);
 codigo_laydetalheslivro.mostCurrent._main._cadastroualgo /*RemoteObject*/  = codigo_laydetalheslivro._seguro_cadastrou_algo;
- BA.debugLineNum = 313;BA.debugLine="seguro_cadastrou_algo = False";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 310;BA.debugLine="seguro_cadastrou_algo = False";
+Debug.ShouldStop(2097152);
 codigo_laydetalheslivro._seguro_cadastrou_algo = codigo_laydetalheslivro.mostCurrent.__c.getField(true,"False");
- BA.debugLineNum = 314;BA.debugLine="End Sub";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 311;BA.debugLine="End Sub";
+Debug.ShouldStop(4194304);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -452,8 +452,8 @@ b4a.example.codigo_laydetalheslivro parent;
 RemoteObject _cmd = RemoteObject.createImmutable("");
 RemoteObject _result = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 int _i = 0;
-int step21;
-int limit21;
+int step17;
+int limit17;
 
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
@@ -540,8 +540,8 @@ Debug.ShouldStop(1024);
 if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.NumberToString(2))) { 
 this.state = 11;
 }else 
-{ BA.debugLineNum = 279;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 1 Then";
-Debug.ShouldStop(4194304);
+{ BA.debugLineNum = 276;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 1 Then";
+Debug.ShouldStop(524288);
 if (RemoteObject.solveBoolean("=",_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.NumberToString(1))) { 
 this.state = 17;
 }}}
@@ -575,41 +575,29 @@ this.state = 15;
  BA.debugLineNum = 271;BA.debugLine="painel_botoes.RemoveViewAt(0)";
 Debug.ShouldStop(16384);
 parent.mostCurrent._painel_botoes.runVoidMethod ("RemoveViewAt",(Object)(BA.numberCast(int.class, 0)));
- BA.debugLineNum = 272;BA.debugLine="painel_botoes.RemoveViewAt(1)";
-Debug.ShouldStop(32768);
-parent.mostCurrent._painel_botoes.runVoidMethod ("RemoveViewAt",(Object)(BA.numberCast(int.class, 1)));
- BA.debugLineNum = 273;BA.debugLine="painel_botoes.RemoveViewAt(2)";
-Debug.ShouldStop(65536);
-parent.mostCurrent._painel_botoes.runVoidMethod ("RemoveViewAt",(Object)(BA.numberCast(int.class, 2)));
- BA.debugLineNum = 274;BA.debugLine="painel_botoes.RemoveViewAt(3)";
-Debug.ShouldStop(131072);
-parent.mostCurrent._painel_botoes.runVoidMethod ("RemoveViewAt",(Object)(BA.numberCast(int.class, 3)));
- BA.debugLineNum = 275;BA.debugLine="painel_botoes.RemoveViewAt(4)";
-Debug.ShouldStop(262144);
-parent.mostCurrent._painel_botoes.runVoidMethod ("RemoveViewAt",(Object)(BA.numberCast(int.class, 4)));
  if (true) break;
 
 case 15:
 //C
 this.state = 28;
 ;
- BA.debugLineNum = 278;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"),";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 275;BA.debugLine="ToastMessageShow(Result.GetString(\"MENSAGEM\"),";
+Debug.ShouldStop(262144);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("MENSAGEM"))))),(Object)(parent.mostCurrent.__c.getField(true,"True")));
  if (true) break;
 
 case 17:
 //C
 this.state = 18;
- BA.debugLineNum = 281;BA.debugLine="For i = 0 To Result.GetString(\"QUANTIDADE\") -";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 278;BA.debugLine="For i = 0 To Result.GetString(\"QUANTIDADE\") -";
+Debug.ShouldStop(2097152);
 if (true) break;
 
 case 18:
 //for
 this.state = 27;
-step21 = 1;
-limit21 = (int) (0 + RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("QUANTIDADE")))),RemoteObject.createImmutable(1)}, "-",1, 0).<Double>get().doubleValue());
+step17 = 1;
+limit17 = (int) (0 + RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("QUANTIDADE")))),RemoteObject.createImmutable(1)}, "-",1, 0).<Double>get().doubleValue());
 _i = 0 ;
 Debug.locals.put("i", _i);
 this.state = 34;
@@ -618,21 +606,21 @@ if (true) break;
 case 34:
 //C
 this.state = 27;
-if ((step21 > 0 && _i <= limit21) || (step21 < 0 && _i >= limit21)) this.state = 20;
+if ((step17 > 0 && _i <= limit17) || (step17 < 0 && _i >= limit17)) this.state = 20;
 if (true) break;
 
 case 35:
 //C
 this.state = 34;
-_i = ((int)(0 + _i + step21)) ;
+_i = ((int)(0 + _i + step17)) ;
 Debug.locals.put("i", _i);
 if (true) break;
 
 case 20:
 //C
 this.state = 21;
- BA.debugLineNum = 283;BA.debugLine="If Result.GetInt(\"fk_id_livro\") = id_livro T";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 280;BA.debugLine="If Result.GetInt(\"fk_id_livro\") = id_livro T";
+Debug.ShouldStop(8388608);
 if (true) break;
 
 case 21:
@@ -647,49 +635,49 @@ this.state = 25;
 case 23:
 //C
 this.state = 26;
- BA.debugLineNum = 285;BA.debugLine="lbl_dt_inicio.Text = Result.GetString(\"data_";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 282;BA.debugLine="lbl_dt_inicio.Text = Result.GetString(\"data_";
+Debug.ShouldStop(33554432);
 parent.mostCurrent._lbl_dt_inicio.runMethod(true,"setText",BA.ObjectToCharSequence(_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("data_inicial")))));
- BA.debugLineNum = 286;BA.debugLine="lbl_dt_termino.Text = Result.GetString(\"data";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 283;BA.debugLine="lbl_dt_termino.Text = Result.GetString(\"data";
+Debug.ShouldStop(67108864);
 parent.mostCurrent._lbl_dt_termino.runMethod(true,"setText",BA.ObjectToCharSequence(_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("data_prevista_final")))));
- BA.debugLineNum = 287;BA.debugLine="lbl_pg_atual.Text = Result.GetInt(\"paginas_o";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 284;BA.debugLine="lbl_pg_atual.Text = Result.GetInt(\"paginas_o";
+Debug.ShouldStop(134217728);
 parent.mostCurrent._lbl_pg_atual.runMethod(true,"setText",BA.ObjectToCharSequence(_result.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("paginas_ou_cap_lidos")))));
- BA.debugLineNum = 288;BA.debugLine="lbl_pg_total.Text = Result.GetString(\"quanti";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 285;BA.debugLine="lbl_pg_total.Text = Result.GetString(\"quanti";
+Debug.ShouldStop(268435456);
 parent.mostCurrent._lbl_pg_total.runMethod(true,"setText",BA.ObjectToCharSequence(_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("quantidade_paginas")))));
- BA.debugLineNum = 289;BA.debugLine="lbl_pg_meta.Text = Result.GetString(\"meta\")";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 286;BA.debugLine="lbl_pg_meta.Text = Result.GetString(\"meta\")";
+Debug.ShouldStop(536870912);
 parent.mostCurrent._lbl_pg_meta.runMethod(true,"setText",BA.ObjectToCharSequence(_result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("meta")))));
- BA.debugLineNum = 291;BA.debugLine="pg_meta = Result.GetString(\"meta\")";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 288;BA.debugLine="pg_meta = Result.GetString(\"meta\")";
+Debug.ShouldStop(-2147483648);
 parent._pg_meta = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("meta")));
- BA.debugLineNum = 292;BA.debugLine="nome_usuario = Result.GetString(\"usuarioNome";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 289;BA.debugLine="nome_usuario = Result.GetString(\"usuarioNome";
+Debug.ShouldStop(1);
 parent._nome_usuario = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("usuarioNome")));
- BA.debugLineNum = 293;BA.debugLine="pg_atual = Result.GetString(\"paginas_ou_cap_";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 290;BA.debugLine="pg_atual = Result.GetString(\"paginas_ou_cap_";
+Debug.ShouldStop(2);
 parent._pg_atual = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("paginas_ou_cap_lidos")));
- BA.debugLineNum = 294;BA.debugLine="tipo_leitura = Result.GetString(\"tipo_de_lei";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 291;BA.debugLine="tipo_leitura = Result.GetString(\"tipo_de_lei";
+Debug.ShouldStop(4);
 parent._tipo_leitura = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("tipo_de_leitura")));
- BA.debugLineNum = 295;BA.debugLine="pg_total = Result.GetString(\"quantidade_pagi";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 292;BA.debugLine="pg_total = Result.GetString(\"quantidade_pagi";
+Debug.ShouldStop(8);
 parent._pg_total = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("quantidade_paginas")));
- BA.debugLineNum = 296;BA.debugLine="id_livro = Result.GetString(\"fk_id_livro\")";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 293;BA.debugLine="id_livro = Result.GetString(\"fk_id_livro\")";
+Debug.ShouldStop(16);
 parent._id_livro = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("fk_id_livro")));
- BA.debugLineNum = 297;BA.debugLine="nome_livro = Result.GetString(\"nome\")";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 294;BA.debugLine="nome_livro = Result.GetString(\"nome\")";
+Debug.ShouldStop(32);
 parent._nome_livro = _result.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("nome")));
  if (true) break;
 
 case 25:
 //C
 this.state = 26;
- BA.debugLineNum = 299;BA.debugLine="Result.NextRow";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 296;BA.debugLine="Result.NextRow";
+Debug.ShouldStop(128);
 _result.runVoidMethod ("NextRow");
  if (true) break;
 
@@ -718,8 +706,8 @@ case 30:
 //C
 this.state = 31;
 this.catchState = 0;
- BA.debugLineNum = 305;BA.debugLine="ToastMessageShow(\"Algo deu errado\",True)";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 302;BA.debugLine="ToastMessageShow(\"Algo deu errado\",True)";
+Debug.ShouldStop(8192);
 parent.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence("Algo deu errado")),(Object)(parent.mostCurrent.__c.getField(true,"True")));
  if (true) break;
 if (true) break;
@@ -735,8 +723,8 @@ case 32:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 309;BA.debugLine="End Sub";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 306;BA.debugLine="End Sub";
+Debug.ShouldStop(131072);
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -760,15 +748,15 @@ public static void  _complete(RemoteObject _result) throws Exception{
 }
 public static RemoteObject  _bt_voltar_click() throws Exception{
 try {
-		Debug.PushSubsStack("bt_voltar_Click (codigo_laydetalheslivro) ","codigo_laydetalheslivro",9,codigo_laydetalheslivro.mostCurrent.activityBA,codigo_laydetalheslivro.mostCurrent,317);
+		Debug.PushSubsStack("bt_voltar_Click (codigo_laydetalheslivro) ","codigo_laydetalheslivro",9,codigo_laydetalheslivro.mostCurrent.activityBA,codigo_laydetalheslivro.mostCurrent,314);
 if (RapidSub.canDelegate("bt_voltar_click")) { return b4a.example.codigo_laydetalheslivro.remoteMe.runUserSub(false, "codigo_laydetalheslivro","bt_voltar_click");}
- BA.debugLineNum = 317;BA.debugLine="Sub bt_voltar_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 318;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 314;BA.debugLine="Sub bt_voltar_Click";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 315;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(67108864);
 codigo_laydetalheslivro.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 319;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 316;BA.debugLine="End Sub";
+Debug.ShouldStop(134217728);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -808,7 +796,7 @@ Debug.ShouldStop(262144);
 _label.runMethod(true,"setTextColor",_cor_texto);
  BA.debugLineNum = 245;BA.debugLine="Return label";
 Debug.ShouldStop(1048576);
-Debug.CheckDeviceExceptions();if (true) return _label;
+if (true) return _label;
  BA.debugLineNum = 246;BA.debugLine="End Sub";
 Debug.ShouldStop(2097152);
 return RemoteObject.createImmutable(null);
@@ -821,57 +809,57 @@ finally {
 		}}
 public static RemoteObject  _event_botoes_click() throws Exception{
 try {
-		Debug.PushSubsStack("Event_botoes_Click (codigo_laydetalheslivro) ","codigo_laydetalheslivro",9,codigo_laydetalheslivro.mostCurrent.activityBA,codigo_laydetalheslivro.mostCurrent,321);
+		Debug.PushSubsStack("Event_botoes_Click (codigo_laydetalheslivro) ","codigo_laydetalheslivro",9,codigo_laydetalheslivro.mostCurrent.activityBA,codigo_laydetalheslivro.mostCurrent,318);
 if (RapidSub.canDelegate("event_botoes_click")) { return b4a.example.codigo_laydetalheslivro.remoteMe.runUserSub(false, "codigo_laydetalheslivro","event_botoes_click");}
 RemoteObject _botao = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 RemoteObject _numero = RemoteObject.createImmutable(0);
- BA.debugLineNum = 321;BA.debugLine="Sub Event_botoes_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 322;BA.debugLine="Dim botao As Button";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 318;BA.debugLine="Sub Event_botoes_Click";
+Debug.ShouldStop(536870912);
+ BA.debugLineNum = 319;BA.debugLine="Dim botao As Button";
+Debug.ShouldStop(1073741824);
 _botao = RemoteObject.createNew ("anywheresoftware.b4a.objects.ButtonWrapper");Debug.locals.put("botao", _botao);
- BA.debugLineNum = 323;BA.debugLine="Dim numero As Int";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 320;BA.debugLine="Dim numero As Int";
+Debug.ShouldStop(-2147483648);
 _numero = RemoteObject.createImmutable(0);Debug.locals.put("numero", _numero);
- BA.debugLineNum = 324;BA.debugLine="botao.Initialize(\"\")";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 321;BA.debugLine="botao.Initialize(\"\")";
+Debug.ShouldStop(1);
 _botao.runVoidMethod ("Initialize",codigo_laydetalheslivro.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 325;BA.debugLine="botao = Sender";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 322;BA.debugLine="botao = Sender";
+Debug.ShouldStop(2);
 _botao = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ButtonWrapper"), codigo_laydetalheslivro.mostCurrent.__c.runMethod(false,"Sender",codigo_laydetalheslivro.mostCurrent.activityBA));
- BA.debugLineNum = 327;BA.debugLine="numero = botao.Tag";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 324;BA.debugLine="numero = botao.Tag";
+Debug.ShouldStop(8);
 _numero = BA.numberCast(int.class, _botao.runMethod(false,"getTag"));Debug.locals.put("numero", _numero);
- BA.debugLineNum = 328;BA.debugLine="If numero = 0 Then";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 325;BA.debugLine="If numero = 0 Then";
+Debug.ShouldStop(16);
 if (RemoteObject.solveBoolean("=",_numero,BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 330;BA.debugLine="CodigoLancamentoLeitura.meta = pg_meta";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 327;BA.debugLine="CodigoLancamentoLeitura.meta = pg_meta";
+Debug.ShouldStop(64);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._meta /*RemoteObject*/  = BA.numberCast(int.class, codigo_laydetalheslivro._pg_meta);
- BA.debugLineNum = 331;BA.debugLine="CodigoLancamentoLeitura.nomeUsuario = nome_usuar";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 328;BA.debugLine="CodigoLancamentoLeitura.nomeUsuario = nome_usuar";
+Debug.ShouldStop(128);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._nomeusuario /*RemoteObject*/  = codigo_laydetalheslivro._nome_usuario;
- BA.debugLineNum = 332;BA.debugLine="CodigoLancamentoLeitura.paginaAtual = pg_atual";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 329;BA.debugLine="CodigoLancamentoLeitura.paginaAtual = pg_atual";
+Debug.ShouldStop(256);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._paginaatual /*RemoteObject*/  = BA.numberCast(int.class, codigo_laydetalheslivro._pg_atual);
- BA.debugLineNum = 333;BA.debugLine="CodigoLancamentoLeitura.tipoLeitura = tipo_leitu";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 330;BA.debugLine="CodigoLancamentoLeitura.tipoLeitura = tipo_leitu";
+Debug.ShouldStop(512);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._tipoleitura /*RemoteObject*/  = codigo_laydetalheslivro._tipo_leitura;
- BA.debugLineNum = 334;BA.debugLine="CodigoLancamentoLeitura.totalPaginas = pg_total";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 331;BA.debugLine="CodigoLancamentoLeitura.totalPaginas = pg_total";
+Debug.ShouldStop(1024);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._totalpaginas /*RemoteObject*/  = BA.numberCast(int.class, codigo_laydetalheslivro._pg_total);
- BA.debugLineNum = 335;BA.debugLine="CodigoLancamentoLeitura.idLivro = id_livro";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 332;BA.debugLine="CodigoLancamentoLeitura.idLivro = id_livro";
+Debug.ShouldStop(2048);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._idlivro /*RemoteObject*/  = BA.numberCast(int.class, codigo_laydetalheslivro._id_livro);
- BA.debugLineNum = 336;BA.debugLine="CodigoLancamentoLeitura.tituloLivro = nome_livro";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 333;BA.debugLine="CodigoLancamentoLeitura.tituloLivro = nome_livro";
+Debug.ShouldStop(4096);
 codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura._titulolivro /*RemoteObject*/  = codigo_laydetalheslivro._nome_livro;
- BA.debugLineNum = 338;BA.debugLine="StartActivity(CodigoLancamentoLeitura)";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 335;BA.debugLine="StartActivity(CodigoLancamentoLeitura)";
+Debug.ShouldStop(16384);
 codigo_laydetalheslivro.mostCurrent.__c.runVoidMethod ("StartActivity",codigo_laydetalheslivro.processBA,(Object)((codigo_laydetalheslivro.mostCurrent._codigolancamentoleitura.getObject())));
  };
- BA.debugLineNum = 340;BA.debugLine="End Sub";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 337;BA.debugLine="End Sub";
+Debug.ShouldStop(65536);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -966,7 +954,7 @@ Debug.ShouldStop(64);
 _g_p.runVoidMethod ("setCornerRadius",BA.numberCast(float.class, _corner_radius));
  BA.debugLineNum = 232;BA.debugLine="Return g_p";
 Debug.ShouldStop(128);
-Debug.CheckDeviceExceptions();if (true) return _g_p;
+if (true) return _g_p;
  BA.debugLineNum = 233;BA.debugLine="End Sub";
 Debug.ShouldStop(256);
 return RemoteObject.createImmutable(null);

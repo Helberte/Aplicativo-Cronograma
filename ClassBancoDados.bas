@@ -6,9 +6,9 @@ Version=9.801
 @EndOfDesignText@
 Sub Class_Globals
 	Private driver As String = "net.sourceforge.jtds.jdbc.Driver"
-	Private jdbcUrl As String = "jdbc:jtds:sqlserver://192.168.1.108:1433;databaseName=cronograma;logintimeout=10"
+	Private jdbcUrl As String = "jdbc:jtds:sqlserver://192.168.2.2:1433;databaseName=cronograma;logintimeout=10"
 													' 192.168.1.105
-													' 192.168.2.5
+													' 192.168.2.2
 	Private usuario As String = "sa"
 	Private senha As String = "254685ro"
 	Private conexao As JdbcSQL

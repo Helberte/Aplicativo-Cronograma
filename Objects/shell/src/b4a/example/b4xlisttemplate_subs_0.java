@@ -43,7 +43,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 77;BA.debugLine="If Value = \"\" Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_value,RemoteObject.createImmutable(("")))) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 78;BA.debugLine="If AllowMultiSelection Then";
 Debug.JustUpdateDeviceLine();
 if (__ref.getField(true,"_allowmultiselection" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
@@ -103,7 +103,7 @@ Debug.locals.put("Dialog", _dialog);
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 38;BA.debugLine="Return mBase";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
+if (true) return __ref.getField(false,"_mbase" /*RemoteObject*/ );
  BA.debugLineNum = 39;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);

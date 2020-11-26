@@ -577,7 +577,7 @@ Debug.ShouldStop(256);
 act_telacadastro.mostCurrent._scrol.runMethod(false,"getPanel").runVoidMethod ("AddView",(Object)((_etiqueta.getObject())),(Object)(_esquerda),(Object)(_topo),(Object)(_tamanho),(Object)(act_telacadastro.mostCurrent.__c.runMethod(true,"PerYToCurrent",(Object)(BA.numberCast(float.class, 4)),act_telacadastro.mostCurrent.activityBA)));
  BA.debugLineNum = 298;BA.debugLine="Return etiqueta";
 Debug.ShouldStop(512);
-Debug.CheckDeviceExceptions();if (true) return _etiqueta;
+if (true) return _etiqueta;
  BA.debugLineNum = 299;BA.debugLine="End Sub";
 Debug.ShouldStop(1024);
 return RemoteObject.createImmutable(null);
@@ -1778,22 +1778,22 @@ Debug.ShouldStop(512);
  BA.debugLineNum = 652;BA.debugLine="If edB4XFloatNomeLivro.Text.Length > 100 Then Ret";
 Debug.ShouldStop(2048);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatnomelivro.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 100))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 653;BA.debugLine="If edB4XFloatAutorLivro.Text.Length > 100 Then Re";
 Debug.ShouldStop(4096);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatautorlivro.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 100))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 654;BA.debugLine="If edB4XFloatPagOuCap.Text.Length > 4 Then Return";
 Debug.ShouldStop(8192);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatpagoucap.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 4))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 655;BA.debugLine="If edB4XFloatMetaPagCap.Text.Length > 4 Then Retu";
 Debug.ShouldStop(16384);
 if (RemoteObject.solveBoolean(">",act_telacadastro.mostCurrent._edb4xfloatmetapagcap.runClassMethod (b4a.example.b4xfloattextfield.class, "_gettext" /*RemoteObject*/ ).runMethod(true,"length"),BA.numberCast(double.class, 4))) { 
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"False");};
  BA.debugLineNum = 656;BA.debugLine="Return True";
 Debug.ShouldStop(32768);
-Debug.CheckDeviceExceptions();if (true) return act_telacadastro.mostCurrent.__c.getField(true,"True");
+if (true) return act_telacadastro.mostCurrent.__c.getField(true,"True");
  BA.debugLineNum = 657;BA.debugLine="End Sub";
 Debug.ShouldStop(65536);
 return RemoteObject.createImmutable(false);

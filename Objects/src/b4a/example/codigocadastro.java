@@ -470,7 +470,7 @@ if (true) break;
 
 case 1:
 //if
-this.state = 32;
+this.state = 36;
 if ((parent.mostCurrent._ednome.getText().trim()).equals("")) { 
 this.state = 3;
 }else 
@@ -490,7 +490,7 @@ if (true) break;
 
 case 3:
 //C
-this.state = 32;
+this.state = 36;
 RDebugUtils.currentLine=2359299;
  //BA.debugLineNum = 2359299;BA.debugLine="MsgboxAsync(\"Falta o nome\",\"Está apressado?\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Falta o nome"),BA.ObjectToCharSequence("Está apressado?"),processBA);
@@ -501,7 +501,7 @@ parent.mostCurrent._ednome.RequestFocus();
 
 case 5:
 //C
-this.state = 32;
+this.state = 36;
 RDebugUtils.currentLine=2359303;
  //BA.debugLineNum = 2359303;BA.debugLine="MsgboxAsync(\"Falta o login\",\"Está apressado?\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Falta o login"),BA.ObjectToCharSequence("Está apressado?"),processBA);
@@ -512,7 +512,7 @@ parent.mostCurrent._edlogin.RequestFocus();
 
 case 7:
 //C
-this.state = 32;
+this.state = 36;
 RDebugUtils.currentLine=2359307;
  //BA.debugLineNum = 2359307;BA.debugLine="MsgboxAsync(\"Falta a senha\",\"Está apressado?\")";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Falta a senha"),BA.ObjectToCharSequence("Está apressado?"),processBA);
@@ -530,7 +530,7 @@ if (true) break;
 
 case 10:
 //if
-this.state = 31;
+this.state = 35;
 if (parent.mostCurrent._edrepitasenha.getText().trim().length()<8) { 
 this.state = 12;
 }else 
@@ -545,7 +545,7 @@ if (true) break;
 
 case 12:
 //C
-this.state = 31;
+this.state = 35;
 RDebugUtils.currentLine=2359313;
  //BA.debugLineNum = 2359313;BA.debugLine="MsgboxAsync(\"Sua senha precisa ter no mínimo 8";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Sua senha precisa ter no mínimo 8 dígitos."),BA.ObjectToCharSequence("Senha inválida!"),processBA);
@@ -556,7 +556,7 @@ parent.mostCurrent._edrepitasenha.RequestFocus();
 
 case 14:
 //C
-this.state = 31;
+this.state = 35;
 RDebugUtils.currentLine=2359317;
  //BA.debugLineNum = 2359317;BA.debugLine="MsgboxAsync(\"As senhas não coinsidem.\",\"Atenção";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("As senhas não coinsidem."),BA.ObjectToCharSequence("Atenção!"),processBA);
@@ -577,178 +577,194 @@ if (true) break;
 
 case 17:
 //try
-this.state = 30;
-this.catchState = 29;
+this.state = 34;
+this.catchState = 33;
 this.state = 19;
 if (true) break;
 
 case 19:
 //C
 this.state = 20;
-this.catchState = 29;
+this.catchState = 33;
 RDebugUtils.currentLine=2359324;
  //BA.debugLineNum = 2359324;BA.debugLine="Dim cmd As String = \"exec sp_cad_usuario_crono";
 _cmd = "exec sp_cad_usuario_cronograma '"+parent.mostCurrent._ednome.getText()+"', '"+parent.mostCurrent._edlogin.getText()+"', '"+parent.mostCurrent._edsenha.getText()+"' ";
 RDebugUtils.currentLine=2359328;
  //BA.debugLineNum = 2359328;BA.debugLine="Wait For (funcoes.Insert_Consulta(cmd)) Comple";
 anywheresoftware.b4a.keywords.Common.WaitFor("complete", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastro", "btsalvar_click"), parent.mostCurrent._funcoes._insert_consulta /*anywheresoftware.b4a.keywords.Common.ResumableSubWrapper*/ (null,_cmd));
-this.state = 33;
+this.state = 37;
 return;
-case 33:
+case 37:
 //C
 this.state = 20;
 _result = (anywheresoftware.b4j.objects.SQL.ResultSetWrapper) result[0];
 ;
-RDebugUtils.currentLine=2359330;
- //BA.debugLineNum = 2359330;BA.debugLine="Result.NextRow";
-_result.NextRow();
-RDebugUtils.currentLine=2359332;
- //BA.debugLineNum = 2359332;BA.debugLine="If Result = Null Then";
+RDebugUtils.currentLine=2359331;
+ //BA.debugLineNum = 2359331;BA.debugLine="If Result = Null Then";
 if (true) break;
 
 case 20:
 //if
-this.state = 27;
+this.state = 31;
 if (_result== null) { 
 this.state = 22;
-}else 
-{RDebugUtils.currentLine=2359336;
- //BA.debugLineNum = 2359336;BA.debugLine="else if Result.GetString(\"RESULTADO\") = 0 Then";
-if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
-this.state = 24;
 }else {
-this.state = 26;
-}}
-if (true) break;
+this.state = 24;
+}if (true) break;
 
 case 22:
 //C
-this.state = 27;
-RDebugUtils.currentLine=2359334;
- //BA.debugLineNum = 2359334;BA.debugLine="Main.CadastrouAlgo = False";
+this.state = 31;
+RDebugUtils.currentLine=2359333;
+ //BA.debugLineNum = 2359333;BA.debugLine="Main.CadastrouAlgo = False";
 parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=2359335;
- //BA.debugLineNum = 2359335;BA.debugLine="MsgboxAsync(\"Problemas na conexão com banco d";
+RDebugUtils.currentLine=2359334;
+ //BA.debugLineNum = 2359334;BA.debugLine="MsgboxAsync(\"Problemas na conexão com banco d";
 anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas na conexão com banco de dados. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
  if (true) break;
 
 case 24:
 //C
-this.state = 27;
+this.state = 25;
+RDebugUtils.currentLine=2359336;
+ //BA.debugLineNum = 2359336;BA.debugLine="Result.NextRow";
+_result.NextRow();
 RDebugUtils.currentLine=2359338;
- //BA.debugLineNum = 2359338;BA.debugLine="Main.CadastrouAlgo = False";
-parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
-RDebugUtils.currentLine=2359339;
- //BA.debugLineNum = 2359339;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"Op";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!"),processBA);
-RDebugUtils.currentLine=2359340;
- //BA.debugLineNum = 2359340;BA.debugLine="edNome.RequestFocus";
-parent.mostCurrent._ednome.RequestFocus();
- if (true) break;
+ //BA.debugLineNum = 2359338;BA.debugLine="If Result.GetString(\"RESULTADO\") = 0 Then";
+if (true) break;
 
-case 26:
-//C
+case 25:
+//if
+this.state = 30;
+if ((_result.GetString("RESULTADO")).equals(BA.NumberToString(0))) { 
 this.state = 27;
-RDebugUtils.currentLine=2359343;
- //BA.debugLineNum = 2359343;BA.debugLine="edLogin.Enabled = False";
-parent.mostCurrent._edlogin.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2359344;
- //BA.debugLineNum = 2359344;BA.debugLine="edNome.Enabled = False";
-parent.mostCurrent._ednome.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2359345;
- //BA.debugLineNum = 2359345;BA.debugLine="edRepitaSenha.Enabled = False";
-parent.mostCurrent._edrepitasenha.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2359346;
- //BA.debugLineNum = 2359346;BA.debugLine="edSenha.Enabled = False";
-parent.mostCurrent._edsenha.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2359348;
- //BA.debugLineNum = 2359348;BA.debugLine="edSenha.TextColor = Colors.RGB(158, 130, 130)";
-parent.mostCurrent._edsenha.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
-RDebugUtils.currentLine=2359349;
- //BA.debugLineNum = 2359349;BA.debugLine="edLogin.TextColor = Colors.RGB(158, 130, 130)";
-parent.mostCurrent._edlogin.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
-RDebugUtils.currentLine=2359350;
- //BA.debugLineNum = 2359350;BA.debugLine="edNome.TextColor = Colors.RGB(158, 130, 130)";
-parent.mostCurrent._ednome.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
-RDebugUtils.currentLine=2359351;
- //BA.debugLineNum = 2359351;BA.debugLine="edRepitaSenha.TextColor = Colors.RGB(158, 130";
-parent.mostCurrent._edrepitasenha.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
-RDebugUtils.currentLine=2359353;
- //BA.debugLineNum = 2359353;BA.debugLine="Main.Id_do_Usuario = Result.GetInt(\"ID\")";
-parent.mostCurrent._main._id_do_usuario /*int*/  = _result.GetInt("ID");
-RDebugUtils.currentLine=2359354;
- //BA.debugLineNum = 2359354;BA.debugLine="ToastMessageShow(\"Sucesso!\",True)";
-anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Sucesso!"),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2359356;
- //BA.debugLineNum = 2359356;BA.debugLine="lblCadSalvo.Visible = True";
-parent.mostCurrent._lblcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2359357;
- //BA.debugLineNum = 2359357;BA.debugLine="panelCadSalvo.Visible = True";
-parent.mostCurrent._panelcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=2359358;
- //BA.debugLineNum = 2359358;BA.debugLine="lblCadSalvo.Text = Result.GetString(\"MENSAGEM";
-parent.mostCurrent._lblcadsalvo.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
-RDebugUtils.currentLine=2359360;
- //BA.debugLineNum = 2359360;BA.debugLine="Main.CadastrouAlgo = True";
-parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=2359361;
- //BA.debugLineNum = 2359361;BA.debugLine="Sleep(1200)";
-anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastro", "btsalvar_click"),(int) (1200));
-this.state = 34;
-return;
-case 34:
-//C
-this.state = 27;
-;
-RDebugUtils.currentLine=2359363;
- //BA.debugLineNum = 2359363;BA.debugLine="StartActivity(CodigoLayLeituras)";
-anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
-RDebugUtils.currentLine=2359364;
- //BA.debugLineNum = 2359364;BA.debugLine="Activity.Finish";
-parent.mostCurrent._activity.Finish();
- if (true) break;
+}else {
+this.state = 29;
+}if (true) break;
 
 case 27:
 //C
 this.state = 30;
-;
-RDebugUtils.currentLine=2359366;
- //BA.debugLineNum = 2359366;BA.debugLine="Result.Close";
+RDebugUtils.currentLine=2359340;
+ //BA.debugLineNum = 2359340;BA.debugLine="Main.CadastrouAlgo = False";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.False;
+RDebugUtils.currentLine=2359341;
+ //BA.debugLineNum = 2359341;BA.debugLine="MsgboxAsync(Result.GetString(\"MENSAGEM\"), \"O";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")),BA.ObjectToCharSequence("Ops!"),processBA);
+RDebugUtils.currentLine=2359342;
+ //BA.debugLineNum = 2359342;BA.debugLine="edNome.RequestFocus";
+parent.mostCurrent._ednome.RequestFocus();
+RDebugUtils.currentLine=2359343;
+ //BA.debugLineNum = 2359343;BA.debugLine="Result.Close";
 _result.Close();
  if (true) break;
 
 case 29:
 //C
 this.state = 30;
-this.catchState = 0;
-RDebugUtils.currentLine=2359368;
- //BA.debugLineNum = 2359368;BA.debugLine="Result.Close";
+RDebugUtils.currentLine=2359347;
+ //BA.debugLineNum = 2359347;BA.debugLine="edLogin.Enabled = False";
+parent.mostCurrent._edlogin.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=2359348;
+ //BA.debugLineNum = 2359348;BA.debugLine="edNome.Enabled = False";
+parent.mostCurrent._ednome.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=2359349;
+ //BA.debugLineNum = 2359349;BA.debugLine="edRepitaSenha.Enabled = False";
+parent.mostCurrent._edrepitasenha.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=2359350;
+ //BA.debugLineNum = 2359350;BA.debugLine="edSenha.Enabled = False";
+parent.mostCurrent._edsenha.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+RDebugUtils.currentLine=2359352;
+ //BA.debugLineNum = 2359352;BA.debugLine="edSenha.TextColor = Colors.RGB(158, 130, 130";
+parent.mostCurrent._edsenha.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
+RDebugUtils.currentLine=2359353;
+ //BA.debugLineNum = 2359353;BA.debugLine="edLogin.TextColor = Colors.RGB(158, 130, 130";
+parent.mostCurrent._edlogin.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
+RDebugUtils.currentLine=2359354;
+ //BA.debugLineNum = 2359354;BA.debugLine="edNome.TextColor = Colors.RGB(158, 130, 130)";
+parent.mostCurrent._ednome.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
+RDebugUtils.currentLine=2359355;
+ //BA.debugLineNum = 2359355;BA.debugLine="edRepitaSenha.TextColor = Colors.RGB(158, 13";
+parent.mostCurrent._edrepitasenha.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (158),(int) (130),(int) (130)));
+RDebugUtils.currentLine=2359357;
+ //BA.debugLineNum = 2359357;BA.debugLine="Main.Id_do_Usuario = Result.GetInt(\"ID\")";
+parent.mostCurrent._main._id_do_usuario /*int*/  = _result.GetInt("ID");
+RDebugUtils.currentLine=2359358;
+ //BA.debugLineNum = 2359358;BA.debugLine="ToastMessageShow(\"Sucesso!\",True)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Sucesso!"),anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=2359360;
+ //BA.debugLineNum = 2359360;BA.debugLine="lblCadSalvo.Visible = True";
+parent.mostCurrent._lblcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=2359361;
+ //BA.debugLineNum = 2359361;BA.debugLine="panelCadSalvo.Visible = True";
+parent.mostCurrent._panelcadsalvo.setVisible(anywheresoftware.b4a.keywords.Common.True);
+RDebugUtils.currentLine=2359362;
+ //BA.debugLineNum = 2359362;BA.debugLine="lblCadSalvo.Text = Result.GetString(\"MENSAGE";
+parent.mostCurrent._lblcadsalvo.setText(BA.ObjectToCharSequence(_result.GetString("MENSAGEM")));
+RDebugUtils.currentLine=2359364;
+ //BA.debugLineNum = 2359364;BA.debugLine="Main.CadastrouAlgo = True";
+parent.mostCurrent._main._cadastroualgo /*boolean*/  = anywheresoftware.b4a.keywords.Common.True;
+RDebugUtils.currentLine=2359365;
+ //BA.debugLineNum = 2359365;BA.debugLine="Sleep(1200)";
+anywheresoftware.b4a.keywords.Common.Sleep(mostCurrent.activityBA,new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "codigocadastro", "btsalvar_click"),(int) (1200));
+this.state = 38;
+return;
+case 38:
+//C
+this.state = 30;
+;
+RDebugUtils.currentLine=2359366;
+ //BA.debugLineNum = 2359366;BA.debugLine="Result.Close";
 _result.Close();
+RDebugUtils.currentLine=2359368;
+ //BA.debugLineNum = 2359368;BA.debugLine="StartActivity(CodigoLayLeituras)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(parent.mostCurrent._codigolayleituras.getObject()));
 RDebugUtils.currentLine=2359369;
- //BA.debugLineNum = 2359369;BA.debugLine="MsgboxAsync(\"Problemas na inserção de dados. \"";
-anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas na inserção de dados. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
+ //BA.debugLineNum = 2359369;BA.debugLine="Activity.Finish";
+parent.mostCurrent._activity.Finish();
  if (true) break;
-if (true) break;
 
 case 30:
 //C
 this.state = 31;
-this.catchState = 0;
 ;
  if (true) break;
 
 case 31:
 //C
-this.state = 32;
+this.state = 34;
 ;
  if (true) break;
 
-case 32:
+case 33:
+//C
+this.state = 34;
+this.catchState = 0;
+RDebugUtils.currentLine=2359373;
+ //BA.debugLineNum = 2359373;BA.debugLine="MsgboxAsync(\"Problemas na inserção de dados. \"";
+anywheresoftware.b4a.keywords.Common.MsgboxAsync(BA.ObjectToCharSequence("Problemas na inserção de dados. "+BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA))),BA.ObjectToCharSequence("Atenção!"),processBA);
+ if (true) break;
+if (true) break;
+
+case 34:
+//C
+this.state = 35;
+this.catchState = 0;
+;
+ if (true) break;
+
+case 35:
+//C
+this.state = 36;
+;
+ if (true) break;
+
+case 36:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=2359374;
- //BA.debugLineNum = 2359374;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2359377;
+ //BA.debugLineNum = 2359377;BA.debugLine="End Sub";
 if (true) break;
 }} 
        catch (Exception e0) {

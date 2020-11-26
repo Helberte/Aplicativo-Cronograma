@@ -154,7 +154,7 @@ if (RapidSub.canDelegate("getvalue")) { return __ref.runUserSub(false, "b4xseekb
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 131;BA.debugLine="Return mValue";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
+if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
  BA.debugLineNum = 132;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);

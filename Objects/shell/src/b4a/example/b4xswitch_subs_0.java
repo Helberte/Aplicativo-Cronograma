@@ -233,7 +233,7 @@ if (RapidSub.canDelegate("getenabled")) { return __ref.runUserSub(false, "b4xswi
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 116;BA.debugLine="Return mEnabled";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_menabled" /*RemoteObject*/ );
+if (true) return __ref.getField(true,"_menabled" /*RemoteObject*/ );
  BA.debugLineNum = 117;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -252,7 +252,7 @@ if (RapidSub.canDelegate("getvalue")) { return __ref.runUserSub(false, "b4xswitc
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 107;BA.debugLine="Return mValue";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
+if (true) return __ref.getField(true,"_mvalue" /*RemoteObject*/ );
  BA.debugLineNum = 108;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(false);
@@ -352,7 +352,7 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 102;BA.debugLine="If b = mValue Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",_b,__ref.getField(true,"_mvalue" /*RemoteObject*/ ))) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 103;BA.debugLine="SetValueImpl(b, False)";
 Debug.JustUpdateDeviceLine();
 __ref.runClassMethod (b4a.example.b4xswitch.class, "_setvalueimpl" /*void*/ ,(Object)(_b),(Object)(b4xswitch.__c.getField(true,"False")));

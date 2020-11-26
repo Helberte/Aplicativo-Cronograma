@@ -348,7 +348,7 @@ codigocadastro,activity_create,1,0,23,31
 ,edlogin,,ednome,,edrepitasenha,,edsenha,,lblcadsalvo,,lblmostrarsenha,,panelcadsalvo,,funcoes
 ,edlogin,,ednome,,edrepitasenha,,edsenha,,lblcadsalvo,,lblmostrarsenha,,panelcadsalvo
 classbancodados,initialize
-codigocadastro,activity_keypress,0,0,138,146
+codigocadastro,activity_keypress,0,0,141,149
 
 
 
@@ -360,15 +360,15 @@ codigocadastro,activity_resume,0,0,33,35
 
 
 
-codigocadastro,btsalvar_click,1,0,41,119
+codigocadastro,btsalvar_click,1,1,41,122
 ,ednome,,edlogin,,edsenha,,edrepitasenha,,funcoes,main,cadastroualgo,main,id_do_usuario,,lblcadsalvo,,panelcadsalvo
 main,cadastroualgo,main,id_do_usuario
 classbancodados,insert_consulta,classbancodados,conecta
-codigocadastro,edrepitasenha_textchanged,1,0,130,136
+codigocadastro,edrepitasenha_textchanged,1,0,133,139
 ,edrepitasenha
 
 
-codigocadastro,edsenha_textchanged,1,0,122,128
+codigocadastro,edsenha_textchanged,1,0,125,131
 ,edsenha
 
 
@@ -376,7 +376,7 @@ codigocadastro,globals,0,1,10,21
 
 
 
-codigocadastro,lblmostrarsenha_click,0,0,148,159
+codigocadastro,lblmostrarsenha_click,0,0,151,162
 ,mostrarsenha,,edsenha,,lblmostrarsenha
 ,mostrarsenha
 
@@ -488,31 +488,31 @@ codigolaylogin,activity_create,1,0,14,21
 ,btconectar,,edlogin,,edsenha,,funcoes
 ,btconectar,,edlogin,,edsenha
 classbancodados,initialize
-codigolaylogin,activity_keypress,0,0,112,119
+codigolaylogin,activity_keypress,0,0,115,122
 
 
 
-codigolaylogin,activity_pause,0,0,89,91
+codigolaylogin,activity_pause,0,0,92,94
 
 
 
-codigolaylogin,activity_resume,0,0,85,87
+codigolaylogin,activity_resume,0,0,88,90
 
 
 
-codigolaylogin,btcadastro_click,0,0,93,96
+codigolaylogin,btcadastro_click,0,0,96,99
 
 
 
-codigolaylogin,btconectar_click,1,0,31,83
+codigolaylogin,btconectar_click,1,1,31,86
 ,edlogin,,edsenha,,funcoes,main,id_do_usuario
 main,id_do_usuario
 classbancodados,insert_consulta,classbancodados,conecta
-codigolaylogin,edlogin_textchanged,1,0,105,109
+codigolaylogin,edlogin_textchanged,1,0,108,112
 ,edlogin
 
 
-codigolaylogin,edsenha_textchanged,1,0,98,103
+codigolaylogin,edsenha_textchanged,1,0,101,106
 ,edsenha
 
 
@@ -648,7 +648,7 @@ codigolayleituras,tabstrip_pageselected,0,0,398,507
 ,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,main,id_do_usuario,,banco,,tempanelleituraconcluida,,scrollview2,,panel_lidos,,btadicionarleitura,,cores
 ,carrega_leitura_concluida,codigolancamentoleitura,terminouleitura,,tempanelleituraconcluida,,cores
 classbancodados,insert_consulta,,configuralabel,classbancodados,conecta
-codigo_laydetalheslivro,activity_create,1,1,55,222
+codigo_laydetalheslivro,activity_create,1,0,55,222
 ,bt_voltar,,panel_cabecalho,,scrol,,painel_botoes,,banco,,painel_imagem,,lbl_livro,,lbl_usuario,,panel_detalhes,,lbl_dt_inicio,,lbl_dt_termino,,lbl_pg_atual,,lbl_pg_total,,lbl_pg_meta,,rot_dt_inicio,,rot_dt_termino,,rot_pg_atual,,rot_pg_meta,,rot_pg_total,,dt_inicio,,dt_termino,,pg_atual,,pg_total,,pg_meta,,tipo_leitura,,nome_livro,,nome_usuario,,dm,,lbl,,b4x_imagem,,botoes
 ,bt_voltar,,panel_cabecalho,,scrol,,lbl_dt_inicio,,lbl_dt_termino,,lbl_pg_atual,,lbl_pg_total,,lbl_pg_meta,,tipo_leitura,,rot_dt_inicio,,rot_dt_termino,,rot_pg_atual,,rot_pg_meta,,rot_pg_total,,lbl_livro,,lbl_usuario,,b4x_imagem
 classbancodados,initialize,,configura_label,b4ximageview,load,b4ximageview,setresizemode,,gradient_border,b4ximageview,setbitmap,xuiviewsutils,setbitmapandfill,b4ximageview,update,b4ximageview,setcircleclip
@@ -660,19 +660,19 @@ codigo_laydetalheslivro,gradient_border,0,0,224,233
 
 
 
-codigo_laydetalheslivro,activity_pause,0,0,311,314
+codigo_laydetalheslivro,activity_pause,0,0,308,311
 main,cadastroualgo,,seguro_cadastrou_algo
 main,cadastroualgo,,seguro_cadastrou_algo
 
-codigo_laydetalheslivro,activity_resume,0,1,248,309
+codigo_laydetalheslivro,activity_resume,0,0,248,306
 main,cadastroualgo,,seguro_cadastrou_algo,main,id_do_usuario,,banco,codigolancamentoleitura,terminouleitura,,painel_botoes,,id_livro,,lbl_dt_inicio,,lbl_dt_termino,,lbl_pg_atual,,lbl_pg_total,,lbl_pg_meta,,pg_meta,,nome_usuario,,pg_atual,,tipo_leitura,,pg_total,,nome_livro
 ,seguro_cadastrou_algo,main,cadastroualgo,,pg_meta,,nome_usuario,,pg_atual,,tipo_leitura,,pg_total,,id_livro,,nome_livro
 classbancodados,insert_consulta,classbancodados,conecta
-codigo_laydetalheslivro,bt_voltar_click,0,0,317,319
+codigo_laydetalheslivro,bt_voltar_click,0,0,314,316
 
 
 
-codigo_laydetalheslivro,event_botoes_click,0,0,321,340
+codigo_laydetalheslivro,event_botoes_click,0,0,318,337
 codigolancamentoleitura,meta,,pg_meta,codigolancamentoleitura,nomeusuario,,nome_usuario,codigolancamentoleitura,paginaatual,,pg_atual,codigolancamentoleitura,tipoleitura,,tipo_leitura,codigolancamentoleitura,totalpaginas,,pg_total,codigolancamentoleitura,idlivro,,id_livro,codigolancamentoleitura,titulolivro,,nome_livro
 codigolancamentoleitura,meta,codigolancamentoleitura,nomeusuario,codigolancamentoleitura,paginaatual,codigolancamentoleitura,tipoleitura,codigolancamentoleitura,totalpaginas,codigolancamentoleitura,idlivro,codigolancamentoleitura,titulolivro
 

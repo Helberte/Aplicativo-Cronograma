@@ -203,7 +203,7 @@ __ref.getField(false,"_rightpositions" /*RemoteObject*/ ).runVoidMethod ("Clear"
  BA.debugLineNum = 73;BA.debugLine="If mItems.Size = 0 Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mitems" /*RemoteObject*/ ).runMethod(true,"getSize"),BA.numberCast(double.class, 0))) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.createImmutable("");};
+if (true) return RemoteObject.createImmutable("");};
  BA.debugLineNum = 74;BA.debugLine="Dim Left As Int = 0";
 Debug.JustUpdateDeviceLine();
 _left = BA.numberCast(int.class, 0);Debug.locals.put("Left", _left);Debug.locals.put("Left", _left);
@@ -332,7 +332,7 @@ Debug.JustUpdateDeviceLine();
 __ref.getField(false,"_cvs" /*RemoteObject*/ ).runVoidMethod ("DrawText",__ref.getField(false, "ba"),(Object)(_text),(Object)(BA.numberCast(float.class, RemoteObject.solve(new RemoteObject[] {_left,_itemwidth,RemoteObject.createImmutable(2)}, "+/",1, 0))),(Object)(BA.numberCast(float.class, _baseline)),(Object)(__ref.getField(false,"_fnt" /*RemoteObject*/ )),(Object)(__ref.getField(true,"_textcolor" /*RemoteObject*/ )),(Object)(BA.getEnumFromString(BA.getDeviceClass("android.graphics.Paint.Align"),RemoteObject.createImmutable("CENTER"))));
  BA.debugLineNum = 111;BA.debugLine="Return ItemWidth";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return _itemwidth;
+if (true) return _itemwidth;
  BA.debugLineNum = 112;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -356,18 +356,18 @@ Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 137;BA.debugLine="If RightPositions.Size = 0 Then Return -1";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("=",__ref.getField(false,"_rightpositions" /*RemoteObject*/ ).runMethod(true,"getSize"),BA.numberCast(double.class, 0))) { 
-Debug.CheckDeviceExceptions();if (true) return BA.numberCast(int.class, -(double) (0 + 1));};
+if (true) return BA.numberCast(int.class, -(double) (0 + 1));};
  BA.debugLineNum = 138;BA.debugLine="If y < 0 Or y > cvs.TargetRect.Height Then Return";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean("<",_y,BA.numberCast(double.class, 0)) || RemoteObject.solveBoolean(">",_y,BA.numberCast(double.class, __ref.getField(false,"_cvs" /*RemoteObject*/ ).runMethod(false,"getTargetRect").runMethod(true,"getHeight")))) { 
-Debug.CheckDeviceExceptions();if (true) return BA.numberCast(int.class, -(double) (0 + 1));};
+if (true) return BA.numberCast(int.class, -(double) (0 + 1));};
  BA.debugLineNum = 139;BA.debugLine="Dim r As Int = RightPositions.Get(RightPositions.";
 Debug.JustUpdateDeviceLine();
 _r = BA.numberCast(int.class, __ref.getField(false,"_rightpositions" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_rightpositions" /*RemoteObject*/ ).runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1))));Debug.locals.put("r", _r);Debug.locals.put("r", _r);
  BA.debugLineNum = 140;BA.debugLine="If x > r Then Return -1";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_x,BA.numberCast(double.class, _r))) { 
-Debug.CheckDeviceExceptions();if (true) return BA.numberCast(int.class, -(double) (0 + 1));};
+if (true) return BA.numberCast(int.class, -(double) (0 + 1));};
  BA.debugLineNum = 141;BA.debugLine="For i = RightPositions.Size - 2 To 0 Step -1";
 Debug.JustUpdateDeviceLine();
 {
@@ -382,13 +382,13 @@ _r = BA.numberCast(int.class, __ref.getField(false,"_rightpositions" /*RemoteObj
  BA.debugLineNum = 143;BA.debugLine="If x > r Then Return i + 1";
 Debug.JustUpdateDeviceLine();
 if (RemoteObject.solveBoolean(">",_x,BA.numberCast(double.class, _r))) { 
-Debug.CheckDeviceExceptions();if (true) return RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(_i),RemoteObject.createImmutable(1)}, "+",1, 1);};
+if (true) return RemoteObject.solve(new RemoteObject[] {RemoteObject.createImmutable(_i),RemoteObject.createImmutable(1)}, "+",1, 1);};
  }
 }Debug.locals.put("i", _i);
 ;
  BA.debugLineNum = 145;BA.debugLine="Return 0";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return BA.numberCast(int.class, 0);
+if (true) return BA.numberCast(int.class, 0);
  BA.debugLineNum = 146;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(0);
@@ -407,7 +407,7 @@ if (RapidSub.canDelegate("getitems")) { return __ref.runUserSub(false, "b4xbread
 Debug.JustUpdateDeviceLine();
  BA.debugLineNum = 154;BA.debugLine="Return mItems";
 Debug.JustUpdateDeviceLine();
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_mitems" /*RemoteObject*/ );
+if (true) return __ref.getField(false,"_mitems" /*RemoteObject*/ );
  BA.debugLineNum = 155;BA.debugLine="End Sub";
 Debug.JustUpdateDeviceLine();
 return RemoteObject.createImmutable(null);

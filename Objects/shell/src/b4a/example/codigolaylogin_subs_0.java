@@ -34,27 +34,27 @@ finally {
 		}}
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,112);
+		Debug.PushSubsStack("Activity_KeyPress (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,115);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_keypress", _keycode);}
 Debug.locals.put("KeyCode", _keycode);
- BA.debugLineNum = 112;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
-Debug.ShouldStop(32768);
- BA.debugLineNum = 113;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
-Debug.ShouldStop(65536);
-if (RemoteObject.solveBoolean("=",_keycode,BA.numberCast(double.class, codigolaylogin.mostCurrent.__c.getField(false,"KeyCodes").getField(true,"KEYCODE_BACK")))) { 
- BA.debugLineNum = 114;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(131072);
-codigolaylogin.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 115;BA.debugLine="Return False";
+ BA.debugLineNum = 115;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
 Debug.ShouldStop(262144);
-Debug.CheckDeviceExceptions();if (true) return codigolaylogin.mostCurrent.__c.getField(true,"False");
- }else {
- BA.debugLineNum = 117;BA.debugLine="Return True";
+ BA.debugLineNum = 116;BA.debugLine="If KeyCode = KeyCodes.KEYCODE_BACK Then";
+Debug.ShouldStop(524288);
+if (RemoteObject.solveBoolean("=",_keycode,BA.numberCast(double.class, codigolaylogin.mostCurrent.__c.getField(false,"KeyCodes").getField(true,"KEYCODE_BACK")))) { 
+ BA.debugLineNum = 117;BA.debugLine="Activity.Finish";
 Debug.ShouldStop(1048576);
-Debug.CheckDeviceExceptions();if (true) return codigolaylogin.mostCurrent.__c.getField(true,"True");
+codigolaylogin.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 118;BA.debugLine="Return False";
+Debug.ShouldStop(2097152);
+if (true) return codigolaylogin.mostCurrent.__c.getField(true,"False");
+ }else {
+ BA.debugLineNum = 120;BA.debugLine="Return True";
+Debug.ShouldStop(8388608);
+if (true) return codigolaylogin.mostCurrent.__c.getField(true,"True");
  };
- BA.debugLineNum = 119;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 122;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -65,13 +65,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,89);
+		Debug.PushSubsStack("Activity_Pause (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,92);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 89;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 91;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 92;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(134217728);
+ BA.debugLineNum = 94;BA.debugLine="End Sub";
+Debug.ShouldStop(536870912);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -82,12 +82,12 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,85);
+		Debug.PushSubsStack("Activity_Resume (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,88);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","activity_resume");}
- BA.debugLineNum = 85;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(1048576);
- BA.debugLineNum = 87;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 88;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(8388608);
+ BA.debugLineNum = 90;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -98,18 +98,18 @@ finally {
 		}}
 public static RemoteObject  _btcadastro_click() throws Exception{
 try {
-		Debug.PushSubsStack("btCadastro_Click (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,93);
+		Debug.PushSubsStack("btCadastro_Click (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,96);
 if (RapidSub.canDelegate("btcadastro_click")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","btcadastro_click");}
- BA.debugLineNum = 93;BA.debugLine="Sub btCadastro_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 94;BA.debugLine="StartActivity(CodigoCadastro)";
-Debug.ShouldStop(536870912);
-codigolaylogin.mostCurrent.__c.runVoidMethod ("StartActivity",codigolaylogin.processBA,(Object)((codigolaylogin.mostCurrent._codigocadastro.getObject())));
- BA.debugLineNum = 95;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(1073741824);
-codigolaylogin.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 96;BA.debugLine="End Sub";
+ BA.debugLineNum = 96;BA.debugLine="Sub btCadastro_Click";
 Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 97;BA.debugLine="StartActivity(CodigoCadastro)";
+Debug.ShouldStop(1);
+codigolaylogin.mostCurrent.__c.runVoidMethod ("StartActivity",codigolaylogin.processBA,(Object)((codigolaylogin.mostCurrent._codigocadastro.getObject())));
+ BA.debugLineNum = 98;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(2);
+codigolaylogin.mostCurrent._activity.runVoidMethod ("Finish");
+ BA.debugLineNum = 99;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -164,7 +164,7 @@ if (true) break;
 
 case 1:
 //if
-this.state = 28;
+this.state = 34;
 if (RemoteObject.solveBoolean("=",parent.mostCurrent._edlogin.runMethod(true,"getText").runMethod(true,"trim"),BA.ObjectToString("")) && RemoteObject.solveBoolean("=",parent.mostCurrent._edsenha.runMethod(true,"getText").runMethod(true,"trim"),BA.ObjectToString(""))) { 
 this.state = 3;
 }else 
@@ -192,9 +192,9 @@ _ms = parent.mostCurrent.__c.runMethod(false,"Msgbox2Async",(Object)(BA.ObjectTo
  BA.debugLineNum = 40;BA.debugLine="Wait For (ms) Msgbox_Result (Result As Int)";
 Debug.ShouldStop(128);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","msgbox_result", codigolaylogin.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolaylogin", "btconectar_click"), _ms);
-this.state = 29;
+this.state = 35;
 return;
-case 29:
+case 35:
 //C
 this.state = 4;
 _result = (RemoteObject) result.getArrayElement(true,RemoteObject.createImmutable(0));Debug.locals.put("Result", _result);
@@ -250,13 +250,13 @@ parent.mostCurrent._edlogin.runVoidMethod ("RequestFocus");
 
 case 11:
 //C
-this.state = 28;
+this.state = 34;
 ;
  if (true) break;
 
 case 13:
 //C
-this.state = 28;
+this.state = 34;
  BA.debugLineNum = 55;BA.debugLine="EdSenha.RequestFocus";
 Debug.ShouldStop(4194304);
 parent.mostCurrent._edsenha.runVoidMethod ("RequestFocus");
@@ -271,39 +271,36 @@ if (true) break;
 
 case 16:
 //try
-this.state = 27;
-this.catchState = 26;
+this.state = 33;
+this.catchState = 32;
 this.state = 18;
 if (true) break;
 
 case 18:
 //C
 this.state = 19;
-this.catchState = 26;
+this.catchState = 32;
  BA.debugLineNum = 60;BA.debugLine="Dim exec As String = \"exec sp_encontra_usuario";
 Debug.ShouldStop(134217728);
 _exec = RemoteObject.concat(RemoteObject.createImmutable("exec sp_encontra_usuario '"),parent.mostCurrent._edlogin.runMethod(true,"getText"),RemoteObject.createImmutable("', '"),parent.mostCurrent._edsenha.runMethod(true,"getText"),RemoteObject.createImmutable("'"));Debug.locals.put("exec", _exec);Debug.locals.put("exec", _exec);
  BA.debugLineNum = 62;BA.debugLine="wait For (funcoes.Insert_Consulta(exec)) Comple";
 Debug.ShouldStop(536870912);
 parent.mostCurrent.__c.runVoidMethod ("WaitFor","complete", codigolaylogin.processBA, anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "codigolaylogin", "btconectar_click"), parent.mostCurrent._funcoes.runClassMethod (b4a.example.classbancodados.class, "_insert_consulta" /*RemoteObject*/ ,(Object)(_exec)));
-this.state = 30;
+this.state = 36;
 return;
-case 30:
+case 36:
 //C
 this.state = 19;
 _result_2 = (RemoteObject) result.getArrayElement(false,RemoteObject.createImmutable(0));Debug.locals.put("Result_2", _result_2);
 ;
- BA.debugLineNum = 64;BA.debugLine="Result_2.NextRow";
+ BA.debugLineNum = 64;BA.debugLine="If Result_2 = Null Then";
 Debug.ShouldStop(-2147483648);
-_result_2.runVoidMethod ("NextRow");
- BA.debugLineNum = 66;BA.debugLine="If Result_2.GetString(\"RESULTADO\") = 0 Then";
-Debug.ShouldStop(2);
 if (true) break;
 
 case 19:
 //if
-this.state = 24;
-if (RemoteObject.solveBoolean("=",_result_2.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.NumberToString(0))) { 
+this.state = 30;
+if (RemoteObject.solveBoolean("n",_result_2)) { 
 this.state = 21;
 }else {
 this.state = 23;
@@ -311,65 +308,98 @@ this.state = 23;
 
 case 21:
 //C
-this.state = 24;
- BA.debugLineNum = 68;BA.debugLine="MsgboxAsync(\"Usuário não encontrado.\",\"Ops!\")";
-Debug.ShouldStop(8);
-parent.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Usuário não encontrado.")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Ops!"))),codigolaylogin.processBA);
- BA.debugLineNum = 69;BA.debugLine="EdLogin.Text = \"\"";
-Debug.ShouldStop(16);
-parent.mostCurrent._edlogin.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
- BA.debugLineNum = 70;BA.debugLine="EdSenha.Text = \"\"";
-Debug.ShouldStop(32);
-parent.mostCurrent._edsenha.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
- BA.debugLineNum = 71;BA.debugLine="EdLogin.RequestFocus";
-Debug.ShouldStop(64);
-parent.mostCurrent._edlogin.runVoidMethod ("RequestFocus");
+this.state = 30;
+ BA.debugLineNum = 65;BA.debugLine="MsgboxAsync(\"Problemas ao verificar usuário. \"";
+Debug.ShouldStop(1);
+parent.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Problemas ao verificar usuário. "),parent.mostCurrent.__c.runMethod(false,"LastException",codigolaylogin.mostCurrent.activityBA)))),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Atenção!"))),codigolaylogin.processBA);
  if (true) break;
 
 case 23:
 //C
 this.state = 24;
- BA.debugLineNum = 74;BA.debugLine="Main.Id_do_Usuario = Result_2.GetInt(\"ID_USUAR";
-Debug.ShouldStop(512);
-parent.mostCurrent._main._id_do_usuario /*RemoteObject*/  = _result_2.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("ID_USUARIO")));
- BA.debugLineNum = 76;BA.debugLine="StartActivity(CodigoLayLeituras)";
-Debug.ShouldStop(2048);
-parent.mostCurrent.__c.runVoidMethod ("StartActivity",codigolaylogin.processBA,(Object)((parent.mostCurrent._codigolayleituras.getObject())));
- BA.debugLineNum = 77;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(4096);
-parent.mostCurrent._activity.runVoidMethod ("Finish");
- if (true) break;
+ BA.debugLineNum = 67;BA.debugLine="Result_2.NextRow";
+Debug.ShouldStop(4);
+_result_2.runVoidMethod ("NextRow");
+ BA.debugLineNum = 69;BA.debugLine="If Result_2.GetString(\"RESULTADO\") = 0 Then";
+Debug.ShouldStop(16);
+if (true) break;
 
 case 24:
-//C
-this.state = 27;
-;
- Debug.CheckDeviceExceptions();
-if (true) break;
+//if
+this.state = 29;
+if (RemoteObject.solveBoolean("=",_result_2.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("RESULTADO"))),BA.NumberToString(0))) { 
+this.state = 26;
+}else {
+this.state = 28;
+}if (true) break;
 
 case 26:
 //C
-this.state = 27;
-this.catchState = 0;
- BA.debugLineNum = 80;BA.debugLine="MsgboxAsync(\"Problemas ao verificar usuário. \"";
-Debug.ShouldStop(32768);
-parent.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Problemas ao verificar usuário. "),parent.mostCurrent.__c.runMethod(false,"LastException",codigolaylogin.mostCurrent.activityBA)))),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Atenção!"))),codigolaylogin.processBA);
- if (true) break;
-if (true) break;
-
-case 27:
-//C
-this.state = 28;
-this.catchState = 0;
-;
+this.state = 29;
+ BA.debugLineNum = 71;BA.debugLine="MsgboxAsync(\"Usuário não encontrado.\",\"Ops!\")";
+Debug.ShouldStop(64);
+parent.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence("Usuário não encontrado.")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Ops!"))),codigolaylogin.processBA);
+ BA.debugLineNum = 72;BA.debugLine="EdLogin.Text = \"\"";
+Debug.ShouldStop(128);
+parent.mostCurrent._edlogin.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 73;BA.debugLine="EdSenha.Text = \"\"";
+Debug.ShouldStop(256);
+parent.mostCurrent._edsenha.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(""));
+ BA.debugLineNum = 74;BA.debugLine="EdLogin.RequestFocus";
+Debug.ShouldStop(512);
+parent.mostCurrent._edlogin.runVoidMethod ("RequestFocus");
  if (true) break;
 
 case 28:
 //C
+this.state = 29;
+ BA.debugLineNum = 76;BA.debugLine="Main.Id_do_Usuario = Result_2.GetInt(\"ID_USUA";
+Debug.ShouldStop(2048);
+parent.mostCurrent._main._id_do_usuario /*RemoteObject*/  = _result_2.runMethod(true,"GetInt",(Object)(RemoteObject.createImmutable("ID_USUARIO")));
+ BA.debugLineNum = 78;BA.debugLine="StartActivity(CodigoLayLeituras)";
+Debug.ShouldStop(8192);
+parent.mostCurrent.__c.runVoidMethod ("StartActivity",codigolaylogin.processBA,(Object)((parent.mostCurrent._codigolayleituras.getObject())));
+ BA.debugLineNum = 79;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(16384);
+parent.mostCurrent._activity.runVoidMethod ("Finish");
+ if (true) break;
+
+case 29:
+//C
+this.state = 30;
+;
+ if (true) break;
+
+case 30:
+//C
+this.state = 33;
+;
+ Debug.CheckDeviceExceptions();
+if (true) break;
+
+case 32:
+//C
+this.state = 33;
+this.catchState = 0;
+ BA.debugLineNum = 83;BA.debugLine="MsgboxAsync(\"Problemas ao verificar usuário. \"";
+Debug.ShouldStop(262144);
+parent.mostCurrent.__c.runVoidMethod ("MsgboxAsync",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Problemas ao verificar usuário. "),parent.mostCurrent.__c.runMethod(false,"LastException",codigolaylogin.mostCurrent.activityBA)))),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Atenção!"))),codigolaylogin.processBA);
+ if (true) break;
+if (true) break;
+
+case 33:
+//C
+this.state = 34;
+this.catchState = 0;
+;
+ if (true) break;
+
+case 34:
+//C
 this.state = -1;
 ;
- BA.debugLineNum = 83;BA.debugLine="End Sub";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 86;BA.debugLine="End Sub";
+Debug.ShouldStop(2097152);
 if (true) break;
 }} 
        catch (Exception e0) {
@@ -395,21 +425,21 @@ public static void  _complete(RemoteObject _result_2) throws Exception{
 }
 public static RemoteObject  _edlogin_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("EdLogin_TextChanged (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,105);
+		Debug.PushSubsStack("EdLogin_TextChanged (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,108);
 if (RapidSub.canDelegate("edlogin_textchanged")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","edlogin_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
- BA.debugLineNum = 105;BA.debugLine="Sub EdLogin_TextChanged (Old As String, New As Str";
-Debug.ShouldStop(256);
- BA.debugLineNum = 106;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 108;BA.debugLine="Sub EdLogin_TextChanged (Old As String, New As Str";
+Debug.ShouldStop(2048);
+ BA.debugLineNum = 109;BA.debugLine="If New.IndexOf(\"'\") >= 0 Then";
+Debug.ShouldStop(4096);
 if (RemoteObject.solveBoolean("g",_new.runMethod(true,"indexOf",(Object)(RemoteObject.createImmutable("'"))),BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 107;BA.debugLine="EdLogin.Text = EdLogin.Text.Replace(\"'\",\"\")";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 110;BA.debugLine="EdLogin.Text = EdLogin.Text.Replace(\"'\",\"\")";
+Debug.ShouldStop(8192);
 codigolaylogin.mostCurrent._edlogin.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(codigolaylogin.mostCurrent._edlogin.runMethod(true,"getText").runMethod(true,"replace",(Object)(BA.ObjectToString("'")),(Object)(RemoteObject.createImmutable("")))));
  };
- BA.debugLineNum = 109;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 112;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -420,24 +450,24 @@ finally {
 		}}
 public static RemoteObject  _edsenha_textchanged(RemoteObject _old,RemoteObject _new) throws Exception{
 try {
-		Debug.PushSubsStack("EdSenha_TextChanged (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,98);
+		Debug.PushSubsStack("EdSenha_TextChanged (codigolaylogin) ","codigolaylogin",5,codigolaylogin.mostCurrent.activityBA,codigolaylogin.mostCurrent,101);
 if (RapidSub.canDelegate("edsenha_textchanged")) { return b4a.example.codigolaylogin.remoteMe.runUserSub(false, "codigolaylogin","edsenha_textchanged", _old, _new);}
 Debug.locals.put("Old", _old);
 Debug.locals.put("New", _new);
- BA.debugLineNum = 98;BA.debugLine="Sub EdSenha_TextChanged (Old As String, New As Str";
-Debug.ShouldStop(2);
- BA.debugLineNum = 99;BA.debugLine="If New.Length > 8 Then";
-Debug.ShouldStop(4);
-if (RemoteObject.solveBoolean(">",_new.runMethod(true,"length"),BA.numberCast(double.class, 8))) { 
- BA.debugLineNum = 100;BA.debugLine="EdSenha.Text = New.SubString2(0, 8)";
-Debug.ShouldStop(8);
-codigolaylogin.mostCurrent._edsenha.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(_new.runMethod(true,"substring",(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 8)))));
- BA.debugLineNum = 101;BA.debugLine="EdSenha.SelectionStart = 8";
+ BA.debugLineNum = 101;BA.debugLine="Sub EdSenha_TextChanged (Old As String, New As Str";
 Debug.ShouldStop(16);
+ BA.debugLineNum = 102;BA.debugLine="If New.Length > 8 Then";
+Debug.ShouldStop(32);
+if (RemoteObject.solveBoolean(">",_new.runMethod(true,"length"),BA.numberCast(double.class, 8))) { 
+ BA.debugLineNum = 103;BA.debugLine="EdSenha.Text = New.SubString2(0, 8)";
+Debug.ShouldStop(64);
+codigolaylogin.mostCurrent._edsenha.runMethodAndSync(true,"setText",BA.ObjectToCharSequence(_new.runMethod(true,"substring",(Object)(BA.numberCast(int.class, 0)),(Object)(BA.numberCast(int.class, 8)))));
+ BA.debugLineNum = 104;BA.debugLine="EdSenha.SelectionStart = 8";
+Debug.ShouldStop(128);
 codigolaylogin.mostCurrent._edsenha.runMethod(true,"setSelectionStart",BA.numberCast(int.class, 8));
  };
- BA.debugLineNum = 103;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 106;BA.debugLine="End Sub";
+Debug.ShouldStop(512);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
